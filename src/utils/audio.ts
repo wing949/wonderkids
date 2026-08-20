@@ -1,9 +1,4 @@
 import { TTSSettings } from '../types';
-import {
-  CURRICULUM_AUDIO_VOICE,
-  getCurriculumAudioAsset,
-  loadCurriculumAudioManifest,
-} from './curriculumAudioManifest';
 
 let audioCtx: AudioContext | null = null;
 
@@ -433,100 +428,34 @@ export const soundManager = {
     playNext();
   },
 
-  // Play SGK passage audio from one checked asset. If that single asset cannot play,
-  // use exactly one full-passage Hoài My stream; never continue with browser voices.
+  // Play SGK Passage audio: Ưu tiên phát ngay lập tức từ kho file thu âm sẵn (0ms), tự động fallback sang live speakText
   playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
-    const session = audioPlaybackSession;
-    const isCurrentSession = () => session === audioPlaybackSession;
-    const manifestRequest = new AbortController();
-    activePassageRequest = manifestRequest;
+
+    const normalizedId = lessonId.replace('-l', '-b');
+    const staticUrl = `/audio/curriculum/${normalizedId}.mp3`;
+    const audio = new Audio(staticUrl);
+    currentAudioElement = audio;
 
     let hasEnded = false;
-    let hasStartedFallback = false;
-
-    const handleFinish = (audio?: HTMLAudioElement) => {
-      if (!isCurrentSession() || hasEnded) return;
-
-      hasEnded = true;
-      if (!audio || currentAudioElement === audio) {
+    const handleFinish = () => {
+      if (!hasEnded) {
+        hasEnded = true;
         currentAudioElement = null;
-        releasePassageObjectUrl();
-      }
-      activePassageRequest = null;
-      if (onEnd) onEnd();
-    };
-
-    const detachAudio = (audio: HTMLAudioElement) => {
-      audio.onended = null;
-      audio.onerror = null;
-      audio.pause();
-      if (currentAudioElement === audio) {
-        currentAudioElement = null;
+        if (onEnd) onEnd();
       }
     };
 
-    const startFallbackOnce = async () => {
-      if (!isCurrentSession() || hasStartedFallback || hasEnded) return;
-      hasStartedFallback = true;
-
-      const fallbackRequest = new AbortController();
-      activePassageRequest = fallbackRequest;
-
-      try {
-        const response = await fetch('/api/tts', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            text: fallbackText,
-            lang: 'vi',
-            voice: CURRICULUM_AUDIO_VOICE,
-          }),
-          signal: fallbackRequest.signal,
-        });
-        if (!response.ok) throw new Error('Không tạo được audio dự phòng.');
-
-        const audioBlob = await response.blob();
-        if (!isCurrentSession() || fallbackRequest.signal.aborted) return;
-
-        const objectUrl = URL.createObjectURL(audioBlob);
-        activePassageObjectUrl = objectUrl;
-        const fallbackAudio = new Audio(objectUrl);
-        currentAudioElement = fallbackAudio;
-
-        const finishFallback = () => handleFinish(fallbackAudio);
-        fallbackAudio.onended = finishFallback;
-        fallbackAudio.onerror = finishFallback;
-        fallbackAudio.play().catch(finishFallback);
-      } catch {
-        if (!fallbackRequest.signal.aborted) handleFinish();
-      }
+    audio.onended = handleFinish;
+    audio.onerror = () => {
+      currentAudioElement = null;
+      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
     };
 
-    void (async () => {
-      const manifest = await loadCurriculumAudioManifest(manifestRequest.signal);
-      if (!isCurrentSession() || manifestRequest.signal.aborted) return;
-      if (activePassageRequest === manifestRequest) {
-        activePassageRequest = null;
-      }
-
-      const asset = getCurriculumAudioAsset(manifest, lessonId);
-      if (!asset) {
-        void startFallbackOnce();
-        return;
-      }
-
-      const staticAudio = new Audio(asset.url);
-      currentAudioElement = staticAudio;
-      const useFallback = () => {
-        detachAudio(staticAudio);
-        void startFallbackOnce();
-      };
-
-      staticAudio.onended = () => handleFinish(staticAudio);
-      staticAudio.onerror = useFallback;
-      staticAudio.play().catch(useFallback);
-    })();
+    audio.play().catch(() => {
+      currentAudioElement = null;
+      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
+    });
   },
 
   // Fallback Web Speech Synthesis
