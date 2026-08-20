@@ -205,15 +205,9 @@ export interface ParentReport {
   parentTasks: ParentTask[];
 }
 
-export type TTSProvider = 'vieneu' | 'edge' | 'google';
-
 export interface TTSSettings {
-  provider: TTSProvider;
-  vieneuEndpoint: string; // URL endpoint của VieNeu-TTS (ví dụ: http://localhost:8000/api/tts)
-  vieneuVoiceId: string;  // Voice clone model / speaker name
-  vieneuApiKey?: string;
-  edgeVoiceVi: string;    // 'vi-VN-HoaiMyNeural' | 'vi-VN-NamMinhNeural'
-  edgeVoiceEn: string;    // 'en-US-JennyNeural' | 'en-US-GuyNeural'
+  voiceVi: string;        // 'vi-VN-HoaiMyNeural' (Cô Hoài My) | 'vi-VN-NamMinhNeural' (Thầy Nam Minh)
+  voiceEn: string;        // 'en-US-JennyNeural' (Cô Jenny) | 'en-US-GuyNeural' (Thầy Guy)
   speechRate: number;     // 0.85 (chậm), 0.95 (chuẩn), 1.05 (nhanh)
   speechPitch: number;    // 1.0
 }

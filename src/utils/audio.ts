@@ -2,15 +2,11 @@ import { TTSSettings } from '../types';
 
 let audioCtx: AudioContext | null = null;
 
-export const STORAGE_KEY_TTS_SETTINGS = 'wonderkids_tts_settings_v1';
+export const STORAGE_KEY_TTS_SETTINGS = 'wonderkids_tts_settings_v2';
 
 export const DEFAULT_TTS_SETTINGS: TTSSettings = {
-  provider: 'edge', // 'edge' (Cô Hoài My) hoặc 'vieneu' (Mô hình VieNeu-TTS)
-  vieneuEndpoint: 'http://localhost:8000/api/tts',
-  vieneuVoiceId: 'co_giao_ha_noi',
-  vieneuApiKey: '',
-  edgeVoiceVi: 'vi-VN-HoaiMyNeural',
-  edgeVoiceEn: 'en-US-JennyNeural',
+  voiceVi: 'vi-VN-HoaiMyNeural', // Cô Hoài My — Sư phạm tiểu học, dịu dàng, truyền cảm
+  voiceEn: 'en-US-JennyNeural',  // Cô Jenny — Chuẩn Mỹ bản xứ
   speechRate: 0.95,
   speechPitch: 1.0,
 };
@@ -48,198 +44,246 @@ function getAudioContext(): AudioContext {
 
 // Voice cache and Neural Voice finder
 let cachedVoices: SpeechSynthesisVoice[] = [];
-let currentAudioElement: HTMLAudioElement | null = null;
 
+export function getBestVoice(lang: 'vi-VN' | 'en-US' = 'vi-VN'): SpeechSynthesisVoice | null {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+
+  if (cachedVoices.length === 0) {
+    cachedVoices = window.speechSynthesis.getVoices();
+  }
+
+  const langCode = lang.toLowerCase();
+  const shortCode = langCode.split('-')[0];
+
+  const matchingVoices = cachedVoices.filter(
+    (v) => v.lang.toLowerCase() === langCode || v.lang.toLowerCase().startsWith(shortCode)
+  );
+
+  if (matchingVoices.length === 0) return null;
+
+  // Prioritize Natural / Neural / High Quality voices
+  const highQuality = matchingVoices.find(
+    (v) =>
+      v.name.includes('Natural') ||
+      v.name.includes('Neural') ||
+      v.name.includes('Google') ||
+      v.name.includes('Premium') ||
+      v.name.includes('HoaiMy') ||
+      v.name.includes('NamMinh') ||
+      v.name.includes('Jenny')
+  );
+
+  return highQuality || matchingVoices[0];
+}
+
+// Initialize voices listener for Web Speech
 if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-  cachedVoices = window.speechSynthesis.getVoices();
   window.speechSynthesis.onvoiceschanged = () => {
     cachedVoices = window.speechSynthesis.getVoices();
   };
 }
 
-function getBestVoice(lang: 'vi-VN' | 'en-US'): SpeechSynthesisVoice | null {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
-  const voices = cachedVoices.length > 0 ? cachedVoices : window.speechSynthesis.getVoices();
-  if (!voices || voices.length === 0) return null;
-
-  if (lang === 'vi-VN') {
-    // 1. Ưu tiên cao nhất: Giọng Microsoft Natural / Neural (HoaiMy, NamMinh) hoặc Google Tiếng Việt
-    const naturalVi = voices.find(
-      (v) =>
-        v.lang.toLowerCase().includes('vi') &&
-        (v.name.includes('Natural') ||
-          v.name.includes('Neural') ||
-          v.name.includes('HoaiMy') ||
-          v.name.includes('Google') ||
-          v.name.includes('NamMinh'))
-    );
-    if (naturalVi) return naturalVi;
-
-    // 2. Tìm bất kỳ giọng tiếng Việt nào
-    const anyVi = voices.find(
-      (v) => v.lang.toLowerCase().includes('vi') || v.lang.toLowerCase().includes('viet')
-    );
-    if (anyVi) return anyVi;
-  } else {
-    const naturalEn = voices.find(
-      (v) =>
-        v.lang.toLowerCase().includes('en') &&
-        (v.name.includes('Natural') ||
-          v.name.includes('Neural') ||
-          v.name.includes('Jenny') ||
-          v.name.includes('Google') ||
-          v.name.includes('Guy'))
-    );
-    if (naturalEn) return naturalEn;
-  }
-
-  return null;
-}
+let currentAudioElement: HTMLAudioElement | null = null;
 
 export const soundManager = {
-  // Play subtle bubble pop when clicking buttons/options
-  playPop: () => {
-    try {
-      const ctx = getAudioContext();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-
-      const now = ctx.currentTime;
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(450, now);
-      osc.frequency.exponentialRampToValueAtTime(880, now + 0.08);
-
-      gain.gain.setValueAtTime(0.2, now);
-      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      osc.start(now);
-      osc.stop(now + 0.08);
-    } catch {
-      // Audio not supported or blocked
-    }
-  },
-
-  // Play crystal bell ding when answering correctly
+  // Play short cute game sound effects (Synthesized Web Audio API)
   playCorrect: () => {
     try {
       const ctx = getAudioContext();
       const now = ctx.currentTime;
 
-      // Note 1: E5 (659.25Hz)
+      // Note 1 (E5)
       const osc1 = ctx.createOscillator();
       const gain1 = ctx.createGain();
-      osc1.type = 'triangle';
+      osc1.type = 'sine';
       osc1.frequency.setValueAtTime(659.25, now);
-      gain1.gain.setValueAtTime(0.25, now);
-      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+      gain1.gain.setValueAtTime(0.15, now);
+      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
       osc1.connect(gain1);
       gain1.connect(ctx.destination);
       osc1.start(now);
-      osc1.stop(now + 0.35);
+      osc1.stop(now + 0.15);
 
-      // Note 2: A5 (880Hz) with slight delay
+      // Note 2 (G#5)
       const osc2 = ctx.createOscillator();
       const gain2 = ctx.createGain();
       osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(880, now + 0.1);
-      gain2.gain.setValueAtTime(0.3, now + 0.1);
-      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
+      osc2.frequency.setValueAtTime(830.61, now + 0.08);
+      gain2.gain.setValueAtTime(0.15, now + 0.08);
+      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
       osc2.connect(gain2);
       gain2.connect(ctx.destination);
-      osc2.start(now + 0.1);
-      osc2.stop(now + 0.55);
-    } catch {
-      // Audio fallback
-    }
+      osc2.start(now + 0.08);
+      osc2.stop(now + 0.25);
+
+      // Note 3 (B5)
+      const osc3 = ctx.createOscillator();
+      const gain3 = ctx.createGain();
+      osc3.type = 'triangle';
+      osc3.frequency.setValueAtTime(987.77, now + 0.16);
+      gain3.gain.setValueAtTime(0.2, now + 0.16);
+      gain3.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+      osc3.connect(gain3);
+      gain3.connect(ctx.destination);
+      osc3.start(now + 0.16);
+      osc3.stop(now + 0.45);
+    } catch {}
   },
 
-  // Play gentle boing when needing retry (encouraging, not harsh)
   playIncorrect: () => {
     try {
       const ctx = getAudioContext();
       const now = ctx.currentTime;
+
+      const osc1 = ctx.createOscillator();
+      const gain1 = ctx.createGain();
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(329.63, now);
+      gain1.gain.setValueAtTime(0.15, now);
+      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
+      osc1.connect(gain1);
+      gain1.connect(ctx.destination);
+      osc1.start(now);
+      osc1.stop(now + 0.2);
+
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+      osc2.type = 'triangle';
+      osc2.frequency.setValueAtTime(261.63, now + 0.15);
+      gain2.gain.setValueAtTime(0.15, now + 0.15);
+      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+      osc2.connect(gain2);
+      gain2.connect(ctx.destination);
+      osc2.start(now + 0.15);
+      osc2.stop(now + 0.45);
+    } catch {}
+  },
+
+  playPop: () => {
+    try {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
-
       osc.type = 'sine';
-      osc.frequency.setValueAtTime(320, now);
-      osc.frequency.exponentialRampToValueAtTime(220, now + 0.25);
+      osc.frequency.setValueAtTime(400, now);
+      osc.frequency.exponentialRampToValueAtTime(800, now + 0.05);
 
-      gain.gain.setValueAtTime(0.2, now);
-      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+      gain.gain.setValueAtTime(0.12, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
 
       osc.connect(gain);
       gain.connect(ctx.destination);
-
       osc.start(now);
-      osc.stop(now + 0.25);
-    } catch {
-      // Audio fallback
-    }
+      osc.stop(now + 0.05);
+    } catch {}
   },
 
-  // Play victory fanfare on lesson completion (C5 - E5 - G5 - C6)
-  playVictory: () => {
+  playStar: () => {
     try {
       const ctx = getAudioContext();
       const now = ctx.currentTime;
       const notes = [523.25, 659.25, 783.99, 1046.5];
 
-      notes.forEach((freq, index) => {
+      notes.forEach((freq, i) => {
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
-        const noteStart = now + index * 0.12;
-
         osc.type = 'triangle';
-        osc.frequency.setValueAtTime(freq, noteStart);
+        osc.frequency.setValueAtTime(freq, now + i * 0.06);
 
-        gain.gain.setValueAtTime(0.25, noteStart);
-        gain.gain.exponentialRampToValueAtTime(0.001, noteStart + (index === 3 ? 0.7 : 0.25));
+        gain.gain.setValueAtTime(0.12, now + i * 0.06);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.06 + 0.25);
 
         osc.connect(gain);
         gain.connect(ctx.destination);
-
-        osc.start(noteStart);
-        osc.stop(noteStart + (index === 3 ? 0.7 : 0.25));
+        osc.start(now + i * 0.06);
+        osc.stop(now + i * 0.06 + 0.25);
       });
-    } catch {
-      // Audio fallback
-    }
+    } catch {}
   },
 
-  // Play sparkling chest reward opening
+  playLevelUp: () => {
+    try {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+      const notes = [440, 554.37, 659.25, 880];
+
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + i * 0.08);
+
+        gain.gain.setValueAtTime(0.15, now + i * 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.35);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + i * 0.08);
+        osc.stop(now + i * 0.08 + 0.35);
+      });
+    } catch {}
+  },
+
+  playVictory: () => {
+    try {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+      const notes = [523.25, 659.25, 783.99, 1046.5, 1318.5];
+
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, now + i * 0.09);
+
+        gain.gain.setValueAtTime(0.16, now + i * 0.09);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.09 + 0.4);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + i * 0.09);
+        osc.stop(now + i * 0.09 + 0.4);
+      });
+    } catch {}
+  },
+
   playChestOpen: () => {
     try {
       const ctx = getAudioContext();
       const now = ctx.currentTime;
-      const sparkles = [784, 987, 1174, 1318, 1567, 1760];
+      const notes = [392.0, 523.25, 659.25, 783.99];
 
-      sparkles.forEach((freq, index) => {
+      notes.forEach((freq, i) => {
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
-        const noteStart = now + index * 0.07;
-
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, noteStart);
+        osc.frequency.setValueAtTime(freq, now + i * 0.07);
 
-        gain.gain.setValueAtTime(0.18, noteStart);
-        gain.gain.exponentialRampToValueAtTime(0.001, noteStart + 0.2);
+        gain.gain.setValueAtTime(0.14, now + i * 0.07);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.07 + 0.3);
 
         osc.connect(gain);
         gain.connect(ctx.destination);
-
-        osc.start(noteStart);
-        osc.stop(noteStart + 0.2);
+        osc.start(now + i * 0.07);
+        osc.stop(now + i * 0.07 + 0.3);
       });
-    } catch {
-      // Audio fallback
+    } catch {}
+  },
+
+  stopSpeaking: () => {
+    if (currentAudioElement) {
+      currentAudioElement.pause();
+      currentAudioElement.currentTime = 0;
+      currentAudioElement = null;
+    }
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
     }
   },
 
-  // Helper: Play single audio clip from stream with fallback (supports VieNeu-TTS & Edge Neural Voice)
+  // Helper: Play single audio clip from stream with fallback (Microsoft Edge Neural Voice Studio)
   playAudioClip: async (
     text: string,
     langCode: string,
@@ -249,132 +293,10 @@ export const soundManager = {
   ) => {
     const settings = getTTSSettings();
 
-    // 1. Nếu cấu hình chọn VieNeu-TTS (Hugging Face Cloud hoặc FastAPI Server)
-    if (settings.provider === 'vieneu') {
-      try {
-        const endpoint = (settings.vieneuEndpoint || '').trim();
-
-        // 1A. HUGGING FACE CLOUD GRADIO SPACE (https://pnnbao-ump-vieneu-tts.hf.space)
-        if (!endpoint || endpoint.includes('hf.space') || endpoint.includes('huggingface.co')) {
-          const hfBase = 'https://pnnbao-ump-vieneu-tts.hf.space';
-          const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-          if (settings.vieneuApiKey) {
-            headers['Authorization'] = `Bearer ${settings.vieneuApiKey.trim()}`;
-          }
-
-          // Voice mapping for HF Space
-          const voiceName = settings.vieneuVoiceId || 'Đoan (nữ miền Nam)';
-
-          // Abort controller with 7s timeout
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 7000);
-
-          const callRes = await fetch(`${hfBase}/gradio_api/call/synthesize_speech`, {
-            method: 'POST',
-            headers,
-            signal: controller.signal,
-            body: JSON.stringify({
-              data: [text.slice(0, 1000), voiceName, null, '', 'preset'],
-            }),
-          });
-          clearTimeout(timeoutId);
-
-          if (callRes.ok) {
-            const callJson = await callRes.json();
-            const eventId = callJson.event_id;
-
-            if (eventId) {
-              const streamRes = await fetch(`${hfBase}/gradio_api/call/synthesize_speech/${eventId}`, {
-                headers,
-              });
-              const sseText = await streamRes.text();
-              const urlMatch = sseText.match(/"url":\s*"([^"]+)"/);
-
-              if (urlMatch && urlMatch[1]) {
-                const audioUrl = urlMatch[1];
-                const audio = new Audio(audioUrl);
-                currentAudioElement = audio;
-                audio.playbackRate = rate || settings.speechRate;
-
-                audio.onended = () => {
-                  currentAudioElement = null;
-                  onFinish();
-                };
-                audio.onerror = () => {
-                  currentAudioElement = null;
-                  onFail();
-                };
-                audio.play().catch(() => {
-                  currentAudioElement = null;
-                  onFail();
-                });
-                return;
-              }
-            }
-          }
-        } else {
-          // 1B. STANDARD REST API / FASTAPI BACKEND
-          const payload = {
-            text: text,
-            voice: settings.vieneuVoiceId || 'default',
-            speed: rate || settings.speechRate,
-            lang: langCode,
-          };
-
-          const res = await fetch(endpoint, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              ...(settings.vieneuApiKey ? { Authorization: `Bearer ${settings.vieneuApiKey}` } : {}),
-            },
-            body: JSON.stringify(payload),
-          });
-
-          if (res.ok) {
-            const contentType = res.headers.get('content-type') || '';
-            let audioUrl = '';
-
-            if (contentType.includes('audio') || contentType.includes('octet-stream')) {
-              const blob = await res.blob();
-              audioUrl = URL.createObjectURL(blob);
-            } else {
-              const data = await res.json();
-              audioUrl =
-                data.audio_url ||
-                data.url ||
-                (data.audio_base64 ? `data:audio/wav;base64,${data.audio_base64}` : '');
-            }
-
-            if (audioUrl) {
-              const audio = new Audio(audioUrl);
-              currentAudioElement = audio;
-              audio.playbackRate = rate || settings.speechRate;
-
-              audio.onended = () => {
-                currentAudioElement = null;
-                onFinish();
-              };
-              audio.onerror = () => {
-                currentAudioElement = null;
-                onFail();
-              };
-              audio.play().catch(() => {
-                currentAudioElement = null;
-                onFail();
-              });
-              return;
-            }
-          }
-        }
-      } catch (err) {
-        console.warn('VieNeu-TTS server error, falling back to Edge Neural:', err);
-      }
-    }
-
-    // 2. Mặc định: Microsoft Edge Neural Voice API /api/tts (Ultra-fast 200ms)
+    // Microsoft Edge Neural Voice API /api/tts (Ultra-fast <200ms)
     try {
       const encoded = encodeURIComponent(text.slice(0, 800));
-      const voice = langCode === 'en' ? settings.edgeVoiceEn : settings.edgeVoiceVi;
+      const voice = langCode === 'en' ? settings.voiceEn : settings.voiceVi;
       const streamUrl = `/api/tts?lang=${langCode}&voice=${voice}&text=${encoded}`;
 
       const audio = new Audio(streamUrl);
@@ -418,23 +340,6 @@ export const soundManager = {
     }
 
     const langCode = lang === 'vi-VN' ? 'vi' : 'en';
-    const settings = getTTSSettings();
-
-    // Đối với VieNeu-TTS Cloud: Gửi 1 lần toàn bộ văn bản để tránh chờ nhiều câu
-    if (settings.provider === 'vieneu') {
-      soundManager.playAudioClip(
-        cleanText,
-        langCode,
-        rate,
-        () => {
-          if (onEnd) onEnd();
-        },
-        () => {
-          soundManager.speakBrowserSpeech(cleanText, lang, onEnd, pitch, rate);
-        }
-      );
-      return;
-    }
 
     // 2. Chẻ văn bản thành các câu tự nhiên để phát qua Studio Audio Stream
     const rawSentences = cleanText.split(/([.?!;\n]+)/);
@@ -554,140 +459,88 @@ export const soundManager = {
       const randomComp = compliments[Math.floor(Math.random() * compliments.length)];
       message = explanation ? `${randomComp} ${explanation}` : randomComp;
     } else {
-      const encouragements = [
-        'Chưa chính xác rồi bạn nhỏ ơi! ',
-        'Tiếc quá, chưa đúng rồi! ',
-        'Gần đúng rồi, đừng nản lòng nhé! '
+      const encourages = [
+        'Chưa chính xác rồi bạn nhỏ ơi! Cùng thử lại nhé.',
+        'Không sao cả, bé hãy suy nghĩ thêm một chút nào.',
+        'Gần đúng rồi! Bé thử chọn lại một lần nữa nhé.'
       ];
-      const randomEnc = encouragements[Math.floor(Math.random() * encouragements.length)];
-      const hintMsg = explanation ? `Gợi ý nè: ${explanation}` : 'Bé hãy đọc kỹ lại câu hỏi và thử lại nhé!';
-      message = `${randomEnc} ${hintMsg}`;
+      const randomEnc = encourages[Math.floor(Math.random() * encourages.length)];
+      message = explanation ? `${randomEnc} Gợi ý: ${explanation}` : randomEnc;
     }
 
-    soundManager.speakText(message, 'vi-VN', undefined, 1.0, 0.95);
-  },
-
-  // Stop current speech & audio
-  stopSpeaking: () => {
-    if (currentAudioElement) {
-      try {
-        currentAudioElement.pause();
-        currentAudioElement.currentTime = 0;
-      } catch {}
-      currentAudioElement = null;
-    }
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
+    soundManager.speakText(message, 'vi-VN');
   }
 };
 
-// =========================================================================
-// SPEECH-TO-TEXT (STT) - BÉ LUYỆN ĐỌC BẰNG GIỌNG NÓI (VOICE RECOGNITION)
-// =========================================================================
+let activeRecognition: any = null;
 
-interface SpeechRecognitionEvent {
-  results: {
-    [index: number]: {
-      [index: number]: {
-        transcript: string;
-      };
-      isFinal?: boolean;
-    };
-    length: number;
-  };
-}
+export const voiceManager = {
+  isSupported: () => {
+    return (
+      typeof window !== 'undefined' &&
+      ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)
+    );
+  },
 
-interface SpeechRecognitionInstance extends EventTarget {
-  continuous: boolean;
-  interimResults: boolean;
-  lang: string;
-  start: () => void;
-  stop: () => void;
-  abort: () => void;
-  onresult: (event: SpeechRecognitionEvent) => void;
-  onerror: (event: any) => void;
-  onend: () => void;
-}
-
-export class VoiceRecognitionManager {
-  private recognition: SpeechRecognitionInstance | null = null;
-  private isListening = false;
-
-  constructor() {
-    if (typeof window !== 'undefined') {
-      const SpeechRecognitionClass =
-        (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-
-      if (SpeechRecognitionClass) {
-        this.recognition = new SpeechRecognitionClass();
-        if (this.recognition) {
-          this.recognition.continuous = false;
-          this.recognition.interimResults = true;
-          this.recognition.lang = 'vi-VN';
-        }
-      }
-    }
-  }
-
-  public isSupported(): boolean {
-    return this.recognition !== null;
-  }
-
-  public startListening(
+  startListening: (
     onInterim: (text: string) => void,
     onFinal: (text: string) => void,
-    onError: (err: string) => void
-  ) {
-    if (!this.recognition) {
-      onError('Trình duyệt không hỗ trợ nhận diện giọng nói (Web Speech STT).');
+    onError: (err: any) => void
+  ) => {
+    if (typeof window === 'undefined') return;
+
+    const SpeechRecClass =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
+    if (!SpeechRecClass) {
+      onError(new Error('Trình duyệt không hỗ trợ nhận diện giọng nói.'));
       return;
     }
 
     try {
-      this.isListening = true;
+      if (activeRecognition) {
+        activeRecognition.abort();
+      }
 
-      this.recognition.onresult = (event: SpeechRecognitionEvent) => {
-        let interimText = '';
-        let finalText = '';
+      const recognition = new SpeechRecClass();
+      activeRecognition = recognition;
+      recognition.lang = 'vi-VN';
+      recognition.continuous = true;
+      recognition.interimResults = true;
 
-        for (let i = 0; i < event.results.length; ++i) {
-          const res = event.results[i];
-          if (res.isFinal) {
-            finalText += res[0].transcript;
+      recognition.onresult = (event: any) => {
+        let interimTranscript = '';
+        let finalTranscript = '';
+
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
           } else {
-            interimText += res[0].transcript;
+            interimTranscript += event.results[i][0].transcript;
           }
         }
 
-        if (interimText) onInterim(interimText);
-        if (finalText) onFinal(finalText);
+        if (interimTranscript) onInterim(interimTranscript);
+        if (finalTranscript) onFinal(finalTranscript);
       };
 
-      this.recognition.onerror = (e: any) => {
-        this.isListening = false;
-        onError(e.error || 'Lỗi nhận diện âm thanh.');
+      recognition.onerror = (event: any) => {
+        onError(event);
       };
 
-      this.recognition.onend = () => {
-        this.isListening = false;
-      };
-
-      this.recognition.start();
-    } catch (err: any) {
-      this.isListening = false;
-      onError(err?.message || 'Không thể bật micro.');
+      recognition.start();
+    } catch (e) {
+      onError(e);
     }
-  }
+  },
 
-  public stopListening() {
-    if (this.recognition && this.isListening) {
+  stopListening: () => {
+    if (activeRecognition) {
       try {
-        this.recognition.stop();
+        activeRecognition.stop();
       } catch {}
-        this.isListening = false;
+      activeRecognition = null;
     }
   }
-}
+};
 
-export const voiceManager = new VoiceRecognitionManager();

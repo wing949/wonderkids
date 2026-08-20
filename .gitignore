@@ -42,5 +42,4 @@ pnpm-debug.log*
 .system_generated/
 scratch/
 .vercel
-server/vieneu-service/models/
-server/vieneu-service/.audio_cache/
+
