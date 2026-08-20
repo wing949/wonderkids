@@ -39,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-white/80 bg-white/85 backdrop-blur-md shadow-sm transition-colors">
-      <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between gap-2 px-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 sm:h-20 max-w-[1520px] items-center justify-between gap-2 px-3 sm:px-6 lg:px-8">
         {/* Left: Logo & Portal Badges */}
         <div className="flex items-center gap-3 sm:gap-4">
           <button
@@ -142,7 +142,7 @@ export const Header: React.FC<HeaderProps> = ({
               soundManager.playPop();
               onOpenBadges();
             }}
-            className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-purple-100 hover:text-purple-700 transition-colors"
+            className="hidden sm:flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-purple-100 hover:text-purple-700 transition-colors"
             title="Bộ sưu tập Huy hiệu"
           >
             <Trophy size={18} />
@@ -154,7 +154,7 @@ export const Header: React.FC<HeaderProps> = ({
               soundManager.playPop();
               onOpenShop();
             }}
-            className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-amber-100 hover:text-amber-700 transition-colors"
+            className="hidden sm:flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-amber-100 hover:text-amber-700 transition-colors"
             title="Cửa hàng đổi quà"
           >
             <ShoppingBag size={18} />
@@ -195,8 +195,8 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Portal Switcher Dropdown (Góc Bé / Phụ Huynh / Quản Trị) */}
-          <div className="flex items-center gap-1 bg-slate-100/90 p-1 rounded-full border border-slate-200 shrink-0">
+          {/* Portal Switcher (Góc Bé / Phụ Huynh / Quản Trị) - Desktop Only */}
+          <div className="hidden lg:flex items-center gap-1 bg-slate-100/90 p-1 rounded-full border border-slate-200 shrink-0">
             <button
               onClick={() => {
                 soundManager.playPop();

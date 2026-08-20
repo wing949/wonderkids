@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GradeLevel, ThemeId, PortalView, SubjectType, MascotId, StudentProfile, LessonNode, DailyQuest, StarShopItem } from './types';
 import { INITIAL_DAILY_QUESTS } from './data/gamificationData';
-import { SAMPLE_LESSONS } from './data/curriculumData';
+import { getLessonsForGradeAndSubject } from './data/curriculum';
 import { Header } from './components/layout/Header';
 import { BottomNav } from './components/layout/BottomNav';
 import { StudentDashboard } from './components/dashboard/StudentDashboard';
@@ -281,12 +281,12 @@ export const App: React.FC = () => {
         xpEarned={lastEarnedXp}
         onContinue={() => {
           setIsVictoryModalOpen(false);
-          // Auto advance to next sample lesson if available
-          const nextLesson = SAMPLE_LESSONS.find(
-            (l) => l.subject === selectedSubject && l.id !== activeLesson?.id
-          );
-          if (nextLesson) {
-            setActiveLesson(nextLesson);
+          // Auto advance to next lesson in full SGK curriculum
+          const currentLessons = getLessonsForGradeAndSubject(currentGrade, selectedSubject);
+          const currentIdx = currentLessons.findIndex((l) => l.id === activeLesson?.id);
+          if (currentIdx !== -1 && currentIdx + 1 < currentLessons.length) {
+            setActiveLesson(currentLessons[currentIdx + 1]);
+            setCurrentPortal('exercise');
           } else {
             setCurrentPortal('adventure');
           }

@@ -54,6 +54,36 @@ export interface Question {
   pairs?: MatchingPair[];
   sequenceItems?: SequenceItem[];
   templateText?: string; // For fill_blank e.g. "Bông hoa màu [___]"
+  visualType?: 'counting' | 'clock' | 'ruler' | 'fraction' | 'geometry' | 'balance' | 'speed' | 'blocks' | 'array' | 'number_line';
+  visualData?: {
+    itemEmoji?: string;
+    itemCount?: number;
+    leftCount?: number;
+    rightCount?: number;
+    hours?: number;
+    minutes?: number;
+    lengthCm?: number;
+    numerator?: number;
+    denominator?: number;
+    shape?: 'triangle' | 'trapezoid' | 'circle' | 'rectangle' | 'square' | 'cube' | 'cuboid';
+    dimensions?: {
+      base?: number | string;
+      topBase?: number | string;
+      height?: number | string;
+      radius?: number | string;
+      length?: number | string;
+      width?: number | string;
+    };
+    leftWeight?: string | number;
+    rightWeight?: string | number;
+    speed?: number | string;
+    time?: number | string;
+    distance?: number | string;
+    rows?: number;
+    cols?: number;
+    numberLineRange?: [number, number];
+    markedNumber?: number;
+  };
   spellingData?: {
     initial: string; // Âm đầu (ví dụ: b, c, d)
     vowel: string;   // Âm chính / vần (ví dụ: e, ê, a)

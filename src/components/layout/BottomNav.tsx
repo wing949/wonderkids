@@ -17,7 +17,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
   onOpenQuests,
 }) => {
   return (
-    <div className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200/80 px-4 py-2 shadow-lg">
+    <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200/80 px-4 py-2 shadow-lg">
       <div className="flex items-center justify-around">
         <button
           onClick={() => {

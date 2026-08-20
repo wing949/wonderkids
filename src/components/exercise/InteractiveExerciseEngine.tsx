@@ -22,6 +22,7 @@ import { CandyProgressBar } from '../ui/CandyProgressBar';
 import { soundManager, voiceManager } from '../../utils/audio';
 import { triggerStarBurst } from '../../utils/confetti';
 import { buildLessonNarration } from '../../utils/lessonNarration';
+import { MathVisualIllustration } from './MathVisualIllustration';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -1103,16 +1104,22 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               </div>
             )}
 
-            {/* Optional Illustration Image / Emojis */}
-            {currentQ.image && (
-              <div className="mt-4 flex justify-center py-3 text-4xl sm:text-5xl tracking-widest bg-slate-50 rounded-3xl border border-slate-200">
-                {currentQ.image}
-              </div>
-            )}
+            {/* Dynamic Math / English Visual Illustration Component */}
+            <MathVisualIllustration
+              visualType={currentQ.visualType}
+              visualData={currentQ.visualData}
+              rawImage={currentQ.image}
+            />
 
             {/* 1. Bubble Multiple Choice & Comprehension Choices */}
             {(currentQ.type === 'bubble_choice' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend') && currentQ.options && (
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className={`mt-6 grid gap-3 sm:gap-4 ${
+                currentQ.options.length === 3
+                  ? 'grid-cols-1 sm:grid-cols-3'
+                  : currentQ.options.length === 4
+                  ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+                  : 'grid-cols-1 sm:grid-cols-2'
+              }`}>
                 {currentQ.options.map((opt: QuestionOption) => {
                   const isSelected = selectedOptionId === opt.id;
                   let optionStyle = 'border-slate-200 bg-white hover:border-amber-300 text-brand-dark shadow-xs';
@@ -1170,7 +1177,13 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   </CuteButton>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className={`grid gap-4 ${
+                  currentQ.options.length === 3
+                    ? 'grid-cols-1 sm:grid-cols-3'
+                    : currentQ.options.length === 4
+                    ? 'grid-cols-2 lg:grid-cols-4'
+                    : 'grid-cols-2'
+                }`}>
                   {currentQ.options.map((opt: QuestionOption) => {
                     const isSelected = selectedOptionId === opt.id;
                     let cardStyle = 'border-slate-200 bg-white hover:border-sky-400 shadow-xs';
@@ -1293,16 +1306,24 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             <AnimatePresence>
               {showHint && currentQ.hint && (
                 <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
+                  initial={{ opacity: 0, y: 10, height: 0 }}
+                  animate={{ opacity: 1, y: 0, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="mt-4 p-4 rounded-3xl bg-amber-50 border-2 border-amber-200 flex items-start gap-2.5 text-amber-900"
+                  className="mt-6 p-4 sm:p-5 rounded-3xl bg-amber-50/90 border-2 border-amber-300/80 flex items-start gap-3 text-amber-900 shadow-sm"
                 >
-                  <HelpCircle size={20} className="shrink-0 text-amber-600 mt-0.5" />
-                  <div>
-                    <strong className="font-baloo text-sm">Gợi ý từ Mascot:</strong>
-                    <p className="font-vietnam text-xs sm:text-sm font-medium mt-0.5">{currentQ.hint}</p>
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-amber-200 text-lg">
+                    💡
                   </div>
+                  <div className="flex-1">
+                    <strong className="font-baloo text-sm sm:text-base text-amber-950">Gợi ý từ Mascot:</strong>
+                    <p className="font-vietnam text-xs sm:text-sm font-semibold text-amber-900 mt-1 leading-relaxed">{currentQ.hint}</p>
+                  </div>
+                  <button
+                    onClick={() => setShowHint(false)}
+                    className="text-xs font-baloo font-bold text-amber-600 hover:text-amber-800 p-1 cursor-pointer"
+                  >
+                    Đóng ✕
+                  </button>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -1322,18 +1343,25 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 >
                   Thử lại nhé!
                 </CuteButton>
-              ) : currentQ?.hint && !showHint ? (
+              ) : currentQ?.hint ? (
                 <button
                   onClick={() => {
                     soundManager.playPop();
-                    setShowHint(true);
-                    // Realtime voice hint
-                    soundManager.speakText(`Gợi ý bài học: ${currentQ.hint}`, 'vi-VN');
+                    const nextState = !showHint;
+                    setShowHint(nextState);
+                    if (nextState) {
+                      soundManager.speakText(`Gợi ý bài học: ${currentQ.hint}`, 'vi-VN');
+                    }
                   }}
-                  className="flex items-center gap-1.5 font-baloo font-bold text-sm text-slate-500 hover:text-amber-700 transition-colors cursor-pointer"
+                  className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-2xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+                    showHint
+                      ? 'bg-amber-200 text-amber-950 border border-amber-300 shadow-xs'
+                      : 'bg-slate-100 hover:bg-amber-50 text-slate-600 hover:text-amber-800 border border-slate-200 shadow-2xs hover:scale-102'
+                  }`}
+                  title="Nhấn để xem gợi ý phương pháp giải từ Mascot"
                 >
-                  <HelpCircle size={18} />
-                  <span>Xem gợi ý 💡</span>
+                  <HelpCircle size={17} className="text-amber-500 shrink-0" />
+                  <span>{showHint ? 'Đóng gợi ý ✕' : 'Xem gợi ý 💡'}</span>
                 </button>
               ) : null}
             </div>
