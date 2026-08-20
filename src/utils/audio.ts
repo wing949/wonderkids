@@ -263,15 +263,21 @@ export const soundManager = {
           }
 
           // Voice mapping for HF Space
-          const voiceName = settings.vieneuVoiceId || 'Ngọc (nữ miền Bắc)';
+          const voiceName = settings.vieneuVoiceId || 'Đoan (nữ miền Nam)';
+
+          // Abort controller with 7s timeout
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 7000);
 
           const callRes = await fetch(`${hfBase}/gradio_api/call/synthesize_speech`, {
             method: 'POST',
             headers,
+            signal: controller.signal,
             body: JSON.stringify({
-              data: [text, voiceName, null, '', 'preset'],
+              data: [text.slice(0, 1000), voiceName, null, '', 'preset'],
             }),
           });
+          clearTimeout(timeoutId);
 
           if (callRes.ok) {
             const callJson = await callRes.json();
@@ -365,9 +371,9 @@ export const soundManager = {
       }
     }
 
-    // 2. Mặc định: Microsoft Edge Neural Voice API /api/tts
+    // 2. Mặc định: Microsoft Edge Neural Voice API /api/tts (Ultra-fast 200ms)
     try {
-      const encoded = encodeURIComponent(text.slice(0, 400));
+      const encoded = encodeURIComponent(text.slice(0, 800));
       const voice = langCode === 'en' ? settings.edgeVoiceEn : settings.edgeVoiceVi;
       const streamUrl = `/api/tts?lang=${langCode}&voice=${voice}&text=${encoded}`;
 
@@ -412,6 +418,23 @@ export const soundManager = {
     }
 
     const langCode = lang === 'vi-VN' ? 'vi' : 'en';
+    const settings = getTTSSettings();
+
+    // Đối với VieNeu-TTS Cloud: Gửi 1 lần toàn bộ văn bản để tránh chờ nhiều câu
+    if (settings.provider === 'vieneu') {
+      soundManager.playAudioClip(
+        cleanText,
+        langCode,
+        rate,
+        () => {
+          if (onEnd) onEnd();
+        },
+        () => {
+          soundManager.speakBrowserSpeech(cleanText, lang, onEnd, pitch, rate);
+        }
+      );
+      return;
+    }
 
     // 2. Chẻ văn bản thành các câu tự nhiên để phát qua Studio Audio Stream
     const rawSentences = cleanText.split(/([.?!;\n]+)/);
@@ -442,11 +465,9 @@ export const soundManager = {
         langCode,
         rate,
         () => {
-          // Delay nhỏ 120ms giữa các câu để nhịp điệu tự nhiên như cô giáo đọc
-          setTimeout(playNext, 120);
+          setTimeout(playNext, 100);
         },
         () => {
-          // Nếu gặp lỗi mạng thì chuyển sang Web Speech Synthesis
           const remainingText = sentences.slice(currentIdx - 1).join(' ');
           soundManager.speakBrowserSpeech(remainingText, lang, onEnd, pitch, rate);
         }
@@ -459,7 +480,10 @@ export const soundManager = {
   // Play SGK Passage audio with 0ms instant static pre-rendered file and fallback
   playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
-    const staticUrl = `/audio/curriculum/${lessonId}.mp3`;
+    
+    // Normalize id: supports both tv-g2-b1 and tv-g2-l1
+    const normalizedId = lessonId.replace('-l', '-b');
+    const staticUrl = `/audio/curriculum/${normalizedId}.mp3`;
     const audio = new Audio(staticUrl);
     currentAudioElement = audio;
 
@@ -475,6 +499,7 @@ export const soundManager = {
     audio.onended = handleFinish;
     audio.onerror = () => {
       currentAudioElement = null;
+      // Fallback to dynamic TTS
       soundManager.speakText(fallbackText, 'vi-VN', onEnd);
     };
 

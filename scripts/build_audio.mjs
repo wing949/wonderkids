@@ -22,6 +22,22 @@ const passages = [
   {
     id: 'tv-g2-b5',
     text: 'Cánh đồng quê em. Vào mùa lúa chín, cánh đồng quê em trải rộng mênh mông như một tấm thảm vàng khổng lồ. Từng bông lúa trĩu hạt uốn cong dưới ánh nắng ban mai rực rỡ. Gió thổi nhẹ, sóng lúa nhấp nhô dập dờn đuổi nhau tít tận chân trời. Xa xa, các bác nông dân nón trắng đang thoăn thoắt thu hoạch lúa, gương mặt ai nấy đều rạng rỡ niềm vui được mùa.'
+  },
+  {
+    id: 'tv-g2-b7',
+    text: 'Cây xấu hổ. Bờ cỏ rậm rạp, có một cây xấu hổ nhỏ bé mọc nép mình. Những chiếc lá xanh biếc khẽ xòe ra đón ánh mặt trời. Bỗng một chú chuồn chuồn ớt lướt cánh chạm nhẹ vào tán lá. Cây xấu hổ vội vã khép từng cặp lá lại, cúi đầu e ấp. Gió thoảng qua thì thầm: Đừng sợ nhé, bạn chuồn chuồn chỉ đến chơi thôi mà! Một lúc lâu sau khi mọi sự yên ắng, cây xấu hổ mới từ từ hé mở từng phiến lá mỏng manh.'
+  },
+  {
+    id: 'tv-g2-b9',
+    text: 'Cô giáo lớp em. Sáng nào em đến lớp, Cũng thấy cô đến rồi. Đáp lời: Chào cô ạ! Cô mỉm cười thật tươi. Cô dạy em tập viết, Gió đưa thoảng hương nhài, Nắng ghé vào cửa lớp, Xem chúng em học bài. Những lời cô giáo giảng, Ấm trang vở thơm tho, Yêu thương từng nét chữ, Giúp đàn em lớn khôn.'
+  },
+  {
+    id: 'tv-g2-b17',
+    text: 'Gọi bạn. Tự xa xưa thuở nào, Trong rừng xanh sâu thẳm, Đôi bạn Bê Vàng và Dê Trắng, Sống chan hòa bên nhau. Một năm trời hạn hán, Suối cạn cỏ khô rang, Bê Vàng đi tìm cỏ, Lạc lối giữa đại ngàn. Dê Trắng thương bạn quá, Chạy khắp nẻo tìm hoài, Đến nay vẫn cất tiếng: Bê! Bê! Gọi bạn hiền.'
+  },
+  {
+    id: 'tv-g2-b27',
+    text: 'Mẹ vắng nhà ngày bão. Mấy ngày mẹ về quê, Là mấy ngày bão nổi. Con đường ngập nước lội, Vườn chuối ngã nghiêng nghiêng. Bố đội nón đi chợ, Nấu cơm cho hai con. Em quét dọn gọn gàng, Mong mẹ sớm về nhà. Bão tan trời lại sáng, Mẹ bước vào cửa reo, Cả nhà ôm chầm lấy, Hạnh phúc tràn yêu thương.'
   }
 ];
 
@@ -32,15 +48,25 @@ const feedbacks = [
   { id: 'chua-dung', text: 'Chưa chính xác rồi bạn nhỏ ơi! Gợi ý nè, bé hãy đọc kỹ lại câu hỏi và thử lại nhé.' }
 ];
 
-async function generateAndSave(text, targetFilePath) {
-  const dir = path.dirname(targetFilePath);
+async function generateSingleFile(text, targetFilePath) {
   const tts = new MsEdgeTTS();
   await tts.setMetadata('vi-VN-HoaiMyNeural', OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
-  const result = await tts.toFile(dir, 'temp_' + Date.now(), text);
-  if (result && result.audioFilePath) {
-    fs.renameSync(result.audioFilePath, targetFilePath);
-    console.log('✅ Generated:', targetFilePath, `(${fs.statSync(targetFilePath).size} bytes)`);
-  }
+  const streamResult = tts.toStream(text);
+  
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    streamResult.audioStream.on('data', (c) => chunks.push(c));
+    streamResult.audioStream.on('end', () => {
+      const buffer = Buffer.concat(chunks);
+      fs.writeFileSync(targetFilePath, buffer);
+      console.log('✅ Generated:', path.basename(targetFilePath), `(${buffer.length} bytes)`);
+      resolve(buffer.length);
+    });
+    streamResult.audioStream.on('error', (err) => {
+      console.error('❌ Stream error:', err);
+      reject(err);
+    });
+  });
 }
 
 async function run() {
@@ -50,18 +76,36 @@ async function run() {
   if (!fs.existsSync(fbDir)) fs.mkdirSync(fbDir, { recursive: true });
 
   for (const p of passages) {
-    const targetFile = path.join(curDir, `${p.id}.mp3`);
-    console.log('🎙️ Generating passage:', p.id);
-    await generateAndSave(p.text, targetFile);
+    const targetB = path.join(curDir, `${p.id}.mp3`);
+    const targetL = path.join(curDir, `${p.id.replace('-b', '-l')}.mp3`);
+    
+    console.log('🎙️ Synthesizing passage:', p.id);
+    try {
+      await generateSingleFile(p.text, targetB);
+      fs.copyFileSync(targetB, targetL);
+    } catch (err) {
+      console.warn('Retrying', p.id);
+      await generateSingleFile(p.text, targetB);
+      fs.copyFileSync(targetB, targetL);
+    }
   }
 
   for (const fb of feedbacks) {
     const targetFile = path.join(fbDir, `${fb.id}.mp3`);
-    console.log('🎙️ Generating feedback:', fb.id);
-    await generateAndSave(fb.text, targetFile);
+    console.log('🎙️ Synthesizing feedback:', fb.id);
+    try {
+      await generateSingleFile(fb.text, targetFile);
+    } catch (err) {
+      console.warn('Retrying', fb.id);
+      await generateSingleFile(fb.text, targetFile);
+    }
   }
 
-  console.log('🎉 ALL CURRICULUM AUDIO PRE-GENERATED PERFECTLY!');
+  console.log('🎉 ALL AUDIO FILES GENERATED 100% SUCCESSFULLY!');
+  process.exit(0);
 }
 
-run().catch(console.error);
+run().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
