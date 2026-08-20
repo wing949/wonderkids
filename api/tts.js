@@ -1,3 +1,5 @@
+import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
+
 export default async function handler(req, res) {
   const { text, lang = 'vi' } = req.query;
 
@@ -6,26 +8,25 @@ export default async function handler(req, res) {
   }
 
   try {
-    const encoded = encodeURIComponent(String(text).slice(0, 500));
-    const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`;
+    const cleanText = String(text).slice(0, 1000);
+    const voiceName = lang === 'en' ? 'en-US-JennyNeural' : 'vi-VN-HoaiMyNeural';
 
-    const response = await fetch(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Referer': 'https://translate.google.com/'
-      }
+    const tts = new MsEdgeTTS();
+    await tts.setMetadata(voiceName, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
+
+    const { audioStream } = tts.toStream(cleanText);
+
+    const chunks = [];
+    audioStream.on('data', (chunk) => chunks.push(chunk));
+    audioStream.on('end', () => {
+      const buffer = Buffer.concat(chunks);
+      res.setHeader('Content-Type', 'audio/mpeg');
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      res.send(buffer);
     });
-
-    if (!response.ok) {
-      return res.status(response.status).json({ error: 'Failed to fetch TTS audio' });
-    }
-
-    const arrayBuffer = await response.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-
-    res.setHeader('Content-Type', 'audio/mpeg');
-    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-    res.send(buffer);
+    audioStream.on('error', (err) => {
+      res.status(500).json({ error: err.message });
+    });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

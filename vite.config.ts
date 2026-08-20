@@ -1,5 +1,6 @@
 import { defineConfig, Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 
 function ttsDevPlugin(): Plugin {
   return {
@@ -17,29 +18,26 @@ function ttsDevPlugin(): Plugin {
         }
 
         try {
-          const encoded = encodeURIComponent(text.slice(0, 500));
-          const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`;
+          const cleanText = String(text).slice(0, 1000);
+          const voiceName = lang === 'en' ? 'en-US-JennyNeural' : 'vi-VN-HoaiMyNeural';
 
-          const fetchRes = await fetch(ttsUrl, {
-            headers: {
-              'User-Agent':
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-              Referer: 'https://translate.google.com/'
-            }
+          const tts = new MsEdgeTTS();
+          await tts.setMetadata(voiceName, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
+
+          const { audioStream } = tts.toStream(cleanText);
+
+          const chunks: Buffer[] = [];
+          audioStream.on('data', (chunk: Buffer) => chunks.push(chunk));
+          audioStream.on('end', () => {
+            const buffer = Buffer.concat(chunks);
+            res.setHeader('Content-Type', 'audio/mpeg');
+            res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+            res.end(buffer);
           });
-
-          if (!fetchRes.ok) {
-            res.statusCode = fetchRes.status;
-            res.end(JSON.stringify({ error: 'TTS request failed' }));
-            return;
-          }
-
-          const arrayBuffer = await fetchRes.arrayBuffer();
-          const buffer = Buffer.from(arrayBuffer);
-
-          res.setHeader('Content-Type', 'audio/mpeg');
-          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-          res.end(buffer);
+          audioStream.on('error', (err: any) => {
+            res.statusCode = 500;
+            res.end(JSON.stringify({ error: err.message }));
+          });
         } catch (err: any) {
           res.statusCode = 500;
           res.end(JSON.stringify({ error: err.message }));
