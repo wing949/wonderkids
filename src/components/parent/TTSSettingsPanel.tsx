@@ -113,19 +113,16 @@ export const TTSSettingsPanel: React.FC = () => {
                 : 'border-slate-200 bg-white hover:border-slate-300'
             }`}
           >
-            <div className="flex items-start justify-between">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white font-bold text-xl shadow-sm">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0 flex-1">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white font-bold text-xl shadow-sm">
                   🌸
                 </span>
-                <div>
-                  <h3 className="font-baloo text-lg font-extrabold text-slate-800 flex items-center gap-2">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-baloo text-base sm:text-lg font-extrabold text-slate-800 whitespace-nowrap overflow-hidden text-ellipsis">
                     Giọng Đọc Tự Động (Chuẩn Sư Phạm)
-                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-extrabold text-emerald-800">
-                      ⭐ Khuyên Dùng
-                    </span>
                   </h3>
-                  <p className="font-vietnam text-xs font-semibold text-slate-500">
+                  <p className="font-vietnam text-xs font-semibold text-slate-500 truncate">
                     Giọng cô Hoài My / thầy Nam Minh chuẩn phòng thu (Không cần cài server)
                   </p>
                 </div>
@@ -135,7 +132,7 @@ export const TTSSettingsPanel: React.FC = () => {
                 name="ttsProvider"
                 checked={settings.provider === 'edge'}
                 onChange={() => setSettings({ ...settings, provider: 'edge' })}
-                className="h-5 w-5 accent-emerald-600 cursor-pointer mt-1"
+                className="h-5 w-5 shrink-0 accent-emerald-600 cursor-pointer"
               />
             </div>
 
@@ -170,19 +167,16 @@ export const TTSSettingsPanel: React.FC = () => {
                 : 'border-slate-200 bg-white hover:border-slate-300'
             }`}
           >
-            <div className="flex items-start justify-between">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white font-bold text-xl shadow-sm">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0 flex-1">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white font-bold text-xl shadow-sm">
                   ⚡
                 </span>
-                <div>
-                  <h3 className="font-baloo text-lg font-extrabold text-slate-800 flex items-center gap-2">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-baloo text-base sm:text-lg font-extrabold text-slate-800 whitespace-nowrap overflow-hidden text-ellipsis">
                     Mô Hình AI VieNeu-TTS (Hugging Face Cloud)
-                    <span className="rounded-full bg-purple-100 px-2 py-0.5 text-[11px] font-bold text-purple-800">
-                      Online 24/7
-                    </span>
                   </h3>
-                  <p className="font-vietnam text-xs font-semibold text-slate-500">
+                  <p className="font-vietnam text-xs font-semibold text-slate-500 truncate">
                     Chạy trực tiếp từ Đám Mây Hugging Face (Cô Ngọc, Thầy Tuyên, Cô Ly, Cô Đoan)
                   </p>
                 </div>
@@ -199,7 +193,7 @@ export const TTSSettingsPanel: React.FC = () => {
                     vieneuVoiceId: settings.vieneuVoiceId || 'Ngọc (nữ miền Bắc)'
                   })
                 }
-                className="h-5 w-5 accent-purple-600 cursor-pointer mt-1"
+                className="h-5 w-5 shrink-0 accent-purple-600 cursor-pointer"
               />
             </div>
 
