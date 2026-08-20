@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, Clock, CheckCircle2, Award, Plus, ArrowLeft, Eye, TrendingUp, Trash2, Check, Volume2 } from 'lucide-react';
+import { ShieldCheck, Clock, CheckCircle2, Award, Plus, ArrowLeft, Eye, TrendingUp, Trash2, Check } from 'lucide-react';
 import { MOCK_PARENT_REPORT } from '../../data/gamificationData';
 import { ParentReport, ParentTask } from '../../types';
 import { CuteButton } from '../ui/CuteButton';
 import { CandyProgressBar } from '../ui/CandyProgressBar';
 import { soundManager } from '../../utils/audio';
-import { TTSSettingsPanel } from './TTSSettingsPanel';
 
 const STORAGE_KEY_PARENT_REPORT = 'wonderkids_parent_report_v1';
 
@@ -40,7 +39,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
   const [screenLimit, setScreenLimit] = useState(report.screenTimeLimitMinutes);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskStars, setNewTaskStars] = useState(1);
-  const [activeTab, setActiveTab] = useState<'overview' | 'tasks' | 'tts_settings'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'tasks'>('overview');
 
   // Sync state to localStorage whenever report or screenLimit changes
   useEffect(() => {
@@ -188,25 +187,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
           >
             <Award size={16} /> ⭐ Sổ Việc Tốt ({report.parentTasks.filter((t) => !t.isApproved).length})
           </button>
-
-          <button
-            type="button"
-            onClick={() => {
-              soundManager.playPop();
-              setActiveTab('tts_settings');
-            }}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
-              activeTab === 'tts_settings'
-                ? 'bg-purple-600 text-white shadow-md ring-2 ring-purple-300'
-                : 'bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 hover:from-purple-100 hover:to-pink-100 border border-purple-200'
-            }`}
-          >
-            <Volume2 size={16} /> 🎙️ Quản Trị Giọng Đọc AI (VieNeu-TTS)
-          </button>
         </div>
-
-        {/* Tab 3: TTS Settings (VieNeu-TTS & AI Studio) */}
-        {activeTab === 'tts_settings' && <TTSSettingsPanel />}
 
         {/* Tab 1: Overview Stats & Subject Mastery */}
         {activeTab === 'overview' && (

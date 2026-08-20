@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Plus, Layers, Database, ArrowLeft, Check, Edit3, Trash2 } from 'lucide-react';
+import { ShieldCheck, Plus, Layers, Database, ArrowLeft, Check, Edit3, Trash2, Volume2 } from 'lucide-react';
 import { GradeLevel, SubjectType, QuestionType } from '../../types';
 import { SAMPLE_LESSONS, SUBJECTS_CONFIG } from '../../data/curriculumData';
 import { CuteButton } from '../ui/CuteButton';
 import { soundManager } from '../../utils/audio';
+import { TTSSettingsPanel } from '../parent/TTSSettingsPanel';
 
 interface AdminCMSProps {
   onBackToStudent: () => void;
@@ -12,7 +13,7 @@ interface AdminCMSProps {
 export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
   const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(1);
   const [selectedSubject, setSelectedSubject] = useState<SubjectType>('math');
-  const [activeTab, setActiveTab] = useState<'curriculum' | 'question_builder' | 'analytics'>('curriculum');
+  const [activeTab, setActiveTab] = useState<'curriculum' | 'question_builder' | 'tts_settings'>('curriculum');
 
   // Question builder form state
   const [newQType, setNewQType] = useState<QuestionType>('bubble_choice');
@@ -107,10 +108,11 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex items-center gap-2 border-b border-slate-800 pb-2">
+        <div className="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-2">
           <button
+            type="button"
             onClick={() => setActiveTab('curriculum')}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-2xl font-baloo font-bold text-sm transition-all ${
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
               activeTab === 'curriculum'
                 ? 'bg-emerald-500 text-white'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800'
@@ -120,8 +122,9 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
           </button>
 
           <button
+            type="button"
             onClick={() => setActiveTab('question_builder')}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-2xl font-baloo font-bold text-sm transition-all ${
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
               activeTab === 'question_builder'
                 ? 'bg-amber-500 text-slate-950 font-extrabold'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800'
@@ -129,7 +132,26 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
           >
             <Database size={16} /> Soạn Thảo Câu Hỏi Trực Quan
           </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveTab('tts_settings')}
+            className={`flex items-center gap-1.5 px-4 py-2 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
+              activeTab === 'tts_settings'
+                ? 'bg-purple-600 text-white font-extrabold shadow-md ring-2 ring-purple-400'
+                : 'text-purple-300 hover:text-white hover:bg-purple-900/40 border border-purple-800/40'
+            }`}
+          >
+            <Volume2 size={16} /> 🎙️ Quản Trị Giọng Đọc AI (VieNeu-TTS)
+          </button>
         </div>
+
+        {/* Tab 3: TTS Settings (VieNeu-TTS & AI Studio) */}
+        {activeTab === 'tts_settings' && (
+          <div className="rounded-4xl bg-slate-950/80 p-4 sm:p-6 border border-slate-800 text-slate-800">
+            <TTSSettingsPanel />
+          </div>
+        )}
 
         {/* Tab 1: Curriculum Manager */}
         {activeTab === 'curriculum' && (
