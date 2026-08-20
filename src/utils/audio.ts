@@ -249,62 +249,119 @@ export const soundManager = {
   ) => {
     const settings = getTTSSettings();
 
-    // 1. Nếu cấu hình chọn VieNeu-TTS (Self-hosted API hoặc Cloud endpoint)
-    if (settings.provider === 'vieneu' && settings.vieneuEndpoint) {
+    // 1. Nếu cấu hình chọn VieNeu-TTS (Hugging Face Cloud hoặc FastAPI Server)
+    if (settings.provider === 'vieneu') {
       try {
-        const payload = {
-          text: text,
-          voice: settings.vieneuVoiceId || 'default',
-          speed: rate || settings.speechRate,
-          lang: langCode
-        };
+        const endpoint = (settings.vieneuEndpoint || '').trim();
 
-        const res = await fetch(settings.vieneuEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            ...(settings.vieneuApiKey ? { Authorization: `Bearer ${settings.vieneuApiKey}` } : {})
-          },
-          body: JSON.stringify(payload)
-        });
-
-        if (res.ok) {
-          const contentType = res.headers.get('content-type') || '';
-          let audioUrl = '';
-
-          if (contentType.includes('audio') || contentType.includes('octet-stream')) {
-            const blob = await res.blob();
-            audioUrl = URL.createObjectURL(blob);
-          } else {
-            const data = await res.json();
-            audioUrl =
-              data.audio_url ||
-              data.url ||
-              (data.audio_base64 ? `data:audio/wav;base64,${data.audio_base64}` : '');
+        // 1A. HUGGING FACE CLOUD GRADIO SPACE (https://pnnbao-ump-vieneu-tts.hf.space)
+        if (!endpoint || endpoint.includes('hf.space') || endpoint.includes('huggingface.co')) {
+          const hfBase = 'https://pnnbao-ump-vieneu-tts.hf.space';
+          const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+          if (settings.vieneuApiKey) {
+            headers['Authorization'] = `Bearer ${settings.vieneuApiKey.trim()}`;
           }
 
-          if (audioUrl) {
-            const audio = new Audio(audioUrl);
-            currentAudioElement = audio;
-            audio.playbackRate = rate || settings.speechRate;
+          // Voice mapping for HF Space
+          const voiceName = settings.vieneuVoiceId || 'Ngọc (nữ miền Bắc)';
 
-            audio.onended = () => {
-              currentAudioElement = null;
-              onFinish();
-            };
-            audio.onerror = () => {
-              currentAudioElement = null;
-              onFail();
-            };
-            audio.play().catch(() => {
-              currentAudioElement = null;
-              onFail();
-            });
-            return;
+          const callRes = await fetch(`${hfBase}/gradio_api/call/synthesize_speech`, {
+            method: 'POST',
+            headers,
+            body: JSON.stringify({
+              data: [text, voiceName, null, '', 'preset'],
+            }),
+          });
+
+          if (callRes.ok) {
+            const callJson = await callRes.json();
+            const eventId = callJson.event_id;
+
+            if (eventId) {
+              const streamRes = await fetch(`${hfBase}/gradio_api/call/synthesize_speech/${eventId}`, {
+                headers,
+              });
+              const sseText = await streamRes.text();
+              const urlMatch = sseText.match(/"url":\s*"([^"]+)"/);
+
+              if (urlMatch && urlMatch[1]) {
+                const audioUrl = urlMatch[1];
+                const audio = new Audio(audioUrl);
+                currentAudioElement = audio;
+                audio.playbackRate = rate || settings.speechRate;
+
+                audio.onended = () => {
+                  currentAudioElement = null;
+                  onFinish();
+                };
+                audio.onerror = () => {
+                  currentAudioElement = null;
+                  onFail();
+                };
+                audio.play().catch(() => {
+                  currentAudioElement = null;
+                  onFail();
+                });
+                return;
+              }
+            }
+          }
+        } else {
+          // 1B. STANDARD REST API / FASTAPI BACKEND
+          const payload = {
+            text: text,
+            voice: settings.vieneuVoiceId || 'default',
+            speed: rate || settings.speechRate,
+            lang: langCode,
+          };
+
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              ...(settings.vieneuApiKey ? { Authorization: `Bearer ${settings.vieneuApiKey}` } : {}),
+            },
+            body: JSON.stringify(payload),
+          });
+
+          if (res.ok) {
+            const contentType = res.headers.get('content-type') || '';
+            let audioUrl = '';
+
+            if (contentType.includes('audio') || contentType.includes('octet-stream')) {
+              const blob = await res.blob();
+              audioUrl = URL.createObjectURL(blob);
+            } else {
+              const data = await res.json();
+              audioUrl =
+                data.audio_url ||
+                data.url ||
+                (data.audio_base64 ? `data:audio/wav;base64,${data.audio_base64}` : '');
+            }
+
+            if (audioUrl) {
+              const audio = new Audio(audioUrl);
+              currentAudioElement = audio;
+              audio.playbackRate = rate || settings.speechRate;
+
+              audio.onended = () => {
+                currentAudioElement = null;
+                onFinish();
+              };
+              audio.onerror = () => {
+                currentAudioElement = null;
+                onFail();
+              };
+              audio.play().catch(() => {
+                currentAudioElement = null;
+                onFail();
+              });
+              return;
+            }
           }
         }
       } catch (err) {
-        console.warn('VieNeu-TTS server offline or unreachable, falling back to Edge Neural:', err);
+        console.warn('VieNeu-TTS server error, falling back to Edge Neural:', err);
       }
     }
 

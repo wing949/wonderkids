@@ -1,25 +1,21 @@
 import React, { useState } from 'react';
-import { Volume2, Sparkles, Server, Check, AlertCircle, Play, Square, Settings, Cloud, Laptop } from 'lucide-react';
+import { Volume2, Sparkles, Server, Check, AlertCircle, Play, Square, Settings, Cloud, Key, Eye, EyeOff } from 'lucide-react';
 import { TTSSettings } from '../../types';
 import { getTTSSettings, saveTTSSettings, soundManager } from '../../utils/audio';
 import { CuteButton } from '../ui/CuteButton';
 
-const VIENEU_PRESET_VOICES = [
-  { id: 'Vinh', name: '👨 Thầy Vinh (Nam miền Bắc — Trầm ấm, dõng dạc ⭐ Chuẩn)' },
-  { id: 'Tuyen', name: '👩 Cô Tuyên (Nữ miền Bắc — Dịu dàng, chuẩn sư phạm)' },
-  { id: 'Ly', name: '👩 Cô Ly (Nữ miền Nam — Ngọt ngào, truyền cảm)' },
-  { id: 'Ngoc', name: '👩 Cô Ngọc (Nữ giọng kể chuyện SGK)' },
-  { id: 'Binh', name: '👨 Thầy Bình (Nam miền Bắc ấm áp)' },
-  { id: 'Doan', name: '👨 Thầy Đoan (Nam diễn cảm)' },
-  { id: 'ngoc_huyen', name: '🌸 Cô Ngọc Huyền (Giọng đọc thơ & truyện cổ tích)' },
-  { id: 'custom', name: '✍️ Nhập Voice ID nhân bản khác...' }
+const HUGGINGFACE_VOICES = [
+  { id: 'Ngọc (nữ miền Bắc)', name: '👩 Cô Ngọc (Nữ miền Bắc — Chuẩn SGK & Kể chuyện ⭐ Khuyên dùng)' },
+  { id: 'Tuyên (nam miền Bắc)', name: '👨 Thầy Tuyên (Nam miền Bắc — Dõng dạc, rõ ràng)' },
+  { id: 'Ly (nữ miền Bắc)', name: '👩 Cô Ly (Nữ miền Bắc — Dịu dàng, truyền cảm)' },
+  { id: 'Đoan (nữ miền Nam)', name: '👩 Cô Đoan (Nữ miền Nam — Ngọt ngào, êm ái)' },
+  { id: 'Vĩnh (nam miền Nam)', name: '👨 Thầy Vĩnh (Nam miền Nam — Trầm ấm, thân thiện)' },
+  { id: 'Bình (nam miền Bắc)', name: '👨 Thầy Bình (Nam miền Bắc — Ấm áp)' },
 ];
 
 export const TTSSettingsPanel: React.FC = () => {
   const [settings, setSettings] = useState<TTSSettings>(getTTSSettings);
-  const [isCustomVoice, setIsCustomVoice] = useState(() => {
-    return !VIENEU_PRESET_VOICES.some((v) => v.id === getTTSSettings().vieneuVoiceId);
-  });
+  const [showToken, setShowToken] = useState(false);
   const [testText, setTestText] = useState(
     'Chào các con! Hôm nay chúng mình cùng đọc bài và khám phá những điều kỳ thú trên Đảo Tri Thức nhé!'
   );
@@ -34,29 +30,6 @@ export const TTSSettingsPanel: React.FC = () => {
     soundManager.playCorrect();
     setIsSaved(true);
     setTimeout(() => setIsSaved(false), 2500);
-  };
-
-  // Preset quick connectors
-  const applyHuggingFacePreset = () => {
-    soundManager.playPop();
-    setSettings({
-      ...settings,
-      provider: 'vieneu',
-      vieneuEndpoint: 'https://api-inference.huggingface.co/models/pnnbao-ump/VieNeu-TTS',
-      vieneuVoiceId: settings.vieneuVoiceId || 'Vinh',
-      vieneuApiKey: settings.vieneuApiKey || ''
-    });
-  };
-
-  const applyLocalhostPreset = () => {
-    soundManager.playPop();
-    setSettings({
-      ...settings,
-      provider: 'vieneu',
-      vieneuEndpoint: 'http://localhost:8000/api/tts',
-      vieneuVoiceId: settings.vieneuVoiceId || 'Vinh',
-      vieneuApiKey: ''
-    });
   };
 
   // Handle Voice Test
@@ -180,16 +153,21 @@ export const TTSSettingsPanel: React.FC = () => {
             </p>
           </div>
 
-          {/* Option 2: VieNeu-TTS (Self-Hosted / Hugging Face) */}
+          {/* Option 2: VieNeu-TTS on Hugging Face Cloud */}
           <div
             onClick={() => {
               soundManager.playPop();
-              setSettings({ ...settings, provider: 'vieneu' });
+              setSettings({
+                ...settings,
+                provider: 'vieneu',
+                vieneuEndpoint: 'https://pnnbao-ump-vieneu-tts.hf.space',
+                vieneuVoiceId: settings.vieneuVoiceId || 'Ngọc (nữ miền Bắc)'
+              });
             }}
             className={`relative rounded-3xl border-3 p-5 transition-all cursor-pointer ${
               settings.provider === 'vieneu'
                 ? 'border-purple-600 bg-purple-50/70 shadow-md ring-2 ring-purple-400/30'
-                : 'border-slate-200 bg-white hover:border-slate-300 opacity-90'
+                : 'border-slate-200 bg-white hover:border-slate-300'
             }`}
           >
             <div className="flex items-start justify-between">
@@ -199,13 +177,13 @@ export const TTSSettingsPanel: React.FC = () => {
                 </span>
                 <div>
                   <h3 className="font-baloo text-lg font-extrabold text-slate-800 flex items-center gap-2">
-                    Mô Hình Deep Learning VieNeu-TTS
+                    Mô Hình AI VieNeu-TTS (Hugging Face Cloud)
                     <span className="rounded-full bg-purple-100 px-2 py-0.5 text-[11px] font-bold text-purple-800">
-                      AI Chuyên Sâu
+                      Online 24/7
                     </span>
                   </h3>
                   <p className="font-vietnam text-xs font-semibold text-slate-500">
-                    Hỗ trợ chọn giọng Thầy Vinh, Cô Tuyên, Cô Ly, Cô Ngọc Huyền
+                    Chạy trực tiếp từ Đám Mây Hugging Face (Cô Ngọc, Thầy Tuyên, Cô Ly, Cô Đoan)
                   </p>
                 </div>
               </div>
@@ -213,22 +191,29 @@ export const TTSSettingsPanel: React.FC = () => {
                 type="radio"
                 name="ttsProvider"
                 checked={settings.provider === 'vieneu'}
-                onChange={() => setSettings({ ...settings, provider: 'vieneu' })}
+                onChange={() =>
+                  setSettings({
+                    ...settings,
+                    provider: 'vieneu',
+                    vieneuEndpoint: 'https://pnnbao-ump-vieneu-tts.hf.space',
+                    vieneuVoiceId: settings.vieneuVoiceId || 'Ngọc (nữ miền Bắc)'
+                  })
+                }
                 className="h-5 w-5 accent-purple-600 cursor-pointer mt-1"
               />
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="rounded-full bg-purple-100 px-2.5 py-1 text-[11px] font-bold text-purple-800">
-                🎙️ 6+ Giọng Đọc Mẫu Có Sẵn
+                ☁️ Đám Mây Hugging Face 24/7
               </span>
               <span className="rounded-full bg-indigo-100 px-2.5 py-1 text-[11px] font-bold text-indigo-800">
-                Hugging Face Connected
+                🎙️ 6 Giọng Đọc Diễn Cảm
               </span>
             </div>
 
             <p className="mt-3 font-vietnam text-xs text-slate-600 leading-relaxed font-medium">
-              Chạy trực tiếp qua Hugging Face Cloud Inference API hoặc máy chủ Python riêng của bạn.
+              Không cần chạy server máy tính. Kết nối thẳng vào đám mây AI Hugging Face Space để sinh giọng đọc online.
             </p>
           </div>
         </div>
@@ -274,81 +259,78 @@ export const TTSSettingsPanel: React.FC = () => {
           </div>
         )}
 
-        {/* VIENEU-TTS SETTINGS (WITH DROPDOWN FOR VOICES) */}
+        {/* HUGGING FACE CLOUD VIENEU-TTS */}
         {settings.provider === 'vieneu' && (
           <div className="space-y-5 rounded-2xl bg-purple-50/50 border border-purple-100 p-5">
-            {/* Quick Presets Buttons (1-Click Fill) */}
-            <div>
-              <label className="font-baloo text-xs font-bold text-purple-900 block mb-2">
-                ⚡ Chọn Nhanh Nguồn Kết Nối Máy Chủ:
-              </label>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={applyHuggingFacePreset}
-                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-600 text-white font-baloo font-bold text-xs shadow-xs hover:bg-purple-700 transition-all cursor-pointer"
-                >
-                  <Cloud size={14} /> 1. Dùng Hugging Face Cloud (Online 24/7 ⭐)
-                </button>
-                <button
-                  type="button"
-                  onClick={applyLocalhostPreset}
-                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-purple-200 text-purple-900 font-baloo font-bold text-xs shadow-2xs hover:bg-purple-100 transition-all cursor-pointer"
-                >
-                  <Laptop size={14} /> 2. Dùng Máy Cá Nhân (Localhost:8000)
-                </button>
+            {/* Status Header */}
+            <div className="flex items-center justify-between bg-white px-4 py-3 rounded-2xl border border-purple-200 shadow-2xs">
+              <div className="flex items-center gap-2">
+                <span className="h-3 w-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="font-baloo text-sm font-extrabold text-purple-900 flex items-center gap-1.5">
+                  <Cloud size={16} className="text-purple-600" /> Máy Chủ: Hugging Face Cloud Space (pnnbao-ump/VieNeu-TTS)
+                </span>
               </div>
+              <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-[11px] font-extrabold text-emerald-800 border border-emerald-200">
+                🟢 Đang Trực Tuyến 24/7
+              </span>
             </div>
 
             {/* Voice Dropdown Selector */}
             <div>
               <label className="font-baloo text-sm font-extrabold text-slate-800 block mb-1.5">
-                🎙️ Chọn Giọng Đọc VieNeu-TTS:
+                🎙️ Chọn Giọng Đọc AI (VieNeu-TTS):
               </label>
               <select
-                value={isCustomVoice ? 'custom' : settings.vieneuVoiceId || 'Vinh'}
+                value={settings.vieneuVoiceId || 'Ngọc (nữ miền Bắc)'}
                 onChange={(e) => {
-                  if (e.target.value === 'custom') {
-                    setIsCustomVoice(true);
-                  } else {
-                    setIsCustomVoice(false);
-                    setSettings({ ...settings, vieneuVoiceId: e.target.value });
-                  }
+                  soundManager.playPop();
+                  setSettings({ ...settings, vieneuVoiceId: e.target.value });
                 }}
                 className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-3 font-baloo font-bold text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 cursor-pointer"
               >
-                {VIENEU_PRESET_VOICES.map((v) => (
+                {HUGGINGFACE_VOICES.map((v) => (
                   <option key={v.id} value={v.id}>
                     {v.name}
                   </option>
                 ))}
               </select>
-
-              {isCustomVoice && (
-                <div className="mt-2">
-                  <input
-                    type="text"
-                    value={settings.vieneuVoiceId}
-                    onChange={(e) => setSettings({ ...settings, vieneuVoiceId: e.target.value })}
-                    placeholder="Nhập tên Voice ID nhân bản (ví dụ: chu_bo_bo, co_huyen)..."
-                    className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-2.5 font-vietnam text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none"
-                  />
-                </div>
-              )}
             </div>
 
-            {/* Server Endpoint URL */}
+            {/* Hugging Face API Token Input Box */}
             <div>
-              <label className="font-baloo text-xs font-bold text-slate-700 block mb-1">
-                🌐 URL Endpoint Server:
+              <label className="font-baloo text-sm font-extrabold text-slate-800 block mb-1.5 flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <Key size={15} className="text-purple-600" /> Mã Hugging Face Access Token:
+                </span>
+                <a
+                  href="https://huggingface.co/settings/tokens"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-vietnam text-xs font-bold text-purple-600 hover:underline"
+                >
+                  Lấy token trên Hugging Face ↗
+                </a>
               </label>
-              <input
-                type="text"
-                value={settings.vieneuEndpoint}
-                onChange={(e) => setSettings({ ...settings, vieneuEndpoint: e.target.value })}
-                placeholder="https://api-inference.huggingface.co/models/pnnbao-ump/VieNeu-TTS"
-                className="w-full rounded-2xl border border-purple-200 bg-white px-4 py-2.5 font-mono text-xs text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none"
-              />
+
+              <div className="relative">
+                <input
+                  type={showToken ? 'text' : 'password'}
+                  value={settings.vieneuApiKey || ''}
+                  onChange={(e) => setSettings({ ...settings, vieneuApiKey: e.target.value })}
+                  placeholder="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                  className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-3 pr-12 font-mono text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowToken(!showToken)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1 cursor-pointer"
+                >
+                  {showToken ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+              <p className="font-vietnam text-xs text-slate-500 mt-1 font-medium">
+                💡 Nhập mã Token để tăng tốc độ kết nối và không bị giới hạn lượt gọi từ Hugging Face.
+              </p>
             </div>
           </div>
         )}
@@ -394,8 +376,8 @@ export const TTSSettingsPanel: React.FC = () => {
           </h3>
 
           {testStatus === 'testing' && (
-            <span className="flex items-center gap-1.5 font-vietnam text-xs font-bold text-emerald-600 animate-pulse">
-              <span className="h-2 w-2 rounded-full bg-emerald-600"></span> Đang phát âm thanh...
+            <span className="flex items-center gap-1.5 font-vietnam text-xs font-bold text-purple-600 animate-pulse">
+              <span className="h-2 w-2 rounded-full bg-purple-600"></span> Đang kết nối Hugging Face & phát âm...
             </span>
           )}
           {testStatus === 'success' && (
@@ -415,7 +397,7 @@ export const TTSSettingsPanel: React.FC = () => {
             value={testText}
             onChange={(e) => setTestText(e.target.value)}
             rows={2}
-            className="w-full rounded-2xl border border-slate-300 bg-slate-50/50 p-4 font-vietnam text-sm text-slate-800 shadow-xs focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-200"
+            className="w-full rounded-2xl border border-slate-300 bg-slate-50/50 p-4 font-vietnam text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-200"
             placeholder="Nhập nội dung bạn muốn nghe thử..."
           />
         </div>
