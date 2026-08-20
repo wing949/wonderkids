@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
-import { Volume2, Sparkles, Server, Check, AlertCircle, Play, Square, Settings } from 'lucide-react';
+import { Volume2, Sparkles, Server, Check, AlertCircle, Play, Square, Settings, Cloud, Laptop } from 'lucide-react';
 import { TTSSettings } from '../../types';
 import { getTTSSettings, saveTTSSettings, soundManager } from '../../utils/audio';
 import { CuteButton } from '../ui/CuteButton';
 
+const VIENEU_PRESET_VOICES = [
+  { id: 'Vinh', name: '👨 Thầy Vinh (Nam miền Bắc — Trầm ấm, dõng dạc ⭐ Chuẩn)' },
+  { id: 'Tuyen', name: '👩 Cô Tuyên (Nữ miền Bắc — Dịu dàng, chuẩn sư phạm)' },
+  { id: 'Ly', name: '👩 Cô Ly (Nữ miền Nam — Ngọt ngào, truyền cảm)' },
+  { id: 'Ngoc', name: '👩 Cô Ngọc (Nữ giọng kể chuyện SGK)' },
+  { id: 'Binh', name: '👨 Thầy Bình (Nam miền Bắc ấm áp)' },
+  { id: 'Doan', name: '👨 Thầy Đoan (Nam diễn cảm)' },
+  { id: 'ngoc_huyen', name: '🌸 Cô Ngọc Huyền (Giọng đọc thơ & truyện cổ tích)' },
+  { id: 'custom', name: '✍️ Nhập Voice ID nhân bản khác...' }
+];
+
 export const TTSSettingsPanel: React.FC = () => {
   const [settings, setSettings] = useState<TTSSettings>(getTTSSettings);
+  const [isCustomVoice, setIsCustomVoice] = useState(() => {
+    return !VIENEU_PRESET_VOICES.some((v) => v.id === getTTSSettings().vieneuVoiceId);
+  });
   const [testText, setTestText] = useState(
     'Chào các con! Hôm nay chúng mình cùng đọc bài và khám phá những điều kỳ thú trên Đảo Tri Thức nhé!'
   );
@@ -20,6 +34,29 @@ export const TTSSettingsPanel: React.FC = () => {
     soundManager.playCorrect();
     setIsSaved(true);
     setTimeout(() => setIsSaved(false), 2500);
+  };
+
+  // Preset quick connectors
+  const applyHuggingFacePreset = () => {
+    soundManager.playPop();
+    setSettings({
+      ...settings,
+      provider: 'vieneu',
+      vieneuEndpoint: 'https://api-inference.huggingface.co/models/pnnbao-ump/VieNeu-TTS',
+      vieneuVoiceId: settings.vieneuVoiceId || 'Vinh',
+      vieneuApiKey: settings.vieneuApiKey || ''
+    });
+  };
+
+  const applyLocalhostPreset = () => {
+    soundManager.playPop();
+    setSettings({
+      ...settings,
+      provider: 'vieneu',
+      vieneuEndpoint: 'http://localhost:8000/api/tts',
+      vieneuVoiceId: settings.vieneuVoiceId || 'Vinh',
+      vieneuApiKey: ''
+    });
   };
 
   // Handle Voice Test
@@ -91,7 +128,7 @@ export const TTSSettingsPanel: React.FC = () => {
         </label>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Option 1: Microsoft Edge Neural Voice (RECOMMENDED & DEFAULT - ZERO CONFIG) */}
+          {/* Option 1: Microsoft Edge Neural Voice */}
           <div
             onClick={() => {
               soundManager.playPop();
@@ -136,9 +173,6 @@ export const TTSSettingsPanel: React.FC = () => {
               <span className="rounded-full bg-teal-100 px-2.5 py-1 text-[11px] font-bold text-teal-800">
                 ⚡ Tự nhiên & Truyền cảm
               </span>
-              <span className="rounded-full bg-blue-100 px-2.5 py-1 text-[11px] font-bold text-blue-800">
-                0đ Chi Phí
-              </span>
             </div>
 
             <p className="mt-3 font-vietnam text-xs text-slate-600 leading-relaxed font-medium">
@@ -146,7 +180,7 @@ export const TTSSettingsPanel: React.FC = () => {
             </p>
           </div>
 
-          {/* Option 2: VieNeu-TTS (ADVANCED SELF-HOSTED) */}
+          {/* Option 2: VieNeu-TTS (Self-Hosted / Hugging Face) */}
           <div
             onClick={() => {
               soundManager.playPop();
@@ -165,13 +199,13 @@ export const TTSSettingsPanel: React.FC = () => {
                 </span>
                 <div>
                   <h3 className="font-baloo text-lg font-extrabold text-slate-800 flex items-center gap-2">
-                    Máy Chủ AI Tự Host (VieNeu-TTS)
+                    Mô Hình Deep Learning VieNeu-TTS
                     <span className="rounded-full bg-purple-100 px-2 py-0.5 text-[11px] font-bold text-purple-800">
-                      Nâng Cao
+                      AI Chuyên Sâu
                     </span>
                   </h3>
                   <p className="font-vietnam text-xs font-semibold text-slate-500">
-                    Dành cho bạn muốn tự chạy server AI Python/GPU trên máy riêng
+                    Hỗ trợ chọn giọng Thầy Vinh, Cô Tuyên, Cô Ly, Cô Ngọc Huyền
                   </p>
                 </div>
               </div>
@@ -186,15 +220,15 @@ export const TTSSettingsPanel: React.FC = () => {
 
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="rounded-full bg-purple-100 px-2.5 py-1 text-[11px] font-bold text-purple-800">
-                🎙️ Voice Cloning 3-5s
+                🎙️ 6+ Giọng Đọc Mẫu Có Sẵn
               </span>
               <span className="rounded-full bg-indigo-100 px-2.5 py-1 text-[11px] font-bold text-indigo-800">
-                Tự chủ 100% hạ tầng
+                Hugging Face Connected
               </span>
             </div>
 
             <p className="mt-3 font-vietnam text-xs text-slate-600 leading-relaxed font-medium">
-              Kết nối tới server Python <code className="bg-purple-100 text-purple-800 px-1 py-0.5 rounded font-mono text-[11px]">server.py</code> hoặc Hugging Face Space do bạn tự chạy.
+              Chạy trực tiếp qua Hugging Face Cloud Inference API hoặc máy chủ Python riêng của bạn.
             </p>
           </div>
         </div>
@@ -203,16 +237,16 @@ export const TTSSettingsPanel: React.FC = () => {
       {/* Detailed Configuration Box */}
       <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xs space-y-6">
         <h3 className="font-baloo text-lg font-extrabold text-slate-800 flex items-center gap-2">
-          <Server size={18} className="text-emerald-600" />
-          2. Cấu Hình Giọng Đọc & Tốc Độ
+          <Server size={18} className={settings.provider === 'vieneu' ? 'text-purple-600' : 'text-emerald-600'} />
+          2. Cấu Hình Danh Sách Giọng Đọc & Tốc Độ
         </h3>
 
-        {/* DEFAULT ZERO CONFIG (Edge Neural) */}
+        {/* DEFAULT (Edge Neural) */}
         {settings.provider === 'edge' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-5 rounded-2xl bg-emerald-50/40 border border-emerald-100">
             <div>
               <label className="font-baloo text-sm font-extrabold text-slate-800 block mb-1.5">
-                🌸 Giọng Tiếng Việt Mặc Định:
+                🌸 Chọn Giọng Tiếng Việt:
               </label>
               <select
                 value={settings.edgeVoiceVi}
@@ -226,7 +260,7 @@ export const TTSSettingsPanel: React.FC = () => {
 
             <div>
               <label className="font-baloo text-sm font-extrabold text-slate-800 block mb-1.5">
-                🇬🇧 Giọng Tiếng Anh Mặc Định:
+                🇬🇧 Chọn Giọng Tiếng Anh:
               </label>
               <select
                 value={settings.edgeVoiceEn}
@@ -240,51 +274,81 @@ export const TTSSettingsPanel: React.FC = () => {
           </div>
         )}
 
-        {/* ADVANCED CUSTOM FIELDS (Only shown if user intentionally picks VieNeu-TTS self-hosted) */}
+        {/* VIENEU-TTS SETTINGS (WITH DROPDOWN FOR VOICES) */}
         {settings.provider === 'vieneu' && (
-          <div className="space-y-4 rounded-2xl bg-purple-50/50 border border-purple-100 p-5">
+          <div className="space-y-5 rounded-2xl bg-purple-50/50 border border-purple-100 p-5">
+            {/* Quick Presets Buttons (1-Click Fill) */}
             <div>
-              <label className="font-baloo text-sm font-extrabold text-slate-800 block mb-1">
-                🌐 URL Endpoint Server VieNeu-TTS (Nếu bạn tự chạy server):
+              <label className="font-baloo text-xs font-bold text-purple-900 block mb-2">
+                ⚡ Chọn Nhanh Nguồn Kết Nối Máy Chủ:
+              </label>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={applyHuggingFacePreset}
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-600 text-white font-baloo font-bold text-xs shadow-xs hover:bg-purple-700 transition-all cursor-pointer"
+                >
+                  <Cloud size={14} /> 1. Dùng Hugging Face Cloud (Online 24/7 ⭐)
+                </button>
+                <button
+                  type="button"
+                  onClick={applyLocalhostPreset}
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-purple-200 text-purple-900 font-baloo font-bold text-xs shadow-2xs hover:bg-purple-100 transition-all cursor-pointer"
+                >
+                  <Laptop size={14} /> 2. Dùng Máy Cá Nhân (Localhost:8000)
+                </button>
+              </div>
+            </div>
+
+            {/* Voice Dropdown Selector */}
+            <div>
+              <label className="font-baloo text-sm font-extrabold text-slate-800 block mb-1.5">
+                🎙️ Chọn Giọng Đọc VieNeu-TTS:
+              </label>
+              <select
+                value={isCustomVoice ? 'custom' : settings.vieneuVoiceId || 'Vinh'}
+                onChange={(e) => {
+                  if (e.target.value === 'custom') {
+                    setIsCustomVoice(true);
+                  } else {
+                    setIsCustomVoice(false);
+                    setSettings({ ...settings, vieneuVoiceId: e.target.value });
+                  }
+                }}
+                className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-3 font-baloo font-bold text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 cursor-pointer"
+              >
+                {VIENEU_PRESET_VOICES.map((v) => (
+                  <option key={v.id} value={v.id}>
+                    {v.name}
+                  </option>
+                ))}
+              </select>
+
+              {isCustomVoice && (
+                <div className="mt-2">
+                  <input
+                    type="text"
+                    value={settings.vieneuVoiceId}
+                    onChange={(e) => setSettings({ ...settings, vieneuVoiceId: e.target.value })}
+                    placeholder="Nhập tên Voice ID nhân bản (ví dụ: chu_bo_bo, co_huyen)..."
+                    className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-2.5 font-vietnam text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Server Endpoint URL */}
+            <div>
+              <label className="font-baloo text-xs font-bold text-slate-700 block mb-1">
+                🌐 URL Endpoint Server:
               </label>
               <input
                 type="text"
                 value={settings.vieneuEndpoint}
                 onChange={(e) => setSettings({ ...settings, vieneuEndpoint: e.target.value })}
-                placeholder="http://localhost:8000/api/tts hoặc https://your-space.hf.space/api/tts"
-                className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-3 font-mono text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                placeholder="https://api-inference.huggingface.co/models/pnnbao-ump/VieNeu-TTS"
+                className="w-full rounded-2xl border border-purple-200 bg-white px-4 py-2.5 font-mono text-xs text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none"
               />
-              <p className="font-vietnam text-xs text-slate-500 mt-1 font-medium">
-                💡 Khi bạn chạy script <code className="bg-purple-100 px-1.5 py-0.5 rounded text-purple-800 font-bold">python server.py</code> trong thư mục <code className="font-mono text-slate-700">server/vieneu-service</code>.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="font-baloo text-sm font-bold text-slate-700 block mb-1">
-                  🎙️ Voice ID / Giọng Mẫu Nhân Bản:
-                </label>
-                <input
-                  type="text"
-                  value={settings.vieneuVoiceId}
-                  onChange={(e) => setSettings({ ...settings, vieneuVoiceId: e.target.value })}
-                  placeholder="co_giao_ha_noi, default, chu_bo_bo"
-                  className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-2.5 font-vietnam text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200"
-                />
-              </div>
-
-              <div>
-                <label className="font-baloo text-sm font-bold text-slate-700 block mb-1">
-                  🔑 API Token (Nếu có bảo mật):
-                </label>
-                <input
-                  type="password"
-                  value={settings.vieneuApiKey || ''}
-                  onChange={(e) => setSettings({ ...settings, vieneuApiKey: e.target.value })}
-                  placeholder="Bearer token hoặc hf_..."
-                  className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-2.5 font-vietnam text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200"
-                />
-              </div>
             </div>
           </div>
         )}
