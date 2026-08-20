@@ -209,18 +209,6 @@ export const TTSSettingsPanel: React.FC = () => {
             >
               {isPlayingTest ? 'Dừng Phát Âm ⏸️' : 'Phát Âm Thử Ngay 🔊'}
             </CuteButton>
-
-            <button
-              type="button"
-              onClick={() => {
-                setTestText(
-                  'Bé hãy nghe cô kể câu chuyện Bác gà trống thông minh và trả lời các câu hỏi trắc nghiệm phía dưới nhé!'
-                );
-              }}
-              className="rounded-2xl border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer"
-            >
-              Mẫu câu hỏi SGK 📖
-            </button>
           </div>
 
           <CuteButton
