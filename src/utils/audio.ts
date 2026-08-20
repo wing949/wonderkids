@@ -61,16 +61,37 @@ export function getBestVoice(lang: 'vi-VN' | 'en-US' = 'vi-VN'): SpeechSynthesis
 
   if (matchingVoices.length === 0) return null;
 
-  // Prioritize Natural / Neural / High Quality voices
+  // ƯU TIÊN TUYỆT ĐỐI GIỌNG NỮ (CÔ GIÁO) CHO TIẾNG VIỆT
+  if (lang === 'vi-VN') {
+    const femaleVoice = matchingVoices.find(
+      (v) =>
+        (v.name.includes('HoaiMy') ||
+          v.name.includes('Linh') ||
+          v.name.includes('Mai') ||
+          v.name.includes('Google') ||
+          v.name.includes('Female') ||
+          v.name.includes('Nữ') ||
+          v.name.includes('nu')) &&
+        !v.name.includes('NamMinh') &&
+        !v.name.includes('Male') &&
+        !v.name.includes('An')
+    );
+    if (femaleVoice) return femaleVoice;
+
+    // Loại trừ giọng nam nếu còn lựa chọn khác
+    const nonMale = matchingVoices.find(
+      (v) => !v.name.includes('NamMinh') && !v.name.includes('Male') && !v.name.includes('An')
+    );
+    if (nonMale) return nonMale;
+  }
+
+  // Đối với tiếng Anh: ưu tiên Jenny (Nữ)
   const highQuality = matchingVoices.find(
     (v) =>
-      v.name.includes('Natural') ||
-      v.name.includes('Neural') ||
-      v.name.includes('Google') ||
-      v.name.includes('Premium') ||
       v.name.includes('HoaiMy') ||
-      v.name.includes('NamMinh') ||
-      v.name.includes('Jenny')
+      v.name.includes('Jenny') ||
+      v.name.includes('Google') ||
+      v.name.includes('Natural')
   );
 
   return highQuality || matchingVoices[0];
@@ -387,36 +408,10 @@ export const soundManager = {
     playNext();
   },
 
-  // Play SGK Passage audio with 0ms instant static pre-rendered file and fallback
-  playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
+  // Play SGK Passage audio: luôn đọc chính xác 100% nội dung bài học đang hiển thị trên màn hình
+  playPassageAudio: (_lessonId: string, fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
-    
-    // Normalize id: supports both tv-g2-b1 and tv-g2-l1
-    const normalizedId = lessonId.replace('-l', '-b');
-    const staticUrl = `/audio/curriculum/${normalizedId}.mp3`;
-    const audio = new Audio(staticUrl);
-    currentAudioElement = audio;
-
-    let hasEnded = false;
-    const handleFinish = () => {
-      if (!hasEnded) {
-        hasEnded = true;
-        currentAudioElement = null;
-        if (onEnd) onEnd();
-      }
-    };
-
-    audio.onended = handleFinish;
-    audio.onerror = () => {
-      currentAudioElement = null;
-      // Fallback to dynamic TTS
-      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
-    };
-
-    audio.play().catch(() => {
-      currentAudioElement = null;
-      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
-    });
+    soundManager.speakText(fallbackText, 'vi-VN', onEnd);
   },
 
   // Fallback Web Speech Synthesis
