@@ -17,6 +17,7 @@ function getAudioContext(): AudioContext {
 
 // Voice cache and Neural Voice finder
 let cachedVoices: SpeechSynthesisVoice[] = [];
+let currentAudioElement: HTMLAudioElement | null = null;
 
 if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   cachedVoices = window.speechSynthesis.getVoices();
@@ -207,7 +208,42 @@ export const soundManager = {
     }
   },
 
-  // Read text out loud with Natural Neural human voice (pitch: 1.0 chuẩn thanh điệu)
+  // Helper: Play single audio clip from stream with fallback
+  playAudioClip: (
+    text: string,
+    langCode: string,
+    rate: number,
+    onFinish: () => void,
+    onFail: () => void
+  ) => {
+    try {
+      const encoded = encodeURIComponent(text.slice(0, 200));
+      const streamUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${langCode}&client=tw-ob&q=${encoded}`;
+
+      const audio = new Audio(streamUrl);
+      currentAudioElement = audio;
+      audio.playbackRate = rate;
+
+      audio.onended = () => {
+        currentAudioElement = null;
+        onFinish();
+      };
+
+      audio.onerror = () => {
+        currentAudioElement = null;
+        onFail();
+      };
+
+      audio.play().catch(() => {
+        currentAudioElement = null;
+        onFail();
+      });
+    } catch {
+      onFail();
+    }
+  },
+
+  // Read text out loud with Natural Neural Human Voice Studio stream (fallback to Web Speech)
   speakText: (
     text: string,
     lang: 'vi-VN' | 'en-US' = 'vi-VN',
@@ -215,13 +251,75 @@ export const soundManager = {
     pitch: number = 1.0,
     rate: number = 0.95
   ) => {
+    // 1. Dừng mọi audio / speech đang phát trước đó
+    soundManager.stopSpeaking();
+
+    const cleanText = text.replace(/[*#_~`💡✨⭐🔊🎉🏖️•—]/g, '').trim();
+    if (!cleanText) {
+      if (onEnd) onEnd();
+      return;
+    }
+
+    const langCode = lang === 'vi-VN' ? 'vi' : 'en';
+
+    // 2. Chẻ văn bản thành các câu tự nhiên để phát qua Studio Audio Stream
+    const rawSentences = cleanText.split(/([.?!;\n]+)/);
+    const sentences: string[] = [];
+    for (let i = 0; i < rawSentences.length; i += 2) {
+      const s = ((rawSentences[i] || '') + (rawSentences[i + 1] || '')).trim();
+      if (s && s.length > 1) sentences.push(s);
+    }
+
+    if (sentences.length === 0) {
+      sentences.push(cleanText);
+    }
+
+    // 3. Phát tuần tự từng câu bằng Studio Audio Stream chất lượng cao
+    let currentIdx = 0;
+
+    const playNext = () => {
+      if (currentIdx >= sentences.length) {
+        if (onEnd) onEnd();
+        return;
+      }
+
+      const sentenceToPlay = sentences[currentIdx];
+      currentIdx++;
+
+      soundManager.playAudioClip(
+        sentenceToPlay,
+        langCode,
+        rate,
+        () => {
+          // Delay nhỏ 120ms giữa các câu để nhịp điệu tự nhiên như cô giáo đọc
+          setTimeout(playNext, 120);
+        },
+        () => {
+          // Nếu gặp lỗi mạng thì chuyển sang Web Speech Synthesis
+          const remainingText = sentences.slice(currentIdx - 1).join(' ');
+          soundManager.speakBrowserSpeech(remainingText, lang, onEnd, pitch, rate);
+        }
+      );
+    };
+
+    playNext();
+  },
+
+  // Fallback Web Speech Synthesis
+  speakBrowserSpeech: (
+    text: string,
+    lang: 'vi-VN' | 'en-US' = 'vi-VN',
+    onEnd?: () => void,
+    pitch: number = 1.0,
+    rate: number = 0.95
+  ) => {
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel(); // cancel previous speaking
+      window.speechSynthesis.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = lang;
-      utterance.rate = rate; // tốc độ 0.95 tự nhiên, rõ từng từ
-      utterance.pitch = pitch; // 1.0 chuẩn xác, không bị méo tiếng chipmunk
+      utterance.rate = rate;
+      utterance.pitch = pitch;
       utterance.volume = 1.0;
 
       const bestVoice = getBestVoice(lang);
@@ -234,13 +332,13 @@ export const soundManager = {
         utterance.onerror = onEnd;
       }
       window.speechSynthesis.speak(utterance);
+    } else if (onEnd) {
+      onEnd();
     }
   },
 
   // Realtime Mascot spoken feedback on answer check (Correct / Incorrect)
   speakMascotFeedback: (isCorrect: boolean, explanation?: string) => {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-
     let message = '';
     if (isCorrect) {
       const compliments = [
@@ -265,8 +363,15 @@ export const soundManager = {
     soundManager.speakText(message, 'vi-VN', undefined, 1.0, 0.95);
   },
 
-  // Stop current speech
+  // Stop current speech & audio
   stopSpeaking: () => {
+    if (currentAudioElement) {
+      try {
+        currentAudioElement.pause();
+        currentAudioElement.currentTime = 0;
+      } catch {}
+      currentAudioElement = null;
+    }
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
