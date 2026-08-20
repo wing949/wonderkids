@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Volume2,
@@ -13,9 +13,10 @@ import {
   X,
   Mic,
   MicOff,
-  Radio
+  Radio,
+  Zap
 } from 'lucide-react';
-import { LessonNode, Question, QuestionOption, MatchingPair } from '../../types';
+import { LessonNode, Question, QuestionOption, MatchingPair, ReadingPassage } from '../../types';
 import { CuteButton } from '../ui/CuteButton';
 import { CandyProgressBar } from '../ui/CandyProgressBar';
 import { soundManager, voiceManager } from '../../utils/audio';
@@ -28,18 +29,77 @@ interface InteractiveExerciseEngineProps {
   onComplete: (starsEarned: number, xpEarned: number) => void;
 }
 
+interface ShadowingSentenceItem {
+  id: string;
+  text: string;
+  cleanWords: string[];
+  paragraphIndex: number;
+}
+
+// Helper to segment any reading passage into clean sentences
+function parseShadowingSentences(passage: ReadingPassage): ShadowingSentenceItem[] {
+  const sentences: ShadowingSentenceItem[] = [];
+  passage.content.forEach((paragraph, pIdx) => {
+    // Split by sentence ending punctuation (. ! ? ; or newline)
+    const rawParts = paragraph.split(/([.!?;\n]+)/).filter(Boolean);
+    let accumulator = '';
+    for (let i = 0; i < rawParts.length; i++) {
+      accumulator += rawParts[i];
+      if (/[.!?;\n]/.test(rawParts[i]) || i === rawParts.length - 1) {
+        const trimmed = accumulator.trim();
+        if (trimmed.length > 2) {
+          sentences.push({
+            id: `sent-${pIdx}-${sentences.length}`,
+            text: trimmed,
+            cleanWords: trimmed.split(/\s+/),
+            paragraphIndex: pIdx,
+          });
+        }
+        accumulator = '';
+      }
+    }
+  });
+
+  return sentences.length > 0
+    ? sentences
+    : [
+        {
+          id: 'sent-0',
+          text: passage.content.join(' '),
+          cleanWords: passage.content.join(' ').split(/\s+/),
+          paragraphIndex: 0,
+        },
+      ];
+}
+
 export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps> = ({
   lesson,
   onExit,
   onComplete,
 }) => {
-  // Determine if lesson starts with a Reading Passage (e.g. Tiếng Việt bài đọc)
+  // Determine if lesson starts with a Reading Passage (e.g. Tiếng Việt & Tiếng Anh bài đọc)
   const hasReadingPassage = !!lesson.readingPassage;
   const [engineMode, setEngineMode] = useState<'reading' | 'quiz'>(hasReadingPassage ? 'reading' : 'quiz');
+  const [readingTab, setReadingTab] = useState<'full' | 'shadowing'>('full');
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [isReadingDrawerOpen, setIsReadingDrawerOpen] = useState(false);
 
-  // STT Voice Reading Practice State
+  // Shadowing Engine State
+  const shadowingSentences = useMemo(() => {
+    return lesson.readingPassage ? parseShadowingSentences(lesson.readingPassage) : [];
+  }, [lesson.readingPassage]);
+
+  const [shadowingIndex, setShadowingIndex] = useState(0);
+  const [shadowingSpeed, setShadowingSpeed] = useState<0.8 | 1.0>(1.0);
+  const [isAutoAdvance, setIsAutoAdvance] = useState(true);
+  const [isPlayingSentenceAudio, setIsPlayingSentenceAudio] = useState(false);
+  const [isShadowingRecording, setIsShadowingRecording] = useState(false);
+  const [shadowingTranscript, setShadowingTranscript] = useState('');
+  const [sentenceScores, setSentenceScores] = useState<Record<string, number>>({});
+  const [completedSentences, setCompletedSentences] = useState<string[]>([]);
+  const [activeSpokenWord, setActiveSpokenWord] = useState<string | null>(null);
+
+  // STT Voice Reading Practice State (Full passage mode)
   const [isVoiceRecording, setIsVoiceRecording] = useState(false);
   const [voiceTranscript, setVoiceTranscript] = useState('');
   const [voiceScore, setVoiceScore] = useState<number | null>(null);
@@ -136,6 +196,114 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     soundManager.playPop();
     voiceManager.stopListening();
     setIsVoiceRecording(false);
+  };
+
+  // =========================================================================
+  // SHADOWING HANDLERS (SENTENCE BY SENTENCE)
+  // =========================================================================
+  const handlePlayCurrentSentence = (text: string) => {
+    soundManager.playPop();
+    setIsPlayingSentenceAudio(true);
+    const lang = lesson.subject === 'english' ? 'en-US' : 'vi-VN';
+    soundManager.speakText(
+      text,
+      lang,
+      () => {
+        setIsPlayingSentenceAudio(false);
+      },
+      1.0,
+      shadowingSpeed
+    );
+  };
+
+  const handleSpeakWord = (word: string) => {
+    soundManager.playPop();
+    setActiveSpokenWord(word);
+    const clean = word.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'“”—–]/g, '');
+    const lang = lesson.subject === 'english' ? 'en-US' : 'vi-VN';
+    soundManager.speakText(
+      clean,
+      lang,
+      () => {
+        setTimeout(() => setActiveSpokenWord(null), 400);
+      },
+      1.0,
+      0.85
+    );
+  };
+
+  const handleStartShadowing = (currentSent: ShadowingSentenceItem) => {
+    soundManager.playPop();
+    soundManager.stopSpeaking();
+    setIsPlayingSentenceAudio(false);
+    setIsShadowingRecording(true);
+    setShadowingTranscript('');
+
+    const lang = lesson.subject === 'english' ? 'en-US' : 'vi-VN';
+
+    voiceManager.startListening(
+      (interim) => {
+        setShadowingTranscript(interim);
+      },
+      (final) => {
+        setShadowingTranscript(final);
+        setIsShadowingRecording(false);
+
+        // Word-level matching calculation
+        const targetWords = currentSent.cleanWords.map((w) =>
+          w.toLowerCase().replace(/[.,/#!$%^&*;:{}=\-_`~()?"'“”—–]/g, '')
+        );
+        const spokeWords = final
+          .toLowerCase()
+          .split(/\s+/)
+          .map((w) => w.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'“”—–]/g, ''));
+
+        const matchCount = spokeWords.filter((w) => targetWords.includes(w)).length;
+        const accuracy = Math.min(
+          100,
+          Math.max(45, Math.round((matchCount / Math.max(1, targetWords.length)) * 100))
+        );
+
+        setSentenceScores((prev) => ({ ...prev, [currentSent.id]: accuracy }));
+
+        if (accuracy >= 60) {
+          soundManager.playCorrect();
+          triggerStarBurst();
+          setCompletedSentences((prev) =>
+            prev.includes(currentSent.id) ? prev : [...prev, currentSent.id]
+          );
+
+          const mascotPraise =
+            lesson.subject === 'english'
+              ? `Awesome! PiPi awards you ${accuracy}% score!`
+              : `Bé đọc rất chuẩn! Cáo MiuMiu tặng bé ${accuracy} điểm!`;
+          soundManager.speakText(mascotPraise, lang);
+
+          if (isAutoAdvance && shadowingIndex < shadowingSentences.length - 1) {
+            setTimeout(() => {
+              setShadowingIndex((prev) => prev + 1);
+              setShadowingTranscript('');
+            }, 2300);
+          }
+        } else {
+          const encouragement =
+            lesson.subject === 'english'
+              ? 'Good try! Listen to the native voice and try once more!'
+              : 'Bé đọc rất cố gắng! Hãy nghe lại câu mẫu và đọc to rõ hơn chút xíu nhé!';
+          soundManager.speakText(encouragement, lang);
+        }
+      },
+      (err) => {
+        setIsShadowingRecording(false);
+        console.warn('Shadowing STT error/notice:', err);
+      }
+    );
+  };
+
+  const handleStopShadowing = () => {
+    soundManager.playPop();
+    voiceManager.stopListening();
+    setIsShadowingRecording(false);
   };
 
   // Check user answer with Realtime Mascot Spoken Feedback
@@ -250,6 +418,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   // =========================================================================
   if (engineMode === 'reading' && lesson.readingPassage) {
     const passage = lesson.readingPassage;
+    const currentShadowingSentence = shadowingSentences[shadowingIndex] || shadowingSentences[0];
+    const currentScore = currentShadowingSentence ? sentenceScores[currentShadowingSentence.id] : undefined;
 
     return (
       <div className="min-h-[calc(100vh-5rem)] pb-28 pt-4 sm:pt-6">
@@ -299,152 +469,461 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               ) : (
                 <>
                   <Volume2 size={18} />
-                  <span>Nghe cô đọc mẫu</span>
+                  <span>Nghe toàn bài</span>
                 </>
               )}
             </button>
           </div>
 
-          {/* Reading Book Card (Scrapbook Style) */}
-          <div className="relative rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70 mt-2">
-            {/* Washi tape header deco - Unclipped Authentic Scrapbook Tape */}
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-40 sm:w-48 h-7 bg-amber-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-amber-400/40 shadow-xs z-10 pointer-events-none" />
+          {/* Mode Switcher Tabs (Đọc Toàn Bài vs Luyện Shadowing Từng Câu) */}
+          <div className="flex items-center justify-center gap-2 p-1.5 rounded-3xl bg-white/90 backdrop-blur-md border border-amber-200 shadow-xs max-w-md mx-auto">
+            <button
+              onClick={() => {
+                soundManager.playPop();
+                soundManager.stopSpeaking();
+                voiceManager.stopListening();
+                setIsPlayingAudio(false);
+                setIsPlayingSentenceAudio(false);
+                setIsShadowingRecording(false);
+                setReadingTab('full');
+              }}
+              className={`flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-2xl font-baloo font-extrabold text-xs sm:text-sm transition-all cursor-pointer ${
+                readingTab === 'full'
+                  ? 'bg-amber-400 text-amber-950 shadow-pop-xs scale-102 border-2 border-amber-500'
+                  : 'text-slate-600 hover:text-brand-dark hover:bg-slate-50'
+              }`}
+            >
+              <span>📖</span>
+              <span>Đọc Toàn Bài</span>
+            </button>
 
-            {/* Passage Header Block (Centered, Balanced & Symmetrical) */}
-            <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
-              {/* Textbook Ref Pill Badge */}
-              {lesson.textbookPageRef && (
-                <div className="inline-flex items-center gap-2 font-baloo font-bold text-xs sm:text-sm text-amber-900 bg-amber-100/90 border border-amber-300/80 px-4 py-1 rounded-full shadow-2xs">
-                  <span>📖</span>
-                  <span>{lesson.textbookPageRef}</span>
-                </div>
-              )}
+            <button
+              onClick={() => {
+                soundManager.playPop();
+                soundManager.stopSpeaking();
+                voiceManager.stopListening();
+                setIsPlayingAudio(false);
+                setIsPlayingSentenceAudio(false);
+                setIsVoiceRecording(false);
+                setReadingTab('shadowing');
+              }}
+              className={`flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-2xl font-baloo font-extrabold text-xs sm:text-sm transition-all cursor-pointer ${
+                readingTab === 'shadowing'
+                  ? 'bg-purple-600 text-white shadow-pop-xs scale-102 border-2 border-purple-700'
+                  : 'text-slate-600 hover:text-purple-900 hover:bg-purple-50'
+              }`}
+            >
+              <span>🎙️</span>
+              <span>Luyện Shadowing Từng Câu</span>
+              <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
+            </button>
+          </div>
 
-              {/* Main Reading Title */}
-              <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide pt-1">
-                {passage.title}
-              </h2>
+          {/* ================================================================= */}
+          {/* TAB 1: ĐỌC TOÀN BÀI (FULL READING SCRAPBOOK CARD) */}
+          {/* ================================================================= */}
+          {readingTab === 'full' && (
+            <div className="relative rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70 mt-2">
+              {/* Washi tape header deco - Unclipped Authentic Scrapbook Tape */}
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-40 sm:w-48 h-7 bg-amber-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-amber-400/40 shadow-xs z-10 pointer-events-none" />
 
-              {/* Author Attribution */}
-              {passage.author && (
-                <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
-                  Tác giả: {passage.author}
-                </p>
-              )}
+              {/* Passage Header Block (Centered, Balanced & Symmetrical) */}
+              <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
+                {/* Textbook Ref Pill Badge */}
+                {lesson.textbookPageRef && (
+                  <div className="inline-flex items-center gap-2 font-baloo font-bold text-xs sm:text-sm text-amber-900 bg-amber-100/90 border border-amber-300/80 px-4 py-1 rounded-full shadow-2xs">
+                    <span>📖</span>
+                    <span>{lesson.textbookPageRef}</span>
+                  </div>
+                )}
 
-              {/* Decorative warm accent line */}
-              <div className="w-20 sm:w-28 h-1 bg-amber-300/70 rounded-full mx-auto mt-3" />
-            </div>
+                {/* Main Reading Title */}
+                <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide pt-1">
+                  {passage.title}
+                </h2>
 
-            {/* Passage Body Paragraphs / Verses */}
-            <div className="space-y-6">
-              {passage.content.map((paragraph, pIdx) => (
-                <div
-                  key={pIdx}
-                  className={`font-vietnam text-base sm:text-lg md:text-xl text-slate-800 leading-relaxed sm:leading-loose ${
-                    passage.genre === 'poem'
-                      ? 'text-center font-medium space-y-1.5 whitespace-pre-line'
-                      : 'text-justify indent-6 sm:indent-8'
-                  }`}
-                >
-                  {paragraph}
-                </div>
-              ))}
-            </div>
+                {/* Author Attribution */}
+                {passage.author && (
+                  <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
+                    Tác giả: {passage.author}
+                  </p>
+                )}
 
-            {/* Audio Wave Animated Bar */}
-            {isPlayingAudio && (
-              <div className="mt-8 p-3 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center gap-3 font-baloo text-xs font-bold text-amber-900 animate-pulse">
-                <Radio className="h-4 w-4 animate-spin text-amber-600" />
-                <span>Đang phát giọng đọc mẫu diễn cảm... Bé hãy lắng nghe và đọc nhẩm theo nhé!</span>
+                {/* Decorative warm accent line */}
+                <div className="w-20 sm:w-28 h-1 bg-amber-300/70 rounded-full mx-auto mt-3" />
               </div>
-            )}
 
-            {/* ================= STT VOICE READING PRACTICE ================= */}
-            {isSpeechSupported && (
-              <div className="mt-8 p-5 rounded-3xl bg-gradient-to-r from-purple-50 via-pink-50 to-amber-50 border-2 border-purple-200/80 space-y-3">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                  <div className="flex items-center gap-2.5">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-purple-600 text-white shadow-xs">
-                      <Mic size={20} />
+              {/* Passage Body Paragraphs / Verses */}
+              <div className="space-y-6">
+                {passage.content.map((paragraph, pIdx) => (
+                  <div
+                    key={pIdx}
+                    className={`font-vietnam text-base sm:text-lg md:text-xl text-slate-800 leading-relaxed sm:leading-loose ${
+                      passage.genre === 'poem'
+                        ? 'text-center font-medium space-y-1.5 whitespace-pre-line'
+                        : 'text-justify indent-6 sm:indent-8'
+                    }`}
+                  >
+                    {paragraph}
+                  </div>
+                ))}
+              </div>
+
+              {/* Audio Wave Animated Bar */}
+              {isPlayingAudio && (
+                <div className="mt-8 p-3 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center gap-3 font-baloo text-xs font-bold text-amber-900 animate-pulse">
+                  <Radio className="h-4 w-4 animate-spin text-amber-600" />
+                  <span>Đang phát giọng đọc mẫu diễn cảm... Bé hãy lắng nghe và đọc nhẩm theo nhé!</span>
+                </div>
+              )}
+
+              {/* STT Voice Reading Practice */}
+              {isSpeechSupported && (
+                <div className="mt-8 p-5 rounded-3xl bg-gradient-to-r from-purple-50 via-pink-50 to-amber-50 border-2 border-purple-200/80 space-y-3">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div className="flex items-center gap-2.5">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-purple-600 text-white shadow-xs">
+                        <Mic size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-baloo font-extrabold text-base sm:text-lg text-purple-950">
+                          Góc Bé Luyện Đọc Bằng Giọng Nói (STT) 🎙️
+                        </h4>
+                        <p className="font-vietnam text-xs font-semibold text-purple-800/80">
+                          Nhấn Micro và đọc to bài đọc cho Cáo MiuMiu chấm điểm nhé!
+                        </p>
+                      </div>
                     </div>
+
                     <div>
-                      <h4 className="font-baloo font-extrabold text-base sm:text-lg text-purple-950">
-                        Góc Bé Luyện Đọc Bằng Giọng Nói (STT) 🎙️
-                      </h4>
-                      <p className="font-vietnam text-xs font-semibold text-purple-800/80">
-                        Nhấn Micro và đọc to bài đọc cho Cáo MiuMiu chấm điểm nhé!
-                      </p>
+                      {!isVoiceRecording ? (
+                        <button
+                          type="button"
+                          onClick={handleStartVoiceReading}
+                          className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-baloo font-bold text-sm shadow-pop-sm cursor-pointer"
+                        >
+                          <Mic size={18} />
+                          <span>Bé Bắt Đầu Đọc</span>
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={handleStopVoiceReading}
+                          className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-baloo font-bold text-sm shadow-pop-sm animate-pulse cursor-pointer"
+                        >
+                          <MicOff size={18} />
+                          <span>Đang Lắng Nghe... (Dừng)</span>
+                        </button>
+                      )}
                     </div>
                   </div>
 
-                  <div>
-                    {!isVoiceRecording ? (
+                  {/* Realtime voice transcript display */}
+                  {isVoiceRecording && (
+                    <div className="p-3.5 rounded-2xl bg-white/90 border border-purple-200 font-vietnam text-sm text-slate-700 flex items-center gap-2 animate-fade-in">
+                      <span className="flex h-2.5 w-2.5 rounded-full bg-rose-500 animate-ping shrink-0" />
+                      <span className="italic">
+                        {voiceTranscript || 'Đang lắng nghe giọng đọc của bé...'}
+                      </span>
+                    </div>
+                  )}
+
+                  {voiceScore !== null && (
+                    <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between font-baloo font-bold text-sm text-emerald-900 animate-fade-in">
+                      <span>🎉 Giọng đọc của bé đạt: <strong>{voiceScore}/100 Điểm</strong></span>
+                      <span className="text-amber-500 font-extrabold text-base">+{Math.round(voiceScore / 30)} ⭐</span>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Vocabulary Explanations */}
+              {passage.vocabularyNotes && passage.vocabularyNotes.length > 0 && (
+                <div className="mt-8 pt-6 border-t-2 border-dashed border-amber-200">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-base">💡</span>
+                    <h4 className="font-baloo font-extrabold text-sm sm:text-base text-amber-900">
+                      Góc Chú Giải Từ Ngữ (SGK Tiếng Việt):
+                    </h4>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {passage.vocabularyNotes.map((vocab, vIdx) => (
+                      <div
+                        key={vIdx}
+                        className="p-3 rounded-2xl bg-white border border-amber-100 shadow-2xs font-vietnam text-xs text-slate-700"
+                      >
+                        <strong className="font-baloo text-amber-900 text-sm font-extrabold mr-1">
+                          • {vocab.word}:
+                        </strong>
+                        <span>{vocab.meaning}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* ================================================================= */}
+          {/* TAB 2: CHẾ ĐỘ SHADOWING (LUYỆN NGHE & ĐỌC NHẠI TỪNG CÂU) */}
+          {/* ================================================================= */}
+          {readingTab === 'shadowing' && (
+            <div className="relative rounded-4xl bg-[#fffdfa] p-5 sm:p-8 md:p-10 shadow-washi border border-purple-200/80 mt-2 space-y-6">
+              {/* Washi tape header deco */}
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-48 sm:w-56 h-7 bg-purple-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-purple-400/40 shadow-xs z-10 pointer-events-none" />
+
+              {/* Top Shadowing Bar: Sentence Selector Bubbles + Speed + Auto-advance */}
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-purple-100 pb-5">
+                {/* Sentence Progress Pills */}
+                <div className="flex items-center gap-1.5 overflow-x-auto max-w-full pb-1 scrollbar-none">
+                  {shadowingSentences.map((sent, sIdx) => {
+                    const isCurrent = sIdx === shadowingIndex;
+                    const isDone = completedSentences.includes(sent.id);
+                    return (
+                      <button
+                        key={sent.id}
+                        onClick={() => {
+                          soundManager.playPop();
+                          setShadowingIndex(sIdx);
+                          setShadowingTranscript('');
+                          soundManager.stopSpeaking();
+                          voiceManager.stopListening();
+                          setIsPlayingSentenceAudio(false);
+                          setIsShadowingRecording(false);
+                        }}
+                        className={`flex items-center justify-center h-8 sm:h-9 min-w-8 sm:min-w-9 px-2.5 rounded-full font-baloo font-extrabold text-xs sm:text-sm transition-all cursor-pointer shrink-0 ${
+                          isCurrent
+                            ? 'bg-purple-600 text-white shadow-pop-xs scale-105 ring-2 ring-purple-300'
+                            : isDone
+                            ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
+                            : 'bg-slate-100 text-slate-600 hover:bg-purple-50'
+                        }`}
+                        title={`Câu ${sIdx + 1}${isDone ? ' (Đã hoàn thành)' : ''}`}
+                      >
+                        {isDone ? `✓ ${sIdx + 1}` : sIdx + 1}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Speed Controls & Auto-advance */}
+                <div className="flex items-center gap-3 shrink-0">
+                  {/* Speed Toggle (0.8x / 1.0x) */}
+                  <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-full border border-slate-200 text-xs font-baloo font-bold">
+                    <button
+                      onClick={() => {
+                        soundManager.playPop();
+                        setShadowingSpeed(0.8);
+                      }}
+                      className={`px-2.5 py-1 rounded-full transition-all cursor-pointer ${
+                        shadowingSpeed === 0.8
+                          ? 'bg-purple-600 text-white shadow-xs'
+                          : 'text-slate-600 hover:text-brand-dark'
+                      }`}
+                    >
+                      0.8x Chậm
+                    </button>
+                    <button
+                      onClick={() => {
+                        soundManager.playPop();
+                        setShadowingSpeed(1.0);
+                      }}
+                      className={`px-2.5 py-1 rounded-full transition-all cursor-pointer ${
+                        shadowingSpeed === 1.0
+                          ? 'bg-purple-600 text-white shadow-xs'
+                          : 'text-slate-600 hover:text-brand-dark'
+                      }`}
+                    >
+                      1.0x Chuẩn
+                    </button>
+                  </div>
+
+                  {/* Auto-Advance Switch */}
+                  <button
+                    onClick={() => {
+                      soundManager.playPop();
+                      setIsAutoAdvance(!isAutoAdvance);
+                    }}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-baloo font-bold text-xs border transition-all cursor-pointer ${
+                      isAutoAdvance
+                        ? 'bg-amber-100 text-amber-900 border-amber-300 shadow-2xs'
+                        : 'bg-slate-100 text-slate-500 border-slate-200'
+                    }`}
+                    title="Tự động chuyển câu tiếp theo sau khi đọc đạt chuẩn"
+                  >
+                    <Zap size={13} className={isAutoAdvance ? 'text-amber-600 fill-amber-500' : 'text-slate-400'} />
+                    <span>Tự động chuyển</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Active Sentence Hero Display */}
+              {currentShadowingSentence && (
+                <div className="space-y-6">
+                  <div className="text-center space-y-3">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100/90 text-purple-900 border border-purple-200 font-baloo font-extrabold text-xs">
+                      <span>🎧 Câu {shadowingIndex + 1} / {shadowingSentences.length}</span>
+                      {completedSentences.includes(currentShadowingSentence.id) && (
+                        <span className="text-emerald-700">★ Đã hoàn thành</span>
+                      )}
+                    </div>
+
+                    {/* Interactive Word Chips (Click-to-speak) */}
+                    <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+                      {currentShadowingSentence.cleanWords.map((word, wIdx) => {
+                        const isWordActive = activeSpokenWord === word;
+                        return (
+                          <button
+                            key={wIdx}
+                            type="button"
+                            onClick={() => handleSpeakWord(word)}
+                            className={`px-2.5 py-1.5 rounded-xl font-vietnam text-xl sm:text-2xl md:text-3xl font-extrabold transition-all cursor-pointer ${
+                              isWordActive
+                                ? 'bg-purple-600 text-white scale-110 shadow-pop-xs'
+                                : 'text-brand-dark hover:text-purple-700 hover:bg-purple-100/60 hover:scale-105 active:scale-95'
+                            }`}
+                            title={`Bấm để nghe phát âm riêng từ: "${word}"`}
+                          >
+                            {word}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    <p className="font-vietnam text-xs sm:text-sm font-semibold text-slate-500 italic">
+                      💡 Bé có thể chạm vào bất kỳ từ nào ở trên để nghe phát âm riêng từng từ nhé!
+                    </p>
+                  </div>
+
+                  {/* Audio & Shadowing Action Controls (3D Tactile Buttons) */}
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                    {/* 1. Play Sentence Audio */}
+                    <button
+                      type="button"
+                      onClick={() => handlePlayCurrentSentence(currentShadowingSentence.text)}
+                      className={`flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl font-baloo font-black text-sm sm:text-base transition-all shadow-pop-sm cursor-pointer min-w-[200px] border-2 ${
+                        isPlayingSentenceAudio
+                          ? 'bg-rose-500 border-rose-600 text-white animate-pulse'
+                          : 'bg-gradient-to-tr from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 border-amber-500 text-amber-950 hover:scale-102'
+                      }`}
+                    >
+                      {isPlayingSentenceAudio ? (
+                        <>
+                          <Radio className="h-5 w-5 animate-spin" />
+                          <span>Đang Đọc Mẫu...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Volume2 className="h-5 w-5" />
+                          <span>1. Nghe Câu Mẫu ({shadowingSpeed}x)</span>
+                        </>
+                      )}
+                    </button>
+
+                    {/* 2. Record Shadowing (Speak & AI Evaluation) */}
+                    {!isShadowingRecording ? (
                       <button
                         type="button"
-                        onClick={handleStartVoiceReading}
-                        className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-baloo font-bold text-sm shadow-pop-sm cursor-pointer"
+                        onClick={() => handleStartShadowing(currentShadowingSentence)}
+                        className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl bg-gradient-to-tr from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 border-2 border-purple-700 text-white font-baloo font-black text-sm sm:text-base shadow-pop-sm hover:scale-102 transition-all cursor-pointer min-w-[200px]"
                       >
-                        <Mic size={18} />
-                        <span>Bé Bắt Đầu Đọc</span>
+                        <Mic className="h-5 w-5" />
+                        <span>2. Bé Bấm Đọc Theo (Shadowing)</span>
                       </button>
                     ) : (
                       <button
                         type="button"
-                        onClick={handleStopVoiceReading}
-                        className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-baloo font-bold text-sm shadow-pop-sm animate-pulse cursor-pointer"
+                        onClick={handleStopShadowing}
+                        className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl bg-rose-500 hover:bg-rose-600 border-2 border-rose-700 text-white font-baloo font-black text-sm sm:text-base shadow-pop-sm animate-pulse transition-all cursor-pointer min-w-[200px]"
                       >
-                        <MicOff size={18} />
-                        <span>Đang Lắng Nghe... (Dừng)</span>
+                        <MicOff className="h-5 w-5 animate-bounce" />
+                        <span>Đang Lắng Nghe... (Bấm Xong)</span>
                       </button>
                     )}
                   </div>
-                </div>
 
-                {/* Realtime voice transcript display */}
-                {isVoiceRecording && (
-                  <div className="p-3.5 rounded-2xl bg-white/90 border border-purple-200 font-vietnam text-sm text-slate-700 flex items-center gap-2 animate-fade-in">
-                    <span className="flex h-2.5 w-2.5 rounded-full bg-rose-500 animate-ping shrink-0" />
-                    <span className="italic">
-                      {voiceTranscript || 'Đang lắng nghe giọng đọc của bé...'}
-                    </span>
-                  </div>
-                )}
-
-                {voiceScore !== null && (
-                  <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between font-baloo font-bold text-sm text-emerald-900 animate-fade-in">
-                    <span>🎉 Giọng đọc của bé đạt: <strong>{voiceScore}/100 Điểm</strong></span>
-                    <span className="text-amber-500 font-extrabold text-base">+{Math.round(voiceScore / 30)} ⭐</span>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Vocabulary Explanations (Góc Chú Giải Từ Ngữ SGK) */}
-            {passage.vocabularyNotes && passage.vocabularyNotes.length > 0 && (
-              <div className="mt-8 pt-6 border-t-2 border-dashed border-amber-200">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-base">💡</span>
-                  <h4 className="font-baloo font-extrabold text-sm sm:text-base text-amber-900">
-                    Góc Chú Giải Từ Ngữ (SGK Tiếng Việt):
-                  </h4>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {passage.vocabularyNotes.map((vocab, vIdx) => (
-                    <div
-                      key={vIdx}
-                      className="p-3 rounded-2xl bg-white border border-amber-100 shadow-2xs font-vietnam text-xs text-slate-700"
-                    >
-                      <strong className="font-baloo text-amber-900 text-sm font-extrabold mr-1">
-                        • {vocab.word}:
-                      </strong>
-                      <span>{vocab.meaning}</span>
+                  {/* Live Transcript & Realtime Speech Matching Box */}
+                  {isShadowingRecording && (
+                    <div className="p-4 rounded-2xl bg-purple-50 border-2 border-purple-200 font-vietnam text-sm text-purple-950 flex items-center justify-center gap-2.5 animate-fade-in text-center">
+                      <span className="flex h-3 w-3 rounded-full bg-rose-500 animate-ping shrink-0" />
+                      <span className="italic font-medium">
+                        {shadowingTranscript || 'Đang lắng nghe bé đọc theo câu mẫu... Hãy đọc to và rõ ràng nhé! 🎙️'}
+                      </span>
                     </div>
-                  ))}
+                  )}
+
+                  {/* AI Evaluation Score & Matched Words Display */}
+                  {currentScore !== undefined && !isShadowingRecording && (
+                    <div
+                      className={`p-4 sm:p-5 rounded-3xl border-2 space-y-2 animate-fade-in ${
+                        currentScore >= 60
+                          ? 'bg-emerald-50/90 border-emerald-300 text-emerald-950'
+                          : 'bg-amber-50/90 border-amber-300 text-amber-950'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="text-2xl">{currentScore >= 60 ? '🎉' : '💪'}</span>
+                          <h5 className="font-baloo font-extrabold text-base sm:text-lg">
+                            {currentScore >= 60
+                              ? 'Bé Phát Âm Rất Chuẩn Xác!'
+                              : 'Bé Rất Cố Gắng! Hãy Thử Lại Một Lần Nữa Nhé!'}
+                          </h5>
+                        </div>
+                        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white font-baloo font-black text-sm shadow-2xs">
+                          <span className={currentScore >= 60 ? 'text-emerald-700' : 'text-amber-700'}>
+                            {currentScore}%
+                          </span>
+                          {currentScore >= 60 && <span className="text-amber-500">⭐ +5 XP</span>}
+                        </div>
+                      </div>
+
+                      {shadowingTranscript && (
+                        <p className="font-vietnam text-xs sm:text-sm text-slate-700">
+                          <strong>Bé vừa đọc:</strong> &ldquo;{shadowingTranscript}&rdquo;
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Navigation Controls: Previous / Next Sentence */}
+                  <div className="flex items-center justify-between pt-4 border-t border-purple-100">
+                    <button
+                      type="button"
+                      disabled={shadowingIndex === 0}
+                      onClick={() => {
+                        soundManager.playPop();
+                        setShadowingIndex((prev) => Math.max(0, prev - 1));
+                        setShadowingTranscript('');
+                      }}
+                      className="flex items-center gap-1.5 px-4 py-2 rounded-2xl font-baloo font-bold text-xs sm:text-sm bg-slate-100 text-slate-700 hover:bg-purple-100 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer"
+                    >
+                      <ArrowLeft size={16} />
+                      <span>Câu Trước</span>
+                    </button>
+
+                    <span className="font-baloo font-extrabold text-xs sm:text-sm text-slate-500">
+                      {shadowingIndex + 1} / {shadowingSentences.length}
+                    </span>
+
+                    <button
+                      type="button"
+                      disabled={shadowingIndex === shadowingSentences.length - 1}
+                      onClick={() => {
+                        soundManager.playPop();
+                        setShadowingIndex((prev) => Math.min(shadowingSentences.length - 1, prev + 1));
+                        setShadowingTranscript('');
+                      }}
+                      className="flex items-center gap-1.5 px-4 py-2 rounded-2xl font-baloo font-bold text-xs sm:text-sm bg-purple-600 text-white hover:bg-purple-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer shadow-pop-xs"
+                    >
+                      <span>Câu Tiếp Theo</span>
+                      <ArrowRight size={16} />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
 
           {/* Bottom Call to Action: Start Comprehension Quiz */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100 border-2 border-amber-200/80 shadow-xs">

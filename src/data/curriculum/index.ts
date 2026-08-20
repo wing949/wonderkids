@@ -218,7 +218,7 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
   return topics.map((t, idx) => {
     let readingPassage = (subject === 'vietnamese' && VIETNAMESE_READING_PASSAGES[t.id]?.passage) || t.readingPassage;
 
-    // Đảm bảo 100% tất cả bài học Tiếng Việt mọi cấp học (Lớp 1-5) đều có Bài Đọc phong phú
+    // Đảm bảo 100% tất cả bài học Tiếng Việt & Tiếng Anh mọi cấp học (Lớp 1-5) đều có Bài Đọc & Shadowing phong phú
     if (!readingPassage && subject === 'vietnamese') {
       readingPassage = {
         title: t.title.replace(/^Bài \d+:\s*/, ''),
@@ -234,6 +234,25 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
           const parts = kp.split(/[:—–]/);
           return {
             word: parts[0]?.trim() || 'Trọng tâm',
+            meaning: parts[1]?.trim() || kp
+          };
+        })
+      };
+    } else if (!readingPassage && subject === 'english') {
+      readingPassage = {
+        title: t.title.replace(/^Unit \d+:\s*/i, ''),
+        author: 'Global Success English SGK',
+        genre: 'story',
+        content: [
+          t.description,
+          t.summary,
+          ...t.keyPoints
+        ],
+        audioNarration: `${t.title}. ${t.description}. ${t.summary}. ${t.keyPoints.join('. ')}.`,
+        vocabularyNotes: t.keyPoints.slice(0, 3).map((kp) => {
+          const parts = kp.split(/[:—–]/);
+          return {
+            word: parts[0]?.trim() || 'Keyword',
             meaning: parts[1]?.trim() || kp
           };
         })
