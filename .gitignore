@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 .pnp
 .pnp.js
@@ -42,3 +42,5 @@ pnpm-debug.log*
 .system_generated/
 scratch/
 .vercel
+server/vieneu-service/models/
+server/vieneu-service/.audio_cache/
