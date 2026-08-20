@@ -649,8 +649,6 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                         if (!isAnswerChecked) {
                           soundManager.playPop();
                           setSelectedOptionId(opt.id);
-                          // Realtime TTS on option tap so Grade 1-2 students can hear option aloud
-                          soundManager.speakText(opt.label, 'vi-VN');
                         }
                       }}
                       className={`flex items-center justify-between p-4 sm:p-5 rounded-3xl border-2 font-baloo font-bold text-base sm:text-lg text-left transition-all min-h-[64px] cursor-pointer ${optionStyle}`}

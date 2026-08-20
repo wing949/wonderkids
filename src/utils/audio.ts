@@ -217,8 +217,8 @@ export const soundManager = {
     onFail: () => void
   ) => {
     try {
-      const encoded = encodeURIComponent(text.slice(0, 200));
-      const streamUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${langCode}&client=tw-ob&q=${encoded}`;
+      const encoded = encodeURIComponent(text.slice(0, 300));
+      const streamUrl = `/api/tts?lang=${langCode}&text=${encoded}`;
 
       const audio = new Audio(streamUrl);
       currentAudioElement = audio;
