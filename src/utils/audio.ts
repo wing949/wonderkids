@@ -339,7 +339,12 @@ export const soundManager = {
       return;
     }
 
-    const langCode = lang === 'vi-VN' ? 'vi' : 'en';
+    // Tự động nhận diện ngôn ngữ thông minh:
+    // Nếu câu có dấu tiếng Việt -> dùng giọng Tiếng Việt (Cô Hoài My)
+    // Nếu câu thuần tiếng Anh -> dùng giọng Tiếng Anh (Cô Jenny)
+    const viRegex = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđĐ]/i;
+    const resolvedLang = viRegex.test(cleanText) ? 'vi-VN' : lang;
+    const langCode = resolvedLang === 'vi-VN' ? 'vi' : 'en';
 
     // 2. Chẻ văn bản thành các câu tự nhiên để phát qua Studio Audio Stream
     const rawSentences = cleanText.split(/([.?!;\n]+)/);
