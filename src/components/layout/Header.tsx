@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Star, Gem, Palette, ShieldCheck, UserCheck, BookOpen, Trophy, ShoppingBag } from 'lucide-react';
+import { Flame, Star, Gem, ShieldCheck, UserCheck, BookOpen, Trophy, ShoppingBag } from 'lucide-react';
 import { GradeLevel, ThemeId, PortalView, StudentProfile } from '../../types';
 import { CUTE_ANIMAL_AVATARS } from '../../data/gamificationData';
 import { soundManager } from '../../utils/audio';
@@ -163,12 +163,15 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Theme Selector Pill */}
           <div className="relative group hidden md:block shrink-0">
             <button
-              className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
-              title="Đổi chủ đề giao diện"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 shadow-2xs hover:scale-105 transition-transform text-lg cursor-pointer"
+              title={`Đổi chủ đề giao diện (Đang chọn: ${themes.find((t) => t.id === currentTheme)?.label || 'Biển Xanh'})`}
             >
-              <Palette size={18} />
+              <span>{themes.find((t) => t.id === currentTheme)?.icon || '🌊'}</span>
             </button>
-            <div className="absolute right-0 top-full mt-2 hidden group-hover:flex flex-col gap-1 rounded-2xl border-2 border-white bg-white/95 p-2 shadow-xl backdrop-blur z-50 w-36">
+            <div className="absolute right-0 top-full mt-2 hidden group-hover:flex flex-col gap-1 rounded-2xl border-2 border-white bg-white/95 p-2 shadow-xl backdrop-blur z-50 w-40 animate-fade-in">
+              <div className="px-2 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 font-baloo">
+                Chủ đề thế giới:
+              </div>
               {themes.map((t) => (
                 <button
                   key={t.id}
@@ -176,12 +179,17 @@ export const Header: React.FC<HeaderProps> = ({
                     soundManager.playPop();
                     onThemeChange(t.id);
                   }}
-                  className={`flex items-center gap-2 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all text-left whitespace-nowrap ${
-                    currentTheme === t.id ? 'bg-emerald-100 text-emerald-800' : 'hover:bg-slate-100 text-slate-700'
+                  className={`flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition-all text-left whitespace-nowrap cursor-pointer ${
+                    currentTheme === t.id
+                      ? 'bg-amber-100/90 text-amber-900 border border-amber-300/80 shadow-2xs font-extrabold'
+                      : 'hover:bg-slate-100 text-slate-700'
                   }`}
                 >
-                  <span>{t.icon}</span>
-                  <span>{t.label}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-base">{t.icon}</span>
+                    <span>{t.label}</span>
+                  </div>
+                  {currentTheme === t.id && <span className="text-amber-600 font-black text-xs">✓</span>}
                 </button>
               ))}
             </div>

@@ -169,10 +169,19 @@ export const App: React.FC = () => {
     setProfile((prev) => ({ ...prev, grade }));
   };
 
+  // Handler: Change Theme
+  const handleThemeChange = (theme: ThemeId) => {
+    setCurrentTheme(theme);
+    setProfile((prev) => ({ ...prev, theme }));
+  };
+
   return (
-    <div className="min-h-screen bg-brand-bg transition-colors relative">
+    <div
+      className="min-h-screen transition-colors duration-500 relative"
+      style={{ background: 'var(--theme-gradient, linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 100%))' }}
+    >
       {/* Background Animated Doodles & Soft Clouds (mykidspace.online style) */}
-      <CuteDoodleBackground />
+      <CuteDoodleBackground theme={currentTheme} />
 
       {/* Universal Header (Hidden inside exercise mode to prevent distractions) */}
       {currentPortal !== 'exercise' && (
@@ -181,7 +190,7 @@ export const App: React.FC = () => {
           currentGrade={currentGrade}
           onGradeChange={handleGradeChange}
           currentTheme={currentTheme}
-          onThemeChange={setCurrentTheme}
+          onThemeChange={handleThemeChange}
           currentPortal={currentPortal}
           onPortalChange={setCurrentPortal}
           onOpenShop={() => setIsShopModalOpen(true)}
@@ -300,6 +309,9 @@ export const App: React.FC = () => {
           setProfile((prev) => ({ ...prev, ...updated }));
           if (updated.grade) {
             setCurrentGrade(updated.grade);
+          }
+          if (updated.theme) {
+            setCurrentTheme(updated.theme);
           }
         }}
       />

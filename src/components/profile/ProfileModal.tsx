@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Trophy, Star, Flame, Shield, CheckCircle2, User, Sparkles, Check, Heart, Edit3 } from 'lucide-react';
-import { StudentProfile, GradeLevel } from '../../types';
+import { StudentProfile, GradeLevel, ThemeId } from '../../types';
 import { BADGES_LIST, CUTE_ANIMAL_AVATARS } from '../../data/gamificationData';
 import { Modal } from '../ui/Modal';
 import { CandyProgressBar } from '../ui/CandyProgressBar';
@@ -31,6 +31,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
   const [name, setName] = useState(profile.name);
   const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(profile.grade);
   const [selectedAvatarId, setSelectedAvatarId] = useState<string>(profile.avatarId || profile.selectedMascot || 'bobo');
+  const [selectedTheme, setSelectedTheme] = useState<ThemeId>(profile.theme || 'ocean');
   const [motto, setMotto] = useState(profile.motto || MOTTO_PRESETS[0]);
   const [isSavedRecently, setIsSavedRecently] = useState(false);
 
@@ -50,6 +51,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
       avatarId: selectedAvatarId,
       selectedMascot: mascotKey as any,
       motto: motto,
+      theme: selectedTheme,
     });
 
     setIsSavedRecently(true);
@@ -227,6 +229,43 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                           ✓
                         </div>
                       )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* World Theme Selection */}
+            <div className="space-y-1.5">
+              <label className="font-baloo font-extrabold text-sm text-brand-dark flex items-center gap-1.5">
+                <span>🎨</span>
+                <span>Chủ Đề Thế Giới Học Tập:</span>
+              </label>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                {[
+                  { id: 'ocean', label: 'Biển Xanh', icon: '🌊', bg: 'bg-sky-100 text-sky-950 border-sky-300' },
+                  { id: 'space', label: 'Vũ Trụ', icon: '🚀', bg: 'bg-purple-100 text-purple-950 border-purple-300' },
+                  { id: 'jungle', label: 'Rừng Xanh', icon: '🌴', bg: 'bg-emerald-100 text-emerald-950 border-emerald-300' },
+                  { id: 'candy', label: 'Kẹo Ngọt', icon: '🍬', bg: 'bg-pink-100 text-pink-950 border-pink-300' },
+                  { id: 'sunny', label: 'Nắng Ấm', icon: '☀️', bg: 'bg-amber-100 text-amber-950 border-amber-300' },
+                ].map((t) => {
+                  const isThemeSelected = selectedTheme === t.id;
+                  return (
+                    <button
+                      key={t.id}
+                      type="button"
+                      onClick={() => {
+                        soundManager.playPop();
+                        setSelectedTheme(t.id as ThemeId);
+                      }}
+                      className={`flex items-center justify-center gap-1.5 p-2 rounded-2xl border-2 font-baloo font-bold text-xs transition-all cursor-pointer ${
+                        isThemeSelected
+                          ? `${t.bg} shadow-pop-xs scale-102 font-extrabold ring-2 ring-amber-400`
+                          : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+                      }`}
+                    >
+                      <span className="text-base">{t.icon}</span>
+                      <span>{t.label}</span>
                     </button>
                   );
                 })}

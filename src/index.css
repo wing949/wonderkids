@@ -10,7 +10,10 @@
   }
 
   body {
-    @apply font-vietnam text-brand-dark bg-brand-bg antialiased min-h-screen overflow-x-hidden;
+    @apply font-vietnam text-brand-dark antialiased min-h-screen overflow-x-hidden;
+    background: var(--theme-gradient, linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 100%));
+    background-attachment: fixed;
+    transition: background 0.5s ease-in-out;
   }
 
   h1, h2, h3, h4, h5, h6, .font-heading {
@@ -18,30 +21,60 @@
   }
 }
 
-/* Custom Themes */
-[data-theme="ocean"] {
-  --bg-gradient: linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 100%);
-  --accent-color: #0284C7;
+/* Custom Themes (mykidspace.online World Themes) */
+[data-theme="ocean"], :root {
+  --theme-bg: #cdeafd;
+  --theme-gradient: linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 50%, #C7D2FE 100%);
+  --theme-accent: #0284C7;
+  --theme-accent-light: #E0F2FE;
+  --theme-blob1: rgba(56, 189, 248, 0.28);
+  --theme-blob2: rgba(2, 132, 199, 0.22);
+  --theme-blob3: rgba(96, 165, 250, 0.25);
+  --theme-blob4: rgba(129, 140, 248, 0.20);
 }
 
 [data-theme="space"] {
-  --bg-gradient: linear-gradient(180deg, #EDE9FE 0%, #DDD6FE 100%);
-  --accent-color: #7C3AED;
+  --theme-bg: #e2dbfc;
+  --theme-gradient: linear-gradient(180deg, #F3E8FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+  --theme-accent: #7C3AED;
+  --theme-accent-light: #EDE9FE;
+  --theme-blob1: rgba(168, 85, 247, 0.28);
+  --theme-blob2: rgba(124, 58, 237, 0.22);
+  --theme-blob3: rgba(192, 132, 252, 0.25);
+  --theme-blob4: rgba(129, 140, 248, 0.20);
 }
 
 [data-theme="jungle"] {
-  --bg-gradient: linear-gradient(180deg, #DCFCE7 0%, #BBF7D0 100%);
-  --accent-color: #059669;
+  --theme-bg: #d1fae5;
+  --theme-gradient: linear-gradient(180deg, #ECFDF5 0%, #D1FAE5 50%, #A7F3D0 100%);
+  --theme-accent: #059669;
+  --theme-accent-light: #DCFCE7;
+  --theme-blob1: rgba(52, 211, 153, 0.28);
+  --theme-blob2: rgba(5, 150, 105, 0.22);
+  --theme-blob3: rgba(110, 231, 183, 0.25);
+  --theme-blob4: rgba(163, 230, 53, 0.20);
 }
 
 [data-theme="candy"] {
-  --bg-gradient: linear-gradient(180deg, #FCE7F3 0%, #FBCFE8 100%);
-  --accent-color: #DB2777;
+  --theme-bg: #fce7f3;
+  --theme-gradient: linear-gradient(180deg, #FDF2F8 0%, #FCE7F3 50%, #FBCFE8 100%);
+  --theme-accent: #DB2777;
+  --theme-accent-light: #FCE7F3;
+  --theme-blob1: rgba(244, 114, 182, 0.28);
+  --theme-blob2: rgba(219, 39, 119, 0.22);
+  --theme-blob3: rgba(251, 113, 133, 0.25);
+  --theme-blob4: rgba(244, 63, 94, 0.20);
 }
 
 [data-theme="sunny"] {
-  --bg-gradient: linear-gradient(180deg, #FEF3C7 0%, #FDE68A 100%);
-  --accent-color: #D97706;
+  --theme-bg: #fef3c7;
+  --theme-gradient: linear-gradient(180deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%);
+  --theme-accent: #D97706;
+  --theme-accent-light: #FEF3C7;
+  --theme-blob1: rgba(251, 191, 36, 0.28);
+  --theme-blob2: rgba(217, 119, 6, 0.22);
+  --theme-blob3: rgba(245, 158, 11, 0.25);
+  --theme-blob4: rgba(251, 146, 60, 0.20);
 }
 
 /* Washi Tape Accent */
