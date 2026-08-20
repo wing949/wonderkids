@@ -515,7 +515,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               }`}
             >
               <span>🎙️</span>
-              <span>Luyện Shadowing Từng Câu</span>
+              <span>Luyện Shadowing</span>
               <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
             </button>
           </div>
