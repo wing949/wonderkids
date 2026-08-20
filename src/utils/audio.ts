@@ -5,7 +5,7 @@ let audioCtx: AudioContext | null = null;
 export const STORAGE_KEY_TTS_SETTINGS = 'wonderkids_tts_settings_v2';
 
 export const DEFAULT_TTS_SETTINGS: TTSSettings = {
-  voiceVi: 'vi-VN-HoaiMyNeural', // Cô Hoài My — Sư phạm tiểu học, dịu dàng, truyền cảm
+  voiceVi: 'Mỹ Duyên', // Cô Mỹ Duyên (VieNeu TTS) — Giọng Nữ Nam ngọt ngào, truyền cảm ⭐
   voiceEn: 'en-US-JennyNeural',  // Cô Jenny — Chuẩn Mỹ bản xứ
   speechRate: 0.95,
   speechPitch: 1.0,
@@ -428,34 +428,55 @@ export const soundManager = {
     playNext();
   },
 
-  // Play SGK Passage audio: Ưu tiên phát ngay lập tức từ kho file thu âm sẵn (0ms), tự động fallback sang live speakText
+  // Play SGK Passage audio: Thứ tự ưu tiên:
+  // 1. Giọng Mỹ Duyên (VieNeu TTS chuẩn phòng thu .wav)
+  // 2. File .mp3 chính
+  // 3. Kho lưu trữ dự phòng /audio/curriculum/fallback/${id}.mp3 (Cô Hoài My)
+  // 4. Live Stream Neural TTS (soundManager.speakText)
   playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
 
     const normalizedId = lessonId.replace('-l', '-b');
-    const staticUrl = `/audio/curriculum/${normalizedId}.mp3`;
-    const audio = new Audio(staticUrl);
-    currentAudioElement = audio;
+    const sources = [
+      `/audio/curriculum/${normalizedId}.wav`,
+      `/audio/curriculum/${normalizedId}.mp3`,
+      `/audio/curriculum/fallback/${normalizedId}.mp3`
+    ];
 
+    let currentSourceIdx = 0;
     let hasEnded = false;
-    const handleFinish = () => {
-      if (!hasEnded) {
-        hasEnded = true;
+
+    const tryPlayNext = () => {
+      if (currentSourceIdx >= sources.length) {
         currentAudioElement = null;
-        if (onEnd) onEnd();
+        soundManager.speakText(fallbackText, 'vi-VN', onEnd);
+        return;
       }
+
+      const url = sources[currentSourceIdx];
+      currentSourceIdx++;
+
+      const audio = new Audio(url);
+      currentAudioElement = audio;
+
+      audio.onended = () => {
+        if (!hasEnded) {
+          hasEnded = true;
+          currentAudioElement = null;
+          if (onEnd) onEnd();
+        }
+      };
+
+      audio.onerror = () => {
+        tryPlayNext();
+      };
+
+      audio.play().catch(() => {
+        tryPlayNext();
+      });
     };
 
-    audio.onended = handleFinish;
-    audio.onerror = () => {
-      currentAudioElement = null;
-      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
-    };
-
-    audio.play().catch(() => {
-      currentAudioElement = null;
-      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
-    });
+    tryPlayNext();
   },
 
   // Fallback Web Speech Synthesis

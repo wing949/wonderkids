@@ -102,11 +102,14 @@ export const TTSSettingsPanel: React.FC = () => {
               }}
               className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 font-baloo font-bold text-sm text-slate-800 shadow-xs focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-200 cursor-pointer"
             >
+              <option value="Mỹ Duyên">
+                👩 Cô Mỹ Duyên (VieNeu TTS) — Nữ miền Nam ngọt ngào, truyền cảm ⭐ (Mặc định SGK)
+              </option>
               <option value="vi-VN-HoaiMyNeural">
-                👩 Cô Hoài My — Dịu dàng, ấm áp, chuẩn sư phạm ⭐ (Khuyên dùng)
+                👩 Cô Hoài My (Neural) — Nữ miền Bắc dịu dàng, ấm áp chuẩn sư phạm (Dự phòng)
               </option>
               <option value="vi-VN-NamMinhNeural">
-                👨 Thầy Nam Minh — Trầm ấm, dõng dạc, truyền cảm
+                👨 Thầy Nam Minh (Neural) — Trầm ấm, dõng dạc, truyền cảm
               </option>
             </select>
           </div>
