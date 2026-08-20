@@ -9,6 +9,7 @@
     "generate:curriculum-audio": "node scripts/generate_curriculum_audio.mjs",
     "verify:curriculum-audio": "node scripts/generate_curriculum_audio.mjs --verify",
     "build": "tsc && vite build",
+    "deploy": "vercel --prod",
     "preview": "vite preview"
   },
   "dependencies": {
