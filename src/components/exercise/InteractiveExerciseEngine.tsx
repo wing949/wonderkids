@@ -20,6 +20,7 @@ import { CuteButton } from '../ui/CuteButton';
 import { CandyProgressBar } from '../ui/CandyProgressBar';
 import { soundManager, voiceManager } from '../../utils/audio';
 import { triggerStarBurst } from '../../utils/confetti';
+import { buildLessonNarration } from '../../utils/lessonNarration';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -84,7 +85,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       setIsPlayingAudio(false);
     } else {
       setIsPlayingAudio(true);
-      const narration = lesson.readingPassage.audioNarration || lesson.readingPassage.content.join(' ');
+      const narration = buildLessonNarration(lesson.readingPassage);
       soundManager.playPassageAudio(lesson.id, narration, () => {
         setIsPlayingAudio(false);
       });
