@@ -1,7 +1,7 @@
 import { LessonNode, SubjectType, GradeLevel, Question } from '../../types';
 import { CurriculumTopic } from './types';
 import { MATH_CURRICULUM_BY_GRADE } from './math';
-import { VIETNAMESE_CURRICULUM_BY_GRADE } from './vietnamese';
+import { VIETNAMESE_CURRICULUM_BY_GRADE, VIETNAMESE_READING_PASSAGES } from './vietnamese';
 import { ENGLISH_CURRICULUM_BY_GRADE } from './english';
 
 export * from './types';
@@ -27,6 +27,11 @@ export const FULL_SYLLABUS_CATALOG: Record<SubjectType, Record<GradeLevel, Curri
 // =========================================================================
 
 export function generateQuestionsForTopic(topic: CurriculumTopic, subject: SubjectType, grade: GradeLevel): Question[] {
+  // If specific reading passage bundle exists for Vietnamese
+  if (subject === 'vietnamese' && VIETNAMESE_READING_PASSAGES[topic.id]) {
+    return VIETNAMESE_READING_PASSAGES[topic.id].questions;
+  }
+
   // If specific questions already defined
   if (topic.defaultQuestions && topic.defaultQuestions.length > 0) {
     return topic.defaultQuestions;
@@ -201,24 +206,29 @@ export function generateQuestionsForTopic(topic: CurriculumTopic, subject: Subje
 export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: SubjectType): LessonNode[] {
   const topics = FULL_SYLLABUS_CATALOG[subject]?.[grade] || [];
   
-  return topics.map((t, idx) => ({
-    id: t.id,
-    title: t.title,
-    description: t.description,
-    subject: subject,
-    grade: grade,
-    unit: t.unit,
-    textbookPageRef: t.textbookPageRef,
-    order: idx + 1,
-    starsEarned: idx === 0 ? 3 : 0,
-    isLocked: false,
-    xpReward: 100 + (idx * 15),
-    starReward: idx === 0 ? 2 : 3,
-    theoryContent: {
-      summary: t.summary,
-      keyPoints: t.keyPoints,
-      mascotTip: t.mascotTip,
-    },
-    questions: generateQuestionsForTopic(t, subject, grade)
-  }));
+  return topics.map((t, idx) => {
+    const readingPassage = (subject === 'vietnamese' && VIETNAMESE_READING_PASSAGES[t.id]?.passage) || t.readingPassage;
+
+    return {
+      id: t.id,
+      title: t.title,
+      description: t.description,
+      subject: subject,
+      grade: grade,
+      unit: t.unit,
+      textbookPageRef: t.textbookPageRef,
+      order: idx + 1,
+      starsEarned: idx === 0 ? 3 : 0,
+      isLocked: false,
+      xpReward: 100 + (idx * 15),
+      starReward: idx === 0 ? 2 : 3,
+      theoryContent: {
+        summary: t.summary,
+        keyPoints: t.keyPoints,
+        mascotTip: t.mascotTip,
+      },
+      readingPassage: readingPassage,
+      questions: generateQuestionsForTopic(t, subject, grade)
+    };
+  });
 }

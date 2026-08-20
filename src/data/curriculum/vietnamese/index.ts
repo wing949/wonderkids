@@ -14,6 +14,8 @@ export const VIETNAMESE_CURRICULUM_BY_GRADE: Record<GradeLevel, CurriculumTopic[
   5: VIETNAMESE_GRADE_5_TOPICS,
 };
 
+export * from './readingPassages';
+
 export {
   VIETNAMESE_GRADE_1_TOPICS,
   VIETNAMESE_GRADE_2_TOPICS,

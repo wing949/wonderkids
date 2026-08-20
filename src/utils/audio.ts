@@ -157,14 +157,25 @@ export const soundManager = {
   },
 
   // Read text out loud for Grade 1-2 students or English pronunciation
-  speakText: (text: string, lang: 'vi-VN' | 'en-US' = 'vi-VN') => {
+  speakText: (text: string, lang: 'vi-VN' | 'en-US' = 'vi-VN', onEnd?: () => void) => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel(); // cancel previous speaking
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = lang;
       utterance.rate = 0.92; // slightly slower for kids
       utterance.pitch = 1.15; // friendly, upbeat pitch
+      if (onEnd) {
+        utterance.onend = onEnd;
+        utterance.onerror = onEnd;
+      }
       window.speechSynthesis.speak(utterance);
+    }
+  },
+
+  // Stop current speech
+  stopSpeaking: () => {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
     }
   }
 };

@@ -63,6 +63,15 @@ export interface Question {
   };
 }
 
+export interface ReadingPassage {
+  title: string;
+  author?: string;
+  genre?: 'poem' | 'story' | 'prose';
+  content: string[]; // Các khổ thơ hoặc đoạn văn
+  audioNarration?: string; // Đoạn text chuẩn để phát âm mẫu
+  vocabularyNotes?: { word: string; meaning: string }[];
+}
+
 export interface LessonNode {
   id: string;
   title: string;
@@ -83,6 +92,7 @@ export interface LessonNode {
     mascotTip: string;
     examples?: string[];
   };
+  readingPassage?: ReadingPassage;
   questions: Question[];
 }
 

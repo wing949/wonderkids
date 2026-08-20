@@ -1,4 +1,4 @@
-import { Question } from '../../types';
+import { Question, ReadingPassage } from '../../types';
 
 export interface CurriculumTopic {
   id: string;
@@ -11,5 +11,6 @@ export interface CurriculumTopic {
   summary: string;
   keyPoints: string[];
   mascotTip: string;
+  readingPassage?: ReadingPassage;
   defaultQuestions?: Question[];
 }
