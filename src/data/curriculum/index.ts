@@ -174,29 +174,38 @@ export function generateQuestionsForTopic(topic: CurriculumTopic, subject: Subje
     ];
   }
 
-  // Default smart question generator
+  // Default smart pedagogical question generator for primary students
+  const mainPoint = topic.keyPoints[0] || topic.summary;
+  const secondPoint = topic.keyPoints[1] || topic.summary;
+
   return [
     {
       id: `${topic.id}-q1`,
       type: 'bubble_choice',
-      questionText: `Trọng tâm kiến thức ${topic.title}: Chọn nhận định ĐÚNG nhất theo SGK`,
-      audioText: topic.title,
+      questionText: subject === 'vietnamese'
+        ? `Qua bài học "${topic.title}", em hiểu được điều gì quan trọng nhất?`
+        : `Kiến thức trọng tâm bài học "${topic.title}" là:`,
+      audioText: `Qua bài học, em hiểu được điều gì quan trọng nhất?`,
+      hint: topic.summary,
       points: 15,
       options: [
-        { id: 'a', label: topic.keyPoints[0] || topic.summary, isCorrect: true },
-        { id: 'b', label: 'Kiến thức này chưa chính xác theo bài học SGK.' },
-        { id: 'c', label: 'Không có thông tin trong nội dung bài học.' },
+        { id: 'a', label: `${mainPoint} ✨`, isCorrect: true },
+        { id: 'b', label: 'Bài học không khuyên làm điều này.' },
+        { id: 'c', label: 'Ý kiến này chưa đúng theo bài học.' },
       ]
     },
     {
       id: `${topic.id}-q2`,
       type: 'bubble_choice',
-      questionText: `Ứng dụng thực hành ${topic.title}:`,
-      audioText: 'Chọn đáp án chính xác nhất:',
+      questionText: subject === 'vietnamese'
+        ? `Em hãy chọn việc làm hoặc cách hiểu đúng theo bài học:`
+        : `Em hãy chọn đáp án chính xác nhất theo SGK:`,
+      audioText: `Em hãy chọn đáp án chính xác nhất:`,
+      hint: topic.keyPoints[1] || topic.summary,
       points: 15,
       options: [
-        { id: 'a', label: topic.keyPoints[1] || 'Đúng theo quy chuẩn NXB Giáo Dục Việt Nam.', isCorrect: true },
-        { id: 'b', label: 'Đáp án sai' },
+        { id: 'a', label: `${secondPoint} 🌟`, isCorrect: true },
+        { id: 'b', label: 'Chưa thực hiện đúng theo bài học.' },
       ]
     }
   ];

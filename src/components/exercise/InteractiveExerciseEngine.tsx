@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Volume2, ArrowLeft, HelpCircle, ArrowRight, RotateCcw, Check, Sparkles, BookOpen, Pause, X } from 'lucide-react';
+import {
+  Volume2,
+  ArrowLeft,
+  HelpCircle,
+  ArrowRight,
+  RotateCcw,
+  Check,
+  Sparkles,
+  BookOpen,
+  Pause,
+  X,
+  Mic,
+  MicOff,
+  Radio
+} from 'lucide-react';
 import { LessonNode, Question, QuestionOption, MatchingPair } from '../../types';
 import { CuteButton } from '../ui/CuteButton';
 import { CandyProgressBar } from '../ui/CandyProgressBar';
-import { soundManager } from '../../utils/audio';
+import { soundManager, voiceManager } from '../../utils/audio';
 import { triggerStarBurst } from '../../utils/confetti';
 
 interface InteractiveExerciseEngineProps {
@@ -24,6 +38,12 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [isReadingDrawerOpen, setIsReadingDrawerOpen] = useState(false);
 
+  // STT Voice Reading Practice State
+  const [isVoiceRecording, setIsVoiceRecording] = useState(false);
+  const [voiceTranscript, setVoiceTranscript] = useState('');
+  const [voiceScore, setVoiceScore] = useState<number | null>(null);
+  const isSpeechSupported = voiceManager.isSupported();
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [keypadInput, setKeypadInput] = useState<string>('');
@@ -40,6 +60,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   useEffect(() => {
     return () => {
       soundManager.stopSpeaking();
+      voiceManager.stopListening();
     };
   }, []);
 
@@ -70,7 +91,53 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     }
   };
 
-  // Check user answer
+  // STT Voice Reading Handlers
+  const handleStartVoiceReading = () => {
+    soundManager.playPop();
+    soundManager.stopSpeaking();
+    setIsPlayingAudio(false);
+    setIsVoiceRecording(true);
+    setVoiceTranscript('');
+    setVoiceScore(null);
+
+    voiceManager.startListening(
+      (interim) => {
+        setVoiceTranscript(interim);
+      },
+      (final) => {
+        setVoiceTranscript(final);
+        setIsVoiceRecording(false);
+
+        if (lesson.readingPassage) {
+          const passageAllWords = lesson.readingPassage.content.join(' ').toLowerCase().split(/\s+/);
+          const spokeWords = final.toLowerCase().split(/\s+/);
+          const matchCount = spokeWords.filter((w) => passageAllWords.includes(w)).length;
+          const calculatedScore = Math.min(100, Math.max(50, Math.round((matchCount / Math.max(1, spokeWords.length)) * 100)));
+          setVoiceScore(calculatedScore);
+
+          if (calculatedScore >= 60) {
+            soundManager.playCorrect();
+            triggerStarBurst();
+            soundManager.speakText(`Bé đọc to, rõ ràng và rất chuẩn xác! Cáo MiuMiu tặng bé ${calculatedScore} điểm!`, 'vi-VN');
+          } else {
+            soundManager.speakText('Bé đọc rất cố gắng! Hãy thử đọc lại to và rõ ràng hơn một chút nhé!', 'vi-VN');
+          }
+        }
+      },
+      (err) => {
+        setIsVoiceRecording(false);
+        console.warn('Voice recognition notice:', err);
+      }
+    );
+  };
+
+  const handleStopVoiceReading = () => {
+    soundManager.playPop();
+    voiceManager.stopListening();
+    setIsVoiceRecording(false);
+  };
+
+  // Check user answer with Realtime Mascot Spoken Feedback
   const handleCheckAnswer = () => {
     if (!currentQ) return;
     let correct = false;
@@ -85,7 +152,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       const matchedCount = Object.keys(matchedPairs).length;
       correct = matchedCount === allPairsCount;
     } else if (currentQ.type === 'story_sequence') {
-      correct = true; // Auto success after sequence review
+      correct = true;
     }
 
     setIsCorrect(correct);
@@ -95,17 +162,21 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       soundManager.playCorrect();
       triggerStarBurst();
       setScore((prev) => prev + currentQ.points);
+      // Realtime spoken feedback
+      soundManager.speakMascotFeedback(true, currentQ.hint);
     } else {
       soundManager.playIncorrect();
       setWrongAttempts((prev) => prev + 1);
+      // Realtime spoken encouragement & hint
+      soundManager.speakMascotFeedback(false, currentQ.hint);
     }
   };
 
   // Move to next question or complete lesson
   const handleNext = () => {
+    soundManager.stopSpeaking();
     soundManager.playPop();
     if (isLastQuestion) {
-      // Calculate stars earned (1-3 stars)
       const stars = wrongAttempts === 0 ? 3 : wrongAttempts <= 2 ? 2 : 1;
       const totalXp = score + lesson.xpReward;
       onComplete(stars, totalXp);
@@ -123,6 +194,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
   // Retry same question
   const handleRetry = () => {
+    soundManager.stopSpeaking();
     soundManager.playPop();
     setIsAnswerChecked(false);
     setIsCorrect(false);
@@ -187,6 +259,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               <button
                 onClick={() => {
                   soundManager.stopSpeaking();
+                  voiceManager.stopListening();
                   soundManager.playPop();
                   onExit();
                 }}
@@ -275,7 +348,68 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             {/* Audio Wave Animated Bar */}
             {isPlayingAudio && (
               <div className="mt-8 p-3 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center gap-3 font-baloo text-xs font-bold text-amber-900 animate-pulse">
-                <span>🎵 Đang phát giọng đọc mẫu diễn cảm... Bé hãy lắng nghe và đọc nhẩm theo nhé!</span>
+                <Radio className="h-4 w-4 animate-spin text-amber-600" />
+                <span>Đang phát giọng đọc mẫu diễn cảm... Bé hãy lắng nghe và đọc nhẩm theo nhé!</span>
+              </div>
+            )}
+
+            {/* ================= STT VOICE READING PRACTICE ================= */}
+            {isSpeechSupported && (
+              <div className="mt-8 p-5 rounded-3xl bg-gradient-to-r from-purple-50 via-pink-50 to-amber-50 border-2 border-purple-200/80 space-y-3">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-purple-600 text-white shadow-xs">
+                      <Mic size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-baloo font-extrabold text-base sm:text-lg text-purple-950">
+                        Góc Bé Luyện Đọc Bằng Giọng Nói (STT) 🎙️
+                      </h4>
+                      <p className="font-vietnam text-xs font-semibold text-purple-800/80">
+                        Nhấn Micro và đọc to bài đọc cho Cáo MiuMiu chấm điểm nhé!
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    {!isVoiceRecording ? (
+                      <button
+                        type="button"
+                        onClick={handleStartVoiceReading}
+                        className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-baloo font-bold text-sm shadow-pop-sm cursor-pointer"
+                      >
+                        <Mic size={18} />
+                        <span>Bé Bắt Đầu Đọc</span>
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={handleStopVoiceReading}
+                        className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-baloo font-bold text-sm shadow-pop-sm animate-pulse cursor-pointer"
+                      >
+                        <MicOff size={18} />
+                        <span>Đang Lắng Nghe... (Dừng)</span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Realtime voice transcript display */}
+                {isVoiceRecording && (
+                  <div className="p-3.5 rounded-2xl bg-white/90 border border-purple-200 font-vietnam text-sm text-slate-700 flex items-center gap-2 animate-fade-in">
+                    <span className="flex h-2.5 w-2.5 rounded-full bg-rose-500 animate-ping shrink-0" />
+                    <span className="italic">
+                      {voiceTranscript || 'Đang lắng nghe giọng đọc của bé...'}
+                    </span>
+                  </div>
+                )}
+
+                {voiceScore !== null && (
+                  <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between font-baloo font-bold text-sm text-emerald-900 animate-fade-in">
+                    <span>🎉 Giọng đọc của bé đạt: <strong>{voiceScore}/100 Điểm</strong></span>
+                    <span className="text-amber-500 font-extrabold text-base">+{Math.round(voiceScore / 30)} ⭐</span>
+                  </div>
+                )}
               </div>
             )}
 
@@ -326,6 +460,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               iconPosition="right"
               onClick={() => {
                 soundManager.stopSpeaking();
+                voiceManager.stopListening();
                 setIsPlayingAudio(false);
                 soundManager.playPop();
                 setEngineMode('quiz');
@@ -514,6 +649,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                         if (!isAnswerChecked) {
                           soundManager.playPop();
                           setSelectedOptionId(opt.id);
+                          // Realtime TTS on option tap so Grade 1-2 students can hear option aloud
+                          soundManager.speakText(opt.label, 'vi-VN');
                         }
                       }}
                       className={`flex items-center justify-between p-4 sm:p-5 rounded-3xl border-2 font-baloo font-bold text-base sm:text-lg text-left transition-all min-h-[64px] cursor-pointer ${optionStyle}`}
@@ -572,6 +709,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                           if (!isAnswerChecked) {
                             soundManager.playPop();
                             setSelectedOptionId(opt.id);
+                            soundManager.speakText(opt.label, 'vi-VN');
                           }
                         }}
                         className={`cursor-pointer rounded-3xl border-2 p-5 text-center transition-all ${cardStyle}`}
@@ -705,11 +843,13 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   onClick={() => {
                     soundManager.playPop();
                     setShowHint(true);
+                    // Realtime voice hint
+                    soundManager.speakText(`Gợi ý bài học: ${currentQ.hint}`, 'vi-VN');
                   }}
                   className="flex items-center gap-1.5 font-baloo font-bold text-sm text-slate-500 hover:text-amber-700 transition-colors cursor-pointer"
                 >
                   <HelpCircle size={18} />
-                  <span>Xem gợi ý</span>
+                  <span>Xem gợi ý 💡</span>
                 </button>
               ) : null}
             </div>

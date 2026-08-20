@@ -4,13 +4,64 @@ let audioCtx: AudioContext | null = null;
 
 function getAudioContext(): AudioContext {
   if (!audioCtx) {
-    const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+    const AudioContextClass =
+      window.AudioContext ||
+      (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
     audioCtx = new AudioContextClass();
   }
   if (audioCtx.state === 'suspended') {
     audioCtx.resume();
   }
   return audioCtx;
+}
+
+// Voice cache and Neural Voice finder
+let cachedVoices: SpeechSynthesisVoice[] = [];
+
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  cachedVoices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => {
+    cachedVoices = window.speechSynthesis.getVoices();
+  };
+}
+
+function getBestVoice(lang: 'vi-VN' | 'en-US'): SpeechSynthesisVoice | null {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+  const voices = cachedVoices.length > 0 ? cachedVoices : window.speechSynthesis.getVoices();
+  if (!voices || voices.length === 0) return null;
+
+  if (lang === 'vi-VN') {
+    // 1. Ưu tiên cao nhất: Giọng Microsoft Natural / Neural (HoaiMy, NamMinh) hoặc Google Tiếng Việt
+    const naturalVi = voices.find(
+      (v) =>
+        v.lang.toLowerCase().includes('vi') &&
+        (v.name.includes('Natural') ||
+          v.name.includes('Neural') ||
+          v.name.includes('HoaiMy') ||
+          v.name.includes('Google') ||
+          v.name.includes('NamMinh'))
+    );
+    if (naturalVi) return naturalVi;
+
+    // 2. Tìm bất kỳ giọng tiếng Việt nào
+    const anyVi = voices.find(
+      (v) => v.lang.toLowerCase().includes('vi') || v.lang.toLowerCase().includes('viet')
+    );
+    if (anyVi) return anyVi;
+  } else {
+    const naturalEn = voices.find(
+      (v) =>
+        v.lang.toLowerCase().includes('en') &&
+        (v.name.includes('Natural') ||
+          v.name.includes('Neural') ||
+          v.name.includes('Jenny') ||
+          v.name.includes('Google') ||
+          v.name.includes('Guy'))
+    );
+    if (naturalEn) return naturalEn;
+  }
+
+  return null;
 }
 
 export const soundManager = {
@@ -20,7 +71,7 @@ export const soundManager = {
       const ctx = getAudioContext();
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
-      
+
       const now = ctx.currentTime;
       osc.type = 'sine';
       osc.frequency.setValueAtTime(450, now);
@@ -103,7 +154,7 @@ export const soundManager = {
     try {
       const ctx = getAudioContext();
       const now = ctx.currentTime;
-      const notes = [523.25, 659.25, 783.99, 1046.50];
+      const notes = [523.25, 659.25, 783.99, 1046.5];
 
       notes.forEach((freq, index) => {
         const osc = ctx.createOscillator();
@@ -156,14 +207,28 @@ export const soundManager = {
     }
   },
 
-  // Read text out loud for Grade 1-2 students or English pronunciation
-  speakText: (text: string, lang: 'vi-VN' | 'en-US' = 'vi-VN', onEnd?: () => void) => {
-    if ('speechSynthesis' in window) {
+  // Read text out loud with Natural Neural human voice (pitch: 1.0 chuẩn thanh điệu)
+  speakText: (
+    text: string,
+    lang: 'vi-VN' | 'en-US' = 'vi-VN',
+    onEnd?: () => void,
+    pitch: number = 1.0,
+    rate: number = 0.95
+  ) => {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel(); // cancel previous speaking
+
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = lang;
-      utterance.rate = 0.92; // slightly slower for kids
-      utterance.pitch = 1.15; // friendly, upbeat pitch
+      utterance.rate = rate; // tốc độ 0.95 tự nhiên, rõ từng từ
+      utterance.pitch = pitch; // 1.0 chuẩn xác, không bị méo tiếng chipmunk
+      utterance.volume = 1.0;
+
+      const bestVoice = getBestVoice(lang);
+      if (bestVoice) {
+        utterance.voice = bestVoice;
+      }
+
       if (onEnd) {
         utterance.onend = onEnd;
         utterance.onerror = onEnd;
@@ -172,10 +237,148 @@ export const soundManager = {
     }
   },
 
+  // Realtime Mascot spoken feedback on answer check (Correct / Incorrect)
+  speakMascotFeedback: (isCorrect: boolean, explanation?: string) => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+
+    let message = '';
+    if (isCorrect) {
+      const compliments = [
+        'Tuyệt vời! Bạn trả lời rất chính xác.',
+        'Giỏi quá! Đúng rồi bạn ơi.',
+        'Xuất sắc! Bé nhận thêm một ngôi sao may mắn nhé.',
+        'Đúng rồi! Cùng tiếp tục phát huy ở câu tiếp theo nhé.'
+      ];
+      const randomComp = compliments[Math.floor(Math.random() * compliments.length)];
+      message = explanation ? `${randomComp} ${explanation}` : randomComp;
+    } else {
+      const encouragements = [
+        'Chưa chính xác rồi bạn nhỏ ơi! ',
+        'Tiếc quá, chưa đúng rồi! ',
+        'Gần đúng rồi, đừng nản lòng nhé! '
+      ];
+      const randomEnc = encouragements[Math.floor(Math.random() * encouragements.length)];
+      const hintMsg = explanation ? `Gợi ý nè: ${explanation}` : 'Bé hãy đọc kỹ lại câu hỏi và thử lại nhé!';
+      message = `${randomEnc} ${hintMsg}`;
+    }
+
+    soundManager.speakText(message, 'vi-VN', undefined, 1.0, 0.95);
+  },
+
   // Stop current speech
   stopSpeaking: () => {
-    if ('speechSynthesis' in window) {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
   }
 };
+
+// =========================================================================
+// SPEECH-TO-TEXT (STT) - BÉ LUYỆN ĐỌC BẰNG GIỌNG NÓI (VOICE RECOGNITION)
+// =========================================================================
+
+interface SpeechRecognitionEvent {
+  results: {
+    [index: number]: {
+      [index: number]: {
+        transcript: string;
+      };
+      isFinal?: boolean;
+    };
+    length: number;
+  };
+}
+
+interface SpeechRecognitionInstance extends EventTarget {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  start: () => void;
+  stop: () => void;
+  abort: () => void;
+  onresult: (event: SpeechRecognitionEvent) => void;
+  onerror: (event: any) => void;
+  onend: () => void;
+}
+
+export class VoiceRecognitionManager {
+  private recognition: SpeechRecognitionInstance | null = null;
+  private isListening = false;
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      const SpeechRecognitionClass =
+        (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
+      if (SpeechRecognitionClass) {
+        this.recognition = new SpeechRecognitionClass();
+        if (this.recognition) {
+          this.recognition.continuous = false;
+          this.recognition.interimResults = true;
+          this.recognition.lang = 'vi-VN';
+        }
+      }
+    }
+  }
+
+  public isSupported(): boolean {
+    return this.recognition !== null;
+  }
+
+  public startListening(
+    onInterim: (text: string) => void,
+    onFinal: (text: string) => void,
+    onError: (err: string) => void
+  ) {
+    if (!this.recognition) {
+      onError('Trình duyệt không hỗ trợ nhận diện giọng nói (Web Speech STT).');
+      return;
+    }
+
+    try {
+      this.isListening = true;
+
+      this.recognition.onresult = (event: SpeechRecognitionEvent) => {
+        let interimText = '';
+        let finalText = '';
+
+        for (let i = 0; i < event.results.length; ++i) {
+          const res = event.results[i];
+          if (res.isFinal) {
+            finalText += res[0].transcript;
+          } else {
+            interimText += res[0].transcript;
+          }
+        }
+
+        if (interimText) onInterim(interimText);
+        if (finalText) onFinal(finalText);
+      };
+
+      this.recognition.onerror = (e: any) => {
+        this.isListening = false;
+        onError(e.error || 'Lỗi nhận diện âm thanh.');
+      };
+
+      this.recognition.onend = () => {
+        this.isListening = false;
+      };
+
+      this.recognition.start();
+    } catch (err: any) {
+      this.isListening = false;
+      onError(err?.message || 'Không thể bật micro.');
+    }
+  }
+
+  public stopListening() {
+    if (this.recognition && this.isListening) {
+      try {
+        this.recognition.stop();
+      } catch {}
+        this.isListening = false;
+    }
+  }
+}
+
+export const voiceManager = new VoiceRecognitionManager();
