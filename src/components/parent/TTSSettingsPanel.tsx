@@ -4,15 +4,6 @@ import { TTSSettings } from '../../types';
 import { getTTSSettings, saveTTSSettings, soundManager } from '../../utils/audio';
 import { CuteButton } from '../ui/CuteButton';
 
-const HUGGINGFACE_VOICES = [
-  { id: 'Ngọc (nữ miền Bắc)', name: '👩 Cô Ngọc (Nữ miền Bắc — Chuẩn SGK & Kể chuyện ⭐ Khuyên dùng)' },
-  { id: 'Tuyên (nam miền Bắc)', name: '👨 Thầy Tuyên (Nam miền Bắc — Dõng dạc, rõ ràng)' },
-  { id: 'Ly (nữ miền Bắc)', name: '👩 Cô Ly (Nữ miền Bắc — Dịu dàng, truyền cảm)' },
-  { id: 'Đoan (nữ miền Nam)', name: '👩 Cô Đoan (Nữ miền Nam — Ngọt ngào, êm ái)' },
-  { id: 'Vĩnh (nam miền Nam)', name: '👨 Thầy Vĩnh (Nam miền Nam — Trầm ấm, thân thiện)' },
-  { id: 'Bình (nam miền Bắc)', name: '👨 Thầy Bình (Nam miền Bắc — Ấm áp)' },
-];
-
 export const TTSSettingsPanel: React.FC = () => {
   const [settings, setSettings] = useState<TTSSettings>(getTTSSettings);
   const [showToken, setShowToken] = useState(false);
@@ -272,21 +263,38 @@ export const TTSSettingsPanel: React.FC = () => {
             {/* Voice Dropdown Selector */}
             <div>
               <label className="font-baloo text-sm font-extrabold text-slate-800 block mb-1.5">
-                🎙️ Chọn Giọng Đọc AI (VieNeu-TTS):
+                🎙️ Chọn Giọng Đọc AI (VieNeu-TTS) — Đa Dạng Vùng Miền:
               </label>
               <select
-                value={settings.vieneuVoiceId || 'Ngọc (nữ miền Bắc)'}
+                value={settings.vieneuVoiceId || 'Đoan (nữ miền Nam)'}
                 onChange={(e) => {
                   soundManager.playPop();
                   setSettings({ ...settings, vieneuVoiceId: e.target.value });
                 }}
                 className="w-full rounded-2xl border border-purple-300 bg-white px-4 py-3 font-baloo font-bold text-sm text-slate-800 shadow-xs focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-200 cursor-pointer"
               >
-                {HUGGINGFACE_VOICES.map((v) => (
-                  <option key={v.id} value={v.id}>
-                    {v.name}
+                <optgroup label="🌴 GIỌNG MIỀN NAM (Nam Bộ)">
+                  <option value="Đoan (nữ miền Nam)">
+                    👩 Cô Đoan — Nữ miền Nam (Ngọt ngào, dịu dàng ⭐ Rất phù hợp cho bé)
                   </option>
-                ))}
+                  <option value="Vĩnh (nam miền Nam)">
+                    👨 Thầy Vĩnh — Nam miền Nam (Trầm ấm, truyền cảm, gần gũi)
+                  </option>
+                </optgroup>
+                <optgroup label="🌸 GIỌNG MIỀN BẮC (Hà Nội & Bắc Bộ)">
+                  <option value="Ngọc (nữ miền Bắc)">
+                    👩 Cô Ngọc — Nữ miền Bắc (Chuẩn Sư Phạm SGK & Kể chuyện ⭐)
+                  </option>
+                  <option value="Ly (nữ miền Bắc)">
+                    👩 Cô Ly — Nữ miền Bắc (Dịu dàng, trong trẻo)
+                  </option>
+                  <option value="Tuyên (nam miền Bắc)">
+                    👨 Thầy Tuyên — Nam miền Bắc (Dõng dạc, rõ ràng)
+                  </option>
+                  <option value="Bình (nam miền Bắc)">
+                    👨 Thầy Bình — Nam miền Bắc (Ấm áp, tự nhiên)
+                  </option>
+                </optgroup>
               </select>
             </div>
 
