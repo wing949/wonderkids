@@ -10,6 +10,7 @@ function ttsDevPlugin(): Plugin {
         const urlObj = new URL(req.url || '', 'http://localhost:3000');
         const text = urlObj.searchParams.get('text') || '';
         const lang = urlObj.searchParams.get('lang') || 'vi';
+        const voice = urlObj.searchParams.get('voice') || '';
 
         if (!text) {
           res.statusCode = 400;
@@ -19,7 +20,7 @@ function ttsDevPlugin(): Plugin {
 
         try {
           const cleanText = String(text).slice(0, 1000);
-          const voiceName = lang === 'en' ? 'en-US-JennyNeural' : 'vi-VN-HoaiMyNeural';
+          const voiceName = voice || (lang === 'en' ? 'en-US-JennyNeural' : 'vi-VN-HoaiMyNeural');
 
           const tts = new MsEdgeTTS();
           await tts.setMetadata(voiceName, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);

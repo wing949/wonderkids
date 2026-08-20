@@ -1,7 +1,7 @@
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 
 export default async function handler(req, res) {
-  const { text, lang = 'vi' } = req.query;
+  const { text, lang = 'vi', voice } = req.query;
 
   if (!text) {
     return res.status(400).json({ error: 'Text is required' });
@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
   try {
     const cleanText = String(text).slice(0, 1000);
-    const voiceName = lang === 'en' ? 'en-US-JennyNeural' : 'vi-VN-HoaiMyNeural';
+    const voiceName = voice || (lang === 'en' ? 'en-US-JennyNeural' : 'vi-VN-HoaiMyNeural');
 
     const tts = new MsEdgeTTS();
     await tts.setMetadata(voiceName, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);

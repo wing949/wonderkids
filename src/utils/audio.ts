@@ -1,6 +1,37 @@
-// Web Audio Synthesizer & Speech Engine for Kids E-Learning
+import { TTSSettings } from '../types';
 
 let audioCtx: AudioContext | null = null;
+
+export const STORAGE_KEY_TTS_SETTINGS = 'wonderkids_tts_settings_v1';
+
+export const DEFAULT_TTS_SETTINGS: TTSSettings = {
+  provider: 'edge', // 'edge' (Cô Hoài My) hoặc 'vieneu' (Mô hình VieNeu-TTS)
+  vieneuEndpoint: 'http://localhost:8000/api/tts',
+  vieneuVoiceId: 'co_giao_ha_noi',
+  vieneuApiKey: '',
+  edgeVoiceVi: 'vi-VN-HoaiMyNeural',
+  edgeVoiceEn: 'en-US-JennyNeural',
+  speechRate: 0.95,
+  speechPitch: 1.0,
+};
+
+export function getTTSSettings(): TTSSettings {
+  if (typeof window === 'undefined') return DEFAULT_TTS_SETTINGS;
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY_TTS_SETTINGS);
+    if (saved) {
+      return { ...DEFAULT_TTS_SETTINGS, ...JSON.parse(saved) };
+    }
+  } catch {}
+  return DEFAULT_TTS_SETTINGS;
+}
+
+export function saveTTSSettings(settings: TTSSettings): void {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem(STORAGE_KEY_TTS_SETTINGS, JSON.stringify(settings));
+  } catch {}
+}
 
 function getAudioContext(): AudioContext {
   if (!audioCtx) {
@@ -208,21 +239,84 @@ export const soundManager = {
     }
   },
 
-  // Helper: Play single audio clip from stream with fallback
-  playAudioClip: (
+  // Helper: Play single audio clip from stream with fallback (supports VieNeu-TTS & Edge Neural Voice)
+  playAudioClip: async (
     text: string,
     langCode: string,
     rate: number,
     onFinish: () => void,
     onFail: () => void
   ) => {
+    const settings = getTTSSettings();
+
+    // 1. Nếu cấu hình chọn VieNeu-TTS (Self-hosted API hoặc Cloud endpoint)
+    if (settings.provider === 'vieneu' && settings.vieneuEndpoint) {
+      try {
+        const payload = {
+          text: text,
+          voice: settings.vieneuVoiceId || 'default',
+          speed: rate || settings.speechRate,
+          lang: langCode
+        };
+
+        const res = await fetch(settings.vieneuEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            ...(settings.vieneuApiKey ? { Authorization: `Bearer ${settings.vieneuApiKey}` } : {})
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          const contentType = res.headers.get('content-type') || '';
+          let audioUrl = '';
+
+          if (contentType.includes('audio') || contentType.includes('octet-stream')) {
+            const blob = await res.blob();
+            audioUrl = URL.createObjectURL(blob);
+          } else {
+            const data = await res.json();
+            audioUrl =
+              data.audio_url ||
+              data.url ||
+              (data.audio_base64 ? `data:audio/wav;base64,${data.audio_base64}` : '');
+          }
+
+          if (audioUrl) {
+            const audio = new Audio(audioUrl);
+            currentAudioElement = audio;
+            audio.playbackRate = rate || settings.speechRate;
+
+            audio.onended = () => {
+              currentAudioElement = null;
+              onFinish();
+            };
+            audio.onerror = () => {
+              currentAudioElement = null;
+              onFail();
+            };
+            audio.play().catch(() => {
+              currentAudioElement = null;
+              onFail();
+            });
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn('VieNeu-TTS server offline or unreachable, falling back to Edge Neural:', err);
+      }
+    }
+
+    // 2. Mặc định: Microsoft Edge Neural Voice API /api/tts
     try {
-      const encoded = encodeURIComponent(text.slice(0, 300));
-      const streamUrl = `/api/tts?lang=${langCode}&text=${encoded}`;
+      const encoded = encodeURIComponent(text.slice(0, 400));
+      const voice = langCode === 'en' ? settings.edgeVoiceEn : settings.edgeVoiceVi;
+      const streamUrl = `/api/tts?lang=${langCode}&voice=${voice}&text=${encoded}`;
 
       const audio = new Audio(streamUrl);
       currentAudioElement = audio;
-      audio.playbackRate = rate;
+      audio.playbackRate = rate || settings.speechRate;
 
       audio.onended = () => {
         currentAudioElement = null;
