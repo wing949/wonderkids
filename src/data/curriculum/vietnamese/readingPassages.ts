@@ -253,33 +253,101 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
 
   'tv-g2-b3': {
     passage: {
-      title: 'Bác gà trống thông minh',
-      author: 'Truyện cổ tích',
+      title: 'Niềm vui của Bi và Bống',
+      author: 'SGK Tiếng Việt 2 (Kết nối tri thức)',
       genre: 'prose',
       content: [
-        'Trên cây sồi già, có một bác Gà Trống đang đứng gáy vang báo hiệu trời sáng.',
-        'Một con Cáo già đi ngang qua, thấy Gà Trống béo tốt liền nảy ra ý định muốn ăn thịt.',
-        'Cáo tiến lại gần và cất giọng ngọt ngào: "Bạn Gà Trống ơi, từ nay muôn loài đã kết bạn hòa bình rồi, bạn hãy xuống đây chúng ta cùng tâm sự nhé!"',
-        'Bác Gà Trống nghe vậy liền ngẫm nghĩ, bác vươn cổ nhìn ra xa rồi nói: "Ôi, vui quá! Đằng kia có một đàn Chó Săn cũng đang chạy lại để chia vui này!"',
-        'Cáo nghe thấy tiếng Chó Săn thì sợ hãi cụp đuôi, vắt chân lên cổ chạy biến vào rừng sâu.'
+        'Khi cơn mưa rào vừa tạnh, bảy sắc cầu vồng rực rỡ hiện ra trên nền trời xanh biếc.',
+        'Bi nhìn cầu vồng rồi hào hứng nói với em gái: "Bống ơi, dưới chân cầu vồng có một hũ vàng đấy! Nếu tìm thấy, anh sẽ mua một con ngựa hồng và một chiếc xe đạp thật đẹp!"',
+        'Bống reo lên vui sướng: "Còn em sẽ mua thật nhiều búp bê và quần áo đẹp!"',
+        'Nhưng rồi Bi nhìn Bống cười hiền và nói: "Anh sẽ mua cho em một chiếc hộp bút hình con gấu và đàn búp bê biết hát nữa!"',
+        'Bống ôm chầm lấy anh: "Em cũng sẽ mua cho anh một quả bóng đá thật to và chiếc ô tô điều khiển từ xa!"',
+        'Cầu vồng từ từ tan biến trong ánh hoàng hôn, nhưng niềm vui và tình cảm yêu thương ấm áp giữa hai anh em Bi và Bống thì vẫn luôn đọng lại mãi trong ngôi nhà nhỏ.'
       ],
-      audioNarration: 'Bác gà trống thông minh. Trên cây sồi già, có một bác Gà Trống đang đứng gáy vang báo hiệu trời sáng. Một con Cáo già đi ngang qua, thấy Gà Trống béo tốt liền nảy ra ý định muốn ăn thịt. Cáo tiến lại gần và cất giọng ngọt ngào: Bạn Gà Trống ơi, từ nay muôn loài đã kết bạn hòa bình rồi, bạn hãy xuống đây chúng ta cùng tâm sự nhé! Bác Gà Trống nghe vậy liền ngẫm nghĩ, bác vươn cổ nhìn ra xa rồi nói: Ôi, vui quá! Đằng kia có một đàn Chó Săn cũng đang chạy lại để chia vui này! Cáo nghe thấy tiếng Chó Săn thì sợ hãi cụp đuôi, vắt chân lên cổ chạy biến vào rừng sâu.',
+      audioNarration: 'Niềm vui của Bi và Bống. Khi cơn mưa rào vừa tạnh, bảy sắc cầu vồng rực rỡ hiện ra trên nền trời xanh biếc. Bi nhìn cầu vồng rồi hào hứng nói với em gái: Bống ơi, dưới chân cầu vồng có một hũ vàng đấy! Nếu tìm thấy, anh sẽ mua một con ngựa hồng và một chiếc xe đạp thật đẹp! Bống reo lên vui sướng: Còn em sẽ mua thật nhiều búp bê và quần áo đẹp! Nhưng rồi Bi nhìn Bống cười hiền và nói: Anh sẽ mua cho em một chiếc hộp bút hình con gấu và đàn búp bê biết hát nữa! Bống ôm chầm lấy anh: Em cũng sẽ mua cho anh một quả bóng đá thật to và chiếc ô tô điều khiển từ xa! Cầu vồng từ từ tan biến trong ánh hoàng hôn, nhưng niềm vui và tình cảm yêu thương ấm áp giữa hai anh em Bi và Bống thì vẫn luôn đọng lại mãi trong ngôi nhà nhỏ.',
       vocabularyNotes: [
-        { word: 'Ngọt ngào', meaning: 'Lời nói nhẹ nhàng, giả vờ thân thiện để đánh lừa.' },
-        { word: 'Vắt chân lên cổ', meaning: 'Chạy tháo thân thật nhanh vì quá sợ hãi.' }
+        { word: 'Cầu vồng', meaning: 'Hiện tượng quang học tạo thành dải màu hình vòng cung rực rỡ sau cơn mưa.' },
+        { word: 'Hào hứng', meaning: 'Tâm trạng vui vẻ, phấn khởi và tràn đầy năng lượng.' }
       ]
     },
     questions: [
       {
         id: 'tv2-b3-q1',
         type: 'bubble_choice',
-        questionText: 'Bác Gà Trống đã nói gì khiến con Cáo sợ hãi bỏ chạy?',
-        audioText: 'Bác Gà Trống đã nói gì khiến con Cáo sợ hãi bỏ chạy?',
+        questionText: 'Trong câu chuyện, anh Bi đã dự định mua quà gì tặng cho em gái Bống?',
+        audioText: 'Anh Bi đã dự định mua quà gì tặng cho em gái Bống?',
         points: 15,
         options: [
-          { id: 'a', label: 'Bác nói có đàn Chó Săn đang chạy lại chia vui 🐕', isCorrect: true },
-          { id: 'b', label: 'Bác nói bác biết bay rất cao' },
-          { id: 'c', label: 'Bác gọi người thợ săn đến' }
+          { id: 'a', label: 'Hộp bút hình con gấu và đàn búp bê biết hát 🎁', isCorrect: true },
+          { id: 'b', label: 'Chiếc xe đạp đua' },
+          { id: 'c', label: 'Quả bóng đá' }
+        ]
+      }
+    ]
+  },
+
+  'tv-g2-b4': {
+    passage: {
+      title: 'Làm việc thật là vui',
+      author: 'Tô Hoài',
+      genre: 'prose',
+      content: [
+        'Quanh ta, mọi vật, mọi người đều làm việc.',
+        'Cái đồng hồ tích tắc, tích tắc báo phút, báo giờ. Con gà trống gáy vang te te báo trời sáng, đánh thức mọi người dậy. Con tu hú kêu tu hú, tu hú báo mùa vải chín. Chim bắt sâu bảo vệ mùa màng. Cỏ hoa nở cho sắc xuân thêm rực rỡ, ngày xuân thêm tưng bừng.',
+        'Như mọi vật, mọi người, bé cũng làm việc. Bé làm bài, bé đi học, bé quét nhà, nhặt rau, chơi với em đỡ mẹ.',
+        'Bé luôn luôn bận rộn, mà công việc nhộn nhịp cũng làm cho bé lúc nào cũng vui vẻ.'
+      ],
+      audioNarration: 'Làm việc thật là vui. Tác giả Tô Hoài. Quanh ta, mọi vật, mọi người đều làm việc. Cái đồng hồ tích tắc, tích tắc báo phút, báo giờ. Con gà trống gáy vang te te báo trời sáng, đánh thức mọi người dậy. Con tu hú kêu tu hú, tu hú báo mùa vải chín. Chim bắt sâu bảo vệ mùa màng. Cỏ hoa nở cho sắc xuân thêm rực rỡ, ngày xuân thêm tưng bừng. Như mọi vật, mọi người, bé cũng làm việc. Bé làm bài, bé đi học, bé quét nhà, nhặt rau, chơi với em đỡ mẹ. Bé luôn luôn bận rộn, mà công việc nhộn nhịp cũng làm cho bé lúc nào cũng vui vẻ.',
+      vocabularyNotes: [
+        { word: 'Tích tắc', meaning: 'Từ mô phỏng tiếng kêu đều đặn của đồng hồ.' },
+        { word: 'Nhộn nhịp', meaning: 'Không khí đông vui, rộn ràng với nhiều hoạt động diễn ra tấp nập.' }
+      ]
+    },
+    questions: [
+      {
+        id: 'tv2-b4-q1',
+        type: 'bubble_choice',
+        questionText: 'Trong bài đọc, những công việc bé đã làm để giúp đỡ mẹ là gì?',
+        audioText: 'Những công việc bé đã làm để giúp đỡ mẹ là gì?',
+        points: 15,
+        options: [
+          { id: 'a', label: 'Quét nhà, nhặt rau, chơi với em và chăm ngoan học bài 🌟', isCorrect: true },
+          { id: 'b', label: 'Chỉ ngồi xem tivi' },
+          { id: 'c', label: 'Đi chơi bóng suốt ngày' }
+        ]
+      }
+    ]
+  },
+
+  'tv-g2-b5': {
+    passage: {
+      title: 'Em có xinh không?',
+      author: 'SGK Tiếng Việt 2',
+      genre: 'prose',
+      content: [
+        'Voi em rất thích ngắm mình trong gương và luôn tự hỏi: "Mình có xinh không nhỉ?".',
+        'Gặp Hươu, Voi hỏi: "Anh Hươu ơi, em có xinh không?". Hươu bảo: "Chưa xinh lắm đâu, vì cậu không có đôi gạc đẹp như tớ!". Voi liền nhặt hai cành cây gắn lên đầu.',
+        'Gặp Dê, Dê bảo: "Cậu chưa xinh vì không có chòm râu như tớ!". Voi lại nhổ chùm râu bắp ngô gắn vào cằm.',
+        'Về nhà gặp Voi anh, Voi anh bật cười bảo: "Em xinh nhất khi là chính chú Voi con khỏe khoắn, tự tin!".',
+        'Voi em ngắm lại mình và nhận ra: Mỗi người đều có nét đẹp riêng, hãy luôn tự tin là chính mình!'
+      ],
+      audioNarration: 'Em có xinh không? Voi em rất thích ngắm mình trong gương và luôn tự hỏi: Mình có xinh không nhỉ? Gặp Hươu, Voi hỏi: Anh Hươu ơi, em có xinh không? Hươu bảo: Chưa xinh lắm đâu, vì cậu không có đôi gạc đẹp như tớ! Voi liền nhặt hai cành cây gắn lên đầu. Gặp Dê, Dê bảo: Cậu chưa xinh vì không có chòm râu như tớ! Voi lại nhổ chùm râu bắp ngô gắn vào cằm. Về nhà gặp Voi anh, Voi anh bật cười bảo: Em xinh nhất khi là chính chú Voi con khỏe khoắn, tự tin! Voi em ngắm lại mình và nhận ra: Mỗi người đều có nét đẹp riêng, hãy luôn tự tin là chính mình!',
+      vocabularyNotes: [
+        { word: 'Đôi gạc', meaning: 'Sừng của loài hươu, nai có nhiều nhánh nhô cao đẹp mắt.' },
+        { word: 'Tự tin', meaning: 'Tin tưởng vào giá trị và vẻ đẹp riêng của chính bản thân mình.' }
+      ]
+    },
+    questions: [
+      {
+        id: 'tv2-b5-q1',
+        type: 'bubble_choice',
+        questionText: 'Voi anh đã khuyên Voi em điều gì ý nghĩa nhất?',
+        audioText: 'Voi anh đã khuyên Voi em điều gì ý nghĩa nhất?',
+        points: 15,
+        options: [
+          { id: 'a', label: 'Em xinh nhất khi là chính mình, tự tin và khỏe khoắn 🐘', isCorrect: true },
+          { id: 'b', label: 'Nên đeo thêm nhiều cành cây' },
+          { id: 'c', label: 'Nên bắt chước theo bác Dê' }
         ]
       }
     ]
