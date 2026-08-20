@@ -85,7 +85,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     } else {
       setIsPlayingAudio(true);
       const narration = lesson.readingPassage.audioNarration || lesson.readingPassage.content.join(' ');
-      soundManager.speakText(narration, 'vi-VN', () => {
+      soundManager.playPassageAudio(lesson.id, narration, () => {
         setIsPlayingAudio(false);
       });
     }

@@ -399,6 +399,34 @@ export const soundManager = {
     playNext();
   },
 
+  // Play SGK Passage audio with 0ms instant static pre-rendered file and fallback
+  playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
+    soundManager.stopSpeaking();
+    const staticUrl = `/audio/curriculum/${lessonId}.mp3`;
+    const audio = new Audio(staticUrl);
+    currentAudioElement = audio;
+
+    let hasEnded = false;
+    const handleFinish = () => {
+      if (!hasEnded) {
+        hasEnded = true;
+        currentAudioElement = null;
+        if (onEnd) onEnd();
+      }
+    };
+
+    audio.onended = handleFinish;
+    audio.onerror = () => {
+      currentAudioElement = null;
+      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
+    };
+
+    audio.play().catch(() => {
+      currentAudioElement = null;
+      soundManager.speakText(fallbackText, 'vi-VN', onEnd);
+    });
+  },
+
   // Fallback Web Speech Synthesis
   speakBrowserSpeech: (
     text: string,
