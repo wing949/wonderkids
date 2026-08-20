@@ -41,3 +41,4 @@ pnpm-debug.log*
 .gemini/
 .system_generated/
 scratch/
+.vercel

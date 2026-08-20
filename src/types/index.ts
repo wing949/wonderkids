@@ -173,6 +173,14 @@ export interface StudentProfile {
   avatarAccessory?: string;
 }
 
+export interface ParentTask {
+  id: string;
+  title: string;
+  rewardStars: number;
+  isCompleted: boolean;
+  isApproved: boolean;
+}
+
 export interface ParentReport {
   weeklyStudyMinutes: number[];
   days: string[];
@@ -184,11 +192,5 @@ export interface ParentReport {
   }[];
   screenTimeLimitMinutes: number;
   screenTimeUsedMinutes: number;
-  parentTasks: {
-    id: string;
-    title: string;
-    rewardStars: number;
-    isCompleted: boolean;
-    isApproved: boolean;
-  }[];
+  parentTasks: ParentTask[];
 }

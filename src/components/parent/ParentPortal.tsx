@@ -1,37 +1,91 @@
-import React, { useState } from 'react';
-import { ShieldCheck, Clock, CheckCircle2, Award, Plus, ArrowLeft, Eye, TrendingUp } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ShieldCheck, Clock, CheckCircle2, Award, Plus, ArrowLeft, Eye, TrendingUp, Trash2, Check } from 'lucide-react';
 import { MOCK_PARENT_REPORT } from '../../data/gamificationData';
+import { ParentReport, ParentTask } from '../../types';
 import { CuteButton } from '../ui/CuteButton';
 import { CandyProgressBar } from '../ui/CandyProgressBar';
 import { soundManager } from '../../utils/audio';
 
+const STORAGE_KEY_PARENT_REPORT = 'wonderkids_parent_report_v1';
+
+const getInitialParentReport = (): ParentReport => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY_PARENT_REPORT);
+    if (saved) {
+      return JSON.parse(saved);
+    }
+  } catch (e) {
+    console.error('Failed to load parent report from localStorage', e);
+  }
+  return MOCK_PARENT_REPORT;
+};
+
 interface ParentPortalProps {
   onBackToStudent: () => void;
+  onRewardStars?: (stars: number) => void;
 }
 
-export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent }) => {
-  const [report, setReport] = useState(MOCK_PARENT_REPORT);
+const QUICK_CHORE_SUGGESTIONS = [
+  { title: 'Gấp chăn gối sau khi ngủ dậy 🛏️', stars: 1 },
+  { title: 'Tưới cây hoặc chăm sóc hoa 🪴', stars: 1 },
+  { title: 'Đọc sách truyện 15 phút 📚', stars: 2 },
+  { title: 'Tự rửa cốc và dọn bàn ăn 🍽️', stars: 2 },
+  { title: 'Đánh răng và đi ngủ đúng giờ 🦷', stars: 1 },
+  { title: 'Quét và dọn gọn phòng học 🧹', stars: 2 },
+];
+
+export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onRewardStars }) => {
+  const [report, setReport] = useState<ParentReport>(getInitialParentReport);
   const [screenLimit, setScreenLimit] = useState(report.screenTimeLimitMinutes);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskStars, setNewTaskStars] = useState(1);
 
-  // Approve a task and grant stars
-  const handleApproveTask = (taskId: string) => {
+  // Sync state to localStorage whenever report or screenLimit changes
+  useEffect(() => {
+    try {
+      const updatedReport = { ...report, screenTimeLimitMinutes: screenLimit };
+      localStorage.setItem(STORAGE_KEY_PARENT_REPORT, JSON.stringify(updatedReport));
+    } catch (e) {}
+  }, [report, screenLimit]);
+
+  // Approve a task and grant actual stars to student
+  const handleApproveTask = (task: ParentTask) => {
     soundManager.playCorrect();
+    onRewardStars?.(task.rewardStars);
     setReport((prev) => ({
       ...prev,
       parentTasks: prev.parentTasks.map((t) =>
-        t.id === taskId ? { ...t, isApproved: true } : t
+        t.id === task.id ? { ...t, isApproved: true, isCompleted: true } : t
       ),
     }));
   };
 
+  // Toggle completed status (e.g. kid marked finished or parent marked done)
+  const handleToggleComplete = (taskId: string) => {
+    soundManager.playPop();
+    setReport((prev) => ({
+      ...prev,
+      parentTasks: prev.parentTasks.map((t) =>
+        t.id === taskId ? { ...t, isCompleted: !t.isCompleted } : t
+      ),
+    }));
+  };
+
+  // Delete a task
+  const handleDeleteTask = (taskId: string) => {
+    soundManager.playPop();
+    setReport((prev) => ({
+      ...prev,
+      parentTasks: prev.parentTasks.filter((t) => t.id !== taskId),
+    }));
+  };
+
   // Add a new parent task
-  const handleAddTask = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleAddTask = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     if (!newTaskTitle.trim()) return;
     soundManager.playPop();
-    const newTask = {
+    const newTask: ParentTask = {
       id: `pt-${Date.now()}`,
       title: newTaskTitle.trim(),
       rewardStars: newTaskStars,
@@ -45,6 +99,22 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent }) =
     setNewTaskTitle('');
   };
 
+  // Quick add a chore from presets
+  const handleQuickAdd = (preset: { title: string; stars: number }) => {
+    soundManager.playPop();
+    const newTask: ParentTask = {
+      id: `pt-${Date.now()}`,
+      title: preset.title,
+      rewardStars: preset.stars,
+      isCompleted: false,
+      isApproved: false,
+    };
+    setReport((prev) => ({
+      ...prev,
+      parentTasks: [newTask, ...prev.parentTasks],
+    }));
+  };
+
   return (
     <div className="min-h-[calc(100vh-5rem)] pb-24 pt-6 sm:pt-8 bg-slate-50/50">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 space-y-8">
@@ -56,7 +126,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent }) =
                 soundManager.playPop();
                 onBackToStudent();
               }}
-              className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-sm border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors"
+              className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-sm border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
               title="Quay lại Góc Bé"
             >
               <ArrowLeft size={20} />
@@ -233,8 +303,27 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent }) =
                 </h3>
               </div>
               <p className="font-vietnam text-xs sm:text-sm font-semibold text-amber-900/80 mt-0.5">
-                Giao việc tốt hàng ngày cho con. Khi con làm xong, bấm Duyệt để cộng Sao thưởng vào tài khoản của bé!
+                Giao việc tốt hàng ngày cho con. Khi con làm xong, bấm Duyệt để cộng Sao thưởng trực tiếp vào tài khoản của bé! ⭐
               </p>
+            </div>
+          </div>
+
+          {/* Quick Chore Preset Chips */}
+          <div className="mt-4">
+            <span className="font-baloo font-bold text-xs text-amber-800/80 block mb-2">
+              💡 Gợi ý việc tốt nhanh (Nhấn để thêm ngay):
+            </span>
+            <div className="flex flex-wrap gap-2">
+              {QUICK_CHORE_SUGGESTIONS.map((preset, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => handleQuickAdd(preset)}
+                  className="rounded-xl bg-white px-3 py-1.5 font-baloo font-bold text-xs text-slate-700 shadow-2xs border border-amber-200/60 hover:bg-amber-100 hover:text-amber-950 transition-all cursor-pointer"
+                >
+                  {preset.title} <span className="text-amber-600 font-black">+{preset.stars}⭐</span>
+                </button>
+              ))}
             </div>
           </div>
 
@@ -256,6 +345,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent }) =
                 <option value={1}>+1 ⭐ Sao</option>
                 <option value={2}>+2 ⭐ Sao</option>
                 <option value={3}>+3 ⭐ Sao</option>
+                <option value={5}>+5 ⭐ Sao</option>
               </select>
               <CuteButton
                 type="submit"
@@ -270,44 +360,74 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent }) =
 
           {/* Tasks List */}
           <div className="mt-6 space-y-3">
-            {report.parentTasks.map((task) => (
-              <div
-                key={task.id}
-                className="flex items-center justify-between rounded-2xl bg-white p-4 shadow-xs border border-amber-100"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-xl">🌟</span>
-                  <div>
-                    <h5 className="font-baloo font-bold text-base text-brand-dark">
-                      {task.title}
-                    </h5>
-                    <span className="font-baloo text-xs font-bold text-amber-700">
-                      Thưởng: +{task.rewardStars} Sao Vàng ⭐
-                    </span>
+            {report.parentTasks.length === 0 ? (
+              <div className="text-center py-8 text-slate-400 font-baloo text-sm">
+                Chưa có việc nhà nào. Hãy thêm việc tốt cho con ở phía trên nhé! 🌟
+              </div>
+            ) : (
+              report.parentTasks.map((task) => (
+                <div
+                  key={task.id}
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl bg-white p-4 shadow-xs border border-amber-100 transition-all hover:border-amber-200"
+                >
+                  <div className="flex items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => handleToggleComplete(task.id)}
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-colors cursor-pointer ${
+                        task.isCompleted || task.isApproved
+                          ? 'bg-emerald-100 text-emerald-700'
+                          : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
+                      }`}
+                      title={task.isCompleted ? 'Bé đã làm xong' : 'Đánh dấu bé đã làm xong'}
+                    >
+                      {task.isCompleted || task.isApproved ? <Check size={18} /> : <span className="text-xs">○</span>}
+                    </button>
+                    <div>
+                      <h5 className={`font-baloo font-bold text-base ${task.isApproved ? 'text-slate-500 line-through' : 'text-brand-dark'}`}>
+                        {task.title}
+                      </h5>
+                      <span className="font-baloo text-xs font-bold text-amber-700">
+                        Thưởng: +{task.rewardStars} Sao Vàng ⭐
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 self-end sm:self-auto">
+                    {task.isApproved ? (
+                      <span className="inline-flex items-center gap-1 font-baloo font-extrabold text-xs text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-full">
+                        <CheckCircle2 size={16} /> Đã Thưởng Sao
+                      </span>
+                    ) : task.isCompleted ? (
+                      <button
+                        type="button"
+                        onClick={() => handleApproveTask(task)}
+                        className="inline-flex items-center gap-1 font-baloo font-black text-xs sm:text-sm text-white bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-xl shadow-xs transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                      >
+                        Bé Đã Làm Xong - Duyệt Thưởng +{task.rewardStars}⭐
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => handleToggleComplete(task.id)}
+                        className="font-baloo text-xs font-bold text-slate-500 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 px-3 py-1.5 rounded-full transition-colors cursor-pointer"
+                      >
+                        Đang làm (Nhấn để đánh dấu xong)
+                      </button>
+                    )}
+
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteTask(task.id)}
+                      className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-colors cursor-pointer"
+                      title="Xóa việc này"
+                    >
+                      <Trash2 size={16} />
+                    </button>
                   </div>
                 </div>
-
-                <div>
-                  {task.isApproved ? (
-                    <span className="inline-flex items-center gap-1 font-baloo font-extrabold text-xs text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-full">
-                      <CheckCircle2 size={16} /> Đã Thưởng Sao
-                    </span>
-                  ) : task.isCompleted ? (
-                    <CuteButton
-                      variant="primary"
-                      size="sm"
-                      onClick={() => handleApproveTask(task.id)}
-                    >
-                      Bé Đã Làm Xong - Duyệt Thưởng ⭐
-                    </CuteButton>
-                  ) : (
-                    <span className="font-baloo text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1.5 rounded-full">
-                      Đang thực hiện
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </section>
       </div>

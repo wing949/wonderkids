@@ -237,7 +237,15 @@ export const App: React.FC = () => {
         )}
 
         {currentPortal === 'parent' && (
-          <ParentPortal onBackToStudent={() => setCurrentPortal('student')} />
+          <ParentPortal
+            onBackToStudent={() => setCurrentPortal('student')}
+            onRewardStars={(stars) => {
+              setProfile((prev) => ({
+                ...prev,
+                stars: prev.stars + stars,
+              }));
+            }}
+          />
         )}
 
         {currentPortal === 'admin' && (
