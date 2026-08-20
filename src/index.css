@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-baloo: 'Baloo 2', cursive, sans-serif;
+    --font-vietnam: 'Be Vietnam Pro', sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
+  }
+
+  body {
+    @apply font-vietnam text-brand-dark bg-brand-bg antialiased min-h-screen overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-baloo);
+  }
+}
+
+/* Custom Themes */
+[data-theme="ocean"] {
+  --bg-gradient: linear-gradient(180deg, #E0F2FE 0%, #BAE6FD 100%);
+  --accent-color: #0284C7;
+}
+
+[data-theme="space"] {
+  --bg-gradient: linear-gradient(180deg, #EDE9FE 0%, #DDD6FE 100%);
+  --accent-color: #7C3AED;
+}
+
+[data-theme="jungle"] {
+  --bg-gradient: linear-gradient(180deg, #DCFCE7 0%, #BBF7D0 100%);
+  --accent-color: #059669;
+}
+
+[data-theme="candy"] {
+  --bg-gradient: linear-gradient(180deg, #FCE7F3 0%, #FBCFE8 100%);
+  --accent-color: #DB2777;
+}
+
+[data-theme="sunny"] {
+  --bg-gradient: linear-gradient(180deg, #FEF3C7 0%, #FDE68A 100%);
+  --accent-color: #D97706;
+}
+
+/* Washi Tape Accent */
+.washi-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 90px;
+  height: 20px;
+  border-radius: 4px;
+  opacity: 0.55;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(240, 244, 250, 0.7);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Dotted and Grid backgrounds */
+.bg-dots {
+  background-image: radial-gradient(rgba(46, 41, 78, 0.08) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+.bg-clouds {
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+}
+
+/* Candy stripe animation */
+@keyframes moveStripe {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+
+.stripe-animated {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 30px 30px;
+  animation: moveStripe 2s linear infinite;
+}
