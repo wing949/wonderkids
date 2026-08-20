@@ -255,7 +255,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       <div className="min-h-[calc(100vh-5rem)] pb-28 pt-4 sm:pt-6">
         <div className="mx-auto max-w-4xl px-3 sm:px-6 space-y-6">
           {/* Header Bar */}
-          <div className="flex items-center justify-between gap-4 border-b border-amber-200/80 bg-white/80 backdrop-blur-md p-4 rounded-3xl shadow-xs">
+          <div className="flex items-center justify-between gap-4 border-b border-amber-200/80 bg-white/85 backdrop-blur-md p-4 rounded-3xl shadow-xs">
             <div className="flex items-center gap-3">
               <button
                 onClick={() => {
@@ -264,70 +264,76 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   soundManager.playPop();
                   onExit();
                 }}
-                className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-xs border border-slate-200 text-slate-600 hover:bg-rose-50 hover:text-rose-600 transition-colors cursor-pointer"
+                className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-xs border border-slate-200 text-slate-600 hover:bg-amber-50 hover:text-amber-700 transition-colors cursor-pointer shrink-0"
                 title="Quay lại danh sách bài"
               >
                 <ArrowLeft size={20} />
               </button>
               <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xl">📖</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-base">📖</span>
                   <span className="font-baloo font-bold text-xs sm:text-sm text-amber-800 uppercase tracking-wider">
                     {lesson.unit}
                   </span>
                 </div>
-                <h1 className="font-baloo text-lg sm:text-xl font-extrabold text-brand-dark">
+                <div className="font-baloo text-sm sm:text-base font-extrabold text-slate-600">
                   {lesson.title}
-                </h1>
+                </div>
               </div>
             </div>
 
             {/* Audio Read Aloud Button */}
             <button
               onClick={handleTogglePassageAudio}
-              className={`flex items-center gap-2 px-4 py-2 rounded-2xl font-baloo font-bold text-sm transition-all shadow-xs cursor-pointer ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl font-baloo font-bold text-sm whitespace-nowrap transition-all shadow-xs cursor-pointer shrink-0 ${
                 isPlayingAudio
-                  ? 'bg-rose-500 text-white animate-pulse'
+                  ? 'bg-rose-500 text-white animate-pulse shadow-pop-sm'
                   : 'bg-amber-400 hover:bg-amber-300 text-amber-950 shadow-pop-sm'
               }`}
             >
               {isPlayingAudio ? (
                 <>
                   <Pause size={18} />
-                  <span>Dừng đọc</span>
+                  <span>Dừng đọc mẫu</span>
                 </>
               ) : (
                 <>
                   <Volume2 size={18} />
-                  <span>Nghe cô đọc mẫu 🔊</span>
+                  <span>Nghe cô đọc mẫu</span>
                 </>
               )}
             </button>
           </div>
 
           {/* Reading Book Card (Scrapbook Style) */}
-          <div className="relative rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/60 overflow-hidden">
-            {/* Washi tape header deco */}
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-36 h-6 bg-amber-400/40 rounded-sm rotate-[-1deg] border border-amber-300/40 shadow-xs pointer-events-none" />
+          <div className="relative rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70 mt-2">
+            {/* Washi tape header deco - Unclipped Authentic Scrapbook Tape */}
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-40 sm:w-48 h-7 bg-amber-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-amber-400/40 shadow-xs z-10 pointer-events-none" />
 
-            {/* Textbook Ref Badge */}
-            {lesson.textbookPageRef && (
-              <div className="mb-4 flex items-center gap-1.5 font-baloo font-bold text-xs text-amber-900 bg-amber-100/90 border border-amber-300/80 px-3.5 py-1 rounded-full w-fit">
-                <span>📚</span>
-                <span>{lesson.textbookPageRef}</span>
-              </div>
-            )}
+            {/* Passage Header Block (Centered, Balanced & Symmetrical) */}
+            <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
+              {/* Textbook Ref Pill Badge */}
+              {lesson.textbookPageRef && (
+                <div className="inline-flex items-center gap-2 font-baloo font-bold text-xs sm:text-sm text-amber-900 bg-amber-100/90 border border-amber-300/80 px-4 py-1 rounded-full shadow-2xs">
+                  <span>📖</span>
+                  <span>{lesson.textbookPageRef}</span>
+                </div>
+              )}
 
-            {/* Passage Header */}
-            <div className="text-center border-b border-amber-200/40 pb-6 mb-6">
-              <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide">
+              {/* Main Reading Title */}
+              <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide pt-1">
                 {passage.title}
               </h2>
+
+              {/* Author Attribution */}
               {passage.author && (
-                <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80 mt-1.5">
+                <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
                   Tác giả: {passage.author}
                 </p>
               )}
+
+              {/* Decorative warm accent line */}
+              <div className="w-20 sm:w-28 h-1 bg-amber-300/70 rounded-full mx-auto mt-3" />
             </div>
 
             {/* Passage Body Paragraphs / Verses */}
