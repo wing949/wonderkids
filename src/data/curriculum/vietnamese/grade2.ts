@@ -158,14 +158,14 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
     "semester": 1,
     "lessonNumber": 9,
     "title": "Bài 9: Cô giáo lớp em",
-    "unit": "Trang 42, 43 (Chủ điểm 3: Niềm vui tuổi thơ)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 42, 43 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "unit": "Trang 40, 41 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 40, 41 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 42, 43 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 40, 41 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "pedagogicalObjective": "Học thuộc lòng bài thơ, cảm nhận tình yêu thương bao la và sự tận tụy của cô giáo.",
     "description": "Bài đọc \"Bài 9: Cô giáo lớp em\" (Tác giả: Nguyễn Xuân Sanh) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 9: Cô giáo lớp em\" — SGK Tiếng Việt 2 Tập một — Trang 42, 43 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "summary": "Bài đọc \"Bài 9: Cô giáo lớp em\" — SGK Tiếng Việt 2 Tập một — Trang 40, 41 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "keyPoints": [
       "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
       "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
@@ -176,20 +176,20 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
     "id": "tv-g2-b10",
     "semester": 1,
     "lessonNumber": 10,
-    "title": "Bài 10: Thời khóa biểu",
-    "unit": "Trang 46, 47 (Chủ điểm 3: Niềm vui tuổi thơ)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 46, 47 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "title": "Bài 10: Thời khoá biểu",
+    "unit": "Trang 43, 44, 45 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 43, 44, 45 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 46, 47 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 43, 44, 45 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "pedagogicalObjective": "Đọc hiểu thời khóa biểu, rèn luyện kỹ năng tự lập và chuẩn bị sách vở khoa học.",
-    "description": "Bài đọc \"Bài 10: Thời khóa biểu\" (Tác giả: SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 10: Thời khóa biểu\" — SGK Tiếng Việt 2 Tập một — Trang 46, 47 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "description": "Bài đọc \"Bài 10: Thời khoá biểu\" (Tác giả: SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam) chuẩn SGK Tiếng Việt 2 Tập 1.",
+    "summary": "Bài đọc \"Bài 10: Thời khoá biểu\" — SGK Tiếng Việt 2 Tập một — Trang 43, 44, 45 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "keyPoints": [
       "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
       "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 10: Thời khóa biểu\" của tác giả SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam nhé!"
+    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 10: Thời khoá biểu\" của tác giả SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam nhé!"
   },
   {
     "id": "tv-g2-b11",

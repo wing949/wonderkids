@@ -18,21 +18,21 @@ test('báo cáo ghi đủ danh mục SGK, không nhầm bài chờ duyệt thàn
     assert.match(markdown, /10\/10 sách nguồn/);
     assert.match(markdown, /1\.584 trang/);
     assert.match(markdown, /Danh mục bài theo mục lục SGK\s*\|\s*376/);
-    assert.match(markdown, /Bài SGK đã xác minh\s*\|\s*8/);
-    assert.match(markdown, /Hoạt động SGK đã xác minh\s*\|\s*29/);
-    assert.match(markdown, /Danh mục SGK chờ đối chiếu nguyên văn\s*\|\s*368/);
-    assert.match(markdown, /Bài đang khóa văn bản\/audio chính\s*\|\s*368/);
+    assert.match(markdown, /Bài SGK đã xác minh\s*\|\s*10/);
+    assert.match(markdown, /Hoạt động SGK đã xác minh\s*\|\s*49/);
+    assert.match(markdown, /Danh mục SGK chờ đối chiếu nguyên văn\s*\|\s*366/);
+    assert.match(markdown, /Bài đang khóa văn bản\/audio chính\s*\|\s*366/);
     assert.match(markdown, /Luyện thêm trong bài\s*\|\s*0/);
     assert.match(markdown, /Chưa phát hành nguyên văn SGK chưa duyệt/i);
     assert.match(
       markdown,
-      /Transcript SGK có audio khớp transcript\s*\|\s*1\/[2-9]\d*/,
-      'Chỉ manifest có đúng hash transcript và trang nguồn mới được tính là audio SGK sẵn sàng',
+      /Transcript SGK có audio khớp transcript\s*\|\s*10\/10/,
+      'Mỗi transcript đã duyệt phải có đúng cặp audio mới khớp hash và trang nguồn',
     );
-    assert.doesNotMatch(
+    assert.match(
       markdown,
-      /Transcript SGK có audio khớp transcript\s*\|\s*([2-9]\d*)\/\1/,
-      'Không được coi file audio cũ là đúng chỉ vì file vẫn tồn tại',
+      /Cặp audio chính\/fallback đạt kiểm tra file\s*\|\s*10\/376/,
+      'Không được coi các file audio cũ của bài chưa duyệt là còn sẵn sàng',
     );
     assert.equal(csv.trim().split(/\r?\n/).length, 377);
     assert.match(csv.split(/\r?\n/)[0], /audioDistinct,transcriptHash,expectedTranscriptHash,audioTranscriptStatus,notes/);

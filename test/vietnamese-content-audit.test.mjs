@@ -65,8 +65,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   ));
 
   const pending = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending');
-  assert.equal(pending.length, 368);
-  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 8);
+  assert.equal(pending.length, 366);
+  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 10);
   assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'sgk_reference').length, 376);
   for (const lesson of pending) {
     assert.equal(lesson.sourceType, 'sgk_official', `Bài mục lục không có nguồn SGK: ${lesson.id}`);
@@ -80,7 +80,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   }
 
   const verified = lessons.filter((lesson) => lesson.catalogSection === 'sgk');
-  assert.equal(verified.length, 8);
+  assert.equal(verified.length, 10);
   for (const lesson of verified) {
     assert.equal(lesson.readingPassage?.verificationStatus, 'verified', `Thiếu nguyên văn đã duyệt: ${lesson.id}`);
     assert.ok(lesson.readingPassage?.content.length, `Thiếu nguyên văn: ${lesson.id}`);
@@ -93,6 +93,26 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
       assert.ok(['auto', 'self_confirm'].includes(question.gradingMode), `Thiếu cách chấm: ${question.id}`);
     }
   }
+
+  const coGiaoLopEm = verified.find((lesson) => lesson.id === 'tv-g2-b9');
+  assert.ok(coGiaoLopEm, 'Bài 9 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.deepEqual(coGiaoLopEm.sourceCitation.sourcePages, [40, 41]);
+  assert.deepEqual(coGiaoLopEm.readingPassage?.content, [
+    'Sáng nào em đến lớp\nCũng thấy cô đến rồi.\nĐáp lời “Chào cô ạ!”\nCô mỉm cười thật tươi.',
+    'Cô dạy em tập viết\nGió đưa thoảng hương nhài\nNắng ghé vào cửa lớp\nXem chúng em học bài.',
+    'Những lời cô giáo giảng\nẤm trang vở thơm tho\nYêu thương em ngắm mãi\nNhững điểm mười cô cho.',
+  ]);
+  assert.equal(coGiaoLopEm.questions.length, 10);
+  assert.equal(coGiaoLopEm.questions.filter((question) => question.sourcePage === 41).length, 10);
+
+  const thoiKhoaBieu = verified.find((lesson) => lesson.id === 'tv-g2-b10');
+  assert.ok(thoiKhoaBieu, 'Bài 10 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(thoiKhoaBieu.title, 'Bài 10: Thời khoá biểu');
+  assert.deepEqual(thoiKhoaBieu.sourceCitation.sourcePages, [43, 44, 45]);
+  assert.deepEqual(thoiKhoaBieu.readingPassage?.content, [
+    'Thời khoá biểu cho biết thời gian học các môn của từng ngày trong tuần. Thời khoá biểu gồm nhiều cột dọc và nhiều hàng ngang. Các bạn học sinh thường đọc thời khoá biểu theo trình tự thứ – buổi – tiết – môn.',
+  ]);
+  assert.equal(thoiKhoaBieu.questions.length, 10);
 });
 
 test('văn bản hiển thị của nội dung tự sinh không tự nhận là chuẩn SGK', () => {
@@ -160,7 +180,13 @@ test('thẻ dùng đúng tên bài trong mục lục và giữ đúng trạng th
 
 test('manifest audio có một file chính, một fallback và không còn câu công bố nguồn', async () => {
   const manifest = curriculum.VIETNAMESE_AUDIO_MANIFEST;
-  assert.equal(Object.keys(manifest).length, 132);
+  const verifiedLessonIds = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE)
+    .flatMap(([grade]) => curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese'))
+    .filter((lesson) => lesson.readingPassage?.contentOrigin === 'sgk_reference'
+      && lesson.readingPassage.verificationStatus === 'verified')
+    .map((lesson) => lesson.id.replace('-l', '-b'))
+    .sort();
+  assert.deepEqual(Object.keys(manifest).sort(), verifiedLessonIds);
 
   for (const [lessonId, asset] of Object.entries(manifest)) {
     assert.equal(asset.lessonId, lessonId);
@@ -176,7 +202,7 @@ test('manifest audio có một file chính, một fallback và không còn câu 
     assert.equal(asset.audibleDisclosureText, undefined);
     assert.match(asset.transcriptHash, /^[a-f0-9]{64}$/);
     assert.ok(asset.lessonVersion >= 1);
-    assert.ok(Array.isArray(asset.sourcePages));
+    assert.ok(Array.isArray(asset.sourcePages) && asset.sourcePages.length > 0);
     const primaryPcm = wavPcmData(await readFile(primaryFile));
     const fallbackPcm = wavPcmData(await readFile(fallbackFile));
     assert.notEqual(sha256(primaryPcm.subarray(0, 552960)), '7c91d642b467c265cb41aabdb5f9cbca60b9d2ed67f4ccd839884187b0bb8a2e');

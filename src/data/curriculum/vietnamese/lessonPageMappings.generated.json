@@ -266,23 +266,26 @@
     "lessonId": "tv-g2-b9",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      40
+      40,
+      41
     ],
     "matchedTitle": "Bài 9: Cô giáo lớp em",
     "matchedText": "fa 8q co giao lop em",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b10": {
     "lessonId": "tv-g2-b10",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      43
+      43,
+      44,
+      45
     ],
-    "matchedTitle": "Bài 10: Thời khóa biểu",
+    "matchedTitle": "Bài 10: Thời khoá biểu",
     "matchedText": "boi o q thoi khoa bieu h",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b12": {
     "lessonId": "tv-g2-b12",

@@ -203,6 +203,41 @@ const VERIFIED_SGK_TRANSCRIPTS: Record<string, VietnameseSgkTranscript> = {
     sourcePages: [34, 35],
     sourceHash: '25b6777d7aa73cac1d58c986d845fee453cce04318c942bc6e9bc5337fb962bb',
   },
+  'tv-g2-b9': {
+    title: 'Cô giáo lớp em',
+    author: 'Nguyễn Xuân Sanh',
+    genre: 'poem',
+    content: [
+      'Sáng nào em đến lớp\nCũng thấy cô đến rồi.\nĐáp lời “Chào cô ạ!”\nCô mỉm cười thật tươi.',
+      'Cô dạy em tập viết\nGió đưa thoảng hương nhài\nNắng ghé vào cửa lớp\nXem chúng em học bài.',
+      'Những lời cô giáo giảng\nẤm trang vở thơm tho\nYêu thương em ngắm mãi\nNhững điểm mười cô cho.',
+    ],
+    audioNarration: [
+      'Cô giáo lớp em',
+      'Sáng nào em đến lớp. Cũng thấy cô đến rồi. Đáp lời “Chào cô ạ!”. Cô mỉm cười thật tươi.',
+      'Cô dạy em tập viết. Gió đưa thoảng hương nhài. Nắng ghé vào cửa lớp. Xem chúng em học bài.',
+      'Những lời cô giáo giảng. Ấm trang vở thơm tho. Yêu thương em ngắm mãi. Những điểm mười cô cho.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [40, 41],
+    sourceHash: 'f46703e75573523c7813808d6225d28b5b54d605e039ab9cd83fa1d7b97a246c',
+  },
+  'tv-g2-b10': {
+    title: 'Thời khoá biểu',
+    genre: 'prose',
+    content: [
+      'Thời khoá biểu cho biết thời gian học các môn của từng ngày trong tuần. Thời khoá biểu gồm nhiều cột dọc và nhiều hàng ngang. Các bạn học sinh thường đọc thời khoá biểu theo trình tự thứ – buổi – tiết – môn.',
+    ],
+    audioNarration: [
+      'Thời khoá biểu',
+      'Thời khoá biểu cho biết thời gian học các môn của từng ngày trong tuần. Thời khoá biểu gồm nhiều cột dọc và nhiều hàng ngang. Các bạn học sinh thường đọc thời khoá biểu theo trình tự thứ – buổi – tiết – môn.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [43, 44, 45],
+    sourceHash: 'e8d935d9ad02cc69669ca9839a1596b882eb79d181f43c5cdb98ac2b9c81c023',
+  },
 };
 
 function normalizeLessonId(lessonId: string): string {

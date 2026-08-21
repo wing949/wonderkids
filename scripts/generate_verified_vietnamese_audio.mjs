@@ -1,6 +1,6 @@
 import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -11,7 +11,6 @@ import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 const runFile = promisify(execFile);
 const workspace = process.cwd();
 const lessonIds = process.argv.slice(2).filter((value) => !value.startsWith('--'));
-const targets = lessonIds.length > 0 ? lessonIds : ['tv-g2-b1'];
 const buildDirectory = await mkdtemp(join(tmpdir(), 'wonderkids-verified-audio-build-'));
 const audioDirectory = await mkdtemp(join(tmpdir(), 'wonderkids-verified-audio-files-'));
 const manifestPath = join(workspace, 'src', 'data', 'curriculum', 'vietnamese', 'audioManifest.generated.json');
@@ -59,10 +58,29 @@ try {
       .flatMap((grade) => curriculum.getLessonsForGradeAndSubject(grade, 'vietnamese'))
       .map((lesson) => [lesson.id.replace('-l', '-b'), lesson]),
   );
-  const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  const verifiedLessonIds = [...runtimeLessons.values()]
+    .filter((lesson) => lesson.readingPassage?.contentOrigin === 'sgk_reference'
+      && lesson.readingPassage.verificationStatus === 'verified'
+      && lesson.readingPassage.sourcePages?.length)
+    .map((lesson) => lesson.id.replace('-l', '-b'))
+    .sort();
+  const requestedTargets = lessonIds.length > 0 ? lessonIds.map((lessonId) => lessonId.replace('-l', '-b')) : verifiedLessonIds;
+  const unverifiedTargets = requestedTargets.filter((lessonId) => !verifiedLessonIds.includes(lessonId));
+  if (unverifiedTargets.length > 0) {
+    throw new Error(`Chỉ tạo audio cho transcript SGK đã xác minh: ${unverifiedTargets.join(', ')}`);
+  }
 
-  for (const lessonId of targets) {
-    const lesson = runtimeLessons.get(lessonId.replace('-l', '-b'));
+  const previousManifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  const manifest = Object.fromEntries(
+    Object.entries(previousManifest).filter(([lessonId]) => verifiedLessonIds.includes(lessonId)),
+  );
+  await Promise.all([
+    mkdir(join(workspace, 'public', 'audio', 'curriculum'), { recursive: true }),
+    mkdir(join(workspace, 'public', 'audio', 'curriculum', 'fallback'), { recursive: true }),
+  ]);
+
+  for (const lessonId of requestedTargets) {
+    const lesson = runtimeLessons.get(lessonId);
     const passage = lesson?.readingPassage;
     if (
       !passage

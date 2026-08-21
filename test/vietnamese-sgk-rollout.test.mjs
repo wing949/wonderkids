@@ -59,8 +59,8 @@ test('danh mục SGK tách rõ bài đã duyệt nguyên văn, bài chờ duyệ
   );
 
   assert.equal(lessons.length, 376);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 8);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 368);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 10);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 366);
   assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'extra_practice').length, 0);
 
   for (const lesson of lessons) {
@@ -243,7 +243,9 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
     'Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”.\n\n– Tớ nên vào đội nào đây? – Gấu hỏi khỉ.\n\n– Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói.\n\nGấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”.',
   ]);
 
-  const unverifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[8];
+  const unverifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')
+    .find((lesson) => lesson.id === 'tv-g2-b11');
+  assert.ok(unverifiedTranscript, 'Thiếu bài chờ duyệt để kiểm tra khóa đọc mẫu');
   assert.equal(readingPolicy.getVietnameseReadingPolicy(unverifiedTranscript), 'source_only');
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(unverifiedTranscript), false);
 

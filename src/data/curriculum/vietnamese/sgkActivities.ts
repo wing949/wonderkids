@@ -164,6 +164,30 @@ const VERIFIED_SGK_ACTIVITIES: Record<string, Question[]> = {
     ], 'Đọc đoạn nói về việc gấu con chờ được vào sân.'),
     openQuestion('tv-g2-b8', 35, 'Luyện nói • 2', 'Nếu là bạn của gấu con, em sẽ nói lời chúc mừng gấu con như thế nào?', 'Viết lời chúc mừng ngắn, tích cực và chân thành.'),
   ],
+  'tv-g2-b9': [
+    openQuestion('tv-g2-b9', 41, 'Đọc hiểu • 1', 'Cô giáo đáp lại lời chào của học sinh như thế nào?', 'Trả lời bằng lời của em.'),
+    openQuestion('tv-g2-b9', 41, 'Đọc hiểu • 2', 'Tìm những câu thơ tả cảnh khi cô dạy học.', 'Đọc lại khổ thơ thứ hai.'),
+    openQuestion('tv-g2-b9', 41, 'Đọc hiểu • 3', 'Bạn nhỏ đã kể những gì về cô giáo của mình?', 'Đọc cả ba khổ thơ rồi trả lời.'),
+    openQuestion('tv-g2-b9', 41, 'Đọc hiểu • 4', 'Qua bài thơ, em thấy tình cảm bạn nhỏ dành cho cô giáo thế nào?', 'Nói hoặc viết cảm nhận của em.'),
+    openQuestion('tv-g2-b9', 41, 'Học thuộc lòng • *', 'Học thuộc lòng 2 khổ thơ em thích.', 'Đọc lại hai khổ thơ em đã chọn và tự xác nhận khi hoàn thành.'),
+    openQuestion('tv-g2-b9', 41, 'Luyện tập • 1a', 'Nói câu thể hiện sự ngạc nhiên của em khi: Lần đầu được nghe một bạn hát rất hay.', 'Nói một câu thể hiện đúng cảm xúc của em.'),
+    openQuestion('tv-g2-b9', 41, 'Luyện tập • 1b', 'Nói câu thể hiện sự ngạc nhiên của em khi: Được bố mẹ tặng một món quà bất ngờ.', 'Nói một câu thể hiện đúng cảm xúc của em.'),
+    openQuestion('tv-g2-b9', 41, 'Luyện tập • 2', 'Nói câu thể hiện tình cảm của em đối với thầy cô giáo của mình.', 'Nói một câu lịch sự, chân thành.'),
+    openQuestion('tv-g2-b9', 41, 'Viết • 1', 'Viết chữ hoa: D, Đ.', 'Luyện viết theo mẫu chữ trong sách.'),
+    openQuestion('tv-g2-b9', 41, 'Viết • 2', 'Viết ứng dụng: Dung dăng dung dẻ. Dắt trẻ đi chơi.', 'Luyện viết theo mẫu chữ trong sách.'),
+  ],
+  'tv-g2-b10': [
+    openQuestion('tv-g2-b10', 44, 'Đọc • 1', 'Đọc thời khoá biểu của ngày thứ Hai.', 'Đọc lần lượt theo thứ – buổi – tiết – môn.'),
+    openQuestion('tv-g2-b10', 44, 'Đọc • 2', 'Sáng thứ Hai có mấy tiết?', 'Quan sát cột Thứ Hai, buổi sáng.'),
+    openQuestion('tv-g2-b10', 44, 'Đọc • 3', 'Thứ Năm có những môn học nào?', 'Quan sát cột Thứ Năm.'),
+    openQuestion('tv-g2-b10', 44, 'Đọc • 4', 'Nếu không có thời khoá biểu, em sẽ gặp khó khăn gì?', 'Nói hoặc viết ý kiến của em.'),
+    openQuestion('tv-g2-b10', 44, 'Luyện tập • 1', 'Dựa vào thời khoá biểu trên đây, hỏi – đáp theo mẫu.', 'Dùng thời khoá biểu để hỏi và đáp cùng bạn.'),
+    openQuestion('tv-g2-b10', 45, 'Luyện tập • 2', 'Nói một câu giới thiệu môn học hoặc hoạt động ở trường mà em thích.', 'Nói một câu theo mẫu trong sách.'),
+    openQuestion('tv-g2-b10', 45, 'Viết • 1', 'Nghe – viết: Thời khoá biểu (từ đầu đến thứ – buổi – tiết – môn).', 'Nghe và viết đúng phần được nêu trong sách.'),
+    openQuestion('tv-g2-b10', 45, 'Viết • 2', 'Dựa vào tranh, viết tên đồ vật có tiếng bắt đầu bằng c hoặc k.', 'Quan sát tranh rồi viết tên đồ vật.'),
+    openQuestion('tv-g2-b10', 45, 'Viết • 3a', 'Chọn ch hoặc tr thay cho ô vuông.', 'Hoàn thành phần a theo yêu cầu trong sách.'),
+    openQuestion('tv-g2-b10', 45, 'Viết • 3b', 'Chọn v hoặc d thay cho ô vuông.', 'Hoàn thành phần b theo yêu cầu trong sách.'),
+  ],
 };
 
 export function getVerifiedVietnameseSgkActivities(lessonId: string): Question[] {
