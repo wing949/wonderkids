@@ -431,17 +431,13 @@ export const soundManager = {
   // Play SGK Passage audio: Thứ tự ưu tiên:
   // 1. Giọng Cô Giáo Vy (VieNeu TTS chuẩn phòng thu .wav tại /audio/curriculum/${id}.wav)
   // 2. Kho lưu trữ dự phòng giọng Cô Mỹ Duyên /audio/curriculum/fallback/${id}.wav
-  // 3. Kho lưu trữ dự phòng /audio/curriculum/fallback/${id}.mp3
-  // 4. Live Stream Neural TTS (soundManager.speakText)
   playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
 
     const normalizedId = lessonId.replace('-l', '-b');
     const sources = [
       `/audio/curriculum/${normalizedId}.wav`,
-      `/audio/curriculum/fallback/${normalizedId}.wav`,
-      `/audio/curriculum/${normalizedId}.mp3`,
-      `/audio/curriculum/fallback/${normalizedId}.mp3`
+      `/audio/curriculum/fallback/${normalizedId}.wav`
     ];
 
     let currentSourceIdx = 0;
