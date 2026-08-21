@@ -31,54 +31,55 @@ STYLE_SUFFIX = "Floating glowing magical elements, colorful 3D letters and spark
 def get_scene_description(grade, key, title, author, genre):
     num = int(key.split('-b')[-1])
     
-    # GRADE 1
+    # GRADE 1: SEMESTER 1 (Lessons 1-20) centered on Mascot Cáo MiuMiu interacting with giant 3D letters!
     if grade == 1:
         if num == 1:
-            return "two cute 6-year-old Vietnamese children (Nam and Ha) singing happily into a golden microphone in a sunny classroom."
+            return "the cute little orange fox mascot MiuMiu with fluffy fur and tail, wearing a cozy yellow scarf, happily leaning its back against a giant glowing red 3D letter 'A' on a soft cloud, singing with a golden microphone."
         elif num == 2:
-            return "a kind grandmother 3D character lovingly holding and hugging a cute happy baby in a cozy room."
+            return "the cute little orange fox mascot MiuMiu wearing a cozy yellow scarf, sitting on a soft cloud and lovingly hugging a giant candy-pink 3D letter 'B', holding a tiny teddy baby."
         elif num == 3:
-            return "a cute colorful fighting fish (cá cờ) swimming happily in a glass bowl next to a little green cricket on a garden leaf."
+            return "the cute little orange fox mascot MiuMiu sitting playfully on a soft cloud between giant colorful 3D letters 'C', 'D', and 'Đ', watching a colorful betta fish swimming in a floating crystal bubble."
         elif num == 4:
-            return "a cute little girl happily drawing and painting ripe yellow pears with crayons on a wooden easel."
+            return "the cute little orange fox mascot MiuMiu wearing an artist beret, sitting on a soft cloud beside giant glowing 3D letters 'E' and 'Ê', happily painting ripe yellow pears on an easel."
         elif num == 5:
-            return "a brave little baby goat wearing a yellow bell wandering joyfully in a sunny meadow with blooming flowers."
+            return "the cute little orange fox mascot MiuMiu sitting on a soft cloud telling stories with an open glowing storybook, accompanied by a friendly baby goat wearing a golden bell and surrounded by floating 3D vowel cubes."
         elif num == 6:
-            return "a cute fluffy mother cow and little baby calf grazing peacefully on fresh green grass under blue skies."
+            return "the cute little orange fox mascot MiuMiu playfully peeking through a giant round golden-yellow 3D letter 'O' like a magical donut on a fluffy cloud, with tiny chicks chirping nearby."
         elif num == 7:
-            return "a happy family riding a cute colorful motorboat (ca nô) gliding over sparkling blue water under morning sunshine."
+            return "the cute little orange fox mascot MiuMiu sitting on a cloud placing a cute little pointed hat onto a giant 3D letter 'Ô' and a curved hook onto a giant 3D letter 'Ơ'."
         elif num == 8:
-            return "a cute little girl sitting on a soft carpet telling fairy tales to her smiling grandmother with a glowing book."
+            return "the cute little orange fox mascot MiuMiu holding a glowing star wand, pointing at tall glowing crystal 3D letters 'I' and 'K' standing on a fluffy cloud."
         elif num == 9:
-            return "a kind grandmother giving sweet ripe yellow papayas and juicy fruits to a cheerful little child."
+            return "the cute little orange fox mascot MiuMiu resting comfortably inside the curved cradle of a giant 3D letter 'U' and 'Ư', holding a basket of sweet ripe golden papayas."
         elif num == 10:
-            return "a friendly turtle with a cute patterned shell and a fast energetic bunny shaking hands at the finish line in a green forest."
+            return "the cute little orange fox mascot MiuMiu sitting atop a rainbow cloud cheering for a friendly turtle and rabbit racing around a spinning carousel of colorful 3D alphabet letters."
         elif num == 11:
-            return "a sweet mother carrying a basket of fresh purple plums and yellow pears smiling at her happy child in a sunny fruit orchard."
+            return "the cute little orange fox mascot MiuMiu carrying a basket of purple plums and yellow lemons, sitting snugly between giant 3D letters 'L' and 'M' on a soft cloud."
         elif num == 12:
-            return "a blooming pink rosebud unfolding its soft petals with sparkling morning dew drops under golden sunrise."
+            return "the cute little orange fox mascot MiuMiu admiring a blooming pink rose blossom growing right atop giant pastel 3D letters 'N' and 'P' on a fluffy cloud."
         elif num == 13:
-            return "a cute little turtle and a cheerful blackbird (chim sáo) singing and playing together like best friends on a mossy log."
+            return "the cute little orange fox mascot MiuMiu sitting on a soft cloud playing a miniature flute beside giant glowing 3D letters 'R' and 'S', with a cheerful blackbird singing on top."
         elif num == 14:
-            return "a cute fluffy white bunny happily eating a crunchy orange carrot next to a green bamboo grove."
+            return "the cute little orange fox mascot MiuMiu holding a cute leaf umbrella, sitting on a cloud leaning against giant 3D letters 'T' and 'Th', with a little white bunny eating a carrot."
         elif num == 15:
-            return "a lush tropical fruit garden full of ripe purple star-apples and yellow fruits with a cheerful child riding a small bicycle."
+            return "the cute little orange fox mascot MiuMiu riding a miniature colorful scooter delivering giant glowing 3D letters 'V' and 'X' through a magical cloud garden full of star-apples."
         elif num == 16:
-            return "a playful mischievous little monkey swinging on a branch and picking golden starfruits in a sunny orchard."
+            return "the cute little orange fox mascot MiuMiu and a playful baby monkey sharing golden starfruits while sitting atop giant 3D letters 'Ch' and 'Kh' on a soft cloud."
         elif num == 17:
-            return "a cozy farmyard with a fluffy mother hen and a group of tiny yellow chicks chirping around a basket of ripe purple grapes."
+            return "the cute little orange fox mascot MiuMiu feeding a flock of fluffy yellow baby chicks pecking around giant 3D letters 'Nh' and 'Ng' on a soft cloud."
         elif num == 18:
-            return "a cute baby water buffalo (nghé con) resting under a big blooming red silk-cotton tree (cây gạo)."
+            return "the cute little orange fox mascot MiuMiu resting gently against a cute baby water buffalo next to giant 3D letters 'Ngh' and 'Gh' under blooming red silk-cotton petals."
         elif num == 19:
-            return "happy children carrying schoolbags walking out of the school gate at dismissal time with swallow birds flying above."
+            return "the cute little orange fox mascot MiuMiu wearing a cute school backpack and waving goodbye at dismissal time, sitting beside giant 3D letters 'An' and 'At' on a cloud."
         elif num == 20:
-            return "cheerful swallow birds flying over golden spring rice fields under warm sunlight celebrating the new semester."
+            return "the cute little orange fox mascot MiuMiu wearing a golden laurel wreath on a cloud throne, celebrating the end of semester 1 with spring swallows flying around a grand glowing 3D alphabet rainbow."
+        # GRADE 1: SEMESTER 2 (Reading passages)
         elif num == 21:
-            return "a cute 6-year-old Vietnamese boy named Nam with neat hair, wearing a white and navy blue school uniform with red backpack, proudly standing in front of primary school gate."
+            return "a cute 6-year-old Vietnamese boy named Nam with neat hair, wearing a white and navy blue school uniform with red backpack, proudly standing on a soft cloud reading a glowing book beside mascot MiuMiu."
         elif num == 22:
-            return "a cute white bunny with long expressive ears listening attentively and alerting forest animal friends about a wolf."
+            return "a cute white bunny mascot with long expressive ears listening attentively and sitting on a soft cloud holding a glowing star with blooming forest flowers."
         elif num == 23:
-            return "a colorful sailboat gliding on waves and a high-flying diamond kite fluttering in the clear blue sky with gentle wind swirls."
+            return "a colorful sailboat and a high-flying diamond kite fluttering in clear blue skies with gentle wind swirls on a soft cloud."
         elif num == 24:
             return "a cute child washing hands under a flowing clean water faucet with rich fluffy soap bubbles and sparkling clean water drops."
         elif num == 25:
@@ -103,7 +104,7 @@ def get_scene_description(grade, key, title, author, genre):
         elif num == 3:
             return "two loving siblings (Bi and Bong) looking up with wide eyes at a glowing seven-color rainbow with a golden treasure pot."
         elif num == 4:
-            return "a fluffy rooster crowing on a fence, a smiling pendulum clock ticking, blooming peach blossoms, and a girl sweeping the house."
+            return "a cute cheerful fluffy rooster with a bright red comb sitting on a soft cloud beside a smiling vintage pendulum clock and blooming peach blossom branches."
         elif num == 5:
             return "a cute baby elephant looking at its reflection in a pond, discovering its natural beauty with its long trunk and big ears."
         elif num == 6:
@@ -129,7 +130,7 @@ def get_scene_description(grade, key, title, author, genre):
         elif num == 16:
             return "a child opening a storybook that expands into a vast magical world of ocean waves, lush forests, and friendly wild animals."
         elif num == 17:
-            return "two devoted animal friends, a Golden Calf (Bê Vàng) and a White Goat (Dê Trắng), wandering together by a clear forest stream."
+            return "two devoted animal friends, a Golden Calf (Bê Vàng) and a White Goat (Dê Trắng), sitting together lovingly on a soft cloud by a crystal stream."
         elif num == 18:
             return "a shy brown hedgehog and a friendly white hedgehog happily sharing ripe forest acorns and fresh mushrooms together."
         elif num == 19:
@@ -188,9 +189,9 @@ def get_scene_description(grade, key, title, author, genre):
         elif num == 14:
             return "a loving grandchild gently waving a paper fan to soothe an ailing grandmother asleep beside fragrant garden orange blossoms."
         elif num == 15:
-            return "a brave heroic green toad wearing a red warrior headband striking a heavenly drum surrounded by a crab, bear, and tiger to demand rain."
+            return "a brave heroic green toad wearing a red warrior headband sitting on a soft cloud striking a golden drum beside a crab, bear, and tiger."
         elif num == 16:
-            return "the legendary Trung Sisters (Hai Bà Trưng) in golden armor riding a mighty war elephant leading a victorious uprising army."
+            return "two heroic female warrior sisters (Hai Bà Trưng) in golden armor riding a friendly giant Asian elephant holding an uprising flag on a cloud."
         elif num == 17:
             return "a beautiful panoramic map of Vietnam shaped like an S with lush mountains, golden rice terraces, and flowing Mekong River."
         elif num == 18:
@@ -213,7 +214,7 @@ def get_scene_description(grade, key, title, author, genre):
     # GRADE 4
     elif grade == 4:
         if num == 1:
-            return "heroic green cricket warrior Dế Mèn extending his strong armor arms to protect a fragile weeping moth girl (Nhà Trò) by a stone."
+            return "heroic green cricket warrior Dế Mèn extending his strong armor arms to protect a fragile weeping moth girl (Nhà Trò) sitting on a soft cloud."
         elif num == 2:
             return "an ancient illuminated fairy tale book opening to reveal fairyland characters, coconut palms, and peaceful Vietnamese village life."
         elif num == 3:
@@ -249,7 +250,7 @@ def get_scene_description(grade, key, title, author, genre):
         elif num == 18:
             return "a green leaf on a tree branch absorbing golden sunlight and morning dew, feeding vibrant blooming flowers and sweet fruits."
         elif num == 19:
-            return "the heroic child courier Lượm with a jaunty cap and satchel, whistling cheerfully and skipping across golden rice fields."
+            return "a cheerful brave young courier boy (Chú bé Lượm) with a jaunty cap and leather satchel, whistling and skipping across golden terraced rice fields on a cloud."
         elif num == 20:
             return "a loving ethnic mother carrying her sleeping baby on her back while harvesting corn on the majestic Ka-lui mountain slope."
         elif num == 21:
@@ -260,7 +261,7 @@ def get_scene_description(grade, key, title, author, genre):
     # GRADE 5
     elif grade == 5:
         if num == 1:
-            return "an illuminated historic letter scroll with red wax seal 1945, a waving gold-starred red flag, and blooming lotus flowers on water."
+            return "a young Vietnamese student in scholar uniform on a cloud holding a glowing historic letter scroll with red wax seal 1945 beside a waving red flag and blooming pink lotus."
         elif num == 2:
             return "a rich autumn harvest village bathed in various vibrant shades of golden yellow: golden rice fields, golden sun, and golden straw stacks."
         elif num == 3:
@@ -274,7 +275,7 @@ def get_scene_description(grade, key, title, author, genre):
         elif num == 7:
             return "a warm handshake between a Vietnamese excavator operator and a tall blond Russian specialist (Alexei) on a sunny hydroelectric dam site."
         elif num == 8:
-            return "a magical kingdom of giant mushroom umbrellas under the golden autumn canopy of a dry dipterocarp forest with silver-cheeked gibbons."
+            return "a cute gibbon monkey mascot sitting on a soft cloud in a magical forest surrounded by giant glowing mushroom umbrellas and golden leaves."
         elif num == 9:
             return "a breathtaking high mountain pass called Heaven's Gate (Cổng Trời) overlooking misty valleys, terraced cornfields, and ethnic women in colorful skirts."
         elif num == 10:
@@ -314,7 +315,7 @@ def get_scene_description(grade, key, title, author, genre):
 
 markdown_output = []
 markdown_output.append("# 🎨 BỘ PROMPT 3D PIXAR TẠO ẢNH CHO TOÀN BỘ 132 BÀI HỌC TIẾNG VIỆT (LỚP 1 — 5)\n")
-markdown_output.append("> **Phong cách thiết kế chuẩn mực**: Đồng bộ $100\%$ với 4 Mascot độc quyền của WonderKids (Cáo MiuMiu, Cú BoBo, Robot BipBip, Cá Heo PiPi) theo phong cách **3D Pixar / Disney Cinematic Render** (nhân vật nổi khối, mắt to long lanh, texture bông xù hoặc đất sét mượt, ánh sáng studio ấm áp, đạo cụ phát sáng, các chữ cái/từ ngữ 3D bay bổng xung quanh).\n")
+markdown_output.append("> **Phong cách thiết kế chuẩn mực**: Đồng bộ $100\%$ với Mascot **Cáo MiuMiu** của môn Tiếng Việt và các bạn Cú BoBo, Robot BipBip, Cá Heo PiPi theo chuẩn **3D Pixar / Disney Cinematic Render** (nhân vật nổi khối, mắt to long lanh, texture bông xù ấm áp, ánh sáng studio ngọt ngào, chữ cái 3D khổng lồ, các từ ngữ chú giải chân trang SGK phát sáng bay bổng xung quanh).\n")
 
 count = 0
 for g_num, g_title, g_dict in all_grades:
@@ -340,4 +341,4 @@ report_file = os.path.join(DOCS_DIR, 'prompts_132_vietnamese_lessons.md')
 with open(report_file, 'w', encoding='utf-8') as f:
     f.write(output_text)
 
-print(f"✅ Đã tạo thành công bộ {count} prompts tại: {report_file}")
+print(f"✅ Đã cập nhật thành công bộ {count} prompts (với Mascot Cáo MiuMiu gắn liền chữ cái Lớp 1 HK1) tại: {report_file}")

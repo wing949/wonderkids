@@ -15,6 +15,7 @@ const buildDir = await mkdtemp(join(tmpdir(), 'wonderkids-page-mapping-'));
 // Chỉ thêm vào đây khi có bằng chứng trang rõ ràng; không suy đoán từ OCR.
 const visuallyReviewedPages = new Map([
   ['tv-g2-b1', [10, 11, 12]],
+  ['tv-g2-b2', [13]],
   ['tv-g2-b5', [24, 25, 26]],
   ['tv-g2-b6', [27, 28, 29, 30]],
 ]);
