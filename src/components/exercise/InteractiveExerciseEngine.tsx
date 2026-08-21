@@ -696,7 +696,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-base">💡</span>
                     <h4 className="font-baloo font-extrabold text-sm sm:text-base text-amber-900">
-                      Góc Chú Giải Từ Ngữ (SGK Tiếng Việt):
+                      Góc Chú Giải Từ Ngữ:
                     </h4>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -1090,8 +1090,14 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             transition={{ duration: 0.3 }}
             className="mt-6 rounded-4xl border border-amber-100/60 bg-[#fffdfa] p-6 sm:p-8 shadow-washi backdrop-blur-md"
           >
-            {/* Textbook Page Badge */}
-            {lesson.textbookPageRef && (
+            {/* Provenance Badge */}
+            {lesson.subject === 'vietnamese' && lesson.provenance?.verificationStatus !== 'verified' ? (
+              <div className="mb-3 flex flex-wrap items-center gap-1.5 font-baloo font-bold text-xs text-blue-950 bg-blue-100/90 border border-blue-300/80 px-3.5 py-1 rounded-full w-fit">
+                <span>🌱</span>
+                <span className="font-extrabold">Câu hỏi/bài tập: NỘI DUNG TỰ SINH</span>
+                {lesson.referenceDetail && <span>— Tham khảo: {lesson.referenceDetail}</span>}
+              </div>
+            ) : lesson.textbookPageRef && (
               <div className="mb-3 flex items-center gap-1.5 font-baloo font-bold text-xs text-amber-900 bg-amber-100/90 border border-amber-300/80 px-3.5 py-1 rounded-full w-fit">
                 <span>📖</span>
                 <span>{lesson.textbookPageRef}</span>
@@ -1112,7 +1118,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               </div>
             </div>
 
-            {/* Spelling Blend Interactive Machine (SGK Tiếng Việt 1) */}
+            {/* Spelling Blend Interactive Machine */}
             {currentQ.type === 'spelling_blend' && currentQ.spellingData && (
               <div className="mt-5 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 border-2 border-amber-200 text-center space-y-4">
                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-baloo text-2xl sm:text-4xl font-extrabold text-amber-950">
