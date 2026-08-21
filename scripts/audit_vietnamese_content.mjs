@@ -126,7 +126,7 @@ Phạm vi: toàn bộ dữ liệu Tiếng Việt lớp 1–5 trong ứng dụng.
 
 ## Bảng kiểm kê từng bài
 
-`Nội dung` là nguồn thực tế đang hiển thị trong app; `Tham khảo` là link SGK, không phải tuyên bố nội dung đã chép nguyên văn.
+"Nội dung" là nguồn thực tế đang hiển thị trong app; "Tham khảo" là link SGK, không phải tuyên bố nội dung đã chép nguyên văn.
 
 | Mã bài | Lớp / tập | Tên bài | Nội dung | Trạng thái nguồn | SGK tham khảo | Tên khớp | Audio | Câu hỏi |
 |---|---|---|---|---|---|---|---|---:|
