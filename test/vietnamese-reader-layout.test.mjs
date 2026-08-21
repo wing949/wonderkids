@@ -81,3 +81,10 @@ test('popup bài chờ duyệt vẫn cho phụ huynh xem nguồn SGK, không đ�
   );
   assert.match(adventureSource, /Nguồn đối chiếu:/);
 });
+
+test('câu hỏi mở từ SGK cho bé viết câu trả lời rồi tự xác nhận hoàn thành', () => {
+  assert.match(readerSource, /currentQ\.gradingMode === 'self_confirm'/);
+  assert.match(readerSource, /Viết câu trả lời của em/);
+  assert.match(readerSource, /Em đã trả lời/);
+  assert.match(readerSource, /writtenResponse\.trim\(\)\.length > 0/);
+});

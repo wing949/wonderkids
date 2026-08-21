@@ -120,6 +120,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [keypadInput, setKeypadInput] = useState<string>('');
+  const [writtenResponse, setWrittenResponse] = useState<string>('');
   const [matchedPairs, setMatchedPairs] = useState<Record<string, string>>({});
   const [selectedLeftPair, setSelectedLeftPair] = useState<MatchingPair | null>(null);
   
@@ -148,6 +149,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     setCurrentQuestionIndex(0);
     setSelectedOptionId(null);
     setKeypadInput('');
+    setWrittenResponse('');
     setMatchedPairs({});
     setSelectedLeftPair(null);
     setIsAnswerChecked(false);
@@ -353,7 +355,9 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     if (!currentQ) return;
     let correct = false;
 
-    if (currentQ.type === 'bubble_choice' || currentQ.type === 'audio_listen' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend') {
+    if (currentQ.gradingMode === 'self_confirm') {
+      correct = writtenResponse.trim().length > 0;
+    } else if (currentQ.type === 'bubble_choice' || currentQ.type === 'audio_listen' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend') {
       const selectedOpt = currentQ.options?.find((opt) => opt.id === selectedOptionId);
       correct = !!selectedOpt?.isCorrect;
     } else if (currentQ.type === 'keypad') {
@@ -393,6 +397,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       // Reset state so that nothing is pre-selected
       setSelectedOptionId(null);
       setKeypadInput('');
+      setWrittenResponse('');
       setMatchedPairs({});
       setSelectedLeftPair(null);
       setIsAnswerChecked(false);
@@ -403,6 +408,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       setCurrentQuestionIndex((prev) => prev + 1);
       setSelectedOptionId(null);
       setKeypadInput('');
+      setWrittenResponse('');
       setMatchedPairs({});
       setSelectedLeftPair(null);
       setIsAnswerChecked(false);
@@ -419,6 +425,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     setIsCorrect(false);
     setSelectedOptionId(null);
     setKeypadInput('');
+    setWrittenResponse('');
     setMatchedPairs({});
     setSelectedLeftPair(null);
     setShowHint(false);
@@ -457,7 +464,9 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   };
 
   const hasSelectedAnswer = currentQ
-    ? (currentQ.type === 'bubble_choice' || currentQ.type === 'audio_listen' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend')
+    ? currentQ.gradingMode === 'self_confirm'
+      ? writtenResponse.trim().length > 0
+      : (currentQ.type === 'bubble_choice' || currentQ.type === 'audio_listen' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend')
       ? selectedOptionId !== null
       : currentQ.type === 'keypad'
       ? keypadInput.length > 0
@@ -1233,6 +1242,26 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               </div>
             </div>
 
+            {currentQ.gradingMode === 'self_confirm' && (
+              <div className="mt-6 rounded-3xl bg-emerald-50/70 p-4 sm:p-5 border border-emerald-200">
+                <label htmlFor={`response-${currentQ.id}`} className="block font-baloo font-black text-base sm:text-lg text-emerald-900">
+                  Viết câu trả lời của em
+                </label>
+                <textarea
+                  id={`response-${currentQ.id}`}
+                  value={writtenResponse}
+                  onChange={(event) => setWrittenResponse(event.target.value)}
+                  disabled={isAnswerChecked}
+                  rows={4}
+                  placeholder="Em viết câu trả lời ở đây nhé..."
+                  className="mt-3 min-h-[112px] w-full resize-y rounded-2xl border-2 border-emerald-200 bg-white px-4 py-3 font-vietnam text-base sm:text-lg font-medium text-brand-dark outline-none transition-colors placeholder:text-slate-400 focus:border-emerald-500 disabled:cursor-not-allowed disabled:bg-slate-50"
+                />
+                <p className="mt-2 font-vietnam text-sm font-semibold text-emerald-800">
+                  Hoạt động nói hoặc viết được bé tự xác nhận sau khi hoàn thành.
+                </p>
+              </div>
+            )}
+
             {/* Spelling Blend Interactive Machine */}
             {currentQ.type === 'spelling_blend' && currentQ.spellingData && (
               <div className="mt-5 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 border-2 border-amber-200 text-center space-y-4">
@@ -1547,7 +1576,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   disabled={!hasSelectedAnswer}
                   onClick={handleCheckAnswer}
                 >
-                  Kiểm Tra Đáp Án ✨
+                  {currentQ?.gradingMode === 'self_confirm' ? 'Em đã trả lời ✨' : 'Kiểm Tra Đáp Án ✨'}
                 </CuteButton>
               ) : (
                 <CuteButton

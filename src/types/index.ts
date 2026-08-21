@@ -15,7 +15,8 @@ export type QuestionType =
   | 'audio_listen' 
   | 'story_sequence' 
   | 'fill_blank'
-  | 'spelling_blend';
+  | 'spelling_blend'
+  | 'open_response';
 
 export type ContentOrigin = 'sgk_reference' | 'system_generated' | 'pedagogical_supplement';
 

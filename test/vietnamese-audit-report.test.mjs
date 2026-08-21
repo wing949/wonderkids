@@ -18,11 +18,12 @@ test('báo cáo ghi đủ danh mục SGK, không nhầm bài chờ duyệt thàn
     assert.match(markdown, /10\/10 sách nguồn/);
     assert.match(markdown, /1\.584 trang/);
     assert.match(markdown, /Danh mục bài theo mục lục SGK\s*\|\s*376/);
-    assert.match(markdown, /Hoạt động SGK đã xác minh\s*\|\s*0/);
-    assert.match(markdown, /Danh mục SGK chờ đối chiếu nguyên văn\s*\|\s*376/);
+    assert.match(markdown, /Bài SGK đã xác minh\s*\|\s*8/);
+    assert.match(markdown, /Hoạt động SGK đã xác minh\s*\|\s*29/);
+    assert.match(markdown, /Danh mục SGK chờ đối chiếu nguyên văn\s*\|\s*368/);
     assert.match(markdown, /Bài đang khóa văn bản\/audio chính\s*\|\s*368/);
     assert.match(markdown, /Luyện thêm trong bài\s*\|\s*0/);
-    assert.match(markdown, /Chưa phát hành nội dung SGK chưa duyệt/i);
+    assert.match(markdown, /Chưa phát hành nguyên văn SGK chưa duyệt/i);
     assert.match(
       markdown,
       /Transcript SGK có audio khớp transcript\s*\|\s*1\/[2-9]\d*/,

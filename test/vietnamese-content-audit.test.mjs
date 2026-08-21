@@ -59,13 +59,13 @@ test('toàn bộ 376 bài Tiếng Việt có provenance và trang nguồn để 
   }
 });
 
-test('bài chờ đối chiếu nguyên văn chỉ mở trang SGK, không tự sinh bài đọc thay thế', () => {
+test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và hoạt động SGK', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
 
   const pending = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending');
-  assert.equal(pending.length, 376);
+  assert.equal(pending.length, 368);
   assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 8);
   assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'sgk_reference').length, 376);
   for (const lesson of pending) {
@@ -76,6 +76,21 @@ test('bài chờ đối chiếu nguyên văn chỉ mở trang SGK, không tự s
     if (lesson.provenance.verificationStatus !== 'verified') {
       assert.equal(lesson.sourceCitation?.verificationStatus, 'draft', `Nguồn nháp bị gắn đã duyệt: ${lesson.id}`);
       assert.deepEqual(lesson.readingPassage?.content, [], `Bài chưa duyệt còn văn bản đọc: ${lesson.id}`);
+    }
+  }
+
+  const verified = lessons.filter((lesson) => lesson.catalogSection === 'sgk');
+  assert.equal(verified.length, 8);
+  for (const lesson of verified) {
+    assert.equal(lesson.readingPassage?.verificationStatus, 'verified', `Thiếu nguyên văn đã duyệt: ${lesson.id}`);
+    assert.ok(lesson.readingPassage?.content.length, `Thiếu nguyên văn: ${lesson.id}`);
+    assert.ok(lesson.questions.length > 0, `Thiếu hoạt động SGK: ${lesson.id}`);
+    assert.equal(lesson.appExtensions.length, 0, `Bài SGK không được trộn Luyện thêm: ${lesson.id}`);
+    for (const question of lesson.questions) {
+      assert.match(question.sourceActivityId || '', /^sgk-/, `Thiếu mã hoạt động: ${question.id}`);
+      assert.ok(lesson.sourceCitation.sourcePages.includes(question.sourcePage), `Sai trang hoạt động: ${question.id}`);
+      assert.match(question.sourceSubpart || '', /\S/, `Thiếu tiểu ý: ${question.id}`);
+      assert.ok(['auto', 'self_confirm'].includes(question.gradingMode), `Thiếu cách chấm: ${question.id}`);
     }
   }
 });
@@ -111,13 +126,13 @@ test('bài chờ đối chiếu không có câu hỏi hoặc hoạt động tự
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
 
-  for (const lesson of lessons) {
+  for (const lesson of lessons.filter((item) => item.catalogSection === 'sgk_pending')) {
     assert.equal(lesson.questions.length, 0, `Bài chờ duyệt còn câu hỏi: ${lesson.id}`);
     assert.equal(lesson.appExtensions.length, 0, `Bài chờ duyệt còn Luyện thêm: ${lesson.id}`);
   }
 });
 
-test('thẻ dùng đúng tên bài trong mục lục và không đổi thành Luyện thêm', () => {
+test('thẻ dùng đúng tên bài trong mục lục và giữ đúng trạng thái đã duyệt', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
@@ -126,9 +141,12 @@ test('thẻ dùng đúng tên bài trong mục lục và không đổi thành Lu
     assert.ok(lesson.provenance.referenceLessonTitle, `Thiếu tên bài SGK tham khảo: ${lesson.id}`);
     const declaredTitle = lesson.provenance.referenceLessonTitle;
     assert.equal(lesson.title, declaredTitle, `Sai tên bài hiển thị: ${lesson.id}`);
-    assert.equal(lesson.catalogSection, 'sgk_pending', `Bài bị gắn sai khu: ${lesson.id}`);
+    assert.ok(['sgk', 'sgk_pending'].includes(lesson.catalogSection), `Bài bị gắn sai khu: ${lesson.id}`);
     if (lesson.provenance.verificationStatus !== 'verified') {
+      assert.equal(lesson.catalogSection, 'sgk_pending', `Bài chưa duyệt bị xuất bản: ${lesson.id}`);
       assert.equal(lesson.sourceCitation.verificationStatus, 'draft', `Tên chưa duyệt bị coi là SGK đã duyệt: ${lesson.id}`);
+    } else {
+      assert.equal(lesson.catalogSection, 'sgk', `Bài đã duyệt chưa được xuất bản: ${lesson.id}`);
     }
     assert.equal(lesson.appExtensions.length, 0, `Bài chờ duyệt lại có Luyện thêm: ${lesson.id}`);
   }

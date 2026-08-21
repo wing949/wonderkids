@@ -124,7 +124,7 @@ try {
         expectedTranscriptHash,
         audioTranscriptStatus,
         notes: verifiedSgk
-          ? 'Toàn bộ bài đã qua cổng kiểm duyệt xuất bản.'
+          ? 'Nguyên văn và hoạt động đã nhập có trang/tiểu ý nguồn; tiếp tục bổ sung tiểu ý SGK trước khi công bố hoàn tất bài.'
           : audioTranscriptStatus === 'matched'
             ? 'Bài đọc và cặp audio đã khớp transcript SGK; hoạt động Luyện thêm vẫn được tách riêng.'
           : verifiedTranscript
@@ -175,7 +175,7 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 
 - Đã lập manifest cho **10/10 sách nguồn**, tổng cộng **${totalPages.toLocaleString('vi-VN')} trang**; từng ảnh trang có SHA-256 và được cache riêng ngoài Git.
 - Đã lập **danh mục ${rows.length} bài theo mục lục SGK**; mỗi bài đều có lớp, tập, tên bài và trang mở bài để đối chiếu.
-- **Chưa phát hành nội dung SGK chưa duyệt.** Hiện có **${verifiedLessons} bài SGK đã qua cổng kiểm duyệt**.
+- **Chưa phát hành nguyên văn SGK chưa duyệt.** Hiện có **${verifiedLessons} bài** đã trích nguyên văn và **${sgkActivities} hoạt động** có trang/tiểu ý nguồn; cần tiếp tục đối chiếu các tiểu ý còn lại trước khi công bố hoàn tất từng bài.
 - OCR đã rà 1.584/1.584 trang; **${sourceMatched}/${rows.length} bài** đã có trang mở bài từ mục lục, trong đó **${visuallyReviewed} bài** có thêm ánh xạ trang đã kiểm tra trực quan và **${sourceUnmatched} bài** chưa có trang.
 - Hiện có **${verifiedTranscripts} transcript SGK đã duyệt**. Văn bản/audio chính của **${blockedReadings} bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
 - Có **${catalogPendingLessons} bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.

@@ -17,4 +17,5 @@ export * from './bookManifests';
 export * from './catalogPolicy';
 export * from './lessonPageMappings';
 export * from './sgkTranscripts';
+export * from './sgkActivities';
 export * from './officialCatalog';

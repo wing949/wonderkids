@@ -20,6 +20,18 @@ function truncatePreviewText(value: string): string {
   return `${(lastSpace >= 48 ? clipped.slice(0, lastSpace) : clipped).trimEnd()}…`;
 }
 
+function formatSourcePages(pages: number[]): string {
+  if (pages.length === 0) return '';
+  const isConsecutive = pages.every((page, index) => index === 0 || page === pages[index - 1] + 1);
+  if (isConsecutive && pages.length > 1) return `${pages[0]}–${pages[pages.length - 1]}`;
+  return pages.join(', ');
+}
+
+function getStudentFacingVietnameseTitle(referenceTitle: string, fallback: string): string {
+  const title = referenceTitle || fallback;
+  return title.replace(/^\s*Bài\s*(?:học\s*)?\d+\s*:\s*/i, '').trim() || fallback;
+}
+
 export function getLessonPreviewItems(preview: string) {
   return PREVIEW_LABELS.map((label, index) => {
     const nextLabel = PREVIEW_LABELS[index + 1];
@@ -36,25 +48,22 @@ export function getLessonPreviewItems(preview: string) {
 }
 
 export function getLessonCardContent(lesson: LessonNode) {
-  const isSgk = lesson.catalogSection === 'sgk';
   const vietnamesePages = lesson.sourceCitation?.sourcePages || [];
   const vietnameseVolume = lesson.semester === 2 ? 'hai' : 'một';
   const isVietnameseBookLesson = lesson.subject === 'vietnamese' && vietnamesePages.length > 0;
   const badge = isVietnameseBookLesson
-    ? `📖 SGK Tiếng Việt ${lesson.grade} Tập ${vietnameseVolume} — Trang ${vietnamesePages.join(', ')}`
+    ? `📖 SGK Tiếng Việt ${lesson.grade} Tập ${vietnameseVolume} — Trang ${formatSourcePages(vietnamesePages)}`
     : lesson.subject === 'vietnamese'
       ? '⏳ Đang đối chiếu trang SGK'
     : lesson.textbookPageRef
       ? `📖 ${lesson.textbookPageRef}`
       : 'Bài học';
   const title = isVietnameseBookLesson
-    ? lesson.provenance?.referenceLessonTitle || `Bài ${lesson.order}: ${lesson.title}`
+    ? getStudentFacingVietnameseTitle(lesson.provenance?.referenceLessonTitle || '', lesson.title)
     : lesson.title;
   const preview = lesson.cardPreview || lesson.description;
   return {
-    badge: isSgk && lesson.textbookPageRef && lesson.subject === 'vietnamese'
-      ? `📖 SGK Tiếng Việt ${lesson.grade} Tập ${vietnameseVolume} — ${lesson.textbookPageRef}`
-      : badge,
+    badge,
     title,
     preview,
     previewItems: lesson.subject === 'vietnamese' ? getLessonPreviewItems(preview) : [],

@@ -18,6 +18,8 @@ import {
   getVietnameseBookManifest,
   getVietnameseLessonPageMapping,
   getVerifiedVietnameseSgkTranscript,
+  getVerifiedVietnameseSgkActivities,
+  getVerifiedVietnameseSgkActivityPages,
 } from './vietnamese';
 import { ENGLISH_CURRICULUM_BY_GRADE } from './english';
 
@@ -283,7 +285,8 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     const isPendingSgkCatalog = subject === 'vietnamese'
       && t.sourceType === 'sgk_official'
       && Array.isArray(t.sourcePages)
-      && t.sourcePages.length > 0;
+      && t.sourcePages.length > 0
+      && !verifiedSgkTranscript;
 
     // Không cho phần đọc/câu hỏi cũ chen vào một bài SGK mới chỉ mới đối chiếu mục lục.
     // Bài chưa duyệt chỉ mở trang sách; transcript đã duyệt là ngoại lệ duy nhất.
@@ -408,18 +411,29 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       ? getVietnameseLessonPageMapping(normalizedId)?.sourcePages
       : undefined;
     const sourcePages = provenance.contentOrigin !== 'pedagogical_supplement'
-      ? verifiedSgkTranscript?.sourcePages || t.sourcePages || mappedSourcePages || []
+      ? [...new Set([
+          ...(verifiedSgkTranscript?.sourcePages || []),
+          ...(subject === 'vietnamese' ? getVerifiedVietnameseSgkActivityPages(normalizedId) : []),
+          ...(!verifiedSgkTranscript ? (t.sourcePages || mappedSourcePages || []) : []),
+        ])]
       : [];
     const allowSupplementReading = subject === 'vietnamese'
       && !isPendingSgkCatalog
       && ((grade === 1 && t.semester === 1) || provenance.contentOrigin === 'pedagogical_supplement');
     const effectiveSourceBook = (isVerifiedSgk || isPendingSgkCatalog) ? declaredSourceBook : 'WonderKids';
     const effectiveSourceDetail = (isVerifiedSgk || isPendingSgkCatalog) ? declaredSourceDetail : 'Nội dung luyện thêm';
+    const verifiedSgkActivities = subject === 'vietnamese' && verifiedSgkTranscript
+      ? getVerifiedVietnameseSgkActivities(normalizedId)
+      : [];
     const rawQuestions = isPendingSgkCatalog
       ? []
-      : bundle?.questions || generateQuestionsForTopic(t, subject, grade);
+      : verifiedSgkActivities.length > 0
+        ? verifiedSgkActivities
+        : bundle?.questions || generateQuestionsForTopic(t, subject, grade);
     const questions = subject === 'vietnamese'
-      ? rawQuestions.map((question) => prepareGeneratedQuestion(question, t.title, displayedTitle))
+      ? (verifiedSgkActivities.length > 0
+          ? rawQuestions
+          : rawQuestions.map((question) => prepareGeneratedQuestion(question, t.title, displayedTitle)))
       : rawQuestions;
     const lessonOverview = subject === 'vietnamese' && (isUnverifiedVietnamese || Boolean(verifiedSgkTranscript))
       ? (verifiedSgkTranscript

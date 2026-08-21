@@ -53,14 +53,14 @@ test('10 manifest sách ghi đúng tổng 1.584 trang và chưa tự nhận đã
   }
 });
 
-test('danh mục mục lục SGK chưa duyệt nguyên văn được tách rõ khỏi Luyện thêm', () => {
+test('danh mục SGK tách rõ bài đã duyệt nguyên văn, bài chờ duyệt và Luyện thêm', () => {
   const lessons = [1, 2, 3, 4, 5].flatMap((grade) =>
     curriculum.getLessonsForGradeAndSubject(grade, 'vietnamese')
   );
 
   assert.equal(lessons.length, 376);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 0);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 376);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 8);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 368);
   assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'extra_practice').length, 0);
 
   for (const lesson of lessons) {
@@ -70,7 +70,11 @@ test('danh mục mục lục SGK chưa duyệt nguyên văn được tách rõ k
     assert.ok(lesson.sourceCitation, `Thiếu trích dẫn SGK: ${lesson.id}`);
     assert.ok(Array.isArray(lesson.sourcePageImageUrls), `Thiếu danh sách ảnh nguồn: ${lesson.id}`);
     assert.ok(lesson.sourcePageImageUrls.length > 0, `Thiếu ảnh trang SGK để hiển thị trong bài: ${lesson.id}`);
-    assert.equal(lesson.questions.length, 0, `Bài chờ duyệt không được sinh câu hỏi: ${lesson.id}`);
+    if (lesson.catalogSection === 'sgk_pending') {
+      assert.equal(lesson.questions.length, 0, `Bài chờ duyệt không được sinh câu hỏi: ${lesson.id}`);
+    } else {
+      assert.ok(lesson.questions.length > 0, `Bài đã duyệt thiếu hoạt động: ${lesson.id}`);
+    }
     assert.equal(lesson.appExtensions.length, 0, `Bài chờ duyệt không được gắn Luyện thêm: ${lesson.id}`);
   }
 });
@@ -79,9 +83,9 @@ test('thẻ bài chỉ dùng nội dung học, không dùng ghi chú provenance'
   const lesson = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[0];
   const card = cards.getLessonCardContent(lesson);
 
-  assert.equal(card.badge, '📖 SGK Tiếng Việt 2 Tập một — Trang 10, 11');
-  assert.equal(card.title, 'Bài 1: Tôi là học sinh lớp 2');
-  assert.equal(card.title, lesson.provenance.referenceLessonTitle);
+  assert.equal(card.badge, '📖 SGK Tiếng Việt 2 Tập một — Trang 10–12');
+  assert.equal(card.title, 'Tôi là học sinh lớp 2');
+  assert.doesNotMatch(card.title, /^Bài\s*\d+\s*:/i, 'Số bài đã nằm trong phần SGK và không lặp lại ở tiêu đề thẻ');
   assert.equal(card.preview, lesson.cardPreview);
   assert.match(card.preview, /Nội dung:/);
   assert.match(card.preview, /Mục tiêu:/);
@@ -127,8 +131,8 @@ test('bài học nối tới đúng ảnh trang sách chính thức để hiển
   const lesson = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[0];
   assert.ok(lesson.sourceCitation);
   assert.equal(lesson.sourceCitation.bookId, 'tv-g2-t1');
-  assert.deepEqual(lesson.sourceCitation.sourcePages, [10, 11]);
-  assert.equal(lesson.sourcePageImageUrls.length, 2);
+  assert.deepEqual(lesson.sourceCitation.sourcePages, [10, 11, 12]);
+  assert.equal(lesson.sourcePageImageUrls.length, 3);
   assert.match(lesson.sourcePageImageUrls[0], /4698590737-page-11-/);
 });
 
@@ -260,7 +264,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 test('ranh giới Em có xinh không và Một giờ học không chồng trang', () => {
   const emCoXinhKhong = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[4];
   const motGioHoc = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[5];
-  assert.deepEqual(emCoXinhKhong.sourceCitation?.sourcePages, [24, 25]);
+  assert.deepEqual(emCoXinhKhong.sourceCitation?.sourcePages, [24, 25, 26]);
   assert.equal(motGioHoc.sourceCitation?.sourcePages[0], 27);
 });
 
