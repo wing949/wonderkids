@@ -65,8 +65,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   ));
 
   const pending = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending');
-  assert.equal(pending.length, 364);
-  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 12);
+  assert.equal(pending.length, 362);
+  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 14);
   assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'sgk_reference').length, 376);
   for (const lesson of pending) {
     assert.equal(lesson.sourceType, 'sgk_official', `Bài mục lục không có nguồn SGK: ${lesson.id}`);
@@ -80,7 +80,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   }
 
   const verified = lessons.filter((lesson) => lesson.catalogSection === 'sgk');
-  assert.equal(verified.length, 12);
+  assert.equal(verified.length, 14);
   for (const lesson of verified) {
     assert.equal(lesson.readingPassage?.verificationStatus, 'verified', `Thiếu nguyên văn đã duyệt: ${lesson.id}`);
     assert.ok(lesson.readingPassage?.content.length, `Thiếu nguyên văn: ${lesson.id}`);
@@ -145,6 +145,41 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
     danhSachHocSinh.readingPassage?.audioNarration,
     [danhSachHocSinh.readingPassage?.title, ...danhSachHocSinh.readingPassage?.content].join('\n'),
     'Transcript audio Bài 12 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
+  );
+
+  const yeuLamTruongOi = verified.find((lesson) => lesson.id === 'tv-g2-b13');
+  assert.ok(yeuLamTruongOi, 'Bài 13 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(yeuLamTruongOi.title, 'Bài 13: Yêu lắm trường ơi!');
+  assert.deepEqual(yeuLamTruongOi.sourceCitation.sourcePages, [55, 56, 57]);
+  assert.deepEqual(yeuLamTruongOi.readingPassage?.content, [
+    'Em yêu mái trường\nCó hàng cây mát\nXôn xao khúc nhạc\nTiếng chim xanh trời.',
+    'Mỗi giờ ra chơi\nSân trường nhộn nhịp\nHồng hào gương mặt\nBạn nào cũng xinh.',
+    'Yêu lớp học em\nCó khung cửa sổ\nCó bàn tay lá\nQuạt gió mát vào.',
+    'Lời cô ngọt ngào\nThấm từng trang sách\nNgày không đến lớp\nThấy nhớ nhớ ghê!',
+    'Có đêm trong mơ\nBỗng cười khúc khích\nNgỡ đang ở lớp\nCùng bạn đùa vui.',
+  ]);
+  assert.equal(yeuLamTruongOi.questions.length, 14);
+  assert.equal(
+    yeuLamTruongOi.readingPassage?.audioNarration,
+    [yeuLamTruongOi.readingPassage?.title, ...yeuLamTruongOi.readingPassage?.content].join('\n'),
+    'Transcript audio Bài 13 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
+  );
+
+  const emHocVe = verified.find((lesson) => lesson.id === 'tv-g2-b14');
+  assert.ok(emHocVe, 'Bài 14 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(emHocVe.title, 'Bài 14: Em học vẽ');
+  assert.deepEqual(emHocVe.sourceCitation.sourcePages, [58, 59, 60, 61, 62]);
+  assert.deepEqual(emHocVe.readingPassage?.content, [
+    'Hôm nay trong lớp học\nVới giấy trắng, bút màu\nNắn nót em ngồi vẽ\nLung linh bầu trời sao.',
+    'Vẽ ông trăng trên cao\nRải ánh vàng đầy ngõ\nVẽ cánh diều no gió\nVi vu giữa trời xanh.',
+    'Vẽ biển cả trong lành\nCó một con thuyền trắng\nGiương cánh buồm đỏ thắm\nĐang rẽ sóng ra khơi.',
+    'Vẽ cả ông mặt trời\nVà những chùm phượng đỏ\nTrên sân trường lộng gió\nGọi ve về râm ran.',
+  ]);
+  assert.equal(emHocVe.questions.length, 23);
+  assert.equal(
+    emHocVe.readingPassage?.audioNarration,
+    [emHocVe.readingPassage?.title, ...emHocVe.readingPassage?.content].join('\n'),
+    'Transcript audio Bài 14 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
   );
 });
 

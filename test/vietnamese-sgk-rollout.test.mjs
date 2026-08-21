@@ -59,8 +59,8 @@ test('danh mục SGK tách rõ bài đã duyệt nguyên văn, bài chờ duyệ
   );
 
   assert.equal(lessons.length, 376);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 12);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 364);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 14);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 362);
   assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'extra_practice').length, 0);
 
   for (const lesson of lessons) {
@@ -244,7 +244,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
   ]);
 
   const unverifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')
-    .find((lesson) => lesson.id === 'tv-g2-b13');
+    .find((lesson) => lesson.id === 'tv-g2-b15');
   assert.ok(unverifiedTranscript, 'Thiếu bài chờ duyệt để kiểm tra khóa đọc mẫu');
   assert.equal(readingPolicy.getVietnameseReadingPolicy(unverifiedTranscript), 'source_only');
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(unverifiedTranscript), false);

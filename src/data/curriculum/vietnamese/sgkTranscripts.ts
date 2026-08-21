@@ -279,6 +279,52 @@ const VERIFIED_SGK_TRANSCRIPTS: Record<string, VietnameseSgkTranscript> = {
     sourcePages: [51, 52, 53, 54],
     sourceHash: '2e9425b206b518bbe5e89c2a1ff540d369a1e3711d150ab759813fcd38fe6a41',
   },
+  'tv-g2-b13': {
+    title: 'Yêu lắm trường ơi!',
+    author: 'Nguyễn Trọng Hoàn',
+    genre: 'poem',
+    content: [
+      'Em yêu mái trường\nCó hàng cây mát\nXôn xao khúc nhạc\nTiếng chim xanh trời.',
+      'Mỗi giờ ra chơi\nSân trường nhộn nhịp\nHồng hào gương mặt\nBạn nào cũng xinh.',
+      'Yêu lớp học em\nCó khung cửa sổ\nCó bàn tay lá\nQuạt gió mát vào.',
+      'Lời cô ngọt ngào\nThấm từng trang sách\nNgày không đến lớp\nThấy nhớ nhớ ghê!',
+      'Có đêm trong mơ\nBỗng cười khúc khích\nNgỡ đang ở lớp\nCùng bạn đùa vui.',
+    ],
+    audioNarration: [
+      'Yêu lắm trường ơi!',
+      'Em yêu mái trường\nCó hàng cây mát\nXôn xao khúc nhạc\nTiếng chim xanh trời.',
+      'Mỗi giờ ra chơi\nSân trường nhộn nhịp\nHồng hào gương mặt\nBạn nào cũng xinh.',
+      'Yêu lớp học em\nCó khung cửa sổ\nCó bàn tay lá\nQuạt gió mát vào.',
+      'Lời cô ngọt ngào\nThấm từng trang sách\nNgày không đến lớp\nThấy nhớ nhớ ghê!',
+      'Có đêm trong mơ\nBỗng cười khúc khích\nNgỡ đang ở lớp\nCùng bạn đùa vui.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [55, 56, 57],
+    sourceHash: 'd35e65e438db5ea7b35789dbee519fe90cd50be2425190552d2977b732eb5894',
+  },
+  'tv-g2-b14': {
+    title: 'Em học vẽ',
+    author: 'Phan Thị Diên',
+    genre: 'poem',
+    content: [
+      'Hôm nay trong lớp học\nVới giấy trắng, bút màu\nNắn nót em ngồi vẽ\nLung linh bầu trời sao.',
+      'Vẽ ông trăng trên cao\nRải ánh vàng đầy ngõ\nVẽ cánh diều no gió\nVi vu giữa trời xanh.',
+      'Vẽ biển cả trong lành\nCó một con thuyền trắng\nGiương cánh buồm đỏ thắm\nĐang rẽ sóng ra khơi.',
+      'Vẽ cả ông mặt trời\nVà những chùm phượng đỏ\nTrên sân trường lộng gió\nGọi ve về râm ran.',
+    ],
+    audioNarration: [
+      'Em học vẽ',
+      'Hôm nay trong lớp học\nVới giấy trắng, bút màu\nNắn nót em ngồi vẽ\nLung linh bầu trời sao.',
+      'Vẽ ông trăng trên cao\nRải ánh vàng đầy ngõ\nVẽ cánh diều no gió\nVi vu giữa trời xanh.',
+      'Vẽ biển cả trong lành\nCó một con thuyền trắng\nGiương cánh buồm đỏ thắm\nĐang rẽ sóng ra khơi.',
+      'Vẽ cả ông mặt trời\nVà những chùm phượng đỏ\nTrên sân trường lộng gió\nGọi ve về râm ran.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [58, 59, 60, 61, 62],
+    sourceHash: '62efa07a70f9d391158b6f1656a216710765b07addb4398155a90bdfd5d70c6f',
+  },
 };
 
 function normalizeLessonId(lessonId: string): string {

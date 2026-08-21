@@ -318,23 +318,29 @@
     "lessonId": "tv-g2-b13",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      55
+      55,
+      56,
+      57
     ],
     "matchedTitle": "Bài 13: Yêu lắm trường ơi!",
     "matchedText": "e yeu lam truong oi",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b14": {
     "lessonId": "tv-g2-b14",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      58
+      58,
+      59,
+      60,
+      61,
+      62
     ],
     "matchedTitle": "Bài 14: Em học vẽ",
     "matchedText": "boi i y em hoc ve",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b15": {
     "lessonId": "tv-g2-b15",

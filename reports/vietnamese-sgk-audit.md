@@ -8,11 +8,11 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 
 - Đã lập manifest cho **10/10 sách nguồn**, tổng cộng **1.584 trang**; từng ảnh trang có SHA-256 và được cache riêng ngoài Git.
 - Đã lập **danh mục 376 bài theo mục lục SGK**; mỗi bài đều có lớp, tập, tên bài và trang mở bài để đối chiếu.
-- **Chưa phát hành nguyên văn SGK chưa duyệt.** Hiện có **12 bài** đã trích nguyên văn và **82 hoạt động** có trang/tiểu ý nguồn; cần tiếp tục đối chiếu các tiểu ý còn lại trước khi công bố hoàn tất từng bài.
-- OCR đã rà 1.584/1.584 trang; **376/376 bài** đã có trang mở bài từ mục lục, trong đó **12 bài** có thêm ánh xạ trang đã kiểm tra trực quan và **0 bài** chưa có trang.
-- Hiện có **12 transcript SGK đã duyệt**. Văn bản/audio chính của **364 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
-- Có **364 bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.
-- Kho kỹ thuật hiện có một file chính và một fallback hợp lệ cho **12/376 bài**. Chỉ **12/12 transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
+- **Chưa phát hành nguyên văn SGK chưa duyệt.** Hiện có **14 bài** đã trích nguyên văn và **119 hoạt động** có trang/tiểu ý nguồn; cần tiếp tục đối chiếu các tiểu ý còn lại trước khi công bố hoàn tất từng bài.
+- OCR đã rà 1.584/1.584 trang; **376/376 bài** đã có trang mở bài từ mục lục, trong đó **14 bài** có thêm ánh xạ trang đã kiểm tra trực quan và **0 bài** chưa có trang.
+- Hiện có **14 transcript SGK đã duyệt**. Văn bản/audio chính của **362 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
+- Có **362 bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.
+- Kho kỹ thuật hiện có một file chính và một fallback hợp lệ cho **14/376 bài**. Chỉ **14/14 transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
 
 ## Thống kê
 
@@ -21,17 +21,17 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | Sách nguồn đã lập manifest | 10/10 |
 | Trang nguồn đã lập checksum | 1.584 |
 | Danh mục bài theo mục lục SGK | 376 |
-| Bài SGK đã xác minh | 12 |
-| Danh mục SGK chờ đối chiếu nguyên văn | 364 |
+| Bài SGK đã xác minh | 14 |
+| Danh mục SGK chờ đối chiếu nguyên văn | 362 |
 | Trang mở bài đã xác định | 376/376 |
-| Ánh xạ đã kiểm tra trực quan | 12 |
+| Ánh xạ đã kiểm tra trực quan | 14 |
 | Mục chưa khớp trang | 0 |
-| Transcript SGK đã xác minh | 12 |
-| Transcript SGK có audio khớp transcript | 12/12 |
-| Bài đang khóa văn bản/audio chính | 364 |
-| Hoạt động SGK đã xác minh | 82 |
+| Transcript SGK đã xác minh | 14 |
+| Transcript SGK có audio khớp transcript | 14/14 |
+| Bài đang khóa văn bản/audio chính | 362 |
+| Hoạt động SGK đã xác minh | 119 |
 | Luyện thêm trong bài | 0 |
-| Cặp audio chính/fallback đạt kiểm tra file | 12/376 |
+| Cặp audio chính/fallback đạt kiểm tra file | 14/376 |
 
 ## Tiến độ từng sách
 
@@ -192,8 +192,8 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | tv-g2-b10 | 2/1 | Bài 10: Thời khoá biểu | visually_reviewed | verified_sgk_transcript | 10 | 0 |
 | tv-g2-b11 | 2/1 | Bài 11: Cái trống trường em | visually_reviewed | verified_sgk_transcript | 12 | 0 |
 | tv-g2-b12 | 2/1 | Bài 12: Danh sách học sinh | visually_reviewed | verified_sgk_transcript | 21 | 0 |
-| tv-g2-b13 | 2/1 | Bài 13: Yêu lắm trường ơi! | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
-| tv-g2-b14 | 2/1 | Bài 14: Em học vẽ | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
+| tv-g2-b13 | 2/1 | Bài 13: Yêu lắm trường ơi! | visually_reviewed | verified_sgk_transcript | 14 | 0 |
+| tv-g2-b14 | 2/1 | Bài 14: Em học vẽ | visually_reviewed | verified_sgk_transcript | 23 | 0 |
 | tv-g2-b15 | 2/1 | Bài 15: Cuốn sách của em | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
 | tv-g2-b16 | 2/1 | Bài 16: Khi trang sách mở ra | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
 | tv-g2-b17 | 2/1 | Bài 17: Gọi bạn | ocr_matched | catalog_page_pending_transcript | 0 | 0 |

@@ -234,14 +234,14 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
     "semester": 1,
     "lessonNumber": 13,
     "title": "Bài 13: Yêu lắm trường ơi!",
-    "unit": "Trang 58, 59 (Chủ điểm 4: Mái trường thân yêu)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 58, 59 (Chủ điểm 4: Mái trường thân yêu)",
+    "unit": "Trang 55, 56, 57 (Chủ điểm 4: Mái trường thân yêu)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 55, 56, 57 (Chủ điểm 4: Mái trường thân yêu)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 58, 59 (Chủ điểm 4: Mái trường thân yêu)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 55, 56, 57 (Chủ điểm 4: Mái trường thân yêu)",
     "pedagogicalObjective": "Học thuộc lòng bài thơ, bồi dưỡng tình yêu trường lớp, thầy cô và bạn bè thân thương.",
     "description": "Bài đọc \"Bài 13: Yêu lắm trường ơi!\" (Tác giả: Nguyễn Trọng Hoàn) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 13: Yêu lắm trường ơi!\" — SGK Tiếng Việt 2 Tập một — Trang 58, 59 (Chủ điểm 4: Mái trường thân yêu)",
+    "summary": "Bài đọc \"Bài 13: Yêu lắm trường ơi!\" — SGK Tiếng Việt 2 Tập một — Trang 55, 56, 57 (Chủ điểm 4: Mái trường thân yêu)",
     "keyPoints": [
       "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
       "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
@@ -253,19 +253,19 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
     "semester": 1,
     "lessonNumber": 14,
     "title": "Bài 14: Em học vẽ",
-    "unit": "Trang 62, 63 (Chủ điểm 4: Mái trường thân yêu)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 62, 63 (Chủ điểm 4: Mái trường thân yêu)",
+    "unit": "Trang 58, 59, 60, 61, 62 (Chủ điểm 4: Mái trường thân yêu)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 58, 59, 60, 61, 62 (Chủ điểm 4: Mái trường thân yêu)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 62, 63 (Chủ điểm 4: Mái trường thân yêu)",
-    "pedagogicalObjective": "Đọc diễn cảm bài thơ, phát huy trí tưởng tượng và tình cảm hiếu thảo với cha mẹ.",
-    "description": "Bài đọc \"Bài 14: Em học vẽ\" (Tác giả: Phan Thị Thanh Nhàn) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 14: Em học vẽ\" — SGK Tiếng Việt 2 Tập một — Trang 62, 63 (Chủ điểm 4: Mái trường thân yêu)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 58, 59, 60, 61, 62 (Chủ điểm 4: Mái trường thân yêu)",
+    "pedagogicalObjective": "Đọc diễn cảm bài thơ, cảm nhận vẻ đẹp của bức tranh và rèn kĩ năng viết về đồ vật dùng để vẽ.",
+    "description": "Bài đọc \"Bài 14: Em học vẽ\" (Tác giả: Phan Thị Diên) chuẩn SGK Tiếng Việt 2 Tập 1.",
+    "summary": "Bài đọc \"Bài 14: Em học vẽ\" — SGK Tiếng Việt 2 Tập một — Trang 58, 59, 60, 61, 62 (Chủ điểm 4: Mái trường thân yêu)",
     "keyPoints": [
       "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
       "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 14: Em học vẽ\" của tác giả Phan Thị Thanh Nhàn nhé!"
+    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 14: Em học vẽ\" của tác giả Phan Thị Diên nhé!"
   },
   {
     "id": "tv-g2-b15",
