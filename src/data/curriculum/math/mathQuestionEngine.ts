@@ -107,11 +107,12 @@ function generateGrade1Math(topic: CurriculumTopic): Question[] {
   if (includesAny(text, ['tách', 'gộp'])) return [bubble(topic, 'q1', 'Số 7 có thể tách thành 5 và mấy?', '2', ['1', '3'], 'Tìm số còn thiếu để 5 gộp với số đó được 7.')];
   if (text.includes('phép tính') && text.includes('phạm vi 20')) return [keypad(topic, 'q1', 'Luyện tập phép cộng và phép trừ trong phạm vi 20: 8 + 7 = ?', 15, 'Tính lần lượt các phép cộng, phép trừ trong phạm vi 20.')];
   if (text.includes('phạm vi 100') && includesAny(text, ['phép cộng', 'phép trừ'])) return [keypad(topic, 'q1', 'Luyện tập phép cộng và phép trừ trong phạm vi 100: 46 - 18 = ?', 28, 'Đặt tính thẳng cột rồi tính.')];
+  if (text.includes('phép cộng') && text.includes('phép trừ')) return [keypad(topic, 'q1', 'Luyện tập phép cộng và phép trừ: 8 + 5 = ?', 13, 'Tính lần lượt các phép cộng và phép trừ trong bài.')];
   if (includesAny(text, ['phép trừ', 'bảng trừ'])) {
     if (text.includes('hai chữ số')) {
       const minuend = text.includes('cho số có hai chữ số') ? 63 : 42;
       const subtrahend = text.includes('cho số có hai chữ số') ? 21 : 7;
-      return [keypad(topic, 'q1', `Tính: ${minuend} - ${subtrahend} = ?`, minuend - subtrahend, 'Đặt tính thẳng cột rồi trừ từ hàng đơn vị.')];
+      return [keypad(topic, 'q1', `Phép trừ số có hai chữ số: ${minuend} - ${subtrahend} = ?`, minuend - subtrahend, 'Đặt tính thẳng cột rồi trừ từ hàng đơn vị.')];
     }
     const minuend = (n % 4) + 6;
     const subtrahend = (n % 3) + 1;
@@ -121,7 +122,7 @@ function generateGrade1Math(topic: CurriculumTopic): Question[] {
     if (text.includes('hai chữ số')) {
       const left = text.includes('với số có hai chữ số') ? 23 : 24;
       const right = text.includes('với số có hai chữ số') ? 14 : 5;
-      return [keypad(topic, 'q1', `Tính: ${left} + ${right} = ?`, left + right, 'Đặt tính thẳng cột rồi cộng từ hàng đơn vị.')];
+      return [keypad(topic, 'q1', `Phép cộng số có hai chữ số: ${left} + ${right} = ?`, left + right, 'Đặt tính thẳng cột rồi cộng từ hàng đơn vị.')];
     }
     const left = (n % 4) + 3;
     const right = (n % 3) + 1;
@@ -141,12 +142,15 @@ function generateGrade2Math(topic: CurriculumTopic): Question[] {
   if (text.includes('biểu đồ tranh')) return [bubble(topic, 'q1', 'Quan sát biểu đồ tranh: nhóm nào có nhiều biểu tượng hơn?', 'Nhóm A', ['Nhóm B', 'Hai nhóm bằng nhau'], 'Đọc chú giải rồi so sánh số biểu tượng trong từng nhóm.')];
   if (includesAny(text, ['biểu đồ tranh', 'thống kê', 'phân loại', 'kiểm đếm', 'số liệu'])) return [bubble(topic, 'q1', 'Việc thu thập và ghi chép số liệu về số bạn chọn từng loại quả là hoạt động gì?', 'Thu thập và ghi chép số liệu', ['Đo độ dài', 'Tính chu vi'], 'Đếm và ghi lại thông tin là thu thập số liệu.')];
   if (text.includes('ngày - tháng')) return [bubble(topic, 'q1', 'Tháng 4 có bao nhiêu ngày?', '30 ngày', ['28 ngày', '31 ngày'], 'Tháng 4 thuộc nhóm tháng có 30 ngày.')];
+  if (text.includes('ôn tập phép cộng') && text.includes('phép trừ')) return [keypad(topic, 'q1', 'Ôn tập phép cộng và phép trừ: 324 + 143 = ?', 467, 'Đặt tính thẳng cột rồi tính cẩn thận.')];
+  if (text.includes('phạm vi 100') && text.includes('ôn tập')) return [bubble(topic, 'q1', 'Ôn tập số có hai chữ số trong phạm vi 100: số liền sau 40 là:', '41', ['39', '50'], 'Số liền sau lớn hơn số đã cho 1 đơn vị.')];
   if (includesAny(text, ['ngày', 'giờ', 'tháng', 'thời gian'])) return [bubble(topic, 'q1', '1 giờ có bao nhiêu phút?', '60 phút', ['30 phút', '100 phút'], 'Nhớ mối quan hệ giữa giờ và phút.')];
   if (includesAny(text, ['khối trụ', 'khối cầu', 'hình khối'])) return [bubble(topic, 'q1', 'Quả bóng có dạng khối cầu hay khối trụ?', 'Khối cầu', ['Khối trụ', 'Khối lập phương'], 'Khối cầu tròn đều như một quả bóng.')];
   if (includesAny(text, ['ki-lô-gam', 'lít', 'cân đo', 'khối lượng', 'dung tích'])) {
     if (text.includes('lít') || text.includes('dung tích')) return [bubble(topic, 'q1', 'Một can có 8 lít nước, rót ra 3 lít. Còn lại bao nhiêu lít?', '5 lít', ['11 lít', '3 lít'], 'Lấy số lít ban đầu trừ số lít đã rót ra.')];
     return [bubble(topic, 'q1', 'Một túi gạo nặng 3 kg, túi thứ hai nặng 2 kg. Cả hai túi nặng bao nhiêu ki-lô-gam?', '5 kg', ['1 kg', '6 kg'], 'Cộng khối lượng của hai túi.')];
   }
+  if (text.includes('độ dài đoạn thẳng') || text.includes('độ dài đường gấp khúc')) return [bubble(topic, 'q1', 'Đường gấp khúc có các đoạn dài 3 cm, 4 cm và 5 cm. Độ dài đường gấp khúc là:', '12 cm', ['9 cm', '15 cm'], 'Cộng độ dài các đoạn thẳng liên tiếp.')];
   if (includesAny(text, ['đề-xi-mét', 'mét', 'ki-lô-mét', 'độ dài', 'đo khoảng cách'])) {
     if (text.includes('ki-lô-mét')) return [bubble(topic, 'q1', '1 ki-lô-mét bằng bao nhiêu mét?', '1000 m', ['100 m', '10 m'], 'Ki-lô-mét là đơn vị đo khoảng cách lớn.')];
     if (text.includes('đề-xi-mét')) return [bubble(topic, 'q1', '1 đề-xi-mét bằng bao nhiêu xăng-ti-mét?', '10 cm', ['100 cm', '1 cm'], 'Một dm gồm 10 cm.')];
@@ -156,6 +160,7 @@ function generateGrade2Math(topic: CurriculumTopic): Question[] {
   }
   if (text.includes('thêm') && text.includes('bớt')) return [bubble(topic, 'q1', 'Bài toán thêm, bớt: Có 8 quả bóng, thêm 3 quả rồi bớt 2 quả. Còn lại bao nhiêu quả?', '9 quả', ['7 quả', '11 quả'], 'Thực hiện lần lượt phép cộng rồi phép trừ.')];
   if (text.includes('nhiều hơn') || text.includes('ít hơn')) return [bubble(topic, 'q1', 'Lan có 8 nhãn vở, Mai có nhiều hơn Lan 3 nhãn vở. Mai có bao nhiêu nhãn vở?', '11 nhãn vở', ['5 nhãn vở', '24 nhãn vở'], 'Nhiều hơn nghĩa là lấy số đã biết cộng phần nhiều hơn.')];
+  if (text.includes('độ dài đoạn thẳng') || text.includes('độ dài đường gấp khúc')) return [bubble(topic, 'q1', 'Đường gấp khúc có các đoạn dài 3 cm, 4 cm và 5 cm. Độ dài đường gấp khúc là:', '12 cm', ['9 cm', '15 cm'], 'Cộng độ dài các đoạn thẳng liên tiếp.')];
   if (includesAny(text, ['điểm', 'đoạn thẳng', 'đường thẳng', 'đường cong', 'đường gấp khúc'])) return [bubble(topic, 'q1', 'Đường gấp khúc gồm các đoạn thẳng nối tiếp nhau. Phát biểu này đúng hay sai?', 'Đúng', ['Sai', 'Không thể biết'], 'Quan sát các đoạn thẳng nối tiếp tạo thành đường gấp khúc.')];
   if (text.includes('bảng chia') && text.includes('luyện tập chung')) {
     return [bubble(topic, 'q1', 'Luyện tập bảng chia: 20 : 5 = ?', '4', ['3', '5'], 'Nhớ số nào nhân với 5 được 20.')];
@@ -175,6 +180,7 @@ function generateGrade2Math(topic: CurriculumTopic): Question[] {
     return [bubble(topic, 'q1', `${divisor * quotient} : ${divisor} = ?`, String(quotient), [String(quotient - 1), String(quotient + 1)], 'Tìm số nhân với số chia để được số bị chia.')];
   }
   if (includesAny(text, ['so sánh', 'liền trước', 'liền sau', 'tia số'])) {
+    if (text.includes('so sánh các số')) return [bubble(topic, 'q1', 'So sánh hai số 328 và 283: số nào lớn hơn?', '328', ['283', 'Hai số bằng nhau'], 'So sánh từ hàng trăm, rồi đến hàng chục và hàng đơn vị.')];
     const base = 300 + n;
     return [bubble(topic, 'q1', `Số liền sau của ${base} là:`, String(base + 1), [String(base - 1), String(base + 10)], 'Số liền sau lớn hơn số đã cho 1 đơn vị.')];
   }
@@ -204,6 +210,8 @@ function generateGrade2Math(topic: CurriculumTopic): Question[] {
 function generateGrade3Math(topic: CurriculumTopic): Question[] {
   const text = `${topic.title} ${topic.description}`.toLowerCase();
 
+  if (text.includes('tìm thành phần chưa biết') || text.includes('tìm x')) return [keypad(topic, 'q1', 'Tìm x (thành phần chưa biết): x + 25 = 60. x = ?', 35, 'Muốn tìm số hạng chưa biết, lấy tổng trừ số hạng đã biết.')];
+  if (text.includes('trung điểm')) return [bubble(topic, 'q1', 'Đoạn thẳng AB dài 8 cm, M là trung điểm của đoạn thẳng. Độ dài mỗi nửa đoạn là:', '4 cm', ['2 cm', '8 cm'], 'Trung điểm chia đoạn thẳng thành hai đoạn bằng nhau.')];
   if (includesAny(text, ['bảng nhân'])) {
     const match = text.match(/bảng nhân\s+(\d)/);
     const factor = match ? Number(match[1]) : 3;
@@ -217,6 +225,7 @@ function generateGrade3Math(topic: CurriculumTopic): Question[] {
   if (includesAny(text, ['hình tròn', 'bán kính', 'đường kính'])) return [bubble(topic, 'q1', 'Trong hình tròn, đoạn thẳng đi qua tâm và có hai đầu nằm trên đường tròn gọi là đường kính hay bán kính?', 'Đường kính', ['Bán kính', 'Cạnh'], 'Đường kính đi qua tâm và dài gấp hai lần bán kính.')];
   if (includesAny(text, ['góc vuông', 'góc không vuông', 'ê-ke'])) return [bubble(topic, 'q1', 'Dụng cụ nào dùng để kiểm tra một góc có phải góc vuông?', 'Thước ê-ke', ['Com-pa', 'Thước dây'], 'Thước ê-ke có một góc vuông chuẩn.')];
   if (includesAny(text, ['nhân số'])) return [keypad(topic, 'q1', 'Tính: 234 × 3 = ?', 702, 'Nhân lần lượt từ hàng đơn vị, chục rồi đến trăm.')];
+  if (text.includes('năm chữ số') && text.includes('chia')) return [bubble(topic, 'q1', 'Chia số có năm chữ số: 12.648 : 3 = ?', '4.216', ['4.026', '5.216'], 'Chia lần lượt từ hàng chục nghìn đến hàng đơn vị.')];
   if (includesAny(text, ['chia số'])) return [bubble(topic, 'q1', 'Tính: 648 : 3 = ?', '216', ['206', '226'], 'Chia lần lượt theo các hàng của số bị chia.')];
   if (text.includes('gam')) return [bubble(topic, 'q1', '1 ki-lô-gam bằng bao nhiêu gam?', '1000 g', ['100 g', '10 g'], 'Nhớ mối quan hệ giữa kg và g.')];
   if (text.includes('mi-li-lít') || text.includes('mi-li-mét')) return [bubble(topic, 'q1', '1 xăng-ti-mét bằng bao nhiêu mi-li-mét?', '10 mm', ['100 mm', '1 mm'], 'Một cm được chia thành 10 mm.')];
@@ -227,7 +236,14 @@ function generateGrade3Math(topic: CurriculumTopic): Question[] {
   if (includesAny(text, ['diện tích', 'cm²'])) return [bubble(topic, 'q1', 'Hình chữ nhật dài 6 cm, rộng 4 cm có diện tích là:', '24 cm²', ['20 cm²', '10 cm²'], 'Diện tích bằng chiều dài nhân chiều rộng.')];
   if (includesAny(text, ['thống kê', 'số liệu'])) return [bubble(topic, 'q1', 'Trong bài thống kê, bảng ghi số liệu về số bạn thích từng loại quả là bảng gì?', 'Bảng số liệu', ['Bảng nhân', 'Bảng đơn vị đo'], 'Số liệu được thu thập và ghi thành bảng.')];
   if (text.includes('hai bước')) return [bubble(topic, 'q1', 'Bài toán cần thực hiện hai phép tính để tìm đáp số được gọi là bài toán bằng hai bước tính hay một bước tính?', 'Bài toán bằng hai bước tính', ['Bài toán một bước tính', 'Bài toán đo độ dài'], 'Đọc đề và xác định hai việc cần làm theo thứ tự.')];
-  if (includesAny(text, ['phép cộng', 'phép trừ'])) return [keypad(topic, 'q1', 'Tính: 345 + 278 = ?', 623, 'Đặt thẳng cột các hàng rồi tính từ phải sang trái.')];
+  if (includesAny(text, ['phép cộng', 'phép trừ'])) {
+    if (text.includes('100.000')) return [keypad(topic, 'q1', 'Tính trong phạm vi 100.000: 45.678 + 12.321 = ?', 57999, 'Đặt thẳng cột các hàng rồi cộng từ phải sang trái.')];
+    if (text.includes('10.000')) return [keypad(topic, 'q1', 'Tính trong phạm vi 10.000: 3.456 + 2.123 = ?', 5579, 'Đặt thẳng cột các hàng rồi cộng từ phải sang trái.')];
+    return [keypad(topic, 'q1', 'Tính: 345 + 278 = ?', 623, 'Đặt thẳng cột các hàng rồi tính từ phải sang trái.')];
+  }
+  if (text.includes('ôn tập phép nhân') && text.includes('phép chia')) return [bubble(topic, 'q1', 'Ôn tập phép nhân và phép chia: 24 × 3 = ?', '72', ['68', '81'], 'Nhân rồi kiểm tra lại bằng phép chia ngược.')];
+  if (text.includes('phạm vi 1000')) return [bubble(topic, 'q1', 'Ôn tập các số có ba chữ số trong phạm vi 1000: Số 358 có chữ số hàng trăm là:', '3', ['5', '8'], 'Đọc giá trị của từng chữ số theo hàng trăm, chục, đơn vị.')];
+  if (text.includes('10.000')) return [bubble(topic, 'q1', 'Số có bốn chữ số 5.364 có chữ số hàng nghìn là:', '5', ['3', '6'], 'Hàng nghìn là chữ số đầu tiên của số có bốn chữ số.')];
   if (includesAny(text, ['số có', 'phạm vi 1000', '10.000', '100.000'])) {
     const thousands = (topic.lessonNumber % 7) + 1;
     const hundreds = ((topic.lessonNumber + 2) % 7) + 1;
@@ -248,8 +264,10 @@ function generateGrade4Math(topic: CurriculumTopic): Question[] {
     const answer = tons * 1000 + ta * 100;
     return [bubble(topic, 'q1', `${tons} tấn ${ta} tạ bằng bao nhiêu ki-lô-gam?`, `${answer} kg`, [`${answer / 10} kg`, `${answer - 50} kg`], `${tons} tấn = ${tons * 1000} kg và ${ta} tạ = ${ta * 100} kg.`)];
   }
+  if (includesAny(text, ['số chẵn', 'số lẻ'])) return [bubble(topic, 'q1', 'Số 28 là số chẵn hay số lẻ?', 'Số chẵn', ['Số lẻ', 'Không phải số tự nhiên'], 'Số chẵn là số chia hết cho 2.')];
   if (includesAny(text, ['vuông góc', 'song song'])) return [bubble(topic, 'q1', 'Hai đường thẳng không bao giờ cắt nhau được gọi là:', 'Hai đường thẳng song song', ['Hai đường thẳng vuông góc', 'Hai đường thẳng cắt nhau'], 'Đường thẳng song song luôn cách đều nhau.')];
   if (includesAny(text, ['góc nhọn', 'góc tù', 'góc bẹt'])) return [bubble(topic, 'q1', 'Góc lớn hơn góc vuông và bé hơn góc bẹt là góc gì?', 'Góc tù', ['Góc nhọn', 'Góc vuông'], 'Góc tù lớn hơn 90° và bé hơn 180°.')];
+  if (text.includes('ôn tập phép tính') && text.includes('phân số')) return [bubble(topic, 'q1', 'Ôn tập phép tính phân số: 1/2 + 1/4 = ?', '3/4', ['2/6', '1/8'], 'Quy đồng mẫu số rồi cộng các tử số.')];
   if (includesAny(text, ['biểu thức', 'chứa chữ'])) return [bubble(topic, 'q1', 'Tính 45 + a × 3 khi a = 5:', '60', ['150', '53'], 'Thay a bằng 5, nhân trước rồi cộng.')];
   if (text.includes('trung bình cộng')) return [bubble(topic, 'q1', 'Trung bình cộng của 25, 35 và 45 là:', '35', ['30', '40'], 'Cộng ba số rồi chia cho 3.')];
   if (text.includes('tổng và hiệu')) return [bubble(topic, 'q1', 'Tổng hai số là 48, hiệu hai số là 12. Số lớn là:', '30', ['18', '24'], 'Số lớn = (Tổng + Hiệu) : 2.')];
@@ -257,6 +275,9 @@ function generateGrade4Math(topic: CurriculumTopic): Question[] {
   if (text.includes('hiệu và tỉ số')) return [bubble(topic, 'q1', 'Hai số có hiệu 12 và tỉ số 3 : 1. Số bé là:', '6', ['4', '18'], 'Hiệu ứng với 2 phần nên mỗi phần bằng 6.')];
   if (text.includes('phân số')) {
     if (text.includes('rút gọn')) return [bubble(topic, 'q1', 'Rút gọn phân số 18/24 được:', '3/4', ['9/12', '2/3'], 'Chia cả tử và mẫu cho ước chung lớn nhất là 6.')];
+    if (text.includes('quy đồng') || text.includes('so sánh')) return [bubble(topic, 'q1', 'So sánh hai phân số 3/5 và 4/5: phân số nào lớn hơn?', '4/5', ['3/5', 'Hai phân số bằng nhau'], 'Hai phân số cùng mẫu nên phân số có tử số lớn hơn sẽ lớn hơn.')];
+    if (text.includes('nhân') && text.includes('chia')) return [bubble(topic, 'q1', 'Phép nhân và chia phân số: 2/3 × 3/4 = ?', '1/2', ['5/7', '2/7'], 'Nhân tử với tử, mẫu với mẫu rồi rút gọn.')];
+    if (text.includes('tìm phân số của một số')) return [bubble(topic, 'q1', 'Tìm phân số 3/4 của số 20 là:', '15', ['12', '17'], 'Lấy 20 × 3/4 = 15.')];
     if (includesAny(text, ['cộng', 'trừ'])) return [bubble(topic, 'q1', 'Tính: 3/5 + 4/5 = ?', '7/5', ['7/10', '12/25'], 'Hai phân số cùng mẫu: cộng tử số và giữ nguyên mẫu số.')];
     if (text.includes('so sánh')) return [bubble(topic, 'q1', 'Phân số nào lớn hơn: 3/4 hay 2/3?', '3/4', ['2/3', 'Hai phân số bằng nhau'], 'Quy đồng hoặc so sánh bằng phép nhân chéo.')];
     return [bubble(topic, 'q1', 'Trong phân số 3/4, số 3 được gọi là gì?', 'Tử số', ['Mẫu số', 'Thương'], 'Tử số nằm ở trên gạch phân số.')];
@@ -268,6 +289,7 @@ function generateGrade4Math(topic: CurriculumTopic): Question[] {
   if (text.includes('nhân')) return [keypad(topic, 'q1', 'Phép nhân với số có hai chữ số: 24 × 12 = ?', 288, 'Nhân với hàng đơn vị rồi hàng chục và cộng các tích riêng. Nhân một số với 10 là thêm một chữ số 0 vào bên phải.')];
   if (text.includes('chia')) return [bubble(topic, 'q1', 'Tính: 864 : 24 = ?', '36', ['34', '42'], 'Tìm thương bằng cách kiểm tra 24 × 36.')];
   if (includesAny(text, ['phép cộng', 'phép trừ'])) return [keypad(topic, 'q1', 'Tính: 345 678 + 124 321 = ?', 469999, 'Đặt thẳng cột các hàng rồi cộng từ phải sang trái.')];
+  if (text.includes('đến 100.000')) return [bubble(topic, 'q1', 'Ôn tập số có năm chữ số đến 100.000: Số 45.678 có chữ số hàng nghìn là:', '5', ['4', '6'], 'Đọc từ phải sang trái: đơn vị, chục, trăm, nghìn.')];
   if (includesAny(text, ['số chẵn', 'số lẻ', 'nhiều chữ số', 'lớp triệu', '100.000'])) return [bubble(topic, 'q1', 'Trong số 345 678 912, chữ số 4 thuộc hàng nào?', 'Hàng chục triệu', ['Hàng triệu', 'Hàng trăm nghìn'], 'Đọc giá trị vị trí của chữ số 4 trong số đã cho.')];
   return [reviewQuestion(topic, 4)];
 }
@@ -295,6 +317,7 @@ function generateGrade5Math(topic: CurriculumTopic): Question[] {
   if (text.includes('hỗn số')) return [bubble(topic, 'q1', 'Hỗn số 2 1/3 đổi thành phân số là:', '7/3', ['5/3', '6/3'], 'Lấy phần nguyên nhân mẫu rồi cộng tử số.')];
   if (text.includes('phân số thập phân')) return [bubble(topic, 'q1', 'Phân số 7/10 viết dưới dạng số thập phân là:', '0,7', ['7,0', '0,07'], 'Mẫu 10 tạo ra một chữ số ở phần thập phân.')];
   if (text.includes('phân số')) return [bubble(topic, 'q1', 'Phân số nào bằng 1/2?', '3/6', ['2/5', '3/5'], 'Nhân cả tử và mẫu của 1/2 với 3.')];
+  if (text.includes('số đo')) return [bubble(topic, 'q1', 'Viết số đo dưới dạng số thập phân: 3 m 5 dm = ?', '3,5 m', ['3,05 m', '35 m'], 'Đổi 5 dm thành 0,5 m rồi cộng với 3 m.')];
   if (text.includes('nhân số thập phân')) return [bubble(topic, 'q1', 'Tính: 4,5 × 2,4 = ?', '10,8', ['108', '9,9'], 'Nhân như số tự nhiên rồi đặt dấu phẩy đúng số chữ số.')];
   if (text.includes('chia số thập phân')) return [bubble(topic, 'q1', 'Chia số thập phân: 12,6 : 3 = ?', '4,2', ['42', '3,2'], 'Chia phần nguyên và phần thập phân theo đúng vị trí.')];
   if (includesAny(text, ['cộng', 'trừ']) && text.includes('số thập phân')) return [keypad(topic, 'q1', 'Tính: 35,68 + 24,75 = ?', '60,43', 'Đặt thẳng hàng các dấu phẩy rồi cộng.')];
