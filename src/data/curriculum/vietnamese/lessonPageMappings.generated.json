@@ -186,18 +186,19 @@
     "matchedTitle": "Bài 2: Ngày hôm qua đâu rồi?",
     "matchedText": "a o ngay hom qua dau roi i",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b3": {
     "lessonId": "tv-g2-b3",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      17
+      17,
+      18
     ],
     "matchedTitle": "Bài 3: Niềm vui của Bi và Bống",
     "matchedText": "2 ha l3 niem vui cua bi va bong",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b4": {
     "lessonId": "tv-g2-b4",
@@ -208,7 +209,7 @@
     "matchedTitle": "Bài 4: Làm việc thật là vui",
     "matchedText": "boi e lam viec that la vui",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b5": {
     "lessonId": "tv-g2-b5",

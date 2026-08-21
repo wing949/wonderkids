@@ -25,6 +25,7 @@ import { buildLessonNarration } from '../../utils/lessonNarration';
 import { getSourcePageView } from '../../utils/sourcePageViewer';
 import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../../utils/vietnameseReadingPolicy';
 import { MathVisualIllustration } from './MathVisualIllustration';
+import { LessonThematicBadge } from './LessonThematicBadge';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -84,6 +85,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const hasReadingPassage = !!lesson.readingPassage;
   const vietnameseReadingPolicy = getVietnameseReadingPolicy(lesson);
   const canUseReadingPassage = vietnameseReadingPolicy !== 'source_only';
+  const canPlayReadingAudio = canPlayVietnameseReadingAudio(lesson);
   const [engineMode, setEngineMode] = useState<'reading' | 'quiz'>(hasReadingPassage ? 'reading' : 'quiz');
   const [readingTab, setReadingTab] = useState<'full' | 'shadowing'>('full');
   const [sourcePageIndex, setSourcePageIndex] = useState(0);
@@ -487,8 +489,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       <div className="min-h-[calc(100vh-5rem)] pb-28 pt-4 sm:pt-6">
         <div className="mx-auto max-w-7xl px-3 sm:px-6 space-y-6">
           {/* Header Bar */}
-          <div className="flex items-center justify-between gap-4 border-b border-amber-200/80 bg-white/85 backdrop-blur-md p-4 rounded-3xl shadow-xs">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-amber-200/80 bg-white/85 p-4 shadow-xs backdrop-blur-md rounded-3xl">
+            <div className="order-1 flex items-center gap-3">
               <button
                 onClick={() => {
                   soundManager.stopSpeaking();
@@ -514,14 +516,61 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               </div>
             </div>
 
-            {/* Audio Read Aloud Button */}
+            {canUseReadingPassage && <div className="order-3 flex w-full sm:order-2 sm:w-auto sm:flex-1 sm:justify-center">
+              <div className="flex max-w-md items-center justify-center gap-2 rounded-3xl bg-amber-50/80 p-1.5">
+                <button
+                  onClick={() => {
+                    soundManager.playPop();
+                    soundManager.stopSpeaking();
+                    voiceManager.stopListening();
+                    setIsPlayingAudio(false);
+                    setIsPlayingSentenceAudio(false);
+                    setIsShadowingRecording(false);
+                    setReadingTab('full');
+                  }}
+                  className={`flex flex-1 items-center justify-center gap-2 rounded-2xl px-4 py-2 font-baloo text-xs font-extrabold transition-all cursor-pointer sm:text-sm ${
+                    readingTab === 'full'
+                      ? 'bg-amber-400 text-amber-950 shadow-pop-xs scale-102 border-2 border-amber-500'
+                      : 'text-slate-600 hover:text-brand-dark hover:bg-white/70'
+                  }`}
+                >
+                  <span>📖</span>
+                  <span className="whitespace-nowrap">Đọc Toàn Bài</span>
+                </button>
+
+                <button
+                  onClick={() => {
+                    soundManager.playPop();
+                    soundManager.stopSpeaking();
+                    voiceManager.stopListening();
+                    setIsPlayingAudio(false);
+                    setIsPlayingSentenceAudio(false);
+                    setIsVoiceRecording(false);
+                    setReadingTab('shadowing');
+                  }}
+                  className={`flex flex-1 items-center justify-center gap-2 rounded-2xl px-4 py-2 font-baloo text-xs font-extrabold transition-all cursor-pointer sm:text-sm ${
+                    readingTab === 'shadowing'
+                      ? 'bg-purple-600 text-white shadow-pop-xs scale-102 border-2 border-purple-700'
+                      : 'text-slate-600 hover:text-purple-900 hover:bg-white/70'
+                  }`}
+                >
+                  <span>🎙️</span>
+                  <span className="whitespace-nowrap">Luyện Shadowing</span>
+                  <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
+                </button>
+              </div>
+            </div>}
+
+            {/* Audio Read Aloud Button: khóa trong thời gian duyệt transcript SGK. */}
             {canUseReadingPassage && <button
               onClick={handleTogglePassageAudio}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl font-baloo font-bold text-sm whitespace-nowrap transition-all shadow-xs cursor-pointer shrink-0 ${
+              disabled={!canPlayReadingAudio}
+              title={canPlayReadingAudio ? 'Nghe toàn bộ bài đọc' : 'Audio mẫu sẽ được bổ sung sau khi duyệt nội dung'}
+              className={`order-2 flex shrink-0 items-center gap-2 rounded-2xl px-4 py-2.5 font-baloo text-sm font-bold whitespace-nowrap transition-all shadow-xs sm:order-3 ${
                 isPlayingAudio
                   ? 'bg-rose-500 text-white animate-pulse shadow-pop-sm'
-                  : 'bg-amber-400 hover:bg-amber-300 text-amber-950 shadow-pop-sm'
-              }`}
+                  : 'bg-amber-400 text-amber-950 shadow-pop-sm hover:bg-amber-300'
+              } disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:bg-amber-400`}
             >
               {isPlayingAudio ? (
                 <>
@@ -537,51 +586,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             </button>}
           </div>
 
-          {/* Mode Switcher Tabs (Đọc Toàn Bài vs Luyện Shadowing Từng Câu) */}
-          {canUseReadingPassage && <div className="flex items-center justify-center gap-2 p-1.5 rounded-3xl bg-white/90 backdrop-blur-md border border-amber-200 shadow-xs max-w-md mx-auto">
-            <button
-              onClick={() => {
-                soundManager.playPop();
-                soundManager.stopSpeaking();
-                voiceManager.stopListening();
-                setIsPlayingAudio(false);
-                setIsPlayingSentenceAudio(false);
-                setIsShadowingRecording(false);
-                setReadingTab('full');
-              }}
-              className={`flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-2xl font-baloo font-extrabold text-xs sm:text-sm transition-all cursor-pointer ${
-                readingTab === 'full'
-                  ? 'bg-amber-400 text-amber-950 shadow-pop-xs scale-102 border-2 border-amber-500'
-                  : 'text-slate-600 hover:text-brand-dark hover:bg-slate-50'
-              }`}
-            >
-              <span>📖</span>
-              <span>Đọc Toàn Bài</span>
-            </button>
-
-            <button
-              onClick={() => {
-                soundManager.playPop();
-                soundManager.stopSpeaking();
-                voiceManager.stopListening();
-                setIsPlayingAudio(false);
-                setIsPlayingSentenceAudio(false);
-                setIsVoiceRecording(false);
-                setReadingTab('shadowing');
-              }}
-              className={`flex-1 flex items-center justify-center gap-2 py-2 px-4 rounded-2xl font-baloo font-extrabold text-xs sm:text-sm transition-all cursor-pointer ${
-                readingTab === 'shadowing'
-                  ? 'bg-purple-600 text-white shadow-pop-xs scale-102 border-2 border-purple-700'
-                  : 'text-slate-600 hover:text-purple-900 hover:bg-purple-50'
-              }`}
-            >
-              <span>🎙️</span>
-              <span>Luyện Shadowing</span>
-              <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
-            </button>
-          </div>}
-
-          <div className={`grid items-start gap-6 ${sourcePageView ? 'xl:grid-cols-2' : ''}`}>
+          <div className={`grid items-start gap-6 ${sourcePageView ? 'xl:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]' : ''}`}>
             {sourcePageView && (
               <section
                 className="relative overflow-hidden rounded-4xl border border-amber-200/70 bg-[#fffdfa] p-4 shadow-washi sm:p-6 xl:sticky xl:top-4"
@@ -613,7 +618,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     src={sourcePageView.imageUrl}
                     alt={`Trang ${sourcePageView.pageNumber} - ${lesson.title}`}
                     loading="eager"
-                    className="h-full w-full object-contain"
+                    className="h-full w-auto max-w-full object-contain"
                   />
                 </figure>
 
@@ -669,9 +674,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
           {/* TAB 1: ĐỌC TOÀN BÀI (FULL READING SCRAPBOOK CARD) */}
           {/* ================================================================= */}
           {canUseReadingPassage && readingTab === 'full' && (
-            <div className="relative rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70 mt-2">
-              {/* Washi tape header deco - Unclipped Authentic Scrapbook Tape */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-40 sm:w-48 h-7 bg-amber-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-amber-400/40 shadow-xs z-10 pointer-events-none" />
+            <div className="rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70">
 
               {isExtraPractice && !hasVerifiedSgkReading && (
                 <div className="mb-5 flex items-center gap-2 font-baloo text-sm font-black text-emerald-800">
@@ -682,38 +685,27 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
               {/* Passage Header Block (Centered, Balanced & Symmetrical) */}
               <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
-                {/* Textbook Ref & Provenance Pill Badge */}
-                <div className="flex flex-wrap items-center justify-center gap-2">
-                  {isVerifiedSgk || hasVerifiedSgkReading ? (
-                    <div className="inline-flex items-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
-                      <span>📖</span>
-                      <span className="font-extrabold text-emerald-950">Nội dung bài đọc SGK</span>
-                      <span>• Trang {passage.sourcePages?.join(', ') || lesson.sourceCitation?.sourcePages.join(', ')}</span>
-                    </div>
-                  ) : isExtraPractice ? (
-                    <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
-                      <span>🌱</span>
-                      <span className="font-extrabold text-emerald-950">Luyện đọc bổ sung</span>
-                    </div>
-                  ) : (
-                    <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-violet-900 bg-violet-100/90 border border-violet-300 px-3.5 py-1 rounded-full shadow-2xs">
-                      <span>🧩</span>
-                      <span className="font-extrabold text-violet-950">BỔ TRỢ SƯ PHẠM</span>
-                    </div>
-                  )}
+                {/* Main Reading Title with Cute Thematic Sticker Badge */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 pt-1">
+                  <LessonThematicBadge
+                    lessonId={lesson.id}
+                    lessonNumber={lesson.order || (lesson.id.match(/b(\d+)/) ? parseInt(lesson.id.match(/b(\d+)/)![1]) : 2)}
+                    lessonTitle={passage.title}
+                    subject={lesson.subject}
+                    grade={lesson.grade}
+                    size="md"
+                  />
+                  <div className="text-center sm:text-left">
+                    <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide">
+                      {passage.title}
+                    </h2>
+                    {passage.author && (
+                      <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80 mt-1">
+                        Nguồn nội dung: {passage.author}
+                      </p>
+                    )}
+                  </div>
                 </div>
-
-                {/* Main Reading Title */}
-                <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide pt-1">
-                  {passage.title}
-                </h2>
-
-                {/* Author & Book Citation */}
-                {passage.author && (
-                  <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
-                    Nguồn nội dung: {passage.author}
-                  </p>
-                )}
 
                 {/* Decorative warm accent line */}
                 <div className="w-20 sm:w-28 h-1 bg-amber-300/70 rounded-full mx-auto mt-3" />
@@ -744,7 +736,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               )}
 
               {/* STT Voice Reading Practice */}
-              {isSpeechSupported && (
+              {canPlayReadingAudio && isSpeechSupported && (
                 <div className="mt-8 p-5 rounded-3xl bg-gradient-to-r from-purple-50 via-pink-50 to-amber-50 border-2 border-purple-200/80 space-y-3">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                     <div className="flex items-center gap-2.5">
@@ -844,14 +836,11 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
           {/* TAB 2: CHẾ ĐỘ SHADOWING (LUYỆN NGHE & ĐỌC NHẠI TỪNG CÂU) */}
           {/* ================================================================= */}
           {canUseReadingPassage && readingTab === 'shadowing' && (
-            <div className="relative rounded-4xl bg-[#fffdfa] p-5 sm:p-8 md:p-10 shadow-washi border border-purple-200/80 mt-2 space-y-6">
-              {/* Washi tape header deco */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-48 sm:w-56 h-7 bg-purple-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-purple-400/40 shadow-xs z-10 pointer-events-none" />
-
+            <div className="rounded-4xl bg-[#fffdfa] p-5 sm:p-8 md:p-10 shadow-washi border border-purple-200/80 space-y-6">
               {/* Top Shadowing Bar: Sentence Selector Bubbles + Speed + Auto-advance */}
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-purple-100 pb-5">
+              <div className="border-b border-purple-100 pb-5">
                 {/* Sentence Progress Pills */}
-                <div className="flex items-center gap-1.5 overflow-x-auto max-w-full pb-1 scrollbar-none">
+                <div className="grid w-full grid-cols-4 gap-1.5 sm:grid-cols-8">
                   {shadowingSentences.map((sent, sIdx) => {
                     const isCurrent = sIdx === shadowingIndex;
                     const isDone = completedSentences.includes(sent.id);
@@ -867,7 +856,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                           setIsPlayingSentenceAudio(false);
                           setIsShadowingRecording(false);
                         }}
-                        className={`flex items-center justify-center h-8 sm:h-9 min-w-8 sm:min-w-9 px-2.5 rounded-full font-baloo font-extrabold text-xs sm:text-sm transition-all cursor-pointer shrink-0 ${
+                        className={`flex h-10 w-full items-center justify-center rounded-full font-baloo text-xs font-extrabold transition-all cursor-pointer sm:h-11 sm:text-sm ${
                           isCurrent
                             ? 'bg-purple-600 text-white shadow-pop-xs scale-105 ring-2 ring-purple-300'
                             : isDone
@@ -883,7 +872,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 </div>
 
                 {/* Speed Controls & Auto-advance */}
-                <div className="flex items-center gap-3 shrink-0">
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
                   {/* Speed Toggle (0.8x / 1.0x) */}
                   <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-full border border-slate-200 text-xs font-baloo font-bold">
                     <button
@@ -920,7 +909,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                       soundManager.playPop();
                       setIsAutoAdvance(!isAutoAdvance);
                     }}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-baloo font-bold text-xs border transition-all cursor-pointer ${
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-baloo font-bold text-xs border transition-all cursor-pointer ${
                       isAutoAdvance
                         ? 'bg-amber-100 text-amber-900 border-amber-300 shadow-2xs'
                         : 'bg-slate-100 text-slate-500 border-slate-200'
@@ -977,10 +966,10 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     <button
                       type="button"
                       onClick={() => handlePlayCurrentSentence(currentShadowingSentence.text)}
-                      className={`flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl font-baloo font-black text-sm sm:text-base transition-all shadow-pop-sm cursor-pointer min-w-[200px] border-2 ${
+                      className={`flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl font-baloo font-black text-sm sm:text-base transition-all shadow-pop-sm cursor-pointer min-w-[200px] ${
                         isPlayingSentenceAudio
-                          ? 'bg-rose-500 border-rose-600 text-white animate-pulse'
-                          : 'bg-gradient-to-tr from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 border-amber-500 text-amber-950 hover:scale-102'
+                          ? 'bg-rose-500 text-white animate-pulse'
+                          : 'bg-gradient-to-tr from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-amber-950 hover:scale-102'
                       }`}
                     >
                       {isPlayingSentenceAudio ? (
@@ -1001,7 +990,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                       <button
                         type="button"
                         onClick={() => handleStartShadowing(currentShadowingSentence)}
-                        className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl bg-gradient-to-tr from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 border-2 border-purple-700 text-white font-baloo font-black text-sm sm:text-base shadow-pop-sm hover:scale-102 transition-all cursor-pointer min-w-[200px]"
+                        className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl bg-gradient-to-tr from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-baloo font-black text-sm sm:text-base shadow-pop-sm hover:scale-102 transition-all cursor-pointer min-w-[200px]"
                       >
                         <Mic className="h-5 w-5" />
                         <span>2. Bé Bấm Đọc Theo (Shadowing)</span>
@@ -1010,7 +999,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                       <button
                         type="button"
                         onClick={handleStopShadowing}
-                        className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl bg-rose-500 hover:bg-rose-600 border-2 border-rose-700 text-white font-baloo font-black text-sm sm:text-base shadow-pop-sm animate-pulse transition-all cursor-pointer min-w-[200px]"
+                        className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-3xl bg-rose-500 hover:bg-rose-600 text-white font-baloo font-black text-sm sm:text-base shadow-pop-sm animate-pulse transition-all cursor-pointer min-w-[200px]"
                       >
                         <MicOff className="h-5 w-5 animate-bounce" />
                         <span>Đang Lắng Nghe... (Bấm Xong)</span>
@@ -1581,8 +1570,15 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
           <div className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-4xl bg-[#fffdfa] p-6 sm:p-8 shadow-2xl border border-amber-200 space-y-4">
             <div className="flex items-center justify-between border-b border-amber-200/60 pb-3">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">📖</span>
+              <div className="flex items-center gap-3">
+                <LessonThematicBadge
+                  lessonId={lesson.id}
+                  lessonNumber={lesson.order || (lesson.id.match(/b(\d+)/) ? parseInt(lesson.id.match(/b(\d+)/)![1]) : 2)}
+                  lessonTitle={lesson.readingPassage.title}
+                  subject={lesson.subject}
+                  grade={lesson.grade}
+                  size="sm"
+                />
                 <div>
                   <h3 className="font-baloo font-extrabold text-lg sm:text-xl text-amber-950">
                     {lesson.readingPassage.title}

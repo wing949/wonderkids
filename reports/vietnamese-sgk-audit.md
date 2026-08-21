@@ -8,10 +8,10 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 
 - Đã lập manifest cho **10/10 sách nguồn**, tổng cộng **1.584 trang**; từng ảnh trang có SHA-256 và được cache riêng ngoài Git.
 - **Chưa phát hành nội dung SGK chưa duyệt.** Hiện có **0 bài SGK đã qua cổng kiểm duyệt**.
-- OCR đã rà 1.584/1.584 trang; **47/129 mục có nguồn SGK** tìm được trang mở bài, trong đó **3 mục** đã kiểm tra trực quan và **82 mục** chưa được phép gắn trang.
-- Hiện có **1 transcript SGK đã duyệt**. Văn bản/audio chính của **108 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
+- OCR đã rà 1.584/1.584 trang; **47/129 mục có nguồn SGK** tìm được trang mở bài, trong đó **6 mục** đã kiểm tra trực quan và **82 mục** chưa được phép gắn trang.
+- Hiện có **6 transcript SGK đã duyệt**. Văn bản/audio chính của **103 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
 - 132 gói nội dung cũ vẫn được giữ trong từng bài dưới dạng **Luyện thêm**, không tính là bài tập SGK.
-- Kho kỹ thuật có đủ một file chính và một fallback cho **132/132 bài**. Chỉ **1/1 transcript SGK đã duyệt** được phép dùng cặp audio này làm giọng đọc SGK.
+- Kho kỹ thuật có đủ một file chính và một fallback cho **132/132 bài**. Chỉ **1/6 transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
 
 ## Thống kê
 
@@ -21,11 +21,11 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | Trang nguồn đã lập checksum | 1.584 |
 | Bài SGK đã xác minh | 0 |
 | Trang mở bài khớp OCR/đối chiếu | 47/129 |
-| Ánh xạ đã kiểm tra trực quan | 3 |
+| Ánh xạ đã kiểm tra trực quan | 6 |
 | Mục chưa khớp trang | 82 |
-| Transcript SGK đã xác minh | 1 |
-| Transcript SGK có đủ audio chính/fallback | 1/1 |
-| Bài đang khóa văn bản/audio chính | 108 |
+| Transcript SGK đã xác minh | 6 |
+| Transcript SGK có audio khớp transcript | 1/6 |
+| Bài đang khóa văn bản/audio chính | 103 |
 | Hoạt động SGK đã xác minh | 0 |
 | Luyện thêm trong bài | 135 |
 | Cặp audio chính/fallback đạt kiểm tra file | 132/132 |
@@ -80,11 +80,11 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | tv-g1-b29 | 1/2 | Quê hương tươi đẹp | unmatched | blocked_until_sgk_transcript_verified | 0 | 1 |
 | tv-g1-b30 | 1/2 | Bác Hồ kính yêu | unmatched | blocked_until_sgk_transcript_verified | 0 | 1 |
 | tv-g2-b1 | 2/1 | Tôi là học sinh lớp 2 | visually_reviewed | verified_sgk_transcript | 0 | 1 |
-| tv-g2-b2 | 2/1 | Ngày hôm qua đâu rồi? | ocr_matched | blocked_until_sgk_transcript_verified | 0 | 1 |
-| tv-g2-b3 | 2/1 | Niềm vui của Bi và Bống | ocr_matched | blocked_until_sgk_transcript_verified | 0 | 1 |
-| tv-g2-b4 | 2/1 | Làm việc thật là vui | ocr_matched | blocked_until_sgk_transcript_verified | 0 | 1 |
-| tv-g2-b5 | 2/1 | Em có xinh không? | visually_reviewed | blocked_until_sgk_transcript_verified | 0 | 1 |
-| tv-g2-b6 | 2/1 | Một giờ học | visually_reviewed | blocked_until_sgk_transcript_verified | 0 | 1 |
+| tv-g2-b2 | 2/1 | Ngày hôm qua đâu rồi? | visually_reviewed | verified_sgk_transcript | 0 | 1 |
+| tv-g2-b3 | 2/1 | Niềm vui của Bi và Bống | visually_reviewed | verified_sgk_transcript | 0 | 1 |
+| tv-g2-b4 | 2/1 | Làm việc thật là vui | visually_reviewed | verified_sgk_transcript | 0 | 1 |
+| tv-g2-b5 | 2/1 | Em có xinh không? | visually_reviewed | verified_sgk_transcript | 0 | 1 |
+| tv-g2-b6 | 2/1 | Một giờ học | visually_reviewed | verified_sgk_transcript | 0 | 1 |
 | tv-g2-b7 | 2/1 | Cây xấu hổ | ocr_matched | blocked_until_sgk_transcript_verified | 0 | 1 |
 | tv-g2-b8 | 2/1 | Cầu thủ dự bị | ocr_matched | blocked_until_sgk_transcript_verified | 0 | 1 |
 | tv-g2-b9 | 2/1 | Cô giáo lớp em | ocr_matched | blocked_until_sgk_transcript_verified | 0 | 1 |

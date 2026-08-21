@@ -29,5 +29,9 @@ export function getVietnameseReadingPolicy(lesson: LessonNode): VietnameseReadin
 }
 
 export function canPlayVietnameseReadingAudio(lesson: LessonNode): boolean {
-  return getVietnameseReadingPolicy(lesson) !== 'source_only';
+  if (lesson.subject !== 'vietnamese') return true;
+
+  // Trong đợt rà soát nội dung, bản đọc SGK chỉ được hiển thị bằng chữ và trang nguồn.
+  // Audio/Shadowing được mở ở đợt nghiệm thu audio riêng để không phát file cũ lệch transcript.
+  return getVietnameseReadingPolicy(lesson) === 'supplement';
 }

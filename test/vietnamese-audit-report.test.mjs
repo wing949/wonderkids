@@ -20,8 +20,18 @@ test('báo cáo tách số hoạt động SGK khỏi Luyện thêm và thống k
     assert.match(markdown, /Hoạt động SGK đã xác minh\s*\|\s*0/);
     assert.match(markdown, /Luyện thêm trong bài\s*\|\s*135/);
     assert.match(markdown, /Chưa phát hành nội dung SGK chưa duyệt/i);
+    assert.match(
+      markdown,
+      /Transcript SGK có audio khớp transcript\s*\|\s*1\/[2-9]\d*/,
+      'Chỉ manifest có đúng hash transcript và trang nguồn mới được tính là audio SGK sẵn sàng',
+    );
+    assert.doesNotMatch(
+      markdown,
+      /Transcript SGK có audio khớp transcript\s*\|\s*([2-9]\d*)\/\1/,
+      'Không được coi file audio cũ là đúng chỉ vì file vẫn tồn tại',
+    );
     assert.equal(csv.trim().split(/\r?\n/).length, 133);
-    assert.match(csv.split(/\r?\n/)[0], /sgkActivityCount,appExtensionCount,audioPrimary,audioFallback/);
+    assert.match(csv.split(/\r?\n/)[0], /audioDistinct,transcriptHash,expectedTranscriptHash,audioTranscriptStatus,notes/);
   } finally {
     await rm(outputDir, { recursive: true, force: true });
   }
