@@ -152,7 +152,8 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
   const topics = FULL_SYLLABUS_CATALOG[subject]?.[grade] || [];
   
   return topics.map((t, idx) => {
-    let readingPassage = (subject === 'vietnamese' && VIETNAMESE_READING_PASSAGES[t.id]?.passage) || t.readingPassage;
+    const normalizedId = t.id.replace('-l', '-b');
+    let readingPassage = (subject === 'vietnamese' && (VIETNAMESE_READING_PASSAGES[t.id]?.passage || VIETNAMESE_READING_PASSAGES[normalizedId]?.passage)) || t.readingPassage;
 
     // Đảm bảo 100% tất cả bài học Tiếng Việt & Tiếng Anh mọi cấp học (Lớp 1-5) đều có Bài Đọc & Shadowing phong phú
     if (!readingPassage && subject === 'vietnamese') {
@@ -162,17 +163,12 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
         genre: 'prose',
         content: [
           t.description,
-          t.summary,
-          ...t.keyPoints
+          t.summary
         ],
-        audioNarration: `${t.title}. ${t.description}. ${t.summary}. ${t.keyPoints.join('. ')}. ${t.mascotTip || ''}`,
-        vocabularyNotes: t.keyPoints.slice(0, 3).map((kp) => {
-          const parts = kp.split(/[:—–]/);
-          return {
-            word: parts[0]?.trim() || 'Trọng tâm',
-            meaning: parts[1]?.trim() || kp
-          };
-        })
+        audioNarration: `${t.title.replace(/^Bài \d+:\s*/, '')}. ${t.description}. ${t.summary}`,
+        vocabularyNotes: [
+          { word: 'Trọng tâm', meaning: 'Nội dung cốt lõi và quan trọng nhất cần nắm vững.' }
+        ]
       };
     } else if (!readingPassage && subject === 'english') {
       readingPassage = {
@@ -181,17 +177,12 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
         genre: 'story',
         content: [
           t.description,
-          t.summary,
-          ...t.keyPoints
+          t.summary
         ],
-        audioNarration: `${t.title}. ${t.description}. ${t.summary}. ${t.keyPoints.join('. ')}.`,
-        vocabularyNotes: t.keyPoints.slice(0, 3).map((kp) => {
-          const parts = kp.split(/[:—–]/);
-          return {
-            word: parts[0]?.trim() || 'Keyword',
-            meaning: parts[1]?.trim() || kp
-          };
-        })
+        audioNarration: `${t.title.replace(/^Unit \d+:\s*/i, '')}. ${t.description}. ${t.summary}`,
+        vocabularyNotes: [
+          { word: 'Key vocabulary', meaning: 'Important words and expressions in this lesson.' }
+        ]
       };
     }
 
