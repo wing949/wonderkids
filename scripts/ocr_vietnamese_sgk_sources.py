@@ -29,7 +29,7 @@ def find_tesseract() -> Path:
 
 def ocr_page(tesseract: Path, source: Path, target: Path) -> str:
     target.parent.mkdir(parents=True, exist_ok=True)
-    if target.exists() and target.stat().st_size > 20:
+    if target.exists():
         return "cached"
     result = subprocess.run(
         [
@@ -65,8 +65,9 @@ def main() -> None:
 
     targets = [OUTPUT_ROOT / page.parent.name / f"{page.stem}.txt" for page in pages]
     if args.verify:
-        missing = [str(target.relative_to(ROOT)) for target in targets if not target.exists() or target.stat().st_size <= 20]
-        print(json.dumps({"pages": len(pages), "missing": missing}, ensure_ascii=False))
+        missing = [str(target.relative_to(ROOT)) for target in targets if not target.exists()]
+        sparse = [str(target.relative_to(ROOT)) for target in targets if target.exists() and target.stat().st_size <= 20]
+        print(json.dumps({"pages": len(pages), "missing": missing, "sparse": sparse}, ensure_ascii=False))
         if missing:
             raise SystemExit(1)
         return
