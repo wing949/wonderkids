@@ -310,38 +310,38 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
     "semester": 1,
     "lessonNumber": 17,
     "title": "Bài 17: Gọi bạn",
-    "unit": "Trang 74, 75 (Chủ điểm 4: Mái trường thân yêu)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 74, 75 (Chủ điểm 4: Mái trường thân yêu)",
+    "unit": "Trang 79, 80, 81 (Chủ điểm 4: Mái trường thân yêu)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 79, 80, 81 (Chủ điểm 4: Mái trường thân yêu)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 74, 75 (Chủ điểm 4: Mái trường thân yêu)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 79, 80, 81 (Chủ điểm 4: Mái trường thân yêu)",
     "pedagogicalObjective": "Học thuộc lòng bài thơ, cảm nhận tình bạn thủy chung, son sắt giữa Bê Vàng và Dê Trắng.",
-    "description": "Bài đọc \"Bài 17: Gọi bạn\" (Tác giả: Định Hải) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 17: Gọi bạn\" — SGK Tiếng Việt 2 Tập một — Trang 74, 75 (Chủ điểm 4: Mái trường thân yêu)",
+    "description": "Bài thơ \"Gọi bạn\" của Định Hải.",
+    "summary": "Câu chuyện tình bạn của bê vàng và dê trắng.",
     "keyPoints": [
-      "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
-      "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
+      "Đọc diễn cảm bài thơ và tìm hiểu tình bạn của bê vàng, dê trắng.",
+      "Luyện kể chuyện, nói và viết theo các hoạt động trong sách."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 17: Gọi bạn\" của tác giả Định Hải nhé!"
+    "mascotTip": "MiuMiu: Cùng đọc và kể lại câu chuyện về đôi bạn bê vàng, dê trắng nhé!"
   },
   {
     "id": "tv-g2-b18",
     "semester": 1,
     "lessonNumber": 18,
-    "title": "Bài 18: Nhím nâu kết bạn",
-    "unit": "Trang 78, 79 (Chủ điểm 4: Mái trường thân yêu)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 78, 79 (Chủ điểm 4: Mái trường thân yêu)",
+    "title": "Bài 18: Tớ nhớ cậu",
+    "unit": "Trang 82, 83, 84, 85 (Chủ điểm 4: Mái trường thân yêu)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 82, 83, 84, 85 (Chủ điểm 4: Mái trường thân yêu)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 78, 79 (Chủ điểm 4: Mái trường thân yêu)",
-    "pedagogicalObjective": "Đọc hiểu câu chuyện, học cách mở lòng kết bạn và chia sẻ niềm vui với mọi người xung quanh.",
-    "description": "Bài đọc \"Bài 18: Nhím nâu kết bạn\" (Tác giả: SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 18: Nhím nâu kết bạn\" — SGK Tiếng Việt 2 Tập một — Trang 78, 79 (Chủ điểm 4: Mái trường thân yêu)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 82, 83, 84, 85 (Chủ điểm 4: Mái trường thân yêu)",
+    "pedagogicalObjective": "Đọc hiểu câu chuyện, nhận biết và bày tỏ tình cảm bạn bè qua lời nói, thư viết.",
+    "description": "Câu chuyện \"Tớ nhớ cậu\" theo Tun Te-le-gon.",
+    "summary": "Câu chuyện về tình bạn của kiến và sóc.",
     "keyPoints": [
-      "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
-      "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
+      "Đọc hiểu câu chuyện và thực hành lời nói, thư viết về tình bạn.",
+      "Luyện viết, đọc mở rộng theo các hoạt động trong sách."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 18: Nhím nâu kết bạn\" của tác giả SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam nhé!"
+    "mascotTip": "MiuMiu: Cùng đọc câu chuyện về tình bạn của kiến và sóc nhé!"
   },
   {
     "id": "tv-g2-b19",

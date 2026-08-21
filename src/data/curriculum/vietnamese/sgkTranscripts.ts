@@ -371,6 +371,48 @@ const VERIFIED_SGK_TRANSCRIPTS: Record<string, VietnameseSgkTranscript> = {
     sourcePages: [66, 67, 68, 69],
     sourceHash: 'd6fc9b8c47886955d3681a5072931cd62a2e6e084fa6b5c4daede4fbdedf372a',
   },
+  'tv-g2-b17': {
+    title: 'Gọi bạn',
+    author: 'Định Hải',
+    genre: 'poem',
+    content: [
+      'Từ xa xưa thuở nào\nTrong rừng xanh sâu thẳm\nĐôi bạn sống bên nhau\nBê vàng và dê trắng.',
+      'Một năm, trời hạn hán\nSuối cạn, cỏ héo khô\nLấy gì nuôi đôi bạn\nChờ mưa đến bao giờ?',
+      'Bê vàng đi tìm cỏ\nLang thang quên đường về\nDê trắng thương bạn quá\nChạy khắp nẻo tìm bê\nĐến bây giờ dê trắng\nVẫn gọi hoài: “Bê! Bê!”.',
+    ],
+    audioNarration: [
+      'Gọi bạn',
+      'Từ xa xưa thuở nào\nTrong rừng xanh sâu thẳm\nĐôi bạn sống bên nhau\nBê vàng và dê trắng.',
+      'Một năm, trời hạn hán\nSuối cạn, cỏ héo khô\nLấy gì nuôi đôi bạn\nChờ mưa đến bao giờ?',
+      'Bê vàng đi tìm cỏ\nLang thang quên đường về\nDê trắng thương bạn quá\nChạy khắp nẻo tìm bê\nĐến bây giờ dê trắng\nVẫn gọi hoài: “Bê! Bê!”.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [79, 80, 81],
+    sourceHash: '3da5b5bac623d36f0c268119569a6cb66224af1cf6d3d5bd8832c73d07d98b5a',
+  },
+  'tv-g2-b18': {
+    title: 'Tớ nhớ cậu',
+    author: 'Theo Tun Te-le-gon',
+    genre: 'prose',
+    content: [
+      'Kiến là bạn thân của sóc. Hằng ngày, hai bạn thường rủ nhau đi học. Thế rồi nhà kiến chuyển đến một khu rừng khác. Lúc chia tay, kiến rất buồn. Kiến nói: “Cậu phải thường xuyên nhớ tớ đấy.” Sóc gật đầu nhận lời.',
+      'Một buổi sáng, sóc lấy một tờ giấy và viết thư cho kiến. Sóc nắn nót ghi: “Tớ nhớ cậu.” Một cơn gió đi ngang qua mang theo lá thư. Chiều hôm đó, kiến đi dạo trong rừng. Một lá thư nhẹ nhẹ bay xuống. Kiến reo lên: “À, thư của sóc!”.',
+      'Hôm sau, kiến ngồi bên thềm và viết thư cho sóc. Kiến không biết làm sao cho sóc biết mình rất nhớ bạn. Cậu viết: “Chào sóc!”. Nhưng kiến không định chào sóc. Cậu bèn viết một lá thư khác: “Sóc thân mến!”. Như thế vẫn không đúng ý của kiến. Lấy một tờ giấy mới, kiến ghi: “Sóc ơi!”. Cứ thế, cậu cặm cụi viết đi viết lại trong nhiều giờ liền.',
+      'Không lâu sau, sóc nhận được một lá thư do kiến gửi đến. Thư viết: “Sóc ơi, tớ cũng nhớ cậu!”.',
+    ],
+    audioNarration: [
+      'Tớ nhớ cậu',
+      'Kiến là bạn thân của sóc. Hằng ngày, hai bạn thường rủ nhau đi học. Thế rồi nhà kiến chuyển đến một khu rừng khác. Lúc chia tay, kiến rất buồn. Kiến nói: “Cậu phải thường xuyên nhớ tớ đấy.” Sóc gật đầu nhận lời.',
+      'Một buổi sáng, sóc lấy một tờ giấy và viết thư cho kiến. Sóc nắn nót ghi: “Tớ nhớ cậu.” Một cơn gió đi ngang qua mang theo lá thư. Chiều hôm đó, kiến đi dạo trong rừng. Một lá thư nhẹ nhẹ bay xuống. Kiến reo lên: “À, thư của sóc!”.',
+      'Hôm sau, kiến ngồi bên thềm và viết thư cho sóc. Kiến không biết làm sao cho sóc biết mình rất nhớ bạn. Cậu viết: “Chào sóc!”. Nhưng kiến không định chào sóc. Cậu bèn viết một lá thư khác: “Sóc thân mến!”. Như thế vẫn không đúng ý của kiến. Lấy một tờ giấy mới, kiến ghi: “Sóc ơi!”. Cứ thế, cậu cặm cụi viết đi viết lại trong nhiều giờ liền.',
+      'Không lâu sau, sóc nhận được một lá thư do kiến gửi đến. Thư viết: “Sóc ơi, tớ cũng nhớ cậu!”.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [82, 83, 84, 85],
+    sourceHash: 'f7eeb889e0b908a72eae8d342017d47f0ea7f8a242a9d57809e4dc2fa425a773',
+  },
 };
 
 function normalizeLessonId(lessonId: string): string {

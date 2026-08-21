@@ -373,23 +373,28 @@
     "lessonId": "tv-g2-b17",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      137
+      79,
+      80,
+      81
     ],
     "matchedTitle": "Bài 17: Gọi bạn",
     "matchedText": "2 g goi ban l7 b to nho cau",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b18": {
     "lessonId": "tv-g2-b18",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      89
+      82,
+      83,
+      84,
+      85
     ],
-    "matchedTitle": "Bài 18: Nhím nâu kết bạn",
-    "matchedText": "boi v49 nhim nau ket ban",
+    "matchedTitle": "Bài 18: Tớ nhớ cậu",
+    "matchedText": "bài 18 tớ nhớ cậu",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b19": {
     "lessonId": "tv-g2-b19",

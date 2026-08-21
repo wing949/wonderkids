@@ -8,11 +8,11 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 
 - Đã lập manifest cho **10/10 sách nguồn**, tổng cộng **1.584 trang**; từng ảnh trang có SHA-256 và được cache riêng ngoài Git.
 - Đã lập **danh mục 376 bài theo mục lục SGK**; mỗi bài đều có lớp, tập, tên bài và trang mở bài để đối chiếu.
-- **Chưa phát hành nguyên văn SGK chưa duyệt.** Hiện có **16 bài** đã trích nguyên văn và **152 hoạt động** có trang/tiểu ý nguồn; cần tiếp tục đối chiếu các tiểu ý còn lại trước khi công bố hoàn tất từng bài.
-- OCR đã rà 1.584/1.584 trang; **376/376 bài** đã có trang mở bài từ mục lục, trong đó **16 bài** có thêm ánh xạ trang đã kiểm tra trực quan và **0 bài** chưa có trang.
-- Hiện có **16 transcript SGK đã duyệt**. Văn bản/audio chính của **360 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
-- Có **360 bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.
-- Kho kỹ thuật hiện có một file chính và một fallback hợp lệ cho **16/376 bài**. Chỉ **16/16 transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
+- **Chưa phát hành nguyên văn SGK chưa duyệt.** Hiện có **18 bài** đã trích nguyên văn và **187 hoạt động** có trang/tiểu ý nguồn; cần tiếp tục đối chiếu các tiểu ý còn lại trước khi công bố hoàn tất từng bài.
+- OCR đã rà 1.584/1.584 trang; **376/376 bài** đã có trang mở bài từ mục lục, trong đó **18 bài** có thêm ánh xạ trang đã kiểm tra trực quan và **0 bài** chưa có trang.
+- Hiện có **18 transcript SGK đã duyệt**. Văn bản/audio chính của **358 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
+- Có **358 bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.
+- Kho kỹ thuật hiện có một file chính và một fallback hợp lệ cho **18/376 bài**. Chỉ **18/18 transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
 
 ## Thống kê
 
@@ -21,17 +21,17 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | Sách nguồn đã lập manifest | 10/10 |
 | Trang nguồn đã lập checksum | 1.584 |
 | Danh mục bài theo mục lục SGK | 376 |
-| Bài SGK đã xác minh | 16 |
-| Danh mục SGK chờ đối chiếu nguyên văn | 360 |
+| Bài SGK đã xác minh | 18 |
+| Danh mục SGK chờ đối chiếu nguyên văn | 358 |
 | Trang mở bài đã xác định | 376/376 |
-| Ánh xạ đã kiểm tra trực quan | 16 |
+| Ánh xạ đã kiểm tra trực quan | 18 |
 | Mục chưa khớp trang | 0 |
-| Transcript SGK đã xác minh | 16 |
-| Transcript SGK có audio khớp transcript | 16/16 |
-| Bài đang khóa văn bản/audio chính | 360 |
-| Hoạt động SGK đã xác minh | 152 |
+| Transcript SGK đã xác minh | 18 |
+| Transcript SGK có audio khớp transcript | 18/18 |
+| Bài đang khóa văn bản/audio chính | 358 |
+| Hoạt động SGK đã xác minh | 187 |
 | Luyện thêm trong bài | 0 |
-| Cặp audio chính/fallback đạt kiểm tra file | 16/376 |
+| Cặp audio chính/fallback đạt kiểm tra file | 18/376 |
 
 ## Tiến độ từng sách
 
@@ -196,8 +196,8 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | tv-g2-b14 | 2/1 | Bài 14: Em học vẽ | visually_reviewed | verified_sgk_transcript | 23 | 0 |
 | tv-g2-b15 | 2/1 | Bài 15: Cuốn sách của em | visually_reviewed | verified_sgk_transcript | 14 | 0 |
 | tv-g2-b16 | 2/1 | Bài 16: Khi trang sách mở ra | visually_reviewed | verified_sgk_transcript | 19 | 0 |
-| tv-g2-b17 | 2/1 | Bài 17: Gọi bạn | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
-| tv-g2-b18 | 2/1 | Bài 18: Tớ nhớ cậu | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
+| tv-g2-b17 | 2/1 | Bài 17: Gọi bạn | visually_reviewed | verified_sgk_transcript | 14 | 0 |
+| tv-g2-b18 | 2/1 | Bài 18: Tớ nhớ cậu | visually_reviewed | verified_sgk_transcript | 21 | 0 |
 | tv-g2-t1-b19 | 2/1 | Bài 19: Chữ A và những người bạn | catalog_page_confirmed | catalog_page_pending_transcript | 0 | 0 |
 | tv-g2-t1-b20 | 2/1 | Bài 20: Nhím nâu kết bạn | catalog_page_confirmed | catalog_page_pending_transcript | 0 | 0 |
 | tv-g2-t1-b21 | 2/1 | Bài 21: Thả diều | catalog_page_confirmed | catalog_page_pending_transcript | 0 | 0 |

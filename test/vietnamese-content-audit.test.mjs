@@ -65,8 +65,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   ));
 
   const pending = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending');
-  assert.equal(pending.length, 360);
-  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 16);
+  assert.equal(pending.length, 358);
+  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 18);
   assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'sgk_reference').length, 376);
   for (const lesson of pending) {
     assert.equal(lesson.sourceType, 'sgk_official', `Bài mục lục không có nguồn SGK: ${lesson.id}`);
@@ -80,7 +80,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   }
 
   const verified = lessons.filter((lesson) => lesson.catalogSection === 'sgk');
-  assert.equal(verified.length, 16);
+  assert.equal(verified.length, 18);
   for (const lesson of verified) {
     assert.equal(lesson.readingPassage?.verificationStatus, 'verified', `Thiếu nguyên văn đã duyệt: ${lesson.id}`);
     assert.ok(lesson.readingPassage?.content.length, `Thiếu nguyên văn: ${lesson.id}`);
@@ -216,6 +216,31 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
     [khiTrangSachMoRa.readingPassage?.title, ...khiTrangSachMoRa.readingPassage?.content].join('\n'),
     'Transcript audio Bài 16 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
   );
+
+  const goiBan = verified.find((lesson) => lesson.id === 'tv-g2-b17');
+  assert.ok(goiBan, 'Bài 17 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(goiBan.title, 'Bài 17: Gọi bạn');
+  assert.deepEqual(goiBan.sourceCitation.sourcePages, [79, 80, 81]);
+  assert.deepEqual(goiBan.readingPassage?.content, [
+    'Từ xa xưa thuở nào\nTrong rừng xanh sâu thẳm\nĐôi bạn sống bên nhau\nBê vàng và dê trắng.',
+    'Một năm, trời hạn hán\nSuối cạn, cỏ héo khô\nLấy gì nuôi đôi bạn\nChờ mưa đến bao giờ?',
+    'Bê vàng đi tìm cỏ\nLang thang quên đường về\nDê trắng thương bạn quá\nChạy khắp nẻo tìm bê\nĐến bây giờ dê trắng\nVẫn gọi hoài: “Bê! Bê!”.',
+  ]);
+  assert.equal(goiBan.questions.length, 14);
+  assert.equal(goiBan.readingPassage?.audioNarration, [goiBan.readingPassage?.title, ...goiBan.readingPassage?.content].join('\n'));
+
+  const toNhoCau = verified.find((lesson) => lesson.id === 'tv-g2-b18');
+  assert.ok(toNhoCau, 'Bài 18 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(toNhoCau.title, 'Bài 18: Tớ nhớ cậu');
+  assert.deepEqual(toNhoCau.sourceCitation.sourcePages, [82, 83, 84, 85]);
+  assert.deepEqual(toNhoCau.readingPassage?.content, [
+    'Kiến là bạn thân của sóc. Hằng ngày, hai bạn thường rủ nhau đi học. Thế rồi nhà kiến chuyển đến một khu rừng khác. Lúc chia tay, kiến rất buồn. Kiến nói: “Cậu phải thường xuyên nhớ tớ đấy.” Sóc gật đầu nhận lời.',
+    'Một buổi sáng, sóc lấy một tờ giấy và viết thư cho kiến. Sóc nắn nót ghi: “Tớ nhớ cậu.” Một cơn gió đi ngang qua mang theo lá thư. Chiều hôm đó, kiến đi dạo trong rừng. Một lá thư nhẹ nhẹ bay xuống. Kiến reo lên: “À, thư của sóc!”.',
+    'Hôm sau, kiến ngồi bên thềm và viết thư cho sóc. Kiến không biết làm sao cho sóc biết mình rất nhớ bạn. Cậu viết: “Chào sóc!”. Nhưng kiến không định chào sóc. Cậu bèn viết một lá thư khác: “Sóc thân mến!”. Như thế vẫn không đúng ý của kiến. Lấy một tờ giấy mới, kiến ghi: “Sóc ơi!”. Cứ thế, cậu cặm cụi viết đi viết lại trong nhiều giờ liền.',
+    'Không lâu sau, sóc nhận được một lá thư do kiến gửi đến. Thư viết: “Sóc ơi, tớ cũng nhớ cậu!”.',
+  ]);
+  assert.equal(toNhoCau.questions.length, 21);
+  assert.equal(toNhoCau.readingPassage?.audioNarration, [toNhoCau.readingPassage?.title, ...toNhoCau.readingPassage?.content].join('\n'));
 });
 
 test('văn bản hiển thị của nội dung tự sinh không tự nhận là chuẩn SGK', () => {

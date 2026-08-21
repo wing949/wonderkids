@@ -214,5 +214,34 @@
       64,
       65
     ]
+  },
+  "tv-g2-b17": {
+    "lessonId": "tv-g2-b17",
+    "primaryPath": "/audio/curriculum/tv-g2-b17.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b17.wav",
+    "primaryVoice": "Cô Hoài My",
+    "fallbackVoice": "Thầy Nam Minh",
+    "transcriptHash": "f8392545e2988afc03262151850e7a74955b1e92ec86b52c58614d3acb02f8fa",
+    "lessonVersion": 2,
+    "sourcePages": [
+      79,
+      80,
+      81
+    ]
+  },
+  "tv-g2-b18": {
+    "lessonId": "tv-g2-b18",
+    "primaryPath": "/audio/curriculum/tv-g2-b18.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b18.wav",
+    "primaryVoice": "Cô Hoài My",
+    "fallbackVoice": "Thầy Nam Minh",
+    "transcriptHash": "13b40e003efe2af90ba4f2ebc97a3dd77f8f72f167a119f5a7585017a1981b04",
+    "lessonVersion": 2,
+    "sourcePages": [
+      82,
+      83,
+      84,
+      85
+    ]
   }
 }

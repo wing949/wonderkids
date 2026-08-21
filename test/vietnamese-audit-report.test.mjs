@@ -18,20 +18,20 @@ test('báo cáo ghi đủ danh mục SGK, không nhầm bài chờ duyệt thàn
     assert.match(markdown, /10\/10 sách nguồn/);
     assert.match(markdown, /1\.584 trang/);
     assert.match(markdown, /Danh mục bài theo mục lục SGK\s*\|\s*376/);
-    assert.match(markdown, /Bài SGK đã xác minh\s*\|\s*16/);
-    assert.match(markdown, /Hoạt động SGK đã xác minh\s*\|\s*152/);
-    assert.match(markdown, /Danh mục SGK chờ đối chiếu nguyên văn\s*\|\s*360/);
-    assert.match(markdown, /Bài đang khóa văn bản\/audio chính\s*\|\s*360/);
+    assert.match(markdown, /Bài SGK đã xác minh\s*\|\s*18/);
+    assert.match(markdown, /Hoạt động SGK đã xác minh\s*\|\s*187/);
+    assert.match(markdown, /Danh mục SGK chờ đối chiếu nguyên văn\s*\|\s*358/);
+    assert.match(markdown, /Bài đang khóa văn bản\/audio chính\s*\|\s*358/);
     assert.match(markdown, /Luyện thêm trong bài\s*\|\s*0/);
     assert.match(markdown, /Chưa phát hành nguyên văn SGK chưa duyệt/i);
     assert.match(
       markdown,
-      /Transcript SGK có audio khớp transcript\s*\|\s*16\/16/,
+      /Transcript SGK có audio khớp transcript\s*\|\s*18\/18/,
       'Mỗi transcript đã duyệt phải có đúng cặp audio mới khớp hash và trang nguồn',
     );
     assert.match(
       markdown,
-      /Cặp audio chính\/fallback đạt kiểm tra file\s*\|\s*16\/376/,
+      /Cặp audio chính\/fallback đạt kiểm tra file\s*\|\s*18\/376/,
       'Không được coi các file audio cũ của bài chưa duyệt là còn sẵn sàng',
     );
     assert.equal(csv.trim().split(/\r?\n/).length, 377);
