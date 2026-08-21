@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Star, Gem, ShieldCheck, UserCheck, BookOpen, Trophy, ShoppingBag } from 'lucide-react';
+import { Flame, Star, Gem, UserCheck, BookOpen, Trophy, ShoppingBag } from 'lucide-react';
 import { GradeLevel, ThemeId, PortalView, StudentProfile } from '../../types';
 import { CUTE_ANIMAL_AVATARS } from '../../data/gamificationData';
 import { soundManager } from '../../utils/audio';
@@ -195,7 +195,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Portal Switcher (Góc Bé / Phụ Huynh / Quản Trị) - Desktop Only */}
+          {/* Portal Switcher (Góc Bé / Phụ Huynh) - Desktop Only */}
           <div className="hidden lg:flex items-center gap-1 bg-slate-100/90 p-1 rounded-full border border-slate-200 shrink-0">
             <button
               onClick={() => {
@@ -225,21 +225,6 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <UserCheck size={15} className="shrink-0" />
               <span className="whitespace-nowrap">Phụ Huynh</span>
-            </button>
-
-            <button
-              onClick={() => {
-                soundManager.playPop();
-                onPortalChange('admin');
-              }}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-baloo font-bold text-xs sm:text-sm whitespace-nowrap transition-all ${
-                currentPortal === 'admin'
-                  ? 'bg-slate-800 text-white shadow-sm'
-                  : 'text-slate-600 hover:text-brand-dark hover:bg-white/50'
-              }`}
-            >
-              <ShieldCheck size={15} className="shrink-0" />
-              <span className="whitespace-nowrap">Quản Trị</span>
             </button>
           </div>
         </div>

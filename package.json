@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "test": "node --test test/lesson-audio.test.mjs",
+    "test": "node --test test/*.test.mjs",
     "generate:curriculum-audio": "node scripts/generate_curriculum_audio.mjs",
     "verify:curriculum-audio": "node scripts/generate_curriculum_audio.mjs --verify",
     "build": "tsc && vite build",

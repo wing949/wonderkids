@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { GradeLevel, ThemeId, PortalView, SubjectType, MascotId, StudentProfile, LessonNode, DailyQuest, StarShopItem } from './types';
 import { INITIAL_DAILY_QUESTS } from './data/gamificationData';
 import { getLessonsForGradeAndSubject } from './data/curriculum';
@@ -11,10 +11,18 @@ import { VictoryModal } from './components/rewards/VictoryModal';
 import { ProfileModal } from './components/profile/ProfileModal';
 import { StarShopModal } from './components/profile/StarShopModal';
 import { ParentPortal } from './components/parent/ParentPortal';
-import { AdminCMS } from './components/admin/AdminCMS';
+import { AdminLogin } from './components/admin/AdminLogin';
 import { QuizArena } from './components/arena/QuizArena';
 import { Modal } from './components/ui/Modal';
 import { CuteDoodleBackground } from './components/common/CuteDoodleBackground';
+import { checkAdminSession, logoutAdmin } from './utils/adminAccess';
+import { createAdminAuthRequestTracker } from './utils/adminAuthRequestTracker';
+import { isControlPanelPath } from './utils/controlPanelRoute';
+
+const AdminCMS = React.lazy(async () => {
+  const module = await import('./components/admin/AdminCMS');
+  return { default: module.AdminCMS };
+});
 
 const STORAGE_KEY_PROFILE = 'wonderkids_profile_v1';
 const STORAGE_KEY_GRADE = 'wonderkids_grade_v1';
@@ -78,7 +86,13 @@ export const App: React.FC = () => {
     return p.grade || getInitialGrade();
   });
   const [currentTheme, setCurrentTheme] = useState<ThemeId>(getInitialTheme);
-  const [currentPortal, setCurrentPortal] = useState<PortalView>('student');
+  const [currentPortal, setCurrentPortal] = useState<PortalView>(() => (
+    typeof window !== 'undefined' && isControlPanelPath(window.location.pathname)
+      ? 'admin-login'
+      : 'student'
+  ));
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+  const adminAuthRequestTracker = useRef(createAdminAuthRequestTracker());
   const [selectedSubject, setSelectedSubject] = useState<SubjectType>('math');
   
   const [activeLesson, setActiveLesson] = useState<LessonNode | null>(null);
@@ -118,6 +132,57 @@ export const App: React.FC = () => {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', currentTheme);
   }, [currentTheme]);
+
+  useEffect(() => {
+    let isCurrent = true;
+    const requestId = adminAuthRequestTracker.current.begin();
+    void checkAdminSession().then((hasSession) => {
+      if (!isCurrent || !adminAuthRequestTracker.current.isCurrent(requestId)) return;
+      setIsAdminAuthenticated(hasSession);
+      if (hasSession && isControlPanelPath(window.location.pathname)) {
+        setCurrentPortal('admin');
+      }
+    });
+    return () => {
+      isCurrent = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    const syncPortalWithPath = () => {
+      if (isControlPanelPath(window.location.pathname)) {
+        setCurrentPortal(isAdminAuthenticated ? 'admin' : 'admin-login');
+      } else {
+        setCurrentPortal('student');
+      }
+    };
+
+    window.addEventListener('popstate', syncPortalWithPath);
+    return () => window.removeEventListener('popstate', syncPortalWithPath);
+  }, [isAdminAuthenticated]);
+
+  const handlePortalChange = (portal: PortalView) => {
+    if (portal === 'admin' || portal === 'admin-login') {
+      return;
+    }
+    setCurrentPortal(portal);
+  };
+
+  const returnToStudentPortal = () => {
+    if (typeof window !== 'undefined' && isControlPanelPath(window.location.pathname)) {
+      window.history.pushState({}, '', '/');
+    }
+    setCurrentPortal('student');
+  };
+
+  const handleAdminLogout = async () => {
+    const hasLoggedOut = await logoutAdmin();
+    if (!hasLoggedOut) return false;
+    adminAuthRequestTracker.current.invalidate();
+    setIsAdminAuthenticated(false);
+    returnToStudentPortal();
+    return true;
+  };
 
   // Handler: Start a lesson
   const handleStartLesson = (lesson: LessonNode) => {
@@ -184,7 +249,7 @@ export const App: React.FC = () => {
       <CuteDoodleBackground theme={currentTheme} />
 
       {/* Universal Header (Hidden inside exercise mode to prevent distractions) */}
-      {currentPortal !== 'exercise' && (
+      {currentPortal !== 'exercise' && currentPortal !== 'admin' && currentPortal !== 'admin-login' && (
         <Header
           profile={profile}
           currentGrade={currentGrade}
@@ -192,7 +257,7 @@ export const App: React.FC = () => {
           currentTheme={currentTheme}
           onThemeChange={handleThemeChange}
           currentPortal={currentPortal}
-          onPortalChange={setCurrentPortal}
+          onPortalChange={handlePortalChange}
           onOpenShop={() => setIsShopModalOpen(true)}
           onOpenBadges={() => setIsProfileModalOpen(true)}
         />
@@ -257,13 +322,26 @@ export const App: React.FC = () => {
           />
         )}
 
-        {currentPortal === 'admin' && (
-          <AdminCMS onBackToStudent={() => setCurrentPortal('student')} />
+        {currentPortal === 'admin' && isAdminAuthenticated && (
+          <Suspense fallback={<div className="p-10 text-center font-baloo text-lg font-bold text-slate-600">Đang mở khu vực quản trị…</div>}>
+            <AdminCMS onBackToStudent={returnToStudentPortal} onLogout={handleAdminLogout} />
+          </Suspense>
+        )}
+
+        {(currentPortal === 'admin-login' || (currentPortal === 'admin' && !isAdminAuthenticated)) && (
+          <AdminLogin
+            onAuthenticated={() => {
+              adminAuthRequestTracker.current.invalidate();
+              setIsAdminAuthenticated(true);
+              setCurrentPortal('admin');
+            }}
+            onBackToStudent={returnToStudentPortal}
+          />
         )}
       </main>
 
       {/* Mobile Bottom Dock (Hidden in exercise mode) */}
-      {currentPortal !== 'exercise' && currentPortal !== 'admin' && (
+      {currentPortal !== 'exercise' && currentPortal !== 'admin' && currentPortal !== 'admin-login' && (
         <BottomNav
           currentPortal={currentPortal}
           onPortalChange={setCurrentPortal}

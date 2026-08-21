@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Plus, Layers, Database, ArrowLeft, Edit3, Trash2, Volume2, Sparkles, BookOpen, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Plus, Layers, Database, ArrowLeft, Edit3, Trash2, Volume2, Sparkles, BookOpen, CheckCircle2, LogOut } from 'lucide-react';
 import { GradeLevel, SubjectType, QuestionType } from '../../types';
 import { SAMPLE_LESSONS, SUBJECTS_CONFIG } from '../../data/curriculumData';
 import { CuteButton } from '../ui/CuteButton';
@@ -8,9 +8,10 @@ import { TTSSettingsPanel } from '../parent/TTSSettingsPanel';
 
 interface AdminCMSProps {
   onBackToStudent: () => void;
+  onLogout: () => Promise<boolean>;
 }
 
-export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
+export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent, onLogout }) => {
   const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(1);
   const [selectedSubject, setSelectedSubject] = useState<SubjectType>('math');
   const [activeTab, setActiveTab] = useState<'curriculum' | 'question_builder' | 'tts_settings'>('curriculum');
@@ -23,6 +24,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
   const [newQOpt2, setNewQOpt2] = useState('');
   const [newQOpt3, setNewQOpt3] = useState('');
   const [isSavedNotice, setIsSavedNotice] = useState(false);
+  const [logoutError, setLogoutError] = useState('');
 
   const filteredLessons = SAMPLE_LESSONS.filter(
     (l) => l.grade === selectedGrade && l.subject === selectedSubject
@@ -39,6 +41,12 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
     setNewQOpt1('');
     setNewQOpt2('');
     setNewQOpt3('');
+  };
+
+  const handleLogout = async () => {
+    setLogoutError('');
+    const hasLoggedOut = await onLogout();
+    if (!hasLoggedOut) setLogoutError('Không thể đăng xuất. Vui lòng thử lại.');
   };
 
   return (
@@ -73,15 +81,30 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent }) => {
             </div>
           </div>
 
-          <CuteButton
-            variant="ghost"
-            size="sm"
-            onClick={onBackToStudent}
-            icon={<ArrowLeft size={16} />}
-          >
-            Về Góc Bé 🎒
-          </CuteButton>
+          <div className="flex flex-wrap items-center gap-2">
+            <CuteButton
+              variant="ghost"
+              size="sm"
+              onClick={onBackToStudent}
+              icon={<ArrowLeft size={16} />}
+            >
+              Về Góc Bé 🎒
+            </CuteButton>
+            <CuteButton
+              variant="ghost"
+              size="sm"
+              onClick={handleLogout}
+              icon={<LogOut size={16} />}
+            >
+              Đăng xuất
+            </CuteButton>
+          </div>
         </div>
+        {logoutError && (
+          <p role="alert" className="rounded-2xl bg-rose-50 px-4 py-3 font-vietnam text-sm font-semibold text-rose-700">
+            {logoutError}
+          </p>
+        )}
 
         {/* System Stats Bar (Bright Cards with Soft Colored Accents) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
