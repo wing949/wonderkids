@@ -20,6 +20,19 @@ function mdCell(value) {
   return String(value ?? '').replaceAll('|', '\\|').replaceAll('\n', ' ');
 }
 
+function buildNarration(passage) {
+  if (!passage) return '';
+  if (passage.audioNarration?.trim()) return passage.audioNarration.trim();
+  return [passage.title, ...passage.content]
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .join('\n');
+}
+
+function samePages(left = [], right = []) {
+  return left.length === right.length && left.every((page, index) => page === right[index]);
+}
+
 async function audioInfo(assetPath) {
   const absolutePath = join(workspace, 'public', assetPath.slice(1));
   try {
@@ -62,6 +75,20 @@ try {
         && lesson.readingPassage.verificationStatus === 'verified'
         && lesson.readingPassage.sourcePages?.length > 0
         && lesson.readingPassage.sourcePages.every((page) => lesson.sourceCitation?.sourcePages.includes(page));
+      const expectedTranscriptHash = lesson.readingPassage
+        ? createHash('sha256').update(buildNarration(lesson.readingPassage)).digest('hex')
+        : '';
+      const audioTranscriptMatched = verifiedTranscript
+        && primary.valid
+        && fallback.valid
+        && Boolean(primary.hash && fallback.hash && primary.hash !== fallback.hash)
+        && asset?.transcriptHash === expectedTranscriptHash
+        && samePages(asset?.sourcePages, lesson.readingPassage?.sourcePages);
+      const audioTranscriptStatus = !verifiedTranscript
+        ? 'not_applicable'
+        : audioTranscriptMatched
+          ? 'matched'
+          : 'pending';
       const supplementReadingAllowed = (lesson.grade === 1 && lesson.semester === 1)
         || lesson.provenance?.contentOrigin === 'pedagogical_supplement';
       const readingStatus = verifiedTranscript || verifiedSgk
@@ -87,10 +114,14 @@ try {
         audioFallback: fallback.valid ? 'valid' : 'missing_or_invalid',
         audioDistinct: Boolean(primary.hash && fallback.hash && primary.hash !== fallback.hash),
         transcriptHash: asset?.transcriptHash || '',
+        expectedTranscriptHash,
+        audioTranscriptStatus,
         notes: verifiedSgk
           ? 'Toàn bộ bài đã qua cổng kiểm duyệt xuất bản.'
+          : audioTranscriptStatus === 'matched'
+            ? 'Bài đọc và cặp audio đã khớp transcript SGK; hoạt động Luyện thêm vẫn được tách riêng.'
           : verifiedTranscript
-            ? 'Bài đọc và audio đã đối chiếu SGK; hoạt động Luyện thêm vẫn được tách riêng.'
+            ? 'Transcript SGK đã duyệt nhưng audio chưa khớp hash hoặc trang nguồn; không được phát làm giọng đọc SGK.'
           : readingStatus === 'supplement_reading_allowed'
             ? 'Chỉ cho phép bài đọc bổ sung có ghi nhãn; không tính là văn bản SGK.'
             : 'Đã khóa văn bản và audio chính cho đến khi transcript được đối chiếu nguyên văn với SGK.',
@@ -112,9 +143,7 @@ try {
   const verifiedTranscripts = rows.filter((row) => row.readingStatus === 'verified_sgk_transcript').length;
   const verifiedTranscriptAudioReady = rows.filter((row) =>
     row.readingStatus === 'verified_sgk_transcript'
-    && row.audioPrimary === 'valid'
-    && row.audioFallback === 'valid'
-    && row.audioDistinct
+    && row.audioTranscriptStatus === 'matched'
   ).length;
   const bookTable = books.map((book) =>
     `| ${book.id} | ${book.grade} | ${book.semester} | ${book.pageCount} | ${book.importStatus} | ${book.published ? 'Có' : 'Không'} | \`${book.manifestHash.slice(0, 12)}…\` |`
@@ -136,7 +165,7 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 - OCR đã rà 1.584/1.584 trang; **${sourceMatched}/${referenceRows.length} mục có nguồn SGK** tìm được trang mở bài, trong đó **${visuallyReviewed} mục** đã kiểm tra trực quan và **${sourceUnmatched} mục** chưa được phép gắn trang.
 - Hiện có **${verifiedTranscripts} transcript SGK đã duyệt**. Văn bản/audio chính của **${blockedReadings} bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
 - 132 gói nội dung cũ vẫn được giữ trong từng bài dưới dạng **Luyện thêm**, không tính là bài tập SGK.
-- Kho kỹ thuật có đủ một file chính và một fallback cho **${audioReady}/132 bài**. Chỉ **${verifiedTranscriptAudioReady}/${verifiedTranscripts} transcript SGK đã duyệt** được phép dùng cặp audio này làm giọng đọc SGK.
+- Kho kỹ thuật có đủ một file chính và một fallback cho **${audioReady}/132 bài**. Chỉ **${verifiedTranscriptAudioReady}/${verifiedTranscripts} transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
 
 ## Thống kê
 
@@ -149,7 +178,7 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | Ánh xạ đã kiểm tra trực quan | ${visuallyReviewed} |
 | Mục chưa khớp trang | ${sourceUnmatched} |
 | Transcript SGK đã xác minh | ${verifiedTranscripts} |
-| Transcript SGK có đủ audio chính/fallback | ${verifiedTranscriptAudioReady}/${verifiedTranscripts} |
+| Transcript SGK có audio khớp transcript | ${verifiedTranscriptAudioReady}/${verifiedTranscripts} |
 | Bài đang khóa văn bản/audio chính | ${blockedReadings} |
 | Hoạt động SGK đã xác minh | ${sgkActivities} |
 | Luyện thêm trong bài | ${appExtensions} |
@@ -176,7 +205,8 @@ Một bài chỉ được tính vào nội dung SGK khi có trích dẫn trang, 
     'lessonId', 'grade', 'semester', 'appTitle', 'cardPreview', 'declaredReferenceTitle',
     'declaredReferenceDetail', 'sourceMappingStatus', 'sourcePages', 'readingStatus',
     'contentStatus', 'sgkActivityCount', 'appExtensionCount',
-    'audioPrimary', 'audioFallback', 'audioDistinct', 'transcriptHash', 'notes',
+    'audioPrimary', 'audioFallback', 'audioDistinct', 'transcriptHash', 'expectedTranscriptHash',
+    'audioTranscriptStatus', 'notes',
   ];
   const csv = [headers.join(','), ...rows.map((row) => headers.map((header) => csvCell(row[header])).join(','))].join('\n') + '\n';
 

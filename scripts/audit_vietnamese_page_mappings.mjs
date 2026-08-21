@@ -16,6 +16,8 @@ const buildDir = await mkdtemp(join(tmpdir(), 'wonderkids-page-mapping-'));
 const visuallyReviewedPages = new Map([
   ['tv-g2-b1', [10, 11, 12]],
   ['tv-g2-b2', [13]],
+  ['tv-g2-b3', [17, 18]],
+  ['tv-g2-b4', [20]],
   ['tv-g2-b5', [24, 25, 26]],
   ['tv-g2-b6', [27, 28, 29, 30]],
 ]);
