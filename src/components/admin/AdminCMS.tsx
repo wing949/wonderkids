@@ -5,16 +5,18 @@ import { SAMPLE_LESSONS, SUBJECTS_CONFIG } from '../../data/curriculumData';
 import { CuteButton } from '../ui/CuteButton';
 import { soundManager } from '../../utils/audio';
 import { TTSSettingsPanel } from '../parent/TTSSettingsPanel';
+import { AdminTab } from '../../utils/appRoute';
 
 interface AdminCMSProps {
+  activeTab: AdminTab;
   onBackToStudent: () => void;
   onLogout: () => Promise<boolean>;
+  onTabChange: (tab: AdminTab) => void;
 }
 
-export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent, onLogout }) => {
+export const AdminCMS: React.FC<AdminCMSProps> = ({ activeTab, onBackToStudent, onLogout, onTabChange }) => {
   const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(1);
   const [selectedSubject, setSelectedSubject] = useState<SubjectType>('math');
-  const [activeTab, setActiveTab] = useState<'curriculum' | 'question_builder' | 'tts_settings'>('curriculum');
 
   // Question builder form state
   const [newQType, setNewQType] = useState<QuestionType>('bubble_choice');
@@ -147,7 +149,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent, onLogout })
             type="button"
             onClick={() => {
               soundManager.playPop();
-              setActiveTab('curriculum');
+              onTabChange('curriculum');
             }}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
               activeTab === 'curriculum'
@@ -162,7 +164,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent, onLogout })
             type="button"
             onClick={() => {
               soundManager.playPop();
-              setActiveTab('question_builder');
+              onTabChange('question_builder');
             }}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
               activeTab === 'question_builder'
@@ -177,7 +179,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent, onLogout })
             type="button"
             onClick={() => {
               soundManager.playPop();
-              setActiveTab('tts_settings');
+              onTabChange('tts_settings');
             }}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
               activeTab === 'tts_settings'
@@ -257,7 +259,7 @@ export const AdminCMS: React.FC<AdminCMSProps> = ({ onBackToStudent, onLogout })
                   type="button"
                   onClick={() => {
                     soundManager.playPop();
-                    setActiveTab('question_builder');
+                    onTabChange('question_builder');
                   }}
                   className="flex items-center gap-1.5 px-4 py-2 rounded-2xl bg-emerald-600 text-white font-baloo font-bold text-xs shadow-xs hover:bg-emerald-700 transition-all cursor-pointer"
                 >

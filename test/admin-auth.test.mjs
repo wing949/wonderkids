@@ -8,6 +8,7 @@ import {
 import adminAuthHandler from '../api/admin-auth.js';
 import { isControlPanelPath } from '../src/utils/controlPanelRoute.ts';
 import { createAdminAuthRequestTracker } from '../src/utils/adminAuthRequestTracker.ts';
+import { findLessonById, getAppPath, parseAppRoute } from '../src/utils/appRoute.ts';
 
 function createResponse() {
   return {
@@ -122,4 +123,34 @@ test('only the dedicated /cp path opens the control panel route', () => {
   assert.equal(isControlPanelPath('/'), false);
   assert.equal(isControlPanelPath('/admin'), false);
   assert.equal(isControlPanelPath('/cp/anything'), false);
+});
+
+test('a shared URL restores the intended screen, lesson, and admin tab', () => {
+  assert.deepEqual(parseAppRoute('/hoc/toan/lop-3'), {
+    kind: 'adventure',
+    grade: 3,
+    subject: 'math',
+  });
+  assert.deepEqual(parseAppRoute('/bai-hoc/math-g1-b1'), {
+    kind: 'exercise',
+    lessonId: 'math-g1-b1',
+  });
+  assert.deepEqual(parseAppRoute('/phu-huynh'), { kind: 'parent' });
+  assert.deepEqual(parseAppRoute('/cp/audio'), { kind: 'admin', tab: 'tts_settings' });
+  assert.deepEqual(parseAppRoute('/duong-dan-khong-ton-tai'), { kind: 'student' });
+});
+
+test('navigation creates a stable URL that can be copied and opened again', () => {
+  const lessonPath = getAppPath({ kind: 'exercise', lessonId: 'tv-g1-b1' });
+  assert.equal(lessonPath, '/bai-hoc/tv-g1-b1');
+  assert.deepEqual(parseAppRoute(lessonPath), {
+    kind: 'exercise',
+    lessonId: 'tv-g1-b1',
+  });
+});
+
+test('a direct lesson URL can select the matching lesson after F5', () => {
+  const lessons = [{ id: 'math-g1-b1' }, { id: 'tv-g1-b1' }];
+  assert.deepEqual(findLessonById(lessons, 'math-g1-b1'), { id: 'math-g1-b1' });
+  assert.equal(findLessonById(lessons, 'bai-khong-ton-tai'), null);
 });

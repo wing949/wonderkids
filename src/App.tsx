@@ -17,7 +17,8 @@ import { Modal } from './components/ui/Modal';
 import { CuteDoodleBackground } from './components/common/CuteDoodleBackground';
 import { checkAdminSession, logoutAdmin } from './utils/adminAccess';
 import { createAdminAuthRequestTracker } from './utils/adminAuthRequestTracker';
-import { isControlPanelPath } from './utils/controlPanelRoute';
+import { AdminTab, AppRoute, findLessonById, getAppPath, parseAppRoute } from './utils/appRoute';
+import { isControlPanelRoute } from './utils/controlPanelRoute';
 
 const AdminCMS = React.lazy(async () => {
   const module = await import('./components/admin/AdminCMS');
@@ -27,6 +28,8 @@ const AdminCMS = React.lazy(async () => {
 const STORAGE_KEY_PROFILE = 'wonderkids_profile_v1';
 const STORAGE_KEY_GRADE = 'wonderkids_grade_v1';
 const STORAGE_KEY_THEME = 'wonderkids_theme_v1';
+const ROUTEABLE_SUBJECTS: SubjectType[] = ['math', 'vietnamese', 'english', 'logic'];
+const ROUTEABLE_GRADES: GradeLevel[] = [1, 2, 3, 4, 5];
 
 const INITIAL_PROFILE: StudentProfile = {
   name: 'Bé An Nhiên',
@@ -79,30 +82,66 @@ const getInitialTheme = (): ThemeId => {
   return 'ocean';
 };
 
+const getInitialAppRoute = (): AppRoute => (
+  typeof window === 'undefined' ? { kind: 'student' } : parseAppRoute(window.location.pathname)
+);
+
+const getPortalForRoute = (route: AppRoute): PortalView => {
+  switch (route.kind) {
+    case 'adventure': return 'adventure';
+    case 'exercise': return 'exercise';
+    case 'parent': return 'parent';
+    case 'arena': return 'arena';
+    case 'admin': return 'admin-login';
+    default: return 'student';
+  }
+};
+
+const findCurriculumLesson = (lessonId: string): LessonNode | null => {
+  for (const subject of ROUTEABLE_SUBJECTS) {
+    for (const grade of ROUTEABLE_GRADES) {
+      const lesson = findLessonById(getLessonsForGradeAndSubject(grade, subject), lessonId);
+      if (lesson) return lesson;
+    }
+  }
+  return null;
+};
+
 export const App: React.FC = () => {
+  const [initialRoute] = useState<AppRoute>(getInitialAppRoute);
+  const [initialLesson] = useState<LessonNode | null>(() => (
+    initialRoute.kind === 'exercise' ? findCurriculumLesson(initialRoute.lessonId) : null
+  ));
   const [profile, setProfile] = useState<StudentProfile>(getInitialProfile);
   const [currentGrade, setCurrentGrade] = useState<GradeLevel>(() => {
+    if (initialRoute.kind === 'adventure') return initialRoute.grade;
+    if (initialLesson) return initialLesson.grade;
     const p = getInitialProfile();
     return p.grade || getInitialGrade();
   });
   const [currentTheme, setCurrentTheme] = useState<ThemeId>(getInitialTheme);
   const [currentPortal, setCurrentPortal] = useState<PortalView>(() => (
-    typeof window !== 'undefined' && isControlPanelPath(window.location.pathname)
-      ? 'admin-login'
-      : 'student'
+    initialRoute.kind === 'exercise' && !initialLesson ? 'student' : getPortalForRoute(initialRoute)
   ));
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const adminAuthRequestTracker = useRef(createAdminAuthRequestTracker());
-  const [selectedSubject, setSelectedSubject] = useState<SubjectType>('math');
+  const [selectedSubject, setSelectedSubject] = useState<SubjectType>(() => {
+    if (initialRoute.kind === 'adventure') return initialRoute.subject;
+    return initialLesson?.subject || 'math';
+  });
+  const [adminTab, setAdminTab] = useState<AdminTab>(() => (
+    initialRoute.kind === 'admin' ? initialRoute.tab : 'curriculum'
+  ));
   
-  const [activeLesson, setActiveLesson] = useState<LessonNode | null>(null);
+  const [activeLesson, setActiveLesson] = useState<LessonNode | null>(initialLesson);
+  const [lessonSessionKey, setLessonSessionKey] = useState(0);
   const [dailyQuests] = useState<DailyQuest[]>(INITIAL_DAILY_QUESTS);
 
   // Modals state
   const [isVictoryModalOpen, setIsVictoryModalOpen] = useState(false);
-  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
-  const [isShopModalOpen, setIsShopModalOpen] = useState(false);
-  const [isQuestsModalOpen, setIsQuestsModalOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(initialRoute.kind === 'profile');
+  const [isShopModalOpen, setIsShopModalOpen] = useState(initialRoute.kind === 'shop');
+  const [isQuestsModalOpen, setIsQuestsModalOpen] = useState(initialRoute.kind === 'quests');
 
   const [lastEarnedStars, setLastEarnedStars] = useState(3);
   const [lastEarnedXp, setLastEarnedXp] = useState(100);
@@ -133,13 +172,72 @@ export const App: React.FC = () => {
     document.documentElement.setAttribute('data-theme', currentTheme);
   }, [currentTheme]);
 
+  const applyAppRoute = (route: AppRoute) => {
+    setIsProfileModalOpen(false);
+    setIsShopModalOpen(false);
+    setIsQuestsModalOpen(false);
+
+    switch (route.kind) {
+      case 'profile':
+        setCurrentPortal('student');
+        setIsProfileModalOpen(true);
+        return;
+      case 'shop':
+        setCurrentPortal('student');
+        setIsShopModalOpen(true);
+        return;
+      case 'quests':
+        setCurrentPortal('student');
+        setIsQuestsModalOpen(true);
+        return;
+      case 'adventure':
+        setCurrentGrade(route.grade);
+        setSelectedSubject(route.subject);
+        setCurrentPortal('adventure');
+        return;
+      case 'exercise': {
+        const lesson = findCurriculumLesson(route.lessonId);
+        if (!lesson) {
+          setCurrentPortal('student');
+          return;
+        }
+        setCurrentGrade(lesson.grade);
+        setSelectedSubject(lesson.subject);
+        setActiveLesson(lesson);
+        setLessonSessionKey((prev) => prev + 1);
+        setCurrentPortal('exercise');
+        return;
+      }
+      case 'parent':
+        setCurrentPortal('parent');
+        return;
+      case 'arena':
+        setCurrentPortal('arena');
+        return;
+      case 'admin':
+        setAdminTab(route.tab);
+        setCurrentPortal(isAdminAuthenticated ? 'admin' : 'admin-login');
+        return;
+      default:
+        setCurrentPortal('student');
+    }
+  };
+
+  const navigateTo = (route: AppRoute) => {
+    const path = getAppPath(route);
+    if (typeof window !== 'undefined' && window.location.pathname !== path) {
+      window.history.pushState({}, '', path);
+    }
+    applyAppRoute(route);
+  };
+
   useEffect(() => {
     let isCurrent = true;
     const requestId = adminAuthRequestTracker.current.begin();
     void checkAdminSession().then((hasSession) => {
       if (!isCurrent || !adminAuthRequestTracker.current.isCurrent(requestId)) return;
       setIsAdminAuthenticated(hasSession);
-      if (hasSession && isControlPanelPath(window.location.pathname)) {
+      if (hasSession && isControlPanelRoute(window.location.pathname)) {
         setCurrentPortal('admin');
       }
     });
@@ -149,31 +247,25 @@ export const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const syncPortalWithPath = () => {
-      if (isControlPanelPath(window.location.pathname)) {
-        setCurrentPortal(isAdminAuthenticated ? 'admin' : 'admin-login');
-      } else {
-        setCurrentPortal('student');
-      }
-    };
+    const syncPortalWithPath = () => applyAppRoute(parseAppRoute(window.location.pathname));
 
     window.addEventListener('popstate', syncPortalWithPath);
     return () => window.removeEventListener('popstate', syncPortalWithPath);
   }, [isAdminAuthenticated]);
 
   const handlePortalChange = (portal: PortalView) => {
-    if (portal === 'admin' || portal === 'admin-login') {
-      return;
+    if (portal === 'student') {
+      navigateTo({ kind: 'student' });
+    } else if (portal === 'adventure') {
+      navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade });
+    } else if (portal === 'parent') {
+      navigateTo({ kind: 'parent' });
+    } else if (portal === 'arena') {
+      navigateTo({ kind: 'arena' });
     }
-    setCurrentPortal(portal);
   };
 
-  const returnToStudentPortal = () => {
-    if (typeof window !== 'undefined' && isControlPanelPath(window.location.pathname)) {
-      window.history.pushState({}, '', '/');
-    }
-    setCurrentPortal('student');
-  };
+  const returnToStudentPortal = () => navigateTo({ kind: 'student' });
 
   const handleAdminLogout = async () => {
     const hasLoggedOut = await logoutAdmin();
@@ -186,14 +278,12 @@ export const App: React.FC = () => {
 
   // Handler: Start a lesson
   const handleStartLesson = (lesson: LessonNode) => {
-    setActiveLesson(lesson);
-    setCurrentPortal('exercise');
+    navigateTo({ kind: 'exercise', lessonId: lesson.id });
   };
 
   // Handler: Select subject from Dashboard
   const handleSelectSubject = (subject: SubjectType) => {
-    setSelectedSubject(subject);
-    setCurrentPortal('adventure');
+    navigateTo({ kind: 'adventure', subject, grade: currentGrade });
   };
 
   // Handler: Lesson Completed
@@ -232,6 +322,9 @@ export const App: React.FC = () => {
   const handleGradeChange = (grade: GradeLevel) => {
     setCurrentGrade(grade);
     setProfile((prev) => ({ ...prev, grade }));
+    if (currentPortal === 'adventure') {
+      navigateTo({ kind: 'adventure', subject: selectedSubject, grade });
+    }
   };
 
   // Handler: Change Theme
@@ -258,8 +351,8 @@ export const App: React.FC = () => {
           onThemeChange={handleThemeChange}
           currentPortal={currentPortal}
           onPortalChange={handlePortalChange}
-          onOpenShop={() => setIsShopModalOpen(true)}
-          onOpenBadges={() => setIsProfileModalOpen(true)}
+          onOpenShop={() => navigateTo({ kind: 'shop' })}
+          onOpenBadges={() => navigateTo({ kind: 'profile' })}
         />
       )}
 
@@ -270,10 +363,10 @@ export const App: React.FC = () => {
             profile={profile}
             currentGrade={currentGrade}
             onSelectSubject={handleSelectSubject}
-            onOpenAdventure={() => setCurrentPortal('adventure')}
-            onOpenArena={() => setCurrentPortal('arena')}
-            onOpenShop={() => setIsShopModalOpen(true)}
-            onOpenQuests={() => setIsQuestsModalOpen(true)}
+            onOpenAdventure={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
+            onOpenArena={() => navigateTo({ kind: 'arena' })}
+            onOpenShop={() => navigateTo({ kind: 'shop' })}
+            onOpenQuests={() => navigateTo({ kind: 'quests' })}
             onMascotChange={handleMascotChange}
             dailyQuests={dailyQuests}
           />
@@ -283,23 +376,24 @@ export const App: React.FC = () => {
           <AdventureMap
             currentGrade={currentGrade}
             selectedSubject={selectedSubject}
-            onSelectSubject={setSelectedSubject}
+            onSelectSubject={handleSelectSubject}
             onStartLesson={handleStartLesson}
-            onBackToDashboard={() => setCurrentPortal('student')}
+            onBackToDashboard={returnToStudentPortal}
           />
         )}
 
         {currentPortal === 'exercise' && activeLesson && (
           <InteractiveExerciseEngine
+            key={`${activeLesson.id}-${lessonSessionKey}`}
             lesson={activeLesson}
-            onExit={() => setCurrentPortal('adventure')}
+            onExit={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
             onComplete={handleCompleteLesson}
           />
         )}
 
         {currentPortal === 'arena' && (
           <QuizArena
-            onBackToDashboard={() => setCurrentPortal('student')}
+            onBackToDashboard={returnToStudentPortal}
             onVictory={(xp, stars) => {
               setProfile((prev) => ({
                 ...prev,
@@ -312,7 +406,7 @@ export const App: React.FC = () => {
 
         {currentPortal === 'parent' && (
           <ParentPortal
-            onBackToStudent={() => setCurrentPortal('student')}
+            onBackToStudent={returnToStudentPortal}
             onRewardStars={(stars) => {
               setProfile((prev) => ({
                 ...prev,
@@ -324,7 +418,12 @@ export const App: React.FC = () => {
 
         {currentPortal === 'admin' && isAdminAuthenticated && (
           <Suspense fallback={<div className="p-10 text-center font-baloo text-lg font-bold text-slate-600">Đang mở khu vực quản trị…</div>}>
-            <AdminCMS onBackToStudent={returnToStudentPortal} onLogout={handleAdminLogout} />
+            <AdminCMS
+              activeTab={adminTab}
+              onBackToStudent={returnToStudentPortal}
+              onLogout={handleAdminLogout}
+              onTabChange={(tab) => navigateTo({ kind: 'admin', tab })}
+            />
           </Suspense>
         )}
 
@@ -344,9 +443,9 @@ export const App: React.FC = () => {
       {currentPortal !== 'exercise' && currentPortal !== 'admin' && currentPortal !== 'admin-login' && (
         <BottomNav
           currentPortal={currentPortal}
-          onPortalChange={setCurrentPortal}
-          onOpenShop={() => setIsShopModalOpen(true)}
-          onOpenQuests={() => setIsQuestsModalOpen(true)}
+          onPortalChange={handlePortalChange}
+          onOpenShop={() => navigateTo({ kind: 'shop' })}
+          onOpenQuests={() => navigateTo({ kind: 'quests' })}
         />
       )}
 
@@ -363,25 +462,26 @@ export const App: React.FC = () => {
           const currentLessons = getLessonsForGradeAndSubject(currentGrade, selectedSubject);
           const currentIdx = currentLessons.findIndex((l) => l.id === activeLesson?.id);
           if (currentIdx !== -1 && currentIdx + 1 < currentLessons.length) {
-            setActiveLesson(currentLessons[currentIdx + 1]);
-            setCurrentPortal('exercise');
+            handleStartLesson(currentLessons[currentIdx + 1]);
           } else {
-            setCurrentPortal('adventure');
+            navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade });
           }
         }}
         onBackToDashboard={() => {
           setIsVictoryModalOpen(false);
-          setCurrentPortal('student');
+          returnToStudentPortal();
         }}
         onRetry={() => {
           setIsVictoryModalOpen(false);
+          setLessonSessionKey((prev) => prev + 1);
+          setCurrentPortal('exercise');
         }}
       />
 
       {/* Profile & Badges Modal */}
       <ProfileModal
         isOpen={isProfileModalOpen}
-        onClose={() => setIsProfileModalOpen(false)}
+        onClose={returnToStudentPortal}
         profile={profile}
         onUpdateProfile={(updated) => {
           setProfile((prev) => ({ ...prev, ...updated }));
@@ -397,7 +497,7 @@ export const App: React.FC = () => {
       {/* Star Rewards Shop Modal */}
       <StarShopModal
         isOpen={isShopModalOpen}
-        onClose={() => setIsShopModalOpen(false)}
+        onClose={returnToStudentPortal}
         userStars={profile.stars}
         onBuyItem={handleBuyShopItem}
       />
@@ -405,7 +505,7 @@ export const App: React.FC = () => {
       {/* Daily Quests Popup Modal */}
       <Modal
         isOpen={isQuestsModalOpen}
-        onClose={() => setIsQuestsModalOpen(false)}
+        onClose={returnToStudentPortal}
         title="Nhiệm Vụ Việc Tốt Mỗi Ngày"
         icon="📋"
         maxWidth="md"
