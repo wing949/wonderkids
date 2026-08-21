@@ -185,10 +185,17 @@ test('ba bài bổ trợ không bị gán tên bài, trang hoặc link SGK', () 
 
 test('thay đổi provenance Tiếng Việt không làm đổi nguồn hoặc phần thưởng môn khác', () => {
   for (const subject of ['math', 'english']) {
+    const topicsByGrade = subject === 'math'
+      ? curriculum.MATH_CURRICULUM_BY_GRADE
+      : curriculum.ENGLISH_CURRICULUM_BY_GRADE;
     for (const grade of [1, 2, 3, 4, 5]) {
       for (const lesson of curriculum.getLessonsForGradeAndSubject(grade, subject)) {
+        const topic = topicsByGrade[grade].find((item) => item.id === lesson.id);
+        assert.ok(topic, `Thiếu topic gốc ${subject}: ${lesson.id}`);
         assert.notEqual(lesson.provenance.contentOrigin, 'system_generated', `Sai nguồn ${subject}: ${lesson.id}`);
         assert.notEqual(lesson.provenance.verificationStatus, 'reference_only', `Sai xác minh ${subject}: ${lesson.id}`);
+        assert.equal(lesson.unit, topic.unit, `Sai unit ${subject}: ${lesson.id}`);
+        assert.equal(lesson.textbookPageRef, topic.textbookPageRef, `Sai trang sách ${subject}: ${lesson.id}`);
         assert.equal(lesson.starsEarned, 0, `Sai sao đã nhận: ${lesson.id}`);
         assert.equal(lesson.xpReward, 50, `Sai XP: ${lesson.id}`);
         assert.equal(lesson.starReward, 3, `Sai thưởng sao: ${lesson.id}`);
