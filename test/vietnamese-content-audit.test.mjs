@@ -78,6 +78,11 @@ test('nội dung chưa đối chiếu nguyên văn không được phát ra như
     [],
     'Bài chưa đối chiếu vẫn hiện badge trang SGK ở đầu bài'
   );
+  assert.deepEqual(
+    unverified.filter((lesson) => /\b(?:trang|sgk|chủ điểm)\b/i.test(lesson.unit)).map((lesson) => lesson.id),
+    [],
+    'Nhãn đơn vị của bài chưa đối chiếu vẫn giả dạng metadata SGK'
+  );
 });
 
 test('văn bản hiển thị của nội dung tự sinh không tự nhận là chuẩn SGK', () => {

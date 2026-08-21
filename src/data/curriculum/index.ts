@@ -342,7 +342,9 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       description: displayedDescription,
       subject,
       grade,
-      unit: t.unit,
+      unit: isGenerated
+        ? `Luyện đọc tự sinh — Tập ${t.semester}`
+        : isVietnameseSupplement ? 'Hoạt động bổ trợ WonderKids' : t.unit,
       textbookPageRef: isVerifiedSgk ? t.textbookPageRef : undefined,
       sourceType: isVerifiedSgk ? 'sgk_official' : 'pedagogical_supplement',
       sourceBook: effectiveSourceBook,
