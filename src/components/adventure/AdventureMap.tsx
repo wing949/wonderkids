@@ -442,6 +442,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                               <h3 className="font-baloo font-black text-base sm:text-lg text-brand-dark leading-snug group-hover:text-emerald-700 transition-colors">
                                 {lesson.title}
                               </h3>
+                              {lesson.provenance?.contentOrigin === 'system_generated' && lesson.provenance.referenceLessonTitle && (
+                                <p className="mt-1 font-vietnam text-[11px] sm:text-xs font-bold text-blue-800 leading-snug">
+                                  Chủ đề tham khảo chưa xác minh: {lesson.provenance.referenceLessonTitle}
+                                </p>
+                              )}
                               <p className="mt-1.5 font-vietnam text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed text-justify">
                                 {lesson.description}
                               </p>
@@ -611,7 +616,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                                       📖 {formatShortPageRef(lesson.textbookPageRef)}
                                     </div>
                                     <h4
-                                      className={`font-baloo font-extrabold text-xs sm:text-sm line-clamp-1 ${
+                                      className={`font-baloo font-extrabold text-xs sm:text-sm line-clamp-2 leading-snug break-words ${
                                         isPassed
                                           ? 'text-amber-950'
                                           : isCurrentActive
@@ -681,9 +686,13 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                     <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-2 py-0.5 rounded-full">
                       📖 Nội dung theo SGK đã đối chiếu
                     </span>
-                  ) : (
+                  ) : selectedLessonPreview.provenance?.contentOrigin === 'system_generated' ? (
                     <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-blue-900 bg-blue-100/90 border border-blue-300 px-2 py-0.5 rounded-full">
                       🌱 NỘI DUNG TỰ SINH
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-violet-900 bg-violet-100/90 border border-violet-300 px-2 py-0.5 rounded-full">
+                      🧩 BỔ TRỢ SƯ PHẠM
                     </span>
                   )}
                 </div>
@@ -691,7 +700,8 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
               
               {selectedLessonPreview.referenceBook && (
                 <p className="font-vietnam text-xs font-medium text-amber-900/80 italic">
-                  Tham khảo: {selectedLessonPreview.referenceBook}
+                  Chủ đề tham khảo đang khai báo (chưa xác minh với SGK): {selectedLessonPreview.provenance?.referenceLessonTitle || 'Chưa xác định tên bài'} — {selectedLessonPreview.referenceBook}
+                  {selectedLessonPreview.referenceDetail ? ` — ${selectedLessonPreview.referenceDetail}` : ''}
                   {selectedLessonPreview.referenceUrl && (
                     <> — <a className="underline hover:text-amber-700" href={selectedLessonPreview.referenceUrl} target="_blank" rel="noreferrer">mở SGK</a></>
                   )}

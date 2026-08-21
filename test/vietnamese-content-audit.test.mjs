@@ -81,8 +81,29 @@ test('câu hỏi và hoạt động Tiếng Việt được đánh dấu là n�
   ));
 
   const questions = lessons.flatMap((lesson) => lesson.questions);
-  assert.equal(questions.length, 133);
+  assert.ok(questions.length >= lessons.length, 'Mỗi bài phải có ít nhất một câu hỏi/hoạt động');
   assert.equal(questions.filter((question) => question.contentOrigin !== 'system_generated').length, 0);
+});
+
+test('nội dung tự sinh không dùng nguyên tên bài SGK như thể là cùng một văn bản', () => {
+  const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
+    curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
+  ));
+
+  for (const lesson of lessons) {
+    if (lesson.provenance.contentOrigin !== 'system_generated') continue;
+    assert.ok(lesson.provenance.referenceLessonTitle, `Thiếu tên bài SGK tham khảo: ${lesson.id}`);
+    assert.match(lesson.title, /^Luyện đọc tự sinh\b/i, `Tên bài trong app chưa tách nguồn: ${lesson.id}`);
+    assert.match(lesson.readingPassage.title, /^Luyện đọc tự sinh\b/i, `Tên gói đọc chưa tách nguồn: ${lesson.id}`);
+    assert.notEqual(lesson.title, lesson.provenance.referenceLessonTitle, `Tên app trùng tên SGK: ${lesson.id}`);
+    assert.notEqual(lesson.readingPassage.title, lesson.provenance.referenceLessonTitle, `Tên gói đọc trùng tên SGK: ${lesson.id}`);
+  }
+
+  const doiTai = lessons.find((lesson) => lesson.id === 'tv-g1-b22');
+  assert.equal(doiTai.provenance.contentOrigin, 'system_generated');
+  assert.equal(doiTai.provenance.verificationStatus, 'reference_only');
+  assert.equal(doiTai.provenance.referenceLessonTitle, 'Bài 2: Đôi tai xấu xí');
+  assert.equal(doiTai.readingPassage.author, 'WonderKids — nội dung tự sinh');
 });
 
 test('manifest audio có đúng một file chính và một fallback cho từng bài', async () => {

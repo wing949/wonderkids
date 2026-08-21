@@ -462,6 +462,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     const passage = lesson.readingPassage;
     const isVerifiedSgk = lesson.provenance?.contentOrigin === 'sgk_reference'
       && lesson.provenance.verificationStatus === 'verified';
+    const isGeneratedContent = lesson.provenance?.contentOrigin === 'system_generated';
     const currentShadowingSentence = shadowingSentences[shadowingIndex] || shadowingSentences[0];
     const currentScore = currentShadowingSentence ? sentenceScores[currentShadowingSentence.id] : undefined;
 
@@ -581,14 +582,29 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                       <span className="font-extrabold text-emerald-950">SGK Chuẩn GDPT 2018:</span>
                       <span>{lesson.sourceDetail || lesson.textbookPageRef}</span>
                     </div>
-                  ) : (
+                  ) : isGeneratedContent ? (
                     <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-blue-900 bg-blue-100/90 border border-blue-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>🌱</span>
-                      <span className="font-extrabold text-blue-950">Nội Dung Bổ Trợ Sư Phạm</span>
-                      {lesson.sourceBook && <span>— {lesson.sourceBook}</span>}
+                      <span className="font-extrabold text-blue-950">NỘI DUNG TỰ SINH</span>
+                      <span>— WonderKids biên soạn</span>
+                    </div>
+                  ) : (
+                    <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-violet-900 bg-violet-100/90 border border-violet-300 px-3.5 py-1 rounded-full shadow-2xs">
+                      <span>🧩</span>
+                      <span className="font-extrabold text-violet-950">BỔ TRỢ SƯ PHẠM</span>
                     </div>
                   )}
                 </div>
+
+                {!isVerifiedSgk && lesson.provenance?.referenceLessonTitle && (
+                  <p className="font-vietnam text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed">
+                    Chủ đề tham khảo đang khai báo (chưa xác minh với SGK): “{lesson.provenance.referenceLessonTitle}” — {lesson.referenceBook}
+                    {lesson.referenceDetail ? ` — ${lesson.referenceDetail}` : ''}
+                    {lesson.referenceUrl && (
+                      <> — <a className="underline hover:text-amber-700" href={lesson.referenceUrl} target="_blank" rel="noreferrer">mở sách nguồn</a></>
+                    )}
+                  </p>
+                )}
 
                 {/* Main Reading Title */}
                 <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide pt-1">
@@ -598,7 +614,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 {/* Author & Book Citation */}
                 {passage.author && (
                   <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
-                    Tác giả: {passage.author} {lesson.sourceBook ? `• ${lesson.sourceBook}` : ''}
+                    Nguồn nội dung: {passage.author}
                   </p>
                 )}
 

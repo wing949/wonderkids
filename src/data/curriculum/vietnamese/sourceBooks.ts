@@ -8,6 +8,9 @@ export interface VietnameseBookSource {
   readerUrl: string;
 }
 
+export const VIETNAMESE_BOOK_COLLECTION = 'Bộ SGK thống nhất';
+export const VIETNAMESE_BOOK_PUBLISHER = 'Nhà xuất bản Giáo dục Việt Nam';
+
 /**
  * Danh mục nguồn SGK do người quản trị cung cấp.
  * Đây là nguồn tham khảo để đối chiếu, không tự biến nội dung hệ thống thành

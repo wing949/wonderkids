@@ -25,6 +25,7 @@ export interface ContentProvenance {
   contentOrigin: ContentOrigin;
   verificationStatus: ProvenanceVerification;
   referenceBook?: string;
+  referenceLessonTitle?: string;
   referenceDetail?: string;
   referenceUrl?: string;
   note?: string;
