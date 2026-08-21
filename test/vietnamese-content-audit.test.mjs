@@ -73,6 +73,11 @@ test('nội dung chưa đối chiếu nguyên văn không được phát ra như
     [],
     'Bài chưa đối chiếu vẫn đang bị gắn sourceType sgk_official'
   );
+  assert.deepEqual(
+    unverified.filter((lesson) => lesson.textbookPageRef).map((lesson) => lesson.id),
+    [],
+    'Bài chưa đối chiếu vẫn hiện badge trang SGK ở đầu bài'
+  );
 });
 
 test('văn bản hiển thị của nội dung tự sinh không tự nhận là chuẩn SGK', () => {
