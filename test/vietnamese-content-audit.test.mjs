@@ -169,6 +169,7 @@ test('ba bài bổ trợ không bị gán tên bài, trang hoặc link SGK', () 
     assert.equal(lesson.referenceBook, undefined, `Bổ trợ có sách SGK: ${lesson.id}`);
     assert.equal(lesson.referenceDetail, undefined, `Bổ trợ có trang SGK: ${lesson.id}`);
     assert.equal(lesson.referenceUrl, undefined, `Bổ trợ có link SGK: ${lesson.id}`);
+    assert.equal(lesson.textbookPageRef, undefined, `Bổ trợ còn badge trang SGK: ${lesson.id}`);
   }
 });
 

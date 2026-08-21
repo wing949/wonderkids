@@ -343,7 +343,7 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       subject,
       grade,
       unit: t.unit,
-      textbookPageRef: t.textbookPageRef,
+      textbookPageRef: isVietnameseSupplement ? undefined : t.textbookPageRef,
       sourceType: isVerifiedSgk ? 'sgk_official' : 'pedagogical_supplement',
       sourceBook: effectiveSourceBook,
       sourceDetail: effectiveSourceDetail,
