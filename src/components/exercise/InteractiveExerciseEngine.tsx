@@ -23,6 +23,7 @@ import { soundManager, voiceManager } from '../../utils/audio';
 import { triggerStarBurst } from '../../utils/confetti';
 import { buildLessonNarration } from '../../utils/lessonNarration';
 import { getSourcePageView } from '../../utils/sourcePageViewer';
+import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../../utils/vietnameseReadingPolicy';
 import { MathVisualIllustration } from './MathVisualIllustration';
 
 interface InteractiveExerciseEngineProps {
@@ -81,6 +82,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 }) => {
   // Determine if lesson starts with a Reading Passage (e.g. Tiếng Việt & Tiếng Anh bài đọc)
   const hasReadingPassage = !!lesson.readingPassage;
+  const vietnameseReadingPolicy = getVietnameseReadingPolicy(lesson);
+  const canUseReadingPassage = vietnameseReadingPolicy !== 'source_only';
   const [engineMode, setEngineMode] = useState<'reading' | 'quiz'>(hasReadingPassage ? 'reading' : 'quiz');
   const [readingTab, setReadingTab] = useState<'full' | 'shadowing'>('full');
   const [sourcePageIndex, setSourcePageIndex] = useState(0);
@@ -175,7 +178,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
   // Play entire Reading Passage audio narration
   const handleTogglePassageAudio = () => {
-    if (!lesson.readingPassage) return;
+    if (!lesson.readingPassage || !canPlayVietnameseReadingAudio(lesson)) return;
 
     if (isPlayingAudio) {
       soundManager.stopSpeaking();
@@ -466,6 +469,9 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   // =========================================================================
   if (engineMode === 'reading' && lesson.readingPassage) {
     const passage = lesson.readingPassage;
+    const hasVerifiedSgkReading = vietnameseReadingPolicy === 'verified_sgk'
+      && passage.contentOrigin === 'sgk_reference'
+      && passage.verificationStatus === 'verified';
     const isVerifiedSgk = lesson.provenance?.contentOrigin === 'sgk_reference'
       && lesson.provenance.verificationStatus === 'verified';
     const isExtraPractice = lesson.catalogSection === 'extra_practice';
@@ -509,7 +515,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             </div>
 
             {/* Audio Read Aloud Button */}
-            <button
+            {canUseReadingPassage && <button
               onClick={handleTogglePassageAudio}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl font-baloo font-bold text-sm whitespace-nowrap transition-all shadow-xs cursor-pointer shrink-0 ${
                 isPlayingAudio
@@ -528,11 +534,11 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   <span>Nghe toàn bài</span>
                 </>
               )}
-            </button>
+            </button>}
           </div>
 
           {/* Mode Switcher Tabs (Đọc Toàn Bài vs Luyện Shadowing Từng Câu) */}
-          <div className="flex items-center justify-center gap-2 p-1.5 rounded-3xl bg-white/90 backdrop-blur-md border border-amber-200 shadow-xs max-w-md mx-auto">
+          {canUseReadingPassage && <div className="flex items-center justify-center gap-2 p-1.5 rounded-3xl bg-white/90 backdrop-blur-md border border-amber-200 shadow-xs max-w-md mx-auto">
             <button
               onClick={() => {
                 soundManager.playPop();
@@ -573,7 +579,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               <span>Luyện Shadowing</span>
               <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
             </button>
-          </div>
+          </div>}
 
           <div className={`grid items-start gap-6 ${sourcePageView ? 'xl:grid-cols-2' : ''}`}>
             {sourcePageView && (
@@ -584,14 +590,14 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                   <div>
                     <p className="font-baloo text-xs font-black uppercase tracking-wider text-amber-700">
-                      {isVerifiedSgk ? 'Nội dung bài học' : 'Tài liệu để đối chiếu'}
+                      {isVerifiedSgk || hasVerifiedSgkReading ? 'Nội dung bài học' : 'Tài liệu để đối chiếu'}
                     </p>
                     <h2 id="sgk-source-heading" className="font-baloo text-xl font-black text-brand-dark sm:text-2xl">
-                      {isVerifiedSgk ? 'Nội dung SGK' : 'Trang sách tham khảo'}
+                      {isVerifiedSgk || hasVerifiedSgkReading ? 'Nội dung SGK' : 'Trang sách tham khảo'}
                     </h2>
                   </div>
                   <div className="flex flex-wrap items-center justify-end gap-2">
-                    {!isVerifiedSgk && (
+                    {!isVerifiedSgk && !hasVerifiedSgkReading && (
                       <span className="rounded-full bg-slate-100 px-3 py-1 font-baloo text-xs font-bold text-slate-600">
                         Chờ duyệt đối chiếu
                       </span>
@@ -638,18 +644,39 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             )}
 
             <div className="min-w-0">
+          {!canUseReadingPassage && (
+            <section className="relative rounded-4xl border border-sky-200 bg-white p-6 shadow-washi sm:p-8" aria-labelledby="source-only-heading">
+              <div className="absolute -top-3 left-1/2 h-6 w-40 -translate-x-1/2 -rotate-1 rounded-sm border border-sky-300/50 bg-sky-200/70" />
+              <div className="flex items-start gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-100 text-2xl">📖</span>
+                <div className="space-y-3">
+                  <h2 id="source-only-heading" className="font-baloo text-xl font-black text-brand-dark sm:text-2xl">
+                    Đọc nguyên văn trong trang sách
+                  </h2>
+                  <p className="font-vietnam text-base font-semibold leading-relaxed text-slate-700">
+                    {sourcePageView
+                      ? 'Bài đọc và hoạt động chính nằm ở trang SGK bên trái. Phần chữ và giọng đọc mẫu chỉ mở khi đã được đối chiếu chính xác với sách.'
+                      : 'Bài này đang được rà soát lại tên bài và trang sách. Nội dung chữ và giọng đọc mẫu tạm thời được khóa để tránh học sai.'}
+                  </p>
+                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 font-baloo text-sm font-bold text-emerald-900">
+                    🌱 Bé vẫn có thể làm phần luyện tập bổ sung ở bước tiếp theo.
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
           {/* ================================================================= */}
           {/* TAB 1: ĐỌC TOÀN BÀI (FULL READING SCRAPBOOK CARD) */}
           {/* ================================================================= */}
-          {readingTab === 'full' && (
+          {canUseReadingPassage && readingTab === 'full' && (
             <div className="relative rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70 mt-2">
               {/* Washi tape header deco - Unclipped Authentic Scrapbook Tape */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-40 sm:w-48 h-7 bg-amber-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-amber-400/40 shadow-xs z-10 pointer-events-none" />
 
-              {isExtraPractice && (
+              {isExtraPractice && !hasVerifiedSgkReading && (
                 <div className="mb-5 flex items-center gap-2 font-baloo text-sm font-black text-emerald-800">
                   <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-100">🌱</span>
-                  <span>Luyện thêm: tóm tắt, nghe đọc và rèn luyện</span>
+                  <span>{vietnameseReadingPolicy === 'supplement' ? 'Luyện đọc bổ sung' : 'Tóm tắt, nghe đọc và rèn luyện'}</span>
                 </div>
               )}
 
@@ -657,16 +684,16 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
                 {/* Textbook Ref & Provenance Pill Badge */}
                 <div className="flex flex-wrap items-center justify-center gap-2">
-                  {isVerifiedSgk ? (
+                  {isVerifiedSgk || hasVerifiedSgkReading ? (
                     <div className="inline-flex items-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>📖</span>
-                      <span className="font-extrabold text-emerald-950">SGK Chuẩn GDPT 2018:</span>
-                      <span>{lesson.sourceDetail || lesson.textbookPageRef}</span>
+                      <span className="font-extrabold text-emerald-950">Nội dung bài đọc SGK</span>
+                      <span>• Trang {passage.sourcePages?.join(', ') || lesson.sourceCitation?.sourcePages.join(', ')}</span>
                     </div>
                   ) : isExtraPractice ? (
                     <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>🌱</span>
-                      <span className="font-extrabold text-emerald-950">Luyện thêm</span>
+                      <span className="font-extrabold text-emerald-950">Luyện đọc bổ sung</span>
                     </div>
                   ) : (
                     <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-violet-900 bg-violet-100/90 border border-violet-300 px-3.5 py-1 rounded-full shadow-2xs">
@@ -801,7 +828,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 </div>
               )}
 
-              {isVerifiedSgk && lesson.sourceCitation && (
+              {(isVerifiedSgk || hasVerifiedSgkReading) && lesson.sourceCitation && (
                 <footer className="mt-8 border-t border-amber-200/70 pt-4 font-vietnam text-xs font-semibold leading-relaxed text-slate-600">
                   <span className="font-bold text-amber-900">Nguồn đối chiếu:</span>{' '}
                   {lesson.sourceCitation.sourceLabel}
@@ -816,7 +843,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
           {/* ================================================================= */}
           {/* TAB 2: CHẾ ĐỘ SHADOWING (LUYỆN NGHE & ĐỌC NHẠI TỪNG CÂU) */}
           {/* ================================================================= */}
-          {readingTab === 'shadowing' && (
+          {canUseReadingPassage && readingTab === 'shadowing' && (
             <div className="relative rounded-4xl bg-[#fffdfa] p-5 sm:p-8 md:p-10 shadow-washi border border-purple-200/80 mt-2 space-y-6">
               {/* Washi tape header deco */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-48 sm:w-56 h-7 bg-purple-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-purple-400/40 shadow-xs z-10 pointer-events-none" />
@@ -1085,7 +1112,9 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   Cáo MiuMiu đồng hành:
                 </h4>
                 <p className="font-vietnam text-xs font-semibold text-amber-900/80">
-                  Bé đã đọc kỹ bài chưa? Nhấn nút bên cạnh để trả lời các câu hỏi đọc hiểu nhận Sao Vàng nhé!
+                  {canUseReadingPassage
+                    ? 'Bé đã đọc kỹ bài chưa? Nhấn nút bên cạnh để trả lời các câu hỏi đọc hiểu nhận Sao Vàng nhé!'
+                    : 'Sau khi xem trang sách, bé có thể chuyển sang các hoạt động luyện tập bổ sung.'}
                 </p>
               </div>
             </div>
@@ -1103,7 +1132,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 setEngineMode('quiz');
               }}
             >
-              Con Đã Đọc Xong - Trả Lời Câu Hỏi ⭐
+              {canUseReadingPassage ? 'Con Đã Đọc Xong - Trả Lời Câu Hỏi ⭐' : 'Vào Phần Luyện Tập ⭐'}
             </CuteButton>
           </div>
         </div>
@@ -1153,7 +1182,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
           <div className="flex items-center gap-2">
             {/* View Reading Passage Drawer Toggle */}
-            {hasReadingPassage && (
+            {hasReadingPassage && canUseReadingPassage && (
               <button
                 onClick={() => {
                   soundManager.playPop();
@@ -1548,7 +1577,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       </div>
 
       {/* ================= READING PASSAGE POPUP DRAWER ================= */}
-      {hasReadingPassage && isReadingDrawerOpen && lesson.readingPassage && (
+      {hasReadingPassage && canUseReadingPassage && isReadingDrawerOpen && lesson.readingPassage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
           <div className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-4xl bg-[#fffdfa] p-6 sm:p-8 shadow-2xl border border-amber-200 space-y-4">
             <div className="flex items-center justify-between border-b border-amber-200/60 pb-3">

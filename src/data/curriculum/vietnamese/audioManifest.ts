@@ -4,8 +4,8 @@ export interface VietnameseAudioAsset {
   lessonId: string;
   primaryPath: string;
   fallbackPath: string;
-  primaryVoice: 'Cô Giáo Vy';
-  fallbackVoice: 'Cô Mỹ Duyên';
+  primaryVoice: string;
+  fallbackVoice: string;
   transcriptHash: string;
   lessonVersion: number;
   sourcePages: number[];

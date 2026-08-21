@@ -17,6 +17,7 @@ import {
   getVietnameseBookSource,
   getVietnameseBookManifest,
   getVietnameseLessonPageMapping,
+  getVerifiedVietnameseSgkTranscript,
 } from './vietnamese';
 import { ENGLISH_CURRICULUM_BY_GRADE } from './english';
 
@@ -80,6 +81,20 @@ function buildLessonOverview(passage: ReadingPassage | undefined, topic: Curricu
   const practice = passage?.content.slice(2, 3).map(cleanPart).find(Boolean)
     || 'đọc, quan sát và hoàn thành hoạt động trong bài';
   return { content, objective, practice };
+}
+
+function buildSourceOnlyOverview(title: string, hasMatchedPage: boolean) {
+  return hasMatchedPage
+    ? {
+        content: `Đọc nguyên văn bài “${title}” và thực hiện các yêu cầu trên trang sách`,
+        objective: 'Đọc đúng, hiểu nội dung và làm đúng yêu cầu của bài học',
+        practice: 'Đọc, quan sát và hoàn thành từng hoạt động trên trang sách',
+      }
+    : {
+        content: 'Bài học tạm ẩn nội dung chữ trong khi đối chiếu lại với sách giáo khoa',
+        objective: 'Chỉ mở nội dung chính sau khi tên bài và trang sách được xác minh',
+        practice: 'Các hoạt động bổ sung được tách riêng và không tính là bài tập sách',
+      };
 }
 
 function buildCardPreview(overview: { content: string; objective: string; practice: string }): string {
@@ -262,8 +277,11 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
   return topics.map((t, idx) => {
     const normalizedId = t.id.replace('-l', '-b');
     const bundle = subject === 'vietnamese' ? (VIETNAMESE_READING_PASSAGES[t.id] || VIETNAMESE_READING_PASSAGES[normalizedId]) : undefined;
+    const verifiedSgkTranscript = subject === 'vietnamese'
+      ? getVerifiedVietnameseSgkTranscript(normalizedId)
+      : null;
 
-    let readingPassage: ReadingPassage | undefined = bundle?.passage || t.readingPassage;
+    let readingPassage: ReadingPassage | undefined = verifiedSgkTranscript || bundle?.passage || t.readingPassage;
 
     // Đảm bảo 100% tất cả bài học Tiếng Việt & Tiếng Anh mọi cấp học (Lớp 1-5) đều có Bài Đọc & Shadowing phong phú
     if (!readingPassage && subject === 'vietnamese') {
@@ -347,6 +365,14 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     const isGenerated = subject === 'vietnamese' && provenance.contentOrigin === 'system_generated';
     const isUnverifiedVietnamese = subject === 'vietnamese' && !isVerifiedSgk;
     const displayedTitle = isUnverifiedVietnamese ? cleanReferenceTitle(t.title) : t.title;
+    const mappedSourcePages = subject === 'vietnamese'
+      ? getVietnameseLessonPageMapping(normalizedId)?.sourcePages
+      : undefined;
+    const sourcePages = provenance.contentOrigin !== 'pedagogical_supplement'
+      ? mappedSourcePages || []
+      : [];
+    const allowSupplementReading = subject === 'vietnamese'
+      && ((grade === 1 && t.semester === 1) || provenance.contentOrigin === 'pedagogical_supplement');
     const effectiveSourceBook = isVerifiedSgk ? declaredSourceBook : 'WonderKids';
     const effectiveSourceDetail = isVerifiedSgk ? declaredSourceDetail : 'Nội dung luyện thêm';
     const rawQuestions = bundle?.questions || generateQuestionsForTopic(t, subject, grade);
@@ -354,7 +380,11 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       ? rawQuestions.map((question) => prepareGeneratedQuestion(question, t.title, displayedTitle))
       : rawQuestions;
     const lessonOverview = subject === 'vietnamese' && isUnverifiedVietnamese
-      ? buildLessonOverview(readingPassage, t)
+      ? (verifiedSgkTranscript
+          ? buildLessonOverview(verifiedSgkTranscript, t)
+          : allowSupplementReading
+            ? buildLessonOverview(readingPassage, t)
+            : buildSourceOnlyOverview(displayedTitle, sourcePages.length > 0))
       : undefined;
     const cardPreview = lessonOverview
       ? buildCardPreview(lessonOverview)
@@ -366,12 +396,6 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     const displayedMascotTip = isUnverifiedVietnamese
       ? `MiuMiu: Cùng luyện tập “${cleanReferenceTitle(t.title)}” nhé!`
       : t.mascotTip;
-    const mappedSourcePages = subject === 'vietnamese'
-      ? getVietnameseLessonPageMapping(normalizedId)?.sourcePages
-      : undefined;
-    const sourcePages = provenance.contentOrigin !== 'pedagogical_supplement'
-      ? mappedSourcePages || []
-      : [];
     const bookManifest = subject === 'vietnamese' && sourcePages.length > 0
       ? getVietnameseBookManifest(grade, t.semester)
       : undefined;
@@ -426,7 +450,7 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
           : isUnverifiedVietnamese ? t.keyPoints.map(softenUnverifiedText) : t.keyPoints,
         mascotTip: displayedMascotTip,
       },
-      readingPassage: readingPassage && isUnverifiedVietnamese
+      readingPassage: readingPassage && isUnverifiedVietnamese && !verifiedSgkTranscript
         ? prepareUnverifiedPassage(readingPassage, displayedTitle)
         : readingPassage,
       questions,

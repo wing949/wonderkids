@@ -78,11 +78,15 @@ test('nội dung chưa đối chiếu nguyên văn không được phát ra như
     [],
     'Bài chưa đối chiếu vẫn hiện badge trang SGK ở đầu bài'
   );
-  assert.deepEqual(
-    unverified.filter((lesson) => /\b(?:trang|sgk|chủ điểm)\b/i.test(lesson.unit)).map((lesson) => lesson.id),
-    [],
-    'Nhãn đơn vị của bài chưa đối chiếu vẫn giả dạng metadata SGK'
-  );
+  for (const lesson of unverified) {
+    if (lesson.provenance.contentOrigin === 'pedagogical_supplement') continue;
+    assert.match(lesson.unit, /^SGK Tiếng Việt tập [12]$/, `Sai cú pháp tập sách: ${lesson.id}`);
+    if (lesson.sourceCitation) {
+      assert.equal(lesson.sourceCitation.verificationStatus, 'draft', `Nguồn nháp bị gắn đã duyệt: ${lesson.id}`);
+    } else {
+      assert.equal(lesson.sourcePageImageUrls.length, 0, `Bài chưa khớp vẫn gắn ảnh SGK: ${lesson.id}`);
+    }
+  }
 });
 
 test('văn bản hiển thị của nội dung tự sinh không tự nhận là chuẩn SGK', () => {
@@ -123,7 +127,7 @@ test('câu hỏi và hoạt động Tiếng Việt được đánh dấu là n�
   assert.equal(questions.filter((question) => question.contentOrigin !== 'system_generated').length, 0);
 });
 
-test('nội dung tự sinh không dùng nguyên tên bài SGK như thể là cùng một văn bản', () => {
+test('thẻ dùng tên bài đã khai báo, còn nội dung WonderKids vẫn tách ở Luyện thêm', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
@@ -131,20 +135,23 @@ test('nội dung tự sinh không dùng nguyên tên bài SGK như thể là cù
   for (const lesson of lessons) {
     if (lesson.provenance.contentOrigin !== 'system_generated') continue;
     assert.ok(lesson.provenance.referenceLessonTitle, `Thiếu tên bài SGK tham khảo: ${lesson.id}`);
-    assert.match(lesson.title, /^Luyện đọc tự sinh\b/i, `Tên bài trong app chưa tách nguồn: ${lesson.id}`);
-    assert.match(lesson.readingPassage.title, /^Luyện đọc tự sinh\b/i, `Tên gói đọc chưa tách nguồn: ${lesson.id}`);
-    assert.notEqual(lesson.title, lesson.provenance.referenceLessonTitle, `Tên app trùng tên SGK: ${lesson.id}`);
-    assert.notEqual(lesson.readingPassage.title, lesson.provenance.referenceLessonTitle, `Tên gói đọc trùng tên SGK: ${lesson.id}`);
+    const declaredTitle = lesson.provenance.referenceLessonTitle.replace(/^Bài\s+\d+:\s*/i, '');
+    assert.equal(lesson.title, declaredTitle, `Sai tên bài hiển thị: ${lesson.id}`);
+    assert.equal(lesson.readingPassage.title, declaredTitle, `Sai tên bài đọc hiển thị: ${lesson.id}`);
+    if (lesson.sourceCitation) {
+      assert.equal(lesson.sourceCitation.verificationStatus, 'draft', `Tên chưa duyệt bị coi là SGK đã duyệt: ${lesson.id}`);
+    }
+    assert.equal(lesson.appExtensions.length, lesson.questions.length, `Luyện thêm chưa tách trong bài: ${lesson.id}`);
   }
 
   const doiTai = lessons.find((lesson) => lesson.id === 'tv-g1-b22');
   assert.equal(doiTai.provenance.contentOrigin, 'system_generated');
   assert.equal(doiTai.provenance.verificationStatus, 'reference_only');
   assert.equal(doiTai.provenance.referenceLessonTitle, 'Bài 2: Đôi tai xấu xí');
-  assert.equal(doiTai.readingPassage.author, 'WonderKids — nội dung tự sinh');
+  assert.equal(doiTai.readingPassage.author, undefined);
 });
 
-test('manifest audio có đúng một file chính và một fallback cho từng bài', async () => {
+test('manifest audio có một file chính, một fallback và không còn câu công bố nguồn', async () => {
   const manifest = curriculum.VIETNAMESE_AUDIO_MANIFEST;
   assert.equal(Object.keys(manifest).length, 132);
 
@@ -152,19 +159,22 @@ test('manifest audio có đúng một file chính và một fallback cho từng 
     assert.equal(asset.lessonId, lessonId);
     assert.equal(asset.primaryPath, `/audio/curriculum/${lessonId}.wav`);
     assert.equal(asset.fallbackPath, `/audio/curriculum/fallback/${lessonId}.wav`);
-    assert.equal(asset.primaryVoice, 'Cô Giáo Vy');
-    assert.equal(asset.fallbackVoice, 'Cô Mỹ Duyên');
+    assert.ok(asset.primaryVoice?.trim(), `Thiếu tên giọng chính: ${lessonId}`);
+    assert.ok(asset.fallbackVoice?.trim(), `Thiếu tên giọng fallback: ${lessonId}`);
+    assert.notEqual(asset.primaryVoice, asset.fallbackVoice, `Hai luồng dùng cùng giọng: ${lessonId}`);
     const primaryFile = join(process.cwd(), 'public', asset.primaryPath.slice(1));
     const fallbackFile = join(process.cwd(), 'public', asset.fallbackPath.slice(1));
     await access(primaryFile);
     await access(fallbackFile);
-    assert.equal(asset.audibleDisclosureText, 'Đây là nội dung do WonderKids biên soạn, không phải nguyên văn sách giáo khoa.');
-    assert.ok(asset.primaryDisclosurePcmBytes > 0);
-    assert.ok(asset.fallbackDisclosurePcmBytes > 0);
+    assert.equal(asset.audibleDisclosureText, undefined);
+    assert.match(asset.transcriptHash, /^[a-f0-9]{64}$/);
+    assert.ok(asset.lessonVersion >= 1);
+    assert.ok(Array.isArray(asset.sourcePages));
     const primaryPcm = wavPcmData(await readFile(primaryFile));
     const fallbackPcm = wavPcmData(await readFile(fallbackFile));
-    assert.equal(sha256(primaryPcm.subarray(0, asset.primaryDisclosurePcmBytes)), asset.primaryDisclosurePcmSha256);
-    assert.equal(sha256(fallbackPcm.subarray(0, asset.fallbackDisclosurePcmBytes)), asset.fallbackDisclosurePcmSha256);
+    assert.notEqual(sha256(primaryPcm.subarray(0, 552960)), '7c91d642b467c265cb41aabdb5f9cbca60b9d2ed67f4ccd839884187b0bb8a2e');
+    assert.notEqual(sha256(fallbackPcm.subarray(0, 506880)), 'f00942c59dcc1fcaf8da62a279e05709ce2b7eb45fb25fe8c7621201946358a0');
+    assert.notEqual(sha256(await readFile(primaryFile)), sha256(await readFile(fallbackFile)));
   }
 });
 
@@ -218,7 +228,12 @@ test('mỗi bài được nối đúng lớp, tập và nguồn SGK do người 
         assert.equal(lesson.referenceUrl, undefined, `Bài bổ trợ không được nối SGK: ${topic.id}`);
         continue;
       }
-      assert.equal(lesson.referenceUrl, source.readerUrl, `Sai link nguồn: ${topic.id}`);
+      assert.equal(lesson.referenceUrl, undefined, `Luyện thêm không được lộ link SGK trên giao diện: ${topic.id}`);
+      assert.equal(
+        lesson.provenance.referenceUrl,
+        source.readerUrl,
+        `Sai link nguồn kiểm toán nội bộ: ${topic.id}`
+      );
     }
   }
 });

@@ -43,7 +43,9 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
 
   // Lấy toàn bộ bài học theo khối lớp và môn
   const allGradeLessons = useMemo(
-    () => getLessonsForGradeAndSubject(currentGrade, selectedSubject),
+    () => getLessonsForGradeAndSubject(currentGrade, selectedSubject).filter((lesson) => (
+      selectedSubject !== 'vietnamese' || Boolean(lesson.sourceCitation)
+    )),
     [currentGrade, selectedSubject]
   );
 

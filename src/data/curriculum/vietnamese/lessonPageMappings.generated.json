@@ -3,8 +3,7 @@
     "lessonId": "tv-g1-b1",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      14,
-      15
+      14
     ],
     "matchedTitle": "Bài 1: A a",
     "matchedText": "bai 1 adq",
@@ -15,8 +14,7 @@
     "lessonId": "tv-g1-b4",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      20,
-      21
+      20
     ],
     "matchedTitle": "Bài 4: E e - Ê ê",
     "matchedText": "bai 4 ee ee",
@@ -27,8 +25,7 @@
     "lessonId": "tv-g1-b5",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      42,
-      43
+      42
     ],
     "matchedTitle": "Bài 5: Ôn tập và kể chuyện",
     "matchedText": "bai on tap 115 va ke chuyen",
@@ -39,8 +36,7 @@
     "lessonId": "tv-g1-b6",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      24,
-      25
+      24
     ],
     "matchedTitle": "Bài 6: O o",
     "matchedText": "bai 6 oo",
@@ -51,8 +47,7 @@
     "lessonId": "tv-g1-b7",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      24,
-      25
+      24
     ],
     "matchedTitle": "Bài 7: Ô ô - Ơ ơ",
     "matchedText": "o b lo o",
@@ -63,8 +58,7 @@
     "lessonId": "tv-g1-b8",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      34,
-      35
+      34
     ],
     "matchedTitle": "Bài 8: I i - K k",
     "matchedText": "k i k i ki ki",
@@ -75,8 +69,7 @@
     "lessonId": "tv-g1-b9",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      38,
-      39
+      38
     ],
     "matchedTitle": "Bài 9: U u - Ư ư",
     "matchedText": "u u d u u",
@@ -87,11 +80,21 @@
     "lessonId": "tv-g1-b13",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      54,
-      55
+      54
     ],
     "matchedTitle": "Bài 13: R r - S s",
     "matchedText": "r q s e ra se",
+    "confidence": 0.7543,
+    "status": "ocr_matched"
+  },
+  "tv-g1-b15": {
+    "lessonId": "tv-g1-b15",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      66
+    ],
+    "matchedTitle": "Bài 15: V v - X x",
+    "matchedText": "v e x e ve xe",
     "confidence": 0.7543,
     "status": "ocr_matched"
   },
@@ -99,8 +102,7 @@
     "lessonId": "tv-g1-b16",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      40,
-      41
+      40
     ],
     "matchedTitle": "Bài 16: Ch ch - Kh kh",
     "matchedText": "bai 4 chch kh kh",
@@ -111,8 +113,7 @@
     "lessonId": "tv-g1-b22",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      8,
-      9
+      8
     ],
     "matchedTitle": "Bài 2: Đôi tai xấu xí",
     "matchedText": "bai h vay doi tai xau xi",
@@ -123,8 +124,7 @@
     "lessonId": "tv-g1-b23",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      12,
-      13
+      12
     ],
     "matchedTitle": "Bài 3: Bạn của gió",
     "matchedText": "bai kw ban cua gio",
@@ -135,11 +135,10 @@
     "lessonId": "tv-g1-b24",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      64,
-      65
+      64
     ],
     "matchedTitle": "Bài 4: Rửa tay trước khi ăn",
-    "matchedText": "mo dieu ew can biet rua tay truoc khi an",
+    "matchedText": "rua tay truoc khi an cac ban dang rua tay x n",
     "confidence": 1,
     "status": "ocr_matched"
   },
@@ -147,8 +146,7 @@
     "lessonId": "tv-g1-b25",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      68,
-      69
+      68
     ],
     "matchedTitle": "Bài 5: Lời chào",
     "matchedText": "loi chao di truoc quan sat tranh on chao",
@@ -159,8 +157,7 @@
     "lessonId": "tv-g1-b28",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      144,
-      145
+      144
     ],
     "matchedTitle": "Bài 8: Cậu bé thông minh",
     "matchedText": "q cau be thong minh 4 n ao quen sot tranh duoi day",
@@ -172,19 +169,19 @@
     "bookId": "tv-g2-t1",
     "sourcePages": [
       10,
-      11
+      11,
+      12
     ],
     "matchedTitle": "Bài 1: Tôi là học sinh lớp 2",
     "matchedText": "n toi la hoc sinh lop 2 doc",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b2": {
     "lessonId": "tv-g2-b2",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      13,
-      14
+      13
     ],
     "matchedTitle": "Bài 2: Ngày hôm qua đâu rồi?",
     "matchedText": "a o ngay hom qua dau roi i",
@@ -195,8 +192,7 @@
     "lessonId": "tv-g2-b3",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      17,
-      18
+      17
     ],
     "matchedTitle": "Bài 3: Niềm vui của Bi và Bống",
     "matchedText": "2 ha l3 niem vui cua bi va bong",
@@ -207,8 +203,7 @@
     "lessonId": "tv-g2-b4",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      20,
-      21
+      20
     ],
     "matchedTitle": "Bài 4: Làm việc thật là vui",
     "matchedText": "boi e lam viec that la vui",
@@ -219,32 +214,34 @@
     "lessonId": "tv-g2-b5",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      26,
-      27
+      24,
+      25,
+      26
     ],
     "matchedTitle": "Bài 5: Em có xinh không?",
-    "matchedText": "em co xinh khong censeni x4",
+    "matchedText": "8 em co xinh khong l doc",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b6": {
     "lessonId": "tv-g2-b6",
     "bookId": "tv-g2-t1",
     "sourcePages": [
+      27,
       28,
-      29
+      29,
+      30
     ],
     "matchedTitle": "Bài 6: Một giờ học",
     "matchedText": "1 nghe viet mot gio hoc",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b7": {
     "lessonId": "tv-g2-b7",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      31,
-      32
+      31
     ],
     "matchedTitle": "Bài 7: Cây xấu hổ",
     "matchedText": "h q cay xau ho",
@@ -255,11 +252,10 @@
     "lessonId": "tv-g2-b8",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      36,
-      37
+      34
     ],
     "matchedTitle": "Bài 8: Cầu thủ dự bị",
-    "matchedText": "1 nghe viet cau thu du bi",
+    "matchedText": "bai a l f cau thu du bi",
     "confidence": 1,
     "status": "ocr_matched"
   },
@@ -267,8 +263,7 @@
     "lessonId": "tv-g2-b9",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      40,
-      41
+      40
     ],
     "matchedTitle": "Bài 9: Cô giáo lớp em",
     "matchedText": "fa 8q co giao lop em",
@@ -279,11 +274,10 @@
     "lessonId": "tv-g2-b10",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      44,
-      45
+      43
     ],
     "matchedTitle": "Bài 10: Thời khóa biểu",
-    "matchedText": "dau s thoi khoa bieu lop 2a ve",
+    "matchedText": "boi o q thoi khoa bieu h",
     "confidence": 1,
     "status": "ocr_matched"
   },
@@ -291,8 +285,7 @@
     "lessonId": "tv-g2-b12",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      51,
-      52
+      51
     ],
     "matchedTitle": "Bài 12: Danh sách học sinh tổ 1",
     "matchedText": "danh sach hoc sinh j",
@@ -303,8 +296,7 @@
     "lessonId": "tv-g2-b13",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      55,
-      56
+      55
     ],
     "matchedTitle": "Bài 13: Yêu lắm trường ơi!",
     "matchedText": "e yeu lam truong oi",
@@ -315,8 +307,7 @@
     "lessonId": "tv-g2-b14",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      58,
-      59
+      58
     ],
     "matchedTitle": "Bài 14: Em học vẽ",
     "matchedText": "boi i y em hoc ve",
@@ -327,8 +318,7 @@
     "lessonId": "tv-g2-b15",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      63,
-      64
+      63
     ],
     "matchedTitle": "Bài 15: Cuốn sách của em",
     "matchedText": "1 dd u 8 cuon sach cua em",
@@ -339,8 +329,7 @@
     "lessonId": "tv-g2-b16",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      66,
-      67
+      66
     ],
     "matchedTitle": "Bài 16: Khi trang sách mở ra",
     "matchedText": "bai z s 2 khi trang sach mo ra e",
@@ -351,8 +340,7 @@
     "lessonId": "tv-g2-b17",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      137,
-      138
+      137
     ],
     "matchedTitle": "Bài 17: Gọi bạn",
     "matchedText": "2 g goi ban l7 b to nho cau",
@@ -363,8 +351,7 @@
     "lessonId": "tv-g2-b18",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      89,
-      90
+      89
     ],
     "matchedTitle": "Bài 18: Nhím nâu kết bạn",
     "matchedText": "boi v49 nhim nau ket ban",
@@ -375,8 +362,7 @@
     "lessonId": "tv-g2-b19",
     "bookId": "tv-g2-t2",
     "sourcePages": [
-      9,
-      10
+      9
     ],
     "matchedTitle": "Bài 19: Chuyện bốn mùa",
     "matchedText": "4 chuyen bon mua",
@@ -387,8 +373,7 @@
     "lessonId": "tv-g2-b20",
     "bookId": "tv-g2-t2",
     "sourcePages": [
-      27,
-      28
+      27
     ],
     "matchedTitle": "Bài 20: Mùa vàng",
     "matchedText": "mua vong de co san pham thu hoach nguoi nong dan phai lam rat nhieu viec",
@@ -399,8 +384,7 @@
     "lessonId": "tv-g3-b5",
     "bookId": "tv-g3-t1",
     "sourcePages": [
-      34,
-      35
+      34
     ],
     "matchedTitle": "Bài 5: Mùa hè lấp lánh",
     "matchedText": "nua he lap lanh doc",
@@ -411,8 +395,7 @@
     "lessonId": "tv-g3-b8",
     "bookId": "tv-g3-t1",
     "sourcePages": [
-      50,
-      51
+      50
     ],
     "matchedTitle": "Bài 8: Lời giải toán đặc biệt",
     "matchedText": "2 v y 1 loi giai toan dac biet",
@@ -423,8 +406,7 @@
     "lessonId": "tv-g3-b9",
     "bookId": "tv-g3-t1",
     "sourcePages": [
-      59,
-      60
+      59
     ],
     "matchedTitle": "Bài 9: Bàn tay cô giáo",
     "matchedText": "d 3 ban tay co giao doc",
@@ -435,8 +417,7 @@
     "lessonId": "tv-g3-b15",
     "bookId": "tv-g3-t2",
     "sourcePages": [
-      15,
-      16
+      15
     ],
     "matchedTitle": "Bài 15: Cóc kiện Trời",
     "matchedText": "va coc kien troi",
@@ -447,8 +428,7 @@
     "lessonId": "tv-g3-b16",
     "bookId": "tv-g3-t2",
     "sourcePages": [
-      102,
-      103
+      102
     ],
     "matchedTitle": "Bài 16: Hai Bà Trưng",
     "matchedText": "s hai ba trung",
@@ -459,11 +439,10 @@
     "lessonId": "tv-g3-b20",
     "bookId": "tv-g3-t2",
     "sourcePages": [
-      126,
-      127
+      126
     ],
     "matchedTitle": "Bài 20: Bác sĩ Y-éc-xanh",
-    "matchedText": "32 ii a4d jvly bac si y ec xanh",
+    "matchedText": "jvly bac si y ec xanh doc",
     "confidence": 1,
     "status": "ocr_matched"
   },
@@ -471,8 +450,7 @@
     "lessonId": "tv-g3-b22",
     "bookId": "tv-g3-t2",
     "sourcePages": [
-      110,
-      111
+      110
     ],
     "matchedTitle": "Bài 22: Trái Đất xanh của chúng mình",
     "matchedText": "trai dat ca chung minh",
@@ -483,8 +461,7 @@
     "lessonId": "tv-g4-b8",
     "bookId": "tv-g4-t1",
     "sourcePages": [
-      132,
-      133
+      132
     ],
     "matchedTitle": "Bài 8: Nếu chúng mình có phép lạ",
     "matchedText": "neu chung minh co phep la neu chung minh co phep la bat hat giong nay mam nhanh hoa trai bom thanh trai ngon",
@@ -495,8 +472,7 @@
     "lessonId": "tv-g5-b1",
     "bookId": "tv-g5-t1",
     "sourcePages": [
-      89,
-      90
+      89
     ],
     "matchedTitle": "Bài 1: Thư gửi các học sinh",
     "matchedText": "y my a thu gui cac hoc sinh c a la z am a",
@@ -507,8 +483,7 @@
     "lessonId": "tv-g5-b8",
     "bookId": "tv-g5-t1",
     "sourcePages": [
-      51,
-      52
+      51
     ],
     "matchedTitle": "Bài 8: Kì diệu rừng xanh",
     "matchedText": "bai iy ki dieu rung xanh",
@@ -519,8 +494,7 @@
     "lessonId": "tv-g5-b20",
     "bookId": "tv-g5-t2",
     "sourcePages": [
-      155,
-      156
+      155
     ],
     "matchedTitle": "Bài 20: Phong cảnh đền Hùng",
     "matchedText": "ii doc hieu phong canh den hung",
@@ -531,8 +505,7 @@
     "lessonId": "tv-g5-b21",
     "bookId": "tv-g5-t2",
     "sourcePages": [
-      104,
-      105
+      104
     ],
     "matchedTitle": "Bài 21: Đất nước",
     "matchedText": "dat nuoc 4 chuan bi",
@@ -543,8 +516,7 @@
     "lessonId": "tv-g5-b22",
     "bookId": "tv-g5-t2",
     "sourcePages": [
-      94,
-      95
+      94
     ],
     "matchedTitle": "Bài 22: Nghĩa thầy trò",
     "matchedText": "nghia thay tro theo ha an",

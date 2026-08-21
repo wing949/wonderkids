@@ -43,3 +43,7 @@ pnpm-debug.log*
 scratch/
 .vercel
 
+# Private SGK source cache (official page images and OCR drafts)
+.cache/sgk/
+.cache/ocr/
+private-reports/

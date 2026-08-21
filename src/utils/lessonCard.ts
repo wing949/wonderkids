@@ -43,7 +43,7 @@ export function getLessonCardContent(lesson: LessonNode) {
   const badge = isVietnameseBookLesson
     ? `📖 SGK Tiếng Việt ${lesson.grade} Tập ${vietnameseVolume} — Trang ${vietnamesePages.join(', ')}`
     : lesson.subject === 'vietnamese'
-      ? 'Luyện thêm • Tiếng Việt'
+      ? '⏳ Đang đối chiếu trang SGK'
     : lesson.textbookPageRef
       ? `📖 ${lesson.textbookPageRef}`
       : 'Bài học';

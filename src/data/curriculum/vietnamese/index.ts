@@ -20,6 +20,7 @@ export * from './audioManifest';
 export * from './bookManifests';
 export * from './catalogPolicy';
 export * from './lessonPageMappings';
+export * from './sgkTranscripts';
 
 export {
   VIETNAMESE_GRADE_1_TOPICS,

@@ -7,11 +7,15 @@ export interface VietnameseLessonPageMapping {
   matchedTitle: string;
   matchedText: string;
   confidence: number;
-  status: 'ocr_matched';
+  status: 'ocr_matched' | 'visually_reviewed';
 }
 
 export const VIETNAMESE_LESSON_PAGE_MAPPINGS = generatedMappings as Record<string, VietnameseLessonPageMapping>;
 
 export function getVietnameseLessonPageMapping(lessonId: string) {
-  return VIETNAMESE_LESSON_PAGE_MAPPINGS[lessonId];
+  const mapping = VIETNAMESE_LESSON_PAGE_MAPPINGS[lessonId];
+  if (!mapping) return undefined;
+  return mapping.status === 'visually_reviewed'
+    ? mapping
+    : { ...mapping, sourcePages: mapping.sourcePages.slice(0, 1) };
 }

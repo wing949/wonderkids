@@ -135,6 +135,10 @@ export interface ReadingPassage {
   content: string[]; // Các khổ thơ hoặc đoạn văn
   audioNarration?: string; // Đoạn text chuẩn để phát âm mẫu
   vocabularyNotes?: { word: string; meaning: string }[];
+  contentOrigin?: ContentOrigin;
+  verificationStatus?: SourceVerificationStatus;
+  sourcePages?: number[];
+  sourceHash?: string;
 }
 
 export interface LessonNode {
