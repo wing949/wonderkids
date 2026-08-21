@@ -5,6 +5,8 @@ interface MathVisualIllustrationProps {
   visualType?: 'counting' | 'clock' | 'ruler' | 'fraction' | 'geometry' | 'balance' | 'speed' | 'blocks' | 'array' | 'number_line';
   visualData?: {
     itemEmoji?: string;
+    leftItemEmoji?: string;
+    rightItemEmoji?: string;
     itemCount?: number;
     leftCount?: number;
     rightCount?: number;
@@ -66,6 +68,8 @@ export const MathVisualIllustration: React.FC<MathVisualIllustrationProps> = ({
   // 1. COUNTING & COMPARING ITEMS
   if (visualType === 'counting') {
     const emoji = visualData?.itemEmoji || '🍎';
+    const leftEmoji = visualData?.leftItemEmoji || emoji;
+    const rightEmoji = visualData?.rightItemEmoji || emoji;
     const leftCount = visualData?.leftCount;
     const rightCount = visualData?.rightCount;
     const singleCount = visualData?.itemCount ?? 5;
@@ -88,7 +92,7 @@ export const MathVisualIllustration: React.FC<MathVisualIllustrationProps> = ({
                   transition={{ delay: i * 0.05 }}
                   className="text-2xl sm:text-3xl filter drop-shadow-xs"
                 >
-                  {emoji}
+                  {leftEmoji}
                 </motion.span>
               ))}
             </div>
@@ -113,7 +117,7 @@ export const MathVisualIllustration: React.FC<MathVisualIllustrationProps> = ({
                   transition={{ delay: i * 0.05 }}
                   className="text-2xl sm:text-3xl filter drop-shadow-xs"
                 >
-                  {visualData?.itemEmoji || '🍊'}
+                  {rightEmoji}
                 </motion.span>
               ))}
             </div>

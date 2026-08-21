@@ -669,15 +669,31 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
         >
           <div className="space-y-4">
             {/* Header info without awkward nested white box */}
-            <div className="rounded-2xl bg-amber-50/80 p-4 border border-amber-200">
-              <div className="flex flex-wrap items-center justify-between gap-2 pb-2 mb-2 border-b border-amber-200/60">
+            {/* Header info with explicit provenance citation */}
+            <div className="rounded-2xl bg-amber-50/80 p-4 border border-amber-200 space-y-2">
+              <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-amber-200/60">
                 <span className="font-baloo font-extrabold text-xs text-amber-800 uppercase tracking-wide">
                   {selectedLessonPreview.unit}
                 </span>
-                <span className="font-vietnam text-xs font-bold text-amber-900 flex items-center gap-1">
-                  📖 {selectedLessonPreview.textbookPageRef}
-                </span>
+                <div className="flex items-center gap-1">
+                  {selectedLessonPreview.sourceType === 'sgk_official' ? (
+                    <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-2 py-0.5 rounded-full">
+                      📖 {selectedLessonPreview.sourceDetail || selectedLessonPreview.textbookPageRef}
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-blue-900 bg-blue-100/90 border border-blue-300 px-2 py-0.5 rounded-full">
+                      🌱 Bổ trợ sư phạm
+                    </span>
+                  )}
+                </div>
               </div>
+              
+              {selectedLessonPreview.sourceBook && (
+                <p className="font-vietnam text-xs font-medium text-amber-900/80 italic">
+                  Nguồn: {selectedLessonPreview.sourceBook}
+                </p>
+              )}
+
               <p className="font-vietnam text-sm font-semibold text-slate-700 leading-relaxed text-justify">
                 {selectedLessonPreview.description}
               </p>

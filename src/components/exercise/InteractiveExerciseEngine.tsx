@@ -118,6 +118,36 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const [score, setScore] = useState(0);
   const [wrongAttempts, setWrongAttempts] = useState(0);
 
+  // Clean reset all states when lesson changes
+  useEffect(() => {
+    setEngineMode(lesson.readingPassage ? 'reading' : 'quiz');
+    setReadingTab('full');
+    setIsPlayingAudio(false);
+    setIsReadingDrawerOpen(false);
+    setShadowingIndex(0);
+    setIsPlayingSentenceAudio(false);
+    setIsShadowingRecording(false);
+    setShadowingTranscript('');
+    setSentenceScores({});
+    setCompletedSentences([]);
+    setActiveSpokenWord(null);
+    setIsVoiceRecording(false);
+    setVoiceTranscript('');
+    setVoiceScore(null);
+    setCurrentQuestionIndex(0);
+    setSelectedOptionId(null);
+    setKeypadInput('');
+    setMatchedPairs({});
+    setSelectedLeftPair(null);
+    setIsAnswerChecked(false);
+    setIsCorrect(false);
+    setShowHint(false);
+    setScore(0);
+    setWrongAttempts(0);
+    soundManager.stopSpeaking();
+    voiceManager.stopListening();
+  }, [lesson.id]);
+
   // Stop speech when unmounting or exiting
   useEffect(() => {
     return () => {
@@ -349,6 +379,14 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     if (isLastQuestion) {
       const stars = wrongAttempts === 0 ? 3 : wrongAttempts <= 2 ? 2 : 1;
       const totalXp = score + lesson.xpReward;
+      // Reset state so that nothing is pre-selected
+      setSelectedOptionId(null);
+      setKeypadInput('');
+      setMatchedPairs({});
+      setSelectedLeftPair(null);
+      setIsAnswerChecked(false);
+      setIsCorrect(false);
+      setShowHint(false);
       onComplete(stars, totalXp);
     } else {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -370,6 +408,9 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     setIsCorrect(false);
     setSelectedOptionId(null);
     setKeypadInput('');
+    setMatchedPairs({});
+    setSelectedLeftPair(null);
+    setShowHint(false);
   };
 
   // Keypad button click
@@ -530,23 +571,32 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
               {/* Passage Header Block (Centered, Balanced & Symmetrical) */}
               <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
-                {/* Textbook Ref Pill Badge */}
-                {lesson.textbookPageRef && (
-                  <div className="inline-flex items-center gap-2 font-baloo font-bold text-xs sm:text-sm text-amber-900 bg-amber-100/90 border border-amber-300/80 px-4 py-1 rounded-full shadow-2xs">
-                    <span>📖</span>
-                    <span>{lesson.textbookPageRef}</span>
-                  </div>
-                )}
+                {/* Textbook Ref & Provenance Pill Badge */}
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  {lesson.sourceType === 'sgk_official' ? (
+                    <div className="inline-flex items-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
+                      <span>📖</span>
+                      <span className="font-extrabold text-emerald-950">SGK Chuẩn GDPT 2018:</span>
+                      <span>{lesson.sourceDetail || lesson.textbookPageRef}</span>
+                    </div>
+                  ) : (
+                    <div className="inline-flex items-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-blue-900 bg-blue-100/90 border border-blue-300 px-3.5 py-1 rounded-full shadow-2xs">
+                      <span>🌱</span>
+                      <span className="font-extrabold text-blue-950">Nội Dung Bổ Trợ Sư Phạm:</span>
+                      <span>{lesson.sourceBook || 'WonderKids GDPT 2018'}</span>
+                    </div>
+                  )}
+                </div>
 
                 {/* Main Reading Title */}
                 <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide pt-1">
                   {passage.title}
                 </h2>
 
-                {/* Author Attribution */}
+                {/* Author & Book Citation */}
                 {passage.author && (
                   <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
-                    Tác giả: {passage.author}
+                    Nguồn / Tác giả: {passage.author} {lesson.sourceBook ? `(${lesson.sourceBook})` : ''}
                   </p>
                 )}
 

@@ -186,6 +186,13 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       };
     }
 
+    const bundle = subject === 'vietnamese' ? (VIETNAMESE_READING_PASSAGES[t.id] || VIETNAMESE_READING_PASSAGES[normalizedId]) : undefined;
+    const defaultSourceBook = subject === 'math'
+      ? `SGK Toán ${grade} — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam`
+      : subject === 'vietnamese'
+        ? `SGK Tiếng Việt ${grade} — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam`
+        : `SGK Tiếng Anh ${grade} — Global Success, NXB Giáo Dục Việt Nam`;
+
     return {
       id: t.id,
       title: t.title,
@@ -194,6 +201,10 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       grade: grade,
       unit: t.unit,
       textbookPageRef: t.textbookPageRef,
+      sourceType: bundle?.sourceType || t.sourceType || (t.textbookPageRef ? 'sgk_official' : 'pedagogical_supplement'),
+      sourceBook: bundle?.sourceBook || t.sourceBook || defaultSourceBook,
+      sourceDetail: bundle?.sourceDetail || t.sourceDetail || t.textbookPageRef || 'Nội dung bổ trợ & củng cố năng lực chuẩn GDPT 2018',
+      pedagogicalObjective: bundle?.pedagogicalObjective || t.pedagogicalObjective || t.description,
       order: idx + 1,
       starsEarned: idx === 0 ? 3 : 0,
       isLocked: false,

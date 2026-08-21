@@ -83,7 +83,7 @@ export const MATH_GRADE_1_TOPICS: CurriculumTopic[] = [
         audioText: 'Nhóm dâu tây và nhóm chuối, nhóm nào nhiều hơn?',
         points: 10,
         visualType: 'counting',
-        visualData: { itemEmoji: '🍓', leftCount: 5, rightCount: 3 },
+        visualData: { leftItemEmoji: '🍓', rightItemEmoji: '🍌', leftCount: 5, rightCount: 3 },
         options: [
           { id: 'a', label: 'Nhóm Dâu Tây nhiều hơn 🍓', isCorrect: true },
           { id: 'b', label: 'Nhóm Chuối nhiều hơn 🍌' },
@@ -311,7 +311,7 @@ export const MATH_GRADE_1_TOPICS: CurriculumTopic[] = [
         audioText: 'Số mười sáu gồm mấy chục và mấy đơn vị?',
         points: 10,
         options: [
-          { id: 'a', label: '1 chục và 6 đơn vị ✨', isCorrect: true },
+          { id: 'a', label: '1 chục và 6 đơn vị', isCorrect: true },
           { id: 'b', label: '6 chục và 1 đơn vị' },
           { id: 'c', label: '16 chục' },
         ]
@@ -405,7 +405,7 @@ export const MATH_GRADE_1_TOPICS: CurriculumTopic[] = [
         audioText: 'Xăng ti mét được viết tắt bằng chữ gì?',
         points: 10,
         options: [
-          { id: 'a', label: 'cm ✨', isCorrect: true },
+          { id: 'a', label: 'cm', isCorrect: true },
           { id: 'b', label: 'kg' },
           { id: 'c', label: 'km' },
         ]
@@ -419,7 +419,7 @@ export const MATH_GRADE_1_TOPICS: CurriculumTopic[] = [
         visualType: 'ruler',
         visualData: { lengthCm: 6 },
         options: [
-          { id: 'a', label: '6 cm ✨', isCorrect: true },
+          { id: 'a', label: '6 cm', isCorrect: true },
           { id: 'b', label: '5 cm' },
           { id: 'c', label: '7 cm' },
         ]

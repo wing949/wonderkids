@@ -57,6 +57,8 @@ export interface Question {
   visualType?: 'counting' | 'clock' | 'ruler' | 'fraction' | 'geometry' | 'balance' | 'speed' | 'blocks' | 'array' | 'number_line';
   visualData?: {
     itemEmoji?: string;
+    leftItemEmoji?: string;
+    rightItemEmoji?: string;
     itemCount?: number;
     leftCount?: number;
     rightCount?: number;
@@ -109,7 +111,11 @@ export interface LessonNode {
   subject: SubjectType;
   grade: GradeLevel;
   unit: string;
-  textbookPageRef?: string; // Ví dụ: "SGK Tiếng Việt 1 Tập 1 — Trang 16, 17"
+  textbookPageRef?: string; // Ví dụ: "SGK Tiếng Việt 1 Tập 1 — Trang 14, 15"
+  sourceType?: 'sgk_official' | 'pedagogical_supplement';
+  sourceBook?: string; // Tên bộ sách chuẩn (Bộ Kết nối tri thức với cuộc sống / Cánh Diều / Chân trời sáng tạo, NXB GDVN)
+  sourceDetail?: string; // Chi tiết số trang, mục trong sách giáo khoa
+  pedagogicalObjective?: string; // Mục tiêu kiến thức chuẩn GDPT 2018
   order: number;
   starsEarned: number; // 0, 1, 2, 3
   isLocked: boolean;
@@ -236,7 +242,7 @@ export interface ParentReport {
 }
 
 export interface TTSSettings {
-  voiceVi: string;        // 'vi-VN-HoaiMyNeural' (Cô Hoài My) | 'vi-VN-NamMinhNeural' (Thầy Nam Minh)
+  voiceVi: string;        // 'Cô Giáo Vy' (VieNeu TTS Cloned) | 'Mỹ Duyên'
   voiceEn: string;        // 'en-US-JennyNeural' (Cô Jenny) | 'en-US-GuyNeural' (Thầy Guy)
   speechRate: number;     // 0.85 (chậm), 0.95 (chuẩn), 1.05 (nhanh)
   speechPitch: number;    // 1.0
