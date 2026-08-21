@@ -17,33 +17,33 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh nhận biết: \"Nam và Hà ca hát.\"",
-        "• Đọc âm và chữ cái: A - a",
-        "• Đọc tiếng và từ ngữ ứng dụng: ca, hát, Hà, ba, gà, lá",
-        "• Luyện nói theo chủ đề: \"Chào hỏi\" (Chào ba mẹ khi đến trường, khoanh tay chào cô giáo)."
+        "• Nhận biết: Nam và Hà ca hát.",
+        "• Đọc: a",
+        "• Tiếng và từ ngữ ứng dụng: ca, hát, Hà, ba, gà, lá",
+        "• Nói: Chào hỏi khi đến trường."
       ],
-      "audioNarration": "Bài 1: A a. • Khám phá tranh nhận biết: \"Nam và Hà ca hát.\" • Đọc âm và chữ cái: A - a • Đọc tiếng và từ ngữ ứng dụng: ca, hát, Hà, ba, gà, lá • Luyện nói theo chủ đề: \"Chào hỏi\" (Chào ba mẹ khi đến trường, khoanh tay chào cô giáo).",
+      "audioNarration": "Bài 1: A a. • Nhận biết: Nam và Hà ca hát. • Đọc: a • Tiếng và từ ngữ ứng dụng: ca, hát, Hà, ba, gà, lá • Nói: Chào hỏi khi đến trường.",
       "vocabularyNotes": [
         {
-          "word": "Ca hát",
+          "word": "ca hát",
           "meaning": "Cùng nhau cất tiếng hát vui tươi."
         },
         {
-          "word": "Chào hỏi",
-          "meaning": "Lời chào kính trọng với người lớn và bạn bè."
+          "word": "chào hỏi",
+          "meaning": "Lời chào lễ phép với thầy cô và cha mẹ."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 14, 15 — Bài 1: A a (Chủ đề: Em là học sinh)",
-    "pedagogicalObjective": "Nhận biết và phát âm đúng âm A, đọc đúng câu \"Nam và Hà ca hát\", phát triển kỹ năng chào hỏi.",
+    "pedagogicalObjective": "Nhận biết âm A, đọc đúng câu \"Nam và Hà ca hát\", phát triển kỹ năng chào hỏi.",
     "questions": [
       {
         "id": "tv-g1-b1-q1",
         "type": "bubble_choice",
-        "questionText": "Trong câu nhận biết của bài 1, Nam và Hà đang làm gì?",
-        "audioText": "Trong câu nhận biết của bài 1, Nam và Hà đang làm gì?",
+        "questionText": "Trong tranh nhận biết bài 1, Nam và Hà đang làm gì?",
+        "audioText": "Trong tranh nhận biết bài 1, Nam và Hà đang làm gì?",
         "points": 15,
         "options": [
           {
@@ -58,7 +58,7 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
           },
           {
             "id": "c",
-            "label": "Nam và Hà ngủ",
+            "label": "Nam và Hà học vẽ",
             "isCorrect": false
           }
         ]
@@ -66,23 +66,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       {
         "id": "tv-g1-b1-q2",
         "type": "bubble_choice",
-        "questionText": "Chữ cái in màu đỏ nổi bật cần nhận diện trong bài học này là chữ gì?",
-        "audioText": "Chữ cái in màu đỏ nổi bật cần nhận diện trong bài học này là chữ gì?",
+        "questionText": "Chữ cái in màu đỏ cần học trong bài là chữ gì?",
+        "audioText": "Chữ cái in màu đỏ cần học trong bài là chữ gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Chữ A (a) ⭐",
+            "label": "Chữ A a ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Chữ B (b)",
+            "label": "Chữ B b",
             "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Chữ C (c)",
+            "label": "Chữ C c",
             "isCorrect": false
           }
         ]
@@ -95,27 +95,27 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh nhận biết: \"Bé và bà bế bé.\"",
-        "• Đọc âm và chữ cái: B - b",
-        "• Mô hình ghép tiếng: b + a -> ba; b + e -> be; b + ê -> bê",
+        "• Nhận biết: Bé và bà bế bé.",
+        "• Đọc: b",
+        "• Ghép tiếng: b - a -> ba; b - e -> be; b - ê -> bê",
         "• Từ ngữ ứng dụng: ba, bà, bé, bế, bể, con bê"
       ],
-      "audioNarration": "Bài 2: B b. • Khám phá tranh nhận biết: \"Bé và bà bế bé.\" • Đọc âm và chữ cái: B - b • Mô hình ghép tiếng: b + a -> ba; b + e -> be; b + ê -> bê • Từ ngữ ứng dụng: ba, bà, bé, bế, bể, con bê",
+      "audioNarration": "Bài 2: B b. • Nhận biết: Bé và bà bế bé. • Đọc: b • Ghép tiếng: b - a -> ba; b - e -> be; b - ê -> bê • Từ ngữ ứng dụng: ba, bà, bé, bế, bể, con bê",
       "vocabularyNotes": [
         {
-          "word": "Bế",
-          "meaning": "Nâng đỡ và ẵm bé bằng hai tay âu yếm."
+          "word": "bế",
+          "meaning": "Nâng đỡ và ẵm bé bằng hai tay."
         },
         {
-          "word": "Con bê",
-          "meaning": "Con của con bò, còn non và đáng yêu."
+          "word": "con bê",
+          "meaning": "Con của con bò, còn nhỏ và đáng yêu."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 16, 17 — Bài 2: B b",
-    "pedagogicalObjective": "Nhận biết và phát âm đúng âm B, mô hình ghép tiếng ba/be/bê, đọc đúng từ ngữ ứng dụng.",
+    "pedagogicalObjective": "Nhận biết âm B, ghép tiếng ba, be, bê và đọc từ ngữ ứng dụng.",
     "questions": [
       {
         "id": "tv-g1-b2-q1",
@@ -131,12 +131,12 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
           },
           {
             "id": "b",
-            "label": "Bác thợ rèn",
+            "label": "Bạn nhỏ",
             "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Bạn nhỏ",
+            "label": "Bác thợ rèn",
             "isCorrect": false
           }
         ]
@@ -149,25 +149,25 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh nhận biết: \"Cò, đỗ, dế, cá cờ.\"",
-        "• Đọc âm và chữ cái: C c, D d, Đ đ",
-        "• Từ ngữ ứng dụng: ca, cá, cà, da, dẻ, đò, đỏ",
-        "• Câu ứng dụng: \"Bà có cá cờ. Ba có quả dâu.\""
+        "• Nhận biết: Cò, đỗ, dế, cá cờ.",
+        "• Đọc: c, d, đ",
+        "• Tiếng ứng dụng: ca, cá, cà, da, dẻ, đò, đỏ, đỗ",
+        "• Câu ứng dụng: Bà có cá cờ. Ba có quả dâu."
       ],
-      "audioNarration": "Bài 3: C c - D d - Đ đ. • Khám phá tranh nhận biết: \"Cò, đỗ, dế, cá cờ.\" • Đọc âm và chữ cái: C c, D d, Đ đ • Từ ngữ ứng dụng: ca, cá, cà, da, dẻ, đò, đỏ • Câu ứng dụng: \"Bà có cá cờ. Ba có quả dâu.\"",
+      "audioNarration": "Bài 3: C c - D d - Đ đ. • Nhận biết: Cò, đỗ, dế, cá cờ. • Đọc: c, d, đ • Tiếng ứng dụng: ca, cá, cà, da, dẻ, đò, đỏ, đỗ • Câu ứng dụng: Bà có cá cờ. Ba có quả dâu.",
       "vocabularyNotes": [
         {
-          "word": "Cá cờ",
+          "word": "cá cờ",
           "meaning": "Loài cá nhỏ có vây xòe đẹp như lá cờ."
         },
         {
-          "word": "Con dế",
-          "meaning": "Con vật nhỏ có đôi chân khỏe, kêu ri ri."
+          "word": "con dế",
+          "meaning": "Con vật nhỏ có đôi chân nhảy khỏe, kêu ri ri."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 18, 19 — Bài 3: C c - D d - Đ đ",
     "pedagogicalObjective": "Phân biệt âm C, D, Đ, ghép tiếng và đọc câu ứng dụng chuẩn SGK.",
     "questions": [
@@ -203,27 +203,27 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh nhận biết: \"Bé vẽ quả lê.\"",
-        "• Đọc âm và chữ cái: E e, Ê ê",
-        "• Mô hình ghép tiếng: b + e -> be, b + e + sắc -> bé; b + ê -> bê, b + ê + sắc -> bế",
-        "• Câu ứng dụng: \"Bà bế bé. Bé xem con bê.\""
+        "• Nhận biết: Bé vẽ quả lê.",
+        "• Đọc: e, ê",
+        "• Ghép tiếng: b - e -> be, b - e - sắc -> bé; b - ê -> bê, b - ê - sắc -> bế",
+        "• Câu ứng dụng: Bà bế bé. Bé xem con bê."
       ],
-      "audioNarration": "Bài 4: E e - Ê ê. • Khám phá tranh nhận biết: \"Bé vẽ quả lê.\" • Đọc âm và chữ cái: E e, Ê ê • Mô hình ghép tiếng: b + e -> be, b + e + sắc -> bé; b + ê -> bê, b + ê + sắc -> bế • Câu ứng dụng: \"Bà bế bé. Bé xem con bê.\"",
+      "audioNarration": "Bài 4: E e - Ê ê. • Nhận biết: Bé vẽ quả lê. • Đọc: e, ê • Ghép tiếng: b - e -> be, b - e - sắc -> bé; b - ê -> bê, b - ê - sắc -> bế • Câu ứng dụng: Bà bế bé. Bé xem con bê.",
       "vocabularyNotes": [
         {
-          "word": "Quả lê",
+          "word": "quả lê",
           "meaning": "Loại quả ngọt, mọng nước, vỏ màu xanh vàng."
         },
         {
-          "word": "Con bê",
+          "word": "con bê",
           "meaning": "Chú bò con mới sinh."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 20, 21 — Bài 4: E e - Ê ê",
-    "pedagogicalObjective": "Nhận biết âm E, Ê, quy tắc đánh vần có dấu thanh bé/bế, đọc câu \"Bà bế bé. Bé xem con bê.\"",
+    "pedagogicalObjective": "Nhận biết âm E, Ê, quy tắc đánh vần có dấu thanh bé/bế.",
     "questions": [
       {
         "id": "tv-g1-b4-q1",
@@ -257,20 +257,20 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Bảng ôn tập chữ cái: a, b, c, d, đ, e, ê",
-        "• Luyện đọc câu ứng dụng: \"Bà bế bé, bé có quả lê đỏ.\"",
-        "• Kể chuyện theo tranh: \"Chuyện của bạn Dê con.\""
+        "• Bảng ôn tập âm chữ cái: a, b, c, d, đ, e, ê",
+        "• Đọc câu ứng dụng: Bà bế bé, bé có quả lê đỏ.",
+        "• Kể chuyện theo tranh: Chuyện của bạn Dê con."
       ],
-      "audioNarration": "Bài 5: Ôn tập và kể chuyện. • Bảng ôn tập chữ cái: a, b, c, d, đ, e, ê • Luyện đọc câu ứng dụng: \"Bà bế bé, bé có quả lê đỏ.\" • Kể chuyện theo tranh: \"Chuyện của bạn Dê con.\"",
+      "audioNarration": "Bài 5: Ôn tập và kể chuyện. • Bảng ôn tập âm chữ cái: a, b, c, d, đ, e, ê • Đọc câu ứng dụng: Bà bế bé, bé có quả lê đỏ. • Kể chuyện theo tranh: Chuyện của bạn Dê con.",
       "vocabularyNotes": [
         {
-          "word": "Ôn tập",
+          "word": "ôn tập",
           "meaning": "Đọc lại và ghi nhớ chắc chắn các chữ đã học."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 22, 23 — Bài 5: Ôn tập và kể chuyện",
     "pedagogicalObjective": "Tổng hợp và củng cố các âm chữ cái tuần 1, luyện đọc trôi chảy câu ngắn.",
     "questions": [
@@ -288,12 +288,12 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
           },
           {
             "id": "b",
-            "label": "Học vẽ tranh",
+            "label": "Học múa",
             "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Học múa",
+            "label": "Học hát",
             "isCorrect": false
           }
         ]
@@ -306,27 +306,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Bò bê có cỏ, bò bê no nê.\"",
-        "• Âm: O - o",
+        "• Nhận biết: Bò bê có cỏ, bò bê no nê.",
+        "• Đọc: o",
         "• Tiếng ứng dụng: bo, bò, bó, bọ, cọ, cỏ, cờ",
-        "• Luyện nói: Các con vật nuôi trong gia đình."
+        "• Nói: Các con vật nuôi trong gia đình."
       ],
-      "audioNarration": "Bài 6: O o. • Khám phá tranh: \"Bò bê có cỏ, bò bê no nê.\" • Âm: O - o • Tiếng ứng dụng: bo, bò, bó, bọ, cọ, cỏ, cờ • Luyện nói: Các con vật nuôi trong gia đình.",
+      "audioNarration": "Bài 6: O o. • Nhận biết: Bò bê có cỏ, bò bê no nê. • Đọc: o • Tiếng ứng dụng: bo, bò, bó, bọ, cọ, cỏ, cờ • Nói: Các con vật nuôi trong gia đình.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "no nê",
+          "meaning": "Ăn uống đầy đủ, no bụng."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 24, 25 — Bài 6: O o",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b6-q1",
@@ -360,27 +356,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Bố mẹ cho bé đi ca nô.\"",
-        "• Âm: Ô ô, Ơ ơ",
+        "• Nhận biết: Bố mẹ cho bé đi ca nô.",
+        "• Đọc: ô, ơ",
         "• Tiếng ứng dụng: cô, cỗ, bơ, nơ, cờ, mỡ",
-        "• Câu ứng dụng: \"Bé có nơ đỏ. Bố có ca nô.\""
+        "• Câu ứng dụng: Bé có nơ đỏ. Bố có ca nô."
       ],
-      "audioNarration": "Bài 7: Ô ô - Ơ ơ. • Khám phá tranh: \"Bố mẹ cho bé đi ca nô.\" • Âm: Ô ô, Ơ ơ • Tiếng ứng dụng: cô, cỗ, bơ, nơ, cờ, mỡ • Câu ứng dụng: \"Bé có nơ đỏ. Bố có ca nô.\"",
+      "audioNarration": "Bài 7: Ô ô - Ơ ơ. • Nhận biết: Bố mẹ cho bé đi ca nô. • Đọc: ô, ơ • Tiếng ứng dụng: cô, cỗ, bơ, nơ, cờ, mỡ • Câu ứng dụng: Bé có nơ đỏ. Bố có ca nô.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "ca nô",
+          "meaning": "Thuyền máy cỡ nhỏ chạy nhanh trên mặt nước."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 26, 27 — Bài 7: Ô ô - Ơ ơ",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b7-q1",
@@ -414,27 +406,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Bé kể chuyện cổ tích cho bà nghe.\"",
-        "• Âm: I i, K k (Quy tắc chính tả k đi với i, e, ê)",
+        "• Nhận biết: Bé kể chuyện cổ tích cho bà nghe.",
+        "• Đọc: i, k (k đi với i, e, ê)",
         "• Tiếng ứng dụng: bi, bí, bì, kè, kẻ, kẽ",
-        "• Câu ứng dụng: \"Bé bi bô kể chuyện.\""
+        "• Câu ứng dụng: Bé bi bô kể chuyện."
       ],
-      "audioNarration": "Bài 8: I i - K k. • Khám phá tranh: \"Bé kể chuyện cổ tích cho bà nghe.\" • Âm: I i, K k (Quy tắc chính tả k đi với i, e, ê) • Tiếng ứng dụng: bi, bí, bì, kè, kẻ, kẽ • Câu ứng dụng: \"Bé bi bô kể chuyện.\"",
+      "audioNarration": "Bài 8: I i - K k. • Nhận biết: Bé kể chuyện cổ tích cho bà nghe. • Đọc: i, k (k đi với i, e, ê) • Tiếng ứng dụng: bi, bí, bì, kè, kẻ, kẽ • Câu ứng dụng: Bé bi bô kể chuyện.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "bi bô",
+          "meaning": "Giọng nói trẻ thơ chưa rõ tiếng nhưng rất đáng yêu."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 28, 29 — Bài 8: I i - K k",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b8-q1",
@@ -468,27 +456,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Bà cho bé quả đu đủ chín vàng.\"",
-        "• Âm: U u, Ư ư",
+        "• Nhận biết: Bà cho bé quả đu đủ chín vàng.",
+        "• Đọc: u, ư",
         "• Tiếng ứng dụng: đu, đủ, cừ, thư, nụ, củ",
-        "• Câu ứng dụng: \"Bé có củ từ. Bà có đu đủ chín.\""
+        "• Câu ứng dụng: Bé có củ từ. Bà có đu đủ chín."
       ],
-      "audioNarration": "Bài 9: U u - Ư ư. • Khám phá tranh: \"Bà cho bé quả đu đủ chín vàng.\" • Âm: U u, Ư ư • Tiếng ứng dụng: đu, đủ, cừ, thư, nụ, củ • Câu ứng dụng: \"Bé có củ từ. Bà có đu đủ chín.\"",
+      "audioNarration": "Bài 9: U u - Ư ư. • Nhận biết: Bà cho bé quả đu đủ chín vàng. • Đọc: u, ư • Tiếng ứng dụng: đu, đủ, cừ, thư, nụ, củ • Câu ứng dụng: Bé có củ từ. Bà có đu đủ chín.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "đu đủ",
+          "meaning": "Loại quả ruột mềm ngọt, màu vàng cam khi chín."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 30, 31 — Bài 9: U u - Ư ư",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b9-q1",
@@ -523,25 +507,21 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "genre": "prose",
       "content": [
         "• Bảng ôn tập âm: o, ô, ơ, i, k, u, ư",
-        "• Luyện đọc câu: \"Cả nhà đi ca nô, bé reo vui hớn hở.\"",
+        "• Đọc câu: Cả nhà đi ca nô, bé reo vui hớn hở.",
         "• Kể chuyện: Rùa và Thỏ."
       ],
-      "audioNarration": "Bài 10: Ôn tập âm chữ cái. • Bảng ôn tập âm: o, ô, ơ, i, k, u, ư • Luyện đọc câu: \"Cả nhà đi ca nô, bé reo vui hớn hở.\" • Kể chuyện: Rùa và Thỏ.",
+      "audioNarration": "Bài 10: Ôn tập âm chữ cái. • Bảng ôn tập âm: o, ô, ơ, i, k, u, ư • Đọc câu: Cả nhà đi ca nô, bé reo vui hớn hở. • Kể chuyện: Rùa và Thỏ.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "hớn hở",
+          "meaning": "Vẻ mặt rạng rỡ, vui tươi lộ rõ ra ngoài."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 32, 33 — Bài 10: Ôn tập âm chữ cái",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b10-q1",
@@ -575,27 +555,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Mẹ mua lê và mận thơm ngon cho bé.\"",
-        "• Âm: L l, M m",
+        "• Nhận biết: Mẹ mua lê và mận thơm ngon cho bé.",
+        "• Đọc: l, m",
         "• Tiếng ứng dụng: la, lá, me, mẹ, mỏ, mơ",
-        "• Câu ứng dụng: \"Mẹ bế bé ra vườn ngắm hoa mai.\""
+        "• Câu ứng dụng: Mẹ bế bé ra vườn ngắm hoa mai."
       ],
-      "audioNarration": "Bài 11: L l - M m. • Khám phá tranh: \"Mẹ mua lê và mận thơm ngon cho bé.\" • Âm: L l, M m • Tiếng ứng dụng: la, lá, me, mẹ, mỏ, mơ • Câu ứng dụng: \"Mẹ bế bé ra vườn ngắm hoa mai.\"",
+      "audioNarration": "Bài 11: L l - M m. • Nhận biết: Mẹ mua lê và mận thơm ngon cho bé. • Đọc: l, m • Tiếng ứng dụng: la, lá, me, mẹ, mỏ, mơ • Câu ứng dụng: Mẹ bế bé ra vườn ngắm hoa mai.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "quả mận",
+          "meaning": "Quả nhỏ vỏ đỏ hoặc tím, vị chua ngọt giòn mát."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 34, 35 — Bài 11: L l - M m",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b11-q1",
@@ -629,27 +605,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Nụ hoa hồng nở rộ đón nắng mai.\"",
-        "• Âm: N n, P p",
+        "• Nhận biết: Nụ hoa hồng nở rộ đón nắng mai.",
+        "• Đọc: n, p",
         "• Tiếng ứng dụng: nơ, nụ, nẻ, pa-nô, pin",
-        "• Câu ứng dụng: \"Bé chỉ vào pa nô rực rỡ cờ hoa.\""
+        "• Câu ứng dụng: Bé chỉ vào pa-nô rực rỡ cờ hoa."
       ],
-      "audioNarration": "Bài 12: N n - P p. • Khám phá tranh: \"Nụ hoa hồng nở rộ đón nắng mai.\" • Âm: N n, P p • Tiếng ứng dụng: nơ, nụ, nẻ, pa-nô, pin • Câu ứng dụng: \"Bé chỉ vào pa nô rực rỡ cờ hoa.\"",
+      "audioNarration": "Bài 12: N n - P p. • Nhận biết: Nụ hoa hồng nở rộ đón nắng mai. • Đọc: n, p • Tiếng ứng dụng: nơ, nụ, nẻ, pa-nô, pin • Câu ứng dụng: Bé chỉ vào pa-nô rực rỡ cờ hoa.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "pa-nô",
+          "meaning": "Tấm bảng lớn vẽ tranh hoặc khẩu hiệu trang trí ngoài trời."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 36, 37 — Bài 12: N n - P p",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b12-q1",
@@ -683,27 +655,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Rùa và sáo là đôi bạn thân thiết.\"",
-        "• Âm: R r, S s",
+        "• Nhận biết: Rùa và sáo là đôi bạn thân thiết.",
+        "• Đọc: r, s",
         "• Tiếng ứng dụng: rổ, rá, rễ, sẻ, sa, sơ",
-        "• Câu ứng dụng: \"Mẹ có rổ cá rô tươi ngon.\""
+        "• Câu ứng dụng: Mẹ có rổ cá rô tươi ngon."
       ],
-      "audioNarration": "Bài 13: R r - S s. • Khám phá tranh: \"Rùa và sáo là đôi bạn thân thiết.\" • Âm: R r, S s • Tiếng ứng dụng: rổ, rá, rễ, sẻ, sa, sơ • Câu ứng dụng: \"Mẹ có rổ cá rô tươi ngon.\"",
+      "audioNarration": "Bài 13: R r - S s. • Nhận biết: Rùa và sáo là đôi bạn thân thiết. • Đọc: r, s • Tiếng ứng dụng: rổ, rá, rễ, sẻ, sa, sơ • Câu ứng dụng: Mẹ có rổ cá rô tươi ngon.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "cá rô",
+          "meaning": "Loài cá nước ngọt vây sắc nhọn, thịt thơm ngon."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 38, 39 — Bài 13: R r - S s",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b13-q1",
@@ -737,27 +705,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Thỏ con nhảy nhót bên bụi tre.\"",
-        "• Âm: T t, Th th",
+        "• Nhận biết: Thỏ con nhảy nhót bên bụi tre.",
+        "• Đọc: t, th",
         "• Tiếng ứng dụng: tơ, tư, tổ, thỏ, thìa, thủ",
-        "• Câu ứng dụng: \"Bé tô chữ t, thỏ con ăn củ cà rốt.\""
+        "• Câu ứng dụng: Bé tô chữ t, thỏ con ăn củ cà rốt."
       ],
-      "audioNarration": "Bài 14: T t - Th th. • Khám phá tranh: \"Thỏ con nhảy nhót bên bụi tre.\" • Âm: T t, Th th • Tiếng ứng dụng: tơ, tư, tổ, thỏ, thìa, thủ • Câu ứng dụng: \"Bé tô chữ t, thỏ con ăn củ cà rốt.\"",
+      "audioNarration": "Bài 14: T t - Th th. • Nhận biết: Thỏ con nhảy nhót bên bụi tre. • Đọc: t, th • Tiếng ứng dụng: tơ, tư, tổ, thỏ, thìa, thủ • Câu ứng dụng: Bé tô chữ t, thỏ con ăn củ cà rốt.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "thìa",
+          "meaning": "Dụng cụ múc thức ăn bằng inox hoặc nhựa."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 40, 41 — Bài 14: T t - Th th",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b14-q1",
@@ -791,27 +755,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Vườn cây xum xuê trĩu quả ngọt.\"",
-        "• Âm: V v, X x",
+        "• Nhận biết: Vườn cây xum xuê trĩu quả ngọt.",
+        "• Đọc: v, x",
         "• Tiếng ứng dụng: ve, vú sữa, xe, xôi, xả",
-        "• Câu ứng dụng: \"Bé đi xe đạp trong vườn hoa xanh mát.\""
+        "• Câu ứng dụng: Bé đi xe đạp trong vườn hoa xanh mát."
       ],
-      "audioNarration": "Bài 15: V v - X x. • Khám phá tranh: \"Vườn cây xum xuê trĩu quả ngọt.\" • Âm: V v, X x • Tiếng ứng dụng: ve, vú sữa, xe, xôi, xả • Câu ứng dụng: \"Bé đi xe đạp trong vườn hoa xanh mát.\"",
+      "audioNarration": "Bài 15: V v - X x. • Nhận biết: Vườn cây xum xuê trĩu quả ngọt. • Đọc: v, x • Tiếng ứng dụng: ve, vú sữa, xe, xôi, xả • Câu ứng dụng: Bé đi xe đạp trong vườn hoa xanh mát.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "xum xuê",
+          "meaning": "Cây cối cành lá rậm rạp, nhiều quả tươi tốt."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 42, 43 — Bài 15: V v - X x",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b15-q1",
@@ -845,27 +805,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Chú khỉ trèo cây hái quả khế chua.\"",
-        "• Âm: Ch ch, Kh kh",
+        "• Nhận biết: Chú khỉ trèo cây hái quả khế chua.",
+        "• Đọc: ch, kh",
         "• Tiếng ứng dụng: chó, chè, khỉ, khế, kho",
-        "• Câu ứng dụng: \"Mẹ kho cá với khế chua thơm lừng.\""
+        "• Câu ứng dụng: Mẹ kho cá với khế chua thơm lừng."
       ],
-      "audioNarration": "Bài 16: Ch ch - Kh kh. • Khám phá tranh: \"Chú khỉ trèo cây hái quả khế chua.\" • Âm: Ch ch, Kh kh • Tiếng ứng dụng: chó, chè, khỉ, khế, kho • Câu ứng dụng: \"Mẹ kho cá với khế chua thơm lừng.\"",
+      "audioNarration": "Bài 16: Ch ch - Kh kh. • Nhận biết: Chú khỉ trèo cây hái quả khế chua. • Đọc: ch, kh • Tiếng ứng dụng: chó, chè, khỉ, khế, kho • Câu ứng dụng: Mẹ kho cá với khế chua thơm lừng.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "quả khế",
+          "meaning": "Quả có 5 múi hình ngôi sao, vị chua thanh."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 44, 45 — Bài 16: Ch ch - Kh kh",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b16-q1",
@@ -899,27 +855,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Nhà bà có đàn gà con kêu chiêm chiếp.\"",
-        "• Âm: Nh nh, Ng ng",
+        "• Nhận biết: Nhà bà có đàn gà con kêu chiêm chiếp.",
+        "• Đọc: nh, ng",
         "• Tiếng ứng dụng: nho, nhà, ngô, ngỗng, ngủ",
-        "• Câu ứng dụng: \"Bà cho bé chùm nho tím ngọt ngào.\""
+        "• Câu ứng dụng: Bà cho bé chùm nho tím ngọt ngào."
       ],
-      "audioNarration": "Bài 17: Nh nh - Ng ng. • Khám phá tranh: \"Nhà bà có đàn gà con kêu chiêm chiếp.\" • Âm: Nh nh, Ng ng • Tiếng ứng dụng: nho, nhà, ngô, ngỗng, ngủ • Câu ứng dụng: \"Bà cho bé chùm nho tím ngọt ngào.\"",
+      "audioNarration": "Bài 17: Nh nh - Ng ng. • Nhận biết: Nhà bà có đàn gà con kêu chiêm chiếp. • Đọc: nh, ng • Tiếng ứng dụng: nho, nhà, ngô, ngỗng, ngủ • Câu ứng dụng: Bà cho bé chùm nho tím ngọt ngào.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "chùm nho",
+          "meaning": "Nhiều quả nho tròn mọc kết thành chùm."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 46, 47 — Bài 17: Nh nh - Ng ng",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b17-q1",
@@ -953,27 +905,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Nghé con đứng dưới gốc cây gạo.\"",
-        "• Âm: Ngh ngh, Gh gh (Quy tắc đi với e, ê, i)",
+        "• Nhận biết: Nghé con đứng dưới gốc cây gạo.",
+        "• Đọc: ngh, gh (luật đi với e, ê, i)",
         "• Tiếng ứng dụng: nghé, nghỉ, nghe, ghế, ghi, gỗ",
-        "• Câu ứng dụng: \"Bé ngồi trên ghế gỗ lắng nghe bà kể chuyện.\""
+        "• Câu ứng dụng: Bé ngồi trên ghế gỗ lắng nghe bà kể chuyện."
       ],
-      "audioNarration": "Bài 18: Ngh ngh - Gh gh. • Khám phá tranh: \"Nghé con đứng dưới gốc cây gạo.\" • Âm: Ngh ngh, Gh gh (Quy tắc đi với e, ê, i) • Tiếng ứng dụng: nghé, nghỉ, nghe, ghế, ghi, gỗ • Câu ứng dụng: \"Bé ngồi trên ghế gỗ lắng nghe bà kể chuyện.\"",
+      "audioNarration": "Bài 18: Ngh ngh - Gh gh. • Nhận biết: Nghé con đứng dưới gốc cây gạo. • Đọc: ngh, gh (luật đi với e, ê, i) • Tiếng ứng dụng: nghé, nghỉ, nghe, ghế, ghi, gỗ • Câu ứng dụng: Bé ngồi trên ghế gỗ lắng nghe bà kể chuyện.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "nghé con",
+          "meaning": "Con của con trâu khi còn non."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 48, 49 — Bài 18: Ngh ngh - Gh gh",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b18-q1",
@@ -1007,27 +955,23 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Các bạn nhỏ tan học vui vẻ bước ra cổng trường.\"",
-        "• Vần: An an, At at",
+        "• Nhận biết: Các bạn nhỏ tan học vui vẻ bước ra cổng trường.",
+        "• Vần: an, at",
         "• Tiếng ứng dụng: bạn, bàn, đàn, bát, hạt, cát",
-        "• Câu ứng dụng: \"Đàn chim én bay lượn trên bãi cát vàng.\""
+        "• Câu ứng dụng: Đàn chim én bay lượn trên bãi cát vàng."
       ],
-      "audioNarration": "Bài 19: An an - At at. • Khám phá tranh: \"Các bạn nhỏ tan học vui vẻ bước ra cổng trường.\" • Vần: An an, At at • Tiếng ứng dụng: bạn, bàn, đàn, bát, hạt, cát • Câu ứng dụng: \"Đàn chim én bay lượn trên bãi cát vàng.\"",
+      "audioNarration": "Bài 19: An an - At at. • Nhận biết: Các bạn nhỏ tan học vui vẻ bước ra cổng trường. • Vần: an, at • Tiếng ứng dụng: bạn, bàn, đàn, bát, hạt, cát • Câu ứng dụng: Đàn chim én bay lượn trên bãi cát vàng.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "tan học",
+          "meaning": "Hết giờ học, học sinh được ra về."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
     "sourceDetail": "Trang 52, 53 — Bài 19: An an - At at",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b19-q1",
@@ -1057,37 +1001,32 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b20": {
     "passage": {
-      "title": "Bài 20: Ăn ăn - Ăt ăt",
+      "title": "Bài 20: Ôn tập cuối Học kì 1",
       "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Bé rửa mặt sạch sẽ trước bữa ăn.\"",
-        "• Vần: Ăn ăn, Ăt ăt",
-        "• Tiếng ứng dụng: khăn, trăn, lặn, mặt, cắt, gặt",
-        "• Câu ứng dụng: \"Mẹ giặt khăn mặt thơm tho cho bé.\""
+        "• Bảng tổng kết toàn bộ âm chữ cái và vần Tập 1.",
+        "• Đọc câu ứng dụng: Mùa xuân ấm áp, chim én bay về rộn rã trên cánh đồng lúa chín.",
+        "• Đánh giá năng lực đọc trôi chảy học kỳ 1."
       ],
-      "audioNarration": "Bài 20: Ăn ăn - Ăt ăt. • Khám phá tranh: \"Bé rửa mặt sạch sẽ trước bữa ăn.\" • Vần: Ăn ăn, Ăt ăt • Tiếng ứng dụng: khăn, trăn, lặn, mặt, cắt, gặt • Câu ứng dụng: \"Mẹ giặt khăn mặt thơm tho cho bé.\"",
+      "audioNarration": "Bài 20: Ôn tập cuối Học kì 1. • Bảng tổng kết toàn bộ âm chữ cái và vần Tập 1. • Đọc câu ứng dụng: Mùa xuân ấm áp, chim én bay về rộn rã trên cánh đồng lúa chín. • Đánh giá năng lực đọc trôi chảy học kỳ 1.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
-        },
-        {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "ấm áp",
+          "meaning": "Thời tiết dễ chịu, mang lại cảm giác ấm lòng."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Trang 54, 55 — Bài 20: Ăn ăn - Ăt ăt",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "Bộ sách Kết nối tri thức với cuộc sống — NXB Giáo Dục Việt Nam",
+    "sourceDetail": "Trang 88, 89 — Bài 20: Ôn tập cuối Học kì 1",
+    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần Lớp 1 theo GDPT 2018.",
     "questions": [
       {
         "id": "tv-g1-b20-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 20: Ăn ăn - Ăt ăt trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 20: Ăn ăn - Ăt ăt trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung trọng tâm của Bài 20: Ôn tập cuối Học kì 1 trong SGK Tiếng Việt 1 là gì?",
+        "audioText": "Nội dung trọng tâm của Bài 20: Ôn tập cuối Học kì 1 trong SGK Tiếng Việt 1 là gì?",
         "points": 15,
         "options": [
           {
@@ -1111,49 +1050,80 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b21": {
     "passage": {
-      "title": "Bài 21: Tôi là học sinh lớp 1",
-      "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
+      "title": "Bài 1: Tôi là học sinh lớp 1",
+      "author": "Trung Sơn",
       "genre": "prose",
       "content": [
-        "Tên tôi là Nam. Tôi là học sinh lớp Một. Hằng ngày, tôi dậy sớm, tập thể dục, rửa mặt rồi ăn sáng. Tôi mặc đồng phục, đeo ba lô rồi cùng các bạn vui vẻ đến trường.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Tôi tên là Nam, học sinh lớp 1A, Trường Tiểu học Lê Quý Đôn. Ngày đầu đi học, mặc bộ đồng phục của trường, tôi hãnh diện lắm.",
+        "Hồi đầu năm học, tôi mới học chữ cái. Thế mà bây giờ, tôi đã đọc được truyện tranh. Tôi còn biết làm toán nữa. Tôi có thêm nhiều bạn mới.",
+        "Ai cũng bảo từ khi đi học, tôi chững chạc hẳn lên."
       ],
-      "audioNarration": "Bài 21: Tôi là học sinh lớp 1. Tên tôi là Nam. Tôi là học sinh lớp Một. Hằng ngày, tôi dậy sớm, tập thể dục, rửa mặt rồi ăn sáng. Tôi mặc đồng phục, đeo ba lô rồi cùng các bạn vui vẻ đến trường.",
+      "audioNarration": "Bài 1: Tôi là học sinh lớp 1. Tôi tên là Nam, học sinh lớp 1A, Trường Tiểu học Lê Quý Đôn. Ngày đầu đi học, mặc bộ đồng phục của trường, tôi hãnh diện lắm. Hồi đầu năm học, tôi mới học chữ cái. Thế mà bây giờ, tôi đã đọc được truyện tranh. Tôi còn biết làm toán nữa. Tôi có thêm nhiều bạn mới. Ai cũng bảo từ khi đi học, tôi chững chạc hẳn lên.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "đồng phục",
+          "meaning": "Quần áo cùng màu sắc, kiểu dáng theo quy định của nhà trường."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "hãnh diện",
+          "meaning": "Tự hào và vui sướng vì thấy mình được tôn trọng, khen ngợi."
+        },
+        {
+          "word": "chững chạc",
+          "meaning": "Trông đàng hoàng, người lớn hơn hẳn so với trước."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 10, 11 — Bài 21: Tôi là học sinh lớp 1",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 10, 11 — Bài 1: Tôi là học sinh lớp 1 (Chủ điểm 1: Tôi và các bạn)",
+    "pedagogicalObjective": "Đọc trôi chảy toàn bài, hiểu niềm tự hào và sự trưởng thành của học sinh lớp 1.",
     "questions": [
       {
         "id": "tv-g1-b21-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 21: Tôi là học sinh lớp 1\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 21: Tôi là học sinh lớp 1 là gì?",
+        "questionText": "Trong bài đọc, bạn Nam học lớp mấy, trường nào?",
+        "audioText": "Trong bài đọc, bạn Nam học lớp mấy, trường nào?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Lớp 1A, Trường Tiểu học Lê Quý Đôn 🏫",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Lớp 2B, Trường Tiểu học Kim Đồng",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Lớp 3C, Trường Tiểu học Chu Văn An",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": "tv-g1-b21-q2",
+        "type": "bubble_choice",
+        "questionText": "Ngày đầu đi học, mặc bộ đồng phục của trường, Nam cảm thấy thế nào?",
+        "audioText": "Ngày đầu đi học, mặc bộ đồng phục của trường, Nam cảm thấy thế nào?",
+        "points": 15,
+        "options": [
+          {
+            "id": "a",
+            "label": "Nam thấy hãnh diện lắm ⭐",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Nam thấy sợ hãi",
+            "isCorrect": false
+          },
+          {
+            "id": "c",
+            "label": "Nam khóc nhè",
+            "isCorrect": false
           }
         ]
       }
@@ -1161,49 +1131,53 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b22": {
     "passage": {
-      "title": "Bài 22: Đôi tai xấu xí",
+      "title": "Bài 2: Đôi tai xấu xí",
       "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
-      "genre": "prose",
+      "genre": "story",
       "content": [
-        "Thỏ con từng buồn bã vì đôi tai dài lúp xúp. Nhưng nhờ đôi tai thính nhạy, thỏ con đã nghe thấy tiếng sói từ xa và kịp thời báo tin cứu cả đàn thỏ an toàn.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Thỏ con có đôi tai dài lúp xúp. Chú luôn tự ti: \"Đôi tai mình xấu xí quá, chẳng giống bạn nào!\".",
+        "Một hôm, thỏ con đi chơi cùng các bạn trong rừng. Đang chơi đùa vui vẻ, bỗng thỏ con vểnh đôi tai lên lắng nghe. Chú nghe thấy tiếng bước chân sói xám đang rón rén lại gần.",
+        "Thỏ con vội hô to: \"Có sói! Các bạn chạy mau!\". Nhờ tiếng hô của thỏ con, cả đàn thú nhỏ đã kịp thời chạy vào hang an toàn.",
+        "Từ đó, thỏ con hiểu rằng đôi tai dài thính nhạy của mình thật tuyệt vời và không còn tự ti nữa."
       ],
-      "audioNarration": "Bài 22: Đôi tai xấu xí. Thỏ con từng buồn bã vì đôi tai dài lúp xúp. Nhưng nhờ đôi tai thính nhạy, thỏ con đã nghe thấy tiếng sói từ xa và kịp thời báo tin cứu cả đàn thỏ an toàn.",
+      "audioNarration": "Bài 2: Đôi tai xấu xí. Thỏ con có đôi tai dài lúp xúp. Chú luôn tự ti: \"Đôi tai mình xấu xí quá, chẳng giống bạn nào!\". Một hôm, thỏ con đi chơi cùng các bạn trong rừng. Đang chơi đùa vui vẻ, bỗng thỏ con vểnh đôi tai lên lắng nghe. Chú nghe thấy tiếng bước chân sói xám đang rón rén lại gần. Thỏ con vội hô to: \"Có sói! Các bạn chạy mau!\". Nhờ tiếng hô của thỏ con, cả đàn thú nhỏ đã kịp thời chạy vào hang an toàn. Từ đó, thỏ con hiểu rằng đôi tai dài thính nhạy của mình thật tuyệt vời và không còn tự ti nữa.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "tự ti",
+          "meaning": "Tự đánh giá thấp bản thân, thiếu tự tin."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "thính nhạy",
+          "meaning": "Nghe rất rõ và chuẩn xác ngay cả âm thanh nhỏ nhất từ xa."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 14, 15 — Bài 22: Đôi tai xấu xí",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 14, 15 — Bài 2: Đôi tai xấu xí (Chủ điểm 1: Tôi và các bạn)",
+    "pedagogicalObjective": "Hiểu được mỗi người đều có đặc điểm riêng đáng quý, tự tin vào bản thân.",
     "questions": [
       {
         "id": "tv-g1-b22-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 22: Đôi tai xấu xí\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 22: Đôi tai xấu xí là gì?",
+        "questionText": "Nhờ điều gì mà thỏ con đã cứu được cả đàn thú nhỏ?",
+        "audioText": "Nhờ điều gì mà thỏ con đã cứu được cả đàn thú nhỏ?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Nhờ đôi tai dài thính nhạy nghe thấy tiếng sói từ xa 🐰",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Nhờ chạy nhanh nhất rừng",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Nhờ biết bay",
+            "isCorrect": false
           }
         ]
       }
@@ -1211,49 +1185,52 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b23": {
     "passage": {
-      "title": "Bài 23: Bạn của gió",
+      "title": "Bài 3: Bạn của gió",
       "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
-      "genre": "prose",
+      "genre": "poem",
       "content": [
-        "Ai là bạn của gió? Là cánh buồm no gió ngoài biển khơi, là cánh diều chao lượn trên đồng cỏ, là cối xay gió quay đều trong nắng mai.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Ai là bạn của gió?\nCánh buồm no gió khơi\nĐẩy con thuyền lướt sóng\nĐi khắp bốn phương trời.",
+        "Ai là bạn của gió?\nCánh diều biếc trời mây\nBay bổng cùng tiếng sáo\nTrong nắng mai ngập tràn.",
+        "Gió mang hương của lúa\nGió quạt mát trưa hè\nGió thổi bừng ngọn lửa\nSưởi ấm đêm mùa đông."
       ],
-      "audioNarration": "Bài 23: Bạn của gió. Ai là bạn của gió? Là cánh buồm no gió ngoài biển khơi, là cánh diều chao lượn trên đồng cỏ, là cối xay gió quay đều trong nắng mai.",
+      "audioNarration": "Bài 3: Bạn của gió. Ai là bạn của gió?\nCánh buồm no gió khơi\nĐẩy con thuyền lướt sóng\nĐi khắp bốn phương trời. Ai là bạn của gió?\nCánh diều biếc trời mây\nBay bổng cùng tiếng sáo\nTrong nắng mai ngập tràn. Gió mang hương của lúa\nGió quạt mát trưa hè\nGió thổi bừng ngọn lửa\nSưởi ấm đêm mùa đông.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "no gió",
+          "meaning": "Căng tròn vì đón đầy sức gió thổi vào."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "bay bổng",
+          "meaning": "Bay lượn nhẹ nhàng và vút lên cao giữa không trung."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 18, 19 — Bài 23: Bạn của gió",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 18, 19 — Bài 3: Bạn của gió (Chủ điểm 2: Thế giới quanh em)",
+    "pedagogicalObjective": "Đọc diễn cảm bài thơ, cảm nhận vẻ đẹp và sự hữu ích của gió trong thiên nhiên.",
     "questions": [
       {
         "id": "tv-g1-b23-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 23: Bạn của gió\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 23: Bạn của gió là gì?",
+        "questionText": "Theo bài thơ, những sự vật nào là bạn của gió?",
+        "audioText": "Theo bài thơ, những sự vật nào là bạn của gió?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Cánh buồm và cánh diều biếc trời mây 🪁⛵",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Hòn đá dưới đất",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Chiếc ô tô",
+            "isCorrect": false
           }
         ]
       }
@@ -1261,49 +1238,52 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b24": {
     "passage": {
-      "title": "Bài 24: Rửa tay trước khi ăn",
+      "title": "Bài 4: Rửa tay trước khi ăn",
       "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "Bàn tay xinh làm bao việc tốt. Trước khi ăn cơm và sau khi đi vệ sinh, bé nhớ rửa tay bằng xà phòng dưới vòi nước sạch để cơ thể luôn khỏe mạnh.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Hằng ngày, đôi bàn tay của chúng ta làm bao nhiêu việc: cầm bút viết bài, nhặt đồ chơi, quét dọn nhà cửa. Vì thế, bàn tay có thể dính rất nhiều bụi bẩn và vi khuẩn mà mắt thường không nhìn thấy được.",
+        "Trước khi ăn cơm và sau khi đi vệ sinh, em cần rửa tay thật sạch bằng xà phòng dưới vòi nước chảy. Rửa sạch lòng bàn tay, mu bàn tay và từng kẽ ngón tay.",
+        "Giữ đôi bàn tay sạch sẽ là thói quen tốt giúp em phòng tránh bệnh tật và bảo vệ sức khỏe mỗi ngày."
       ],
-      "audioNarration": "Bài 24: Rửa tay trước khi ăn. Bàn tay xinh làm bao việc tốt. Trước khi ăn cơm và sau khi đi vệ sinh, bé nhớ rửa tay bằng xà phòng dưới vòi nước sạch để cơ thể luôn khỏe mạnh.",
+      "audioNarration": "Bài 4: Rửa tay trước khi ăn. Hằng ngày, đôi bàn tay của chúng ta làm bao nhiêu việc: cầm bút viết bài, nhặt đồ chơi, quét dọn nhà cửa. Vì thế, bàn tay có thể dính rất nhiều bụi bẩn và vi khuẩn mà mắt thường không nhìn thấy được. Trước khi ăn cơm và sau khi đi vệ sinh, em cần rửa tay thật sạch bằng xà phòng dưới vòi nước chảy. Rửa sạch lòng bàn tay, mu bàn tay và từng kẽ ngón tay. Giữ đôi bàn tay sạch sẽ là thói quen tốt giúp em phòng tránh bệnh tật và bảo vệ sức khỏe mỗi ngày.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "vi khuẩn",
+          "meaning": "Sinh vật cực nhỏ gây bệnh, chỉ nhìn thấy qua kính hiển vi."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "vệ sinh",
+          "meaning": "Giữ gìn sạch sẽ để bảo vệ sức khỏe phòng tránh bệnh."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 22, 23 — Bài 24: Rửa tay trước khi ăn",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 22, 23 — Bài 4: Rửa tay trước khi ăn (Chủ điểm 3: Giữ gìn vệ sinh thân thể)",
+    "pedagogicalObjective": "Rèn luyện thói quen giữ gìn vệ sinh thân thể, bảo vệ sức khỏe cho học sinh lớp 1.",
     "questions": [
       {
         "id": "tv-g1-b24-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 24: Rửa tay trước khi ăn\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 24: Rửa tay trước khi ăn là gì?",
+        "questionText": "Em cần rửa tay bằng xà phòng vào những lúc nào?",
+        "audioText": "Em cần rửa tay bằng xà phòng vào những lúc nào?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Trước khi ăn cơm và sau khi đi vệ sinh 🧼",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Chỉ khi nào tay dính mực",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Không cần rửa tay",
+            "isCorrect": false
           }
         ]
       }
@@ -1311,49 +1291,52 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b25": {
     "passage": {
-      "title": "Bài 25: Lời chào",
+      "title": "Bài 5: Lời chào",
       "author": "Phạm Cúc",
-      "genre": "prose",
+      "genre": "poem",
       "content": [
-        "Đi về con chào mẹ, đến lớp con chào cô. Lời chào như đóa hoa thơm nở trên môi xinh, mang lại niềm vui và tình yêu thương cho mọi người xung quanh.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Đi về con chào mẹ\nRa vườn chào cụ ông\nĐến trường chào cô giáo\nLễ phép nở trong lòng.",
+        "Lời chào như đóa hoa\nNở trên môi em nhỏ\nLời chào mang niềm vui\nCho mọi người yêu quý.",
+        "Ai cũng khen em ngoan\nBiết vâng lời, lễ phép\nLời chào theo em mãi\nSuốt những tháng ngày vui."
       ],
-      "audioNarration": "Bài 25: Lời chào. Đi về con chào mẹ, đến lớp con chào cô. Lời chào như đóa hoa thơm nở trên môi xinh, mang lại niềm vui và tình yêu thương cho mọi người xung quanh.",
+      "audioNarration": "Bài 5: Lời chào. Đi về con chào mẹ\nRa vườn chào cụ ông\nĐến trường chào cô giáo\nLễ phép nở trong lòng. Lời chào như đóa hoa\nNở trên môi em nhỏ\nLời chào mang niềm vui\nCho mọi người yêu quý. Ai cũng khen em ngoan\nBiết vâng lời, lễ phép\nLời chào theo em mãi\nSuốt những tháng ngày vui.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "lễ phép",
+          "meaning": "Có thái độ và lời nói kính trọng đúng mực với người lớn."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "đóa hoa",
+          "meaning": "Bông hoa tươi đẹp, thơm ngát."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 26, 27 — Bài 25: Lời chào",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 26, 27 — Bài 5: Lời chào (Chủ điểm 4: Lễ phép và văn minh)",
+    "pedagogicalObjective": "Học thuộc lòng bài thơ, hình thành thói quen chào hỏi lễ phép mọi lúc mọi nơi.",
     "questions": [
       {
         "id": "tv-g1-b25-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 25: Lời chào\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 25: Lời chào là gì?",
+        "questionText": "Trong bài thơ của tác giả Phạm Cúc, lời chào được ví như gì?",
+        "audioText": "Trong bài thơ của tác giả Phạm Cúc, lời chào được ví như gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Lời chào như đóa hoa nở trên môi em nhỏ 🌸",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Như hòn đá",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Như ngọn gió",
+            "isCorrect": false
           }
         ]
       }
@@ -1361,49 +1344,51 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b26": {
     "passage": {
-      "title": "Bài 26: Mẹ và cô",
+      "title": "Bài 6: Mẹ và cô",
       "author": "Trần Quốc Toàn",
-      "genre": "prose",
+      "genre": "poem",
       "content": [
-        "Buổi sáng bé chào mẹ, chạy đến ôm cổ cô. Buổi chiều bé chào cô, rồi sà vào lòng mẹ. Mặt trời mọc rồi lặn trên đôi chân lon ton, hai chân trời của con là mẹ và cô giáo.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Buổi sáng bé chào mẹ\nChạy đến ôm cổ cô\nBuổi chiều bé chào cô\nRồi sà vào lòng mẹ.",
+        "Mặt trời mọc rồi lặn\nTrên đôi chân lon ton\nHai chân trời của con\nLà mẹ và cô giáo."
       ],
-      "audioNarration": "Bài 26: Mẹ và cô. Buổi sáng bé chào mẹ, chạy đến ôm cổ cô. Buổi chiều bé chào cô, rồi sà vào lòng mẹ. Mặt trời mọc rồi lặn trên đôi chân lon ton, hai chân trời của con là mẹ và cô giáo.",
+      "audioNarration": "Bài 6: Mẹ và cô. Buổi sáng bé chào mẹ\nChạy đến ôm cổ cô\nBuổi chiều bé chào cô\nRồi sà vào lòng mẹ. Mặt trời mọc rồi lặn\nTrên đôi chân lon ton\nHai chân trời của con\nLà mẹ và cô giáo.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "sà vào",
+          "meaning": "Chạy thật nhanh và ngả mình vào vòng tay yêu thương."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "lon ton",
+          "meaning": "Dáng chạy bước ngắn, nhanh nhẹn của trẻ nhỏ."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 34, 35 — Bài 26: Mẹ và cô",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 34, 35 — Bài 6: Mẹ và cô (Chủ điểm 5: Mái trường mến yêu)",
+    "pedagogicalObjective": "Học thuộc lòng bài thơ 4 chữ, cảm nhận tình yêu thương của mẹ và cô giáo.",
     "questions": [
       {
         "id": "tv-g1-b26-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 26: Mẹ và cô\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 26: Mẹ và cô là gì?",
+        "questionText": "Theo bài thơ, \"hai chân trời của con\" là ai?",
+        "audioText": "Theo bài thơ, \"hai chân trời của con\" là ai?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Là Mẹ và Cô giáo 👩‍👧",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Là Búp bê và Gấu bông",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Là Bạn bè",
+            "isCorrect": false
           }
         ]
       }
@@ -1411,49 +1396,52 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b27": {
     "passage": {
-      "title": "Bài 27: Cây bàng trường em",
+      "title": "Bài 7: Cây bàng trường em",
       "author": "Xuân Quỳnh",
       "genre": "prose",
       "content": [
-        "Cây bàng sừng sững giữa sân trường. Mùa xuân đâm chồi biếc nõn nà, mùa hè xòe tán như chiếc ô khổng lồ che mát cho chúng em vui chơi dưới bóng râm.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Cây bàng sừng sững giữa sân trường em. Mùa xuân, bàng đâm chồi biếc, những búp non mơn mởn như những ngọn nến xanh lung linh.",
+        "Mùa hè, tán bàng xòe rộng như chiếc ô khổng lồ che bóng mát cho chúng em vui chơi trong giờ ra chơi.",
+        "Mùa thu, lá bàng ngả sang màu đỏ ối. Mùa đông, cành bàng khẳng khiu đón gió lạnh, tích tụ nhựa sống chờ mùa xuân tới."
       ],
-      "audioNarration": "Bài 27: Cây bàng trường em. Cây bàng sừng sững giữa sân trường. Mùa xuân đâm chồi biếc nõn nà, mùa hè xòe tán như chiếc ô khổng lồ che mát cho chúng em vui chơi dưới bóng râm.",
+      "audioNarration": "Bài 7: Cây bàng trường em. Cây bàng sừng sững giữa sân trường em. Mùa xuân, bàng đâm chồi biếc, những búp non mơn mởn như những ngọn nến xanh lung linh. Mùa hè, tán bàng xòe rộng như chiếc ô khổng lồ che bóng mát cho chúng em vui chơi trong giờ ra chơi. Mùa thu, lá bàng ngả sang màu đỏ ối. Mùa đông, cành bàng khẳng khiu đón gió lạnh, tích tụ nhựa sống chờ mùa xuân tới.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "mơn mởn",
+          "meaning": "Tươi non, mượt mà và căng tràn sức sống."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "khẳng khiu",
+          "meaning": "Gầy gò, trơ cành lá nhưng cứng cáp."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 42, 43 — Bài 27: Cây bàng trường em",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 42, 43 — Bài 7: Cây bàng trường em (Chủ điểm 5: Mái trường mến yêu)",
+    "pedagogicalObjective": "Đọc hiểu đoạn văn miêu tả vẻ đẹp của cây bàng bốn mùa trong sân trường.",
     "questions": [
       {
         "id": "tv-g1-b27-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 27: Cây bàng trường em\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 27: Cây bàng trường em là gì?",
+        "questionText": "Vào mùa hè, tán bàng được nhà thơ Xuân Quỳnh so sánh với hình ảnh gì?",
+        "audioText": "Vào mùa hè, tán bàng được nhà thơ Xuân Quỳnh so sánh với hình ảnh gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Chiếc ô khổng lồ che mát sân trường 🌳",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Tòa lâu đài",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Ngọn đuốc",
+            "isCorrect": false
           }
         ]
       }
@@ -1461,49 +1449,53 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b28": {
     "passage": {
-      "title": "Bài 28: Cậu bé thông minh",
+      "title": "Bài 8: Cậu bé thông minh",
       "author": "Truyện cổ tích Việt Nam",
-      "genre": "prose",
+      "genre": "story",
       "content": [
-        "Cậu bé làng nghèo nhanh trí giải câu đố oái oăm của nhà vua, tìm ra manh mối cứu cả làng thoát khỏi cơn nguy khốn và được nhà vua trọng thưởng.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Ngày xưa, có một ông vua muốn tìm người tài giúp nước bèn hạ lệnh cho mỗi làng trong vùng phải nộp một con gà trống biết đẻ trứng.",
+        "Dân làng lo sợ không biết làm sao, duy chỉ có một cậu bé xin cha vào kinh đô gặp vua. Cậu bé đến trước cung điện khóc ầm ĩ. Vua hỏi: \"Tại sao con khóc?\".",
+        "Cậu bé thưa: \"Mẹ con mới sinh em bé, bố con bắt con đi tìm sữa cho em bú nhưng bố không chịu đẻ!\". Vua bật cười: \"Bố là đàn ông sao đẻ được!\". Cậu bé nhanh trí đáp: \"Vậy sao vua lại bắt làng con nộp gà trống đẻ trứng ạ?\".",
+        "Vua biết đã tìm được người thông minh lỗi lạc, bèn ban thưởng cho cậu bé và miễn thuế cho cả làng."
       ],
-      "audioNarration": "Bài 28: Cậu bé thông minh. Cậu bé làng nghèo nhanh trí giải câu đố oái oăm của nhà vua, tìm ra manh mối cứu cả làng thoát khỏi cơn nguy khốn và được nhà vua trọng thưởng.",
+      "audioNarration": "Bài 8: Cậu bé thông minh. Ngày xưa, có một ông vua muốn tìm người tài giúp nước bèn hạ lệnh cho mỗi làng trong vùng phải nộp một con gà trống biết đẻ trứng. Dân làng lo sợ không biết làm sao, duy chỉ có một cậu bé xin cha vào kinh đô gặp vua. Cậu bé đến trước cung điện khóc ầm ĩ. Vua hỏi: \"Tại sao con khóc?\". Cậu bé thưa: \"Mẹ con mới sinh em bé, bố con bắt con đi tìm sữa cho em bú nhưng bố không chịu đẻ!\". Vua bật cười: \"Bố là đàn ông sao đẻ được!\". Cậu bé nhanh trí đáp: \"Vậy sao vua lại bắt làng con nộp gà trống đẻ trứng ạ?\". Vua biết đã tìm được người thông minh lỗi lạc, bèn ban thưởng cho cậu bé và miễn thuế cho cả làng.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "hạ lệnh",
+          "meaning": "Đưa ra mệnh lệnh chính thức từ vua chúa."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "lỗi lạc",
+          "meaning": "Tài giỏi xuất chúng hơn người."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 50, 51 — Bài 28: Cậu bé thông minh",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 50, 51 — Bài 8: Cậu bé thông minh (Chủ điểm 6: Truyện cổ tích)",
+    "pedagogicalObjective": "Đọc hiểu truyện cổ tích, ca ngợi sự nhanh trí, bình tĩnh và thông minh.",
     "questions": [
       {
         "id": "tv-g1-b28-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 28: Cậu bé thông minh\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 28: Cậu bé thông minh là gì?",
+        "questionText": "Cậu bé đã dùng cách gì để giúp dân làng không bị phạt?",
+        "audioText": "Cậu bé đã dùng cách gì để giúp dân làng không bị phạt?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Đưa ra câu chuyện bố không biết đẻ để vua tự nhận ra điều phi lý 💡",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Mua gà mái đền vua",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Bỏ trốn khỏi làng",
+            "isCorrect": false
           }
         ]
       }
@@ -1511,49 +1503,51 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b29": {
     "passage": {
-      "title": "Bài 29: Quê hương tươi đẹp",
+      "title": "Bài 9: Quê hương tươi đẹp",
       "author": "Đồng dao Việt Nam",
-      "genre": "prose",
+      "genre": "poem",
       "content": [
-        "Quê hương em có con sông xanh uốn lượn quanh làng, có cánh đồng lúa chín vàng trĩu hạt và những rặng dừa xanh soi bóng nghiêng nghiêng.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Quê hương em biết bao tươi đẹp\nĐồng lúa xanh dạt dào sóng lượn\nCon sông dài uốn quanh xóm nhỏ\nThuyền xuôi ngược trong ánh bình minh.",
+        "Nghe tiếng sáo diều vi vút bay\nNghe câu hát ru ngọt ngào của mẹ\nEm yêu tha thiết đất nước mình\nYêu từ mái nhà, rặng tre xanh biếc."
       ],
-      "audioNarration": "Bài 29: Quê hương tươi đẹp. Quê hương em có con sông xanh uốn lượn quanh làng, có cánh đồng lúa chín vàng trĩu hạt và những rặng dừa xanh soi bóng nghiêng nghiêng.",
+      "audioNarration": "Bài 9: Quê hương tươi đẹp. Quê hương em biết bao tươi đẹp\nĐồng lúa xanh dạt dào sóng lượn\nCon sông dài uốn quanh xóm nhỏ\nThuyền xuôi ngược trong ánh bình minh. Nghe tiếng sáo diều vi vút bay\nNghe câu hát ru ngọt ngào của mẹ\nEm yêu tha thiết đất nước mình\nYêu từ mái nhà, rặng tre xanh biếc.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "dạt dào",
+          "meaning": "Nhiều và tràn đầy, chuyển động nhịp nhàng như sóng biển."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "vi vút",
+          "meaning": "Âm thanh tiếng sáo trong trẻo, vang xa trên tầng không."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 62, 63 — Bài 29: Quê hương tươi đẹp",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 62, 63 — Bài 9: Quê hương tươi đẹp (Chủ điểm 7: Quê hương đất nước)",
+    "pedagogicalObjective": "Đọc diễn cảm bài đồng dao, bồi dưỡng tình yêu quê hương đất nước thiết tha.",
     "questions": [
       {
         "id": "tv-g1-b29-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 29: Quê hương tươi đẹp\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 29: Quê hương tươi đẹp là gì?",
+        "questionText": "Bài đồng dao miêu tả những cảnh đẹp nào của quê hương?",
+        "audioText": "Bài đồng dao miêu tả những cảnh đẹp nào của quê hương?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Đồng lúa xanh, con sông dài uốn quanh và tiếng sáo diều 🌾",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Thành phố cao ốc",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Khu vui chơi",
+            "isCorrect": false
           }
         ]
       }
@@ -1561,49 +1555,52 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b30": {
     "passage": {
-      "title": "Bài 30: Bác Hồ kính yêu",
+      "title": "Bài 10: Bác Hồ kính yêu",
       "author": "Bảo Định Giang",
-      "genre": "prose",
+      "genre": "poem",
       "content": [
-        "Tháp Mười đẹp nhất bông sen, Việt Nam đẹp nhất có tên Bác Hồ. Bác Hồ luôn dành trọn tình thương bao la cho các cháu thiếu niên nhi đồng cả nước.",
-        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
+        "Tháp Mười đẹp nhất bông sen\nViệt Nam đẹp nhất có tên Bác Hồ.\nBác Hồ là vị lãnh tụ muôn vàn kính yêu của dân tộc Việt Nam. Cả cuộc đời Bác luôn dành trọn tình yêu thương bao la cho các cháu thiếu niên nhi đồng.",
+        "Bác dạy thiếu nhi năm điều quý báu: Yêu Tổ quốc, yêu đồng bào; Học tập tốt, lao động tốt; Đoàn kết tốt, kỷ luật tốt; Giữ gìn vệ sinh thật tốt; Khiêm tốn, thật thà, dũng cảm.",
+        "Thiếu nhi Việt Nam luôn khắc ghi lời Bác dạy, chăm ngoan học giỏi để xứng đáng là cháu ngoan Bác Hồ."
       ],
-      "audioNarration": "Bài 30: Bác Hồ kính yêu. Tháp Mười đẹp nhất bông sen, Việt Nam đẹp nhất có tên Bác Hồ. Bác Hồ luôn dành trọn tình thương bao la cho các cháu thiếu niên nhi đồng cả nước.",
+      "audioNarration": "Bài 10: Bác Hồ kính yêu. Tháp Mười đẹp nhất bông sen\nViệt Nam đẹp nhất có tên Bác Hồ.\nBác Hồ là vị lãnh tụ muôn vàn kính yêu của dân tộc Việt Nam. Cả cuộc đời Bác luôn dành trọn tình yêu thương bao la cho các cháu thiếu niên nhi đồng. Bác dạy thiếu nhi năm điều quý báu: Yêu Tổ quốc, yêu đồng bào; Học tập tốt, lao động tốt; Đoàn kết tốt, kỷ luật tốt; Giữ gìn vệ sinh thật tốt; Khiêm tốn, thật thà, dũng cảm. Thiếu nhi Việt Nam luôn khắc ghi lời Bác dạy, chăm ngoan học giỏi để xứng đáng là cháu ngoan Bác Hồ.",
       "vocabularyNotes": [
         {
-          "word": "Chăm ngoan",
-          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
+          "word": "lãnh tụ",
+          "meaning": "Người đứng đầu tài ba dẫn dắt đất nước và dân tộc."
         },
         {
-          "word": "Tươi vui",
-          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
+          "word": "khắc ghi",
+          "meaning": "Ghi nhớ sâu sắc trong tim không bao giờ quên."
         }
       ]
     },
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 74, 75 — Bài 30: Bác Hồ kính yêu",
-    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
+    "sourceDetail": "Trang 74, 75 — Bài 10: Bác Hồ kính yêu (Chủ điểm 7: Quê hương đất nước)",
+    "pedagogicalObjective": "Hiểu tình yêu thương của Bác Hồ với thiếu nhi, học tập và rèn luyện theo 5 điều Bác dạy.",
     "questions": [
       {
         "id": "tv-g1-b30-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 30: Bác Hồ kính yêu\" là gì?",
-        "audioText": "Ý nghĩa của bài đọc Bài 30: Bác Hồ kính yêu là gì?",
+        "questionText": "Câu thơ nổi tiếng nào ca ngợi Bác Hồ trong bài đọc?",
+        "audioText": "Câu thơ nổi tiếng nào ca ngợi Bác Hồ trong bài đọc?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
+            "label": "Tháp Mười đẹp nhất bông sen / Việt Nam đẹp nhất có tên Bác Hồ 🌺",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Không có ý nghĩa gì"
+            "label": "Công cha như núi Thái Sơn",
+            "isCorrect": false
           },
           {
             "id": "c",
-            "label": "Xem tivi và chơi game"
+            "label": "Bầu ơi thương lấy bí cùng",
+            "isCorrect": false
           }
         ]
       }
@@ -3123,10 +3120,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Chiều hôm nay, bé cùng mẹ nắn nót viết từng chiếc nhãn vở mới tinh cho năm học mới. Nhìn chiếc nhãn vở xinh xắn mang tên mình, bé cảm thấy mình đã thực sự trưởng thành và tự tin bước vào lớp 3.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Chiều hôm nay, bé cùng mẹ nắn nót viết từng chiếc nhãn vở mới tinh cho năm học mới. Nhìn chiếc nhãn vở xinh xắn mang tên mình, bé cảm thấy mình đã thực sự trưởng thành và tự tin bước vào lớp 3."
       ],
-      "audioNarration": "Chiếc nhãn vở đặc biệt. Chiều hôm nay, bé cùng mẹ nắn nót viết từng chiếc nhãn vở mới tinh cho năm học mới. Nhìn chiếc nhãn vở xinh xắn mang tên mình, bé cảm thấy mình đã thực sự trưởng thành và tự tin bước vào lớp 3. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Chiếc nhãn vở đặc biệt. Chiều hôm nay, bé cùng mẹ nắn nót viết từng chiếc nhãn vở mới tinh cho năm học mới. Nhìn chiếc nhãn vở xinh xắn mang tên mình, bé cảm thấy mình đã thực sự trưởng thành và tự tin bước vào lớp 3.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3171,10 +3167,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Mỗi bạn nhỏ trong lớp đều ấp ủ một ước mơ cao đẹp: bạn ước làm bác sĩ chữa bệnh cho muôn người, bạn ước làm phi công lái máy bay lượn trên trời xanh, bạn ước làm cô giáo dạy chữ cho trẻ em vùng cao.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Mỗi bạn nhỏ trong lớp đều ấp ủ một ước mơ cao đẹp: bạn ước làm bác sĩ chữa bệnh cho muôn người, bạn ước làm phi công lái máy bay lượn trên trời xanh, bạn ước làm cô giáo dạy chữ cho trẻ em vùng cao."
       ],
-      "audioNarration": "Lắng nghe những ước mơ. Mỗi bạn nhỏ trong lớp đều ấp ủ một ước mơ cao đẹp: bạn ước làm bác sĩ chữa bệnh cho muôn người, bạn ước làm phi công lái máy bay lượn trên trời xanh, bạn ước làm cô giáo dạy chữ cho trẻ em vùng cao. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Lắng nghe những ước mơ. Mỗi bạn nhỏ trong lớp đều ấp ủ một ước mơ cao đẹp: bạn ước làm bác sĩ chữa bệnh cho muôn người, bạn ước làm phi công lái máy bay lượn trên trời xanh, bạn ước làm cô giáo dạy chữ cho trẻ em vùng cao.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3219,10 +3214,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Con đường làng quen thuộc rộn ràng tiếng chân bước và tiếng cười khúc khích của bầy trẻ nhỏ. Mùa thu mang theo gió heo may lành lạnh và bầu trời trong xanh vời vợi.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Con đường làng quen thuộc rộn ràng tiếng chân bước và tiếng cười khúc khích của bầy trẻ nhỏ. Mùa thu mang theo gió heo may lành lạnh và bầu trời trong xanh vời vợi."
       ],
-      "audioNarration": "Em vui đến trường. Con đường làng quen thuộc rộn ràng tiếng chân bước và tiếng cười khúc khích của bầy trẻ nhỏ. Mùa thu mang theo gió heo may lành lạnh và bầu trời trong xanh vời vợi. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Em vui đến trường. Con đường làng quen thuộc rộn ràng tiếng chân bước và tiếng cười khúc khích của bầy trẻ nhỏ. Mùa thu mang theo gió heo may lành lạnh và bầu trời trong xanh vời vợi.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3267,10 +3261,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Theo SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Cậu bé Lu-i Pa-xtơ ngày đầu đến trường còn bỡ ngỡ nhưng đã sớm bộc lộ đức tính chăm chỉ, kiên trì và niềm say mê khoa học bất tận.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Cậu bé Lu-i Pa-xtơ ngày đầu đến trường còn bỡ ngỡ nhưng đã sớm bộc lộ đức tính chăm chỉ, kiên trì và niềm say mê khoa học bất tận."
       ],
-      "audioNarration": "Cậu học sinh mới. Cậu bé Lu-i Pa-xtơ ngày đầu đến trường còn bỡ ngỡ nhưng đã sớm bộc lộ đức tính chăm chỉ, kiên trì và niềm say mê khoa học bất tận. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Cậu học sinh mới. Cậu bé Lu-i Pa-xtơ ngày đầu đến trường còn bỡ ngỡ nhưng đã sớm bộc lộ đức tính chăm chỉ, kiên trì và niềm say mê khoa học bất tận.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3315,10 +3308,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Mùa hè rực rỡ với tiếng ve ngân vang trong vòm lá phượng vĩ đỏ rực. Những buổi chiều lộng gió thả diều trên triền đê là ký ức tuổi thơ không bao giờ phai.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Mùa hè rực rỡ với tiếng ve ngân vang trong vòm lá phượng vĩ đỏ rực. Những buổi chiều lộng gió thả diều trên triền đê là ký ức tuổi thơ không bao giờ phai."
       ],
-      "audioNarration": "Mùa hè lấp lánh. Mùa hè rực rỡ với tiếng ve ngân vang trong vòm lá phượng vĩ đỏ rực. Những buổi chiều lộng gió thả diều trên triền đê là ký ức tuổi thơ không bao giờ phai. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Mùa hè lấp lánh. Mùa hè rực rỡ với tiếng ve ngân vang trong vòm lá phượng vĩ đỏ rực. Những buổi chiều lộng gió thả diều trên triền đê là ký ức tuổi thơ không bao giờ phai.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3363,10 +3355,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Cánh đồng lúa chín trải rộng như một tấm thảm nhung vàng óng ả. Mùi thơm của rơm rạ mới gặt quyện trong gió chiều mang lại cảm giác bình yên đến lạ kỳ.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Cánh đồng lúa chín trải rộng như một tấm thảm nhung vàng óng ả. Mùi thơm của rơm rạ mới gặt quyện trong gió chiều mang lại cảm giác bình yên đến lạ kỳ."
       ],
-      "audioNarration": "Cánh đồng tuổi thơ. Cánh đồng lúa chín trải rộng như một tấm thảm nhung vàng óng ả. Mùi thơm của rơm rạ mới gặt quyện trong gió chiều mang lại cảm giác bình yên đến lạ kỳ. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Cánh đồng tuổi thơ. Cánh đồng lúa chín trải rộng như một tấm thảm nhung vàng óng ả. Mùi thơm của rơm rạ mới gặt quyện trong gió chiều mang lại cảm giác bình yên đến lạ kỳ.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3411,10 +3402,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Con đường đến trường uốn lượn bên sườn đồi phủ kín hoa dại thơm ngát. Mỗi bước chân em đi đều rộn rã tiếng chim ca chào đón ngày mới.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Con đường đến trường uốn lượn bên sườn đồi phủ kín hoa dại thơm ngát. Mỗi bước chân em đi đều rộn rã tiếng chim ca chào đón ngày mới."
       ],
-      "audioNarration": "Con đường đến trường. Con đường đến trường uốn lượn bên sườn đồi phủ kín hoa dại thơm ngát. Mỗi bước chân em đi đều rộn rã tiếng chim ca chào đón ngày mới. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Con đường đến trường. Con đường đến trường uốn lượn bên sườn đồi phủ kín hoa dại thơm ngát. Mỗi bước chân em đi đều rộn rã tiếng chim ca chào đón ngày mới.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3459,10 +3449,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Cậu bé Ét-môn-đô đã tìm ra cách giải bài toán bằng những vần thơ ngộ nghĩnh, làm thầy giáo và cả lớp vô cùng bất ngờ và thích thú.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Cậu bé Ét-môn-đô đã tìm ra cách giải bài toán bằng những vần thơ ngộ nghĩnh, làm thầy giáo và cả lớp vô cùng bất ngờ và thích thú."
       ],
-      "audioNarration": "Lời giải toán đặc biệt. Cậu bé Ét-môn-đô đã tìm ra cách giải bài toán bằng những vần thơ ngộ nghĩnh, làm thầy giáo và cả lớp vô cùng bất ngờ và thích thú. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Lời giải toán đặc biệt. Cậu bé Ét-môn-đô đã tìm ra cách giải bài toán bằng những vần thơ ngộ nghĩnh, làm thầy giáo và cả lớp vô cùng bất ngờ và thích thú.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3507,10 +3496,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Định Hải",
       "genre": "prose",
       "content": [
-        "Bàn tay cô giáo khéo léo gấp những tờ giấy màu thành chiếc thuyền buồm xinh xắn, cánh chim hải âu chao liệng và ông mặt trời rực rỡ giữa biển khơi.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Bàn tay cô giáo khéo léo gấp những tờ giấy màu thành chiếc thuyền buồm xinh xắn, cánh chim hải âu chao liệng và ông mặt trời rực rỡ giữa biển khơi."
       ],
-      "audioNarration": "Bàn tay cô giáo. Bàn tay cô giáo khéo léo gấp những tờ giấy màu thành chiếc thuyền buồm xinh xắn, cánh chim hải âu chao liệng và ông mặt trời rực rỡ giữa biển khơi. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Bàn tay cô giáo. Bàn tay cô giáo khéo léo gấp những tờ giấy màu thành chiếc thuyền buồm xinh xắn, cánh chim hải âu chao liệng và ông mặt trời rực rỡ giữa biển khơi.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3555,10 +3543,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Nhà rông cao vút sừng sững giữa buôn làng như lưỡi rìu khổng lồ vươn lên trời xanh. Đây là nơi hội tụ linh thiêng của cộng đồng các dân tộc Tây Nguyên anh em.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Nhà rông cao vút sừng sững giữa buôn làng như lưỡi rìu khổng lồ vươn lên trời xanh. Đây là nơi hội tụ linh thiêng của cộng đồng các dân tộc Tây Nguyên anh em."
       ],
-      "audioNarration": "Nhà rông ở Tây Nguyên. Nhà rông cao vút sừng sững giữa buôn làng như lưỡi rìu khổng lồ vươn lên trời xanh. Đây là nơi hội tụ linh thiêng của cộng đồng các dân tộc Tây Nguyên anh em. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Nhà rông ở Tây Nguyên. Nhà rông cao vút sừng sững giữa buôn làng như lưỡi rìu khổng lồ vươn lên trời xanh. Đây là nơi hội tụ linh thiêng của cộng đồng các dân tộc Tây Nguyên anh em.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3603,10 +3590,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Khu vườn buổi sớm rộn rã bản hòa ca của muôn loài chim: chim chích chòe lảnh lót, chim khuyên ríu rít, chim cu gáy gù gù êm tai.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Khu vườn buổi sớm rộn rã bản hòa ca của muôn loài chim: chim chích chòe lảnh lót, chim khuyên ríu rít, chim cu gáy gù gù êm tai."
       ],
-      "audioNarration": "Tiếng chim hót trong vườn. Khu vườn buổi sớm rộn rã bản hòa ca của muôn loài chim: chim chích chòe lảnh lót, chim khuyên ríu rít, chim cu gáy gù gù êm tai. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Tiếng chim hót trong vườn. Khu vườn buổi sớm rộn rã bản hòa ca của muôn loài chim: chim chích chòe lảnh lót, chim khuyên ríu rít, chim cu gáy gù gù êm tai.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3651,10 +3637,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Thư viện trường học là một ngôi nhà tri thức ấm cúng với hàng ngàn cuốn sách bổ ích được xếp ngay ngắn trên các kệ gỗ xinh xắn.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Thư viện trường học là một ngôi nhà tri thức ấm cúng với hàng ngàn cuốn sách bổ ích được xếp ngay ngắn trên các kệ gỗ xinh xắn."
       ],
-      "audioNarration": "Thư viện trường em. Thư viện trường học là một ngôi nhà tri thức ấm cúng với hàng ngàn cuốn sách bổ ích được xếp ngay ngắn trên các kệ gỗ xinh xắn. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Thư viện trường em. Thư viện trường học là một ngôi nhà tri thức ấm cúng với hàng ngàn cuốn sách bổ ích được xếp ngay ngắn trên các kệ gỗ xinh xắn.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3699,10 +3684,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Bầu trời mùa thu trong vắt và cao vút. Những đám mây trắng xốp trôi lững lờ như những chiếc thuyền buồm êm ả lướt trên mặt nước trong xanh.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Bầu trời mùa thu trong vắt và cao vút. Những đám mây trắng xốp trôi lững lờ như những chiếc thuyền buồm êm ả lướt trên mặt nước trong xanh."
       ],
-      "audioNarration": "Bầu trời mùa thu. Bầu trời mùa thu trong vắt và cao vút. Những đám mây trắng xốp trôi lững lờ như những chiếc thuyền buồm êm ả lướt trên mặt nước trong xanh. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Bầu trời mùa thu. Bầu trời mùa thu trong vắt và cao vút. Những đám mây trắng xốp trôi lững lờ như những chiếc thuyền buồm êm ả lướt trên mặt nước trong xanh.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3747,10 +3731,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Thạch Quỳ",
       "genre": "prose",
       "content": [
-        "Bà nằm ốm trên giường, bé ngồi bên cạnh khẽ khàng vẫy chiếc quạt nan ru bà vào giấc ngủ êm đềm giữa buổi trưa hè thơm ngát hương cam.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Bà nằm ốm trên giường, bé ngồi bên cạnh khẽ khàng vẫy chiếc quạt nan ru bà vào giấc ngủ êm đềm giữa buổi trưa hè thơm ngát hương cam."
       ],
-      "audioNarration": "Quạt cho bà ngủ. Bà nằm ốm trên giường, bé ngồi bên cạnh khẽ khàng vẫy chiếc quạt nan ru bà vào giấc ngủ êm đềm giữa buổi trưa hè thơm ngát hương cam. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Quạt cho bà ngủ. Bà nằm ốm trên giường, bé ngồi bên cạnh khẽ khàng vẫy chiếc quạt nan ru bà vào giấc ngủ êm đềm giữa buổi trưa hè thơm ngát hương cam.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3795,10 +3778,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Truyện cổ tích",
       "genre": "prose",
       "content": [
-        "Gặp năm hạn hán dữ dội, chú Cóc dũng cảm dẫn đầu muôn thú lên thiên đình đánh trống kiện Trời đòi mưa, cứu sống muôn loài thoát khỏi cơn đại hạn.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Gặp năm hạn hán dữ dội, chú Cóc dũng cảm dẫn đầu muôn thú lên thiên đình đánh trống kiện Trời đòi mưa, cứu sống muôn loài thoát khỏi cơn đại hạn."
       ],
-      "audioNarration": "Cóc kiện Trời. Gặp năm hạn hán dữ dội, chú Cóc dũng cảm dẫn đầu muôn thú lên thiên đình đánh trống kiện Trời đòi mưa, cứu sống muôn loài thoát khỏi cơn đại hạn. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Cóc kiện Trời. Gặp năm hạn hán dữ dội, chú Cóc dũng cảm dẫn đầu muôn thú lên thiên đình đánh trống kiện Trời đòi mưa, cứu sống muôn loài thoát khỏi cơn đại hạn.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3843,10 +3825,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Truyện lịch sử",
       "genre": "prose",
       "content": [
-        "Trưng Trắc và Trưng Nhị cưỡi voi xung trận, phất cờ khởi nghĩa quét sạch quân xâm lược, giành lại giang sơn thái bình cho muôn dân đất Việt.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Trưng Trắc và Trưng Nhị cưỡi voi xung trận, phất cờ khởi nghĩa quét sạch quân xâm lược, giành lại giang sơn thái bình cho muôn dân đất Việt."
       ],
-      "audioNarration": "Hai Bà Trưng. Trưng Trắc và Trưng Nhị cưỡi voi xung trận, phất cờ khởi nghĩa quét sạch quân xâm lược, giành lại giang sơn thái bình cho muôn dân đất Việt. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Hai Bà Trưng. Trưng Trắc và Trưng Nhị cưỡi voi xung trận, phất cờ khởi nghĩa quét sạch quân xâm lược, giành lại giang sơn thái bình cho muôn dân đất Việt.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3891,10 +3872,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Đất nước Việt Nam trải dài từ ải Nam Quan đến mũi Cà Mau với ngàn năm văn hiến, non sông gấm vóc rạng ngời truyền thống anh hùng.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Đất nước Việt Nam trải dài từ ải Nam Quan đến mũi Cà Mau với ngàn năm văn hiến, non sông gấm vóc rạng ngời truyền thống anh hùng."
       ],
-      "audioNarration": "Đất nước tươi đẹp. Đất nước Việt Nam trải dài từ ải Nam Quan đến mũi Cà Mau với ngàn năm văn hiến, non sông gấm vóc rạng ngời truyền thống anh hùng. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Đất nước tươi đẹp. Đất nước Việt Nam trải dài từ ải Nam Quan đến mũi Cà Mau với ngàn năm văn hiến, non sông gấm vóc rạng ngời truyền thống anh hùng.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3939,10 +3919,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Em viết thư gửi các chú bộ đội hải quân đang ngày đêm cầm chắc tay súng canh giữ vùng trời vùng biển thiêng liêng nơi hải đảo xa xôi của Tổ quốc.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Em viết thư gửi các chú bộ đội hải quân đang ngày đêm cầm chắc tay súng canh giữ vùng trời vùng biển thiêng liêng nơi hải đảo xa xôi của Tổ quốc."
       ],
-      "audioNarration": "Bức thư gửi chú hải quân. Em viết thư gửi các chú bộ đội hải quân đang ngày đêm cầm chắc tay súng canh giữ vùng trời vùng biển thiêng liêng nơi hải đảo xa xôi của Tổ quốc. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Bức thư gửi chú hải quân. Em viết thư gửi các chú bộ đội hải quân đang ngày đêm cầm chắc tay súng canh giữ vùng trời vùng biển thiêng liêng nơi hải đảo xa xôi của Tổ quốc.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -3987,10 +3966,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Giữa trùng khơi sóng gió, hình ảnh người chiến sĩ hải quân với nụ cười lạc quan, kiên cường luôn là điểm tựa vững chắc cho biển đảo quê hương.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Giữa trùng khơi sóng gió, hình ảnh người chiến sĩ hải quân với nụ cười lạc quan, kiên cường luôn là điểm tựa vững chắc cho biển đảo quê hương."
       ],
-      "audioNarration": "Chú hải quân canh giữ đảo xa. Giữa trùng khơi sóng gió, hình ảnh người chiến sĩ hải quân với nụ cười lạc quan, kiên cường luôn là điểm tựa vững chắc cho biển đảo quê hương. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Chú hải quân canh giữ đảo xa. Giữa trùng khơi sóng gió, hình ảnh người chiến sĩ hải quân với nụ cười lạc quan, kiên cường luôn là điểm tựa vững chắc cho biển đảo quê hương.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -4035,10 +4013,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Bác sĩ A-lếch-xăng Y-éc-xanh đã dành trọn cả cuộc đời gắn bó với mảnh đất Nha Trang hiền hòa để nghiên cứu y học, chữa bệnh cứu sống đồng bào nghèo.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Bác sĩ A-lếch-xăng Y-éc-xanh đã dành trọn cả cuộc đời gắn bó với mảnh đất Nha Trang hiền hòa để nghiên cứu y học, chữa bệnh cứu sống đồng bào nghèo."
       ],
-      "audioNarration": "Bác sĩ Y-éc-xanh. Bác sĩ A-lếch-xăng Y-éc-xanh đã dành trọn cả cuộc đời gắn bó với mảnh đất Nha Trang hiền hòa để nghiên cứu y học, chữa bệnh cứu sống đồng bào nghèo. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Bác sĩ Y-éc-xanh. Bác sĩ A-lếch-xăng Y-éc-xanh đã dành trọn cả cuộc đời gắn bó với mảnh đất Nha Trang hiền hòa để nghiên cứu y học, chữa bệnh cứu sống đồng bào nghèo.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -4083,10 +4060,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Bác sĩ Đặng Văn Ngữ từ bỏ cuộc sống tiện nghi nơi xứ người, vượt ngàn dặm về chiến khu kháng chiến để nghiên cứu thuốc cứu chữa thương bệnh binh.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Bác sĩ Đặng Văn Ngữ từ bỏ cuộc sống tiện nghi nơi xứ người, vượt ngàn dặm về chiến khu kháng chiến để nghiên cứu thuốc cứu chữa thương bệnh binh."
       ],
-      "audioNarration": "Người trí thức yêu nước. Bác sĩ Đặng Văn Ngữ từ bỏ cuộc sống tiện nghi nơi xứ người, vượt ngàn dặm về chiến khu kháng chiến để nghiên cứu thuốc cứu chữa thương bệnh binh. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Người trí thức yêu nước. Bác sĩ Đặng Văn Ngữ từ bỏ cuộc sống tiện nghi nơi xứ người, vượt ngàn dặm về chiến khu kháng chiến để nghiên cứu thuốc cứu chữa thương bệnh binh.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -4131,10 +4107,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Trái Đất là ngôi nhà chung tươi đẹp của muôn loài. Chúng ta hãy cùng chung tay bảo vệ màu xanh của rừng cây, nguồn nước và bầu khí quyển trong lành.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Trái Đất là ngôi nhà chung tươi đẹp của muôn loài. Chúng ta hãy cùng chung tay bảo vệ màu xanh của rừng cây, nguồn nước và bầu khí quyển trong lành."
       ],
-      "audioNarration": "Trái Đất xanh của chúng mình. Trái Đất là ngôi nhà chung tươi đẹp của muôn loài. Chúng ta hãy cùng chung tay bảo vệ màu xanh của rừng cây, nguồn nước và bầu khí quyển trong lành. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Trái Đất xanh của chúng mình. Trái Đất là ngôi nhà chung tươi đẹp của muôn loài. Chúng ta hãy cùng chung tay bảo vệ màu xanh của rừng cây, nguồn nước và bầu khí quyển trong lành.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -4179,10 +4154,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Ánh nắng ban mai chan hòa khắp sân trường. Các bạn nhỏ cùng nhau tập thể dục và tham gia các trò chơi vận động rèn luyện thân thể dẻo dai.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Ánh nắng ban mai chan hòa khắp sân trường. Các bạn nhỏ cùng nhau tập thể dục và tham gia các trò chơi vận động rèn luyện thân thể dẻo dai."
       ],
-      "audioNarration": "Cùng vui chơi trong nắng mới. Ánh nắng ban mai chan hòa khắp sân trường. Các bạn nhỏ cùng nhau tập thể dục và tham gia các trò chơi vận động rèn luyện thân thể dẻo dai. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Cùng vui chơi trong nắng mới. Ánh nắng ban mai chan hòa khắp sân trường. Các bạn nhỏ cùng nhau tập thể dục và tham gia các trò chơi vận động rèn luyện thân thể dẻo dai.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -4227,10 +4201,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 3",
       "genre": "prose",
       "content": [
-        "Gió thu đưa hương cốm mới thơm nồng nàn trên từng con ngõ nhỏ, báo hiệu một vụ mùa no ấm và tràn ngập niềm vui trên khắp làng quê.",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Gió thu đưa hương cốm mới thơm nồng nàn trên từng con ngõ nhỏ, báo hiệu một vụ mùa no ấm và tràn ngập niềm vui trên khắp làng quê."
       ],
-      "audioNarration": "Hương lúa chín đầu mùa. Gió thu đưa hương cốm mới thơm nồng nàn trên từng con ngõ nhỏ, báo hiệu một vụ mùa no ấm và tràn ngập niềm vui trên khắp làng quê. Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Hương lúa chín đầu mùa. Gió thu đưa hương cốm mới thơm nồng nàn trên từng con ngõ nhỏ, báo hiệu một vụ mùa no ấm và tràn ngập niềm vui trên khắp làng quê.",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -4275,10 +4248,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "WonderKids",
       "genre": "prose",
       "content": [
-        "Chúc mừng các sĩ tử nhí đã xuất sắc hoàn thành toàn bộ chương trình Tiếng Việt Lớp 3 với bản lĩnh và tri thức tuyệt vời!",
-        "Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh."
+        "Chúc mừng các sĩ tử nhí đã xuất sắc hoàn thành toàn bộ chương trình Tiếng Việt Lớp 3 với bản lĩnh và tri thức tuyệt vời!"
       ],
-      "audioNarration": "Đấu trường Trạng Nguyên nhí Lớp 3. Chúc mừng các sĩ tử nhí đã xuất sắc hoàn thành toàn bộ chương trình Tiếng Việt Lớp 3 với bản lĩnh và tri thức tuyệt vời! Văn bản bồi đắp lòng nhân ái, truyền thống yêu nước và khát vọng vươn lên trong học tập cho học sinh.",
+      "audioNarration": "Đấu trường Trạng Nguyên nhí Lớp 3. Chúc mừng các sĩ tử nhí đã xuất sắc hoàn thành toàn bộ chương trình Tiếng Việt Lớp 3 với bản lĩnh và tri thức tuyệt vời!",
       "vocabularyNotes": [
         {
           "word": "Tự hào",
@@ -4323,10 +4295,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Tô Hoài",
       "genre": "prose",
       "content": [
-        "Một hôm, qua một vùng cỏ xước xanh dài, tôi chợt nghe tiếng khóc tỉ tê. Đến gần hốc đá, tôi thấy chị Nhà Trò bé nhỏ, gầy yếu đang ngồi gục đầu khóc nức nở vì bị bọn nhện ức hiếp đòi nợ ăn thịt.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Một hôm, qua một vùng cỏ xước xanh dài, tôi chợt nghe tiếng khóc tỉ tê. Đến gần hốc đá, tôi thấy chị Nhà Trò bé nhỏ, gầy yếu đang ngồi gục đầu khóc nức nở vì bị bọn nhện ức hiếp đòi nợ ăn thịt."
       ],
-      "audioNarration": "Dế Mèn bênh vực kẻ yếu (Phần 1). Một hôm, qua một vùng cỏ xước xanh dài, tôi chợt nghe tiếng khóc tỉ tê. Đến gần hốc đá, tôi thấy chị Nhà Trò bé nhỏ, gầy yếu đang ngồi gục đầu khóc nức nở vì bị bọn nhện ức hiếp đòi nợ ăn thịt. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Dế Mèn bênh vực kẻ yếu (Phần 1). Một hôm, qua một vùng cỏ xước xanh dài, tôi chợt nghe tiếng khóc tỉ tê. Đến gần hốc đá, tôi thấy chị Nhà Trò bé nhỏ, gầy yếu đang ngồi gục đầu khóc nức nở vì bị bọn nhện ức hiếp đòi nợ ăn thịt.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4371,10 +4342,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Đặng Hiển",
       "genre": "prose",
       "content": [
-        "Mấy ngày mẹ vắng nhà, trời nổi bão to gió lớn. Hai anh em bảo nhau làm mọi việc nhà, chăm sóc đàn gà và nấu cơm tinh tươm để khi mẹ về nhà cửa luôn ấm áp.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Mấy ngày mẹ vắng nhà, trời nổi bão to gió lớn. Hai anh em bảo nhau làm mọi việc nhà, chăm sóc đàn gà và nấu cơm tinh tươm để khi mẹ về nhà cửa luôn ấm áp."
       ],
-      "audioNarration": "Mẹ vắng nhà ngày bão. Mấy ngày mẹ vắng nhà, trời nổi bão to gió lớn. Hai anh em bảo nhau làm mọi việc nhà, chăm sóc đàn gà và nấu cơm tinh tươm để khi mẹ về nhà cửa luôn ấm áp. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Mẹ vắng nhà ngày bão. Mấy ngày mẹ vắng nhà, trời nổi bão to gió lớn. Hai anh em bảo nhau làm mọi việc nhà, chăm sóc đàn gà và nấu cơm tinh tươm để khi mẹ về nhà cửa luôn ấm áp.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4419,10 +4389,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Tô Hoài",
       "genre": "prose",
       "content": [
-        "Dế Mèn hiên ngang bước tới sào huyệt của bọn nhện, thét lớn một tiếng khiến lũ nhện run sợ. Chú vung đôi càng sắc bén phá tan vòng vây tơ nhện, bảo vệ chị Nhà Trò tội nghiệp.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Dế Mèn hiên ngang bước tới sào huyệt của bọn nhện, thét lớn một tiếng khiến lũ nhện run sợ. Chú vung đôi càng sắc bén phá tan vòng vây tơ nhện, bảo vệ chị Nhà Trò tội nghiệp."
       ],
-      "audioNarration": "Dế Mèn bênh vực kẻ yếu (Phần 2). Dế Mèn hiên ngang bước tới sào huyệt của bọn nhện, thét lớn một tiếng khiến lũ nhện run sợ. Chú vung đôi càng sắc bén phá tan vòng vây tơ nhện, bảo vệ chị Nhà Trò tội nghiệp. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Dế Mèn bênh vực kẻ yếu (Phần 2). Dế Mèn hiên ngang bước tới sào huyệt của bọn nhện, thét lớn một tiếng khiến lũ nhện run sợ. Chú vung đôi càng sắc bén phá tan vòng vây tơ nhện, bảo vệ chị Nhà Trò tội nghiệp.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4467,10 +4436,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Lâm Thị Mỹ Dạ",
       "genre": "prose",
       "content": [
-        "Tôi yêu truyện cổ nước tôi, vừa nhân hậu lại tuyệt vời sâu xa. Những câu chuyện cổ tích thấm đượm tình người, dạy chúng ta bài học ở hiền gặp lành và lòng trung thực.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Tôi yêu truyện cổ nước tôi, vừa nhân hậu lại tuyệt vời sâu xa. Những câu chuyện cổ tích thấm đượm tình người, dạy chúng ta bài học ở hiền gặp lành và lòng trung thực."
       ],
-      "audioNarration": "Truyện cổ nước mình. Tôi yêu truyện cổ nước tôi, vừa nhân hậu lại tuyệt vời sâu xa. Những câu chuyện cổ tích thấm đượm tình người, dạy chúng ta bài học ở hiền gặp lành và lòng trung thực. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Truyện cổ nước mình. Tôi yêu truyện cổ nước tôi, vừa nhân hậu lại tuyệt vời sâu xa. Những câu chuyện cổ tích thấm đượm tình người, dạy chúng ta bài học ở hiền gặp lành và lòng trung thực.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4515,10 +4483,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Thằn lằn xanh và chú tắc kè hoa mỗi loài có một môi trường sống và tài năng riêng biệt. Học cách tôn trọng sự khác biệt của bạn bè là chìa khóa của tình bạn bền chặt.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Thằn lằn xanh và chú tắc kè hoa mỗi loài có một môi trường sống và tài năng riêng biệt. Học cách tôn trọng sự khác biệt của bạn bè là chìa khóa của tình bạn bền chặt."
       ],
-      "audioNarration": "Thằn lằn xanh và tắc kè. Thằn lằn xanh và chú tắc kè hoa mỗi loài có một môi trường sống và tài năng riêng biệt. Học cách tôn trọng sự khác biệt của bạn bè là chìa khóa của tình bạn bền chặt. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Thằn lằn xanh và tắc kè. Thằn lằn xanh và chú tắc kè hoa mỗi loài có một môi trường sống và tài năng riêng biệt. Học cách tôn trọng sự khác biệt của bạn bè là chìa khóa của tình bạn bền chặt.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4563,10 +4530,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Tiếng đàn vĩ cầm trong trẻo của cô bé nhỏ vang lên giữa khán phòng rực rỡ ánh đèn, lay động trái tim hàng ngàn khán giả bằng niềm đam mê nghệ thuật cháy bỏng.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Tiếng đàn vĩ cầm trong trẻo của cô bé nhỏ vang lên giữa khán phòng rực rỡ ánh đèn, lay động trái tim hàng ngàn khán giả bằng niềm đam mê nghệ thuật cháy bỏng."
       ],
-      "audioNarration": "Nghệ sĩ nhí. Tiếng đàn vĩ cầm trong trẻo của cô bé nhỏ vang lên giữa khán phòng rực rỡ ánh đèn, lay động trái tim hàng ngàn khán giả bằng niềm đam mê nghệ thuật cháy bỏng. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Nghệ sĩ nhí. Tiếng đàn vĩ cầm trong trẻo của cô bé nhỏ vang lên giữa khán phòng rực rỡ ánh đèn, lay động trái tim hàng ngàn khán giả bằng niềm đam mê nghệ thuật cháy bỏng.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4611,10 +4577,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Định Hải",
       "genre": "prose",
       "content": [
-        "Trái Đất trẻ của bạn trẻ năm châu! Vàng, trắng, đen... tuy khác màu da nhưng cùng chung nụ cười rạng rỡ và khát vọng hòa bình trên hành tinh xanh.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Trái Đất trẻ của bạn trẻ năm châu! Vàng, trắng, đen... tuy khác màu da nhưng cùng chung nụ cười rạng rỡ và khát vọng hòa bình trên hành tinh xanh."
       ],
-      "audioNarration": "Bài ca Trái Đất. Trái Đất trẻ của bạn trẻ năm châu! Vàng, trắng, đen... tuy khác màu da nhưng cùng chung nụ cười rạng rỡ và khát vọng hòa bình trên hành tinh xanh. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Bài ca Trái Đất. Trái Đất trẻ của bạn trẻ năm châu! Vàng, trắng, đen... tuy khác màu da nhưng cùng chung nụ cười rạng rỡ và khát vọng hòa bình trên hành tinh xanh.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4659,10 +4624,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Giáo sư Lương Định Của đã cống hiến trọn cuộc đời lai tạo ra những giống lúa mới năng suất cao, mang lại những mùa vàng no ấm cho hàng triệu nông dân Việt Nam.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Giáo sư Lương Định Của đã cống hiến trọn cuộc đời lai tạo ra những giống lúa mới năng suất cao, mang lại những mùa vàng no ấm cho hàng triệu nông dân Việt Nam."
       ],
-      "audioNarration": "Nhà bác học của đồng ruộng. Giáo sư Lương Định Của đã cống hiến trọn cuộc đời lai tạo ra những giống lúa mới năng suất cao, mang lại những mùa vàng no ấm cho hàng triệu nông dân Việt Nam. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Nhà bác học của đồng ruộng. Giáo sư Lương Định Của đã cống hiến trọn cuộc đời lai tạo ra những giống lúa mới năng suất cao, mang lại những mùa vàng no ấm cho hàng triệu nông dân Việt Nam.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4707,10 +4671,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Định Hải",
       "genre": "prose",
       "content": [
-        "Nếu chúng mình có phép lạ, hạt giống nảy mầm chớp mắt thành cây, quả chín thơm lừng đầy cành, không còn chiến tranh và đói nghèo trên toàn thế giới.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Nếu chúng mình có phép lạ, hạt giống nảy mầm chớp mắt thành cây, quả chín thơm lừng đầy cành, không còn chiến tranh và đói nghèo trên toàn thế giới."
       ],
-      "audioNarration": "Nếu chúng mình có phép lạ. Nếu chúng mình có phép lạ, hạt giống nảy mầm chớp mắt thành cây, quả chín thơm lừng đầy cành, không còn chiến tranh và đói nghèo trên toàn thế giới. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Nếu chúng mình có phép lạ. Nếu chúng mình có phép lạ, hạt giống nảy mầm chớp mắt thành cây, quả chín thơm lừng đầy cành, không còn chiến tranh và đói nghèo trên toàn thế giới.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4755,10 +4718,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Khắc Viện",
       "genre": "prose",
       "content": [
-        "Cây đa cổ thụ nghìn năm tuổi đầu làng như chiếc ô khổng lồ xòe bóng mát chở che cho bao thế hệ dân làng trải qua những thăng trầm của lịch sử.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Cây đa cổ thụ nghìn năm tuổi đầu làng như chiếc ô khổng lồ xòe bóng mát chở che cho bao thế hệ dân làng trải qua những thăng trầm của lịch sử."
       ],
-      "audioNarration": "Cây đa quê hương. Cây đa cổ thụ nghìn năm tuổi đầu làng như chiếc ô khổng lồ xòe bóng mát chở che cho bao thế hệ dân làng trải qua những thăng trầm của lịch sử. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Cây đa quê hương. Cây đa cổ thụ nghìn năm tuổi đầu làng như chiếc ô khổng lồ xòe bóng mát chở che cho bao thế hệ dân làng trải qua những thăng trầm của lịch sử.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4803,10 +4765,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Thạch Lam",
       "genre": "prose",
       "content": [
-        "Thanh bước vào khu vườn yên ả của bà, cảm nhận hương hoa hoàng lan thoang thoảng trong gió và sự chở che dịu dàng của người bà kính yêu.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Thanh bước vào khu vườn yên ả của bà, cảm nhận hương hoa hoàng lan thoang thoảng trong gió và sự chở che dịu dàng của người bà kính yêu."
       ],
-      "audioNarration": "Về thăm bà. Thanh bước vào khu vườn yên ả của bà, cảm nhận hương hoa hoàng lan thoang thoảng trong gió và sự chở che dịu dàng của người bà kính yêu. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Về thăm bà. Thanh bước vào khu vườn yên ả của bà, cảm nhận hương hoa hoàng lan thoang thoảng trong gió và sự chở che dịu dàng của người bà kính yêu.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4851,10 +4812,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Sóc Nâu và Nhím Xám luôn đồng hành, nhường nhịn và san sẻ từng hạt sồi thơm ngon trong những ngày đông giá rét trên đỉnh núi cao.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Sóc Nâu và Nhím Xám luôn đồng hành, nhường nhịn và san sẻ từng hạt sồi thơm ngon trong những ngày đông giá rét trên đỉnh núi cao."
       ],
-      "audioNarration": "Đôi bạn trong rừng xanh. Sóc Nâu và Nhím Xám luôn đồng hành, nhường nhịn và san sẻ từng hạt sồi thơm ngon trong những ngày đông giá rét trên đỉnh núi cao. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Đôi bạn trong rừng xanh. Sóc Nâu và Nhím Xám luôn đồng hành, nhường nhịn và san sẻ từng hạt sồi thơm ngon trong những ngày đông giá rét trên đỉnh núi cao.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4899,10 +4859,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Chiếc ô màu đỏ của Mai đã che mát cho một bạn nhỏ bị lạc đường trong cơn mưa tầm tã, gieo vào lòng người sự ấm áp của tình người giữa đời thường.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Chiếc ô màu đỏ của Mai đã che mát cho một bạn nhỏ bị lạc đường trong cơn mưa tầm tã, gieo vào lòng người sự ấm áp của tình người giữa đời thường."
       ],
-      "audioNarration": "Chiếc ô màu đỏ. Chiếc ô màu đỏ của Mai đã che mát cho một bạn nhỏ bị lạc đường trong cơn mưa tầm tã, gieo vào lòng người sự ấm áp của tình người giữa đời thường. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Chiếc ô màu đỏ. Chiếc ô màu đỏ của Mai đã che mát cho một bạn nhỏ bị lạc đường trong cơn mưa tầm tã, gieo vào lòng người sự ấm áp của tình người giữa đời thường.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4947,10 +4906,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Bình minh rạng rỡ chiếu sáng cánh đồng lúa chín vàng trĩu hạt. Giọt sương mai long lanh đọng trên đầu ngọn cỏ như những viên ngọc bích lấp lánh.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Bình minh rạng rỡ chiếu sáng cánh đồng lúa chín vàng trĩu hạt. Giọt sương mai long lanh đọng trên đầu ngọn cỏ như những viên ngọc bích lấp lánh."
       ],
-      "audioNarration": "Buổi sớm trên quê hương. Bình minh rạng rỡ chiếu sáng cánh đồng lúa chín vàng trĩu hạt. Giọt sương mai long lanh đọng trên đầu ngọn cỏ như những viên ngọc bích lấp lánh. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Buổi sớm trên quê hương. Bình minh rạng rỡ chiếu sáng cánh đồng lúa chín vàng trĩu hạt. Giọt sương mai long lanh đọng trên đầu ngọn cỏ như những viên ngọc bích lấp lánh.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -4995,10 +4953,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Bông hoa cúc vàng rực rỡ hé nở trong sớm mai là món quà bất ngờ chan chứa lòng hiếu thảo mà bé dành tặng mẹ đang trên giường bệnh.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Bông hoa cúc vàng rực rỡ hé nở trong sớm mai là món quà bất ngờ chan chứa lòng hiếu thảo mà bé dành tặng mẹ đang trên giường bệnh."
       ],
-      "audioNarration": "Bông hoa niềm vui. Bông hoa cúc vàng rực rỡ hé nở trong sớm mai là món quà bất ngờ chan chứa lòng hiếu thảo mà bé dành tặng mẹ đang trên giường bệnh. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Bông hoa niềm vui. Bông hoa cúc vàng rực rỡ hé nở trong sớm mai là món quà bất ngờ chan chứa lòng hiếu thảo mà bé dành tặng mẹ đang trên giường bệnh.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5043,10 +5000,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Thi Sảnh",
       "genre": "prose",
       "content": [
-        "Vịnh Hạ Long là một kiệt tác kỳ vĩ của thiên nhiên với hàng ngàn hòn đảo đá vôi nhấp nhô trên làn nước biển xanh như ngọc bích, được UNESCO vinh danh là di sản thế giới.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Vịnh Hạ Long là một kiệt tác kỳ vĩ của thiên nhiên với hàng ngàn hòn đảo đá vôi nhấp nhô trên làn nước biển xanh như ngọc bích, được UNESCO vinh danh là di sản thế giới."
       ],
-      "audioNarration": "Vịnh Hạ Long. Vịnh Hạ Long là một kiệt tác kỳ vĩ của thiên nhiên với hàng ngàn hòn đảo đá vôi nhấp nhô trên làn nước biển xanh như ngọc bích, được UNESCO vinh danh là di sản thế giới. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Vịnh Hạ Long. Vịnh Hạ Long là một kiệt tác kỳ vĩ của thiên nhiên với hàng ngàn hòn đảo đá vôi nhấp nhô trên làn nước biển xanh như ngọc bích, được UNESCO vinh danh là di sản thế giới.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5091,10 +5047,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Hang Sơn Đoòng - hang động tự nhiên kỳ vĩ bậc nhất hành tinh ẩn chứa cả một khu rừng nguyên sinh và dòng sông ngầm huyền bí sâu trong lòng núi đá vôi.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Hang Sơn Đoòng - hang động tự nhiên kỳ vĩ bậc nhất hành tinh ẩn chứa cả một khu rừng nguyên sinh và dòng sông ngầm huyền bí sâu trong lòng núi đá vôi."
       ],
-      "audioNarration": "Hang Sơn Đoòng. Hang Sơn Đoòng - hang động tự nhiên kỳ vĩ bậc nhất hành tinh ẩn chứa cả một khu rừng nguyên sinh và dòng sông ngầm huyền bí sâu trong lòng núi đá vôi. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Hang Sơn Đoòng. Hang Sơn Đoòng - hang động tự nhiên kỳ vĩ bậc nhất hành tinh ẩn chứa cả một khu rừng nguyên sinh và dòng sông ngầm huyền bí sâu trong lòng núi đá vôi.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5139,10 +5094,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Tố Hữu",
       "genre": "prose",
       "content": [
-        "Chú bé Lượm với chiếc xắc xinh xinh, ca lô đội lệch, thoăn thoắt đôi chân vượt qua làn mưa bom bão đạn để chuyển công văn hỏa tốc cho chiến khu.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Chú bé Lượm với chiếc xắc xinh xinh, ca lô đội lệch, thoăn thoắt đôi chân vượt qua làn mưa bom bão đạn để chuyển công văn hỏa tốc cho chiến khu."
       ],
-      "audioNarration": "Chú bé Lượm. Chú bé Lượm với chiếc xắc xinh xinh, ca lô đội lệch, thoăn thoắt đôi chân vượt qua làn mưa bom bão đạn để chuyển công văn hỏa tốc cho chiến khu. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Chú bé Lượm. Chú bé Lượm với chiếc xắc xinh xinh, ca lô đội lệch, thoăn thoắt đôi chân vượt qua làn mưa bom bão đạn để chuyển công văn hỏa tốc cho chiến khu.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5187,10 +5141,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Khoa Điềm",
       "genre": "prose",
       "content": [
-        "Lời ru ngọt ngào của người mẹ Tà-ôi hòa cùng nhịp chày giã gạo nuôi bộ đội, nuôi dưỡng ước mơ con khôn lớn trở thành người công dân tự do của đất nước.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Lời ru ngọt ngào của người mẹ Tà-ôi hòa cùng nhịp chày giã gạo nuôi bộ đội, nuôi dưỡng ước mơ con khôn lớn trở thành người công dân tự do của đất nước."
       ],
-      "audioNarration": "Khúc hát ru những em bé lớn trên lưng mẹ. Lời ru ngọt ngào của người mẹ Tà-ôi hòa cùng nhịp chày giã gạo nuôi bộ đội, nuôi dưỡng ước mơ con khôn lớn trở thành người công dân tự do của đất nước. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Khúc hát ru những em bé lớn trên lưng mẹ. Lời ru ngọt ngào của người mẹ Tà-ôi hòa cùng nhịp chày giã gạo nuôi bộ đội, nuôi dưỡng ước mơ con khôn lớn trở thành người công dân tự do của đất nước.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5235,10 +5188,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Dòng suối trong vắt róc rách chảy qua đại ngàn, mang lại nguồn sống xanh tươi và tiếng reo vui bất tận cho muông thú vùng cao.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Dòng suối trong vắt róc rách chảy qua đại ngàn, mang lại nguồn sống xanh tươi và tiếng reo vui bất tận cho muông thú vùng cao."
       ],
-      "audioNarration": "Con suối mát lành. Dòng suối trong vắt róc rách chảy qua đại ngàn, mang lại nguồn sống xanh tươi và tiếng reo vui bất tận cho muông thú vùng cao. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Con suối mát lành. Dòng suối trong vắt róc rách chảy qua đại ngàn, mang lại nguồn sống xanh tươi và tiếng reo vui bất tận cho muông thú vùng cao.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5283,10 +5235,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 4",
       "genre": "prose",
       "content": [
-        "Khu vườn trĩu quả mùa thu: mít thơm lừng, bưởi vàng ươm, hồng đỏ mọng... mang lại niềm vui thu hoạch rạng rỡ cho những người nông dân một nắng hai sương.",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Khu vườn trĩu quả mùa thu: mít thơm lừng, bưởi vàng ươm, hồng đỏ mọng... mang lại niềm vui thu hoạch rạng rỡ cho những người nông dân một nắng hai sương."
       ],
-      "audioNarration": "Mùa quả chín quê em. Khu vườn trĩu quả mùa thu: mít thơm lừng, bưởi vàng ươm, hồng đỏ mọng... mang lại niềm vui thu hoạch rạng rỡ cho những người nông dân một nắng hai sương. Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Mùa quả chín quê em. Khu vườn trĩu quả mùa thu: mít thơm lừng, bưởi vàng ươm, hồng đỏ mọng... mang lại niềm vui thu hoạch rạng rỡ cho những người nông dân một nắng hai sương.",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5331,10 +5282,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "WonderKids",
       "genre": "prose",
       "content": [
-        "Chào mừng các bạn học sinh ưu tú đã vượt qua 22 chặng thử thách để bước lên bục vinh quang của Đấu trường Trạng Nguyên Lớp 4!",
-        "Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước."
+        "Chào mừng các bạn học sinh ưu tú đã vượt qua 22 chặng thử thách để bước lên bục vinh quang của Đấu trường Trạng Nguyên Lớp 4!"
       ],
-      "audioNarration": "Đấu trường Trạng Nguyên Lớp 4. Chào mừng các bạn học sinh ưu tú đã vượt qua 22 chặng thử thách để bước lên bục vinh quang của Đấu trường Trạng Nguyên Lớp 4! Tác phẩm văn học mang giá trị nghệ thuật đặc sắc, bồi dưỡng năng lực cảm thụ ngôn từ và tình yêu quê hương đất nước.",
+      "audioNarration": "Đấu trường Trạng Nguyên Lớp 4. Chào mừng các bạn học sinh ưu tú đã vượt qua 22 chặng thử thách để bước lên bục vinh quang của Đấu trường Trạng Nguyên Lớp 4!",
       "vocabularyNotes": [
         {
           "word": "Hùng vĩ",
@@ -5379,10 +5329,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Hồ Chí Minh",
       "genre": "prose",
       "content": [
-        "Các em học sinh! Ngày hôm nay là ngày khai trường đầu tiên của nước Việt Nam Dân chủ Cộng hòa. Non sông Việt Nam có trở nên tươi đẹp hay không, dân tộc Việt Nam có bước tới đài vinh quang để sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công học tập của các em.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Các em học sinh! Ngày hôm nay là ngày khai trường đầu tiên của nước Việt Nam Dân chủ Cộng hòa. Non sông Việt Nam có trở nên tươi đẹp hay không, dân tộc Việt Nam có bước tới đài vinh quang để sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công học tập của các em."
       ],
-      "audioNarration": "Thư gửi các học sinh. Các em học sinh! Ngày hôm nay là ngày khai trường đầu tiên của nước Việt Nam Dân chủ Cộng hòa. Non sông Việt Nam có trở nên tươi đẹp hay không, dân tộc Việt Nam có bước tới đài vinh quang để sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công học tập của các em. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Thư gửi các học sinh. Các em học sinh! Ngày hôm nay là ngày khai trường đầu tiên của nước Việt Nam Dân chủ Cộng hòa. Non sông Việt Nam có trở nên tươi đẹp hay không, dân tộc Việt Nam có bước tới đài vinh quang để sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công học tập của các em.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5427,10 +5376,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Phạm Đình Ân",
       "genre": "prose",
       "content": [
-        "Em yêu màu đỏ như máu trong tim, cờ Tổ quốc bay; Em yêu màu xanh của đồng bằng bát ngát; Em yêu màu vàng của hoa cúc mùa thu; Em yêu tất cả sắc màu của quê hương đất nước Việt Nam.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Em yêu màu đỏ như máu trong tim, cờ Tổ quốc bay; Em yêu màu xanh của đồng bằng bát ngát; Em yêu màu vàng của hoa cúc mùa thu; Em yêu tất cả sắc màu của quê hương đất nước Việt Nam."
       ],
-      "audioNarration": "Sắc màu em yêu. Em yêu màu đỏ như máu trong tim, cờ Tổ quốc bay; Em yêu màu xanh của đồng bằng bát ngát; Em yêu màu vàng của hoa cúc mùa thu; Em yêu tất cả sắc màu của quê hương đất nước Việt Nam. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Sắc màu em yêu. Em yêu màu đỏ như máu trong tim, cờ Tổ quốc bay; Em yêu màu xanh của đồng bằng bát ngát; Em yêu màu vàng của hoa cúc mùa thu; Em yêu tất cả sắc màu của quê hương đất nước Việt Nam.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5475,10 +5423,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Tô Hoài",
       "genre": "prose",
       "content": [
-        "Mùa đông, giữa ngày mùa, làng quê toàn màu vàng trù phú: lúa chín vàng xuộm, nắng nhạt vàng hoe, quả xoan vàng lịm, lá chuối vàng ối... Tất cả đượm một màu trù phú, no ấm lạ thường.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Mùa đông, giữa ngày mùa, làng quê toàn màu vàng trù phú: lúa chín vàng xuộm, nắng nhạt vàng hoe, quả xoan vàng lịm, lá chuối vàng ối... Tất cả đượm một màu trù phú, no ấm lạ thường."
       ],
-      "audioNarration": "Quang cảnh làng mạc ngày mùa. Mùa đông, giữa ngày mùa, làng quê toàn màu vàng trù phú: lúa chín vàng xuộm, nắng nhạt vàng hoe, quả xoan vàng lịm, lá chuối vàng ối... Tất cả đượm một màu trù phú, no ấm lạ thường. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Quang cảnh làng mạc ngày mùa. Mùa đông, giữa ngày mùa, làng quê toàn màu vàng trù phú: lúa chín vàng xuộm, nắng nhạt vàng hoe, quả xoan vàng lịm, lá chuối vàng ối... Tất cả đượm một màu trù phú, no ấm lạ thường.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5523,10 +5470,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Văn Xe",
       "genre": "prose",
       "content": [
-        "Vở kịch tái hiện lòng trung kiên, gan dạ của bà má Nam Bộ khéo léo đánh lừa quân giặc tàn bạo để bảo vệ an toàn cho người cán bộ cách mạng.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Vở kịch tái hiện lòng trung kiên, gan dạ của bà má Nam Bộ khéo léo đánh lừa quân giặc tàn bạo để bảo vệ an toàn cho người cán bộ cách mạng."
       ],
-      "audioNarration": "Lòng dân. Vở kịch tái hiện lòng trung kiên, gan dạ của bà má Nam Bộ khéo léo đánh lừa quân giặc tàn bạo để bảo vệ an toàn cho người cán bộ cách mạng. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Lòng dân. Vở kịch tái hiện lòng trung kiên, gan dạ của bà má Nam Bộ khéo léo đánh lừa quân giặc tàn bạo để bảo vệ an toàn cho người cán bộ cách mạng.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5571,10 +5517,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 5",
       "genre": "prose",
       "content": [
-        "Cánh chim bồ câu trắng chao liệng trên bầu trời xanh thẳm là biểu tượng bất diệt cho ước vọng hòa bình, hữu nghị và thịnh vượng của nhân loại trên toàn thế giới.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Cánh chim bồ câu trắng chao liệng trên bầu trời xanh thẳm là biểu tượng bất diệt cho ước vọng hòa bình, hữu nghị và thịnh vượng của nhân loại trên toàn thế giới."
       ],
-      "audioNarration": "Cánh chim hòa bình. Cánh chim bồ câu trắng chao liệng trên bầu trời xanh thẳm là biểu tượng bất diệt cho ước vọng hòa bình, hữu nghị và thịnh vượng của nhân loại trên toàn thế giới. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Cánh chim hòa bình. Cánh chim bồ câu trắng chao liệng trên bầu trời xanh thẳm là biểu tượng bất diệt cho ước vọng hòa bình, hữu nghị và thịnh vượng của nhân loại trên toàn thế giới.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5619,10 +5564,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Định Hải",
       "genre": "prose",
       "content": [
-        "Trái Đất là quả bóng xanh bay giữa trời cao. Hãy giữ cho tiếng cười của trẻ thơ luôn rộn rã và bầu trời không còn bóng đen của khói lửa chiến tranh.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Trái Đất là quả bóng xanh bay giữa trời cao. Hãy giữ cho tiếng cười của trẻ thơ luôn rộn rã và bầu trời không còn bóng đen của khói lửa chiến tranh."
       ],
-      "audioNarration": "Bài ca về trái đất. Trái Đất là quả bóng xanh bay giữa trời cao. Hãy giữ cho tiếng cười của trẻ thơ luôn rộn rã và bầu trời không còn bóng đen của khói lửa chiến tranh. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Bài ca về trái đất. Trái Đất là quả bóng xanh bay giữa trời cao. Hãy giữ cho tiếng cười của trẻ thơ luôn rộn rã và bầu trời không còn bóng đen của khói lửa chiến tranh.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5667,10 +5611,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Theo SGK Tiếng Việt 5",
       "genre": "prose",
       "content": [
-        "Cô bé Xa-da-cô bị nhiễm phóng xạ bom nguyên tử đã kiên trì gấp hàng ngàn con sếu giấy với khát vọng hòa bình bất diệt, làm lay động hàng triệu trái tim nhân loại.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Cô bé Xa-da-cô bị nhiễm phóng xạ bom nguyên tử đã kiên trì gấp hàng ngàn con sếu giấy với khát vọng hòa bình bất diệt, làm lay động hàng triệu trái tim nhân loại."
       ],
-      "audioNarration": "Những con sếu bằng giấy. Cô bé Xa-da-cô bị nhiễm phóng xạ bom nguyên tử đã kiên trì gấp hàng ngàn con sếu giấy với khát vọng hòa bình bất diệt, làm lay động hàng triệu trái tim nhân loại. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Những con sếu bằng giấy. Cô bé Xa-da-cô bị nhiễm phóng xạ bom nguyên tử đã kiên trì gấp hàng ngàn con sếu giấy với khát vọng hòa bình bất diệt, làm lay động hàng triệu trái tim nhân loại.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5715,10 +5658,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Phan Hách",
       "genre": "prose",
       "content": [
-        "Khu rừng nguyên sinh mở ra một thế giới kỳ thú với vương quốc nấm lúp xúp, những thân cây cổ thụ rêu phong và bầy vượn bạc má chuyền cành thoăn thoắt.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Khu rừng nguyên sinh mở ra một thế giới kỳ thú với vương quốc nấm lúp xúp, những thân cây cổ thụ rêu phong và bầy vượn bạc má chuyền cành thoăn thoắt."
       ],
-      "audioNarration": "Kì diệu rừng xanh. Khu rừng nguyên sinh mở ra một thế giới kỳ thú với vương quốc nấm lúp xúp, những thân cây cổ thụ rêu phong và bầy vượn bạc má chuyền cành thoăn thoắt. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Kì diệu rừng xanh. Khu rừng nguyên sinh mở ra một thế giới kỳ thú với vương quốc nấm lúp xúp, những thân cây cổ thụ rêu phong và bầy vượn bạc má chuyền cành thoăn thoắt.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5763,10 +5705,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Đình Thi",
       "genre": "prose",
       "content": [
-        "Đứng trên cổng trời lộng gió, ngắm nhìn thung lũng mây trắng bồng bềnh và những nương ngô xanh biếc, ta cảm nhận sâu sắc vẻ đẹp hùng vĩ của biên cương Tổ quốc.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Đứng trên cổng trời lộng gió, ngắm nhìn thung lũng mây trắng bồng bềnh và những nương ngô xanh biếc, ta cảm nhận sâu sắc vẻ đẹp hùng vĩ của biên cương Tổ quốc."
       ],
-      "audioNarration": "Trước cổng trời. Đứng trên cổng trời lộng gió, ngắm nhìn thung lũng mây trắng bồng bềnh và những nương ngô xanh biếc, ta cảm nhận sâu sắc vẻ đẹp hùng vĩ của biên cương Tổ quốc. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Trước cổng trời. Đứng trên cổng trời lộng gió, ngắm nhìn thung lũng mây trắng bồng bềnh và những nương ngô xanh biếc, ta cảm nhận sâu sắc vẻ đẹp hùng vĩ của biên cương Tổ quốc.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5811,10 +5752,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Mai Văn Tạo",
       "genre": "prose",
       "content": [
-        "Cà Mau là đất mưa dông, cây đước cây tràm bám rễ sâu vào bùn đất phù sa màu mỡ. Con người nơi đây dũng cảm, kiên cường và giàu lòng mến khách.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Cà Mau là đất mưa dông, cây đước cây tràm bám rễ sâu vào bùn đất phù sa màu mỡ. Con người nơi đây dũng cảm, kiên cường và giàu lòng mến khách."
       ],
-      "audioNarration": "Đất Cà Mau. Cà Mau là đất mưa dông, cây đước cây tràm bám rễ sâu vào bùn đất phù sa màu mỡ. Con người nơi đây dũng cảm, kiên cường và giàu lòng mến khách. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Đất Cà Mau. Cà Mau là đất mưa dông, cây đước cây tràm bám rễ sâu vào bùn đất phù sa màu mỡ. Con người nơi đây dũng cảm, kiên cường và giàu lòng mến khách.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5859,10 +5799,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Vân Long",
       "genre": "prose",
       "content": [
-        "Khu vườn ban công nhỏ nhắn của bé Thu và ông nội có bao nhiêu loài cây quý, là nơi chim sâu ríu rít tìm về làm tổ giữa lòng thành phố nhộn nhịp.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Khu vườn ban công nhỏ nhắn của bé Thu và ông nội có bao nhiêu loài cây quý, là nơi chim sâu ríu rít tìm về làm tổ giữa lòng thành phố nhộn nhịp."
       ],
-      "audioNarration": "Chuyện một khu vườn nhỏ. Khu vườn ban công nhỏ nhắn của bé Thu và ông nội có bao nhiêu loài cây quý, là nơi chim sâu ríu rít tìm về làm tổ giữa lòng thành phố nhộn nhịp. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Chuyện một khu vườn nhỏ. Khu vườn ban công nhỏ nhắn của bé Thu và ông nội có bao nhiêu loài cây quý, là nơi chim sâu ríu rít tìm về làm tổ giữa lòng thành phố nhộn nhịp.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5907,10 +5846,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Ma Văn Kháng",
       "genre": "prose",
       "content": [
-        "Thảo quả trên rừng Đản Khao đã chín nương. Mùi thơm nồng nàn quyến rũ lan tỏa khắp không gian, làm bừng sáng cả khu rừng già Tây Bắc.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Thảo quả trên rừng Đản Khao đã chín nương. Mùi thơm nồng nàn quyến rũ lan tỏa khắp không gian, làm bừng sáng cả khu rừng già Tây Bắc."
       ],
-      "audioNarration": "Mùa thảo quả. Thảo quả trên rừng Đản Khao đã chín nương. Mùi thơm nồng nàn quyến rũ lan tỏa khắp không gian, làm bừng sáng cả khu rừng già Tây Bắc. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Mùa thảo quả. Thảo quả trên rừng Đản Khao đã chín nương. Mùi thơm nồng nàn quyến rũ lan tỏa khắp không gian, làm bừng sáng cả khu rừng già Tây Bắc.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -5955,10 +5893,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Đức Mậu",
       "genre": "prose",
       "content": [
-        "Bầy ong cần mẫn bay khắp bốn phương trời, chắt chiu từng giọt mật hoa tinh túy để dâng tặng cho đời chất ngọt ngào bất tận.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Bầy ong cần mẫn bay khắp bốn phương trời, chắt chiu từng giọt mật hoa tinh túy để dâng tặng cho đời chất ngọt ngào bất tận."
       ],
-      "audioNarration": "Hành trình của bầy ong. Bầy ong cần mẫn bay khắp bốn phương trời, chắt chiu từng giọt mật hoa tinh túy để dâng tặng cho đời chất ngọt ngào bất tận. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Hành trình của bầy ong. Bầy ong cần mẫn bay khắp bốn phương trời, chắt chiu từng giọt mật hoa tinh túy để dâng tặng cho đời chất ngọt ngào bất tận.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6003,10 +5940,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Hà Văn Cầu",
       "genre": "prose",
       "content": [
-        "Chàng thanh niên Nguyễn Tất Thành tại bến cảng Nhà Rồng năm 1911 với bầu nhiệt huyết yêu nước nồng nàn đã quyết tâm ra đi tìm đường cứu nước, giải phóng dân tộc khỏi ách nô lệ.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Chàng thanh niên Nguyễn Tất Thành tại bến cảng Nhà Rồng năm 1911 với bầu nhiệt huyết yêu nước nồng nàn đã quyết tâm ra đi tìm đường cứu nước, giải phóng dân tộc khỏi ách nô lệ."
       ],
-      "audioNarration": "Người công dân số Một. Chàng thanh niên Nguyễn Tất Thành tại bến cảng Nhà Rồng năm 1911 với bầu nhiệt huyết yêu nước nồng nàn đã quyết tâm ra đi tìm đường cứu nước, giải phóng dân tộc khỏi ách nô lệ. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Người công dân số Một. Chàng thanh niên Nguyễn Tất Thành tại bến cảng Nhà Rồng năm 1911 với bầu nhiệt huyết yêu nước nồng nàn đã quyết tâm ra đi tìm đường cứu nước, giải phóng dân tộc khỏi ách nô lệ.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6051,10 +5987,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Trần Đăng Khoa",
       "genre": "prose",
       "content": [
-        "Hạt gạo làng ta có vị phù sa của sông Kinh Thầy, có hương sen thơm trong hồ nước đầy, có lời mẹ hát ngọt ngào và giọt mồ hôi của những người mẹ, người chị trên cánh đồng kháng chiến.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Hạt gạo làng ta có vị phù sa của sông Kinh Thầy, có hương sen thơm trong hồ nước đầy, có lời mẹ hát ngọt ngào và giọt mồ hôi của những người mẹ, người chị trên cánh đồng kháng chiến."
       ],
-      "audioNarration": "Hạt gạo làng ta. Hạt gạo làng ta có vị phù sa của sông Kinh Thầy, có hương sen thơm trong hồ nước đầy, có lời mẹ hát ngọt ngào và giọt mồ hôi của những người mẹ, người chị trên cánh đồng kháng chiến. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Hạt gạo làng ta. Hạt gạo làng ta có vị phù sa của sông Kinh Thầy, có hương sen thơm trong hồ nước đầy, có lời mẹ hát ngọt ngào và giọt mồ hôi của những người mẹ, người chị trên cánh đồng kháng chiến.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6099,10 +6034,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Đại Việt sử ký toàn thư",
       "genre": "prose",
       "content": [
-        "Thái sư Trần Thủ Độ là bậc khai quốc công thần kiệt xuất của triều Trần, luôn đặt phép nước lên trên tình riêng, chí công vô tư và hết lòng vì sự tồn vong của xã tắc.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Thái sư Trần Thủ Độ là bậc khai quốc công thần kiệt xuất của triều Trần, luôn đặt phép nước lên trên tình riêng, chí công vô tư và hết lòng vì sự tồn vong của xã tắc."
       ],
-      "audioNarration": "Thái sư Trần Thủ Độ. Thái sư Trần Thủ Độ là bậc khai quốc công thần kiệt xuất của triều Trần, luôn đặt phép nước lên trên tình riêng, chí công vô tư và hết lòng vì sự tồn vong của xã tắc. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Thái sư Trần Thủ Độ. Thái sư Trần Thủ Độ là bậc khai quốc công thần kiệt xuất của triều Trần, luôn đặt phép nước lên trên tình riêng, chí công vô tư và hết lòng vì sự tồn vong của xã tắc.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6147,10 +6081,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Theo Đoàn Minh Tuấn",
       "genre": "prose",
       "content": [
-        "Đền Hùng tọa lạc trang nghiêm trên đỉnh núi Nghĩa Lĩnh linh thiêng. Nơi đây là cội nguồn của dân tộc, nơi các vua Hùng đã có công dựng nước và con cháu muôn đời tạc dạ ghi ơn.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Đền Hùng tọa lạc trang nghiêm trên đỉnh núi Nghĩa Lĩnh linh thiêng. Nơi đây là cội nguồn của dân tộc, nơi các vua Hùng đã có công dựng nước và con cháu muôn đời tạc dạ ghi ơn."
       ],
-      "audioNarration": "Phong cảnh đền Hùng. Đền Hùng tọa lạc trang nghiêm trên đỉnh núi Nghĩa Lĩnh linh thiêng. Nơi đây là cội nguồn của dân tộc, nơi các vua Hùng đã có công dựng nước và con cháu muôn đời tạc dạ ghi ơn. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Phong cảnh đền Hùng. Đền Hùng tọa lạc trang nghiêm trên đỉnh núi Nghĩa Lĩnh linh thiêng. Nơi đây là cội nguồn của dân tộc, nơi các vua Hùng đã có công dựng nước và con cháu muôn đời tạc dạ ghi ơn.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6195,10 +6128,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Theo Hà Ân",
       "genre": "prose",
       "content": [
-        "Thầy giáo Chu Văn An dẫn các học trò đã làm quan lớn về quê chúc thọ cụ đồ già đã dạy chữ cho thầy thuở xưa, thể hiện truyền thống \"Tôn sư trọng đạo\" cao quý của dân tộc Việt Nam.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Thầy giáo Chu Văn An dẫn các học trò đã làm quan lớn về quê chúc thọ cụ đồ già đã dạy chữ cho thầy thuở xưa, thể hiện truyền thống \"Tôn sư trọng đạo\" cao quý của dân tộc Việt Nam."
       ],
-      "audioNarration": "Nghĩa thầy trò. Thầy giáo Chu Văn An dẫn các học trò đã làm quan lớn về quê chúc thọ cụ đồ già đã dạy chữ cho thầy thuở xưa, thể hiện truyền thống \"Tôn sư trọng đạo\" cao quý của dân tộc Việt Nam. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Nghĩa thầy trò. Thầy giáo Chu Văn An dẫn các học trò đã làm quan lớn về quê chúc thọ cụ đồ già đã dạy chữ cho thầy thuở xưa, thể hiện truyền thống \"Tôn sư trọng đạo\" cao quý của dân tộc Việt Nam.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6243,10 +6175,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Tuân",
       "genre": "prose",
       "content": [
-        "Tranh làng Hồ là tinh hoa nghệ thuật dân gian độc đáo của dân tộc. Những nghệ nhân tài hoa đã khắc họa hình ảnh lợn âm dương, đám cưới chuột trên giấy điệp óng ánh sắc màu dân tộc.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Tranh làng Hồ là tinh hoa nghệ thuật dân gian độc đáo của dân tộc. Những nghệ nhân tài hoa đã khắc họa hình ảnh lợn âm dương, đám cưới chuột trên giấy điệp óng ánh sắc màu dân tộc."
       ],
-      "audioNarration": "Tranh làng Hồ. Tranh làng Hồ là tinh hoa nghệ thuật dân gian độc đáo của dân tộc. Những nghệ nhân tài hoa đã khắc họa hình ảnh lợn âm dương, đám cưới chuột trên giấy điệp óng ánh sắc màu dân tộc. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Tranh làng Hồ. Tranh làng Hồ là tinh hoa nghệ thuật dân gian độc đáo của dân tộc. Những nghệ nhân tài hoa đã khắc họa hình ảnh lợn âm dương, đám cưới chuột trên giấy điệp óng ánh sắc màu dân tộc.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6291,10 +6222,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Nguyễn Đình Thi",
       "genre": "prose",
       "content": [
-        "Mùa thu nay khác rồi, tôi đứng vui nghe giữa núi đồi. Gió thổi rừng tre phấp phới, trời thu thay áo mới, trong biếc nói cười thiết tha. Nước chúng ta, nước những người chưa bao giờ khuất!",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Mùa thu nay khác rồi, tôi đứng vui nghe giữa núi đồi. Gió thổi rừng tre phấp phới, trời thu thay áo mới, trong biếc nói cười thiết tha. Nước chúng ta, nước những người chưa bao giờ khuất!"
       ],
-      "audioNarration": "Đất nước. Mùa thu nay khác rồi, tôi đứng vui nghe giữa núi đồi. Gió thổi rừng tre phấp phới, trời thu thay áo mới, trong biếc nói cười thiết tha. Nước chúng ta, nước những người chưa bao giờ khuất! Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Đất nước. Mùa thu nay khác rồi, tôi đứng vui nghe giữa núi đồi. Gió thổi rừng tre phấp phới, trời thu thay áo mới, trong biếc nói cười thiết tha. Nước chúng ta, nước những người chưa bao giờ khuất!",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6339,10 +6269,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 5",
       "genre": "prose",
       "content": [
-        "Bạn nhỏ Út Vịnh không màng hiểm nguy, dũng cảm lao ra giữa đường ray kéo hai em nhỏ thoát khỏi lưỡi hái tử thần của đoàn tàu hỏa đang lao tới với tốc độ kinh hoàng.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Bạn nhỏ Út Vịnh không màng hiểm nguy, dũng cảm lao ra giữa đường ray kéo hai em nhỏ thoát khỏi lưỡi hái tử thần của đoàn tàu hỏa đang lao tới với tốc độ kinh hoàng."
       ],
-      "audioNarration": "Út Vịnh. Bạn nhỏ Út Vịnh không màng hiểm nguy, dũng cảm lao ra giữa đường ray kéo hai em nhỏ thoát khỏi lưỡi hái tử thần của đoàn tàu hỏa đang lao tới với tốc độ kinh hoàng. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Út Vịnh. Bạn nhỏ Út Vịnh không màng hiểm nguy, dũng cảm lao ra giữa đường ray kéo hai em nhỏ thoát khỏi lưỡi hái tử thần của đoàn tàu hỏa đang lao tới với tốc độ kinh hoàng.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6387,10 +6316,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Hoàng Trung Thông",
       "genre": "prose",
       "content": [
-        "Hai cha con bước đi trên bãi cát mịn màng. Cậu bé ngước nhìn những cánh buồm trắng xa xăm và mơ ước được đi đến những chân trời mới lạ của đại dương bao la.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Hai cha con bước đi trên bãi cát mịn màng. Cậu bé ngước nhìn những cánh buồm trắng xa xăm và mơ ước được đi đến những chân trời mới lạ của đại dương bao la."
       ],
-      "audioNarration": "Những cánh buồm. Hai cha con bước đi trên bãi cát mịn màng. Cậu bé ngước nhìn những cánh buồm trắng xa xăm và mơ ước được đi đến những chân trời mới lạ của đại dương bao la. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Những cánh buồm. Hai cha con bước đi trên bãi cát mịn màng. Cậu bé ngước nhìn những cánh buồm trắng xa xăm và mơ ước được đi đến những chân trời mới lạ của đại dương bao la.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6435,10 +6363,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "Tố Hữu",
       "genre": "prose",
       "content": [
-        "Bầm ơi có rét tình quê, bầm thương con bầm chớ lo nhiều. Con đi trăm núi ngàn khe, chưa bằng muôn nỗi tái tê lòng bầm. Tình mẫu tử thiêng liêng hòa cùng tình yêu Tổ quốc vĩ đại.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Bầm ơi có rét tình quê, bầm thương con bầm chớ lo nhiều. Con đi trăm núi ngàn khe, chưa bằng muôn nỗi tái tê lòng bầm. Tình mẫu tử thiêng liêng hòa cùng tình yêu Tổ quốc vĩ đại."
       ],
-      "audioNarration": "Bầm ơi. Bầm ơi có rét tình quê, bầm thương con bầm chớ lo nhiều. Con đi trăm núi ngàn khe, chưa bằng muôn nỗi tái tê lòng bầm. Tình mẫu tử thiêng liêng hòa cùng tình yêu Tổ quốc vĩ đại. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Bầm ơi. Bầm ơi có rét tình quê, bầm thương con bầm chớ lo nhiều. Con đi trăm núi ngàn khe, chưa bằng muôn nỗi tái tê lòng bầm. Tình mẫu tử thiêng liêng hòa cùng tình yêu Tổ quốc vĩ đại.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6483,10 +6410,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "SGK Tiếng Việt 5",
       "genre": "prose",
       "content": [
-        "Mặt trời đỏ rực như quả cầu lửa khổng lồ từ từ nhô lên từ lòng biển cả, nhuộm hồng những cánh buồm căng gió và sóng biển lấp lánh muôn ngàn vảy bạc.",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Mặt trời đỏ rực như quả cầu lửa khổng lồ từ từ nhô lên từ lòng biển cả, nhuộm hồng những cánh buồm căng gió và sóng biển lấp lánh muôn ngàn vảy bạc."
       ],
-      "audioNarration": "Buổi sáng trên bãi biển. Mặt trời đỏ rực như quả cầu lửa khổng lồ từ từ nhô lên từ lòng biển cả, nhuộm hồng những cánh buồm căng gió và sóng biển lấp lánh muôn ngàn vảy bạc. Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Buổi sáng trên bãi biển. Mặt trời đỏ rực như quả cầu lửa khổng lồ từ từ nhô lên từ lòng biển cả, nhuộm hồng những cánh buồm căng gió và sóng biển lấp lánh muôn ngàn vảy bạc.",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",
@@ -6531,10 +6457,9 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
       "author": "WonderKids",
       "genre": "prose",
       "content": [
-        "Vinh danh các Trạng Nguyên xuất sắc đã hoàn thành trọn vẹn chương trình Tiểu học (Lớp 1-5). Chúc các em luôn tự tin, tỏa sáng và bay cao trên con đường chinh phục tri thức tương lai!",
-        "Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học."
+        "Vinh danh các Trạng Nguyên xuất sắc đã hoàn thành trọn vẹn chương trình Tiểu học (Lớp 1-5). Chúc các em luôn tự tin, tỏa sáng và bay cao trên con đường chinh phục tri thức tương lai!"
       ],
-      "audioNarration": "Đấu trường Vinh danh Trạng Nguyên Toàn Cấp. Vinh danh các Trạng Nguyên xuất sắc đã hoàn thành trọn vẹn chương trình Tiểu học (Lớp 1-5). Chúc các em luôn tự tin, tỏa sáng và bay cao trên con đường chinh phục tri thức tương lai! Áng văn chứa chan cảm xúc và giá trị tư tưởng sâu sắc, là hành trang tri thức và bồi dưỡng nhân cách toàn diện cho học sinh tốt nghiệp Tiểu học.",
+      "audioNarration": "Đấu trường Vinh danh Trạng Nguyên Toàn Cấp. Vinh danh các Trạng Nguyên xuất sắc đã hoàn thành trọn vẹn chương trình Tiểu học (Lớp 1-5). Chúc các em luôn tự tin, tỏa sáng và bay cao trên con đường chinh phục tri thức tương lai!",
       "vocabularyNotes": [
         {
           "word": "Chí công vô tư",

@@ -578,14 +578,14 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   {isVerifiedSgk ? (
                     <div className="inline-flex items-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>📖</span>
-                      <span className="font-extrabold text-emerald-950">Nội dung theo SGK đã đối chiếu:</span>
+                      <span className="font-extrabold text-emerald-950">SGK Chuẩn GDPT 2018:</span>
                       <span>{lesson.sourceDetail || lesson.textbookPageRef}</span>
                     </div>
                   ) : (
                     <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-blue-900 bg-blue-100/90 border border-blue-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>🌱</span>
-                      <span className="font-extrabold text-blue-950">NỘI DUNG TỰ SINH</span>
-                      {lesson.referenceBook && <span>— Tham khảo: {lesson.referenceBook}</span>}
+                      <span className="font-extrabold text-blue-950">Nội Dung Bổ Trợ Sư Phạm</span>
+                      {lesson.sourceBook && <span>— {lesson.sourceBook}</span>}
                     </div>
                   )}
                 </div>
@@ -598,7 +598,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 {/* Author & Book Citation */}
                 {passage.author && (
                   <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
-                    Thông tin bài đọc: {passage.author} {lesson.referenceDetail ? `— ${lesson.referenceDetail}` : ''}
+                    Tác giả: {passage.author} {lesson.sourceBook ? `• ${lesson.sourceBook}` : ''}
                   </p>
                 )}
 
