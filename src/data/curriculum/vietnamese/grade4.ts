@@ -4,7 +4,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   // ================= TẬP 1 (BÀI 1 ĐẾN BÀI 15) =================
   {
     id: 'tv-g4-b1', semester: 1, lessonNumber: 1,
-    title: 'Bài 1: Điều kì diệu & Luyện từ và câu: Danh từ chung & Danh từ riêng',
+    title: 'Bài 1: Dế Mèn bênh vực kẻ yếu (Phần 1)',
     unit: 'Tập 1 - Chủ đề 1: Mỗi người một vẻ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 10, 11',
     description: 'Khái niệm Danh từ là từ chỉ sự vật (người, vật, hiện tượng, khái niệm). Phân biệt Danh từ chung và Danh từ riêng.',
@@ -14,7 +14,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b2', semester: 1, lessonNumber: 2,
-    title: 'Bài 2: Thi nhạc & Quy tắc viết hoa tên người, tên địa lý Việt Nam',
+    title: 'Bài 2: Mẹ vắng nhà ngày bão',
     unit: 'Tập 1 - Chủ đề 1: Mỗi người một vẻ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 16, 17',
     description: 'Quy tắc vàng viết hoa tên cơ quan, trường học, di tích lịch sử và tên danh nhân.',
@@ -24,7 +24,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b3', semester: 1, lessonNumber: 3,
-    title: 'Bài 3: Anh em sinh đôi & Mở rộng vốn từ: Tính cách',
+    title: 'Bài 3: Dế Mèn bênh vực kẻ yếu (Phần 2)',
     unit: 'Tập 1 - Chủ đề 1: Mỗi người một vẻ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 22, 23',
     description: 'Mỗi người có một tính cách và sở thích riêng, cùng tôn trọng sự khác biệt.',
@@ -34,7 +34,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b4', semester: 1, lessonNumber: 4,
-    title: 'Bài 4: Công chúa và người dẫn chuyện & Luyện từ và câu: Động từ',
+    title: 'Bài 4: Truyện cổ nước mình',
     unit: 'Tập 1 - Chủ đề 2: Đôi cánh ước mơ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 28, 29',
     description: 'Khái niệm Động từ là từ chỉ hoạt động (chạy, nhảy, đọc, viết) hoặc trạng thái (ngủ, suy nghĩ, yêu thương).',
@@ -44,7 +44,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b5', semester: 1, lessonNumber: 5,
-    title: 'Bài 5: Thằn lằn xanh và tắc kè & Luyện từ và câu: Tính từ',
+    title: 'Bài 5: Thằn lằn xanh và tắc kè',
     unit: 'Tập 1 - Chủ đề 2: Đôi cánh ước mơ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 36, 37',
     description: 'Tính từ là từ chỉ đặc điểm, tính chất của sự vật (màu sắc, hình dáng, kích thước, phẩm chất, âm thanh).',
@@ -54,7 +54,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b6', semester: 1, lessonNumber: 6,
-    title: 'Bài 6: Nghệ sĩ nhí & Luyện tập về Tính từ & Từ láy',
+    title: 'Bài 6: Nghệ sĩ nhí',
     unit: 'Tập 1 - Chủ đề 2: Đôi cánh ước mơ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 42, 43',
     description: 'Phối hợp các từ láy và tính từ để miêu tả âm thanh, ánh sáng, cảnh vật sống động.',
@@ -64,7 +64,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b7', semester: 1, lessonNumber: 7,
-    title: 'Bài 7: Bài ca Trái Đất & Dấu gạch ngang ( - )',
+    title: 'Bài ca Trái Đất',
     unit: 'Tập 1 - Chủ đề 3: Măng non',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 50, 51',
     description: 'Công dụng của dấu gạch ngang: 1. Đánh dấu lời nói trực tiếp của nhân vật. 2. Đánh dấu các ý liệt kê. 3. Đánh dấu phần chú thích.',
@@ -74,7 +74,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b8', semester: 1, lessonNumber: 8,
-    title: 'Bài 8: Nhà bác học của đồng ruộng & Kể chuyện danh nhân Lương Định Của',
+    title: 'Bài 8: Nhà bác học của đồng ruộng',
     unit: 'Tập 1 - Chủ đề 3: Măng non',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 58, 59',
     description: 'Giáo sư Lương Định Của vượt qua giá rét đêm đông ủ giống lúa mới quý báu cho bà con nông dân.',
@@ -84,7 +84,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b9', semester: 1, lessonNumber: 9,
-    title: 'Bài 9: Ôn tập & Đánh giá giữa Học kì 1',
+    title: 'Bài 9: Nếu chúng mình có phép lạ',
     unit: 'Tập 1 - Chủ đề 3: Ôn tập giữa kì',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 66, 67',
     description: 'Hệ thống hóa Danh từ, Động từ, Tính từ, quy tắc viết hoa và dấu gạch ngang.',
@@ -94,7 +94,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b10', semester: 1, lessonNumber: 10,
-    title: 'Bài 10: Cây đa quê hương & Đoạn văn nêu cảm nghĩ',
+    title: 'Bài 10: Cây đa quê hương',
     unit: 'Tập 1 - Chủ đề 4: Chắp cánh ước mơ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 74, 75',
     description: 'Cây đa cổ thụ rợp bóng đầu làng là chứng nhân lịch sử gắn liền với bao thế hệ.',
@@ -104,7 +104,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b11', semester: 1, lessonNumber: 11,
-    title: 'Bài 11: Về thăm bà & Tập làm văn: Viết đoạn văn tưởng tượng',
+    title: 'Bài 11: Về thăm bà',
     unit: 'Tập 1 - Chủ đề 4: Chắp cánh ước mơ',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 82, 83',
     description: 'Phát huy trí tưởng tượng phong phú sáng tạo câu chuyện kỳ ảo, gặp gỡ nàng tiên, chú rô-bốt.',
@@ -114,7 +114,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b12', semester: 1, lessonNumber: 12,
-    title: 'Bài 12: Ôn tập cuối Học kì 1 Tiếng Việt Lớp 4',
+    title: 'Bài 12: Đôi bạn trong rừng xanh',
     unit: 'Tập 1 - Chủ đề 5: Ôn tập cuối học kì 1',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập một — Trang 90, 91',
     description: 'Đề kiểm tra tổng hợp đọc hiểu, viết đoạn văn nêu ý kiến và ngữ pháp Tập 1.',
@@ -126,7 +126,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   // ================= TẬP 2 (BÀI 13 ĐẾN BÀI 25) =================
   {
     id: 'tv-g4-b13', semester: 2, lessonNumber: 13,
-    title: 'Bài 13: Thành phần câu: Chủ ngữ & Vị ngữ trong câu kể',
+    title: 'Bài 13: Chiếc ô màu đỏ',
     unit: 'Tập 2 - Chủ đề 6: Khám phá thế giới',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 8, 9',
     description: 'Chủ ngữ (nói về ai/cái gì) và Vị ngữ (nói về hoạt động/đặc điểm của chủ ngữ).',
@@ -136,7 +136,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b14', semester: 2, lessonNumber: 14,
-    title: 'Bài 14: Trạng ngữ chỉ Nơi chốn (Ở đâu?) & Thời gian (Khi nào?)',
+    title: 'Bài 14: Buổi sớm trên quê hương',
     unit: 'Tập 2 - Chủ đề 6: Khám phá thế giới',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 18, 19',
     description: 'Trạng ngữ bổ sung thông tin cho nòng cốt câu. Trạng ngữ nơi chốn (Ở đâu?), thời gian (Khi nào?).',
@@ -146,7 +146,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b15', semester: 2, lessonNumber: 15,
-    title: 'Bài 15: Trạng ngữ chỉ Nguyên nhân (Vì sao?), Mục đích (Để làm gì?)',
+    title: 'Bài 15: Bông hoa niềm vui',
     unit: 'Tập 2 - Chủ đề 6: Khám phá thế giới',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 28, 29',
     description: 'Trạng ngữ nguyên nhân (Nhờ chăm chỉ, Vì mưa to...), Trạng ngữ mục đích (Để đạt kết quả cao...).',
@@ -156,7 +156,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b16', semester: 2, lessonNumber: 16,
-    title: 'Bài 16: Vịnh Hạ Long & Bài văn miêu tả cây cối (Cấu trúc 3 phần)',
+    title: 'Bài 16: Vịnh Hạ Long',
     unit: 'Tập 2 - Chủ đề 7: Vẻ đẹp muôn màu',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 38, 39',
     description: 'Cấu trúc bài văn miêu tả: 1. Mở bài (Giới thiệu cây). 2. Thân bài (Tả bao quát rồi tả từng bộ phận). 3. Kết bài (Cảm xúc và ích lợi).',
@@ -166,7 +166,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b17', semester: 2, lessonNumber: 17,
-    title: 'Bài 17: Hang Sơn Đoòng & Tả cảnh quan thiên nhiên kỳ vĩ',
+    title: 'Bài 17: Hang Sơn Đoòng',
     unit: 'Tập 2 - Chủ đề 7: Vẻ đẹp muôn màu',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 48, 49',
     description: 'Hang động tự nhiên lớn nhất thế giới ẩn chứa cả khu rừng nguyên sinh và sông ngầm bí ẩn tại Quảng Bình.',
@@ -176,7 +176,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b18', semester: 2, lessonNumber: 18,
-    title: 'Bài 18: Chú bé Lượm & Lòng dũng cảm của thiếu nhi yêu nước',
+    title: 'Bài 18: Chú bé Lượm',
     unit: 'Tập 2 - Chủ đề 8: Những người quả cảm',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 58, 59',
     description: 'Hình ảnh chú bé liên lạc Lượm dũng cảm vượt qua bom đạn truyền thư thượng khẩn.',
@@ -186,7 +186,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b19', semester: 2, lessonNumber: 19,
-    title: 'Bài 19: Khúc hát ru những em bé lớn trên lưng mẹ & Tình mẫu tử thiêng liêng',
+    title: 'Bài 19: Khúc hát ru những em bé lớn trên lưng mẹ',
     unit: 'Tập 2 - Chủ đề 8: Những người quả cảm',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 68, 69',
     description: 'Người mẹ Tà-ôi vừa giã gạo nuôi quân vừa địu con trên lưng, ước mong con lớn khôn trở thành người tự do.',
@@ -196,7 +196,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b20', semester: 2, lessonNumber: 20,
-    title: 'Bài 20: Ôn tập Ngữ pháp: Chủ ngữ, Vị ngữ, Trạng ngữ cả năm',
+    title: 'Bài 20: Con suối mát lành',
     unit: 'Tập 2 - Chủ đề 9: Ôn tập cuối năm',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 78, 79',
     description: 'Hệ thống hóa toàn bộ các thành phần câu trong tiếng Việt: Trạng ngữ (TN) + Chủ ngữ (CN) + Vị ngữ (VN).',
@@ -206,7 +206,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b21', semester: 2, lessonNumber: 21,
-    title: 'Bài 21: Ôn tập Tập làm văn: Bài văn miêu tả Cây cối & Con vật',
+    title: 'Bài 21: Mùa quả chín quê em',
     unit: 'Tập 2 - Chủ đề 9: Ôn tập cuối năm',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 86, 87',
     description: 'Hoàn thiện bài văn miêu tả hoàn chỉnh có mở bài gián tiếp và kết bài mở rộng.',
@@ -216,7 +216,7 @@ export const VIETNAMESE_GRADE_4_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g4-b22', semester: 2, lessonNumber: 22,
-    title: 'Bài 22: Đánh giá & Vinh danh Trạng Nguyên Tiếng Việt Lớp 4',
+    title: 'Bài 22: Đấu trường Trạng Nguyên Lớp 4',
     unit: 'Tập 2 - Chủ đề 9: Ôn tập cuối năm',
     textbookPageRef: 'SGK Tiếng Việt 4 Tập hai — Trang 96, 97',
     description: 'Đề kiểm tra tổng kết đánh giá năng lực Tiếng Việt Lớp 4.',

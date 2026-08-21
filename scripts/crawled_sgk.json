@@ -1,0 +1,834 @@
+{
+  "Lớp 1": {
+    "grade": 1,
+    "tong_so_sach_tim_thay": 18,
+    "tieng_viet": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-1-tap-mot-940092412.940092412",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0408/img_2026-04-08_69d6fd4c0f046.jpg",
+        "title": "Tiếng Việt 1, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-1-tap-hai-939724784.939724784",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7765f0914f.jpg",
+        "title": "Tiếng Việt 1, tập hai"
+      }
+    ],
+    "toan": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-1-tap-mot-940114881.940114881",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d77678419ae.jpg",
+        "title": "Toán 1, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-1-tap-hai-940245815.940245815",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc503dadbf0.jpg",
+        "title": "Toán 1, tập hai"
+      }
+    ],
+    "tieng_anh": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-1-global.953746322",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/2026/0525/page-000-1779701019837.jpg",
+        "title": "Tiếng Anh 1- Global Success"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-1-family-and-friends-national-edition-940176951.940176951",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/d89fde7b-dbae-e2c5-95a4-2e7035fe9dd0-202508011609508115-1772075535603.jpg",
+        "title": "Tiếng Anh 1 - Family and Friends - National Edition"
+      }
+    ],
+    "tat_ca_sach_chinh": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-1-tap-mot-940092412.940092412",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0408/img_2026-04-08_69d6fd4c0f046.jpg",
+        "title": "Tiếng Việt 1, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-1-tap-hai-939724784.939724784",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7765f0914f.jpg",
+        "title": "Tiếng Việt 1, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-1-tap-mot-940114881.940114881",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d77678419ae.jpg",
+        "title": "Toán 1, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-1-tap-hai-940245815.940245815",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc503dadbf0.jpg",
+        "title": "Toán 1, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tu-nhien-va-xa-hoi-1-939828227.939828227",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d777abeca66.jpg",
+        "title": "Tự nhiên và Xã hội 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-1-939913511.939913511",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7782f39fb0.jpg",
+        "title": "Đạo đức 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-1-940002670.940002670",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7792ef19e3.jpg",
+        "title": "Âm nhạc 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-1-939846337.939846337",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d779d9cdeb3.jpg",
+        "title": "Mĩ thuật 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-1-939909337.939909337",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7a6f96ef39.jpg",
+        "title": "Hoạt động trải nghiệm 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/giao-duc-the-chat-1-940227343.940227343",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7a795a9e07.jpg",
+        "title": "Giáo dục thể chất 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-1-global.953746322",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/2026/0525/page-000-1779701019837.jpg",
+        "title": "Tiếng Anh 1- Global Success"
+      }
+    ],
+    "tat_ca_sach_khac": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tu-nhien-va-xa-hoi-1-940263262.940263262",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/ff08d4f0-7212-4600-a325-a7c037e82af2-202507210940021160-1772087908275.jpg",
+        "title": "Tự nhiên và Xã hội 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-1-940077894.940077894",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/a9dbb066-5394-4569-9c4b-5f2e254e2832-202507210940170735-1772075226075.jpg",
+        "title": "Đạo đức 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-1-939881273.939881273",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/524b5eb4-d37d-42a2-ac69-d68e447d7f3c-202507210940358652-1772074615166.jpg",
+        "title": "Âm nhạc 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-1-940225805.940225805",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/edcfe177-e484-44cc-8ca3-7ce7297bc45e-202507210940526887-1772087384999.jpg",
+        "title": "Mĩ thuật 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-1-939985315.939985315",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/812420e9-fc4b-4a25-be28-1bc14ad0827e-202507210941061566-1772074916449.jpg",
+        "title": "Hoạt động trải nghiệm 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-1-family-and-friends-national-edition-940176951.940176951",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/d89fde7b-dbae-e2c5-95a4-2e7035fe9dd0-202508011609508115-1772075535603.jpg",
+        "title": "Tiếng Anh 1 - Family and Friends - National Edition"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/giao-duc-the-chat-1-939741124.939741124",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/1606b7d4-a9d4-4eda-8b56-a5fa3fd10051-202507210941199967-1772074172256.jpg",
+        "title": "Giáo dục thể chất 1"
+      }
+    ]
+  },
+  "Lớp 2": {
+    "grade": 2,
+    "tong_so_sach_tim_thay": 23,
+    "tieng_viet": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-mot-940104293.940104293",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7a8946a8b9.jpg",
+        "title": "Tiếng Việt 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-hai-940040335.940040335",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7a94b5d62e.jpg",
+        "title": "Tiếng Việt 2, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-mot-939843798.939843798",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/413dc3bd-e661-f06f-8fa1-7779320f4739-202507211107125522-1772074501768.jpg",
+        "title": "Tiếng Việt 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-hai-939964830.939964830",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/796704f0-d4de-ad80-bc85-8c194c746b48-202507211105408382-1772074862651.jpg",
+        "title": "Tiếng Việt 2, tập hai"
+      }
+    ],
+    "toan": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-mot-939830550.939830550",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7ad41d81b4.jpg",
+        "title": "Toán 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-hai-939971500.939971500",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc6225c243c.jpg",
+        "title": "Toán 2, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-mot-939910270.939910270",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/5d0605d2-8cf1-797c-a2d0-215ff304aff9-202507211108225040-1772074698615.jpg",
+        "title": "Toán 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-hai-939999688.939999688",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/8878526f-1d7c-656c-8ecc-98edd24be9e3-202507211109280110-1772074954333.jpg",
+        "title": "Toán 2, tập hai"
+      }
+    ],
+    "tieng_anh": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-2-global-success.953747559",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/2026/0525/page-000-1779701711027.jpg",
+        "title": "Tiếng Anh 2- Global Success"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-2-family-and-friends-national-edition-939915665.939915665",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/5ff24b9d-335a-ce99-b90d-827691ddac2f-202508011610543908-1772074716796.jpg",
+        "title": "Tiếng Anh 2 - Family and Friends - National Edition"
+      }
+    ],
+    "tat_ca_sach_chinh": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-mot-940104293.940104293",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7a8946a8b9.jpg",
+        "title": "Tiếng Việt 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-hai-940040335.940040335",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7a94b5d62e.jpg",
+        "title": "Tiếng Việt 2, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-mot-939830550.939830550",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7ad41d81b4.jpg",
+        "title": "Toán 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-hai-939971500.939971500",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc6225c243c.jpg",
+        "title": "Toán 2, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tu-nhien-va-xa-hoi-2-940154850.940154850",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7ae15eb4e8.jpg",
+        "title": "Tự nhiên và Xã hội 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-2-940142422.940142422",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7aeb098fbc.jpg",
+        "title": "Đạo đức 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-2-939765325.939765325",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7af215c684.jpg",
+        "title": "Âm nhạc 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-2-940184727.940184727",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7afb0ca92c.jpg",
+        "title": "Mĩ thuật 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-2-939930503.939930503",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b03159f14.jpg",
+        "title": "Hoạt động trải nghiệm 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/giao-duc-the-chat-2-940053492.940053492",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b0ade20a4.jpg",
+        "title": "Giáo dục thể chất 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-2-global-success.953747559",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/2026/0525/page-000-1779701711027.jpg",
+        "title": "Tiếng Anh 2- Global Success"
+      }
+    ],
+    "tat_ca_sach_khac": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-mot-939843798.939843798",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/413dc3bd-e661-f06f-8fa1-7779320f4739-202507211107125522-1772074501768.jpg",
+        "title": "Tiếng Việt 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-2-tap-hai-939964830.939964830",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/796704f0-d4de-ad80-bc85-8c194c746b48-202507211105408382-1772074862651.jpg",
+        "title": "Tiếng Việt 2, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-mot-939910270.939910270",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/5d0605d2-8cf1-797c-a2d0-215ff304aff9-202507211108225040-1772074698615.jpg",
+        "title": "Toán 2, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-2-tap-hai-939999688.939999688",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/8878526f-1d7c-656c-8ecc-98edd24be9e3-202507211109280110-1772074954333.jpg",
+        "title": "Toán 2, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tu-nhien-va-xa-hoi-2-940266979.940266979",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/ffc305af-086a-b1ad-82b4-bd80753b8bda-202507211110479257-1772087963746.jpg",
+        "title": "Tự nhiên và Xã hội 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-anh-2-family-and-friends-national-edition-939915665.939915665",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/5ff24b9d-335a-ce99-b90d-827691ddac2f-202508011610543908-1772074716796.jpg",
+        "title": "Tiếng Anh 2 - Family and Friends - National Edition"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-2-940056137.940056137",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/9ec63142-8810-4f31-b839-5afaf8bda892-202507210941558130-1772075165463.jpg",
+        "title": "Đạo đức 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-2-940071651.940071651",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/a733c5f4-fb3b-4415-869c-e3690fc4ae78-202507211111411553-1772075207878.jpg",
+        "title": "Âm nhạc 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-2-ban-1-939735970.939735970",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/12a5e5b0-3a3b-0d69-9a5a-bc70c803db3d-202507211012371898-1772074157743.jpg",
+        "title": "Mĩ thuật 2 (Bản 1)"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-2-ban-2-940115473.940115473",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/b93c9332-f5e2-9bbb-b2a6-fb50227f246d-202410080935446540-1772075337249.jpg",
+        "title": "Mĩ thuật 2, bản 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-2-ban-2-940061844.940061844",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/a0e17451-7309-b107-b1e8-2504ccb569ee-202501151050564045-1772075179391.jpg",
+        "title": "Hoạt động trải nghiệm 2, bản 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-2-ban-1-939777434.939777434",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/24e41f13-a2d3-9184-bfe9-a02ad7a48cf7-202507211008325448-1772074281567.jpg",
+        "title": "Hoạt động trải nghiệm 2 (Bản 1)"
+      }
+    ]
+  },
+  "Lớp 3": {
+    "grade": 3,
+    "tong_so_sach_tim_thay": 24,
+    "tieng_viet": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-mot-940169244.940169244",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b15657eb0.jpg",
+        "title": "Tiếng Việt 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-hai-940192790.940192790",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b2c8b8e70.jpg",
+        "title": "Tiếng Việt 3, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-mot-939747982.939747982",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/1839356d-4665-8242-a767-a47426c1a9c7-202507211119157780-1772074195754.jpg",
+        "title": "Tiếng Việt 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-hai-939948788.939948788",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/722e129e-4396-93a2-921c-3d85e23247ca-202507211120293987-1772074822049.jpg",
+        "title": "Tiếng Việt 3, tập hai"
+      }
+    ],
+    "toan": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-mot-940103475.940103475",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b37e00522.jpg",
+        "title": "Toán 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-hai-939821615.939821615",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc634945cdb.jpg",
+        "title": "Toán 3, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-mot-939748183.939748183",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/189e5811-0231-751e-a694-77070ed351cf-202507211121358332-1772074199809.jpg",
+        "title": "Toán 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-hai-939993401.939993401",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/84eeedfd-a119-1306-972e-8ced478412a6-202507211122282388-1772074938340.jpg",
+        "title": "Toán 3, tập hai"
+      }
+    ],
+    "tieng_anh": [],
+    "tat_ca_sach_chinh": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-mot-940169244.940169244",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b15657eb0.jpg",
+        "title": "Tiếng Việt 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-hai-940192790.940192790",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b2c8b8e70.jpg",
+        "title": "Tiếng Việt 3, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-mot-940103475.940103475",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b37e00522.jpg",
+        "title": "Toán 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-hai-939821615.939821615",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc634945cdb.jpg",
+        "title": "Toán 3, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tu-nhien-va-xa-hoi-3-939945290.939945290",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b407db2d3.jpg",
+        "title": "Tự nhiên và Xã hội 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-3-939806937.939806937",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b4b1e0a0a.jpg",
+        "title": "Đạo đức 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-3-940121268.940121268",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b54bac929.jpg",
+        "title": "Âm nhạc 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-3-939933442.939933442",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b5c6e0e0a.jpg",
+        "title": "Mĩ thuật 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/cong-nghe-3-939936136.939936136",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b63fb8e92.jpg",
+        "title": "Công nghệ 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tin-hoc-3-940253536.940253536",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b6ac0354a.jpg",
+        "title": "Tin học 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-3-939962781.939962781",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b71c68010.jpg",
+        "title": "Hoạt động trải nghiệm 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/giao-duc-the-chat-3-939730837.939730837",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7b7d245fc5.jpg",
+        "title": "Giáo dục thể chất 3"
+      }
+    ],
+    "tat_ca_sach_khac": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-mot-939747982.939747982",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/1839356d-4665-8242-a767-a47426c1a9c7-202507211119157780-1772074195754.jpg",
+        "title": "Tiếng Việt 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-3-tap-hai-939948788.939948788",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/722e129e-4396-93a2-921c-3d85e23247ca-202507211120293987-1772074822049.jpg",
+        "title": "Tiếng Việt 3, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-mot-939748183.939748183",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/189e5811-0231-751e-a694-77070ed351cf-202507211121358332-1772074199809.jpg",
+        "title": "Toán 3, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-3-tap-hai-939993401.939993401",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/84eeedfd-a119-1306-972e-8ced478412a6-202507211122282388-1772074938340.jpg",
+        "title": "Toán 3, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tu-nhien-va-xa-hoi-3-940265495.940265495",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/ffb8930c-63b0-ba4c-90da-84a4d184bd43-202507211123455151-1772087947436.jpg",
+        "title": "Tự nhiên và Xã hội 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/cong-nghe-3-940122527.940122527",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/bb580e2f-3c2d-b0ae-b8a2-134791eaf9d0-202507211112420451-1772075362185.jpg",
+        "title": "Công nghệ 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tin-hoc-3-940106814.940106814",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/b5a65db6-c4f3-604e-9bf9-be3a5c02dbeb-202507211117591716-1772075309660.jpg",
+        "title": "Tin học 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-3-940141905.940141905",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/c6f96f9f-2b38-8650-8821-9e2b9fc5ee3c-202507211125306770-1772075413455.jpg",
+        "title": "Đạo đức 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-3-940136619.940136619",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/c4dbb029-82cf-2e2d-9451-62179a504ffc-202507211124360106-1772075401123.jpg",
+        "title": "Âm nhạc 3"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-3-ban-1-939794800.939794800",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/2e16201c-fede-f681-8dc6-398346430d55-202507211115584759-1772074347205.jpg",
+        "title": "Mĩ thuật 3, bản 1"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-3-ban-2-939932209.939932209",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/6830cef6-6e05-37d0-a8f1-caee5dac6b0b-202507211117015683-1772074769124.jpg",
+        "title": "Mĩ thuật 3, bản 2"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-3-ban-1-940146775.940146775",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/c8bfa9b6-1c0b-dbbc-bc09-1d3778a1ccca-202507211114534531-1772075435393.jpg",
+        "title": "Hoạt động trải nghiệm 3, bản 1"
+      }
+    ]
+  },
+  "Lớp 4": {
+    "grade": 4,
+    "tong_so_sach_tim_thay": 24,
+    "tieng_viet": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-mot-939811319.939811319",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7bfa41f524.jpg",
+        "title": "Tiếng Việt 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-hai-940215495.940215495",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c0468531f.jpg",
+        "title": "Tiếng Việt 4, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-mot-940201332.940201332",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/e4eb91be-2bbe-40ee-bed9-0b3091cf7e3e-202507160954151230-1772075599808.jpg",
+        "title": "Tiếng Việt 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-hai-940051260.940051260",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/9d52fadb-27d6-47c9-b7c5-e6a96f5a8f75-202507160955209450-1772075146243.jpg",
+        "title": "Tiếng Việt 4, tập hai"
+      }
+    ],
+    "toan": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-mot-939781966.939781966",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc6479f0c26.jpg",
+        "title": "Toán 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-hai-939791544.939791544",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c1d75f1d1.jpg",
+        "title": "Toán 4, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-mot-940238180.940238180",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/f09c9e68-a314-42dc-9086-793a2f5199a1-202507160956279599-1772087601288.jpg",
+        "title": "Toán 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-hai-940237510.940237510",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/f03a5ccb-43bd-4804-9b2b-7693c35cb9cd-202507160957243262-1772087585116.jpg",
+        "title": "Toán 4, tập hai"
+      }
+    ],
+    "tieng_anh": [],
+    "tat_ca_sach_chinh": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-mot-939811319.939811319",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7bfa41f524.jpg",
+        "title": "Tiếng Việt 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-hai-940215495.940215495",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c0468531f.jpg",
+        "title": "Tiếng Việt 4, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-mot-939781966.939781966",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc6479f0c26.jpg",
+        "title": "Toán 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-hai-939791544.939791544",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c1d75f1d1.jpg",
+        "title": "Toán 4, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/khoa-hoc-4-939727300.939727300",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c292ce3b7.jpg",
+        "title": "Khoa học 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-4-940155676.940155676",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c34663132.jpg",
+        "title": "Đạo đức 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-4-940087407.940087407",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c3c4432b6.jpg",
+        "title": "Âm nhạc 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-4-940016548.940016548",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c451f2853.jpg",
+        "title": "Mĩ thuật 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/cong-nghe-4-940256332.940256332",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c4cb14ff5.jpg",
+        "title": "Công nghệ 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/lich-su-va-dia-li-4-939734868.939734868",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/2026/0428/page-000-1777370093904.jpg",
+        "title": "Lịch sử và Địa lí 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tin-hoc-4-940020933.940020933",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c56613479.jpg",
+        "title": "Tin học 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-4-939743305.939743305",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d7c5de1694d.jpg",
+        "title": "Hoạt động trải nghiệm 4"
+      }
+    ],
+    "tat_ca_sach_khac": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-mot-940201332.940201332",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/e4eb91be-2bbe-40ee-bed9-0b3091cf7e3e-202507160954151230-1772075599808.jpg",
+        "title": "Tiếng Việt 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-4-tap-hai-940051260.940051260",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/9d52fadb-27d6-47c9-b7c5-e6a96f5a8f75-202507160955209450-1772075146243.jpg",
+        "title": "Tiếng Việt 4, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-mot-940238180.940238180",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/f09c9e68-a314-42dc-9086-793a2f5199a1-202507160956279599-1772087601288.jpg",
+        "title": "Toán 4, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-4-tap-hai-940237510.940237510",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/f03a5ccb-43bd-4804-9b2b-7693c35cb9cd-202507160957243262-1772087585116.jpg",
+        "title": "Toán 4, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-4-940094848.940094848",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/b0ae6fc6-4c10-4ae2-ba7f-89b10fec7adc-202507160958095848-1772075277331.jpg",
+        "title": "Đạo đức 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/khoa-hoc-4-940236538.940236538",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/effd122d-adfc-4086-bcff-db016daec09d-202507160959050074-1772087565229.jpg",
+        "title": "Khoa học 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/lich-su-va-dia-li-4-940257749.940257749",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/fad20745-e548-40f5-bff0-8e057ee0c046-202507161000237987-1772087874555.jpg",
+        "title": "Lịch sử và Địa lí 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tin-hoc-4-939991264.939991264",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/844bbe79-2d8f-4796-977d-5f699887d67e-202507161001095602-1772074933503.jpg",
+        "title": "Tin học 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/cong-nghe-4-939972957.939972957",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/7c46dcf0-c560-427b-b452-d32ecc21e0ac-202507161002311059-1772074886121.jpg",
+        "title": "Công nghệ 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/giao-duc-the-chat-4-940129993.940129993",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/c09ac557-982f-4f47-82e1-fb8993136d55-202507161003122428-1772075380289.jpg",
+        "title": "Giáo dục thể chất 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-4-940234229.940234229",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/efaf7e41-31fc-433f-8440-0e803bee58d6-202507161005210327-1772087546213.jpg",
+        "title": "Âm nhạc 4"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-4-ban-1-939733245.939733245",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/12136c77-3b42-4144-a23a-1c4d2bd7e483-202507161006119110-1772074148763.jpg",
+        "title": "Mĩ thuật 4, bản 1"
+      }
+    ]
+  },
+  "Lớp 5": {
+    "grade": 5,
+    "tong_so_sach_tim_thay": 24,
+    "tieng_viet": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-mot-939751774.939751774",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d850843c7f7.jpg",
+        "title": "Tiếng Việt 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-hai-940254580.940254580",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d8512273d6f.jpg",
+        "title": "Tiếng Việt 5, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-mot-939870658.939870658",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/4e9b62e2-0514-0687-9c50-81d21b777f4e-202507161418025335-1772074588787.jpg",
+        "title": "Tiếng Việt 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-hai-939817986.939817986",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/378563a4-ed25-7c6b-9fa2-8515db9d2fb4-202507161419451088-1772074420664.jpg",
+        "title": "Tiếng Việt 5, tập hai"
+      }
+    ],
+    "toan": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-mot-939842795.939842795",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d851c100247.jpg",
+        "title": "Toán 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-hai-940023543.940023543",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc6509ae6d9.jpg",
+        "title": "Toán 5, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-mot-939810230.939810230",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/344ead7c-98a8-036e-ac81-eedc43631a99-202507161420476322-1772074395371.jpg",
+        "title": "Toán 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-hai-940126493.940126493",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/bead3825-fac6-c488-88d6-462cb0c1a8a9-202507161421580195-1772075374080.jpg",
+        "title": "Toán 5, tập hai"
+      }
+    ],
+    "tieng_anh": [],
+    "tat_ca_sach_chinh": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-mot-939751774.939751774",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d850843c7f7.jpg",
+        "title": "Tiếng Việt 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-hai-940254580.940254580",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d8512273d6f.jpg",
+        "title": "Tiếng Việt 5, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-mot-939842795.939842795",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d851c100247.jpg",
+        "title": "Toán 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-hai-940023543.940023543",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0412/img_2026-04-12_69dc6509ae6d9.jpg",
+        "title": "Toán 5, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/khoa-hoc-5-939793675.939793675",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d8523607582.jpg",
+        "title": "Khoa học 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-5-940255890.940255890",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d852af38bea.jpg",
+        "title": "Đạo đức 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-5-939738350.939738350",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d85304c6a70.jpg",
+        "title": "Âm nhạc 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-5-939875647.939875647",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d854fcafee8.jpg",
+        "title": "Mĩ thuật 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/cong-nghe-5-939713238.939713238",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d85550abc39.jpg",
+        "title": "Công nghệ 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/lich-su-va-dia-li-5-940242469.940242469",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/2026/0506/page-000-1778035889749.jpg",
+        "title": "Lịch sử và Địa lí 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tin-hoc-5-940231532.940231532",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d855b9df33d.jpg",
+        "title": "Tin học 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/hoat-dong-trai-nghiem-5-940173219.940173219",
+        "thumbnail": "https://cdn3.olm.vn/upload/img/0409/img_2026-04-09_69d85622889b6.jpg",
+        "title": "Hoạt động trải nghiệm 5"
+      }
+    ],
+    "tat_ca_sach_khac": [
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-mot-939870658.939870658",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/4e9b62e2-0514-0687-9c50-81d21b777f4e-202507161418025335-1772074588787.jpg",
+        "title": "Tiếng Việt 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tieng-viet-5-tap-hai-939817986.939817986",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/378563a4-ed25-7c6b-9fa2-8515db9d2fb4-202507161419451088-1772074420664.jpg",
+        "title": "Tiếng Việt 5, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-mot-939810230.939810230",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/344ead7c-98a8-036e-ac81-eedc43631a99-202507161420476322-1772074395371.jpg",
+        "title": "Toán 5, tập một"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/toan-5-tap-hai-940126493.940126493",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/bead3825-fac6-c488-88d6-462cb0c1a8a9-202507161421580195-1772075374080.jpg",
+        "title": "Toán 5, tập hai"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/dao-duc-5-940128988.940128988",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/bff65260-7cd6-eb36-a860-226007636eaf-202507161422480239-1772075377342.jpg",
+        "title": "Đạo đức 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/khoa-hoc-5-939739139.939739139",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/147a01b7-a9a2-28a3-8a9d-46b86529db2a-202507161423400525-1772074167170.jpg",
+        "title": "Khoa học 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/lich-su-va-dia-li-5-939825652.939825652",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/39a057fe-29c2-2008-bf57-342d841f8ea1-202507161424377061-1772074444249.jpg",
+        "title": "Lịch sử và Địa lí 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/tin-hoc-5-940241218.940241218",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/f1a62bd4-48f2-887e-92cb-94073df3936d-202507161425231872-1772087649597.jpg",
+        "title": "Tin học 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/cong-nghe-5-939766518.939766518",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/1ef0b34f-1126-cc70-9225-1054e152ae16-202507161426011607-1772074254661.jpg",
+        "title": "Công nghệ 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/giao-duc-the-chat-5-940095531.940095531",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/b0d35d03-d63f-b246-9f36-bea258abce3c-202507161426441067-1772075281658.jpg",
+        "title": "Giáo dục thể chất 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/am-nhac-5-940124791.940124791",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/be142161-9cd9-da03-811c-2f20a3bd0ab5-202507161428090617-1772075367352.jpg",
+        "title": "Âm nhạc 5"
+      },
+      {
+        "url": "https://taphuan.nxbgd.vn/tap-huan/chi-tiet-sach/mi-thuat-5-ban-1-940014621.940014621",
+        "thumbnail": "https://cdn3.olm.vn/upload/taphuan/8eba88e5-09bd-a21c-bf3a-3c35ae0bc002-202507161429013705-1772075002076.jpg",
+        "title": "Mĩ thuật 5, Bản 1"
+      }
+    ]
+  }
+}

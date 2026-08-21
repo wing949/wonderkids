@@ -4,7 +4,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   // ================= TẬP 1 (BÀI 1 ĐẾN BÀI 20) =================
   {
     id: 'tv-g3-b1', semester: 1, lessonNumber: 1,
-    title: 'Bài 1: Ngày gặp lại & Kể về kỳ nghỉ hè',
+    title: 'Bài 1: Chiếc nhãn vở đặc biệt',
     unit: 'Tập 1 - Chủ đề 1: Những trải nghiệm thú vị',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 10, 11',
     description: 'Niềm vui ngày tựu trường gặp lại bạn bè, thầy cô và chia sẻ những câu chuyện mùa hè.',
@@ -14,7 +14,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b2', semester: 1, lessonNumber: 2,
-    title: 'Bài 2: Về thăm quê & Tình cảm quê hương',
+    title: 'Bài 2: Lắng nghe những ước mơ',
     unit: 'Tập 1 - Chủ đề 1: Những trải nghiệm thú vị',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 14, 15',
     description: 'Bài thơ ca ngợi cảnh sắc làng quê thanh bình và tình yêu thương của ông bà.',
@@ -24,7 +24,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b3', semester: 1, lessonNumber: 3,
-    title: 'Bài 3: Cánh rừng trong nắng & Từ chỉ sự vật, hoạt động',
+    title: 'Bài 3: Em vui đến trường',
     unit: 'Tập 1 - Chủ đề 1: Những trải nghiệm thú vị',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 18, 19',
     description: 'Vẻ đẹp trù phú của thiên nhiên và cách phân loại từ ngữ chính xác.',
@@ -34,7 +34,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b4', semester: 1, lessonNumber: 4,
-    title: 'Bài 4: Lần đầu ra biển & Biện pháp tu từ: So sánh',
+    title: 'Bài 4: Cậu học sinh mới',
     unit: 'Tập 1 - Chủ đề 1: Những trải nghiệm thú vị',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 22, 23',
     description: 'Cấu trúc so sánh: Sự vật A + Từ so sánh (như, là, tựa) + Sự vật B.',
@@ -44,7 +44,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b5', semester: 1, lessonNumber: 5,
-    title: 'Bài 5: Nhật kí chung & Tập làm văn kể chuyện',
+    title: 'Bài 5: Mùa hè lấp lánh',
     unit: 'Tập 1 - Chủ đề 2: Cổng trường rộng mở',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 28, 29',
     description: 'Tập viết nhật kí ghi chép lại các sự việc ý nghĩa diễn ra trong ngày.',
@@ -54,7 +54,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b6', semester: 1, lessonNumber: 6,
-    title: 'Bài 6: Mùa hè lấp lánh & Phép so sánh ngang bằng',
+    title: 'Bài 6: Cánh đồng tuổi thơ',
     unit: 'Tập 1 - Chủ đề 2: Cổng trường rộng mở',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 34, 35',
     description: 'Tìm các hình ảnh so sánh trong bài thơ miêu tả tiếng ve, hoa phượng đỏ rực.',
@@ -64,7 +64,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b7', semester: 1, lessonNumber: 7,
-    title: 'Bài 7: Con đường đến trường & Biện pháp tu từ: Nhân hóa',
+    title: 'Bài 7: Con đường đến trường',
     unit: 'Tập 1 - Chủ đề 2: Cổng trường rộng mở',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 40, 41',
     description: '3 cách nhân hóa: 1. Gọi vật như người. 2. Tả hoạt động của vật như người. 3. Trò chuyện với vật.',
@@ -74,7 +74,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b8', semester: 1, lessonNumber: 8,
-    title: 'Bài 8: Lời giải toán đặc biệt & Luyện từ và câu',
+    title: 'Bài 8: Lời giải toán đặc biệt',
     unit: 'Tập 1 - Chủ đề 2: Cổng trường rộng mở',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 46, 47',
     description: 'Câu chuyện nhà thơ Huy Cận sáng tác thơ bằng lời giải toán thuở nhỏ.',
@@ -84,7 +84,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b9', semester: 1, lessonNumber: 9,
-    title: 'Bài 9: Bàn tay cô giáo & Viết đoạn văn về thầy cô',
+    title: 'Bài 9: Bàn tay cô giáo',
     unit: 'Tập 1 - Chủ đề 3: Mái nhà yêu thương',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 52, 53',
     description: 'Bàn tay cô giáo gấp những cánh hoa, con thuyền, vầng trăng đưa các em vào thế giới cổ tích.',
@@ -94,7 +94,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b10', semester: 1, lessonNumber: 10,
-    title: 'Bài 10: Nhà rông ở Tây Nguyên & Mở rộng vốn từ về Dân tộc',
+    title: 'Bài 10: Nhà rông ở Tây Nguyên',
     unit: 'Tập 1 - Chủ đề 3: Mái nhà yêu thương',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 58, 59',
     description: 'Kiến trúc nhà rông độc đáo sừng sững giữa đại ngàn Tây Nguyên hùng vĩ.',
@@ -104,7 +104,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b11', semester: 1, lessonNumber: 11,
-    title: 'Bài 11: Ôn tập & Đánh giá giữa Học kì 1',
+    title: 'Bài 11: Tiếng chim hót trong vườn',
     unit: 'Tập 1 - Chủ đề 3: Ôn tập giữa kì',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 64, 65',
     description: 'Hệ thống hóa đọc hiểu, so sánh, nhân hóa và kỹ năng viết đoạn văn.',
@@ -114,7 +114,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b12', semester: 1, lessonNumber: 12,
-    title: 'Bài 12: Thư viện trường em & Giới thiệu cuốn sách yêu thích',
+    title: 'Bài 12: Thư viện trường em',
     unit: 'Tập 1 - Chủ đề 4: Thế giới trang sách',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 70, 71',
     description: 'Góc thư viện xanh ngập tràn truyện cổ tích, sách khoa học kỳ thú.',
@@ -124,7 +124,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b13', semester: 1, lessonNumber: 13,
-    title: 'Bài 13: Bầu trời mùa thu & Đoạn văn miêu tả bầu trời',
+    title: 'Bài 13: Bầu trời mùa thu',
     unit: 'Tập 1 - Chủ đề 4: Thế giới trang sách',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 76, 77',
     description: 'Bầu trời mùa thu trong xanh, cao vời vợi với những đám mây trắng xốp trôi lững lờ.',
@@ -134,7 +134,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b14', semester: 1, lessonNumber: 14,
-    title: 'Bài 14: Ôn tập cuối Học kì 1 Tiếng Việt Lớp 3',
+    title: 'Bài 14: Quạt cho bà ngủ',
     unit: 'Tập 1 - Chủ đề 5: Ôn tập cuối học kì 1',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập một — Trang 84, 85',
     description: 'Đề thi kiểm tra tổng hợp kiến thức cả Tập 1 SGK Tiếng Việt 3.',
@@ -146,7 +146,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   // ================= TẬP 2 (BÀI 15 ĐẾN BÀI 25) =================
   {
     id: 'tv-g3-b15', semester: 2, lessonNumber: 15,
-    title: 'Bài 15: Cóc kiện Trời & Truyện ngụ ngôn dân gian',
+    title: 'Bài 15: Cóc kiện Trời',
     unit: 'Tập 2 - Chủ đề 6: Đất nước ngàn năm',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 8, 9',
     description: 'Chú Cóc nhỏ bé cùng các bạn Cua, Gấu, Cọp dũng cảm lên thiên đình đòi mưa cứu muôn loài.',
@@ -156,7 +156,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b16', semester: 2, lessonNumber: 16,
-    title: 'Bài 16: Hai Bà Trưng & Tinh thần yêu nước bất khuất',
+    title: 'Bài 16: Hai Bà Trưng',
     unit: 'Tập 2 - Chủ đề 6: Đất nước ngàn năm',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 18, 19',
     description: 'Cuộc khởi nghĩa oanh liệt của Trưng Trắc và Trưng Nhị cưỡi voi đánh đuổi quân đô hộ.',
@@ -166,7 +166,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b17', semester: 2, lessonNumber: 17,
-    title: 'Bài 17: Đất nước tươi đẹp & Mở rộng vốn từ: Lễ hội quê hương',
+    title: 'Bài 17: Đất nước tươi đẹp',
     unit: 'Tập 2 - Chủ đề 7: Việt Nam quê hương em',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 28, 29',
     description: 'Từ ngữ về phong cảnh quê hương, di tích lịch sử và hội làng truyền thống.',
@@ -176,7 +176,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b18', semester: 2, lessonNumber: 18,
-    title: 'Bài 18: Tập làm văn: Viết thư thăm hỏi người thân',
+    title: 'Bài 18: Bức thư gửi chú hải quân',
     unit: 'Tập 2 - Chủ đề 7: Việt Nam quê hương em',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 38, 39',
     description: 'Bố cục 3 phần của một bức thư: Đầu thư (địa điểm, thời gian, lời chào) - Phần chính - Cuối thư (lời chúc, chữ ký).',
@@ -186,7 +186,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b19', semester: 2, lessonNumber: 19,
-    title: 'Bài 19: Chú hải quân canh giữ biển đảo',
+    title: 'Bài 19: Chú hải quân canh giữ đảo xa',
     unit: 'Tập 2 - Chủ đề 8: Bảo vệ tổ quốc',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 48, 49',
     description: 'Hình ảnh chú bộ đội hải quân kiên cường đứng gác nơi đảo xa Hoàng Sa, Trường Sa.',
@@ -196,7 +196,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b20', semester: 2, lessonNumber: 20,
-    title: 'Bài 20: Bác sĩ Y-éc-xanh & Tấm lòng nhân ái',
+    title: 'Bài 20: Bác sĩ Y-éc-xanh',
     unit: 'Tập 2 - Chủ đề 9: Trái tim nhân ái',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 58, 59',
     description: 'Nhà khoa học vĩ đại đã gắn bó cả cuộc đời với mảnh đất Nha Trang để chữa bệnh cho nhân dân.',
@@ -206,7 +206,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b21', semester: 2, lessonNumber: 21,
-    title: 'Bài 21: Người trí thức yêu nước & Tấm gương bác sĩ Đặng Văn Ngữ',
+    title: 'Bài 21: Người trí thức yêu nước',
     unit: 'Tập 2 - Chủ đề 9: Trái tim nhân ái',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 68, 69',
     description: 'Giáo sư Đặng Văn Ngữ từ bỏ cuộc sống giàu sang ở nước ngoài về chiến khu nghiên cứu thuốc cứu thương binh.',
@@ -216,7 +216,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b22', semester: 2, lessonNumber: 22,
-    title: 'Bài 22: Trái Đất xanh của chúng mình & Bảo vệ thiên nhiên',
+    title: 'Bài 22: Trái Đất xanh của chúng mình',
     unit: 'Tập 2 - Chủ đề 10: Hành tinh xanh',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 78, 79',
     description: 'Bài thơ ca ngợi vẻ đẹp hành tinh xanh và lời kêu gọi chung tay bảo vệ môi trường.',
@@ -226,7 +226,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b23', semester: 1, lessonNumber: 23,
-    title: 'Bài 23: Ôn tập Ngữ pháp & Luyện từ và câu cả năm',
+    title: 'Bài 23: Cùng vui chơi trong nắng mới',
     unit: 'Tập 2 - Chủ đề 11: Ôn tập cuối năm',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 86, 87',
     description: 'Tổng kết so sánh, nhân hóa, dấu gạch ngang, ngoặc kép, từ chỉ sự vật, hoạt động, đặc điểm.',
@@ -236,7 +236,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b24', semester: 2, lessonNumber: 24,
-    title: 'Bài 24: Ôn tập Tập làm văn: Miêu tả đồ vật, cây cối, con vật',
+    title: 'Bài 24: Hương lúa chín đầu mùa',
     unit: 'Tập 2 - Chủ đề 11: Ôn tập cuối năm',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 92, 93',
     description: 'Cấu trúc bài văn miêu tả: Mở bài - Thân bài (bao quát đến chi tiết) - Kết bài.',
@@ -246,7 +246,7 @@ export const VIETNAMESE_GRADE_3_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g3-b25', semester: 2, lessonNumber: 25,
-    title: 'Bài 25: Đánh giá & Vinh danh Trạng Nguyên Tiếng Việt Lớp 3',
+    title: 'Bài 25: Đấu trường Trạng Nguyên nhí Lớp 3',
     unit: 'Tập 2 - Chủ đề 11: Ôn tập cuối năm',
     textbookPageRef: 'SGK Tiếng Việt 3 Tập hai — Trang 98, 99',
     description: 'Đề kiểm tra tổng kết đọc hiểu, cảm thụ văn học và chính tả vinh danh Lớp 3.',

@@ -34,7 +34,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b4', semester: 1, lessonNumber: 4,
-    title: 'Bài 4: Làm việc thật là vui & Từ chỉ sự vật, hoạt động',
+    title: 'Bài 4: Làm việc thật là vui',
     unit: 'Tập 1 - Chủ đề 1: Em lớn lên từng ngày',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 22, 23',
     description: 'Mọi vật, mọi người đều bận rộn làm việc nhưng luôn vui vẻ.',
@@ -54,7 +54,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b6', semester: 1, lessonNumber: 6,
-    title: 'Bài 6: Một giờ học & Câu nêu hoạt động (Ai làm gì?)',
+    title: 'Bài 6: Một giờ học',
     unit: 'Tập 1 - Chủ đề 2: Đi học vui sao',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 30, 31',
     description: 'Thực hành nói trước đám đông và nhận biết mẫu câu Ai làm gì?.',
@@ -64,7 +64,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b7', semester: 1, lessonNumber: 7,
-    title: 'Bài 7: Cây xấu hổ & Luyện từ và câu: Từ chỉ đặc điểm',
+    title: 'Bài 7: Cây xấu hổ',
     unit: 'Tập 1 - Chủ đề 2: Đi học vui sao',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 34, 35',
     description: 'Khám phá loài cây biết e thẹn và học từ ngữ chỉ đặc điểm, màu sắc, hình dáng.',
@@ -74,7 +74,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b8', semester: 1, lessonNumber: 8,
-    title: 'Bài 8: Cầu thủ dự bị & Câu nêu đặc điểm (Ai thế nào?)',
+    title: 'Bài 8: Cầu thủ dự bị',
     unit: 'Tập 1 - Chủ đề 2: Đi học vui sao',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 38, 39',
     description: 'Tinh thần thể thao đoàn kết và mẫu câu Ai thế nào?.',
@@ -94,7 +94,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b10', semester: 1, lessonNumber: 10,
-    title: 'Bài 10: Thời khóa biểu & Kỹ năng sắp xếp việc học',
+    title: 'Bài 10: Thời khóa biểu',
     unit: 'Tập 1 - Chủ đề 3: Mái trường mến yêu',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 46, 47',
     description: 'Cách đọc thời khóa biểu theo hàng và theo cột để chuẩn bị sách vở đúng giờ.',
@@ -104,7 +104,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b11', semester: 1, lessonNumber: 11,
-    title: 'Bài 11: Cái bàn học của em & Câu giới thiệu (Ai là gì?)',
+    title: 'Bài 11: Cái bàn học của em',
     unit: 'Tập 1 - Chủ đề 3: Mái trường mến yêu',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 50, 51',
     description: 'Giới thiệu góc học tập ngăn nắp và mẫu câu Ai là gì?.',
@@ -114,7 +114,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b12', semester: 1, lessonNumber: 12,
-    title: 'Bài 12: Danh sách học sinh & Bảng chữ cái',
+    title: 'Bài 12: Danh sách học sinh tổ 1',
     unit: 'Tập 1 - Chủ đề 3: Mái trường mến yêu',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 54, 55',
     description: 'Sắp xếp tên học sinh theo thứ tự bảng chữ cái A, Ă, Â, B, C...',
@@ -134,7 +134,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b14', semester: 1, lessonNumber: 14,
-    title: 'Bài 14: Dấu chấm, Dấu chấm hỏi, Dấu chấm than',
+    title: 'Bài 14: Em học vẽ',
     unit: 'Tập 1 - Chủ đề 4: Quy tắc dấu câu',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 62, 63',
     description: 'Phân biệt công dụng của dấu chấm (.), dấu hỏi (?) và dấu chấm than (!).',
@@ -144,7 +144,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b15', semester: 1, lessonNumber: 15,
-    title: 'Bài 15: Cuốn sách của em & Mở rộng vốn từ về Đọc sách',
+    title: 'Bài 15: Cuốn sách của em',
     unit: 'Tập 1 - Chủ đề 4: Thế giới trang sách',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 66, 67',
     description: 'Các bộ phận của cuốn sách: Bìa sách, Tên sách, Tác giả, Nhà xuất bản, Mục lục.',
@@ -154,7 +154,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b16', semester: 1, lessonNumber: 16,
-    title: 'Bài 16: Ôn tập & Đánh giá giữa Học kì 1',
+    title: 'Bài 16: Khi trang sách mở ra',
     unit: 'Tập 1 - Chủ đề 4: Ôn tập giữa kì',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 72, 73',
     description: 'Hệ thống hóa toàn bộ 15 bài học đầu năm học lớp 2.',
@@ -164,7 +164,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b17', semester: 1, lessonNumber: 17,
-    title: 'Bài 17: Tớ nhớ cậu & Tình bạn thân thiết',
+    title: 'Bài 17: Gọi bạn',
     unit: 'Tập 1 - Chủ đề 5: Vòng tay bạn bè',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 76, 77',
     description: 'Bức thư tay đáng yêu giữa bạn Sóc và bạn Kiến khi đi xa.',
@@ -184,7 +184,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b19', semester: 1, lessonNumber: 19,
-    title: 'Bài 19: Bà nội, bà ngoại & Tình cảm gia đình sâu sắc',
+    title: 'Bài 19: Chuyện bốn mùa',
     unit: 'Tập 1 - Chủ đề 6: Mái ấm gia đình',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 84, 85',
     description: 'Bài thơ ca ngợi tình thương bao la của hai người bà kính yêu.',
@@ -194,7 +194,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b20', semester: 1, lessonNumber: 20,
-    title: 'Bài 20: Sự tích hoa cúc trắng & Lòng hiếu thảo',
+    title: 'Bài 20: Mùa xuân đến rồi',
     unit: 'Tập 1 - Chủ đề 6: Mái ấm gia đình',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 88, 89',
     description: 'Cô bé vượt qua muôn vàn khó khăn đi tìm hoa thần chữa bệnh cho mẹ.',
@@ -204,7 +204,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b21', semester: 1, lessonNumber: 21,
-    title: 'Bài 21: Ôn tập cuối Học kì 1 & Tổng kết Tập 1',
+    title: 'Bài 21: Mưa mùa hạ',
     unit: 'Tập 1 - Chủ đề 7: Ôn tập cuối học kì 1',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập một — Trang 94, 95',
     description: 'Kiểm tra tổng hợp kiến thức đọc hiểu, viết đoạn văn và chính tả Tập 1.',
@@ -216,7 +216,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   // ================= TẬP 2 (TUẦN 19 ĐẾN 35) =================
   {
     id: 'tv-g2-b22', semester: 2, lessonNumber: 22,
-    title: 'Bài 22: Chuyện bốn mùa (Xuân - Hạ - Thu - Đông)',
+    title: 'Bài 22: Chim rừng Tây Nguyên',
     unit: 'Tập 2 - Chủ đề 8: Vẻ đẹp bốn mùa',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 8, 9',
     description: 'Nét đẹp đặc trưng của 4 nàng tiên: Mùa xuân đâm chồi, Mùa hạ hoa trái, Mùa thu trăng rằm, Mùa đông ấp ủ mầm non.',
@@ -226,7 +226,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b23', semester: 2, lessonNumber: 23,
-    title: 'Bài 23: Mùa vàng & Đoạn văn miêu tả cánh đồng lúa chín',
+    title: 'Bài 23: Bác sĩ Sói',
     unit: 'Tập 2 - Chủ đề 8: Vẻ đẹp bốn mùa',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 14, 15',
     description: 'Khung cảnh mùa gặt rộn ràng thơm ngát hương lúa mới.',
@@ -236,7 +236,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b24', semester: 2, lessonNumber: 24,
-    title: 'Bài 24: Họa mi, vẹt và quạ & Mở rộng vốn từ về Loài chim',
+    title: 'Bài 24: Tôm Càng và Cá Con',
     unit: 'Tập 2 - Chủ đề 9: Thế giới loài vật',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 20, 21',
     description: 'Mỗi loài chim có một tiếng hót và khả năng riêng biệt.',
@@ -246,7 +246,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b25', semester: 2, lessonNumber: 25,
-    title: 'Bài 25: Sơn Tinh, Thủy Tinh & Truyền thuyết dân gian',
+    title: 'Bài 25: Bác Hồ rèn luyện thân thể',
     unit: 'Tập 2 - Chủ đề 10: Đất nước ngàn năm',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 30, 31',
     description: 'Truyền thuyết giải thích hiện tượng lũ lụt hàng năm và tinh thần chống lũ của nhân dân.',
@@ -256,7 +256,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b26', semester: 2, lessonNumber: 26,
-    title: 'Bài 26: Sông Hương & Đoạn văn miêu tả cảnh đẹp thiên nhiên',
+    title: 'Bài 26: Ai ngoan sẽ được thưởng',
     unit: 'Tập 2 - Chủ đề 10: Đất nước ngàn năm',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 38, 39',
     description: 'Vẻ đẹp thơ mộng của dòng sông Hương xứ Huế đổi màu theo ánh nắng trong ngày.',
@@ -266,7 +266,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b27', semester: 2, lessonNumber: 27,
-    title: 'Bài 27: Con Rồng cháu Tiên & Cội nguồn dân tộc',
+    title: 'Bài 27: Cờ đỏ sao vàng',
     unit: 'Tập 2 - Chủ đề 11: Việt Nam quê hương em',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 46, 47',
     description: 'Truyền thuyết bọc trăm trứng của mẹ Âu Cơ và cha Lạc Long Quân sinh ra đồng bào ta.',
@@ -276,7 +276,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b28', semester: 2, lessonNumber: 28,
-    title: 'Bài 28: Bác Hồ rèn luyện thân thể',
+    title: 'Bài 28: Em yêu biển đảo',
     unit: 'Tập 2 - Chủ đề 12: Bác Hồ kính yêu',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 56, 57',
     description: 'Tấm gương rèn luyện sức khỏe, tập thể dục hàng ngày của Bác Hồ vĩ đại.',
@@ -286,7 +286,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b29', semester: 2, lessonNumber: 29,
-    title: 'Bài 29: Trái Đất xanh của em & Bảo vệ môi trường',
+    title: 'Bài 29: Lượm hạt thóc vàng',
     unit: 'Tập 2 - Chủ đề 13: Hành tinh xanh',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 66, 67',
     description: 'Kêu gọi trồng cây, không xả rác và tiết kiệm nước để giữ Trái Đất luôn xanh tươi.',
@@ -296,7 +296,7 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g2-b30', semester: 2, lessonNumber: 30,
-    title: 'Bài 30: Ôn tập chung toàn bộ chương trình Tiếng Việt Lớp 2',
+    title: 'Bài 30: Chuyến phiêu lưu của Giọt Nước',
     unit: 'Tập 2 - Chủ đề 14: Ôn tập cuối năm',
     textbookPageRef: 'SGK Tiếng Việt 2 Tập hai — Trang 76, 77',
     description: 'Đề kiểm tra tổng kết đọc hiểu, ngữ pháp và viết đoạn văn cuối năm Lớp 2.',

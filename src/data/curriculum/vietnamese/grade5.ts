@@ -4,7 +4,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   // ================= TẬP 1 (BÀI 1 ĐẾN BÀI 16) =================
   {
     id: 'tv-g5-b1', semester: 1, lessonNumber: 1,
-    title: 'Bài 1: Thư gửi các học sinh & Tinh thần học tập của non sông',
+    title: 'Bài 1: Thư gửi các học sinh',
     unit: 'Tập 1 - Chủ đề 1: Việt Nam quê hương em',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 6, 7',
     description: 'Bức thư lịch sử của Chủ tịch Hồ Chí Minh gửi học sinh nhân ngày khai trường đầu tiên của nước Việt Nam Dân chủ Cộng hòa.',
@@ -14,7 +14,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b2', semester: 1, lessonNumber: 2,
-    title: 'Bài 2: Từ đồng nghĩa & Phân biệt sắc thái nghĩa',
+    title: 'Bài 2: Sắc màu em yêu',
     unit: 'Tập 1 - Chủ đề 1: Việt Nam quê hương em',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 12, 13',
     description: 'Từ đồng nghĩa là các từ có nghĩa giống nhau hoặc gần giống nhau (Đồng nghĩa hoàn toàn & không hoàn toàn).',
@@ -24,7 +24,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b3', semester: 1, lessonNumber: 3,
-    title: 'Bài 3: Quang cảnh làng mạc ngày mùa & Đoạn văn miêu tả',
+    title: 'Bài 3: Quang cảnh làng mạc ngày mùa',
     unit: 'Tập 1 - Chủ đề 1: Việt Nam quê hương em',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 18, 19',
     description: 'Nghệ thuật sử dụng màu vàng trù phú của nhà văn Tô Hoài: vàng xuộm, vàng hoe, vàng ối, vàng lịm, vàng tươi.',
@@ -34,7 +34,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b4', semester: 1, lessonNumber: 4,
-    title: 'Bài 4: Từ trái nghĩa & Tác dụng tạo sự tương phản',
+    title: 'Bài 4: Lòng dân',
     unit: 'Tập 1 - Chủ đề 1: Việt Nam quê hương em',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 24, 25',
     description: 'Từ trái nghĩa là những từ có nghĩa trái ngược nhau hoàn toàn (cao - thấp, đen - trắng, giàu - nghèo, thiện - ác).',
@@ -44,7 +44,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b5', semester: 1, lessonNumber: 5,
-    title: 'Bài 5: Cánh chim hòa bình & Luyện từ và câu: Từ đồng âm',
+    title: 'Bài 5: Cánh chim hòa bình',
     unit: 'Tập 1 - Chủ đề 2: Cánh chim hòa bình',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 32, 33',
     description: 'Từ đồng âm là những từ giống nhau về âm thanh phát âm nhưng khác hẳn nhau về nghĩa, không có mối liên hệ nào.',
@@ -54,7 +54,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b6', semester: 1, lessonNumber: 6,
-    title: 'Bài 6: Từ nhiều nghĩa (Nghĩa gốc & Nghĩa chuyển)',
+    title: 'Bài ca về trái đất',
     unit: 'Tập 1 - Chủ đề 2: Cánh chim hòa bình',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 40, 41',
     description: 'Từ nhiều nghĩa gồm Nghĩa gốc (nghĩa ban đầu) và Nghĩa chuyển (hình thành qua phép ẩn dụ hoặc hoán dụ).',
@@ -64,7 +64,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b7', semester: 1, lessonNumber: 7,
-    title: 'Bài 7: Những con sếu bằng giấy & Khát vọng hòa bình',
+    title: 'Bài 7: Những con sếu bằng giấy',
     unit: 'Tập 1 - Chủ đề 2: Cánh chim hòa bình',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 48, 49',
     description: 'Câu chuyện xúc động về cô bé Xa-da-cô gấp 1000 con sếu giấy gửi gắm ước mơ hòa bình chống chiến tranh hạt nhân.',
@@ -74,7 +74,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b8', semester: 1, lessonNumber: 8,
-    title: 'Bài 8: Kì diệu rừng xanh & Nghệ thuật quan sát tả cảnh',
+    title: 'Bài 8: Kì diệu rừng xanh',
     unit: 'Tập 1 - Chủ đề 3: Con người với thiên nhiên',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 56, 57',
     description: 'Nhà văn Nguyễn Phan Hách miêu tả vương quốc nấm lúp xúp và những chú vượn bạc má chuyền cành thoăn thoắt.',
@@ -84,7 +84,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b9', semester: 1, lessonNumber: 9,
-    title: 'Bài 9: Ôn tập & Đánh giá giữa Học kì 1',
+    title: 'Bài 9: Trước cổng trời',
     unit: 'Tập 1 - Chủ đề 3: Ôn tập giữa kì',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 66, 67',
     description: 'Hệ thống hóa Từ đồng nghĩa, Trái nghĩa, Đồng âm, Nhiều nghĩa và văn miêu tả.',
@@ -94,7 +94,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b10', semester: 1, lessonNumber: 10,
-    title: 'Bài 10: Đất Cà Mau & Câu ghép trong Tiếng Việt',
+    title: 'Bài 10: Đất Cà Mau',
     unit: 'Tập 1 - Chủ đề 4: Giữ lấy màu xanh',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 74, 75',
     description: 'Khái niệm Câu ghép: Câu do nhiều vế câu ghép lại, mỗi vế có cấu trúc ngữ pháp như một câu đơn (đủ Chủ ngữ - Vị ngữ).',
@@ -104,7 +104,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b11', semester: 1, lessonNumber: 11,
-    title: 'Bài 11: Nối các vế câu ghép bằng Cặp quan hệ từ chỉ Nguyên nhân - Kết quả',
+    title: 'Bài 11: Chuyện một khu vườn nhỏ',
     unit: 'Tập 1 - Chủ đề 4: Giữ lấy màu xanh',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 82, 83',
     description: 'Cặp từ: Vì... nên...; Do... nên...; Nhờ... mà... (Nhờ dùng cho kết quả tốt đẹp).',
@@ -114,7 +114,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b12', semester: 1, lessonNumber: 12,
-    title: 'Bài 12: Cặp quan hệ từ chỉ Điều kiện (Nếu... thì...), Tương phản (Tuy... nhưng...) & Tăng tiến',
+    title: 'Bài 12: Mùa thảo quả',
     unit: 'Tập 1 - Chủ đề 4: Giữ lấy màu xanh',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 90, 91',
     description: 'Điều kiện - Kết quả (Nếu... thì...; Giá như... thì...). Tương phản (Tuy... nhưng...; Mặc dù... nhưng...). Tăng tiến (Không những... mà còn...).',
@@ -124,7 +124,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b13', semester: 1, lessonNumber: 13,
-    title: 'Bài 13: Ôn tập cuối Học kì 1 Tiếng Việt Lớp 5',
+    title: 'Bài 13: Hành trình của bầy ong',
     unit: 'Tập 1 - Chủ đề 5: Ôn tập cuối học kì 1',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập một — Trang 98, 99',
     description: 'Đề kiểm tra tổng hợp đọc hiểu, câu ghép và viết bài văn tả cảnh Tập 1.',
@@ -136,7 +136,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   // ================= TẬP 2 (BÀI 14 ĐẾN BÀI 25) =================
   {
     id: 'tv-g5-b14', semester: 2, lessonNumber: 14,
-    title: 'Bài 14: Người công dân số Một & Tinh thần yêu nước của Bác Hồ',
+    title: 'Bài 14: Người công dân số Một',
     unit: 'Tập 2 - Chủ đề 6: Người công dân',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 8, 9',
     description: 'Vở kịch lịch sử tái hiện cuộc trò chuyện giữa chàng thanh niên Nguyễn Tất Thành và bạn Lê tại bến cảng Nhà Rồng.',
@@ -146,7 +146,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b15', semester: 2, lessonNumber: 15,
-    title: 'Bài 15: Nối các vế câu ghép bằng Cặp từ hô ứng',
+    title: 'Bài 15: Hạt gạo làng ta',
     unit: 'Tập 2 - Chủ đề 6: Người công dân',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 18, 19',
     description: 'Cặp từ hô ứng: Vừa... đã...; Chưa... đã...; Càng... càng...; Đâu... đấy...; Ai... nấy...',
@@ -156,7 +156,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b16', semester: 2, lessonNumber: 16,
-    title: 'Bài 16: Thái sư Trần Thủ Độ & Tấm gương chí công vô tư',
+    title: 'Bài 16: Thái sư Trần Thủ Độ',
     unit: 'Tập 2 - Chủ đề 6: Người công dân',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 28, 29',
     description: 'Vị Thái sư kiệt xuất luôn đặt kỷ cương phép nước lên trên tình riêng, thưởng phạt nghiêm minh.',
@@ -166,7 +166,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b17', semester: 2, lessonNumber: 17,
-    title: 'Bài 17: Phong cảnh đền Hùng & Bài văn miêu tả cảnh thiên nhiên',
+    title: 'Bài 17: Phong cảnh đền Hùng',
     unit: 'Tập 2 - Chủ đề 7: Nhớ nguồn',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 38, 39',
     description: 'Cảnh sắc hùng vĩ linh thiêng của núi Nghĩa Lĩnh nơi cội nguồn đất Tổ vua Hùng dựng nước.',
@@ -176,7 +176,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b18', semester: 2, lessonNumber: 18,
-    title: 'Bài 18: Nghĩa thầy trò & Tinh thần tôn sư trọng đạo',
+    title: 'Bài 18: Nghĩa thầy trò',
     unit: 'Tập 2 - Chủ đề 7: Nhớ nguồn',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 48, 49',
     description: 'Thầy giáo Chu Văn An dẫn các học trò đã làm quan lớn về quê chúc thọ cụ đồ già đã từng dạy chữ cho thầy.',
@@ -186,7 +186,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b19', semester: 2, lessonNumber: 19,
-    title: 'Bài 19: Tranh làng Hồ & Nghệ thuật dân gian Đông Hồ',
+    title: 'Bài 19: Tranh làng Hồ',
     unit: 'Tập 2 - Chủ đề 8: Vẻ đẹp muôn màu',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 58, 59',
     description: 'Nét tinh hoa độc đáo của tranh khắc gỗ dân gian trên giấy điệp: Đám cưới chuột, Lợn âm dương, Hứng dừa.',
@@ -196,7 +196,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b20', semester: 2, lessonNumber: 20,
-    title: 'Bài 20: Liên kết câu trong đoạn văn (Lặp từ, Thay thế từ, Dùng từ nối)',
+    title: 'Bài 20: Đất nước',
     unit: 'Tập 2 - Chủ đề 8: Vẻ đẹp muôn màu',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 68, 69',
     description: '3 biện pháp liên kết câu: 1. Lặp lại từ ngữ ở câu trước. 2. Thay thế bằng đại từ hoặc từ đồng nghĩa. 3. Dùng từ ngữ nối (Tuy nhiên, Bởi vậy, Hơn nữa...).',
@@ -206,7 +206,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b21', semester: 2, lessonNumber: 21,
-    title: 'Bài 21: Út Vịnh & Tấm gương dũng cảm quên mình cứu bạn',
+    title: 'Bài 21: Út Vịnh',
     unit: 'Tập 2 - Chủ đề 9: Những người quả cảm',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 78, 79',
     description: 'Bạn nhỏ Út Vịnh dũng cảm lao vào đường ray cứu sống hai em nhỏ khi tàu hỏa đang lao tới gần.',
@@ -216,7 +216,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b22', semester: 2, lessonNumber: 22,
-    title: 'Bài 22: Ôn tập Ngữ pháp & Từ loại tổng kết toàn cấp Tiểu học',
+    title: 'Bài 22: Những cánh buồm',
     unit: 'Tập 2 - Chủ đề 10: Ôn tập cuối cấp Tiểu học',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 88, 89',
     description: 'Hệ thống hóa toàn bộ Danh từ, Động từ, Tính từ, Đại từ, Quan hệ từ, Câu đơn, Câu ghép và Dấu câu.',
@@ -226,7 +226,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b23', semester: 2, lessonNumber: 23,
-    title: 'Bài 23: Ôn tập Tập làm văn: Bài văn miêu tả Người (Cấu trúc hoàn chỉnh)',
+    title: 'Bài 23: Bầm ơi',
     unit: 'Tập 2 - Chủ đề 10: Ôn tập cuối cấp Tiểu học',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 96, 97',
     description: 'Cấu trúc bài văn tả người: Mở bài - Thân bài (Tả ngoại hình, Tả tính tình và hoạt động qua một kỷ niệm) - Kết bài.',
@@ -236,7 +236,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b24', semester: 2, lessonNumber: 24,
-    title: 'Bài 24: Ôn tập Tập làm văn: Bài văn miêu tả Cảnh thiên nhiên',
+    title: 'Bài 24: Buổi sáng trên bãi biển',
     unit: 'Tập 2 - Chủ đề 10: Ôn tập cuối cấp Tiểu học',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 104, 105',
     description: 'Miêu tả cảnh biển buổi bình minh, cánh đồng lúa chín, đêm trăng rằm quê hương.',
@@ -246,7 +246,7 @@ export const VIETNAMESE_GRADE_5_TOPICS: CurriculumTopic[] = [
   },
   {
     id: 'tv-g5-b25', semester: 2, lessonNumber: 25,
-    title: 'Bài 25: Đấu trường Vinh danh Trạng Nguyên Tiếng Việt Toàn Cấp (Tốt nghiệp Tiểu học)',
+    title: 'Bài 25: Đấu trường Vinh danh Trạng Nguyên Toàn Cấp',
     unit: 'Tập 2 - Chủ đề 10: Ôn tập cuối cấp Tiểu học',
     textbookPageRef: 'SGK Tiếng Việt 5 Tập hai — Trang 112, 113',
     description: 'Chinh phục Đấu trường Trạng Nguyên Tối Thượng - Vinh danh Tốt nghiệp Tiểu học!',
