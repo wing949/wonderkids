@@ -1107,7 +1107,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             className="mt-6 rounded-4xl border border-amber-100/60 bg-[#fffdfa] p-6 sm:p-8 shadow-washi backdrop-blur-md"
           >
             {/* Provenance Badge */}
-            {lesson.subject === 'vietnamese' && lesson.provenance?.verificationStatus !== 'verified' ? (
+            {lesson.subject === 'vietnamese' && currentQ.contentOrigin === 'system_generated' ? (
               <div className="mb-3 flex flex-wrap items-center gap-1.5 font-baloo font-bold text-xs text-blue-950 bg-blue-100/90 border border-blue-300/80 px-3.5 py-1 rounded-full w-fit">
                 <span>🌱</span>
                 <span className="font-extrabold">Câu hỏi/bài tập: NỘI DUNG TỰ SINH</span>

@@ -120,8 +120,8 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
     selectedSubject === 'math'
       ? '/assets/bobo_math.jpg'
       : selectedSubject === 'vietnamese'
-      ? '/assets/miumiu_story.jpg'
-      : '/assets/pipi_english.jpg';
+        ? '/assets/miumiu_story.jpg'
+        : '/assets/pipi_english.jpg';
 
   const mascotName =
     selectedSubject === 'math' ? 'Cú BoBo' : selectedSubject === 'vietnamese' ? 'Cáo MiuMiu' : 'Cá Heo PiPi';
@@ -165,11 +165,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                   soundManager.playPop();
                   setViewMode('grid');
                 }}
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${
-                  viewMode === 'grid'
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${viewMode === 'grid'
                     ? 'bg-white text-brand-dark shadow-xs scale-102 font-extrabold'
                     : 'text-slate-500 hover:text-slate-800'
-                }`}
+                  }`}
               >
                 <span>📑 Lưới Thẻ Bài</span>
               </button>
@@ -178,11 +177,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                   soundManager.playPop();
                   setViewMode('map');
                 }}
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${
-                  viewMode === 'map'
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${viewMode === 'map'
                     ? 'bg-white text-brand-dark shadow-xs scale-102 font-extrabold'
                     : 'text-slate-500 hover:text-slate-800'
-                }`}
+                  }`}
               >
                 <span>🗺️ Đảo Phiêu Lưu</span>
               </button>
@@ -200,11 +198,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                       soundManager.playPop();
                       onSelectSubject(sKey);
                     }}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${
-                      isSelected
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${isSelected
                         ? 'bg-emerald-500 text-white shadow-xs'
                         : 'text-slate-600 hover:text-brand-dark hover:bg-slate-50'
-                    }`}
+                      }`}
                     style={isSelected ? { backgroundColor: s.accentColor } : {}}
                   >
                     <span>{s.icon}</span>
@@ -259,11 +256,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                       setSelectedSemester(sem.id as 0 | 1 | 2);
                       setActiveUnitFilter('all');
                     }}
-                    className={`w-full text-left px-3.5 py-2.5 rounded-2xl font-baloo font-black text-sm transition-all flex items-center justify-between cursor-pointer ${
-                      selectedSemester === sem.id
+                    className={`w-full text-left px-3.5 py-2.5 rounded-2xl font-baloo font-black text-sm transition-all flex items-center justify-between cursor-pointer ${selectedSemester === sem.id
                         ? 'bg-amber-400 text-amber-950 shadow-sm font-black scale-[1.01] border-b-2 border-amber-600'
                         : 'bg-[#f8f9fa] border border-slate-200/80 text-brand-dark hover:bg-amber-50/70 hover:border-amber-300 shadow-2xs'
-                    }`}
+                      }`}
                   >
                     <span>{sem.label}</span>
                     {selectedSemester === sem.id && <CheckCircle2 size={18} className="text-amber-950" />}
@@ -370,11 +366,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                     soundManager.playPop();
                     setSelectedSemester(sem.id as 0 | 1 | 2);
                   }}
-                  className={`px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs border transition-all cursor-pointer ${
-                    selectedSemester === sem.id
+                  className={`px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs border transition-all cursor-pointer ${selectedSemester === sem.id
                       ? 'bg-amber-400 text-brand-dark border-amber-500 font-extrabold'
                       : 'bg-white text-slate-600 border-slate-200'
-                  }`}
+                    }`}
                 >
                   {sem.label}
                 </button>
@@ -421,11 +416,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                             whileHover={{ y: -4 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => handleNodeClick(lesson)}
-                            className={`group relative flex flex-col justify-between rounded-3xl p-5 transition-all duration-300 cursor-pointer select-none ${
-                              isPassed
+                            className={`group relative flex flex-col justify-between rounded-3xl p-5 transition-all duration-300 cursor-pointer select-none ${isPassed
                                 ? 'bg-gradient-to-b from-amber-50/80 via-white to-white border border-amber-300/80 shadow-[0_4px_16px_rgba(245,158,11,0.08)] hover:border-amber-400 hover:shadow-[0_12px_24px_rgba(245,158,11,0.16)]'
                                 : 'bg-white border border-slate-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:border-emerald-400 hover:shadow-[0_12px_24px_rgba(16,185,129,0.14)]'
-                            }`}
+                              }`}
                           >
                             {/* Top Badge: Textbook Page Reference & Star Reward */}
                             <div>
@@ -459,11 +453,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                               </span>
 
                               <div
-                                className={`flex h-10 px-5 items-center justify-center rounded-2xl font-baloo font-black text-xs sm:text-sm gap-2 whitespace-nowrap transition-all shadow-xs group-hover:scale-105 active:scale-95 ${
-                                  isPassed
+                                className={`flex h-10 px-5 items-center justify-center rounded-2xl font-baloo font-black text-xs sm:text-sm gap-2 whitespace-nowrap transition-all shadow-xs group-hover:scale-105 active:scale-95 ${isPassed
                                     ? 'bg-amber-400 text-amber-950 border-b-2 border-amber-600 hover:bg-amber-500'
                                     : 'bg-emerald-500 text-white border-b-2 border-emerald-700 group-hover:bg-emerald-600'
-                                }`}
+                                  }`}
                               >
                                 <Play size={13} fill="currentColor" />
                                 <span className="whitespace-nowrap">{isPassed ? 'Học lại' : 'Vào học'}</span>
@@ -496,8 +489,8 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                             groupIdx % 3 === 0
                               ? 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
                               : groupIdx % 3 === 1
-                              ? 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)'
-                              : 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+                                ? 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)'
+                                : 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
                         }}
                       >
                         <div className="flex items-center gap-3.5">
@@ -559,13 +552,12 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                                   className="relative flex flex-col items-center cursor-pointer group"
                                 >
                                   <div
-                                    className={`relative flex h-18 w-18 sm:h-20 sm:w-20 items-center justify-center rounded-3xl border-4 transition-all shadow-pop-sm ${
-                                      isPassed
+                                    className={`relative flex h-18 w-18 sm:h-20 sm:w-20 items-center justify-center rounded-3xl border-4 transition-all shadow-pop-sm ${isPassed
                                         ? 'border-amber-600 bg-amber-400 bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500 text-amber-950'
                                         : isCurrentActive
-                                        ? 'border-emerald-700 bg-emerald-500 bg-gradient-to-b from-emerald-400 via-emerald-500 to-emerald-600 text-white animate-bounce-subtle'
-                                        : 'border-slate-300 bg-slate-100 text-slate-400 hover:bg-slate-200'
-                                    }`}
+                                          ? 'border-emerald-700 bg-emerald-500 bg-gradient-to-b from-emerald-400 via-emerald-500 to-emerald-600 text-white animate-bounce-subtle'
+                                          : 'border-slate-300 bg-slate-100 text-slate-400 hover:bg-slate-200'
+                                      }`}
                                   >
                                     {/* Inner Glow / Icon */}
                                     <div className="flex flex-col items-center justify-center">
@@ -577,13 +569,12 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                                         <Lock size={22} className="text-slate-400" />
                                       )}
                                       <span
-                                        className={`font-baloo text-xs sm:text-sm font-black mt-0.5 ${
-                                          isPassed
+                                        className={`font-baloo text-xs sm:text-sm font-black mt-0.5 ${isPassed
                                             ? 'text-amber-950'
                                             : isCurrentActive
-                                            ? 'text-white drop-shadow-xs'
-                                            : 'text-slate-500'
-                                        }`}
+                                              ? 'text-white drop-shadow-xs'
+                                              : 'text-slate-500'
+                                          }`}
                                       >
                                         Ải {lesson.order}
                                       </span>
@@ -604,25 +595,23 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
 
                                   {/* Floating Tooltip Speech Capsule attached to node */}
                                   <div
-                                    className={`mt-4 max-w-xs sm:max-w-sm rounded-2xl border-2 px-3.5 py-2 shadow-pop-xs text-center transition-all group-hover:scale-105 ${
-                                      isPassed
+                                    className={`mt-4 max-w-xs sm:max-w-sm rounded-2xl border-2 px-3.5 py-2 shadow-pop-xs text-center transition-all group-hover:scale-105 ${isPassed
                                         ? 'border-amber-200 bg-amber-50/95 text-amber-950'
                                         : isCurrentActive
-                                        ? 'border-emerald-300 bg-white/95 text-brand-dark'
-                                        : 'border-slate-200 bg-white/85 text-slate-500'
-                                    }`}
+                                          ? 'border-emerald-300 bg-white/95 text-brand-dark'
+                                          : 'border-slate-200 bg-white/85 text-slate-500'
+                                      }`}
                                   >
                                     <div className="flex items-center justify-center gap-1.5 text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md mb-1 mx-auto w-fit whitespace-nowrap">
                                       📖 {formatShortPageRef(lesson.textbookPageRef)}
                                     </div>
                                     <h4
-                                      className={`font-baloo font-extrabold text-xs sm:text-sm line-clamp-2 leading-snug break-words ${
-                                        isPassed
+                                      className={`font-baloo font-extrabold text-xs sm:text-sm line-clamp-2 leading-snug break-words ${isPassed
                                           ? 'text-amber-950'
                                           : isCurrentActive
-                                          ? 'text-brand-dark group-hover:text-emerald-700'
-                                          : 'text-slate-500'
-                                      }`}
+                                            ? 'text-brand-dark group-hover:text-emerald-700'
+                                            : 'text-slate-500'
+                                        }`}
                                     >
                                       {lesson.title}
                                     </h4>
@@ -682,7 +671,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                 </span>
                 <div className="flex items-center gap-1">
                   {selectedLessonPreview.provenance?.contentOrigin === 'sgk_reference'
-                  && selectedLessonPreview.provenance.verificationStatus === 'verified' ? (
+                    && selectedLessonPreview.provenance.verificationStatus === 'verified' ? (
                     <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-2 py-0.5 rounded-full">
                       📖 Nội dung theo SGK đã đối chiếu
                     </span>
@@ -697,7 +686,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                   )}
                 </div>
               </div>
-              
+
               {selectedLessonPreview.referenceBook && (
                 <p className="font-vietnam text-xs font-medium text-amber-900/80 italic">
                   Chủ đề tham khảo đang khai báo (chưa xác minh với SGK): {selectedLessonPreview.provenance?.referenceLessonTitle || 'Chưa xác định tên bài'} — {selectedLessonPreview.referenceBook}
