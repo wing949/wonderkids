@@ -23,6 +23,12 @@ export * from './math';
 export * from './vietnamese';
 export * from './english';
 
+const VIETNAMESE_SUPPLEMENT_LESSON_IDS = new Set([
+  'tv-g3-b25',
+  'tv-g4-b22',
+  'tv-g5-b25',
+]);
+
 function softenUnverifiedText(text: string): string {
   return text
     .replace(/(?:chuẩn\s+SGK\s+)?Kết\s+nối\s+tri\s+thức(?:\s+với\s+cuộc\s+sống)?/gi, 'do WonderKids biên soạn')
@@ -262,7 +268,11 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
           : `SGK Tiếng Việt ${grade} Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam`)
         : `SGK Tiếng Anh ${grade} — Global Success, NXB Giáo Dục Việt Nam`;
 
-    const declaredSourceType = bundle?.sourceType || t.sourceType || (t.textbookPageRef ? 'sgk_official' : 'pedagogical_supplement');
+    const isKnownVietnameseSupplement = subject === 'vietnamese'
+      && VIETNAMESE_SUPPLEMENT_LESSON_IDS.has(normalizedId);
+    const declaredSourceType = isKnownVietnameseSupplement
+      ? 'pedagogical_supplement'
+      : bundle?.sourceType || t.sourceType || (t.textbookPageRef ? 'sgk_official' : 'pedagogical_supplement');
     const declaredSourceBook = bundle?.sourceBook || t.sourceBook || defaultSourceBook;
     const declaredSourceDetail = bundle?.sourceDetail || t.sourceDetail || t.textbookPageRef || 'Nội dung bổ trợ và củng cố năng lực';
     const referenceBook = subject === 'vietnamese'
@@ -300,11 +310,13 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     const isVerifiedSgk = provenance.contentOrigin === 'sgk_reference' && provenance.verificationStatus === 'verified';
     const generatedTitle = buildGeneratedReadingTitle(t);
     const isGenerated = subject === 'vietnamese' && provenance.contentOrigin === 'system_generated';
+    const isVietnameseSupplement = subject === 'vietnamese' && provenance.contentOrigin === 'pedagogical_supplement';
+    const isUnverifiedVietnamese = subject === 'vietnamese' && !isVerifiedSgk;
     const effectiveSourceBook = isVerifiedSgk
       ? declaredSourceBook
       : isGenerated
         ? 'WonderKids — Nội dung tự sinh'
-        : declaredSourceBook;
+        : isVietnameseSupplement ? 'WonderKids — Nội dung bổ trợ sư phạm' : declaredSourceBook;
     const effectiveSourceDetail = isVerifiedSgk
       ? declaredSourceDetail
       : isGenerated
@@ -316,13 +328,13 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       : rawQuestions;
     const displayedDescription = isGenerated
       ? `Nội dung luyện đọc tự sinh do WonderKids biên soạn theo chủ đề tham khảo “${t.title}”.`
-      : t.description;
+      : isVietnameseSupplement ? 'Nội dung bổ trợ sư phạm do WonderKids biên soạn; không phải bài SGK.' : t.description;
     const displayedSummary = isGenerated
       ? `Bài luyện đọc tự sinh giúp học sinh rèn đọc hiểu theo chủ đề tham khảo “${t.title}”; không phải nguyên văn SGK.`
-      : t.summary;
+      : isVietnameseSupplement ? 'Hoạt động ôn luyện bổ trợ do WonderKids xây dựng; không áp dụng metadata SGK.' : t.summary;
     const displayedMascotTip = isGenerated
       ? `MiuMiu: Cùng luyện đọc nội dung tự sinh theo chủ đề “${cleanReferenceTitle(t.title)}” nhé!`
-      : t.mascotTip;
+      : isVietnameseSupplement ? 'MiuMiu: Cùng tham gia hoạt động ôn luyện bổ trợ của WonderKids nhé!' : t.mascotTip;
 
     return {
       id: t.id,
@@ -349,11 +361,11 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       starReward: 3,
       theoryContent: {
         summary: displayedSummary,
-        keyPoints: isGenerated ? t.keyPoints.map(softenUnverifiedText) : t.keyPoints,
+        keyPoints: isUnverifiedVietnamese ? t.keyPoints.map(softenUnverifiedText) : t.keyPoints,
         mascotTip: displayedMascotTip,
       },
-      readingPassage: readingPassage && isGenerated
-        ? prepareUnverifiedPassage(readingPassage, generatedTitle)
+      readingPassage: readingPassage && isUnverifiedVietnamese
+        ? prepareUnverifiedPassage(readingPassage, isGenerated ? generatedTitle : t.title)
         : readingPassage,
       questions
     };
