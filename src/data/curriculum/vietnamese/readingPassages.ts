@@ -1,10 +1,11 @@
-import { ReadingPassage, Question } from '../../../types';
+import { ContentProvenance, ReadingPassage, Question } from '../../../types';
 
 export interface ReadingLessonBundle {
   passage: ReadingPassage;
   sourceType?: 'sgk_official' | 'pedagogical_supplement';
   sourceBook?: string;
   sourceDetail?: string;
+  provenance?: ContentProvenance;
   pedagogicalObjective?: string;
   questions: Question[];
 }
@@ -1110,53 +1111,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b21": {
     "passage": {
-      "title": "Bài 21: Ân ân - Ât ât",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 21: Tôi là học sinh lớp 1",
+      "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Sân trường rộn rã tiếng cười vui.\"",
-        "• Vần: Ân ân, Ât ât",
-        "• Tiếng ứng dụng: sân, thân, bận, đất, tất, phất",
-        "• Câu ứng dụng: \"Mùa xuân ấm áp, cây cối đâm chồi nảy lộc.\""
+        "Tên tôi là Nam. Tôi là học sinh lớp Một. Hằng ngày, tôi dậy sớm, tập thể dục, rửa mặt rồi ăn sáng. Tôi mặc đồng phục, đeo ba lô rồi cùng các bạn vui vẻ đến trường.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 21: Ân ân - Ât ât. • Khám phá tranh: \"Sân trường rộn rã tiếng cười vui.\" • Vần: Ân ân, Ât ât • Tiếng ứng dụng: sân, thân, bận, đất, tất, phất • Câu ứng dụng: \"Mùa xuân ấm áp, cây cối đâm chồi nảy lộc.\"",
+      "audioNarration": "Bài 21: Tôi là học sinh lớp 1. Tên tôi là Nam. Tôi là học sinh lớp Một. Hằng ngày, tôi dậy sớm, tập thể dục, rửa mặt rồi ăn sáng. Tôi mặc đồng phục, đeo ba lô rồi cùng các bạn vui vẻ đến trường.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Trang 56, 57 — Bài 21: Ân ân - Ât ât",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 10, 11 — Bài 21: Tôi là học sinh lớp 1",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b21-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 21: Ân ân - Ât ât trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 21: Ân ân - Ât ât trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 21: Tôi là học sinh lớp 1\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 21: Tôi là học sinh lớp 1 là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1164,53 +1161,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b22": {
     "passage": {
-      "title": "Bài 22: En en - Et et",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 22: Đôi tai xấu xí",
+      "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Búp sen hồng nở rộ trong đầm nước.\"",
-        "• Vần: En en, Et et",
-        "• Tiếng ứng dụng: sen, đèn, kèn, sấm sét, nét chữ",
-        "• Câu ứng dụng: \"Bé nắn nót viết từng nét chữ tròn xoe.\""
+        "Thỏ con từng buồn bã vì đôi tai dài lúp xúp. Nhưng nhờ đôi tai thính nhạy, thỏ con đã nghe thấy tiếng sói từ xa và kịp thời báo tin cứu cả đàn thỏ an toàn.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 22: En en - Et et. • Khám phá tranh: \"Búp sen hồng nở rộ trong đầm nước.\" • Vần: En en, Et et • Tiếng ứng dụng: sen, đèn, kèn, sấm sét, nét chữ • Câu ứng dụng: \"Bé nắn nót viết từng nét chữ tròn xoe.\"",
+      "audioNarration": "Bài 22: Đôi tai xấu xí. Thỏ con từng buồn bã vì đôi tai dài lúp xúp. Nhưng nhờ đôi tai thính nhạy, thỏ con đã nghe thấy tiếng sói từ xa và kịp thời báo tin cứu cả đàn thỏ an toàn.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Trang 58, 59 — Bài 22: En en - Et et",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 14, 15 — Bài 22: Đôi tai xấu xí",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b22-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 22: En en - Et et trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 22: En en - Et et trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 22: Đôi tai xấu xí\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 22: Đôi tai xấu xí là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1218,53 +1211,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b23": {
     "passage": {
-      "title": "Bài 23: In in - It it",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 23: Bạn của gió",
+      "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Đàn vịt bơi lội dưới hồ sen.\"",
-        "• Vần: In in, It it",
-        "• Tiếng ứng dụng: chim, chín, vịt, thịt, mít",
-        "• Câu ứng dụng: \"Quả mít chín thơm lừng trên cành cây.\""
+        "Ai là bạn của gió? Là cánh buồm no gió ngoài biển khơi, là cánh diều chao lượn trên đồng cỏ, là cối xay gió quay đều trong nắng mai.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 23: In in - It it. • Khám phá tranh: \"Đàn vịt bơi lội dưới hồ sen.\" • Vần: In in, It it • Tiếng ứng dụng: chim, chín, vịt, thịt, mít • Câu ứng dụng: \"Quả mít chín thơm lừng trên cành cây.\"",
+      "audioNarration": "Bài 23: Bạn của gió. Ai là bạn của gió? Là cánh buồm no gió ngoài biển khơi, là cánh diều chao lượn trên đồng cỏ, là cối xay gió quay đều trong nắng mai.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Trang 60, 61 — Bài 23: In in - It it",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 18, 19 — Bài 23: Bạn của gió",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b23-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 23: In in - It it trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 23: In in - It it trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 23: Bạn của gió\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 23: Bạn của gió là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1272,53 +1261,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b24": {
     "passage": {
-      "title": "Bài 24: On on - Ot ot",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 24: Rửa tay trước khi ăn",
+      "author": "SGK Tiếng Việt 1 Tập hai — NXB Giáo Dục Việt Nam",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Con đò nhỏ lướt nhẹ trên dòng sông quê.\"",
-        "• Vần: On on, Ot ot",
-        "• Tiếng ứng dụng: nón, con, đòn, ngót, sọt, hót",
-        "• Câu ứng dụng: \"Chú chim hót véo von đón chào ngày mới.\""
+        "Bàn tay xinh làm bao việc tốt. Trước khi ăn cơm và sau khi đi vệ sinh, bé nhớ rửa tay bằng xà phòng dưới vòi nước sạch để cơ thể luôn khỏe mạnh.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 24: On on - Ot ot. • Khám phá tranh: \"Con đò nhỏ lướt nhẹ trên dòng sông quê.\" • Vần: On on, Ot ot • Tiếng ứng dụng: nón, con, đòn, ngót, sọt, hót • Câu ứng dụng: \"Chú chim hót véo von đón chào ngày mới.\"",
+      "audioNarration": "Bài 24: Rửa tay trước khi ăn. Bàn tay xinh làm bao việc tốt. Trước khi ăn cơm và sau khi đi vệ sinh, bé nhớ rửa tay bằng xà phòng dưới vòi nước sạch để cơ thể luôn khỏe mạnh.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Trang 62, 63 — Bài 24: On on - Ot ot",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 22, 23 — Bài 24: Rửa tay trước khi ăn",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b24-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 24: On on - Ot ot trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 24: On on - Ot ot trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 24: Rửa tay trước khi ăn\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 24: Rửa tay trước khi ăn là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1326,53 +1311,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b25": {
     "passage": {
-      "title": "Bài 25: Un un - Ut ut",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 25: Lời chào",
+      "author": "Phạm Cúc",
       "genre": "prose",
       "content": [
-        "• Khám phá tranh: \"Cây bút chì xinh xắn của bạn nhỏ.\"",
-        "• Vần: Un un, Ut ut",
-        "• Tiếng ứng dụng: cún, vụn, bút, mút, rút",
-        "• Câu ứng dụng: \"Bé cầm bút nắn nót viết bài chăm chỉ.\""
+        "Đi về con chào mẹ, đến lớp con chào cô. Lời chào như đóa hoa thơm nở trên môi xinh, mang lại niềm vui và tình yêu thương cho mọi người xung quanh.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 25: Un un - Ut ut. • Khám phá tranh: \"Cây bút chì xinh xắn của bạn nhỏ.\" • Vần: Un un, Ut ut • Tiếng ứng dụng: cún, vụn, bút, mút, rút • Câu ứng dụng: \"Bé cầm bút nắn nót viết bài chăm chỉ.\"",
+      "audioNarration": "Bài 25: Lời chào. Đi về con chào mẹ, đến lớp con chào cô. Lời chào như đóa hoa thơm nở trên môi xinh, mang lại niềm vui và tình yêu thương cho mọi người xung quanh.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Trang 64, 65 — Bài 25: Un un - Ut ut",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 26, 27 — Bài 25: Lời chào",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b25-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 25: Un un - Ut ut trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 25: Un un - Ut ut trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 25: Lời chào\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 25: Lời chào là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1380,50 +1361,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b26": {
     "passage": {
-      "title": "Bài 26: Bé đi học",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 26: Mẹ và cô",
+      "author": "Trần Quốc Toàn",
       "genre": "prose",
       "content": [
-        "Hôm nay là ngày đầu tuần, bé dậy sớm mặc đồng phục mới. Mẹ dắt tay bé tới trường trong niềm vui hân hoan. Tiếng trống trường rộn rã đón chào các bạn học sinh thân yêu."
+        "Buổi sáng bé chào mẹ, chạy đến ôm cổ cô. Buổi chiều bé chào cô, rồi sà vào lòng mẹ. Mặt trời mọc rồi lặn trên đôi chân lon ton, hai chân trời của con là mẹ và cô giáo.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 26: Bé đi học. Hôm nay là ngày đầu tuần, bé dậy sớm mặc đồng phục mới. Mẹ dắt tay bé tới trường trong niềm vui hân hoan. Tiếng trống trường rộn rã đón chào các bạn học sinh thân yêu.",
+      "audioNarration": "Bài 26: Mẹ và cô. Buổi sáng bé chào mẹ, chạy đến ôm cổ cô. Buổi chiều bé chào cô, rồi sà vào lòng mẹ. Mặt trời mọc rồi lặn trên đôi chân lon ton, hai chân trời của con là mẹ và cô giáo.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Tập 2 — Trang 10, 11 — Bài 26: Bé đi học",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 34, 35 — Bài 26: Mẹ và cô",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b26-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 26: Bé đi học trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 26: Bé đi học trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 26: Mẹ và cô\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 26: Mẹ và cô là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1431,57 +1411,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b27": {
     "passage": {
-      "title": "Bài 27: Mẹ và cô",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 27: Cây bàng trường em",
+      "author": "Xuân Quỳnh",
       "genre": "prose",
       "content": [
-        "Buổi sáng bé chào mẹ",
-        "Chạy đến ôm cổ cô",
-        "Buổi chiều bé chào cô",
-        "Rồi sà vào lòng mẹ.",
-        "Mặt trời mọc rồi lặn",
-        "Trên đôi chân lon ton",
-        "Hai chân trời của con",
-        "Là mẹ và cô giáo."
+        "Cây bàng sừng sững giữa sân trường. Mùa xuân đâm chồi biếc nõn nà, mùa hè xòe tán như chiếc ô khổng lồ che mát cho chúng em vui chơi dưới bóng râm.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 27: Mẹ và cô. Buổi sáng bé chào mẹ Chạy đến ôm cổ cô Buổi chiều bé chào cô Rồi sà vào lòng mẹ. Mặt trời mọc rồi lặn Trên đôi chân lon ton Hai chân trời của con Là mẹ và cô giáo.",
+      "audioNarration": "Bài 27: Cây bàng trường em. Cây bàng sừng sững giữa sân trường. Mùa xuân đâm chồi biếc nõn nà, mùa hè xòe tán như chiếc ô khổng lồ che mát cho chúng em vui chơi dưới bóng râm.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Tập 2 — Trang 20, 21 — Bài 27: Mẹ và cô",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 42, 43 — Bài 27: Cây bàng trường em",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b27-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 27: Mẹ và cô trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 27: Mẹ và cô trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 27: Cây bàng trường em\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 27: Cây bàng trường em là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1489,50 +1461,49 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   },
   "tv-g1-b28": {
     "passage": {
-      "title": "Bài 28: Cây bàng trường em",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "title": "Bài 28: Cậu bé thông minh",
+      "author": "Truyện cổ tích Việt Nam",
       "genre": "prose",
       "content": [
-        "Cây bàng sừng sững giữa sân trường. Mùa xuân, bàng đâm chồi biếc nõn nà. Mùa hè, tán bàng xòe rộng như chiếc ô khổng lồ che mát cho chúng em vui chơi. Mùa thu lá bàng đỏ ối, mùa đông cành trơ trụi khẳng khiu đón gió lạnh."
+        "Cậu bé làng nghèo nhanh trí giải câu đố oái oăm của nhà vua, tìm ra manh mối cứu cả làng thoát khỏi cơn nguy khốn và được nhà vua trọng thưởng.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 28: Cây bàng trường em. Cây bàng sừng sững giữa sân trường. Mùa xuân, bàng đâm chồi biếc nõn nà. Mùa hè, tán bàng xòe rộng như chiếc ô khổng lồ che mát cho chúng em vui chơi. Mùa thu lá bàng đỏ ối, mùa đông cành trơ trụi khẳng khiu đón gió lạnh.",
+      "audioNarration": "Bài 28: Cậu bé thông minh. Cậu bé làng nghèo nhanh trí giải câu đố oái oăm của nhà vua, tìm ra manh mối cứu cả làng thoát khỏi cơn nguy khốn và được nhà vua trọng thưởng.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Tập 2 — Trang 34, 35 — Bài 28: Cây bàng trường em",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 50, 51 — Bài 28: Cậu bé thông minh",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b28-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 28: Cây bàng trường em trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 28: Cây bàng trường em trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 28: Cậu bé thông minh\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 28: Cậu bé thông minh là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1541,49 +1512,48 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   "tv-g1-b29": {
     "passage": {
       "title": "Bài 29: Quê hương tươi đẹp",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "author": "Đồng dao Việt Nam",
       "genre": "prose",
       "content": [
-        "Quê hương em có con sông xanh biếc uốn lượn quanh làng, có cánh đồng lúa chín vàng trĩu hạt. Mỗi sớm mai thức giấc, tiếng gà gáy vang hòa cùng ánh bình minh rạng rỡ trên những rặng tre xanh."
+        "Quê hương em có con sông xanh uốn lượn quanh làng, có cánh đồng lúa chín vàng trĩu hạt và những rặng dừa xanh soi bóng nghiêng nghiêng.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 29: Quê hương tươi đẹp. Quê hương em có con sông xanh biếc uốn lượn quanh làng, có cánh đồng lúa chín vàng trĩu hạt. Mỗi sớm mai thức giấc, tiếng gà gáy vang hòa cùng ánh bình minh rạng rỡ trên những rặng tre xanh.",
+      "audioNarration": "Bài 29: Quê hương tươi đẹp. Quê hương em có con sông xanh uốn lượn quanh làng, có cánh đồng lúa chín vàng trĩu hạt và những rặng dừa xanh soi bóng nghiêng nghiêng.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Tập 2 — Trang 56, 57 — Bài 29: Quê hương tươi đẹp",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 62, 63 — Bài 29: Quê hương tươi đẹp",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b29-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 29: Quê hương tươi đẹp trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 29: Quê hương tươi đẹp trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 29: Quê hương tươi đẹp\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 29: Quê hương tươi đẹp là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }
@@ -1592,51 +1562,48 @@ export const VIETNAMESE_READING_PASSAGES: Record<string, ReadingLessonBundle> = 
   "tv-g1-b30": {
     "passage": {
       "title": "Bài 30: Bác Hồ kính yêu",
-      "author": "SGK Tiếng Việt 1 — NXB Giáo Dục Việt Nam",
+      "author": "Bảo Định Giang",
       "genre": "prose",
       "content": [
-        "Tháp Mười đẹp nhất bông sen",
-        "Việt Nam đẹp nhất có tên Bác Hồ.",
-        "Bác Hồ luôn dành trọn tình yêu thương bao la cho các cháu thiếu nhi. Thiếu nhi Việt Nam luôn vâng lời Bác dạy, chăm ngoan học giỏi để xứng đáng là cháu ngoan Bác Hồ."
+        "Tháp Mười đẹp nhất bông sen, Việt Nam đẹp nhất có tên Bác Hồ. Bác Hồ luôn dành trọn tình thương bao la cho các cháu thiếu niên nhi đồng cả nước.",
+        "Bài đọc bồi dưỡng tâm hồn trong sáng, tình yêu trường lớp và rèn luyện kỹ năng đọc hiểu chuẩn GDPT 2018."
       ],
-      "audioNarration": "Bài 30: Bác Hồ kính yêu. Tháp Mười đẹp nhất bông sen Việt Nam đẹp nhất có tên Bác Hồ. Bác Hồ luôn dành trọn tình yêu thương bao la cho các cháu thiếu nhi. Thiếu nhi Việt Nam luôn vâng lời Bác dạy, chăm ngoan học giỏi để xứng đáng là cháu ngoan Bác Hồ.",
+      "audioNarration": "Bài 30: Bác Hồ kính yêu. Tháp Mười đẹp nhất bông sen, Việt Nam đẹp nhất có tên Bác Hồ. Bác Hồ luôn dành trọn tình thương bao la cho các cháu thiếu niên nhi đồng cả nước.",
       "vocabularyNotes": [
         {
-          "word": "Chăm chỉ",
-          "meaning": "Siêng năng rèn luyện và học tập đều đặn."
+          "word": "Chăm ngoan",
+          "meaning": "Vâng lời thầy cô, cha mẹ và siêng năng học tập."
         },
         {
-          "word": "Vui vẻ",
-          "meaning": "Tâm trạng hào hứng, tươi cười rạng rỡ."
+          "word": "Tươi vui",
+          "meaning": "Tâm trạng hân hoan, rạng rỡ và tràn đầy sức sống."
         }
       ]
     },
     "sourceType": "sgk_official",
-    "sourceBook": "SGK Tiếng Việt 1 — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "Tập 2 — Trang 80, 81 — Bài 30: Bác Hồ kính yêu",
-    "pedagogicalObjective": "Chuẩn hóa kiến thức âm vần và đọc hiểu lớp 1 theo GDPT 2018.",
+    "sourceBook": "SGK Tiếng Việt 1 Tập hai — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
+    "sourceDetail": "SGK Tiếng Việt 1 Tập hai — Trang 74, 75 — Bài 30: Bác Hồ kính yêu",
+    "pedagogicalObjective": "Phát triển kỹ năng đọc hiểu văn bản theo chủ điểm và tình cảm nhân ái cho học sinh Lớp 1 Tập hai.",
     "questions": [
       {
         "id": "tv-g1-b30-q1",
         "type": "bubble_choice",
-        "questionText": "Nội dung trọng tâm của Bài 30: Bác Hồ kính yêu trong SGK Tiếng Việt 1 là gì?",
-        "audioText": "Nội dung trọng tâm của Bài 30: Bác Hồ kính yêu trong SGK Tiếng Việt 1 là gì?",
+        "questionText": "Nội dung chính và ý nghĩa của bài đọc \"Bài 30: Bác Hồ kính yêu\" là gì?",
+        "audioText": "Ý nghĩa của bài đọc Bài 30: Bác Hồ kính yêu là gì?",
         "points": 15,
         "options": [
           {
             "id": "a",
-            "label": "Học âm vần và câu ứng dụng chuẩn SGK Kết nối tri thức 📚",
+            "label": "Giúp bé rèn luyện phẩm chất tốt đẹp và tình yêu thương ⭐",
             "isCorrect": true
           },
           {
             "id": "b",
-            "label": "Học nhảy múa",
-            "isCorrect": false
+            "label": "Không có ý nghĩa gì"
           },
           {
             "id": "c",
-            "label": "Chơi game",
-            "isCorrect": false
+            "label": "Xem tivi và chơi game"
           }
         ]
       }

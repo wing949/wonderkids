@@ -151,7 +151,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                 </h1>
               </div>
               <p className="font-vietnam text-xs sm:text-sm font-semibold text-slate-500">
-                Toàn bộ {allGradeLessons.length} bài học chuẩn SGK NXB Giáo Dục Việt Nam
+                Toàn bộ {allGradeLessons.length} bài học theo lộ trình lớp {currentGrade}; nguồn được ghi rõ trong từng bài
               </p>
             </div>
           </div>
@@ -676,21 +676,25 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                   {selectedLessonPreview.unit}
                 </span>
                 <div className="flex items-center gap-1">
-                  {selectedLessonPreview.sourceType === 'sgk_official' ? (
+                  {selectedLessonPreview.provenance?.contentOrigin === 'sgk_reference'
+                  && selectedLessonPreview.provenance.verificationStatus === 'verified' ? (
                     <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-2 py-0.5 rounded-full">
-                      📖 {selectedLessonPreview.sourceDetail || selectedLessonPreview.textbookPageRef}
+                      📖 Nội dung theo SGK đã đối chiếu
                     </span>
                   ) : (
                     <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-blue-900 bg-blue-100/90 border border-blue-300 px-2 py-0.5 rounded-full">
-                      🌱 Bổ trợ sư phạm
+                      🌱 NỘI DUNG TỰ SINH
                     </span>
                   )}
                 </div>
               </div>
               
-              {selectedLessonPreview.sourceBook && (
+              {selectedLessonPreview.referenceBook && (
                 <p className="font-vietnam text-xs font-medium text-amber-900/80 italic">
-                  Nguồn: {selectedLessonPreview.sourceBook}
+                  Tham khảo: {selectedLessonPreview.referenceBook}
+                  {selectedLessonPreview.referenceUrl && (
+                    <> — <a className="underline hover:text-amber-700" href={selectedLessonPreview.referenceUrl} target="_blank" rel="noreferrer">mở SGK</a></>
+                  )}
                 </p>
               )}
 

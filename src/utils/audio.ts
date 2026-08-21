@@ -1,4 +1,5 @@
 import { TTSSettings } from '../types';
+import { getVietnameseAudioAsset } from '../data/curriculum/vietnamese/audioManifest';
 
 let audioCtx: AudioContext | null = null;
 
@@ -428,25 +429,31 @@ export const soundManager = {
     playNext();
   },
 
-  // Play SGK Passage audio: Thứ tự ưu tiên:
-  // 1. Giọng Cô Giáo Vy (VieNeu TTS chuẩn phòng thu .wav tại /audio/curriculum/${id}.wav)
-  // 2. Kho lưu trữ dự phòng giọng Cô Mỹ Duyên /audio/curriculum/fallback/${id}.wav
-  playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
+  // Play one complete lesson asset. The only permitted fallback is the
+  // matching fallback asset for the same lesson; browser TTS is intentionally
+  // not used here because it can switch voices and read a different payload.
+  playPassageAudio: (lessonId: string, _fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
 
-    const normalizedId = lessonId.replace('-l', '-b');
-    const sources = [
-      `/audio/curriculum/${normalizedId}.wav`,
-      `/audio/curriculum/fallback/${normalizedId}.wav`
-    ];
+    const requestSession = audioPlaybackSession;
+    const asset = getVietnameseAudioAsset(lessonId);
+    const sources = asset ? [asset.primaryPath, asset.fallbackPath] : [];
 
     let currentSourceIdx = 0;
-    let hasEnded = false;
+    let hasSettled = false;
+
+    const isCurrentRequest = () => audioPlaybackSession === requestSession;
+    const finish = () => {
+      if (!isCurrentRequest() || hasSettled) return;
+      hasSettled = true;
+      currentAudioElement = null;
+      if (onEnd) onEnd();
+    };
 
     const tryPlayNext = () => {
+      if (!isCurrentRequest() || hasSettled) return;
       if (currentSourceIdx >= sources.length) {
-        currentAudioElement = null;
-        soundManager.speakText(fallbackText, 'vi-VN', onEnd);
+        finish();
         return;
       }
 
@@ -456,19 +463,23 @@ export const soundManager = {
       const audio = new Audio(url);
       currentAudioElement = audio;
 
-      audio.onended = () => {
-        if (!hasEnded) {
-          hasEnded = true;
-          currentAudioElement = null;
-          if (onEnd) onEnd();
-        }
-      };
+      audio.onended = finish;
 
       audio.onerror = () => {
+        if (!isCurrentRequest() || currentAudioElement !== audio) return;
+        audio.onended = null;
+        audio.onerror = null;
+        audio.pause();
+        currentAudioElement = null;
         tryPlayNext();
       };
 
       audio.play().catch(() => {
+        if (!isCurrentRequest() || currentAudioElement !== audio) return;
+        audio.onended = null;
+        audio.onerror = null;
+        audio.pause();
+        currentAudioElement = null;
         tryPlayNext();
       });
     };

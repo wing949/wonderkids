@@ -456,10 +456,12 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     : false;
 
   // =========================================================================
-  // VIEW 1: BÀI ĐỌC SGK TIẾNG VIỆT & NGHE ĐỌC MẪU (READING PASSAGE VIEW)
+  // VIEW 1: BÀI ĐỌC TIẾNG VIỆT & NGHE ĐỌC MẪU (READING PASSAGE VIEW)
   // =========================================================================
   if (engineMode === 'reading' && lesson.readingPassage) {
     const passage = lesson.readingPassage;
+    const isVerifiedSgk = lesson.provenance?.contentOrigin === 'sgk_reference'
+      && lesson.provenance.verificationStatus === 'verified';
     const currentShadowingSentence = shadowingSentences[shadowingIndex] || shadowingSentences[0];
     const currentScore = currentShadowingSentence ? sentenceScores[currentShadowingSentence.id] : undefined;
 
@@ -573,17 +575,17 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
                 {/* Textbook Ref & Provenance Pill Badge */}
                 <div className="flex flex-wrap items-center justify-center gap-2">
-                  {lesson.sourceType === 'sgk_official' ? (
+                  {isVerifiedSgk ? (
                     <div className="inline-flex items-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>📖</span>
-                      <span className="font-extrabold text-emerald-950">SGK Chuẩn GDPT 2018:</span>
+                      <span className="font-extrabold text-emerald-950">Nội dung theo SGK đã đối chiếu:</span>
                       <span>{lesson.sourceDetail || lesson.textbookPageRef}</span>
                     </div>
                   ) : (
-                    <div className="inline-flex items-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-blue-900 bg-blue-100/90 border border-blue-300 px-3.5 py-1 rounded-full shadow-2xs">
+                    <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-blue-900 bg-blue-100/90 border border-blue-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>🌱</span>
-                      <span className="font-extrabold text-blue-950">Nội Dung Bổ Trợ Sư Phạm:</span>
-                      <span>{lesson.sourceBook || 'WonderKids GDPT 2018'}</span>
+                      <span className="font-extrabold text-blue-950">NỘI DUNG TỰ SINH</span>
+                      {lesson.referenceBook && <span>— Tham khảo: {lesson.referenceBook}</span>}
                     </div>
                   )}
                 </div>
@@ -596,7 +598,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 {/* Author & Book Citation */}
                 {passage.author && (
                   <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80">
-                    Nguồn / Tác giả: {passage.author} {lesson.sourceBook ? `(${lesson.sourceBook})` : ''}
+                    Thông tin bài đọc: {passage.author} {lesson.referenceDetail ? `— ${lesson.referenceDetail}` : ''}
                   </p>
                 )}
 

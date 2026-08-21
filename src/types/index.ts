@@ -17,6 +17,19 @@ export type QuestionType =
   | 'fill_blank'
   | 'spelling_blend';
 
+export type ContentOrigin = 'sgk_reference' | 'system_generated' | 'pedagogical_supplement';
+
+export type ProvenanceVerification = 'verified' | 'reference_only' | 'declared_supplement';
+
+export interface ContentProvenance {
+  contentOrigin: ContentOrigin;
+  verificationStatus: ProvenanceVerification;
+  referenceBook?: string;
+  referenceDetail?: string;
+  referenceUrl?: string;
+  note?: string;
+}
+
 export interface QuestionOption {
   id: string;
   label: string;
@@ -49,6 +62,7 @@ export interface Question {
   hint?: string;
   image?: string;
   points: number;
+  contentOrigin?: ContentOrigin;
   options?: QuestionOption[];
   correctAnswer?: string | number | string[];
   pairs?: MatchingPair[];
@@ -115,6 +129,10 @@ export interface LessonNode {
   sourceType?: 'sgk_official' | 'pedagogical_supplement';
   sourceBook?: string; // Tên bộ sách chuẩn (Bộ Kết nối tri thức với cuộc sống / Cánh Diều / Chân trời sáng tạo, NXB GDVN)
   sourceDetail?: string; // Chi tiết số trang, mục trong sách giáo khoa
+  referenceBook?: string;
+  referenceDetail?: string;
+  referenceUrl?: string;
+  provenance?: ContentProvenance;
   pedagogicalObjective?: string; // Mục tiêu kiến thức chuẩn GDPT 2018
   order: number;
   starsEarned: number; // 0, 1, 2, 3

@@ -1,4 +1,4 @@
-import { Question, ReadingPassage } from '../../types';
+import { ContentProvenance, Question, ReadingPassage } from '../../types';
 
 export interface CurriculumTopic {
   id: string;
@@ -10,6 +10,7 @@ export interface CurriculumTopic {
   sourceType?: 'sgk_official' | 'pedagogical_supplement';
   sourceBook?: string; // Tên bộ sách chuẩn (Bộ Kết nối tri thức với cuộc sống / Cánh Diều / Chân trời sáng tạo, NXB GDVN)
   sourceDetail?: string; // Chi tiết số trang, mục bài học
+  provenance?: ContentProvenance;
   pedagogicalObjective?: string; // Mục tiêu chuẩn kiến thức kỹ năng GDPT 2018
   description: string;
   summary: string;
