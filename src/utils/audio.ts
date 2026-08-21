@@ -5,7 +5,7 @@ let audioCtx: AudioContext | null = null;
 export const STORAGE_KEY_TTS_SETTINGS = 'wonderkids_tts_settings_v2';
 
 export const DEFAULT_TTS_SETTINGS: TTSSettings = {
-  voiceVi: 'Mỹ Duyên', // Cô Mỹ Duyên (VieNeu TTS) — Giọng Nữ Nam ngọt ngào, truyền cảm ⭐
+  voiceVi: 'Cô Giáo Vy', // Cô Giáo Vy (VieNeu TTS Cloned) — Giọng Nữ Miền Nam ngọt ngào, ấm áp ⭐
   voiceEn: 'en-US-JennyNeural',  // Cô Jenny — Chuẩn Mỹ bản xứ
   speechRate: 0.95,
   speechPitch: 1.0,
@@ -429,9 +429,9 @@ export const soundManager = {
   },
 
   // Play SGK Passage audio: Thứ tự ưu tiên:
-  // 1. Giọng Mỹ Duyên (VieNeu TTS chuẩn phòng thu .wav)
-  // 2. File .mp3 chính
-  // 3. Kho lưu trữ dự phòng /audio/curriculum/fallback/${id}.mp3 (Cô Hoài My)
+  // 1. Giọng Cô Giáo Vy (VieNeu TTS chuẩn phòng thu .wav tại /audio/curriculum/${id}.wav)
+  // 2. Kho lưu trữ dự phòng giọng Cô Mỹ Duyên /audio/curriculum/fallback/${id}.wav
+  // 3. Kho lưu trữ dự phòng /audio/curriculum/fallback/${id}.mp3
   // 4. Live Stream Neural TTS (soundManager.speakText)
   playPassageAudio: (lessonId: string, fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
@@ -439,6 +439,7 @@ export const soundManager = {
     const normalizedId = lessonId.replace('-l', '-b');
     const sources = [
       `/audio/curriculum/${normalizedId}.wav`,
+      `/audio/curriculum/fallback/${normalizedId}.wav`,
       `/audio/curriculum/${normalizedId}.mp3`,
       `/audio/curriculum/fallback/${normalizedId}.mp3`
     ];
@@ -513,6 +514,26 @@ export const soundManager = {
 
   // Realtime Mascot spoken feedback on answer check (Correct / Incorrect)
   speakMascotFeedback: (isCorrect: boolean, explanation?: string) => {
+    soundManager.stopSpeaking();
+
+    if (!explanation) {
+      const correctClips = ['dung-roi', 'gioi-qua', 'chinh-xac', 'xuat-sac', 'be-gioi-qua', 'tuyet-voi'];
+      const incorrectClips = ['co-len-nao', 'thu-lai-nhe'];
+
+      const clips = isCorrect ? correctClips : incorrectClips;
+      const selectedClip = clips[Math.floor(Math.random() * clips.length)];
+      const audioUrl = `/audio/feedback/${selectedClip}.wav`;
+
+      const audio = new Audio(audioUrl);
+      currentAudioElement = audio;
+      audio.play().catch(() => {
+        // Fallback to TTS if audio file fails to load
+        const fallbackMsg = isCorrect ? 'Đúng rồi! Bé giỏi quá!' : 'Chưa chính xác rồi, bé thử lại nhé!';
+        soundManager.speakText(fallbackMsg, 'vi-VN');
+      });
+      return;
+    }
+
     let message = '';
     if (isCorrect) {
       const compliments = [
@@ -522,7 +543,7 @@ export const soundManager = {
         'Đúng rồi! Cùng tiếp tục phát huy ở câu tiếp theo nhé.'
       ];
       const randomComp = compliments[Math.floor(Math.random() * compliments.length)];
-      message = explanation ? `${randomComp} ${explanation}` : randomComp;
+      message = `${randomComp} ${explanation}`;
     } else {
       const encourages = [
         'Chưa chính xác rồi bạn nhỏ ơi! Cùng thử lại nhé.',
@@ -530,7 +551,7 @@ export const soundManager = {
         'Gần đúng rồi! Bé thử chọn lại một lần nữa nhé.'
       ];
       const randomEnc = encourages[Math.floor(Math.random() * encourages.length)];
-      message = explanation ? `${randomEnc} Gợi ý: ${explanation}` : randomEnc;
+      message = `${randomEnc} Gợi ý: ${explanation}`;
     }
 
     soundManager.speakText(message, 'vi-VN');
