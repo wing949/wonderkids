@@ -59,8 +59,8 @@ test('danh mục SGK tách rõ bài đã duyệt nguyên văn, bài chờ duyệ
   );
 
   assert.equal(lessons.length, 376);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 10);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 366);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 12);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 364);
   assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'extra_practice').length, 0);
 
   for (const lesson of lessons) {
@@ -160,14 +160,14 @@ test('trình xem SGK chỉ chọn một trang và chặn lật quá đầu hoặ
 test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SGK', () => {
   const verifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[0];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(verifiedTranscript), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(verifiedTranscript), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(verifiedTranscript), true);
   assert.deepEqual(verifiedTranscript.readingPassage.sourcePages, [10, 11]);
   assert.equal(verifiedTranscript.readingPassage.verificationStatus, 'verified');
   assert.match(verifiedTranscript.readingPassage.content.join(' '), /Chúng tôi tranh nhau kể về chuyện ngày hè/);
 
   const ngayHomQua = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[1];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(ngayHomQua), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(ngayHomQua), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(ngayHomQua), true);
   assert.equal(ngayHomQua.readingPassage.author, 'Bế Kiến Quốc');
   assert.deepEqual(ngayHomQua.readingPassage.sourcePages, [13]);
   assert.deepEqual(ngayHomQua.readingPassage.content, [
@@ -179,7 +179,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 
   const niemVuiCuaBiVaBong = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[2];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(niemVuiCuaBiVaBong), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(niemVuiCuaBiVaBong), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(niemVuiCuaBiVaBong), true);
   assert.equal(niemVuiCuaBiVaBong.readingPassage.author, 'Theo 108 truyện mẹ kể con nghe');
   assert.deepEqual(niemVuiCuaBiVaBong.readingPassage.sourcePages, [17, 18]);
   assert.deepEqual(niemVuiCuaBiVaBong.readingPassage.content, [
@@ -189,7 +189,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 
   const lamViecThatLaVui = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[3];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(lamViecThatLaVui), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(lamViecThatLaVui), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(lamViecThatLaVui), true);
   assert.equal(lamViecThatLaVui.readingPassage.author, 'Theo Tô Hoài');
   assert.deepEqual(lamViecThatLaVui.readingPassage.sourcePages, [20]);
   assert.deepEqual(lamViecThatLaVui.readingPassage.content, [
@@ -200,7 +200,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 
   const emCoXinhKhong = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[4];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(emCoXinhKhong), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(emCoXinhKhong), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(emCoXinhKhong), true);
   assert.equal(emCoXinhKhong.readingPassage.author, 'Theo Âu Phúc, Voi em đi tìm tự tin');
   assert.deepEqual(emCoXinhKhong.readingPassage.sourcePages, [24, 25]);
   assert.deepEqual(emCoXinhKhong.readingPassage.content, [
@@ -210,7 +210,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 
   const motGioHoc = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[5];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(motGioHoc), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(motGioHoc), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(motGioHoc), true);
   assert.equal(motGioHoc.readingPassage.author, 'Phỏng theo Tốt-tô-chan, cô bé bên cửa sổ');
   assert.deepEqual(motGioHoc.readingPassage.sourcePages, [27, 28]);
   assert.equal(motGioHoc.readingPassage.sourceHash, '830203c5f01dfa17fdf379d1f66d7f8f0177028ddf85396f1b9631da424f4bfc');
@@ -221,7 +221,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 
   const cayXauHo = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[6];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(cayXauHo), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(cayXauHo), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(cayXauHo), true);
   assert.equal(cayXauHo.readingPassage.author, 'Theo Trần Hoài Dương');
   assert.deepEqual(cayXauHo.readingPassage.sourcePages, [31]);
   assert.equal(cayXauHo.readingPassage.sourceHash, 'f7b713462e3847ea90de6679b417fa60f0a833bd7ce333dc2cc031775e6889bd');
@@ -234,7 +234,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 
   const cauThuDuBi = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[7];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(cauThuDuBi), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(cauThuDuBi), false);
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(cauThuDuBi), true);
   assert.equal(cauThuDuBi.readingPassage.author, 'Theo 100 truyện ngụ ngôn hay nhất');
   assert.deepEqual(cauThuDuBi.readingPassage.sourcePages, [34, 35]);
   assert.equal(cauThuDuBi.readingPassage.sourceHash, '25b6777d7aa73cac1d58c986d845fee453cce04318c942bc6e9bc5337fb962bb');
@@ -244,7 +244,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
   ]);
 
   const unverifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')
-    .find((lesson) => lesson.id === 'tv-g2-b11');
+    .find((lesson) => lesson.id === 'tv-g2-b13');
   assert.ok(unverifiedTranscript, 'Thiếu bài chờ duyệt để kiểm tra khóa đọc mẫu');
   assert.equal(readingPolicy.getVietnameseReadingPolicy(unverifiedTranscript), 'source_only');
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(unverifiedTranscript), false);
@@ -253,14 +253,20 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
   assert.equal(readingPolicy.getVietnameseReadingPolicy(gradeOneSemesterOne), 'source_only');
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(gradeOneSemesterOne), false);
 
-  const verified = {
+  const newlyVerifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')
+    .find((lesson) => lesson.id === 'tv-g2-b11');
+  assert.ok(newlyVerifiedTranscript, 'Thiếu bài đã xác minh để kiểm tra cổng audio');
+  assert.equal(readingPolicy.getVietnameseReadingPolicy(newlyVerifiedTranscript), 'verified_sgk');
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(newlyVerifiedTranscript), true);
+
+  const verifiedWithoutAsset = {
     ...unverifiedTranscript,
     catalogSection: 'sgk',
     provenance: { contentOrigin: 'sgk_reference', verificationStatus: 'verified' },
     sourceCitation: { ...unverifiedTranscript.sourceCitation, verificationStatus: 'verified' },
   };
-  assert.equal(readingPolicy.getVietnameseReadingPolicy(verified), 'verified_sgk');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(verified), false);
+  assert.equal(readingPolicy.getVietnameseReadingPolicy(verifiedWithoutAsset), 'verified_sgk');
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(verifiedWithoutAsset), false);
 });
 
 test('ranh giới Em có xinh không và Một giờ học không chồng trang', () => {

@@ -65,8 +65,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   ));
 
   const pending = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending');
-  assert.equal(pending.length, 366);
-  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 10);
+  assert.equal(pending.length, 364);
+  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 12);
   assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'sgk_reference').length, 376);
   for (const lesson of pending) {
     assert.equal(lesson.sourceType, 'sgk_official', `Bài mục lục không có nguồn SGK: ${lesson.id}`);
@@ -80,7 +80,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   }
 
   const verified = lessons.filter((lesson) => lesson.catalogSection === 'sgk');
-  assert.equal(verified.length, 10);
+  assert.equal(verified.length, 12);
   for (const lesson of verified) {
     assert.equal(lesson.readingPassage?.verificationStatus, 'verified', `Thiếu nguyên văn đã duyệt: ${lesson.id}`);
     assert.ok(lesson.readingPassage?.content.length, `Thiếu nguyên văn: ${lesson.id}`);
@@ -113,6 +113,39 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
     'Thời khoá biểu cho biết thời gian học các môn của từng ngày trong tuần. Thời khoá biểu gồm nhiều cột dọc và nhiều hàng ngang. Các bạn học sinh thường đọc thời khoá biểu theo trình tự thứ – buổi – tiết – môn.',
   ]);
   assert.equal(thoiKhoaBieu.questions.length, 10);
+
+  const caiTrongTruongEm = verified.find((lesson) => lesson.id === 'tv-g2-b11');
+  assert.ok(caiTrongTruongEm, 'Bài 11 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(caiTrongTruongEm.title, 'Bài 11: Cái trống trường em');
+  assert.deepEqual(caiTrongTruongEm.sourceCitation.sourcePages, [48, 49, 50]);
+  assert.deepEqual(caiTrongTruongEm.readingPassage?.content, [
+    'Mùa hè cũng nghỉ\nSuốt ba tháng liền\nTrống nằm ngẫm nghĩ.',
+    'Buồn không hả trống\nTrong những ngày hè\nBọn mình đi vắng\nChỉ còn tiếng ve?',
+    'Cái trống lặng im\nNghiêng đầu trên giá\nChắc thấy chúng em\nNó mừng vui quá!',
+    'Kìa trống đang gọi:\nTùng! Tùng! Tùng! Tùng!\nVào năm học mới\nGiọng vang tưng bừng.',
+  ]);
+  assert.equal(caiTrongTruongEm.questions.length, 12);
+  assert.equal(
+    caiTrongTruongEm.readingPassage?.audioNarration,
+    [caiTrongTruongEm.readingPassage?.title, ...caiTrongTruongEm.readingPassage?.content].join('\n'),
+    'Transcript audio Bài 11 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
+  );
+
+  const danhSachHocSinh = verified.find((lesson) => lesson.id === 'tv-g2-b12');
+  assert.ok(danhSachHocSinh, 'Bài 12 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(danhSachHocSinh.title, 'Bài 12: Danh sách học sinh');
+  assert.deepEqual(danhSachHocSinh.sourceCitation.sourcePages, [51, 52, 53, 54]);
+  assert.deepEqual(danhSachHocSinh.readingPassage?.content, [
+    'Hôm nay, chúng tôi được đọc truyện tại lớp. Cô giáo cho chúng tôi đăng kí đọc truyện theo sở thích. Dưới đây là danh sách đăng kí của tổ tôi.',
+    'Danh sách học sinh tổ 2 lớp 2C đăng kí đọc truyện\n1. Trần Trường An — Ngày khai trường\n2. Nguyễn Hà Anh — Ếch xanh đi học\n3. Nguyễn Ngọc Bảo — Ếch xanh đi học\n4. Đỗ Duy Bắc — Ngày khai trường\n5. Vũ Tiến Bình — Vì sao gà chẳng giỏi bơi?\n6. Lê Thị Cúc — Ngày khai trường\n7. Lê Gia Hân — Vì sao gà chẳng giỏi bơi?\n8. Phùng Minh Khánh — Ếch xanh đi học',
+    'Dựa vào danh sách đăng kí, cô chia lớp thành ba nhóm, mỗi nhóm đọc một truyện. Chúng tôi đọc cho nhau nghe, rồi cùng nhau trao đổi về các nhân vật trong truyện mà nhóm đã chọn.',
+  ]);
+  assert.equal(danhSachHocSinh.questions.length, 21);
+  assert.equal(
+    danhSachHocSinh.readingPassage?.audioNarration,
+    [danhSachHocSinh.readingPassage?.title, ...danhSachHocSinh.readingPassage?.content].join('\n'),
+    'Transcript audio Bài 12 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
+  );
 });
 
 test('văn bản hiển thị của nội dung tự sinh không tự nhận là chuẩn SGK', () => {

@@ -287,16 +287,32 @@
     "confidence": 1,
     "status": "visually_reviewed"
   },
+  "tv-g2-b11": {
+    "lessonId": "tv-g2-b11",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      48,
+      49,
+      50
+    ],
+    "matchedTitle": "Bài 11: Cái trống trường em",
+    "matchedText": "bai 11 cai trong truong em",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
   "tv-g2-b12": {
     "lessonId": "tv-g2-b12",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      51
+      51,
+      52,
+      53,
+      54
     ],
-    "matchedTitle": "Bài 12: Danh sách học sinh tổ 1",
-    "matchedText": "danh sach hoc sinh j",
-    "confidence": 0.94,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 12: Danh sách học sinh",
+    "matchedText": "bai 12 danh sach hoc sinh",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g2-b13": {
     "lessonId": "tv-g2-b13",

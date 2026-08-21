@@ -1,4 +1,5 @@
 import type { LessonNode } from '../types';
+import { getVietnameseAudioAsset } from '../data/curriculum/vietnamese/audioManifest';
 
 export type VietnameseReadingPolicy = 'verified_sgk' | 'supplement' | 'source_only';
 
@@ -35,7 +36,16 @@ export function getVietnameseReadingPolicy(lesson: LessonNode): VietnameseReadin
 export function canPlayVietnameseReadingAudio(lesson: LessonNode): boolean {
   if (lesson.subject !== 'vietnamese') return true;
 
-  // Trong đợt rà soát nội dung, bản đọc SGK chỉ được hiển thị bằng chữ và trang nguồn.
-  // Audio/Shadowing được mở ở đợt nghiệm thu audio riêng để không phát file cũ lệch transcript.
-  return getVietnameseReadingPolicy(lesson) === 'supplement';
+  const policy = getVietnameseReadingPolicy(lesson);
+  if (policy === 'supplement') return true;
+  if (policy !== 'verified_sgk') return false;
+
+  const asset = getVietnameseAudioAsset(lesson.id);
+  const transcriptPages = lesson.readingPassage?.sourcePages || [];
+  return Boolean(
+    asset
+      && transcriptPages.length > 0
+      && asset.sourcePages.length === transcriptPages.length
+      && asset.sourcePages.every((page, index) => page === transcriptPages[index]),
+  );
 }

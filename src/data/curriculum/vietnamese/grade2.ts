@@ -195,39 +195,39 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
     "id": "tv-g2-b11",
     "semester": 1,
     "lessonNumber": 11,
-    "title": "Bài 11: Cái bàn học của em",
-    "unit": "Trang 50, 51 (Chủ điểm 3: Niềm vui tuổi thơ)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 50, 51 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "title": "Bài 11: Cái trống trường em",
+    "unit": "Trang 48, 49, 50 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 48, 49, 50 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 50, 51 (Chủ điểm 3: Niềm vui tuổi thơ)",
-    "pedagogicalObjective": "Đọc hiểu đoạn văn miêu tả đồ vật thân quen, giáo dục ý thức giữ gìn bàn học sạch đẹp.",
-    "description": "Bài đọc \"Bài 11: Cái bàn học của em\" (Tác giả: SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 11: Cái bàn học của em\" — SGK Tiếng Việt 2 Tập một — Trang 50, 51 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 48, 49, 50 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "pedagogicalObjective": "Đọc bài thơ về trống trường, cảm nhận tình cảm thân thiết của học sinh với mái trường.",
+    "description": "Bài đọc \"Bài 11: Cái trống trường em\" (Tác giả: Thanh Hào) — nội dung được đối chiếu theo SGK Tiếng Việt 2 Tập một.",
+    "summary": "Bài đọc \"Bài 11: Cái trống trường em\" — SGK Tiếng Việt 2 Tập một — Trang 48, 49, 50 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "keyPoints": [
       "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
       "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 11: Cái bàn học của em\" của tác giả SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam nhé!"
+    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 11: Cái trống trường em\" của tác giả Thanh Hào nhé!"
   },
   {
     "id": "tv-g2-b12",
     "semester": 1,
     "lessonNumber": 12,
-    "title": "Bài 12: Danh sách học sinh tổ 1",
-    "unit": "Trang 54, 55 (Chủ điểm 3: Niềm vui tuổi thơ)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 54, 55 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "title": "Bài 12: Danh sách học sinh",
+    "unit": "Trang 51, 52, 53, 54 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 51, 52, 53, 54 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 54, 55 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 51, 52, 53, 54 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "pedagogicalObjective": "Tập đọc văn bản thông tin dạng bảng danh sách, tra cứu thông tin theo thứ tự bảng chữ cái.",
-    "description": "Bài đọc \"Bài 12: Danh sách học sinh tổ 1\" (Tác giả: SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 12: Danh sách học sinh tổ 1\" — SGK Tiếng Việt 2 Tập một — Trang 54, 55 (Chủ điểm 3: Niềm vui tuổi thơ)",
+    "description": "Bài đọc \"Bài 12: Danh sách học sinh\" — nội dung được đối chiếu theo SGK Tiếng Việt 2 Tập một.",
+    "summary": "Bài đọc \"Bài 12: Danh sách học sinh\" — SGK Tiếng Việt 2 Tập một — Trang 51, 52, 53, 54 (Chủ điểm 3: Niềm vui tuổi thơ)",
     "keyPoints": [
       "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
       "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 12: Danh sách học sinh tổ 1\" của tác giả SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam nhé!"
+    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 12: Danh sách học sinh\" nhé!"
   },
   {
     "id": "tv-g2-b13",

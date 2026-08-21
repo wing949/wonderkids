@@ -8,11 +8,11 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 
 - Đã lập manifest cho **10/10 sách nguồn**, tổng cộng **1.584 trang**; từng ảnh trang có SHA-256 và được cache riêng ngoài Git.
 - Đã lập **danh mục 376 bài theo mục lục SGK**; mỗi bài đều có lớp, tập, tên bài và trang mở bài để đối chiếu.
-- **Chưa phát hành nguyên văn SGK chưa duyệt.** Hiện có **10 bài** đã trích nguyên văn và **49 hoạt động** có trang/tiểu ý nguồn; cần tiếp tục đối chiếu các tiểu ý còn lại trước khi công bố hoàn tất từng bài.
-- OCR đã rà 1.584/1.584 trang; **376/376 bài** đã có trang mở bài từ mục lục, trong đó **10 bài** có thêm ánh xạ trang đã kiểm tra trực quan và **0 bài** chưa có trang.
-- Hiện có **10 transcript SGK đã duyệt**. Văn bản/audio chính của **366 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
-- Có **366 bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.
-- Kho kỹ thuật hiện có một file chính và một fallback hợp lệ cho **10/376 bài**. Chỉ **10/10 transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
+- **Chưa phát hành nguyên văn SGK chưa duyệt.** Hiện có **12 bài** đã trích nguyên văn và **82 hoạt động** có trang/tiểu ý nguồn; cần tiếp tục đối chiếu các tiểu ý còn lại trước khi công bố hoàn tất từng bài.
+- OCR đã rà 1.584/1.584 trang; **376/376 bài** đã có trang mở bài từ mục lục, trong đó **12 bài** có thêm ánh xạ trang đã kiểm tra trực quan và **0 bài** chưa có trang.
+- Hiện có **12 transcript SGK đã duyệt**. Văn bản/audio chính của **364 bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
+- Có **364 bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.
+- Kho kỹ thuật hiện có một file chính và một fallback hợp lệ cho **12/376 bài**. Chỉ **12/12 transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
 
 ## Thống kê
 
@@ -21,17 +21,17 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | Sách nguồn đã lập manifest | 10/10 |
 | Trang nguồn đã lập checksum | 1.584 |
 | Danh mục bài theo mục lục SGK | 376 |
-| Bài SGK đã xác minh | 10 |
-| Danh mục SGK chờ đối chiếu nguyên văn | 366 |
+| Bài SGK đã xác minh | 12 |
+| Danh mục SGK chờ đối chiếu nguyên văn | 364 |
 | Trang mở bài đã xác định | 376/376 |
-| Ánh xạ đã kiểm tra trực quan | 10 |
+| Ánh xạ đã kiểm tra trực quan | 12 |
 | Mục chưa khớp trang | 0 |
-| Transcript SGK đã xác minh | 10 |
-| Transcript SGK có audio khớp transcript | 10/10 |
-| Bài đang khóa văn bản/audio chính | 366 |
-| Hoạt động SGK đã xác minh | 49 |
+| Transcript SGK đã xác minh | 12 |
+| Transcript SGK có audio khớp transcript | 12/12 |
+| Bài đang khóa văn bản/audio chính | 364 |
+| Hoạt động SGK đã xác minh | 82 |
 | Luyện thêm trong bài | 0 |
-| Cặp audio chính/fallback đạt kiểm tra file | 10/376 |
+| Cặp audio chính/fallback đạt kiểm tra file | 12/376 |
 
 ## Tiến độ từng sách
 
@@ -190,8 +190,8 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | tv-g2-b8 | 2/1 | Bài 8: Cầu thủ dự bị | visually_reviewed | verified_sgk_transcript | 4 | 0 |
 | tv-g2-b9 | 2/1 | Bài 9: Cô giáo lớp em | visually_reviewed | verified_sgk_transcript | 10 | 0 |
 | tv-g2-b10 | 2/1 | Bài 10: Thời khoá biểu | visually_reviewed | verified_sgk_transcript | 10 | 0 |
-| tv-g2-b11 | 2/1 | Bài 11: Cái trống trường em | catalog_page_confirmed | catalog_page_pending_transcript | 0 | 0 |
-| tv-g2-b12 | 2/1 | Bài 12: Danh sách học sinh | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
+| tv-g2-b11 | 2/1 | Bài 11: Cái trống trường em | visually_reviewed | verified_sgk_transcript | 12 | 0 |
+| tv-g2-b12 | 2/1 | Bài 12: Danh sách học sinh | visually_reviewed | verified_sgk_transcript | 21 | 0 |
 | tv-g2-b13 | 2/1 | Bài 13: Yêu lắm trường ơi! | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
 | tv-g2-b14 | 2/1 | Bài 14: Em học vẽ | ocr_matched | catalog_page_pending_transcript | 0 | 0 |
 | tv-g2-b15 | 2/1 | Bài 15: Cuốn sách của em | ocr_matched | catalog_page_pending_transcript | 0 | 0 |

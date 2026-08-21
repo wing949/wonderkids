@@ -238,6 +238,47 @@ const VERIFIED_SGK_TRANSCRIPTS: Record<string, VietnameseSgkTranscript> = {
     sourcePages: [43, 44, 45],
     sourceHash: 'e8d935d9ad02cc69669ca9839a1596b882eb79d181f43c5cdb98ac2b9c81c023',
   },
+  'tv-g2-b11': {
+    title: 'Cái trống trường em',
+    author: 'Thanh Hào',
+    genre: 'poem',
+    content: [
+      'Mùa hè cũng nghỉ\nSuốt ba tháng liền\nTrống nằm ngẫm nghĩ.',
+      'Buồn không hả trống\nTrong những ngày hè\nBọn mình đi vắng\nChỉ còn tiếng ve?',
+      'Cái trống lặng im\nNghiêng đầu trên giá\nChắc thấy chúng em\nNó mừng vui quá!',
+      'Kìa trống đang gọi:\nTùng! Tùng! Tùng! Tùng!\nVào năm học mới\nGiọng vang tưng bừng.',
+    ],
+    audioNarration: [
+      'Cái trống trường em',
+      'Mùa hè cũng nghỉ\nSuốt ba tháng liền\nTrống nằm ngẫm nghĩ.',
+      'Buồn không hả trống\nTrong những ngày hè\nBọn mình đi vắng\nChỉ còn tiếng ve?',
+      'Cái trống lặng im\nNghiêng đầu trên giá\nChắc thấy chúng em\nNó mừng vui quá!',
+      'Kìa trống đang gọi:\nTùng! Tùng! Tùng! Tùng!\nVào năm học mới\nGiọng vang tưng bừng.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [48, 49, 50],
+    sourceHash: 'c8fe3405e54eafcdbe777a6b4b6f0adb1dfd84e623b16abe1432aa9ad47c08c5',
+  },
+  'tv-g2-b12': {
+    title: 'Danh sách học sinh',
+    genre: 'prose',
+    content: [
+      'Hôm nay, chúng tôi được đọc truyện tại lớp. Cô giáo cho chúng tôi đăng kí đọc truyện theo sở thích. Dưới đây là danh sách đăng kí của tổ tôi.',
+      'Danh sách học sinh tổ 2 lớp 2C đăng kí đọc truyện\n1. Trần Trường An — Ngày khai trường\n2. Nguyễn Hà Anh — Ếch xanh đi học\n3. Nguyễn Ngọc Bảo — Ếch xanh đi học\n4. Đỗ Duy Bắc — Ngày khai trường\n5. Vũ Tiến Bình — Vì sao gà chẳng giỏi bơi?\n6. Lê Thị Cúc — Ngày khai trường\n7. Lê Gia Hân — Vì sao gà chẳng giỏi bơi?\n8. Phùng Minh Khánh — Ếch xanh đi học',
+      'Dựa vào danh sách đăng kí, cô chia lớp thành ba nhóm, mỗi nhóm đọc một truyện. Chúng tôi đọc cho nhau nghe, rồi cùng nhau trao đổi về các nhân vật trong truyện mà nhóm đã chọn.',
+    ],
+    audioNarration: [
+      'Danh sách học sinh',
+      'Hôm nay, chúng tôi được đọc truyện tại lớp. Cô giáo cho chúng tôi đăng kí đọc truyện theo sở thích. Dưới đây là danh sách đăng kí của tổ tôi.',
+      'Danh sách học sinh tổ 2 lớp 2C đăng kí đọc truyện\n1. Trần Trường An — Ngày khai trường\n2. Nguyễn Hà Anh — Ếch xanh đi học\n3. Nguyễn Ngọc Bảo — Ếch xanh đi học\n4. Đỗ Duy Bắc — Ngày khai trường\n5. Vũ Tiến Bình — Vì sao gà chẳng giỏi bơi?\n6. Lê Thị Cúc — Ngày khai trường\n7. Lê Gia Hân — Vì sao gà chẳng giỏi bơi?\n8. Phùng Minh Khánh — Ếch xanh đi học',
+      'Dựa vào danh sách đăng kí, cô chia lớp thành ba nhóm, mỗi nhóm đọc một truyện. Chúng tôi đọc cho nhau nghe, rồi cùng nhau trao đổi về các nhân vật trong truyện mà nhóm đã chọn.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [51, 52, 53, 54],
+    sourceHash: '2e9425b206b518bbe5e89c2a1ff540d369a1e3711d150ab759813fcd38fe6a41',
+  },
 };
 
 function normalizeLessonId(lessonId: string): string {
