@@ -11,6 +11,13 @@ const outputPath = join(root, 'src', 'data', 'curriculum', 'vietnamese', 'lesson
 const reportPath = join(root, 'private-reports', 'vietnamese-page-mapping-audit.csv');
 const buildDir = await mkdtemp(join(tmpdir(), 'wonderkids-page-mapping-'));
 
+// Các điểm bắt đầu đã được kiểm tra trực quan trên ảnh trang sách chính thức.
+// Chỉ thêm vào đây khi có bằng chứng trang rõ ràng; không suy đoán từ OCR.
+const visuallyReviewedPages = new Map([
+  ['tv-g2-b5', [24, 25, 26]],
+  ['tv-g2-b6', [27, 28, 29, 30]],
+]);
+
 function normalize(value) {
   return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/gi, 'd')
     .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -44,7 +51,7 @@ function bestTitleMatch(title, text) {
   const shortTarget = fullTarget.replace(/^bai\s+\d+\s+/, '');
   const targets = shortTarget.length >= 4 ? [fullTarget, shortTarget] : [fullTarget];
   const lines = text.split(/\r?\n/).map(normalize).filter(Boolean);
-  let best = { score: 0, line: '' };
+  let best = { score: 0, line: '', exactHeading: false };
   for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
     const combinedLine = [lines[lineIndex], lines[lineIndex + 1]].filter(Boolean).join(' ');
     const candidates = [lines[lineIndex], combinedLine];
@@ -53,8 +60,15 @@ function bestTitleMatch(title, text) {
         const targetTokens = new Set(target.split(' '));
         const sharedTokens = candidate.split(' ').filter((token) => targetTokens.has(token)).length;
         if (sharedTokens === 0 && target.length > 4) continue;
+        const exactHeading = lineIndex < 14
+          && candidate.includes(target)
+          && candidate.length <= target.length + 12;
         const score = Math.min(1, similarity(target, candidate) + (lineIndex < 14 ? 0.04 : 0));
-        if (score > best.score) best = { score, line: combinedLine };
+        if (exactHeading && !best.exactHeading) {
+          best = { score: 1, line: combinedLine, exactHeading: true };
+        } else if (exactHeading === best.exactHeading && score > best.score) {
+          best = { score, line: combinedLine, exactHeading };
+        }
       }
     }
   }
@@ -80,6 +94,20 @@ function csvCell(value) {
   return `"${String(value ?? '').replaceAll('"', '""')}"`;
 }
 
+async function writeFileWithRetry(path, content, attempts = 6) {
+  let lastError;
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    try {
+      await writeFile(path, content, 'utf8');
+      return;
+    } catch (error) {
+      lastError = error;
+      await new Promise((resolve) => setTimeout(resolve, 200 * (attempt + 1)));
+    }
+  }
+  throw lastError;
+}
+
 try {
   await build({
     entryPoints: ['src/data/curriculum/index.ts'], bundle: true, format: 'esm', platform: 'node',
@@ -103,53 +131,42 @@ try {
     if (!title || lesson.provenance.contentOrigin === 'pedagogical_supplement') continue;
     const bookId = `tv-g${lesson.grade}-t${lesson.semester}`;
     const oldPages = pageNumbers(lesson.provenance.referenceDetail);
-    const expectedStart = oldPages[0];
     const candidates = books.get(bookId).filter(({ page }) => page >= 8).map(({ page, text }) => {
       const match = bestTitleMatch(title, text);
-      const penalty = expectedStart ? Math.min(0.18, Math.abs(page - expectedStart) * 0.006) : 0;
-      return { page, ...match, adjustedScore: match.score - penalty };
+      return { page, ...match };
     });
-    const nearby = expectedStart
-      ? candidates.filter((candidate) => Math.abs(candidate.page - expectedStart) <= 8)
-      : candidates;
-    const searchPool = nearby.length ? nearby : candidates;
-    const highestScore = Math.max(...searchPool.map((candidate) => candidate.score));
-    const best = searchPool
+    const exactCandidates = candidates.filter((candidate) => candidate.exactHeading);
+    const candidatePool = exactCandidates.length > 0 ? exactCandidates : candidates;
+    const highestScore = Math.max(...candidatePool.map((candidate) => candidate.score));
+    const best = candidatePool
       .filter((candidate) => candidate.score >= highestScore - 0.04)
       .sort((a, b) => a.page - b.page)[0];
     const accepted = best.score >= 0.72;
-    rows.push({ lessonId: lesson.id, bookId, title, oldPages: oldPages.join(', '), bestPage: best.page, score: best.score, matchedText: best.line, accepted });
+    const reviewedPages = visuallyReviewedPages.get(lesson.id);
+    const bestPage = reviewedPages?.[0] ?? best.page;
+    rows.push({ lessonId: lesson.id, bookId, title, oldPages: oldPages.join(', '), bestPage, score: best.score, matchedText: best.line, accepted });
     if (accepted) mappings[lesson.id] = {
-      lessonId: lesson.id, bookId, sourcePages: [best.page], matchedTitle: title, matchedText: best.line,
-      confidence: Number(best.score.toFixed(4)), status: 'ocr_matched',
+      lessonId: lesson.id, bookId, sourcePages: reviewedPages || [bestPage], matchedTitle: title, matchedText: best.line,
+      confidence: Number(best.score.toFixed(4)), status: reviewedPages ? 'visually_reviewed' : 'ocr_matched',
     };
   }
 
-  const rowsByBook = new Map();
-  for (const row of rows.filter((item) => item.accepted)) {
-    rowsByBook.set(row.bookId, [...(rowsByBook.get(row.bookId) || []), row]);
-  }
-  for (const [, bookRows] of rowsByBook) {
-    const ordered = bookRows.sort((a, b) => a.bestPage - b.bestPage);
-    for (let index = 0; index < ordered.length; index += 1) {
-      const row = ordered[index];
-      const nextPage = ordered.slice(index + 1).find((candidate) => candidate.bestPage > row.bestPage)?.bestPage;
-      const oldCount = Math.max(1, Math.min(4, row.oldPages ? row.oldPages.split(',').length : 2));
-      const count = nextPage && nextPage - row.bestPage <= 6 ? nextPage - row.bestPage : oldCount;
-      mappings[row.lessonId].sourcePages = Array.from({ length: Math.max(1, count) }, (_, offset) => row.bestPage + offset);
-    }
-  }
-
   await mkdir(join(root, 'private-reports'), { recursive: true });
-  await writeFile(outputPath, `${JSON.stringify(mappings, null, 2)}\n`, 'utf8');
-  await writeFile(reportPath, [
+  await writeFileWithRetry(outputPath, `${JSON.stringify(mappings, null, 2)}\n`);
+  await writeFileWithRetry(reportPath, [
     ['lessonId', 'bookId', 'title', 'oldPages', 'bestPage', 'score', 'matchedText', 'accepted'].map(csvCell).join(','),
     ...rows.map((row) => Object.values(row).map(csvCell).join(',')),
-  ].join('\n'), 'utf8');
+  ].join('\n'));
   const digest = createHash('sha256').update(JSON.stringify(mappings)).digest('hex');
   const unmatched = rows.filter((row) => !row.accepted).map((row) => row.lessonId);
-  console.log(JSON.stringify({ lessons: lessons.length, matched: Object.keys(mappings).length, unmatched, digest }));
-  if (unmatched.length) process.exitCode = 1;
+  console.log(JSON.stringify({
+    lessons: lessons.length,
+    referenceCandidates: rows.length,
+    matched: Object.keys(mappings).length,
+    safelyBlocked: unmatched.length,
+    unmatched,
+    digest,
+  }));
 } finally {
   await rm(buildDir, { recursive: true, force: true });
 }

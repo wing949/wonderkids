@@ -57,6 +57,14 @@ try {
         ? await Promise.all([audioInfo(asset.primaryPath), audioInfo(asset.fallbackPath)])
         : [{ valid: false, hash: '' }, { valid: false, hash: '' }];
       const verifiedSgk = curriculum.isPublishableVietnameseSgkLesson(lesson);
+      const sourceMapping = curriculum.VIETNAMESE_LESSON_PAGE_MAPPINGS[lesson.id];
+      const supplementReadingAllowed = (lesson.grade === 1 && lesson.semester === 1)
+        || lesson.provenance?.contentOrigin === 'pedagogical_supplement';
+      const readingStatus = verifiedSgk
+        ? 'verified_sgk_transcript'
+        : supplementReadingAllowed
+          ? 'supplement_reading_allowed'
+          : 'blocked_until_sgk_transcript_verified';
       rows.push({
         lessonId: lesson.id,
         grade,
@@ -65,6 +73,9 @@ try {
         cardPreview: lesson.cardPreview || '',
         declaredReferenceTitle: lesson.provenance?.referenceLessonTitle || '',
         declaredReferenceDetail: lesson.provenance?.referenceDetail || '',
+        sourceMappingStatus: sourceMapping?.status || 'unmatched',
+        sourcePages: lesson.sourceCitation?.sourcePages?.join(', ') || '',
+        readingStatus,
         contentStatus: verifiedSgk ? 'verified_sgk' : 'extra_practice_inside_lesson',
         sgkActivityCount: verifiedSgk ? lesson.questions.length : 0,
         appExtensionCount: lesson.appExtensions?.length || 0,
@@ -74,7 +85,9 @@ try {
         transcriptHash: asset?.transcriptHash || '',
         notes: verifiedSgk
           ? 'Đã qua cổng kiểm duyệt xuất bản.'
-          : 'Chưa có nội dung SGK được kiểm duyệt; hoạt động hiện tại chỉ tính là Luyện thêm.',
+          : readingStatus === 'supplement_reading_allowed'
+            ? 'Chỉ cho phép bài đọc bổ sung có ghi nhãn; không tính là văn bản SGK.'
+            : 'Đã khóa văn bản và audio chính cho đến khi transcript được đối chiếu nguyên văn với SGK.',
       });
     }
   }
@@ -85,11 +98,16 @@ try {
   const sgkActivities = rows.reduce((sum, row) => sum + row.sgkActivityCount, 0);
   const appExtensions = rows.reduce((sum, row) => sum + row.appExtensionCount, 0);
   const audioReady = rows.filter((row) => row.audioPrimary === 'valid' && row.audioFallback === 'valid' && row.audioDistinct).length;
+  const sourceMatched = rows.filter((row) => row.sourceMappingStatus !== 'unmatched').length;
+  const visuallyReviewed = rows.filter((row) => row.sourceMappingStatus === 'visually_reviewed').length;
+  const sourceUnmatched = rows.filter((row) => row.sourceMappingStatus === 'unmatched').length;
+  const blockedReadings = rows.filter((row) => row.readingStatus === 'blocked_until_sgk_transcript_verified').length;
+  const verifiedTranscripts = rows.filter((row) => row.readingStatus === 'verified_sgk_transcript').length;
   const bookTable = books.map((book) =>
     `| ${book.id} | ${book.grade} | ${book.semester} | ${book.pageCount} | ${book.importStatus} | ${book.published ? 'Có' : 'Không'} | \`${book.manifestHash.slice(0, 12)}…\` |`
   ).join('\n');
   const lessonTable = rows.map((row) =>
-    `| ${row.lessonId} | ${row.grade}/${row.semester} | ${mdCell(row.appTitle)} | ${row.contentStatus === 'verified_sgk' ? 'SGK đã duyệt' : 'Luyện thêm trong bài'} | ${row.sgkActivityCount} | ${row.appExtensionCount} | ${row.audioPrimary === 'valid' && row.audioFallback === 'valid' && row.audioDistinct ? 'Đạt' : 'Chưa đạt'} |`
+    `| ${row.lessonId} | ${row.grade}/${row.semester} | ${mdCell(row.appTitle)} | ${row.sourceMappingStatus} | ${row.readingStatus} | ${row.sgkActivityCount} | ${row.appExtensionCount} |`
   ).join('\n');
 
   const markdown = `# Báo cáo kiểm duyệt Tiếng Việt theo SGK
@@ -101,8 +119,10 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 
 - Đã lập manifest cho **10/10 sách nguồn**, tổng cộng **${totalPages.toLocaleString('vi-VN')} trang**; từng ảnh trang có SHA-256 và được cache riêng ngoài Git.
 - **Chưa phát hành nội dung SGK chưa duyệt.** Hiện có **${verifiedLessons} bài SGK đã qua cổng kiểm duyệt**.
+- OCR đã rà 1.584/1.584 trang; **${sourceMatched} mục** tìm được trang mở bài, trong đó **${visuallyReviewed} mục** đã kiểm tra trực quan và **${sourceUnmatched} mục** chưa được phép gắn trang.
+- Hiện có **${verifiedTranscripts} transcript SGK đã duyệt**. Văn bản/audio chính của **${blockedReadings} bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
 - 132 gói nội dung cũ vẫn được giữ trong từng bài dưới dạng **Luyện thêm**, không tính là bài tập SGK.
-- Audio có đủ một file chính và một fallback cho **${audioReady}/132 bài**; không còn câu đọc công bố nguồn ở đầu file.
+- Kho audio có đủ một file chính và một fallback cho **${audioReady}/132 gói Luyện thêm**; các file này không được dùng làm audio SGK khi transcript chưa duyệt.
 
 ## Thống kê
 
@@ -111,6 +131,11 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | Sách nguồn đã lập manifest | ${books.length}/10 |
 | Trang nguồn đã lập checksum | ${totalPages.toLocaleString('vi-VN')} |
 | Bài SGK đã xác minh | ${verifiedLessons} |
+| Trang mở bài khớp OCR/đối chiếu | ${sourceMatched}/132 |
+| Ánh xạ đã kiểm tra trực quan | ${visuallyReviewed} |
+| Mục chưa khớp trang | ${sourceUnmatched} |
+| Transcript SGK đã xác minh | ${verifiedTranscripts} |
+| Bài đang khóa văn bản/audio chính | ${blockedReadings} |
 | Hoạt động SGK đã xác minh | ${sgkActivities} |
 | Luyện thêm trong bài | ${appExtensions} |
 | Cặp audio chính/fallback đạt kiểm tra file | ${audioReady}/132 |
@@ -123,8 +148,8 @@ ${bookTable}
 
 ## Kiểm kê từng bài trong ứng dụng
 
-| Mã bài | Lớp/Tập | Tên hiển thị | Phân loại | Hoạt động SGK | Luyện thêm | Audio |
-|---|---|---|---|---:|---:|---|
+| Mã bài | Lớp/Tập | Tên hiển thị | Ánh xạ trang | Trạng thái bài đọc | Hoạt động SGK | Luyện thêm |
+|---|---|---|---|---|---:|---:|
 ${lessonTable}
 
 ## Cổng phát hành
@@ -134,7 +159,8 @@ Một bài chỉ được tính vào nội dung SGK khi có trích dẫn trang, 
 
   const headers = [
     'lessonId', 'grade', 'semester', 'appTitle', 'cardPreview', 'declaredReferenceTitle',
-    'declaredReferenceDetail', 'contentStatus', 'sgkActivityCount', 'appExtensionCount',
+    'declaredReferenceDetail', 'sourceMappingStatus', 'sourcePages', 'readingStatus',
+    'contentStatus', 'sgkActivityCount', 'appExtensionCount',
     'audioPrimary', 'audioFallback', 'audioDistinct', 'transcriptHash', 'notes',
   ];
   const csv = [headers.join(','), ...rows.map((row) => headers.map((header) => csvCell(row[header])).join(','))].join('\n') + '\n';
