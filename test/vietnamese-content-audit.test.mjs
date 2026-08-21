@@ -65,8 +65,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   ));
 
   const pending = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending');
-  assert.equal(pending.length, 362);
-  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 14);
+  assert.equal(pending.length, 360);
+  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 16);
   assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'sgk_reference').length, 376);
   for (const lesson of pending) {
     assert.equal(lesson.sourceType, 'sgk_official', `Bài mục lục không có nguồn SGK: ${lesson.id}`);
@@ -80,7 +80,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   }
 
   const verified = lessons.filter((lesson) => lesson.catalogSection === 'sgk');
-  assert.equal(verified.length, 14);
+  assert.equal(verified.length, 16);
   for (const lesson of verified) {
     assert.equal(lesson.readingPassage?.verificationStatus, 'verified', `Thiếu nguyên văn đã duyệt: ${lesson.id}`);
     assert.ok(lesson.readingPassage?.content.length, `Thiếu nguyên văn: ${lesson.id}`);
@@ -180,6 +180,41 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
     emHocVe.readingPassage?.audioNarration,
     [emHocVe.readingPassage?.title, ...emHocVe.readingPassage?.content].join('\n'),
     'Transcript audio Bài 14 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
+  );
+
+  const cuonSachCuaEm = verified.find((lesson) => lesson.id === 'tv-g2-b15');
+  assert.ok(cuonSachCuaEm, 'Bài 15 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(cuonSachCuaEm.title, 'Bài 15: Cuốn sách của em');
+  assert.deepEqual(cuonSachCuaEm.sourceCitation.sourcePages, [63, 64, 65]);
+  assert.deepEqual(cuonSachCuaEm.readingPassage?.content, [
+    'Mỗi cuốn sách có một tên gọi. Tên sách là hàng chữ lớn ở khoảng giữa bìa sách, thường chứa đựng rất nhiều ý nghĩa. Qua tên sách, em có thể biết được sách viết về điều gì.',
+    'Người viết cuốn sách được gọi là tác giả. Tên tác giả thường được ghi vào phía trên của bìa sách.',
+    'Nơi các cuốn sách ra đời được gọi là nhà xuất bản. Tên nhà xuất bản thường được ghi ở phía dưới bìa sách.',
+    'Phần lớn các cuốn sách đều có mục lục thể hiện các mục chính và vị trí của chúng trong cuốn sách. Mục lục thường được đặt ở ngay sau trang bìa, cũng có khi được đặt ở cuối sách.',
+    'Mỗi lần đọc một cuốn sách mới, đừng quên những điều này em nhé.',
+  ]);
+  assert.equal(cuonSachCuaEm.questions.length, 14);
+  assert.equal(
+    cuonSachCuaEm.readingPassage?.audioNarration,
+    [cuonSachCuaEm.readingPassage?.title, ...cuonSachCuaEm.readingPassage?.content].join('\n'),
+    'Transcript audio Bài 15 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
+  );
+
+  const khiTrangSachMoRa = verified.find((lesson) => lesson.id === 'tv-g2-b16');
+  assert.ok(khiTrangSachMoRa, 'Bài 16 chưa được phát hành sau khi đối chiếu trang nguồn');
+  assert.equal(khiTrangSachMoRa.title, 'Bài 16: Khi trang sách mở ra');
+  assert.deepEqual(khiTrangSachMoRa.sourceCitation.sourcePages, [66, 67, 68, 69]);
+  assert.deepEqual(khiTrangSachMoRa.readingPassage?.content, [
+    'Khi trang sách mở ra\nChân trời xa xích lại\nBắt đầu là cỏ dại\nThứ đến là cánh chim\nSau nữa là trẻ con\nCuối cùng là người lớn.',
+    'Trong trang sách có biển\nEm thấy những cánh buồm\nTrong trang sách có rừng\nVới bao nhiêu là gió.',
+    'Trang sách còn có lửa\nMà giấy chẳng cháy đâu\nTrang sách có ao sâu\nMà giấy không hề ướt.',
+    'Trang sách không nói được\nSao em nghe điều gì\nDạt dào như sóng vỗ\nMột chân trời đang đi.',
+  ]);
+  assert.equal(khiTrangSachMoRa.questions.length, 19);
+  assert.equal(
+    khiTrangSachMoRa.readingPassage?.audioNarration,
+    [khiTrangSachMoRa.readingPassage?.title, ...khiTrangSachMoRa.readingPassage?.content].join('\n'),
+    'Transcript audio Bài 16 phải là đúng nguyên văn đang hiển thị ở cột bài đọc',
   );
 });
 

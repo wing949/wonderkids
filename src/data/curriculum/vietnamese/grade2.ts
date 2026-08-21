@@ -272,38 +272,38 @@ export const VIETNAMESE_GRADE_2_TOPICS: CurriculumTopic[] = [
     "semester": 1,
     "lessonNumber": 15,
     "title": "Bài 15: Cuốn sách của em",
-    "unit": "Trang 66, 67 (Chủ điểm 4: Mái trường thân yêu)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 66, 67 (Chủ điểm 4: Mái trường thân yêu)",
+    "unit": "Trang 63, 64, 65 (Chủ điểm 4: Mái trường thân yêu)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 63, 64, 65 (Chủ điểm 4: Mái trường thân yêu)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 66, 67 (Chủ điểm 4: Mái trường thân yêu)",
-    "pedagogicalObjective": "Hiểu cấu tạo của một cuốn sách và hình thành ý thức giữ gìn, trân trọng sách vở.",
-    "description": "Bài đọc \"Bài 15: Cuốn sách của em\" (Tác giả: SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 15: Cuốn sách của em\" — SGK Tiếng Việt 2 Tập một — Trang 66, 67 (Chủ điểm 4: Mái trường thân yêu)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 63, 64, 65 (Chủ điểm 4: Mái trường thân yêu)",
+    "pedagogicalObjective": "Nhận biết tên sách, tác giả, nhà xuất bản và mục lục; thực hành giới thiệu và giữ gìn sách.",
+    "description": "Bài đọc \"Cuốn sách của em\" của Nhật Huy.",
+    "summary": "Tìm hiểu các thông tin cơ bản có trên một cuốn sách.",
     "keyPoints": [
-      "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
-      "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
+      "Nhận biết các thông tin cơ bản trên bìa sách và mục lục.",
+      "Thực hành đọc, nói và viết theo các hoạt động trong sách."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 15: Cuốn sách của em\" của tác giả SGK Tiếng Việt 2 Tập một — NXB Giáo Dục Việt Nam nhé!"
+    "mascotTip": "MiuMiu: Cùng khám phá các thông tin có trong một cuốn sách nhé!"
   },
   {
     "id": "tv-g2-b16",
     "semester": 1,
     "lessonNumber": 16,
     "title": "Bài 16: Khi trang sách mở ra",
-    "unit": "Trang 70, 71 (Chủ điểm 4: Mái trường thân yêu)",
-    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 70, 71 (Chủ điểm 4: Mái trường thân yêu)",
+    "unit": "Trang 66, 67, 68, 69 (Chủ điểm 4: Mái trường thân yêu)",
+    "textbookPageRef": "SGK Tiếng Việt 2 Tập một — Trang 66, 67, 68, 69 (Chủ điểm 4: Mái trường thân yêu)",
     "sourceType": "sgk_official",
     "sourceBook": "SGK Tiếng Việt 2 Tập một — Bộ Kết nối tri thức với cuộc sống, NXB Giáo Dục Việt Nam",
-    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 70, 71 (Chủ điểm 4: Mái trường thân yêu)",
+    "sourceDetail": "SGK Tiếng Việt 2 Tập một — Trang 66, 67, 68, 69 (Chủ điểm 4: Mái trường thân yêu)",
     "pedagogicalObjective": "Học thuộc lòng bài thơ, cảm nhận niềm đam mê đọc sách và mở rộng tri thức qua từng trang sách.",
-    "description": "Bài đọc \"Bài 16: Khi trang sách mở ra\" (Tác giả: Nguyễn Nhật Ánh) chuẩn SGK Tiếng Việt 2 Tập 1.",
-    "summary": "Bài đọc \"Bài 16: Khi trang sách mở ra\" — SGK Tiếng Việt 2 Tập một — Trang 70, 71 (Chủ điểm 4: Mái trường thân yêu)",
+    "description": "Bài thơ \"Khi trang sách mở ra\" của Nguyễn Nhật Ánh.",
+    "summary": "Cảm nhận những điều thú vị mở ra từ mỗi trang sách.",
     "keyPoints": [
-      "Đọc to, rõ ràng, trôi chảy và diễn cảm toàn bộ bài học.",
-      "Nắm vững nội dung bài đọc và từ ngữ chú giải chuẩn SGK GDPT 2018."
+      "Đọc diễn cảm bài thơ và thực hiện hoạt động tìm hiểu theo sách.",
+      "Luyện viết và nói về sách, đồ dùng học tập."
     ],
-    "mascotTip": "MiuMiu: Cùng luyện đọc thật hay bài \"Bài 16: Khi trang sách mở ra\" của tác giả Nguyễn Nhật Ánh nhé!"
+    "mascotTip": "MiuMiu: Cùng đọc để khám phá chân trời trong những trang sách nhé!"
   },
   {
     "id": "tv-g2-b17",

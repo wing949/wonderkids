@@ -325,6 +325,52 @@ const VERIFIED_SGK_TRANSCRIPTS: Record<string, VietnameseSgkTranscript> = {
     sourcePages: [58, 59, 60, 61, 62],
     sourceHash: '62efa07a70f9d391158b6f1656a216710765b07addb4398155a90bdfd5d70c6f',
   },
+  'tv-g2-b15': {
+    title: 'Cuốn sách của em',
+    author: 'Nhật Huy',
+    genre: 'prose',
+    content: [
+      'Mỗi cuốn sách có một tên gọi. Tên sách là hàng chữ lớn ở khoảng giữa bìa sách, thường chứa đựng rất nhiều ý nghĩa. Qua tên sách, em có thể biết được sách viết về điều gì.',
+      'Người viết cuốn sách được gọi là tác giả. Tên tác giả thường được ghi vào phía trên của bìa sách.',
+      'Nơi các cuốn sách ra đời được gọi là nhà xuất bản. Tên nhà xuất bản thường được ghi ở phía dưới bìa sách.',
+      'Phần lớn các cuốn sách đều có mục lục thể hiện các mục chính và vị trí của chúng trong cuốn sách. Mục lục thường được đặt ở ngay sau trang bìa, cũng có khi được đặt ở cuối sách.',
+      'Mỗi lần đọc một cuốn sách mới, đừng quên những điều này em nhé.',
+    ],
+    audioNarration: [
+      'Cuốn sách của em',
+      'Mỗi cuốn sách có một tên gọi. Tên sách là hàng chữ lớn ở khoảng giữa bìa sách, thường chứa đựng rất nhiều ý nghĩa. Qua tên sách, em có thể biết được sách viết về điều gì.',
+      'Người viết cuốn sách được gọi là tác giả. Tên tác giả thường được ghi vào phía trên của bìa sách.',
+      'Nơi các cuốn sách ra đời được gọi là nhà xuất bản. Tên nhà xuất bản thường được ghi ở phía dưới bìa sách.',
+      'Phần lớn các cuốn sách đều có mục lục thể hiện các mục chính và vị trí của chúng trong cuốn sách. Mục lục thường được đặt ở ngay sau trang bìa, cũng có khi được đặt ở cuối sách.',
+      'Mỗi lần đọc một cuốn sách mới, đừng quên những điều này em nhé.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [63, 64, 65],
+    sourceHash: '9d2bbb3338f59ec8fdf537cd9d9ab131d56f48f8fa21464a5258a94d13ed1b72',
+  },
+  'tv-g2-b16': {
+    title: 'Khi trang sách mở ra',
+    author: 'Nguyễn Nhật Ánh',
+    genre: 'poem',
+    content: [
+      'Khi trang sách mở ra\nChân trời xa xích lại\nBắt đầu là cỏ dại\nThứ đến là cánh chim\nSau nữa là trẻ con\nCuối cùng là người lớn.',
+      'Trong trang sách có biển\nEm thấy những cánh buồm\nTrong trang sách có rừng\nVới bao nhiêu là gió.',
+      'Trang sách còn có lửa\nMà giấy chẳng cháy đâu\nTrang sách có ao sâu\nMà giấy không hề ướt.',
+      'Trang sách không nói được\nSao em nghe điều gì\nDạt dào như sóng vỗ\nMột chân trời đang đi.',
+    ],
+    audioNarration: [
+      'Khi trang sách mở ra',
+      'Khi trang sách mở ra\nChân trời xa xích lại\nBắt đầu là cỏ dại\nThứ đến là cánh chim\nSau nữa là trẻ con\nCuối cùng là người lớn.',
+      'Trong trang sách có biển\nEm thấy những cánh buồm\nTrong trang sách có rừng\nVới bao nhiêu là gió.',
+      'Trang sách còn có lửa\nMà giấy chẳng cháy đâu\nTrang sách có ao sâu\nMà giấy không hề ướt.',
+      'Trang sách không nói được\nSao em nghe điều gì\nDạt dào như sóng vỗ\nMột chân trời đang đi.',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [66, 67, 68, 69],
+    sourceHash: 'd6fc9b8c47886955d3681a5072931cd62a2e6e084fa6b5c4daede4fbdedf372a',
+  },
 };
 
 function normalizeLessonId(lessonId: string): string {

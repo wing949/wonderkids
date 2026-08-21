@@ -346,23 +346,28 @@
     "lessonId": "tv-g2-b15",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      63
+      63,
+      64,
+      65
     ],
     "matchedTitle": "Bài 15: Cuốn sách của em",
     "matchedText": "1 dd u 8 cuon sach cua em",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b16": {
     "lessonId": "tv-g2-b16",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      66
+      66,
+      67,
+      68,
+      69
     ],
     "matchedTitle": "Bài 16: Khi trang sách mở ra",
     "matchedText": "bai z s 2 khi trang sach mo ra e",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b17": {
     "lessonId": "tv-g2-b17",

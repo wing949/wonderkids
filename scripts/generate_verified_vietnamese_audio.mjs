@@ -7,6 +7,7 @@ import { pathToFileURL } from 'node:url';
 import { promisify } from 'node:util';
 import { build } from 'esbuild';
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
+import { synthesizeWithRetry } from './lib/verifiedVietnameseAudioRetry.mjs';
 
 const runFile = promisify(execFile);
 const workspace = process.cwd();
@@ -97,8 +98,14 @@ try {
     const primaryWav = join(workspace, 'public', 'audio', 'curriculum', `${lessonId}.wav`);
     const fallbackWav = join(workspace, 'public', 'audio', 'curriculum', 'fallback', `${lessonId}.wav`);
 
-    await synthesize(text, 'vi-VN-HoaiMyNeural', primaryMp3);
-    await synthesize(text, 'vi-VN-NamMinhNeural', fallbackMp3);
+    await synthesizeWithRetry(
+      () => synthesize(text, 'vi-VN-HoaiMyNeural', primaryMp3),
+      { onRetry: ({ attempt, attempts }) => console.warn(`TTS chính bị ngắt, đang thử lại (${attempt}/${attempts}).`) },
+    );
+    await synthesizeWithRetry(
+      () => synthesize(text, 'vi-VN-NamMinhNeural', fallbackMp3),
+      { onRetry: ({ attempt, attempts }) => console.warn(`TTS fallback bị ngắt, đang thử lại (${attempt}/${attempts}).`) },
+    );
     await convertToWav(primaryMp3, primaryWav);
     await convertToWav(fallbackMp3, fallbackWav);
 
