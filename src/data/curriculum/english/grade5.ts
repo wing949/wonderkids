@@ -5,7 +5,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u1', semester: 1, lessonNumber: 1,
     title: 'Unit 1: All About Me (Address, Lane, Street & Hometown)',
-    unit: 'Tập 1 - Unit 1: All about me',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 10, 11',
     description: 'What is your address? - It is 81 Tran Hung Dao Street. Who do you live with? - I live with my parents.',
     summary: 'Address and hometown details: Flat, Floor, Tower, Lane, Street, Avenue, Village.',
@@ -15,7 +15,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u2', semester: 1, lessonNumber: 2,
     title: 'Unit 2: Our Homes & Neighborhoods (Peaceful, Crowded, Busy, Modern)',
-    unit: 'Tập 1 - Unit 2: Our homes',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 16, 17',
     description: 'What is the city like? - It is big and busy. What is the village like? - It is small and quiet.',
     summary: 'Describing locations and living environments: Modern towers, quiet lanes.',
@@ -25,7 +25,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u3', semester: 1, lessonNumber: 3,
     title: 'Unit 3: My Foreign Friends (World Capitals: London, Tokyo, Sydney)',
-    unit: 'Tập 1 - Unit 3: My foreign friends',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 22, 23',
     description: 'Where does your pen pal live? - He lives in London, England. He speaks English.',
     summary: 'Countries and capital cities: Tokyo (Japan), Sydney (Australia), Washington D.C (USA).',
@@ -35,7 +35,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u4', semester: 1, lessonNumber: 4,
     title: 'Unit 4: Our Free-Time Activities (Surf the Internet, Ride a Bike)',
-    unit: 'Tập 1 - Unit 4: Our free-time activities',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 28, 29',
     description: 'What do you do in your free time? - I surf the Internet and read comic books. My brother plays football.',
     summary: 'Expressing frequency: Always, Usually, Often, Sometimes, Once a week, Twice a month.',
@@ -45,7 +45,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u5', semester: 1, lessonNumber: 5,
     title: 'Unit 5: My Future Job & Ambitions (Pilot, Astronaut, Architect, Writer)',
-    unit: 'Tập 1 - Unit 5: My future job',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 34, 35',
     description: 'What would you like to be in the future? - I would like to be an architect. Why? - Because I want to design beautiful buildings.',
     summary: 'Future professions and career goals: Doctor, Pilot, Scientist, Teacher, Artist.',
@@ -55,7 +55,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u6', semester: 1, lessonNumber: 6,
     title: 'Unit 6: Our School Rooms & Science Lab',
-    unit: 'Tập 1 - Unit 6: Our school rooms',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 42, 43',
     description: 'Where is the Science Lab? - It is on the second floor. What do you do there? - We do experiments.',
     summary: 'School facilities: Computer room, Language lab, Music room, Library, Art studio.',
@@ -65,7 +65,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u7', semester: 1, lessonNumber: 7,
     title: 'Unit 7: Our School Timetable & Lesson Count',
-    unit: 'Tập 1 - Unit 7: Our school timetable',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 48, 49',
     description: 'How many lessons do you have today? - I have five lessons: Maths, Vietnamese, English, Science and Music.',
     summary: 'Timetable schedule and frequency of subjects: Four times a week, Every school day.',
@@ -75,7 +75,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u8', semester: 1, lessonNumber: 8,
     title: 'Unit 8: My Favourite Subjects & Motivations',
-    unit: 'Tập 1 - Unit 8: My favourite subjects',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 54, 55',
     description: 'Why do you learn English? - Because I want to talk with foreign visitors and read international books.',
     summary: 'Motivations for studying languages and STEM subjects.',
@@ -85,7 +85,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u9', semester: 1, lessonNumber: 9,
     title: 'Unit 9: Our Teachers Day & Celebration',
-    unit: 'Tập 1 - Unit 9: Our teachers day',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 60, 61',
     description: 'When is Teachers Day in Vietnam? - It is on the twentieth of November. What will you do on that day?',
     summary: 'School festivals and expressing gratitude to teachers: Present flowers, sing songs.',
@@ -95,7 +95,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u10', semester: 1, lessonNumber: 10,
     title: 'Unit 10: Our School Trips & Famous Landmarks (Irregular Past Verbs) & Review 1',
-    unit: 'Tập 1 - Unit 10: Our school trips',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 66, 67',
     description: 'Where did you go? - We went to Ha Long Bay / Hue Imperial City. How did you get there? - By coach.',
     summary: 'Irregular past verbs: Go → Went, Take → Took, See → Saw, Have → Had, Eat → Ate.',
@@ -107,7 +107,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u11', semester: 2, lessonNumber: 11,
     title: 'Unit 11: Family Life & Evening Routines',
-    unit: 'Tập 2 - Unit 11: Family life',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 8, 9',
     description: 'What does your mother do in the evening? - She helps me with homework and cooks dinner.',
     summary: 'Household chores: Wash the dishes, sweep the floor, cook meals, water the garden.',
@@ -117,7 +117,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u12', semester: 2, lessonNumber: 12,
     title: 'Unit 12: Our Health & Common Illnesses (Headache, Toothache, Fever, Stomach ache)',
-    unit: 'Tập 2 - Unit 12: Our health',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 14, 15',
     description: 'What is the matter with you? - I have a bad toothache. You should go to the dentist.',
     summary: 'Giving health advice: You should take a rest. You should not carry heavy things.',
@@ -127,7 +127,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u13', semester: 2, lessonNumber: 13,
     title: 'Unit 13: Staying Safe & Preventing Accidents (Dont touch the stove!)',
-    unit: 'Tập 2 - Unit 13: Staying safe',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 20, 21',
     description: 'Dont play with matches! - OK, I wont. Why shouldnt I ride my bike down the stairs? - Because you may fall.',
     summary: 'Safety warnings: Knife (cut yourself), Stove (get a burn), Stairs (fall and break your leg).',
@@ -137,7 +137,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u14', semester: 2, lessonNumber: 14,
     title: 'Unit 14: Stories for Children & Fairy Tales (The Legend of Watermelon)',
-    unit: 'Tập 2 - Unit 14: Stories for children',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 26, 27',
     description: 'What happened in the story of Mai An Tiem? - Mai An Tiem found a black seed and grew sweet watermelons.',
     summary: 'Fairy tale storytelling: Snow White, The Fox and the Crow, Tam and Cam.',
@@ -147,7 +147,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u15', semester: 2, lessonNumber: 15,
     title: 'Unit 15: What Would You Like to Eat? (Food & Quantifiers)',
-    unit: 'Tập 2 - Unit 15: What would you like to eat?',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 32, 33',
     description: 'What would you like to eat? - A bowl of noodles and a bottle of mineral water, please.',
     summary: 'Quantifiers: A bowl of, A packet of, A bar of, A glass of, A bottle of, A carton of.',
@@ -157,7 +157,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u16', semester: 2, lessonNumber: 16,
     title: 'Unit 16: Weather and Seasons Across Regions',
-    unit: 'Tập 2 - Unit 16: Weather and seasons',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 40, 41',
     description: 'What is winter like in your hometown? - It is cold and foggy. There are two seasons in the South: Dry and Rainy.',
     summary: 'Climate differences between North and South Vietnam. Forecasts and seasonal clothing.',
@@ -167,7 +167,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u17', semester: 2, lessonNumber: 17,
     title: 'Unit 17: Our City vs Countryside (Comparative Life & Scenery)',
-    unit: 'Tập 2 - Unit 17: Our city',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 46, 47',
     description: 'Which place is more exciting: Da Nang City or the countryside? - I think Da Nang City is more exciting.',
     summary: 'Long comparative adjectives: More exciting, More peaceful, More modern, More beautiful.',
@@ -177,7 +177,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u18', semester: 2, lessonNumber: 18,
     title: 'Unit 18: Going Shopping & Prices of Goods',
-    unit: 'Tập 2 - Unit 18: Going shopping',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 52, 53',
     description: 'How much are these sports shoes? - They are one hundred and fifty thousand dong. Can I try them on?',
     summary: 'Shopping conversations, asking for sizes, colors, and paying at the cashier.',
@@ -187,7 +187,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u19', semester: 2, lessonNumber: 19,
     title: 'Unit 19: Animals in the Wild & Animal Behaviors (Roared loudly, Jumped quickly)',
-    unit: 'Tập 2 - Unit 19: Animals in the wild',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 58, 59',
     description: 'What did the monkeys do when you were there? - They swung quickly from branch to branch.',
     summary: 'Adverbs of manner: Loudly, Quickly, Quietly, Beautifully, Slowly.',
@@ -197,7 +197,7 @@ export const ENGLISH_GRADE_5_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g5-u20', semester: 2, lessonNumber: 20,
     title: 'Unit 20: Our Summer Holiday & Primary School Graduation Gala',
-    unit: 'Tập 2 - Unit 20: Our summer holiday',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 5 Global Success — Trang 64, 65',
     description: 'Where will you go this summer? - I will visit Phu Quoc Island. Congratulations on your Primary English Graduation!',
     summary: 'Grand review of all 5 years of Primary English. 100% prepared for Grade 6 secondary school!',

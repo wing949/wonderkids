@@ -366,10 +366,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                     soundManager.playPop();
                     setSelectedSemester(sem.id as 0 | 1 | 2);
                   }}
-                  className={`px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs border transition-all cursor-pointer ${selectedSemester === sem.id
+                  className={`px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs border transition-all cursor-pointer ${
+                    selectedSemester === sem.id
                       ? 'bg-amber-400 text-brand-dark border-amber-500 font-extrabold'
                       : 'bg-white text-slate-600 border-slate-200'
-                    }`}
+                  }`}
                 >
                   {sem.label}
                 </button>
@@ -405,7 +406,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                       </span>
                     </div>
 
-                    {/* Lessons Grid: tối đa hai cột để thẻ luôn đủ rộng cho trẻ đọc */}
+                    {/* Lessons Grid: 1 hàng 2 thẻ trắng, chung thẻ nền vàng phía sau */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                       {group.lessons.map((lesson) => {
                         const isPassed = lesson.starsEarned > 0;
@@ -417,10 +418,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                             whileHover={{ y: -4 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => handleNodeClick(lesson)}
-                            className={`group relative flex min-h-[286px] flex-col justify-between rounded-3xl p-5 transition-all duration-300 cursor-pointer select-none ${isPassed
+                            className={`group relative flex min-h-[286px] flex-col justify-between rounded-3xl p-5 transition-all duration-300 cursor-pointer select-none ${
+                              isPassed
                                 ? 'bg-gradient-to-b from-amber-50/80 via-white to-white border border-amber-300/80 shadow-[0_4px_16px_rgba(245,158,11,0.08)] hover:border-amber-400 hover:shadow-[0_12px_24px_rgba(245,158,11,0.16)]'
                                 : 'bg-white border border-slate-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:border-emerald-400 hover:shadow-[0_12px_24px_rgba(16,185,129,0.14)]'
-                              }`}
+                            }`}
                           >
                             {/* Top Badge: Textbook Page Reference & Star Reward */}
                             <div>
@@ -460,10 +462,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                               </span>
 
                               <div
-                                className={`flex h-10 px-5 items-center justify-center rounded-2xl font-baloo font-black text-xs sm:text-sm gap-2 whitespace-nowrap transition-all shadow-xs group-hover:scale-105 active:scale-95 ${isPassed
+                                className={`flex h-10 px-5 items-center justify-center rounded-2xl font-baloo font-black text-xs sm:text-sm gap-2 whitespace-nowrap transition-all shadow-xs group-hover:scale-105 active:scale-95 ${
+                                  isPassed
                                     ? 'bg-amber-400 text-amber-950 border-b-2 border-amber-600 hover:bg-amber-500'
                                     : 'bg-emerald-500 text-white border-b-2 border-emerald-700 group-hover:bg-emerald-600'
-                                  }`}
+                                }`}
                               >
                                 <Play size={13} fill="currentColor" />
                                 <span className="whitespace-nowrap">{isPassed ? 'Học lại' : 'Vào học'}</span>
@@ -679,7 +682,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                 </span>
               </div>
 
-              {selectedLessonPreview.catalogSection === 'sgk' && selectedLessonPreview.referenceBook && (
+              {['sgk', 'sgk_pending'].includes(selectedLessonPreview.catalogSection || '') && selectedLessonPreview.referenceBook && (
                 <p className="font-vietnam text-xs font-medium text-amber-900/80 italic">
                   Nguồn đối chiếu: {selectedLessonPreview.sourceCitation?.sourceLabel || selectedLessonPreview.referenceBook}
                   {selectedLessonPreview.referenceDetail ? ` — ${selectedLessonPreview.referenceDetail}` : ''}

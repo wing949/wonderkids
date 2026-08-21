@@ -21,6 +21,10 @@ export function getVietnameseReadingPolicy(lesson: LessonNode): VietnameseReadin
     && lesson.sourceCitation?.verificationStatus === 'verified';
   if (isVerifiedSgk) return 'verified_sgk';
 
+  // Các bài đã có tên và trang trong mục lục SGK nhưng chưa duyệt nguyên văn
+  // chỉ được xem trang sách; không dùng bài luyện cũ thay cho nội dung SGK.
+  if (lesson.catalogSection === 'sgk_pending') return 'source_only';
+
   const isGradeOnePhonics = lesson.grade === 1 && lesson.semester === 1;
   const isDeclaredSupplement = lesson.provenance?.contentOrigin === 'pedagogical_supplement';
   if (isGradeOnePhonics || isDeclaredSupplement) return 'supplement';

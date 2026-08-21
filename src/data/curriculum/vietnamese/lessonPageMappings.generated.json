@@ -242,23 +242,25 @@
     "lessonId": "tv-g2-b7",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      31
+      31,
+      32
     ],
     "matchedTitle": "Bài 7: Cây xấu hổ",
     "matchedText": "h q cay xau ho",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b8": {
     "lessonId": "tv-g2-b8",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      34
+      34,
+      35
     ],
     "matchedTitle": "Bài 8: Cầu thủ dự bị",
     "matchedText": "bai a l f cau thu du bi",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b9": {
     "lessonId": "tv-g2-b9",

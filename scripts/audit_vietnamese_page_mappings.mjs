@@ -20,6 +20,8 @@ const visuallyReviewedPages = new Map([
   ['tv-g2-b4', [20]],
   ['tv-g2-b5', [24, 25, 26]],
   ['tv-g2-b6', [27, 28, 29, 30]],
+  ['tv-g2-b7', [31, 32]],
+  ['tv-g2-b8', [34, 35]],
 ]);
 
 function normalize(value) {

@@ -36,12 +36,12 @@ await build({
 
 const curriculum = await import(pathToFileURL(join(auditOutputDir, 'curriculum.js')).href);
 
-test('toàn bộ 132 bài Tiếng Việt có provenance tách riêng nội dung và tài liệu tham khảo', () => {
+test('toàn bộ 376 bài Tiếng Việt có provenance và trang nguồn để đối chiếu', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade, topics]) => (
     topics.map((topic) => ({ grade: Number(grade), topic }))
   ));
 
-  assert.equal(lessons.length, 132);
+  assert.equal(lessons.length, 376);
   for (const { grade, topic } of lessons) {
     const lesson = curriculum.getLessonsForGradeAndSubject(grade, 'vietnamese')
       .find((item) => item.id === topic.id);
@@ -59,32 +59,23 @@ test('toàn bộ 132 bài Tiếng Việt có provenance tách riêng nội dung 
   }
 });
 
-test('nội dung chưa đối chiếu nguyên văn không được phát ra như SGK chính thức', () => {
+test('bài chờ đối chiếu nguyên văn chỉ mở trang SGK, không tự sinh bài đọc thay thế', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
 
-  const unverified = lessons.filter((lesson) => lesson.provenance.verificationStatus !== 'verified');
-  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 0);
-  assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'system_generated').length, 129);
-  assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'pedagogical_supplement').length, 3);
-  assert.deepEqual(
-    unverified.filter((lesson) => lesson.sourceType === 'sgk_official').map((lesson) => lesson.id),
-    [],
-    'Bài chưa đối chiếu vẫn đang bị gắn sourceType sgk_official'
-  );
-  assert.deepEqual(
-    unverified.filter((lesson) => lesson.textbookPageRef).map((lesson) => lesson.id),
-    [],
-    'Bài chưa đối chiếu vẫn hiện badge trang SGK ở đầu bài'
-  );
-  for (const lesson of unverified) {
-    if (lesson.provenance.contentOrigin === 'pedagogical_supplement') continue;
-    assert.match(lesson.unit, /^SGK Tiếng Việt tập [12]$/, `Sai cú pháp tập sách: ${lesson.id}`);
-    if (lesson.sourceCitation) {
-      assert.equal(lesson.sourceCitation.verificationStatus, 'draft', `Nguồn nháp bị gắn đã duyệt: ${lesson.id}`);
-    } else {
-      assert.equal(lesson.sourcePageImageUrls.length, 0, `Bài chưa khớp vẫn gắn ảnh SGK: ${lesson.id}`);
+  const pending = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending');
+  assert.equal(pending.length, 376);
+  assert.equal(lessons.filter((lesson) => lesson.provenance.verificationStatus === 'verified').length, 8);
+  assert.equal(lessons.filter((lesson) => lesson.provenance.contentOrigin === 'sgk_reference').length, 376);
+  for (const lesson of pending) {
+    assert.equal(lesson.sourceType, 'sgk_official', `Bài mục lục không có nguồn SGK: ${lesson.id}`);
+    assert.ok(lesson.textbookPageRef, `Bài mục lục thiếu trang SGK: ${lesson.id}`);
+    assert.ok(lesson.sourceCitation?.sourcePages.length, `Bài mục lục thiếu trích dẫn trang: ${lesson.id}`);
+    assert.ok(lesson.sourcePageImageUrls.length, `Bài mục lục thiếu ảnh trang: ${lesson.id}`);
+    if (lesson.provenance.verificationStatus !== 'verified') {
+      assert.equal(lesson.sourceCitation?.verificationStatus, 'draft', `Nguồn nháp bị gắn đã duyệt: ${lesson.id}`);
+      assert.deepEqual(lesson.readingPassage?.content, [], `Bài chưa duyệt còn văn bản đọc: ${lesson.id}`);
     }
   }
 });
@@ -115,40 +106,38 @@ test('văn bản hiển thị của nội dung tự sinh không tự nhận là 
   }
 });
 
-test('câu hỏi và hoạt động Tiếng Việt được đánh dấu là nội dung tự sinh cho đến khi có đối chiếu riêng', () => {
+test('bài chờ đối chiếu không có câu hỏi hoặc hoạt động tự sinh', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
 
-  const questions = lessons.flatMap((lesson) => lesson.questions);
   for (const lesson of lessons) {
-    assert.ok(lesson.questions.length >= 1, `Bài không có câu hỏi/hoạt động: ${lesson.id}`);
+    assert.equal(lesson.questions.length, 0, `Bài chờ duyệt còn câu hỏi: ${lesson.id}`);
+    assert.equal(lesson.appExtensions.length, 0, `Bài chờ duyệt còn Luyện thêm: ${lesson.id}`);
   }
-  assert.equal(questions.filter((question) => question.contentOrigin !== 'system_generated').length, 0);
 });
 
-test('thẻ dùng tên bài đã khai báo, còn nội dung WonderKids vẫn tách ở Luyện thêm', () => {
+test('thẻ dùng đúng tên bài trong mục lục và không đổi thành Luyện thêm', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
 
   for (const lesson of lessons) {
-    if (lesson.provenance.contentOrigin !== 'system_generated') continue;
     assert.ok(lesson.provenance.referenceLessonTitle, `Thiếu tên bài SGK tham khảo: ${lesson.id}`);
-    const declaredTitle = lesson.provenance.referenceLessonTitle.replace(/^Bài\s+\d+:\s*/i, '');
+    const declaredTitle = lesson.provenance.referenceLessonTitle;
     assert.equal(lesson.title, declaredTitle, `Sai tên bài hiển thị: ${lesson.id}`);
-    assert.equal(lesson.readingPassage.title, declaredTitle, `Sai tên bài đọc hiển thị: ${lesson.id}`);
-    if (lesson.sourceCitation) {
+    assert.equal(lesson.catalogSection, 'sgk_pending', `Bài bị gắn sai khu: ${lesson.id}`);
+    if (lesson.provenance.verificationStatus !== 'verified') {
       assert.equal(lesson.sourceCitation.verificationStatus, 'draft', `Tên chưa duyệt bị coi là SGK đã duyệt: ${lesson.id}`);
     }
-    assert.equal(lesson.appExtensions.length, lesson.questions.length, `Luyện thêm chưa tách trong bài: ${lesson.id}`);
+    assert.equal(lesson.appExtensions.length, 0, `Bài chờ duyệt lại có Luyện thêm: ${lesson.id}`);
   }
 
-  const doiTai = lessons.find((lesson) => lesson.id === 'tv-g1-b22');
-  assert.equal(doiTai.provenance.contentOrigin, 'system_generated');
-  assert.equal(doiTai.provenance.verificationStatus, 'reference_only');
-  assert.equal(doiTai.provenance.referenceLessonTitle, 'Bài 2: Đôi tai xấu xí');
-  assert.equal(doiTai.readingPassage.author, undefined);
+  const voiHoKhi = lessons.find((lesson) => lesson.id === 'tv-g1-t1-b83');
+  assert.equal(voiHoKhi.provenance.contentOrigin, 'sgk_reference');
+  assert.equal(voiHoKhi.provenance.verificationStatus, 'reference_only');
+  assert.equal(voiHoKhi.provenance.referenceLessonTitle, 'Bài 83: Voi, hổ và khỉ');
+  assert.deepEqual(voiHoKhi.readingPassage.content, []);
 });
 
 test('manifest audio có một file chính, một fallback và không còn câu công bố nguồn', async () => {
@@ -178,19 +167,12 @@ test('manifest audio có một file chính, một fallback và không còn câu 
   }
 });
 
-test('ba bài bổ trợ không bị gán tên bài, trang hoặc link SGK', () => {
+test('danh mục SGK hiện không tái sử dụng ba bài bổ trợ cũ', () => {
   const lessons = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE).flatMap(([grade]) => (
     curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese')
   ));
   const supplements = lessons.filter((lesson) => lesson.provenance.contentOrigin === 'pedagogical_supplement');
-  assert.equal(supplements.length, 3);
-  for (const lesson of supplements) {
-    assert.equal(lesson.provenance.referenceLessonTitle, undefined, `Bổ trợ có tên SGK: ${lesson.id}`);
-    assert.equal(lesson.referenceBook, undefined, `Bổ trợ có sách SGK: ${lesson.id}`);
-    assert.equal(lesson.referenceDetail, undefined, `Bổ trợ có trang SGK: ${lesson.id}`);
-    assert.equal(lesson.referenceUrl, undefined, `Bổ trợ có link SGK: ${lesson.id}`);
-    assert.equal(lesson.textbookPageRef, undefined, `Bổ trợ còn badge trang SGK: ${lesson.id}`);
-  }
+  assert.equal(supplements.length, 0);
 });
 
 test('thay đổi provenance Tiếng Việt không làm đổi nguồn hoặc phần thưởng môn khác', () => {
@@ -228,7 +210,7 @@ test('mỗi bài được nối đúng lớp, tập và nguồn SGK do người 
         assert.equal(lesson.referenceUrl, undefined, `Bài bổ trợ không được nối SGK: ${topic.id}`);
         continue;
       }
-      assert.equal(lesson.referenceUrl, undefined, `Luyện thêm không được lộ link SGK trên giao diện: ${topic.id}`);
+      assert.equal(lesson.referenceUrl, source.readerUrl, `Sai link nguồn bài học: ${topic.id}`);
       assert.equal(
         lesson.provenance.referenceUrl,
         source.readerUrl,

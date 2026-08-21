@@ -5,7 +5,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u1', semester: 1, lessonNumber: 1,
     title: 'Unit 1: My Friends (Countries & Nationalities)',
-    unit: 'Tập 1 - Unit 1: My friends',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 10, 11',
     description: 'Where are you from? - I am from America. What nationality are you? - I am American.',
     summary: 'Vietnam, England, America, Australia, Japan, Malaysia. Nationalities: Vietnamese, British, American.',
@@ -15,7 +15,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u2', semester: 1, lessonNumber: 2,
     title: 'Unit 2: Time and Daily Routines',
-    unit: 'Tập 1 - Unit 2: Time and daily routines',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 16, 17',
     description: 'What time is it? - It is six fifteen. What time do you have breakfast? - At six thirty.',
     summary: 'Telling exact time: Quarter past, Half past, Quarter to. Daily routines schedule.',
@@ -25,7 +25,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u3', semester: 1, lessonNumber: 3,
     title: 'Unit 3: My Week & Days of the Week',
-    unit: 'Tập 1 - Unit 3: My week',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 22, 23',
     description: 'What day is it today? - It is Tuesday. What do you do on Saturdays? - I visit my grandparents.',
     summary: 'Monday to Sunday. Activities: Go to English club, play football, help parents.',
@@ -35,7 +35,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u4', semester: 1, lessonNumber: 4,
     title: 'Unit 4: My Birthday & Months of the Year',
-    unit: 'Tập 1 - Unit 4: My birthday',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 28, 29',
     description: 'When is your birthday? - It is on the second of September. What do you want for your birthday?',
     summary: '12 Months and Ordinal numbers: 1st, 2nd, 3rd, 4th, 5th... 31st.',
@@ -45,7 +45,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u5', semester: 1, lessonNumber: 5,
     title: 'Unit 5: Things We Can Do (Musical Instruments & Sports)',
-    unit: 'Tập 1 - Unit 5: Things we can do',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 34, 35',
     description: 'Can you play the guitar? - Yes, I can. / No, I cannot, but I can play the piano.',
     summary: 'Abilities with Can/Cannot: Play the drums, ride a horse, speak English, swim.',
@@ -55,7 +55,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u6', semester: 1, lessonNumber: 6,
     title: 'Unit 6: Our School Facilities & Locations',
-    unit: 'Tập 1 - Unit 6: Our school facilities',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 42, 43',
     description: 'Where is your school? - It is in Nguyen Du Street. It is a big and modern school.',
     summary: 'Locations: In the city, In the village, In the mountains. Buildings: Playground, Garden.',
@@ -65,7 +65,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u7', semester: 1, lessonNumber: 7,
     title: 'Unit 7: Our Timetables & School Subjects',
-    unit: 'Tập 1 - Unit 7: Our timetables',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 48, 49',
     description: 'What subjects do you have today? - I have Maths, Vietnamese, English and Art.',
     summary: 'Subjects: Science, History and Geography, Informatics, Music, PE.',
@@ -75,7 +75,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u8', semester: 1, lessonNumber: 8,
     title: 'Unit 8: My Favourite Subjects & Reasons',
-    unit: 'Tập 1 - Unit 8: My favourite subjects',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 54, 55',
     description: 'What is your favourite subject? - It is English. Why do you like it? - Because I want to be an English teacher.',
     summary: 'Giving reasons with Because: Because I like numbers, because I want to sing.',
@@ -85,7 +85,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u9', semester: 1, lessonNumber: 9,
     title: 'Unit 9: Our Sports Day & Competitions',
-    unit: 'Tập 1 - Unit 9: Our sports day',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 60, 61',
     description: 'When is your Sports Day? - It is in November. Are you going to take part in the running race?',
     summary: 'School festivals: Sports Day, Teachers Day, Childrens Day, Mid-Autumn Festival.',
@@ -95,7 +95,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u10', semester: 1, lessonNumber: 10,
     title: 'Unit 10: Where Were You Yesterday? (Past Simple: Was / Were) & Review 1',
-    unit: 'Tập 1 - Unit 10: Where were you yesterday?',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 66, 67',
     description: 'Where were you yesterday? - I was at home / at the zoo / on the beach. What did you do?',
     summary: 'Past tense of To Be: Was/Were. Consolidation of Semester 1 (Units 1-10).',
@@ -107,7 +107,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u11', semester: 2, lessonNumber: 11,
     title: 'Unit 11: My Home & Address (Street, Road, Lane, Floor)',
-    unit: 'Tập 2 - Unit 11: My home',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 8, 9',
     description: 'Where do you live? - I live in Flat 18 on the third floor of Ha Noi Tower.',
     summary: 'Address vocabulary: Lane, Street, Road, Avenue, Village, District.',
@@ -117,7 +117,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u12', semester: 2, lessonNumber: 12,
     title: 'Unit 12: Jobs & Workplaces (Doctor, Nurse, Engineer, Teacher, Cook)',
-    unit: 'Tập 2 - Unit 12: Jobs',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 14, 15',
     description: 'What does your father do? - He is a doctor. Where does he work? - He works in a hospital.',
     summary: 'Occupations and workplaces: Factory, Hospital, School, Farm, Office.',
@@ -127,7 +127,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u13', semester: 2, lessonNumber: 13,
     title: 'Unit 13: Appearance & Personality (Tall, Short, Slim, Kind, Friendly)',
-    unit: 'Tập 2 - Unit 13: Appearance',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 20, 21',
     description: 'What does your brother look like? - He is tall and has short black hair.',
     summary: 'Describing physical appearance and personality traits: Generous, hard-working.',
@@ -137,7 +137,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u14', semester: 2, lessonNumber: 14,
     title: 'Unit 14: Daily Activities & Free Time (Go for a walk, Surf the Internet)',
-    unit: 'Tập 2 - Unit 14: Daily activities and free time',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 26, 27',
     description: 'What do you do in your free time? - I surf the Internet and read comic books.',
     summary: 'Free time hobbies: Go fishing, go skating, do karate, practice English.',
@@ -147,7 +147,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u15', semester: 2, lessonNumber: 15,
     title: 'Unit 15: My Familys Weekend (Regular Past Tense Verbs -ed)',
-    unit: 'Tập 2 - Unit 15: My familys weekend',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 32, 33',
     description: 'Where did you go last weekend? - We visited Cuc Phuong National Park. We watched birds.',
     summary: 'Regular past tense verbs: Visited, Walked, Watched, Played, Cleaned, Watered.',
@@ -157,7 +157,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u16', semester: 2, lessonNumber: 16,
     title: 'Unit 16: Weather & Four Seasons (Warm, Hot, Cool, Cold)',
-    unit: 'Tập 2 - Unit 16: Weather',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 40, 41',
     description: 'What will the weather be like tomorrow? - It will be sunny and cool.',
     summary: 'Weather predictions: Spring is warm, Summer is hot, Autumn is cool, Winter is cold.',
@@ -167,7 +167,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u17', semester: 2, lessonNumber: 17,
     title: 'Unit 17: In the City & Asking for Directions (Turn Left, Go Straight)',
-    unit: 'Tập 2 - Unit 17: In the city',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 46, 47',
     description: 'Excuse me, where is the pharmacy? - Go straight ahead and turn left at the corner.',
     summary: 'Giving and following directions in a city: Opposite, Behind, Near, Next to.',
@@ -177,7 +177,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u18', semester: 2, lessonNumber: 18,
     title: 'Unit 18: At the Shopping Centre & Prices of Clothes',
-    unit: 'Tập 2 - Unit 18: At the shopping centre',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 52, 53',
     description: 'How much is this T-shirt? - It is eighty thousand dong. How much are these jeans?',
     summary: 'Asking about prices: How much is/are...? Currency: Vietnam Dong, Dollar.',
@@ -187,7 +187,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u19', semester: 2, lessonNumber: 19,
     title: 'Unit 19: Animal World & Comparative Adjectives (Bigger, Taller, Faster)',
-    unit: 'Tập 2 - Unit 19: Animal world',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 58, 59',
     description: 'Which animal is bigger: the elephant or the horse? - The elephant is bigger than the horse.',
     summary: 'Comparative adjectives: Bigger, Smaller, Faster, Slower, Stronger, Taller.',
@@ -197,7 +197,7 @@ export const ENGLISH_GRADE_4_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g4-u20', semester: 2, lessonNumber: 20,
     title: 'Unit 20: At Summer Camp & Future Plans (Will / Be Going To) & Final Review',
-    unit: 'Tập 2 - Unit 20: At summer camp',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 4 Global Success — Trang 64, 65',
     description: 'What are you going to do this summer? - I am going to stay on a farm and explore nature.',
     summary: 'Comprehensive review and celebration of completing all 20 Units of Grade 4 English.',

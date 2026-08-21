@@ -21,7 +21,7 @@ export type ContentOrigin = 'sgk_reference' | 'system_generated' | 'pedagogical_
 
 export type ProvenanceVerification = 'verified' | 'reference_only' | 'declared_supplement';
 
-export type CatalogSection = 'sgk' | 'extra_practice';
+export type CatalogSection = 'sgk' | 'sgk_pending' | 'extra_practice';
 
 export type SourceVerificationStatus = 'draft' | 'ocr_reviewed' | 'verified';
 

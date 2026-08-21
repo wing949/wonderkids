@@ -5,7 +5,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u1', semester: 1, lessonNumber: 1,
     title: 'Unit 1: Hello & Greetings',
-    unit: 'Tập 1 - Unit 1: Hello',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 10, 11',
     description: 'Hello. Hi. How are you? - I am fine, thank you. Nice to meet you.',
     summary: 'Daily greetings, introducing names and asking about health.',
@@ -15,7 +15,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u2', semester: 1, lessonNumber: 2,
     title: 'Unit 2: Our Names & Spelling Names',
-    unit: 'Tập 1 - Unit 2: Our names',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 16, 17',
     description: 'What is your name? - My name is Lucy. How do you spell your name? - L-U-C-Y.',
     summary: 'Spelling English and Vietnamese names using the alphabet.',
@@ -25,7 +25,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u3', semester: 1, lessonNumber: 3,
     title: 'Unit 3: Our Friends & Introductions',
-    unit: 'Tập 1 - Unit 3: Our friends',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 22, 23',
     description: 'This is my friend, Mary. Is this Bill? - Yes, it is. / No, it is not.',
     summary: 'Introducing friends and classmates politely.',
@@ -35,7 +35,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u4', semester: 1, lessonNumber: 4,
     title: 'Unit 4: Our Bodies & Touching Body Parts',
-    unit: 'Tập 1 - Unit 4: Our bodies',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 28, 29',
     description: 'Touch your nose! Open your mouth! Wash your hands!',
     summary: 'Body parts: Eye, Ear, Nose, Mouth, Hand, Face, Arm, Leg.',
@@ -45,7 +45,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u5', semester: 1, lessonNumber: 5,
     title: 'Unit 5: My Hobbies (Singing, Dancing, Drawing, Swimming)',
-    unit: 'Tập 1 - Unit 5: My hobbies',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 34, 35',
     description: 'What is your hobby? - I like dancing. I like reading books.',
     summary: 'Talk about favorite activities: Singing, Drawing, Cooking, Swimming.',
@@ -55,7 +55,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u6', semester: 1, lessonNumber: 6,
     title: 'Unit 6: Our School (Classroom, Library, Playground, Gym)',
-    unit: 'Tập 1 - Unit 6: Our school',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 42, 43',
     description: 'Is this our school? - Yes, it is. Look at the large school library.',
     summary: 'School facilities: Computer room, Art room, Music room, Gym.',
@@ -65,7 +65,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u7', semester: 1, lessonNumber: 7,
     title: 'Unit 7: Classroom Instructions (Stand up, Sit down, Open your book)',
-    unit: 'Tập 1 - Unit 7: Classroom instructions',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 48, 49',
     description: 'May I come in? - Yes, you may. May I ask a question? - Yes, you may.',
     summary: 'Polite classroom requests and instructions from the teacher.',
@@ -75,7 +75,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u8', semester: 1, lessonNumber: 8,
     title: 'Unit 8: My School Things (Pen, Ruler, Eraser, Pencil case, School bag)',
-    unit: 'Tập 1 - Unit 8: My school things',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 54, 55',
     description: 'I have a pen. Do you have an eraser? - Yes, I do. / No, I do not.',
     summary: 'School stationery items and asking about possessions.',
@@ -85,7 +85,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u9', semester: 1, lessonNumber: 9,
     title: 'Unit 9: Colours in Our World (Red, Blue, Yellow, Green, Orange, Purple)',
-    unit: 'Tập 1 - Unit 9: Colours',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 60, 61',
     description: 'What colour is it? - It is red. What colour are they? - They are blue.',
     summary: 'Singular vs Plural colours: It is orange. They are green.',
@@ -95,7 +95,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u10', semester: 1, lessonNumber: 10,
     title: 'Unit 10: Break Time Activities (Football, Badminton, Chess, Skipping) & Review 1',
-    unit: 'Tập 1 - Unit 10: Break time activities',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 66, 67',
     description: 'What do you do at break time? - I play football. I play chess with my friend.',
     summary: 'Break time games and sports. Consolidation of Semester 1 (Units 1-10).',
@@ -107,7 +107,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u11', semester: 2, lessonNumber: 11,
     title: 'Unit 11: My Family (Father, Mother, Brother, Sister, Baby)',
-    unit: 'Tập 2 - Unit 11: My family',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 8, 9',
     description: 'Who is that? - That is my father. How old is he? - He is thirty-five years old.',
     summary: 'Introducing family members and asking about their ages.',
@@ -117,7 +117,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u12', semester: 2, lessonNumber: 12,
     title: 'Unit 12: Our House & Rooms (Living room, Bedroom, Kitchen, Bathroom)',
-    unit: 'Tập 2 - Unit 12: Our house',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 14, 15',
     description: 'Where is my mother? - She is in the kitchen. There is a garden outside.',
     summary: 'Rooms in a house and prepositions of location.',
@@ -127,7 +127,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u13', semester: 2, lessonNumber: 13,
     title: 'Unit 13: In My Room (Table, Chair, Bed, Desk, Door, Window)',
-    unit: 'Tập 2 - Unit 13: My room',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 20, 21',
     description: 'Where is the book? - It is on the table. Where are the balls? - They are under the bed.',
     summary: 'Prepositions of place: In, On, Under, Behind, Next to.',
@@ -137,7 +137,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u14', semester: 2, lessonNumber: 14,
     title: 'Unit 14: My Bedroom Furniture (Poster, Picture, Clock, Lamp)',
-    unit: 'Tập 2 - Unit 14: My bedroom',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 26, 27',
     description: 'There is a clock on the wall. How many posters are there? - There are two posters.',
     summary: 'Counting objects in a bedroom using "How many... are there?".',
@@ -147,7 +147,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u15', semester: 2, lessonNumber: 15,
     title: 'Unit 15: At the Dining Table (Fish, Rice, Bread, Eggs, Juice, Milk)',
-    unit: 'Tập 2 - Unit 15: At the dining table',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 32, 33',
     description: 'What would you like to eat? - I would like some rice and fish, please.',
     summary: 'Polite table manners and ordering food and drinks.',
@@ -157,7 +157,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u16', semester: 2, lessonNumber: 16,
     title: 'Unit 16: My Pets (Dog, Cat, Bird, Rabbit, Goldfish, Parrot)',
-    unit: 'Tập 2 - Unit 16: My pets',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 40, 41',
     description: 'Do you have any pets? - Yes, I have two cats and a talking parrot.',
     summary: 'Naming pets and asking about quantity: Where are the dogs? - They are in the yard.',
@@ -167,7 +167,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u17', semester: 2, lessonNumber: 17,
     title: 'Unit 17: Our Toys (Kite, Car, Robot, Doll, Teddy bear, Plane)',
-    unit: 'Tập 2 - Unit 17: Our toys',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 46, 47',
     description: 'What toy do you have? - I have a red robot. How many kites do you have?',
     summary: 'Talking about toy collections and colors.',
@@ -177,7 +177,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u18', semester: 2, lessonNumber: 18,
     title: 'Unit 18: Playing with Friends (Hide and seek, Blind man buff, Skating)',
-    unit: 'Tập 2 - Unit 18: Playing with friends',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 52, 53',
     description: 'What are you doing? - We are playing hide-and-seek in the park.',
     summary: 'Present continuous tense introduction: I am skating. They are playing football.',
@@ -187,7 +187,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u19', semester: 2, lessonNumber: 19,
     title: 'Unit 19: Outdoor Activities & Weather (Sunny, Rainy, Windy, Cloudy, Snowy)',
-    unit: 'Tập 2 - Unit 19: Outdoor activities',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 58, 59',
     description: 'What is the weather like today? - It is sunny and warm. Lets fly a kite!',
     summary: 'Weather conditions and planning matching outdoor activities.',
@@ -197,7 +197,7 @@ export const ENGLISH_GRADE_3_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g3-u20', semester: 2, lessonNumber: 20,
     title: 'Unit 20: At the Zoo (Tiger, Monkey, Elephant, Peacock, Kangaroo) & Final Review',
-    unit: 'Tập 2 - Unit 20: At the zoo',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 3 Global Success — Trang 64, 65',
     description: 'What animal do you want to see? - I want to see the dancing peacock and big elephant.',
     summary: 'Comprehensive review and celebration of completing all 20 Units of Grade 3 English.',

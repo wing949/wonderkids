@@ -5,7 +5,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u1', semester: 1, lessonNumber: 1,
     title: 'Unit 1: At My Birthday Party (Letter P - p)',
-    unit: 'Tập 1 - Unit 1: At my birthday party',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 6, 7',
     description: 'Letter P/p: Popcorn, Pasta, Pizza, Pony. I like popcorn. I like pizza.',
     summary: 'Phonics letter P sound /p/. Express food choices at a birthday party.',
@@ -15,7 +15,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u2', semester: 1, lessonNumber: 2,
     title: 'Unit 2: In the Backyard (Letter Y - y)',
-    unit: 'Tập 1 - Unit 2: In the backyard',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 10, 11',
     description: 'Letter Y/y: Yo-yo, Yogurt, Yak, Yellow. I have a yellow yo-yo.',
     summary: 'Phonics letter Y sound /j/. Talk about possessions: He has a yo-yo.',
@@ -25,7 +25,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u3', semester: 1, lessonNumber: 3,
     title: 'Unit 3: At the Seaside (Letter S - s)',
-    unit: 'Tập 1 - Unit 3: At the seaside',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 14, 15',
     description: 'Letter S/s: Sailing boat, Sand, Sea, Sun. Look at the sailing boat.',
     summary: 'Phonics letter S sound /s/. Seaside landscape: The sun is shining over the sea.',
@@ -35,7 +35,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u4', semester: 1, lessonNumber: 4,
     title: 'Unit 4: In the Countryside (Letter R - r)',
-    unit: 'Tập 1 - Unit 4: In the countryside',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 18, 19',
     description: 'Letter R/r: River, Road, Rainbow, Rice. There is a river. There is a rainbow.',
     summary: 'Phonics letter R sound /r/. Structures: There is a river along the road.',
@@ -45,7 +45,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u5', semester: 1, lessonNumber: 5,
     title: 'Unit 5: In the Classroom (Letter J - j)',
-    unit: 'Tập 1 - Unit 5: In the classroom',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 24, 25',
     description: 'Letter J/j: Jelly, Jam, Juice, Jacket. I have a warm jacket. Sweet fruit jelly.',
     summary: 'Phonics letter J sound /dʒ/. Everyday objects: Wear your jacket, drink orange juice.',
@@ -55,7 +55,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u6', semester: 1, lessonNumber: 6,
     title: 'Unit 6: On the Farm (Letter F - f)',
-    unit: 'Tập 1 - Unit 6: On the farm',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 28, 29',
     description: 'Letter F/f: Fox, Frog, Fruit, Flower. I see a little frog on the leaf.',
     summary: 'Phonics letter F sound /f/. Farm animals and nature: The clever fox and green frog.',
@@ -65,7 +65,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u7', semester: 1, lessonNumber: 7,
     title: 'Unit 7: In the Kitchen (Letter M - m)',
-    unit: 'Tập 1 - Unit 7: In the kitchen',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 32, 33',
     description: 'Letter M/m: Mango, Meat, Milk, Mushroom. Would you like some mango?',
     summary: 'Phonics letter M sound /m/. Offering food: Yes, please. / No, thanks.',
@@ -75,7 +75,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u8', semester: 1, lessonNumber: 8,
     title: 'Unit 8: In the Village (Letter V - v) & Review 1',
-    unit: 'Tập 1 - Unit 8: In the village',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 36, 37',
     description: 'Letter V/v: Van, Village, Vase, Volleyball. They are playing volleyball.',
     summary: 'Phonics letter V sound /v/. Consolidation of Semester 1 Phonics (P, Y, S, R, J, F, M, V).',
@@ -87,7 +87,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u9', semester: 2, lessonNumber: 9,
     title: 'Unit 9: In the Grocery Store (Letter W - w)',
-    unit: 'Tập 2 - Unit 9: In the grocery store',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 42, 43',
     description: 'Letter W/w: Water, Water spinach, Watermelon, Window. Look through the window.',
     summary: 'Phonics letter W sound /w/. Fresh food: Juicy sweet watermelon and pure water.',
@@ -97,7 +97,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u10', semester: 2, lessonNumber: 10,
     title: 'Unit 10: At the Zoo (Letter Q - q)',
-    unit: 'Tập 2 - Unit 10: At the zoo',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 46, 47',
     description: 'Letter Q/q: Question, Queen, Quilt, Quiet. Be quiet, please. Ask a question.',
     summary: 'Phonics letter Q sound /kw/. Classroom etiquette and stories.',
@@ -107,7 +107,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u11', semester: 2, lessonNumber: 11,
     title: 'Unit 11: In the Playground (Letter X - x)',
-    unit: 'Tập 2 - Unit 11: In the playground',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 50, 51',
     description: 'Letter X/x: Box, Fox, Ox, Six. What is in the box? - There is a toy fox.',
     summary: 'Phonics letter X ending sound /ks/. Identifying toys and numbers: Number six.',
@@ -117,7 +117,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u12', semester: 2, lessonNumber: 12,
     title: 'Unit 12: At the Cafe (Letter C - c)',
-    unit: 'Tập 2 - Unit 12: At the cafe',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 54, 55',
     description: 'Letter C/c: Cake, Coffee, Cup, Carrot. Can I have a carrot cake, please?',
     summary: 'Phonics letter C sound /k/. Polite ordering: A cup of tea and a carrot cake, please.',
@@ -127,7 +127,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u13', semester: 2, lessonNumber: 13,
     title: 'Unit 13: In the Maths Class (Numbers 11 to 20)',
-    unit: 'Tập 2 - Unit 13: In the maths class',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 60, 61',
     description: 'Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen, Twenty.',
     summary: 'Count objects from 11 to 20: How many pencils? - There are fifteen pencils.',
@@ -137,7 +137,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u14', semester: 2, lessonNumber: 14,
     title: 'Unit 14: At the Toy Store (Plane, Train, Puzzle, Puppet)',
-    unit: 'Tập 2 - Unit 14: At the toy store',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 64, 65',
     description: 'Name toys: Plane, Train, Puzzle, Puppet. I want to buy a toy train.',
     summary: 'Expressing wishes and describing toys: The blue plane can fly high.',
@@ -147,7 +147,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u15', semester: 2, lessonNumber: 15,
     title: 'Unit 15: At the Clothing Store (Shirt, Skirt, Shoes, Socks)',
-    unit: 'Tập 2 - Unit 15: At the clothing store',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 68, 69',
     description: 'Name clothes: Shirt, Skirt, Shoes, Socks, Hat. I like this red skirt.',
     summary: 'Shopping for clothes: Look at these white shoes and blue socks.',
@@ -157,7 +157,7 @@ export const ENGLISH_GRADE_2_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g2-u16', semester: 2, lessonNumber: 16,
     title: 'Unit 16: At the Sports Camp (Ride, Run, Jump, Swim) & Final Review',
-    unit: 'Tập 2 - Unit 16: At the sports camp',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 2 Global Success — Trang 72, 73',
     description: 'Action verbs: Ride a bike, Run fast, Jump high, Swim in the pool.',
     summary: 'Complete mastery of all 16 Units of SGK Tiếng Anh 2 Global Success.',

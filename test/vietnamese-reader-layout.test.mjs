@@ -3,6 +3,7 @@ import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 
 const readerSource = await readFile('src/components/exercise/InteractiveExerciseEngine.tsx', 'utf8');
+const adventureSource = await readFile('src/components/adventure/AdventureMap.tsx', 'utf8');
 
 test('trình đọc SGK ưu tiên diện tích cho cột nội dung và không làm rộng ảnh trang', () => {
   assert.match(
@@ -71,4 +72,12 @@ test('nút Đọc và Shadowing nằm giữa thanh đầu trang, không chiếm 
 
 test('nhãn Shadowing ở thanh đầu trang không bị ngắt thành hai dòng', () => {
   assert.match(readerSource, /<span className="whitespace-nowrap">Luyện Shadowing<\/span>/);
+});
+
+test('popup bài chờ duyệt vẫn cho phụ huynh xem nguồn SGK, không đổi nhãn sang Luyện thêm', () => {
+  assert.match(
+    adventureSource,
+    /\['sgk', 'sgk_pending'\]\.includes\(selectedLessonPreview\.catalogSection \|\| ''\)/,
+  );
+  assert.match(adventureSource, /Nguồn đối chiếu:/);
 });

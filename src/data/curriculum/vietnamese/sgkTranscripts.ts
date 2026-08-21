@@ -157,6 +157,52 @@ const VERIFIED_SGK_TRANSCRIPTS: Record<string, VietnameseSgkTranscript> = {
     sourcePages: [27, 28],
     sourceHash: '830203c5f01dfa17fdf379d1f66d7f8f0177028ddf85396f1b9631da424f4bfc',
   },
+  'tv-g2-b7': {
+    title: 'Cây xấu hổ',
+    author: 'Theo Trần Hoài Dương',
+    genre: 'prose',
+    content: [
+      'Bỗng dưng, gió ào ào nổi lên. Có tiếng động gì lạ lắm. Những chiếc lá khô lạt xạt lướt trên cỏ. Cây xấu hổ co rúm mình lại.',
+      'Nó bỗng thấy xung quanh xôn xao. Nó hé mắt nhìn: không có gì lạ cả. Bấy giờ, nó mới mở bừng những con mắt lá. Quả nhiên, không có gì lạ thật.',
+      'Nhưng những cây cỏ xung quanh vẫn cứ xôn xao. Thì ra, vừa có một con chim xanh biếc, toàn thân lóng lánh như tự toả sáng không biết từ đâu bay tới. Chim đậu một thoáng trên cành thanh mai rồi lại vội bay đi. Các cây cỏ xuýt xoa: biết bao nhiêu con chim đã bay qua đây, chưa có con nào đẹp đến thế.',
+      'Càng nghe bạn bè trầm trồ, cây xấu hổ càng tiếc. Không biết bao giờ con chim xanh ấy quay trở lại?',
+    ],
+    audioNarration: [
+      'Cây xấu hổ',
+      'Bỗng dưng, gió ào ào nổi lên. Có tiếng động gì lạ lắm. Những chiếc lá khô lạt xạt lướt trên cỏ. Cây xấu hổ co rúm mình lại.',
+      'Nó bỗng thấy xung quanh xôn xao. Nó hé mắt nhìn: không có gì lạ cả. Bấy giờ, nó mới mở bừng những con mắt lá. Quả nhiên, không có gì lạ thật.',
+      'Nhưng những cây cỏ xung quanh vẫn cứ xôn xao. Thì ra, vừa có một con chim xanh biếc, toàn thân lóng lánh như tự toả sáng không biết từ đâu bay tới. Chim đậu một thoáng trên cành thanh mai rồi lại vội bay đi. Các cây cỏ xuýt xoa: biết bao nhiêu con chim đã bay qua đây, chưa có con nào đẹp đến thế.',
+      'Càng nghe bạn bè trầm trồ, cây xấu hổ càng tiếc. Không biết bao giờ con chim xanh ấy quay trở lại?',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [31],
+    sourceHash: 'f7b713462e3847ea90de6679b417fa60f0a833bd7ce333dc2cc031775e6889bd',
+  },
+  'tv-g2-b8': {
+    title: 'Cầu thủ dự bị',
+    author: 'Theo 100 truyện ngụ ngôn hay nhất',
+    genre: 'prose',
+    content: [
+      'Nhìn các bạn đá bóng, gấu con rất muốn chơi cùng. Nhưng thấy gấu con có vẻ chậm chạp và đá bóng không tốt nên chưa đội nào muốn nhận cậu.\n\n– Gấu à, cậu làm cầu thủ dự bị nhé! – Khỉ nói.\n\nGấu con hơi buồn nhưng cũng đồng ý. Trong khi chờ được vào sân, gấu đi nhặt bóng cho các bạn. Gấu cố gắng chạy thật nhanh để các bạn không phải chờ lâu.\n\nHằng ngày, gấu đến sân bóng từ sớm để luyện tập. Gấu đá bóng ra xa, chạy đi nhặt rồi đá vào gôn, đá đi đá lại,... Cứ thế, gấu đá bóng ngày càng giỏi hơn.',
+      'Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”.\n\n– Tớ nên vào đội nào đây? – Gấu hỏi khỉ.\n\n– Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói.\n\nGấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”.',
+    ],
+    audioNarration: [
+      'Cầu thủ dự bị',
+      'Nhìn các bạn đá bóng, gấu con rất muốn chơi cùng. Nhưng thấy gấu con có vẻ chậm chạp và đá bóng không tốt nên chưa đội nào muốn nhận cậu.',
+      'Gấu à, cậu làm cầu thủ dự bị nhé! Khỉ nói.',
+      'Gấu con hơi buồn nhưng cũng đồng ý. Trong khi chờ được vào sân, gấu đi nhặt bóng cho các bạn. Gấu cố gắng chạy thật nhanh để các bạn không phải chờ lâu.',
+      'Hằng ngày, gấu đến sân bóng từ sớm để luyện tập. Gấu đá bóng ra xa, chạy đi nhặt rồi đá vào gôn, đá đi đá lại. Cứ thế, gấu đá bóng ngày càng giỏi hơn.',
+      'Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: Cậu giỏi quá! Này, vào đội tớ nhé! Vào đội tớ đi!',
+      'Tớ nên vào đội nào đây? Gấu hỏi khỉ.',
+      'Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. Khỉ nói.',
+      'Gấu vui vẻ gật đầu. Cậu nghĩ: Hoá ra làm cầu thủ dự bị cũng hay nhỉ!',
+    ].join('\n'),
+    contentOrigin: 'sgk_reference',
+    verificationStatus: 'verified',
+    sourcePages: [34, 35],
+    sourceHash: '25b6777d7aa73cac1d58c986d845fee453cce04318c942bc6e9bc5337fb962bb',
+  },
 };
 
 function normalizeLessonId(lessonId: string): string {

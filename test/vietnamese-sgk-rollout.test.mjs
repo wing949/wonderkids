@@ -53,29 +53,25 @@ test('10 manifest sách ghi đúng tổng 1.584 trang và chưa tự nhận đã
   }
 });
 
-test('nội dung cũ được gắn làm Luyện thêm bên trong từng bài và không mang metadata SGK', () => {
+test('danh mục mục lục SGK chưa duyệt nguyên văn được tách rõ khỏi Luyện thêm', () => {
   const lessons = [1, 2, 3, 4, 5].flatMap((grade) =>
     curriculum.getLessonsForGradeAndSubject(grade, 'vietnamese')
   );
 
-  assert.equal(lessons.length, 132);
+  assert.equal(lessons.length, 376);
   assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 0);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'extra_practice').length, 132);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 376);
+  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'extra_practice').length, 0);
 
   for (const lesson of lessons) {
     assert.ok(lesson.cardPreview?.trim(), `Thiếu preview: ${lesson.id}`);
-    assert.equal(lesson.textbookPageRef, undefined, `Luyện thêm còn trang SGK: ${lesson.id}`);
-    assert.equal(lesson.referenceBook, undefined, `Luyện thêm còn sách tham khảo: ${lesson.id}`);
-    assert.equal(lesson.referenceDetail, undefined, `Luyện thêm còn chi tiết SGK: ${lesson.id}`);
-    assert.equal(lesson.referenceUrl, undefined, `Luyện thêm còn link SGK: ${lesson.id}`);
-    assert.equal(lesson.appExtensions.length, lesson.questions.length, `Thiếu hoạt động Luyện thêm trong bài: ${lesson.id}`);
-    if (lesson.sourceCitation) {
-      assert.equal(lesson.sourceCitation.verificationStatus, 'draft', `Nguồn chưa duyệt bị nâng trạng thái: ${lesson.id}`);
-      assert.ok(Array.isArray(lesson.sourcePageImageUrls), `Thiếu danh sách ảnh nguồn: ${lesson.id}`);
-      assert.ok(lesson.sourcePageImageUrls.length > 0, `Thiếu ảnh trang SGK để hiển thị trong bài: ${lesson.id}`);
-    } else {
-      assert.equal(lesson.sourcePageImageUrls.length, 0, `Bài chưa khớp lại mang ảnh SGK: ${lesson.id}`);
-    }
+    assert.equal(lesson.sourceType, 'sgk_official', `Sai loại nguồn: ${lesson.id}`);
+    assert.ok(lesson.textbookPageRef?.trim(), `Thiếu trang SGK: ${lesson.id}`);
+    assert.ok(lesson.sourceCitation, `Thiếu trích dẫn SGK: ${lesson.id}`);
+    assert.ok(Array.isArray(lesson.sourcePageImageUrls), `Thiếu danh sách ảnh nguồn: ${lesson.id}`);
+    assert.ok(lesson.sourcePageImageUrls.length > 0, `Thiếu ảnh trang SGK để hiển thị trong bài: ${lesson.id}`);
+    assert.equal(lesson.questions.length, 0, `Bài chờ duyệt không được sinh câu hỏi: ${lesson.id}`);
+    assert.equal(lesson.appExtensions.length, 0, `Bài chờ duyệt không được gắn Luyện thêm: ${lesson.id}`);
   }
 });
 
@@ -83,7 +79,7 @@ test('thẻ bài chỉ dùng nội dung học, không dùng ghi chú provenance'
   const lesson = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[0];
   const card = cards.getLessonCardContent(lesson);
 
-  assert.equal(card.badge, '📖 SGK Tiếng Việt 2 Tập một — Trang 10, 11, 12');
+  assert.equal(card.badge, '📖 SGK Tiếng Việt 2 Tập một — Trang 10, 11');
   assert.equal(card.title, 'Bài 1: Tôi là học sinh lớp 2');
   assert.equal(card.title, lesson.provenance.referenceLessonTitle);
   assert.equal(card.preview, lesson.cardPreview);
@@ -123,16 +119,16 @@ test('popup giữ đủ ba mục không cắt dấu ba chấm như thẻ', () =>
 
 test('bộ lọc học kỳ dùng trường tập sách thay vì dò chuỗi tên chương', () => {
   const lessons = curriculum.getLessonsForGradeAndSubject(1, 'vietnamese');
-  assert.equal(lessons.filter((lesson) => cards.isLessonInSemester(lesson, 1)).length, 20);
-  assert.equal(lessons.filter((lesson) => cards.isLessonInSemester(lesson, 2)).length, 10);
+  assert.equal(lessons.filter((lesson) => cards.isLessonInSemester(lesson, 1)).length, 83);
+  assert.equal(lessons.filter((lesson) => cards.isLessonInSemester(lesson, 2)).length, 45);
 });
 
 test('bài học nối tới đúng ảnh trang sách chính thức để hiển thị khi vào học', () => {
   const lesson = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[0];
   assert.ok(lesson.sourceCitation);
   assert.equal(lesson.sourceCitation.bookId, 'tv-g2-t1');
-  assert.deepEqual(lesson.sourceCitation.sourcePages, [10, 11, 12]);
-  assert.equal(lesson.sourcePageImageUrls.length, 3);
+  assert.deepEqual(lesson.sourceCitation.sourcePages, [10, 11]);
+  assert.equal(lesson.sourcePageImageUrls.length, 2);
   assert.match(lesson.sourcePageImageUrls[0], /4698590737-page-11-/);
 });
 
@@ -219,13 +215,37 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
     'Nhưng Quang chưa chịu về chỗ. Bỗng cậu nói to: “Rồi sau đó... ờ... à...”\nQuang thở mạnh một hơi rồi nói tiếp: “Mẹ... ờ... bảo: Con đánh răng đi. Thế là em đánh răng.” Thầy giáo vỗ tay. Cả lớp vỗ tay theo. Cuối cùng, Quang nói với giọng rất tự tin: “Sau đó bố đưa em đi học.”\n\nThầy giáo vỗ tay. Các bạn vỗ tay theo. Quang cũng vỗ tay. Cả lớp tràn ngập tiếng vỗ tay.',
   ]);
 
-  const unverifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[6];
+  const cayXauHo = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[6];
+  assert.equal(readingPolicy.getVietnameseReadingPolicy(cayXauHo), 'verified_sgk');
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(cayXauHo), false);
+  assert.equal(cayXauHo.readingPassage.author, 'Theo Trần Hoài Dương');
+  assert.deepEqual(cayXauHo.readingPassage.sourcePages, [31]);
+  assert.equal(cayXauHo.readingPassage.sourceHash, 'f7b713462e3847ea90de6679b417fa60f0a833bd7ce333dc2cc031775e6889bd');
+  assert.deepEqual(cayXauHo.readingPassage.content, [
+    'Bỗng dưng, gió ào ào nổi lên. Có tiếng động gì lạ lắm. Những chiếc lá khô lạt xạt lướt trên cỏ. Cây xấu hổ co rúm mình lại.',
+    'Nó bỗng thấy xung quanh xôn xao. Nó hé mắt nhìn: không có gì lạ cả. Bấy giờ, nó mới mở bừng những con mắt lá. Quả nhiên, không có gì lạ thật.',
+    'Nhưng những cây cỏ xung quanh vẫn cứ xôn xao. Thì ra, vừa có một con chim xanh biếc, toàn thân lóng lánh như tự toả sáng không biết từ đâu bay tới. Chim đậu một thoáng trên cành thanh mai rồi lại vội bay đi. Các cây cỏ xuýt xoa: biết bao nhiêu con chim đã bay qua đây, chưa có con nào đẹp đến thế.',
+    'Càng nghe bạn bè trầm trồ, cây xấu hổ càng tiếc. Không biết bao giờ con chim xanh ấy quay trở lại?',
+  ]);
+
+  const cauThuDuBi = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[7];
+  assert.equal(readingPolicy.getVietnameseReadingPolicy(cauThuDuBi), 'verified_sgk');
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(cauThuDuBi), false);
+  assert.equal(cauThuDuBi.readingPassage.author, 'Theo 100 truyện ngụ ngôn hay nhất');
+  assert.deepEqual(cauThuDuBi.readingPassage.sourcePages, [34, 35]);
+  assert.equal(cauThuDuBi.readingPassage.sourceHash, '25b6777d7aa73cac1d58c986d845fee453cce04318c942bc6e9bc5337fb962bb');
+  assert.deepEqual(cauThuDuBi.readingPassage.content, [
+    'Nhìn các bạn đá bóng, gấu con rất muốn chơi cùng. Nhưng thấy gấu con có vẻ chậm chạp và đá bóng không tốt nên chưa đội nào muốn nhận cậu.\n\n– Gấu à, cậu làm cầu thủ dự bị nhé! – Khỉ nói.\n\nGấu con hơi buồn nhưng cũng đồng ý. Trong khi chờ được vào sân, gấu đi nhặt bóng cho các bạn. Gấu cố gắng chạy thật nhanh để các bạn không phải chờ lâu.\n\nHằng ngày, gấu đến sân bóng từ sớm để luyện tập. Gấu đá bóng ra xa, chạy đi nhặt rồi đá vào gôn, đá đi đá lại,... Cứ thế, gấu đá bóng ngày càng giỏi hơn.',
+    'Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”.\n\n– Tớ nên vào đội nào đây? – Gấu hỏi khỉ.\n\n– Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói.\n\nGấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”.',
+  ]);
+
+  const unverifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[8];
   assert.equal(readingPolicy.getVietnameseReadingPolicy(unverifiedTranscript), 'source_only');
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(unverifiedTranscript), false);
 
   const gradeOneSemesterOne = curriculum.getLessonsForGradeAndSubject(1, 'vietnamese')[0];
-  assert.equal(readingPolicy.getVietnameseReadingPolicy(gradeOneSemesterOne), 'supplement');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(gradeOneSemesterOne), true);
+  assert.equal(readingPolicy.getVietnameseReadingPolicy(gradeOneSemesterOne), 'source_only');
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(gradeOneSemesterOne), false);
 
   const verified = {
     ...unverifiedTranscript,
@@ -240,7 +260,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
 test('ranh giới Em có xinh không và Một giờ học không chồng trang', () => {
   const emCoXinhKhong = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[4];
   const motGioHoc = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')[5];
-  assert.deepEqual(emCoXinhKhong.sourceCitation?.sourcePages, [24, 25, 26]);
+  assert.deepEqual(emCoXinhKhong.sourceCitation?.sourcePages, [24, 25]);
   assert.equal(motGioHoc.sourceCitation?.sourcePages[0], 27);
 });
 

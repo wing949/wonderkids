@@ -5,7 +5,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u1', semester: 1, lessonNumber: 1,
     title: 'Unit 1: In the School Playground (Letter B - b)',
-    unit: 'Tập 1 - Unit 1: In the school playground',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 6, 7',
     description: 'Letter B/b: Bill, Ba, Book, Ball, Bike. Greeting: Hi, I am Bill. Bye, Ba.',
     summary: 'Phonics letter B sound /b/. Words: book, ball, bike. Greet and introduce yourself.',
@@ -15,7 +15,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u2', semester: 1, lessonNumber: 2,
     title: 'Unit 2: In the Dining Room (Letter C - c)',
-    unit: 'Tập 1 - Unit 2: In the dining room',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 10, 11',
     description: 'Letter C/c: Cat, Cake, Car, Cup. I have a cat. I have a cake.',
     summary: 'Phonics letter C sound /k/. Express possession: I have a cake.',
@@ -25,7 +25,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u3', semester: 1, lessonNumber: 3,
     title: 'Unit 3: At the Street Market (Letter A - a)',
-    unit: 'Tập 1 - Unit 3: At the street market',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 14, 15',
     description: 'Letter A/a: Apple, Bag, Can, Hat. An apple, please. Here you are.',
     summary: 'Phonics letter A sound /æ/. Shopping politely: An apple, please.',
@@ -35,7 +35,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u4', semester: 1, lessonNumber: 4,
     title: 'Unit 4: In the Bedroom (Letter D - d)',
-    unit: 'Tập 1 - Unit 4: In the bedroom',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 18, 19',
     description: 'Letter D/d: Door, Dog, Duck, Desk. Open the door! Touch the desk!',
     summary: 'Phonics letter D sound /d/. TPR commands: Open the door, close the door.',
@@ -45,7 +45,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u5', semester: 1, lessonNumber: 5,
     title: 'Unit 5: At the Fish and Chip Shop (Letter I - i)',
-    unit: 'Tập 1 - Unit 5: At the fish and chip shop',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 24, 25',
     description: 'Letter I/i: Fish, Chips, Milk, Chicken. I like fish. I like milk.',
     summary: 'Phonics letter I sound /ɪ/. Express food preferences: I like chicken.',
@@ -55,7 +55,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u6', semester: 1, lessonNumber: 6,
     title: 'Unit 6: In the Classroom (Letter E - e)',
-    unit: 'Tập 1 - Unit 6: In the classroom',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 28, 29',
     description: 'Letter E/e: Pen, Pencil, Bell, Red. It is a red pen. It is a pencil.',
     summary: 'Phonics letter E sound /e/. Identify classroom objects and color red.',
@@ -65,7 +65,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u7', semester: 1, lessonNumber: 7,
     title: 'Unit 7: In the Garden (Letter G - g)',
-    unit: 'Tập 1 - Unit 7: In the garden',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 32, 33',
     description: 'Letter G/g: Girl, Garden, Gate, Goat. The girl is in the garden.',
     summary: 'Phonics letter G sound /ɡ/. Describing people and animals in locations.',
@@ -75,7 +75,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u8', semester: 1, lessonNumber: 8,
     title: 'Unit 8: In the Park (Letter H - h) & Review 1',
-    unit: 'Tập 1 - Unit 8: In the park',
+    unit: 'Học kỳ 1 (Tập 1)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 36, 37',
     description: 'Letter H/h: Horse, Hand, Hat, Hair. Touch your hair! Wave your hand!',
     summary: 'Phonics letter H sound /h/. Consolidation of Semester 1 Phonics (B, C, A, D, I, E, G, H).',
@@ -87,7 +87,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u9', semester: 2, lessonNumber: 9,
     title: 'Unit 9: In the Grocery Shop (Letter O - o)',
-    unit: 'Tập 2 - Unit 9: In the shop',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 42, 43',
     description: 'Letter O/o: Clock, Lock, Mop, Pot. Look at the clock. Look at the pot.',
     summary: 'Phonics letter O sound /ɒ/. Identifying household objects in the shop.',
@@ -97,7 +97,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u10', semester: 2, lessonNumber: 10,
     title: 'Unit 10: At the Zoo (Letter Z - z)',
-    unit: 'Tập 2 - Unit 10: At the zoo',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 46, 47',
     description: 'Letter Z/z: Zoo, Zebra, Zebu, Zero. I can see a zebra. I can see zero.',
     summary: 'Phonics letter Z sound /z/. Animals at the zoo and number zero.',
@@ -107,7 +107,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u11', semester: 2, lessonNumber: 11,
     title: 'Unit 11: At the Bus Stop (Letter U - u)',
-    unit: 'Tập 2 - Unit 11: At the bus stop',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 50, 51',
     description: 'Letter U/u: Bus, Sun, Truck, Umbrella. The bus is coming. Open your umbrella.',
     summary: 'Phonics letter U short sound /ʌ/. Words: bus, sun, truck, umbrella.',
@@ -117,7 +117,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u12', semester: 2, lessonNumber: 12,
     title: 'Unit 12: In the Toyshop (Letter T - t)',
-    unit: 'Tập 2 - Unit 12: In the toyshop',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 54, 55',
     description: 'Letter T/t: Top, Teddy bear, Tiger, Turtle. I want a teddy bear. Spin the top.',
     summary: 'Phonics letter T sound /t/. Expressing toy wishes: I want a teddy bear.',
@@ -127,7 +127,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u13', semester: 2, lessonNumber: 13,
     title: 'Unit 13: In the School Canteen (Letter N - n)',
-    unit: 'Tập 2 - Unit 13: In the school canteen',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 60, 61',
     description: 'Letter N/n: Nut, Banana, Noodles, Net. I am eating noodles. I like bananas.',
     summary: 'Phonics letter N sound /n/. Describing food in the school canteen.',
@@ -137,7 +137,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u14', semester: 2, lessonNumber: 14,
     title: 'Unit 14: In the Kitchen (Letter K - k)',
-    unit: 'Tập 2 - Unit 14: In the kitchen',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 64, 65',
     description: 'Letter K/k: Kite, Kitten, Kettle, Key. Where is the key? The kitten is cute.',
     summary: 'Phonics letter K sound /k/. Locating kitchen objects: The kettle is on the table.',
@@ -147,7 +147,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u15', semester: 2, lessonNumber: 15,
     title: 'Unit 15: At the Beach (Letter S - s)',
-    unit: 'Tập 2 - Unit 15: At the beach',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 68, 69',
     description: 'Letter S/s: Sand, Sun, Sea, Sail. Look at the blue sea. Play on the sand.',
     summary: 'Phonics letter S sound /s/. Seaside actions: Look at the sailing boat.',
@@ -157,7 +157,7 @@ export const ENGLISH_GRADE_1_TOPICS: CurriculumTopic[] = [
   {
     id: 'eng-g1-u16', semester: 2, lessonNumber: 16,
     title: 'Unit 16: At the Campsite (Letter L - l) & Final Review',
-    unit: 'Tập 2 - Unit 16: At the campsite',
+    unit: 'Học kỳ 2 (Tập 2)',
     textbookPageRef: 'SGK Tiếng Anh 1 Global Success — Trang 72, 73',
     description: 'Letter L/l: Lemon, Leaf, Lake, Lion. Look at the calm lake. Sour yellow lemon.',
     summary: 'Complete mastery of all 16 Units of SGK Tiếng Anh 1 Global Success.',

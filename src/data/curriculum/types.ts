@@ -7,6 +7,8 @@ export interface CurriculumTopic {
   title: string;
   unit: string;
   textbookPageRef: string;
+  /** Trang mở đầu của bài theo mục lục SGK chính thức. */
+  sourcePages?: number[];
   sourceType?: 'sgk_official' | 'pedagogical_supplement';
   sourceBook?: string; // Tên bộ sách chuẩn (Bộ Kết nối tri thức với cuộc sống / Cánh Diều / Chân trời sáng tạo, NXB GDVN)
   sourceDetail?: string; // Chi tiết số trang, mục bài học
