@@ -6,9 +6,9 @@ import { ReadingPassage } from '../types';
  * generator and the learner UI from silently drifting apart.
  */
 export function buildLessonNarration(passage: ReadingPassage): string {
+  if (passage.audioNarration?.trim()) return passage.audioNarration.trim();
   return [
     passage.title,
-    passage.author ? `Tác giả: ${passage.author}.` : '',
     ...passage.content,
   ]
     .map((part) => part.trim())

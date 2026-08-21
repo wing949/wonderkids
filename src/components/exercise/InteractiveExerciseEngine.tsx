@@ -22,6 +22,7 @@ import { CandyProgressBar } from '../ui/CandyProgressBar';
 import { soundManager, voiceManager } from '../../utils/audio';
 import { triggerStarBurst } from '../../utils/confetti';
 import { buildLessonNarration } from '../../utils/lessonNarration';
+import { getSourcePageView } from '../../utils/sourcePageViewer';
 import { MathVisualIllustration } from './MathVisualIllustration';
 
 interface InteractiveExerciseEngineProps {
@@ -82,6 +83,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const hasReadingPassage = !!lesson.readingPassage;
   const [engineMode, setEngineMode] = useState<'reading' | 'quiz'>(hasReadingPassage ? 'reading' : 'quiz');
   const [readingTab, setReadingTab] = useState<'full' | 'shadowing'>('full');
+  const [sourcePageIndex, setSourcePageIndex] = useState(0);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [isReadingDrawerOpen, setIsReadingDrawerOpen] = useState(false);
 
@@ -105,6 +107,10 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const [voiceTranscript, setVoiceTranscript] = useState('');
   const [voiceScore, setVoiceScore] = useState<number | null>(null);
   const isSpeechSupported = voiceManager.isSupported();
+
+  useEffect(() => {
+    setSourcePageIndex(0);
+  }, [lesson.id]);
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -462,13 +468,18 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     const passage = lesson.readingPassage;
     const isVerifiedSgk = lesson.provenance?.contentOrigin === 'sgk_reference'
       && lesson.provenance.verificationStatus === 'verified';
-    const isGeneratedContent = lesson.provenance?.contentOrigin === 'system_generated';
+    const isExtraPractice = lesson.catalogSection === 'extra_practice';
     const currentShadowingSentence = shadowingSentences[shadowingIndex] || shadowingSentences[0];
     const currentScore = currentShadowingSentence ? sentenceScores[currentShadowingSentence.id] : undefined;
+    const sourcePageView = getSourcePageView(
+      lesson.sourcePageImageUrls || [],
+      lesson.sourceCitation?.sourcePages,
+      sourcePageIndex,
+    );
 
     return (
       <div className="min-h-[calc(100vh-5rem)] pb-28 pt-4 sm:pt-6">
-        <div className="mx-auto max-w-4xl px-3 sm:px-6 space-y-6">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 space-y-6">
           {/* Header Bar */}
           <div className="flex items-center justify-between gap-4 border-b border-amber-200/80 bg-white/85 backdrop-blur-md p-4 rounded-3xl shadow-xs">
             <div className="flex items-center gap-3">
@@ -564,6 +575,69 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             </button>
           </div>
 
+          <div className={`grid items-start gap-6 ${sourcePageView ? 'xl:grid-cols-2' : ''}`}>
+            {sourcePageView && (
+              <section
+                className="relative overflow-hidden rounded-4xl border border-amber-200/70 bg-[#fffdfa] p-4 shadow-washi sm:p-6 xl:sticky xl:top-4"
+                aria-labelledby="sgk-source-heading"
+              >
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+                  <div>
+                    <p className="font-baloo text-xs font-black uppercase tracking-wider text-amber-700">
+                      {isVerifiedSgk ? 'Nội dung bài học' : 'Tài liệu để đối chiếu'}
+                    </p>
+                    <h2 id="sgk-source-heading" className="font-baloo text-xl font-black text-brand-dark sm:text-2xl">
+                      {isVerifiedSgk ? 'Nội dung SGK' : 'Trang sách tham khảo'}
+                    </h2>
+                  </div>
+                  <div className="flex flex-wrap items-center justify-end gap-2">
+                    {!isVerifiedSgk && (
+                      <span className="rounded-full bg-slate-100 px-3 py-1 font-baloo text-xs font-bold text-slate-600">
+                        Chờ duyệt đối chiếu
+                      </span>
+                    )}
+                    <span className="rounded-full bg-amber-100 px-3 py-1 font-baloo text-xs font-bold text-amber-900">
+                      Trang {sourcePageView.pageNumber}
+                    </span>
+                  </div>
+                </div>
+
+                <figure className="flex h-[58vh] min-h-[430px] max-h-[760px] items-center justify-center overflow-hidden rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.06)] sm:h-[66vh]">
+                  <img
+                    src={sourcePageView.imageUrl}
+                    alt={`Trang ${sourcePageView.pageNumber} - ${lesson.title}`}
+                    loading="eager"
+                    className="h-full w-full object-contain"
+                  />
+                </figure>
+
+                <nav className="mt-4 flex items-center justify-between gap-3" aria-label="Lật trang SGK">
+                  <button
+                    type="button"
+                    disabled={!sourcePageView.hasPrevious}
+                    onClick={() => setSourcePageIndex((current) => Math.max(0, current - 1))}
+                    className="flex min-h-11 items-center gap-1.5 rounded-2xl bg-slate-100 px-4 py-2 font-baloo text-sm font-bold text-slate-700 transition-colors hover:bg-amber-100 disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    <ArrowLeft size={17} />
+                    Trang trước
+                  </button>
+                  <span className="font-baloo text-sm font-black text-amber-900">
+                    {sourcePageView.index + 1} / {sourcePageView.total}
+                  </span>
+                  <button
+                    type="button"
+                    disabled={!sourcePageView.hasNext}
+                    onClick={() => setSourcePageIndex((current) => Math.min(sourcePageView.total - 1, current + 1))}
+                    className="flex min-h-11 items-center gap-1.5 rounded-2xl bg-amber-400 px-4 py-2 font-baloo text-sm font-bold text-amber-950 transition-colors hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    Trang sau
+                    <ArrowRight size={17} />
+                  </button>
+                </nav>
+              </section>
+            )}
+
+            <div className="min-w-0">
           {/* ================================================================= */}
           {/* TAB 1: ĐỌC TOÀN BÀI (FULL READING SCRAPBOOK CARD) */}
           {/* ================================================================= */}
@@ -571,6 +645,13 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             <div className="relative rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70 mt-2">
               {/* Washi tape header deco - Unclipped Authentic Scrapbook Tape */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 w-40 sm:w-48 h-7 bg-amber-300/50 backdrop-blur-xs rounded-xs rotate-[-1.5deg] border border-amber-400/40 shadow-xs z-10 pointer-events-none" />
+
+              {isExtraPractice && (
+                <div className="mb-5 flex items-center gap-2 font-baloo text-sm font-black text-emerald-800">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-100">🌱</span>
+                  <span>Luyện thêm: tóm tắt, nghe đọc và rèn luyện</span>
+                </div>
+              )}
 
               {/* Passage Header Block (Centered, Balanced & Symmetrical) */}
               <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
@@ -582,11 +663,10 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                       <span className="font-extrabold text-emerald-950">SGK Chuẩn GDPT 2018:</span>
                       <span>{lesson.sourceDetail || lesson.textbookPageRef}</span>
                     </div>
-                  ) : isGeneratedContent ? (
-                    <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-blue-900 bg-blue-100/90 border border-blue-300 px-3.5 py-1 rounded-full shadow-2xs">
+                  ) : isExtraPractice ? (
+                    <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-3.5 py-1 rounded-full shadow-2xs">
                       <span>🌱</span>
-                      <span className="font-extrabold text-blue-950">NỘI DUNG TỰ SINH</span>
-                      <span>— WonderKids biên soạn</span>
+                      <span className="font-extrabold text-emerald-950">Luyện thêm</span>
                     </div>
                   ) : (
                     <div className="inline-flex flex-wrap items-center justify-center gap-1.5 font-baloo font-bold text-xs sm:text-sm text-violet-900 bg-violet-100/90 border border-violet-300 px-3.5 py-1 rounded-full shadow-2xs">
@@ -595,16 +675,6 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     </div>
                   )}
                 </div>
-
-                {!isVerifiedSgk && lesson.provenance?.referenceLessonTitle && (
-                  <p className="font-vietnam text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed">
-                    Chủ đề tham khảo đang khai báo (chưa xác minh với SGK): “{lesson.provenance.referenceLessonTitle}” — {lesson.referenceBook}
-                    {lesson.referenceDetail ? ` — ${lesson.referenceDetail}` : ''}
-                    {lesson.referenceUrl && (
-                      <> — <a className="underline hover:text-amber-700" href={lesson.referenceUrl} target="_blank" rel="noreferrer">mở sách nguồn</a></>
-                    )}
-                  </p>
-                )}
 
                 {/* Main Reading Title */}
                 <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide pt-1">
@@ -729,6 +799,16 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     ))}
                   </div>
                 </div>
+              )}
+
+              {isVerifiedSgk && lesson.sourceCitation && (
+                <footer className="mt-8 border-t border-amber-200/70 pt-4 font-vietnam text-xs font-semibold leading-relaxed text-slate-600">
+                  <span className="font-bold text-amber-900">Nguồn đối chiếu:</span>{' '}
+                  {lesson.sourceCitation.sourceLabel}
+                  {lesson.referenceUrl && (
+                    <> — <a className="underline hover:text-amber-700" href={lesson.referenceUrl} target="_blank" rel="noreferrer">mở sách nguồn</a></>
+                  )}
+                </footer>
               )}
             </div>
           )}
@@ -993,6 +1073,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               )}
             </div>
           )}
+            </div>
+          </div>
 
           {/* Bottom Call to Action: Start Comprehension Quiz */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100 border-2 border-amber-200/80 shadow-xs">
@@ -1107,11 +1189,10 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             className="mt-6 rounded-4xl border border-amber-100/60 bg-[#fffdfa] p-6 sm:p-8 shadow-washi backdrop-blur-md"
           >
             {/* Provenance Badge */}
-            {lesson.subject === 'vietnamese' && currentQ.contentOrigin === 'system_generated' ? (
-              <div className="mb-3 flex flex-wrap items-center gap-1.5 font-baloo font-bold text-xs text-blue-950 bg-blue-100/90 border border-blue-300/80 px-3.5 py-1 rounded-full w-fit">
+            {lesson.subject === 'vietnamese' && lesson.catalogSection === 'extra_practice' ? (
+              <div className="mb-3 flex flex-wrap items-center gap-1.5 font-baloo font-bold text-xs text-emerald-950 bg-emerald-100/90 border border-emerald-300/80 px-3.5 py-1 rounded-full w-fit">
                 <span>🌱</span>
-                <span className="font-extrabold">Câu hỏi/bài tập: NỘI DUNG TỰ SINH</span>
-                {lesson.referenceDetail && <span>— Tham khảo: {lesson.referenceDetail}</span>}
+                <span className="font-extrabold">Hoạt động Luyện thêm</span>
               </div>
             ) : lesson.textbookPageRef && (
               <div className="mb-3 flex items-center gap-1.5 font-baloo font-bold text-xs text-amber-900 bg-amber-100/90 border border-amber-300/80 px-3.5 py-1 rounded-full w-fit">

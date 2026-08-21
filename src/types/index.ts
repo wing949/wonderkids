@@ -21,6 +21,20 @@ export type ContentOrigin = 'sgk_reference' | 'system_generated' | 'pedagogical_
 
 export type ProvenanceVerification = 'verified' | 'reference_only' | 'declared_supplement';
 
+export type CatalogSection = 'sgk' | 'extra_practice';
+
+export type SourceVerificationStatus = 'draft' | 'ocr_reviewed' | 'verified';
+
+export type GradingMode = 'auto' | 'self_confirm';
+
+export interface SourceCitation {
+  bookId: string;
+  sourcePages: number[];
+  sourceLabel: string;
+  sourceHash: string;
+  verificationStatus: SourceVerificationStatus;
+}
+
 export interface ContentProvenance {
   contentOrigin: ContentOrigin;
   verificationStatus: ProvenanceVerification;
@@ -64,6 +78,10 @@ export interface Question {
   image?: string;
   points: number;
   contentOrigin?: ContentOrigin;
+  sourceActivityId?: string;
+  sourcePage?: number;
+  sourceSubpart?: string;
+  gradingMode?: GradingMode;
   options?: QuestionOption[];
   correctAnswer?: string | number | string[];
   pairs?: MatchingPair[];
@@ -123,8 +141,18 @@ export interface LessonNode {
   id: string;
   title: string;
   description: string;
+  catalogSection?: CatalogSection;
+  cardPreview?: string;
+  lessonOverview?: {
+    content: string;
+    objective: string;
+    practice: string;
+  };
+  sourceCitation?: SourceCitation;
+  sourcePageImageUrls?: string[];
   subject: SubjectType;
   grade: GradeLevel;
+  semester?: 1 | 2;
   unit: string;
   textbookPageRef?: string; // Ví dụ: "SGK Tiếng Việt 1 Tập 1 — Trang 14, 15"
   sourceType?: 'sgk_official' | 'pedagogical_supplement';
@@ -149,6 +177,7 @@ export interface LessonNode {
   };
   readingPassage?: ReadingPassage;
   questions: Question[];
+  appExtensions?: Question[];
 }
 
 export interface SubjectInfo {

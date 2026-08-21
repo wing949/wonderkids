@@ -17,6 +17,7 @@ import { getLessonsForGradeAndSubject } from '../../data/curriculum';
 import { CuteButton } from '../ui/CuteButton';
 import { Modal } from '../ui/Modal';
 import { soundManager } from '../../utils/audio';
+import { getLessonCardContent, getLessonSemester, isLessonInSemester } from '../../utils/lessonCard';
 
 interface AdventureMapProps {
   currentGrade: GradeLevel;
@@ -25,16 +26,6 @@ interface AdventureMapProps {
   onStartLesson: (lesson: LessonNode) => void;
   onBackToDashboard: () => void;
 }
-
-// Helper to format concise textbook page reference (e.g., "Trang 44, 45")
-const formatShortPageRef = (ref?: string) => {
-  if (!ref) return 'SGK';
-  const match = ref.match(/(Trang\s+[\d,\s-]+)/i);
-  if (match) {
-    return match[1]; // e.g. "Trang 44, 45"
-  }
-  return ref;
-};
 
 export const AdventureMap: React.FC<AdventureMapProps> = ({
   currentGrade,
@@ -58,11 +49,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
 
   // Phân loại theo tập sách (Học kỳ)
   const sem1Lessons = useMemo(
-    () => allGradeLessons.filter((l) => l.unit.includes('Tập 1')),
+    () => allGradeLessons.filter((lesson) => isLessonInSemester(lesson, 1)),
     [allGradeLessons]
   );
   const sem2Lessons = useMemo(
-    () => allGradeLessons.filter((l) => l.unit.includes('Tập 2')),
+    () => allGradeLessons.filter((lesson) => isLessonInSemester(lesson, 2)),
     [allGradeLessons]
   );
 
@@ -81,7 +72,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
       if (!group) {
         group = {
           unitTitle: lesson.unit,
-          semester: lesson.unit.includes('Tập 1') ? 1 : 2,
+          semester: getLessonSemester(lesson),
           lessons: []
         };
         groups.push(group);
@@ -125,6 +116,13 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
 
   const mascotName =
     selectedSubject === 'math' ? 'Cú BoBo' : selectedSubject === 'vietnamese' ? 'Cáo MiuMiu' : 'Cá Heo PiPi';
+  const selectedLessonOverviewItems = selectedLessonPreview?.lessonOverview
+    ? [
+      { label: 'Nội dung', text: selectedLessonPreview.lessonOverview.content },
+      { label: 'Mục tiêu', text: selectedLessonPreview.lessonOverview.objective },
+      { label: 'Rèn luyện', text: selectedLessonPreview.lessonOverview.practice },
+    ]
+    : [];
 
   return (
     <div className="relative min-h-[calc(100vh-5rem)] pb-24 pt-4 sm:pt-6">
@@ -151,7 +149,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                 </h1>
               </div>
               <p className="font-vietnam text-xs sm:text-sm font-semibold text-slate-500">
-                Toàn bộ {allGradeLessons.length} bài học theo lộ trình lớp {currentGrade}; nguồn được ghi rõ trong từng bài
+                Toàn bộ {allGradeLessons.length} bài học theo lộ trình lớp {currentGrade}
               </p>
             </div>
           </div>
@@ -241,7 +239,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             <div className="rounded-3xl bg-white p-4 sm:p-5 shadow-washi backdrop-blur-md border border-slate-200/70">
               <h3 className="font-baloo font-black text-base text-brand-dark flex items-center gap-2 mb-3">
                 <BookOpen size={18} className="text-amber-500" />
-                <span>Chọn Tập Sách Giáo Khoa</span>
+                <span>Chọn học kỳ</span>
               </h3>
               <div className="space-y-2">
                 {[
@@ -273,7 +271,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
               <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
                 <h3 className="font-baloo font-black text-base text-brand-dark flex items-center gap-2">
                   <Sparkles size={18} className="text-emerald-500" />
-                  <span>Mục Lục Chủ Đề SGK</span>
+                  <span>Mục lục bài học</span>
                 </h3>
                 <span className="font-baloo text-xs font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-200/60">
                   {groupedUnits.length} Chương
@@ -405,10 +403,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                       </span>
                     </div>
 
-                    {/* Lessons Grid (Spacious 2 to 3 Columns per row) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 sm:gap-5">
+                    {/* Lessons Grid: tối đa hai cột để thẻ luôn đủ rộng cho trẻ đọc */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                       {group.lessons.map((lesson) => {
                         const isPassed = lesson.starsEarned > 0;
+                        const card = getLessonCardContent(lesson);
 
                         return (
                           <motion.div
@@ -416,7 +415,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                             whileHover={{ y: -4 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => handleNodeClick(lesson)}
-                            className={`group relative flex flex-col justify-between rounded-3xl p-5 transition-all duration-300 cursor-pointer select-none ${isPassed
+                            className={`group relative flex min-h-[286px] flex-col justify-between rounded-3xl p-5 transition-all duration-300 cursor-pointer select-none ${isPassed
                                 ? 'bg-gradient-to-b from-amber-50/80 via-white to-white border border-amber-300/80 shadow-[0_4px_16px_rgba(245,158,11,0.08)] hover:border-amber-400 hover:shadow-[0_12px_24px_rgba(245,158,11,0.16)]'
                                 : 'bg-white border border-slate-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:border-emerald-400 hover:shadow-[0_12px_24px_rgba(16,185,129,0.14)]'
                               }`}
@@ -425,7 +424,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                             <div>
                               <div className="flex items-center justify-between gap-2 mb-3">
                                 <span className="inline-flex items-center gap-1.5 rounded-xl bg-slate-100 px-3 py-1 font-vietnam text-xs font-bold text-slate-700 whitespace-nowrap border border-slate-200/50">
-                                  📖 {formatShortPageRef(lesson.textbookPageRef)}
+                                  {card.badge}
                                 </span>
                                 <div className="inline-flex items-center text-amber-950 bg-amber-50 px-2.5 py-1 rounded-xl text-xs font-baloo font-black whitespace-nowrap border border-amber-200/70 shadow-2xs">
                                   <span>+{lesson.starReward} ⭐</span>
@@ -433,17 +432,23 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                               </div>
 
                               {/* Lesson Title & Summary */}
-                              <h3 className="font-baloo font-black text-base sm:text-lg text-brand-dark leading-snug group-hover:text-emerald-700 transition-colors">
-                                {lesson.title}
+                              <h3 className="line-clamp-2 min-h-[2.75rem] font-baloo font-black text-base sm:text-lg text-brand-dark leading-snug group-hover:text-emerald-700 transition-colors">
+                                {card.title}
                               </h3>
-                              {lesson.provenance?.contentOrigin === 'system_generated' && lesson.provenance.referenceLessonTitle && (
-                                <p className="mt-1 font-vietnam text-[11px] sm:text-xs font-bold text-blue-800 leading-snug">
-                                  Chủ đề tham khảo chưa xác minh: {lesson.provenance.referenceLessonTitle}
+                              {card.previewItems.length > 0 ? (
+                                <ul className="mt-2 grid gap-1 font-baloo text-sm sm:text-base text-slate-600" aria-label="Tóm tắt bài học">
+                                  {card.previewItems.map((item) => (
+                                    <li key={item.label} className="flex min-w-0 items-baseline gap-1.5 leading-snug" title={`${item.label}: ${item.text}`}>
+                                      <span className="shrink-0 font-black text-slate-700">{item.label}:</span>
+                                      <span className="min-w-0 truncate font-bold tracking-[0.01em]">{item.text}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              ) : (
+                                <p className="mt-1.5 line-clamp-3 font-vietnam text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+                                  {card.preview}
                                 </p>
                               )}
-                              <p className="mt-1.5 font-vietnam text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed text-justify">
-                                {lesson.description}
-                              </p>
                             </div>
 
                             {/* Bottom Action Area: Clean Reward Info & Tactile 3D Action Button */}
@@ -518,6 +523,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                       <div className="relative mx-auto flex max-w-xl flex-col items-center py-4">
                         {group.lessons.map((lesson, index) => {
                           const isPassed = lesson.starsEarned > 0;
+                          const card = getLessonCardContent(lesson);
                           const isCurrentActive =
                             !isPassed && (index === 0 || group.lessons[index - 1]?.starsEarned > 0);
 
@@ -603,7 +609,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                                       }`}
                                   >
                                     <div className="flex items-center justify-center gap-1.5 text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md mb-1 mx-auto w-fit whitespace-nowrap">
-                                      📖 {formatShortPageRef(lesson.textbookPageRef)}
+                                      {card.badge}
                                     </div>
                                     <h4
                                       className={`font-baloo font-extrabold text-xs sm:text-sm line-clamp-2 leading-snug break-words ${isPassed
@@ -613,7 +619,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                                             : 'text-slate-500'
                                         }`}
                                     >
-                                      {lesson.title}
+                                      {card.title}
                                     </h4>
                                   </div>
                                 </motion.div>
@@ -669,27 +675,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                 <span className="font-baloo font-extrabold text-xs text-amber-800 uppercase tracking-wide">
                   {selectedLessonPreview.unit}
                 </span>
-                <div className="flex items-center gap-1">
-                  {selectedLessonPreview.provenance?.contentOrigin === 'sgk_reference'
-                    && selectedLessonPreview.provenance.verificationStatus === 'verified' ? (
-                    <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-emerald-900 bg-emerald-100/90 border border-emerald-300 px-2 py-0.5 rounded-full">
-                      📖 Nội dung theo SGK đã đối chiếu
-                    </span>
-                  ) : selectedLessonPreview.provenance?.contentOrigin === 'system_generated' ? (
-                    <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-blue-900 bg-blue-100/90 border border-blue-300 px-2 py-0.5 rounded-full">
-                      🌱 NỘI DUNG TỰ SINH
-                    </span>
-                  ) : (
-                    <span className="inline-flex items-center gap-1 font-vietnam text-xs font-bold text-violet-900 bg-violet-100/90 border border-violet-300 px-2 py-0.5 rounded-full">
-                      🧩 BỔ TRỢ SƯ PHẠM
-                    </span>
-                  )}
-                </div>
               </div>
 
-              {selectedLessonPreview.referenceBook && (
+              {selectedLessonPreview.catalogSection === 'sgk' && selectedLessonPreview.referenceBook && (
                 <p className="font-vietnam text-xs font-medium text-amber-900/80 italic">
-                  Chủ đề tham khảo đang khai báo (chưa xác minh với SGK): {selectedLessonPreview.provenance?.referenceLessonTitle || 'Chưa xác định tên bài'} — {selectedLessonPreview.referenceBook}
+                  Nguồn đối chiếu: {selectedLessonPreview.sourceCitation?.sourceLabel || selectedLessonPreview.referenceBook}
                   {selectedLessonPreview.referenceDetail ? ` — ${selectedLessonPreview.referenceDetail}` : ''}
                   {selectedLessonPreview.referenceUrl && (
                     <> — <a className="underline hover:text-amber-700" href={selectedLessonPreview.referenceUrl} target="_blank" rel="noreferrer">mở SGK</a></>
@@ -697,9 +687,23 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                 </p>
               )}
 
-              <p className="font-vietnam text-sm font-semibold text-slate-700 leading-relaxed text-justify">
-                {selectedLessonPreview.description}
-              </p>
+              {selectedLessonOverviewItems.length > 0 ? (
+                <ul className="grid gap-2 font-baloo text-sm text-slate-700" aria-label="Ba mục giới thiệu bài học">
+                  {selectedLessonOverviewItems.map((item) => (
+                    <li key={item.label} className="flex items-start gap-2 leading-snug">
+                      <span className="mt-1 text-emerald-600" aria-hidden="true">•</span>
+                      <span>
+                        <strong className="font-black text-brand-dark">{item.label}:</strong>{' '}
+                        <span className="font-bold tracking-[0.01em]">{item.text}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="font-baloo text-sm font-bold text-slate-700 leading-relaxed">
+                  {selectedLessonPreview.description}
+                </p>
+              )}
             </div>
 
             {/* Key Theory Points */}

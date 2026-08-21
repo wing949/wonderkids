@@ -25,25 +25,48 @@ function sha256(data) {
 
 try {
   await build({
-    entryPoints: ['src/data/curriculum/vietnamese/audioManifest.ts'],
+    entryPoints: [
+      'src/data/curriculum/vietnamese/audioManifest.ts',
+      'src/data/curriculum/index.ts',
+      'src/utils/lessonNarration.ts',
+    ],
     bundle: true,
     format: 'esm',
     platform: 'node',
     target: 'node20',
-    outfile: join(outputDir, 'manifest.js'),
+    outdir: outputDir,
     write: true,
     logLevel: 'silent',
   });
 
-  const { VIETNAMESE_AUDIO_MANIFEST } = await import(pathToFileURL(join(outputDir, 'manifest.js')).href);
+  const { VIETNAMESE_AUDIO_MANIFEST } = await import(pathToFileURL(join(outputDir, 'data', 'curriculum', 'vietnamese', 'audioManifest.js')).href);
+  const { getLessonsForGradeAndSubject } = await import(pathToFileURL(join(outputDir, 'data', 'curriculum', 'index.js')).href);
+  const { buildLessonNarration } = await import(pathToFileURL(join(outputDir, 'utils', 'lessonNarration.js')).href);
+  const runtimeLessons = new Map(
+    [1, 2, 3, 4, 5]
+      .flatMap((grade) => getLessonsForGradeAndSubject(grade, 'vietnamese'))
+      .map((lesson) => [lesson.id, lesson]),
+  );
   const missing = [];
   const invalid = [];
-  const disclosureInvalid = [];
+  const forbiddenDisclosureDetected = [];
+  const manifestInvalid = [];
   const identicalPrimaryAndFallback = [];
   let primaryBytes = 0;
   let fallbackBytes = 0;
 
   for (const asset of Object.values(VIETNAMESE_AUDIO_MANIFEST)) {
+    const lesson = runtimeLessons.get(asset.lessonId);
+    const runtimeTranscript = lesson?.readingPassage ? buildLessonNarration(lesson.readingPassage) : '';
+    const runtimeTranscriptHash = runtimeTranscript ? sha256(runtimeTranscript) : '';
+    if (
+      !/^[a-f0-9]{64}$/.test(asset.transcriptHash)
+      || asset.transcriptHash !== runtimeTranscriptHash
+      || asset.lessonVersion < 1
+      || !Array.isArray(asset.sourcePages)
+    ) {
+      manifestInvalid.push(asset.lessonId);
+    }
     const assetHashes = {};
     for (const [kind, assetPath] of [['primary', asset.primaryPath], ['fallback', asset.fallbackPath]]) {
       const absolutePath = join(workspace, 'public', assetPath.slice(1));
@@ -55,9 +78,13 @@ try {
         if (fileStats.size === 0 || file.subarray(0, 4).toString('ascii') !== 'RIFF' || file.subarray(8, 12).toString('ascii') !== 'WAVE' || !pcm) {
           invalid.push(`${asset.lessonId}:${kind}`);
         } else {
-          const pcmBytes = kind === 'primary' ? asset.primaryDisclosurePcmBytes : asset.fallbackDisclosurePcmBytes;
-          const expectedHash = kind === 'primary' ? asset.primaryDisclosurePcmSha256 : asset.fallbackDisclosurePcmSha256;
-          if (sha256(pcm.subarray(0, pcmBytes)) !== expectedHash) disclosureInvalid.push(`${asset.lessonId}:${kind}`);
+          const legacyBytes = kind === 'primary' ? 552960 : 506880;
+          const legacyHash = kind === 'primary'
+            ? '7c91d642b467c265cb41aabdb5f9cbca60b9d2ed67f4ccd839884187b0bb8a2e'
+            : 'f00942c59dcc1fcaf8da62a279e05709ce2b7eb45fb25fe8c7621201946358a0';
+          if (sha256(pcm.subarray(0, legacyBytes)) === legacyHash) {
+            forbiddenDisclosureDetected.push(`${asset.lessonId}:${kind}`);
+          }
         }
         assetHashes[kind] = sha256(file);
         if (kind === 'primary') primaryBytes += fileStats.size;
@@ -79,12 +106,13 @@ try {
     fallbackBytes,
     missing,
     invalid,
-    disclosureInvalid,
+    forbiddenDisclosureDetected,
+    manifestInvalid,
     identicalPrimaryAndFallback,
   };
 
   console.log(JSON.stringify(result, null, 2));
-  if (missing.length || invalid.length || disclosureInvalid.length || identicalPrimaryAndFallback.length) process.exitCode = 1;
+  if (missing.length || invalid.length || forbiddenDisclosureDetected.length || manifestInvalid.length || identicalPrimaryAndFallback.length) process.exitCode = 1;
 } finally {
   await rm(outputDir, { recursive: true, force: true });
 }

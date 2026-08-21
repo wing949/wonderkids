@@ -1,0 +1,1322 @@
+{
+  "tv-g1-b1": {
+    "lessonId": "tv-g1-b1",
+    "primaryPath": "/audio/curriculum/tv-g1-b1.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b1.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "24a4b141da5af1375266dbcf2252c6504bec3aa98bd3ffa350f3133078c0b5cc",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b2": {
+    "lessonId": "tv-g1-b2",
+    "primaryPath": "/audio/curriculum/tv-g1-b2.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b2.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "b5877ad918ef01ae958f5bca2d231698033151f0885c1c4ee3a6c23a2df09512",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b3": {
+    "lessonId": "tv-g1-b3",
+    "primaryPath": "/audio/curriculum/tv-g1-b3.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b3.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "e73ee944d173dbdcf934a4c149a570f2f86f011d72b1e733db6a3e3f2fdad7f2",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b4": {
+    "lessonId": "tv-g1-b4",
+    "primaryPath": "/audio/curriculum/tv-g1-b4.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b4.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5c5d16d0e3cc6ff7d719f37fde74233ed18bb59702154bac15bceaaefe56cbb5",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b5": {
+    "lessonId": "tv-g1-b5",
+    "primaryPath": "/audio/curriculum/tv-g1-b5.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b5.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "45cd537ddd1f9597dc676879c003399ded06d973f1826b4daf217e629f0e0b5b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b6": {
+    "lessonId": "tv-g1-b6",
+    "primaryPath": "/audio/curriculum/tv-g1-b6.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b6.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5deb1a44691f2d43566515133779805f580deee42292bf4890b90392b8160236",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b7": {
+    "lessonId": "tv-g1-b7",
+    "primaryPath": "/audio/curriculum/tv-g1-b7.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b7.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3535accd64fc62057d1ba44d915fe8758a463c531bcce3e801f6b5bea0fce079",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b8": {
+    "lessonId": "tv-g1-b8",
+    "primaryPath": "/audio/curriculum/tv-g1-b8.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b8.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "c65454930d495b7737e1c8e09df5e52dbf85a2b06342f4030107a34d83ee3f50",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b9": {
+    "lessonId": "tv-g1-b9",
+    "primaryPath": "/audio/curriculum/tv-g1-b9.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b9.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "fe48925bc11028956464f066f490936773f00d187752c1e976552abdc40635c0",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b10": {
+    "lessonId": "tv-g1-b10",
+    "primaryPath": "/audio/curriculum/tv-g1-b10.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b10.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "6f7d448bf8e77ae5ba352b74bbaec649fd05dfd5af40edbc992b5152f8b66656",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b11": {
+    "lessonId": "tv-g1-b11",
+    "primaryPath": "/audio/curriculum/tv-g1-b11.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b11.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "b0fa0dbbae54003e4aba43a18916c0aeeb9bbe71afd0a4fb5b01f457657fb087",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b12": {
+    "lessonId": "tv-g1-b12",
+    "primaryPath": "/audio/curriculum/tv-g1-b12.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b12.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "f08ad38555113825bf9edfc808e7357e94d548e3be6817f91a3d704a1fb13c3b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b13": {
+    "lessonId": "tv-g1-b13",
+    "primaryPath": "/audio/curriculum/tv-g1-b13.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b13.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "342551ee2d3266f581dfc2bb628eb29a3cd75c85fbeca8194f93d6026e86ebea",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b14": {
+    "lessonId": "tv-g1-b14",
+    "primaryPath": "/audio/curriculum/tv-g1-b14.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b14.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "34948354d46010f6555a53dcadeb97ab2d30932e9891a2579eaf2fffe82b9e1f",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b15": {
+    "lessonId": "tv-g1-b15",
+    "primaryPath": "/audio/curriculum/tv-g1-b15.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b15.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "223d4a26f7cd5bbcf8e530e25431d41307be3959d330e1297a3fca3f3a598b2f",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b16": {
+    "lessonId": "tv-g1-b16",
+    "primaryPath": "/audio/curriculum/tv-g1-b16.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b16.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "6cff9af534d5cb89376879771a719ebd9e11eede651d70eceab3bf4849543d88",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b17": {
+    "lessonId": "tv-g1-b17",
+    "primaryPath": "/audio/curriculum/tv-g1-b17.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b17.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "c047ee1f14ac9950a0ea08c070e5db18a4dd1c29fb49505b49d27f15cf25dda5",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b18": {
+    "lessonId": "tv-g1-b18",
+    "primaryPath": "/audio/curriculum/tv-g1-b18.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b18.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "d8a0c6af4521b35c3521b1f814b0461f3026bebc7bbeec54e51af842e9c781cc",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b19": {
+    "lessonId": "tv-g1-b19",
+    "primaryPath": "/audio/curriculum/tv-g1-b19.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b19.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "aec5bb5f6922a181673b7d576bcfb1bc74fb63f81d740c4bd065a67154cf10d7",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b20": {
+    "lessonId": "tv-g1-b20",
+    "primaryPath": "/audio/curriculum/tv-g1-b20.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b20.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "d104e9a779d265d358f24f7dfe2b1ab405dd99cee3e2ad81334ce7ba9998151c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b21": {
+    "lessonId": "tv-g1-b21",
+    "primaryPath": "/audio/curriculum/tv-g1-b21.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b21.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "a035f82c4de62d8e27875bc0187edddc13a20ba097bf42eb92f8da21f88ca77f",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b22": {
+    "lessonId": "tv-g1-b22",
+    "primaryPath": "/audio/curriculum/tv-g1-b22.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b22.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "ab998f7d44dd715cb43ad72903deb259c42f1f0afbcef65ba84eeb7bcb37d93d",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b23": {
+    "lessonId": "tv-g1-b23",
+    "primaryPath": "/audio/curriculum/tv-g1-b23.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b23.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5110ab875e9f836673b07a417832cf99a0f41746d490c1f25dbb4755bcf45d2a",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b24": {
+    "lessonId": "tv-g1-b24",
+    "primaryPath": "/audio/curriculum/tv-g1-b24.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b24.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "f4edea8063b6f1be48d2dceef51c2dd521b97ad80ffced87453f71196b3d6913",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b25": {
+    "lessonId": "tv-g1-b25",
+    "primaryPath": "/audio/curriculum/tv-g1-b25.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b25.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "84c123c10bd0bc9fd198e98351884e236169a58410749b90460a18246947367c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b26": {
+    "lessonId": "tv-g1-b26",
+    "primaryPath": "/audio/curriculum/tv-g1-b26.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b26.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "de188755f8055ac1fb497f405370417ce93cf4fb1d382ba59c94a28401e93a36",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b27": {
+    "lessonId": "tv-g1-b27",
+    "primaryPath": "/audio/curriculum/tv-g1-b27.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b27.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "b3e1c7d2aa5b13346d8342fdbf407365db20314846107a5720d730c9ce6e46de",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b28": {
+    "lessonId": "tv-g1-b28",
+    "primaryPath": "/audio/curriculum/tv-g1-b28.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b28.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "04cbac90fa326e23cc44c15dd39ee2abb439276d438bb9f9f8ea3e74fa427cd8",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b29": {
+    "lessonId": "tv-g1-b29",
+    "primaryPath": "/audio/curriculum/tv-g1-b29.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b29.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "249ea9e9a97249696c82093476de9bed010632bf4445984b4996f8e46c140cc5",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g1-b30": {
+    "lessonId": "tv-g1-b30",
+    "primaryPath": "/audio/curriculum/tv-g1-b30.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g1-b30.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5a53e50c8a04ee01ca22618a12c0772f9cd0037ec8d1cf773c9e105a930c7643",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b1": {
+    "lessonId": "tv-g2-b1",
+    "primaryPath": "/audio/curriculum/tv-g2-b1.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b1.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "36f8c4ba2434427d4e95207b0bc539115d7a749ee9c9a4113e1f35807dec0427",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b2": {
+    "lessonId": "tv-g2-b2",
+    "primaryPath": "/audio/curriculum/tv-g2-b2.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b2.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "e4a8937d2d26d561e080392a2da61b9113aae55231706a51be53c5998646de75",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b3": {
+    "lessonId": "tv-g2-b3",
+    "primaryPath": "/audio/curriculum/tv-g2-b3.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b3.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "dbe0b3e61ef84d7e8600166672cdbce39db0a89b3ce5e0da68eb5f38c2ed00ef",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b4": {
+    "lessonId": "tv-g2-b4",
+    "primaryPath": "/audio/curriculum/tv-g2-b4.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b4.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "9d81e958858aca2ea17b755935061b7656f33bc85ad48f6163847308a9880c84",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b5": {
+    "lessonId": "tv-g2-b5",
+    "primaryPath": "/audio/curriculum/tv-g2-b5.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b5.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "501d06ffdd86c0db228f4446bb0e3b2beecab0e42c891537c8069c19fa9305a1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b6": {
+    "lessonId": "tv-g2-b6",
+    "primaryPath": "/audio/curriculum/tv-g2-b6.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b6.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "def2b49cd046a81c11dd806c12acb1fe1527783f16ac60b45cbf6a81785b106f",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b7": {
+    "lessonId": "tv-g2-b7",
+    "primaryPath": "/audio/curriculum/tv-g2-b7.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b7.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "119412f01ef5ae51c1ffc4da07bc208131289aed1e8b7d6e60c783ac3978f9e4",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b8": {
+    "lessonId": "tv-g2-b8",
+    "primaryPath": "/audio/curriculum/tv-g2-b8.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b8.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "738edf5e2126654e5cf10ec061dab235dfdbc37eddeee94d1707835fcd8947f0",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b9": {
+    "lessonId": "tv-g2-b9",
+    "primaryPath": "/audio/curriculum/tv-g2-b9.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b9.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0e95bcdc748fd4be07d471eea18b20edbb91b4f76d44f02f683cb5494a1bb683",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b10": {
+    "lessonId": "tv-g2-b10",
+    "primaryPath": "/audio/curriculum/tv-g2-b10.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b10.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "52a4ba0101968728e69e8b93ad57169070414c4fbf9bfaf0828b1982791ac9e5",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b11": {
+    "lessonId": "tv-g2-b11",
+    "primaryPath": "/audio/curriculum/tv-g2-b11.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b11.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "bf95481fcc78521a7a4c350cba11c64666452ac0d50022fd03e139aaa8451949",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b12": {
+    "lessonId": "tv-g2-b12",
+    "primaryPath": "/audio/curriculum/tv-g2-b12.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b12.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "a0af556570a49906b0c9bd3f1bb5027112d033c08efb3f2a2984d2a2e573036b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b13": {
+    "lessonId": "tv-g2-b13",
+    "primaryPath": "/audio/curriculum/tv-g2-b13.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b13.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "9591f7184a7186c038896cea25a34ede654d7b9521924347031ef207468de1a9",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b14": {
+    "lessonId": "tv-g2-b14",
+    "primaryPath": "/audio/curriculum/tv-g2-b14.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b14.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "31e376583c7b917fa60d7b7f65c78c28be98fea014d494f99bf1d2dbe2006f50",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b15": {
+    "lessonId": "tv-g2-b15",
+    "primaryPath": "/audio/curriculum/tv-g2-b15.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b15.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "f846cfdb8711e18157ae28c9ddccb0c524148f99ef5313a4600aaae77bbcc01b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b16": {
+    "lessonId": "tv-g2-b16",
+    "primaryPath": "/audio/curriculum/tv-g2-b16.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b16.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "6a14687dc103968bc15adc371f493a5d92fbb7d830ebc0b6b1b1def95449e3f1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b17": {
+    "lessonId": "tv-g2-b17",
+    "primaryPath": "/audio/curriculum/tv-g2-b17.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b17.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0a76e0620fc8aee6755ef54432d96a1695cd1acae2d54343e063ae3c12fade2a",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b18": {
+    "lessonId": "tv-g2-b18",
+    "primaryPath": "/audio/curriculum/tv-g2-b18.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b18.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "2f36eff068019f284ef7653aeea3a680915e0751e064460c98cba4f213d0a0be",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b19": {
+    "lessonId": "tv-g2-b19",
+    "primaryPath": "/audio/curriculum/tv-g2-b19.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b19.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "794281803b0c2af4929d0b150e388be06dc6df1063fc0b2f318dc7f8fc61b0d0",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b20": {
+    "lessonId": "tv-g2-b20",
+    "primaryPath": "/audio/curriculum/tv-g2-b20.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b20.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "826808477b9e97a593e06cbf32edad658fdcebe533ff98acfa33299fc560871c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b21": {
+    "lessonId": "tv-g2-b21",
+    "primaryPath": "/audio/curriculum/tv-g2-b21.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b21.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "ae3899e1f6f54a7901c80abb3019a8d602db14b169bc3cd169ccb833215824f1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b22": {
+    "lessonId": "tv-g2-b22",
+    "primaryPath": "/audio/curriculum/tv-g2-b22.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b22.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "b8ae2f87ea97f6cf735c1ddcc2ef40099f418e31adfbc8d9f37a91b034380eab",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b23": {
+    "lessonId": "tv-g2-b23",
+    "primaryPath": "/audio/curriculum/tv-g2-b23.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b23.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "9fba8a8ec6bdb516fc866cf7df3932c0c9ca9ebd4fef1bf5f5bc766e336f3331",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b24": {
+    "lessonId": "tv-g2-b24",
+    "primaryPath": "/audio/curriculum/tv-g2-b24.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b24.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "77732ac0d6e316da33059ae2c01ae5744255b877d804cd0a8f40ca2815c6649f",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b25": {
+    "lessonId": "tv-g2-b25",
+    "primaryPath": "/audio/curriculum/tv-g2-b25.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b25.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3ce4b817956943b8b860465623cf2e5439c2dcb0daa741ef25d7f27475162c33",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b26": {
+    "lessonId": "tv-g2-b26",
+    "primaryPath": "/audio/curriculum/tv-g2-b26.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b26.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5252414e8bf98ac6ec5b8e118c69e313c666ff737cc39ac1a92001b82c3f4b94",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b27": {
+    "lessonId": "tv-g2-b27",
+    "primaryPath": "/audio/curriculum/tv-g2-b27.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b27.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "d5d44acba1a6c763f8efeec44ca89e7d81341266870c6fb8fece681f6af10e19",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b28": {
+    "lessonId": "tv-g2-b28",
+    "primaryPath": "/audio/curriculum/tv-g2-b28.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b28.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3185757f5902696878c57618793c7384b12a5c4fa3f5e898b7159d24f22bfa12",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b29": {
+    "lessonId": "tv-g2-b29",
+    "primaryPath": "/audio/curriculum/tv-g2-b29.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b29.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0424649f41e5c2b4e5df1d1f7c83b5df29cab64e6c40ab9a0fbbabe12040c640",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g2-b30": {
+    "lessonId": "tv-g2-b30",
+    "primaryPath": "/audio/curriculum/tv-g2-b30.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g2-b30.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "e7e2a2d7eaee1f41a6523a629e6d48721cb30c01c1143dbcef20bb6bbb1cbfe0",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b1": {
+    "lessonId": "tv-g3-b1",
+    "primaryPath": "/audio/curriculum/tv-g3-b1.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b1.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "a8824d1e79339f86a86df2bc2565aa7a81d44c8533080963933b2dd74ac77b74",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b2": {
+    "lessonId": "tv-g3-b2",
+    "primaryPath": "/audio/curriculum/tv-g3-b2.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b2.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "d05f57f7375110d47390ce224a7dd2ca89ec0df5813666819e3b587acd0fd85b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b3": {
+    "lessonId": "tv-g3-b3",
+    "primaryPath": "/audio/curriculum/tv-g3-b3.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b3.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "47cd4dad12766cde8e866e3634cb7babdb98107e0bb6efd8cff86a394eac4242",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b4": {
+    "lessonId": "tv-g3-b4",
+    "primaryPath": "/audio/curriculum/tv-g3-b4.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b4.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "a036d4e4a56d2b4fda584ea97678de052a3f6ce0e402c7d8911d696e66d02eb4",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b5": {
+    "lessonId": "tv-g3-b5",
+    "primaryPath": "/audio/curriculum/tv-g3-b5.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b5.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0442bdeac57919aac57a4e6b0b703e857703749beea25cb46206788e5797c975",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b6": {
+    "lessonId": "tv-g3-b6",
+    "primaryPath": "/audio/curriculum/tv-g3-b6.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b6.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "f29a7f943dfa3d3e09991757e0255f6cc4be91a6b11ffb4f127b936a88c21480",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b7": {
+    "lessonId": "tv-g3-b7",
+    "primaryPath": "/audio/curriculum/tv-g3-b7.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b7.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "779da1efd875b7a12e79d4f56392cf34be606a32066ecb37baa3e494f6e6eb06",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b8": {
+    "lessonId": "tv-g3-b8",
+    "primaryPath": "/audio/curriculum/tv-g3-b8.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b8.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "b8155a94353b056026021e2b92649256870ee69b0b9988cfb9e0cde794c8dacd",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b9": {
+    "lessonId": "tv-g3-b9",
+    "primaryPath": "/audio/curriculum/tv-g3-b9.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b9.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0b40fe22986389768bc1434c9eab107329d3ff796075ceec2db15e326cb27b92",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b10": {
+    "lessonId": "tv-g3-b10",
+    "primaryPath": "/audio/curriculum/tv-g3-b10.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b10.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3509e3946b8854c7ce19bf35eedaa08d4e173cfff6d81a37e1f38e01277cf0fd",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b11": {
+    "lessonId": "tv-g3-b11",
+    "primaryPath": "/audio/curriculum/tv-g3-b11.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b11.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "23e579efc74161937e147fb3492cee882d0ee0bc70ed34d4ead11140d83ab421",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b12": {
+    "lessonId": "tv-g3-b12",
+    "primaryPath": "/audio/curriculum/tv-g3-b12.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b12.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "9eebe982421b4df78e50ae2e364b03d9b8bdd8df6cc7542dcf1f57025bbbaed9",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b13": {
+    "lessonId": "tv-g3-b13",
+    "primaryPath": "/audio/curriculum/tv-g3-b13.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b13.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3e96ed520045ee31ccbd23804c6896bf5aaae18d4bbf892ac94b8ec6ad17f6e1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b14": {
+    "lessonId": "tv-g3-b14",
+    "primaryPath": "/audio/curriculum/tv-g3-b14.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b14.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "827fe247a90ab4d4b6f24101eccc3302e034cb8d0b37291d8f047d90db58627c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b15": {
+    "lessonId": "tv-g3-b15",
+    "primaryPath": "/audio/curriculum/tv-g3-b15.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b15.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "4ceac5e5f54b54e3b146e5cb312d2773427b8bb58152503a900cb5767145c28b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b16": {
+    "lessonId": "tv-g3-b16",
+    "primaryPath": "/audio/curriculum/tv-g3-b16.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b16.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "c0fc492dffc805a6c9d986f4247ff3e93cbb965062724b48e7dd868eb4ec4cbc",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b17": {
+    "lessonId": "tv-g3-b17",
+    "primaryPath": "/audio/curriculum/tv-g3-b17.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b17.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "dd0bb0fd28110925eb38d0121aeb4b9a66099c5428a8400055ee34b8426c359b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b18": {
+    "lessonId": "tv-g3-b18",
+    "primaryPath": "/audio/curriculum/tv-g3-b18.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b18.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "fb7de587f53ec03befd49e3b2b61580fc4689db2025591f27b8b1c14895351b1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b19": {
+    "lessonId": "tv-g3-b19",
+    "primaryPath": "/audio/curriculum/tv-g3-b19.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b19.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "d9051d50b48175a8fc92c4cbe2735ec60c44e06c1ae235979bf00b6f1db6dcff",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b20": {
+    "lessonId": "tv-g3-b20",
+    "primaryPath": "/audio/curriculum/tv-g3-b20.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b20.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "9087e2c47612caf14244fe1810e3b2a199754420023bc328e5502f4512026a24",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b21": {
+    "lessonId": "tv-g3-b21",
+    "primaryPath": "/audio/curriculum/tv-g3-b21.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b21.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "c80aee09efd1d1e332c9acab7dd5e3fdb5c5eedb4311a6de3ebae583250924a1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b22": {
+    "lessonId": "tv-g3-b22",
+    "primaryPath": "/audio/curriculum/tv-g3-b22.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b22.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3ab6c9260ade32f8e7751074ffdc01d1e8fea332644feecdf59daa06aca3e6c4",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b23": {
+    "lessonId": "tv-g3-b23",
+    "primaryPath": "/audio/curriculum/tv-g3-b23.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b23.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "ab0d0f9bd02055ae87631edad73934b78db0b1379b83c20e440680171504f5ee",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b24": {
+    "lessonId": "tv-g3-b24",
+    "primaryPath": "/audio/curriculum/tv-g3-b24.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b24.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "2b040764948c71f644f3d7549d7887549efea08a355b85507a66fb23ce366a5d",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g3-b25": {
+    "lessonId": "tv-g3-b25",
+    "primaryPath": "/audio/curriculum/tv-g3-b25.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g3-b25.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "bb7907fc16b2e8e8a52359a8a26ef3a2c29afad6110a7d5373234476ef67bcb1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b1": {
+    "lessonId": "tv-g4-b1",
+    "primaryPath": "/audio/curriculum/tv-g4-b1.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b1.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "aafc0c65107ec12ffc1fd6ec34a88cea0e2a4f6ff6cab23ef8f96cfae358ce82",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b2": {
+    "lessonId": "tv-g4-b2",
+    "primaryPath": "/audio/curriculum/tv-g4-b2.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b2.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "77dc4c5818074452fb5c719134ed6f207bff7b047d041cae71349d03c2b96ebf",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b3": {
+    "lessonId": "tv-g4-b3",
+    "primaryPath": "/audio/curriculum/tv-g4-b3.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b3.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "fd578173375d7b89438cebf211c60e49cd4c23817e6667a7405cb89ea2aba21c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b4": {
+    "lessonId": "tv-g4-b4",
+    "primaryPath": "/audio/curriculum/tv-g4-b4.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b4.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "fba0668f6e6f59b9d1414813632e2d70e961d441d81dc60dd96b3be5713961c7",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b5": {
+    "lessonId": "tv-g4-b5",
+    "primaryPath": "/audio/curriculum/tv-g4-b5.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b5.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "ebcbd8904930db09b44009736fe67445d17f32328ecc021320641ea95abc69fe",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b6": {
+    "lessonId": "tv-g4-b6",
+    "primaryPath": "/audio/curriculum/tv-g4-b6.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b6.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "de752353855445a5043f70033653663d0d73f4325bb093450faa0eed1185aadc",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b7": {
+    "lessonId": "tv-g4-b7",
+    "primaryPath": "/audio/curriculum/tv-g4-b7.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b7.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "74524f0b39e5398a21e911f0afc751423ac398e398e489c2c68c3db675474305",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b8": {
+    "lessonId": "tv-g4-b8",
+    "primaryPath": "/audio/curriculum/tv-g4-b8.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b8.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3576f35ab7f9045e972a22131fe55b5aeb678aac2d95f6b27a07a1c85afc4799",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b9": {
+    "lessonId": "tv-g4-b9",
+    "primaryPath": "/audio/curriculum/tv-g4-b9.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b9.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "9b9f55e7f5d6e1972d60026c65f922d405416cf41891b0a205085679335a6b9c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b10": {
+    "lessonId": "tv-g4-b10",
+    "primaryPath": "/audio/curriculum/tv-g4-b10.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b10.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "fa30cf7db40a3c3f9b94b30263d7a0f247dd7a55200ed4f3c323689805dbdfd5",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b11": {
+    "lessonId": "tv-g4-b11",
+    "primaryPath": "/audio/curriculum/tv-g4-b11.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b11.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "11faefead79819cb96ca7c2dabfc68aec201a2f5472b0974a148a3affdbf3a04",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b12": {
+    "lessonId": "tv-g4-b12",
+    "primaryPath": "/audio/curriculum/tv-g4-b12.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b12.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0c3114fe320d3b8c26a5b9be10ad47b94fd49737d48e008c8e0179b67b7a5dec",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b13": {
+    "lessonId": "tv-g4-b13",
+    "primaryPath": "/audio/curriculum/tv-g4-b13.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b13.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "75bd1e5ab7d006c03f943abda0a4501d72320ac848bb6bce25387c355e7eb558",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b14": {
+    "lessonId": "tv-g4-b14",
+    "primaryPath": "/audio/curriculum/tv-g4-b14.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b14.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0cc5c06f747bd872605cd5f77cffbf386e1201e26b16d9f4fe9fca4614196ff2",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b15": {
+    "lessonId": "tv-g4-b15",
+    "primaryPath": "/audio/curriculum/tv-g4-b15.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b15.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "922cdd1e715e7f3f543bba2d149d353971e7a7b60d26da658fa3d76847ef8ccd",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b16": {
+    "lessonId": "tv-g4-b16",
+    "primaryPath": "/audio/curriculum/tv-g4-b16.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b16.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "decc0827fb0d6e3ba9037b669fb78e881accb800b60e9cdfa69ce9e728c8a028",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b17": {
+    "lessonId": "tv-g4-b17",
+    "primaryPath": "/audio/curriculum/tv-g4-b17.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b17.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "06b86af872527a5035f6f2dcf122d2de32e180cdda1d09a636022eba9a189be1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b18": {
+    "lessonId": "tv-g4-b18",
+    "primaryPath": "/audio/curriculum/tv-g4-b18.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b18.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "e3cf38fa18519308ee1e84d8b92a72a8e82841e55b6563b522b33ff4604a909b",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b19": {
+    "lessonId": "tv-g4-b19",
+    "primaryPath": "/audio/curriculum/tv-g4-b19.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b19.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "28b439be5bff9d4dcf3948ea9e22193e9b88ca334e2a30c706221cb21b7dcf58",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b20": {
+    "lessonId": "tv-g4-b20",
+    "primaryPath": "/audio/curriculum/tv-g4-b20.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b20.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "51869a66d82c6834255b4139b3ffbe57db06f6fecf8dfd8426c8bb9d98366410",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b21": {
+    "lessonId": "tv-g4-b21",
+    "primaryPath": "/audio/curriculum/tv-g4-b21.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b21.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3b3448045bff4754a2e208a6d6856e2947884dfdc816e3ccaa4eb1b54963c9e1",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g4-b22": {
+    "lessonId": "tv-g4-b22",
+    "primaryPath": "/audio/curriculum/tv-g4-b22.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g4-b22.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "994e7224af2e02a1617b1220bc4efa4a4437a70b8bdb81138064defe1c021174",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b1": {
+    "lessonId": "tv-g5-b1",
+    "primaryPath": "/audio/curriculum/tv-g5-b1.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b1.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "77523f415f7c5edfd521cd3c86a8e5d16b976b6789988e1d0616855bfd96e40d",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b2": {
+    "lessonId": "tv-g5-b2",
+    "primaryPath": "/audio/curriculum/tv-g5-b2.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b2.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "a342d97851de0499ca10e7a7d0e4d25b3dfd45bc5086418f8ed1ea169c3767cd",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b3": {
+    "lessonId": "tv-g5-b3",
+    "primaryPath": "/audio/curriculum/tv-g5-b3.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b3.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "bfe93bab921ab3e745d1fb725a9be0e2761a0b3a9ea1a870193d653790f54d93",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b4": {
+    "lessonId": "tv-g5-b4",
+    "primaryPath": "/audio/curriculum/tv-g5-b4.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b4.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "6b3c33ea4bfe7aa9933063d9d0437ef23e675a60985c96fe61360096e2206d57",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b5": {
+    "lessonId": "tv-g5-b5",
+    "primaryPath": "/audio/curriculum/tv-g5-b5.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b5.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "fb510643f407e40746aea73d3bc2e824d0297e8bdf3302b2010a33d651d3212f",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b6": {
+    "lessonId": "tv-g5-b6",
+    "primaryPath": "/audio/curriculum/tv-g5-b6.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b6.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "577a82d254da3efe695216ef1a8ac51d5dbddd7e034d55bb04e82ebd05888396",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b7": {
+    "lessonId": "tv-g5-b7",
+    "primaryPath": "/audio/curriculum/tv-g5-b7.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b7.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5c96e19df97b45c9e7522a2d5c156f1d4c9eca5d24774b3f88bd4d6bc34da985",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b8": {
+    "lessonId": "tv-g5-b8",
+    "primaryPath": "/audio/curriculum/tv-g5-b8.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b8.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "18759bbad6f890db45c147011592ff1cc2bd93d3abd8131dcc72411376ae842a",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b9": {
+    "lessonId": "tv-g5-b9",
+    "primaryPath": "/audio/curriculum/tv-g5-b9.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b9.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "f3a5f6f91de5112dd991b5de4666e0ba742b2b654cea9d2f363f241094c001bc",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b10": {
+    "lessonId": "tv-g5-b10",
+    "primaryPath": "/audio/curriculum/tv-g5-b10.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b10.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "e13679b2612fda6a2bba62e288fe2c947a953eed843fb94c2f529fbe19761b73",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b11": {
+    "lessonId": "tv-g5-b11",
+    "primaryPath": "/audio/curriculum/tv-g5-b11.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b11.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3efca856a20adee56f2ddcc27af4d2cb80551311c498b0d3b96016e1afdda542",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b12": {
+    "lessonId": "tv-g5-b12",
+    "primaryPath": "/audio/curriculum/tv-g5-b12.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b12.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "8329f2e52a81aba195818e54502ad3aade10b93e3dffa8460aa27d10f6b0534d",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b13": {
+    "lessonId": "tv-g5-b13",
+    "primaryPath": "/audio/curriculum/tv-g5-b13.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b13.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "0ea7d1896be6e2cb6806f9b028f1b9659b9aeb7106faf5510ee51a8ebddca411",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b14": {
+    "lessonId": "tv-g5-b14",
+    "primaryPath": "/audio/curriculum/tv-g5-b14.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b14.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "a605f887fdc6889fb10f9f786048d40ddade7d390492325ea0b7a7f3e28828c7",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b15": {
+    "lessonId": "tv-g5-b15",
+    "primaryPath": "/audio/curriculum/tv-g5-b15.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b15.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "89af685cb2171dab46dd6b99210da08b0a7a9f2ac215d18b8046f3dd5502098c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b16": {
+    "lessonId": "tv-g5-b16",
+    "primaryPath": "/audio/curriculum/tv-g5-b16.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b16.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "b1acabb32a91adad4e0aab4bf95511b43731e5ffab4542e8bad3a3cdac8efe86",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b17": {
+    "lessonId": "tv-g5-b17",
+    "primaryPath": "/audio/curriculum/tv-g5-b17.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b17.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "3f0b00cf983a4abc414f9d47d19a58fc324ff85a8a594485e9e4c5c5a3fd6ce3",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b18": {
+    "lessonId": "tv-g5-b18",
+    "primaryPath": "/audio/curriculum/tv-g5-b18.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b18.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5ef21c78dbe1b573a6dff7ec7a3c330165bf9c6457391fc9cb2efcf9c46fab88",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b19": {
+    "lessonId": "tv-g5-b19",
+    "primaryPath": "/audio/curriculum/tv-g5-b19.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b19.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "6a1edd1ec53071d8e03a4263e1fae64feface2307bf7c6a548c975ab08bcc3e4",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b20": {
+    "lessonId": "tv-g5-b20",
+    "primaryPath": "/audio/curriculum/tv-g5-b20.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b20.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5043cf66670a05fbb8a509741b958a121a1b0961ab2d3357d80314504d7e3884",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b21": {
+    "lessonId": "tv-g5-b21",
+    "primaryPath": "/audio/curriculum/tv-g5-b21.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b21.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "253967cb075a59f445c1d398f8292004c6cd7e13f28a74a1707158ada15377dd",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b22": {
+    "lessonId": "tv-g5-b22",
+    "primaryPath": "/audio/curriculum/tv-g5-b22.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b22.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "68d135cb5f0b6072ae36aa9388911fab8f062d4d1c4fce15d5e63cd2840f2fad",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b23": {
+    "lessonId": "tv-g5-b23",
+    "primaryPath": "/audio/curriculum/tv-g5-b23.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b23.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "5b155d96cb138d3a55f367d496c19147dd06278ef201daff35a6c4db220167ab",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b24": {
+    "lessonId": "tv-g5-b24",
+    "primaryPath": "/audio/curriculum/tv-g5-b24.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b24.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "f5c4217d6deef4e2d6ae844eb3f254de2250bd1c50812704f0ef6cc20e6bdf7c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  },
+  "tv-g5-b25": {
+    "lessonId": "tv-g5-b25",
+    "primaryPath": "/audio/curriculum/tv-g5-b25.wav",
+    "fallbackPath": "/audio/curriculum/fallback/tv-g5-b25.wav",
+    "primaryVoice": "Cô Giáo Vy",
+    "fallbackVoice": "Cô Mỹ Duyên",
+    "transcriptHash": "4b35543025d15089a5a6e9d6ab57d65471ae069ddb918131565a90c65a662a6c",
+    "lessonVersion": 1,
+    "sourcePages": []
+  }
+}

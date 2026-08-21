@@ -15,6 +15,8 @@ import {
   VIETNAMESE_BOOK_COLLECTION,
   VIETNAMESE_BOOK_PUBLISHER,
   getVietnameseBookSource,
+  getVietnameseBookManifest,
+  getVietnameseLessonPageMapping,
 } from './vietnamese';
 import { ENGLISH_CURRICULUM_BY_GRADE } from './english';
 
@@ -44,24 +46,58 @@ function cleanReferenceTitle(title: string): string {
   return title.replace(/^Bài\s+\d+:\s*/i, '').trim();
 }
 
-function buildGeneratedReadingTitle(topic: CurriculumTopic): string {
-  return `Luyện đọc tự sinh — Chủ đề “${cleanReferenceTitle(topic.title)}”`;
-}
-
-function prepareUnverifiedPassage(passage: ReadingPassage, generatedTitle: string): ReadingPassage {
+function prepareUnverifiedPassage(passage: ReadingPassage, practiceTitle: string): ReadingPassage {
   const content = passage.content.map(softenUnverifiedText);
   return {
     ...passage,
-    title: generatedTitle,
-    author: 'WonderKids — nội dung tự sinh',
+    title: practiceTitle,
+    author: undefined,
     content,
-    audioNarration: `${generatedTitle}. ${content.join(' ')}`,
+    audioNarration: passage.audioNarration || `${practiceTitle}. ${content.join(' ')}`,
     vocabularyNotes: passage.vocabularyNotes?.map((item) => ({
       word: softenUnverifiedText(item.word),
       meaning: softenUnverifiedText(item.meaning),
     })),
   };
 }
+
+function buildLessonOverview(passage: ReadingPassage | undefined, topic: CurriculumTopic) {
+  const cleanPart = (value: string) => softenUnverifiedText(value)
+    .replace(/^\s*•\s*/, '')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/[.;:,\s]+$/g, '')
+    .trim();
+  const content = passage?.content
+    .slice(0, 2)
+    .map(cleanPart)
+    .filter(Boolean)
+    .join('; ') || cleanPart(topic.summary || topic.description);
+  const objective = softenUnverifiedText(topic.pedagogicalObjective || topic.summary || topic.description)
+    .replace(/\b(?:do WonderKids biên soạn|nguồn sách tham khảo|tài liệu tham khảo)\b/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/^\s*[-—:,.;]+\s*|\s*[-—:,.;]+\s*$/g, '')
+    .trim();
+  const practice = passage?.content.slice(2, 3).map(cleanPart).find(Boolean)
+    || 'đọc, quan sát và hoàn thành hoạt động trong bài';
+  return { content, objective, practice };
+}
+
+function buildCardPreview(overview: { content: string; objective: string; practice: string }): string {
+  const MAX_PREVIEW_CHARACTERS = 88;
+  const shorten = (value: string) => {
+    if (value.length <= MAX_PREVIEW_CHARACTERS) return value;
+    const clipped = value.slice(0, MAX_PREVIEW_CHARACTERS - 1);
+    const lastSpace = clipped.lastIndexOf(' ');
+    return `${(lastSpace >= 48 ? clipped.slice(0, lastSpace) : clipped).trimEnd()}…`;
+  };
+  return [
+    `Nội dung: ${shorten(overview.content)}`,
+    `Mục tiêu: ${shorten(overview.objective)}`,
+    `Rèn luyện: ${shorten(overview.practice)}`,
+  ].join('\n');
+}
+
+
 
 function prepareGeneratedQuestion(question: Question, referenceTitle: string, generatedTitle: string): Question {
   const replaceReferenceTitle = (text: string) => softenUnverifiedText(text.split(referenceTitle).join(generatedTitle));
@@ -308,50 +344,69 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
           }
       );
     const isVerifiedSgk = provenance.contentOrigin === 'sgk_reference' && provenance.verificationStatus === 'verified';
-    const generatedTitle = buildGeneratedReadingTitle(t);
     const isGenerated = subject === 'vietnamese' && provenance.contentOrigin === 'system_generated';
-    const isVietnameseSupplement = subject === 'vietnamese' && provenance.contentOrigin === 'pedagogical_supplement';
     const isUnverifiedVietnamese = subject === 'vietnamese' && !isVerifiedSgk;
-    const effectiveSourceBook = isVerifiedSgk
-      ? declaredSourceBook
-      : isGenerated
-        ? 'WonderKids — Nội dung tự sinh'
-        : isVietnameseSupplement ? 'WonderKids — Nội dung bổ trợ sư phạm' : declaredSourceBook;
-    const effectiveSourceDetail = isVerifiedSgk
-      ? declaredSourceDetail
-      : isGenerated
-        ? 'NỘI DUNG TỰ SINH — tên bài SGK, tập sách và số trang bên dưới chỉ là thông tin tham khảo'
-        : 'Nội dung bổ trợ do WonderKids biên soạn';
+    const displayedTitle = isUnverifiedVietnamese ? cleanReferenceTitle(t.title) : t.title;
+    const effectiveSourceBook = isVerifiedSgk ? declaredSourceBook : 'WonderKids';
+    const effectiveSourceDetail = isVerifiedSgk ? declaredSourceDetail : 'Nội dung luyện thêm';
     const rawQuestions = bundle?.questions || generateQuestionsForTopic(t, subject, grade);
     const questions = subject === 'vietnamese'
-      ? rawQuestions.map((question) => prepareGeneratedQuestion(question, t.title, isGenerated ? generatedTitle : t.title))
+      ? rawQuestions.map((question) => prepareGeneratedQuestion(question, t.title, displayedTitle))
       : rawQuestions;
-    const displayedDescription = isGenerated
-      ? `Nội dung luyện đọc tự sinh do WonderKids biên soạn theo chủ đề tham khảo “${t.title}”.`
-      : isVietnameseSupplement ? 'Nội dung bổ trợ sư phạm do WonderKids biên soạn; không phải bài SGK.' : t.description;
-    const displayedSummary = isGenerated
-      ? `Bài luyện đọc tự sinh giúp học sinh rèn đọc hiểu theo chủ đề tham khảo “${t.title}”; không phải nguyên văn SGK.`
-      : isVietnameseSupplement ? 'Hoạt động ôn luyện bổ trợ do WonderKids xây dựng; không áp dụng metadata SGK.' : t.summary;
-    const displayedMascotTip = isGenerated
-      ? `MiuMiu: Cùng luyện đọc nội dung tự sinh theo chủ đề “${cleanReferenceTitle(t.title)}” nhé!`
-      : isVietnameseSupplement ? 'MiuMiu: Cùng tham gia hoạt động ôn luyện bổ trợ của WonderKids nhé!' : t.mascotTip;
+    const lessonOverview = subject === 'vietnamese' && isUnverifiedVietnamese
+      ? buildLessonOverview(readingPassage, t)
+      : undefined;
+    const cardPreview = lessonOverview
+      ? buildCardPreview(lessonOverview)
+      : t.description;
+    const displayedDescription = lessonOverview
+      ? `Nội dung: ${lessonOverview.content}\nMục tiêu: ${lessonOverview.objective}\nRèn luyện: ${lessonOverview.practice}`
+      : t.description;
+    const displayedSummary = lessonOverview ? lessonOverview.content : t.summary;
+    const displayedMascotTip = isUnverifiedVietnamese
+      ? `MiuMiu: Cùng luyện tập “${cleanReferenceTitle(t.title)}” nhé!`
+      : t.mascotTip;
+    const mappedSourcePages = subject === 'vietnamese'
+      ? getVietnameseLessonPageMapping(normalizedId)?.sourcePages
+      : undefined;
+    const sourcePages = provenance.contentOrigin !== 'pedagogical_supplement'
+      ? mappedSourcePages || []
+      : [];
+    const bookManifest = subject === 'vietnamese' && sourcePages.length > 0
+      ? getVietnameseBookManifest(grade, t.semester)
+      : undefined;
+    const sourcePageImageUrls = bookManifest
+      ? sourcePages.map((page) => bookManifest.pages.find((item) => item.readerIndex === page)?.imageUrl).filter((url): url is string => Boolean(url))
+      : [];
 
     return {
       id: t.id,
-      title: isGenerated ? generatedTitle : t.title,
+      title: displayedTitle,
       description: displayedDescription,
+      catalogSection: subject === 'vietnamese'
+        ? (isVerifiedSgk ? 'sgk' : 'extra_practice')
+        : undefined,
+      cardPreview,
+      lessonOverview,
+      sourceCitation: bookManifest ? {
+        bookId: bookManifest.id,
+        sourcePages,
+        sourceLabel: `${bookManifest.title} — ${t.title} — Trang ${sourcePages.join(', ')}`,
+        sourceHash: bookManifest.manifestHash,
+        verificationStatus: isVerifiedSgk ? 'verified' : 'draft',
+      } : undefined,
+      sourcePageImageUrls,
       subject,
       grade,
-      unit: isGenerated
-        ? `Luyện đọc tự sinh — Tập ${t.semester}`
-        : isVietnameseSupplement ? 'Hoạt động bổ trợ WonderKids' : t.unit,
+      semester: t.semester,
+      unit: isUnverifiedVietnamese ? `SGK Tiếng Việt tập ${t.semester}` : t.unit,
       textbookPageRef: isUnverifiedVietnamese ? undefined : t.textbookPageRef,
       sourceType: isVerifiedSgk ? 'sgk_official' : 'pedagogical_supplement',
       sourceBook: effectiveSourceBook,
       sourceDetail: effectiveSourceDetail,
-      referenceBook: provenance.referenceBook,
-      referenceDetail: provenance.referenceDetail,
-      referenceUrl: provenance.referenceUrl,
+      referenceBook: isUnverifiedVietnamese ? undefined : provenance.referenceBook,
+      referenceDetail: isUnverifiedVietnamese ? undefined : provenance.referenceDetail,
+      referenceUrl: isUnverifiedVietnamese ? undefined : provenance.referenceUrl,
       provenance,
       pedagogicalObjective: isGenerated
         ? softenUnverifiedText(bundle?.pedagogicalObjective || t.pedagogicalObjective || displayedDescription)
@@ -363,13 +418,19 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       starReward: 3,
       theoryContent: {
         summary: displayedSummary,
-        keyPoints: isUnverifiedVietnamese ? t.keyPoints.map(softenUnverifiedText) : t.keyPoints,
+        keyPoints: isGenerated
+          ? [
+            'Đọc to, rõ ràng, trôi chảy và diễn cảm nội dung bài học.',
+            'Hiểu nội dung, từ ngữ và hoàn thành các hoạt động rèn luyện.',
+          ]
+          : isUnverifiedVietnamese ? t.keyPoints.map(softenUnverifiedText) : t.keyPoints,
         mascotTip: displayedMascotTip,
       },
       readingPassage: readingPassage && isUnverifiedVietnamese
-        ? prepareUnverifiedPassage(readingPassage, isGenerated ? generatedTitle : t.title)
+        ? prepareUnverifiedPassage(readingPassage, displayedTitle)
         : readingPassage,
-      questions
+      questions,
+      appExtensions: isUnverifiedVietnamese ? questions : [],
     };
   });
 }

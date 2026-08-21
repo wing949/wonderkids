@@ -17,6 +17,9 @@ export const VIETNAMESE_CURRICULUM_BY_GRADE: Record<GradeLevel, CurriculumTopic[
 export * from './readingPassages';
 export * from './sourceBooks';
 export * from './audioManifest';
+export * from './bookManifests';
+export * from './catalogPolicy';
+export * from './lessonPageMappings';
 
 export {
   VIETNAMESE_GRADE_1_TOPICS,

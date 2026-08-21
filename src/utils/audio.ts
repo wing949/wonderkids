@@ -1,5 +1,6 @@
 import { TTSSettings } from '../types';
 import { getVietnameseAudioAsset } from '../data/curriculum/vietnamese/audioManifest';
+import { retireAudioForFallback } from './audioFallback';
 
 let audioCtx: AudioContext | null = null;
 
@@ -467,18 +468,14 @@ export const soundManager = {
 
       audio.onerror = () => {
         if (!isCurrentRequest() || currentAudioElement !== audio) return;
-        audio.onended = null;
-        audio.onerror = null;
-        audio.pause();
+        retireAudioForFallback(audio);
         currentAudioElement = null;
         tryPlayNext();
       };
 
       audio.play().catch(() => {
         if (!isCurrentRequest() || currentAudioElement !== audio) return;
-        audio.onended = null;
-        audio.onerror = null;
-        audio.pause();
+        retireAudioForFallback(audio);
         currentAudioElement = null;
         tryPlayNext();
       });
