@@ -130,6 +130,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [keypadInput, setKeypadInput] = useState<string>('');
   const [writtenResponse, setWrittenResponse] = useState<string>('');
+  const [hasSelfConfirmed, setHasSelfConfirmed] = useState<boolean>(false);
   const [matchedPairs, setMatchedPairs] = useState<Record<string, string>>({});
   const [selectedLeftPair, setSelectedLeftPair] = useState<MatchingPair | null>(null);
   
@@ -365,7 +366,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     let correct = false;
 
     if (currentQ.gradingMode === 'self_confirm') {
-      correct = writtenResponse.trim().length > 0;
+      correct = true;
     } else if (currentQ.type === 'bubble_choice' || currentQ.type === 'audio_listen' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend') {
       const selectedOpt = currentQ.options?.find((opt) => opt.id === selectedOptionId);
       correct = !!selectedOpt?.isCorrect;
@@ -407,6 +408,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       setSelectedOptionId(null);
       setKeypadInput('');
       setWrittenResponse('');
+      setHasSelfConfirmed(false);
       setMatchedPairs({});
       setSelectedLeftPair(null);
       setIsAnswerChecked(false);
@@ -418,6 +420,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       setSelectedOptionId(null);
       setKeypadInput('');
       setWrittenResponse('');
+      setHasSelfConfirmed(false);
       setMatchedPairs({});
       setSelectedLeftPair(null);
       setIsAnswerChecked(false);
@@ -435,6 +438,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     setSelectedOptionId(null);
     setKeypadInput('');
     setWrittenResponse('');
+    setHasSelfConfirmed(false);
     setMatchedPairs({});
     setSelectedLeftPair(null);
     setShowHint(false);
@@ -474,7 +478,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
   const hasSelectedAnswer = currentQ
     ? currentQ.gradingMode === 'self_confirm'
-      ? writtenResponse.trim().length > 0
+      ? hasSelfConfirmed || writtenResponse.trim().length > 0 || lesson.grade <= 2
       : (currentQ.type === 'bubble_choice' || currentQ.type === 'audio_listen' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend')
       ? selectedOptionId !== null
       : currentQ.type === 'keypad'
@@ -1287,22 +1291,85 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             </div>
 
             {currentQ.gradingMode === 'self_confirm' && (
-              <div className="mt-6 rounded-3xl bg-emerald-50/70 p-4 sm:p-5 border border-emerald-200">
-                <label htmlFor={`response-${currentQ.id}`} className="block font-baloo font-black text-base sm:text-lg text-emerald-900">
-                  Viết câu trả lời của em
-                </label>
-                <textarea
-                  id={`response-${currentQ.id}`}
-                  value={writtenResponse}
-                  onChange={(event) => setWrittenResponse(event.target.value)}
-                  disabled={isAnswerChecked}
-                  rows={4}
-                  placeholder="Em viết câu trả lời ở đây nhé..."
-                  className="mt-3 min-h-[112px] w-full resize-y rounded-2xl border-2 border-emerald-200 bg-white px-4 py-3 font-vietnam text-base sm:text-lg font-medium text-brand-dark outline-none transition-colors placeholder:text-slate-400 focus:border-emerald-500 disabled:cursor-not-allowed disabled:bg-slate-50"
-                />
-                <p className="mt-2 font-vietnam text-sm font-semibold text-emerald-800">
-                  Hoạt động nói hoặc viết được bé tự xác nhận sau khi hoàn thành.
-                </p>
+              <div className="mt-6 rounded-3xl bg-gradient-to-b from-amber-50/90 to-emerald-50/70 p-5 sm:p-7 border-2 border-emerald-300 shadow-sm space-y-4">
+                {/* Header: Instruction for speaking / practical activity */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-2.5">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-emerald-500 text-white font-baloo text-xl shadow-xs">
+                      {lesson.grade === 1 ? '🌟' : '🗣️'}
+                    </span>
+                    <div>
+                      <h3 className="font-baloo font-black text-base sm:text-lg text-emerald-950">
+                        {lesson.grade === 1 ? 'Nhiệm vụ thực hành của bé Lớp 1' : 'Hoạt động luyện nói & thực hành'}
+                      </h3>
+                      <p className="font-vietnam text-xs sm:text-sm font-semibold text-emerald-800">
+                        {lesson.grade === 1
+                          ? 'Bé hãy nhìn tranh hoặc sách, đọc to theo cô giáo hoặc tập viết vào vở nhé!'
+                          : 'Em hãy nói to thành tiếng hoặc thực hành theo yêu cầu của bài.'}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Button: Listen to Teacher sample audio */}
+                  <button
+                    type="button"
+                    onClick={() => soundManager.speakText(`${currentQ.questionText}. ${currentQ.hint || ''}`, 'vi-VN')}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-400 text-amber-950 hover:bg-amber-500 font-baloo font-black text-xs sm:text-sm shadow-xs transition-all hover:scale-102 cursor-pointer shrink-0"
+                  >
+                    <Volume2 size={18} />
+                    <span>Nghe cô đọc mẫu 🔊</span>
+                  </button>
+                </div>
+
+                {/* Big Interactive Tactile Button for Grade 1 & 2 (NO typing required!) */}
+                <div className="pt-2 flex flex-col items-center justify-center text-center">
+                  <button
+                    type="button"
+                    disabled={isAnswerChecked}
+                    onClick={() => {
+                      soundManager.playPop();
+                      setHasSelfConfirmed(true);
+                    }}
+                    className={`w-full max-w-md py-4 px-6 rounded-3xl font-baloo font-black text-base sm:text-lg transition-all duration-300 shadow-md cursor-pointer flex items-center justify-center gap-3 select-none ${
+                      hasSelfConfirmed
+                        ? 'bg-emerald-500 text-white border-b-4 border-emerald-700 scale-102'
+                        : 'bg-white hover:bg-amber-50 text-emerald-800 border-2 border-emerald-300 hover:border-emerald-500 hover:scale-102 active:scale-98'
+                    }`}
+                  >
+                    <span className="text-2xl">{hasSelfConfirmed ? '🎉' : '✨'}</span>
+                    <span>
+                      {hasSelfConfirmed
+                        ? '✅ Bé đã hoàn thành xuất sắc bài này!'
+                        : lesson.grade === 1
+                        ? '🗣️ Bé đã đọc to / tập viết xong rồi ạ! 🌟'
+                        : '🗣️ Em đã hoàn thành hoạt động này! 🌟'}
+                    </span>
+                  </button>
+
+                  <p className="mt-2.5 font-vietnam text-xs sm:text-sm text-slate-500 font-semibold">
+                    {hasSelfConfirmed
+                      ? 'Tuyệt vời! Hãy nhấn "Kiểm Tra Đáp Án" bên dưới để nhận ngôi sao may mắn nhé.'
+                      : 'Bé chỉ cần bấm vào nút trên sau khi đã đọc to hoặc thực hành xong.'}
+                  </p>
+                </div>
+
+                {/* Optional textarea for Grade 3-5 only */}
+                {lesson.grade >= 3 && (
+                  <div className="pt-3 border-t border-emerald-200/80">
+                    <label htmlFor={`response-${currentQ.id}`} className="block font-baloo font-bold text-xs sm:text-sm text-slate-600 mb-1.5">
+                      (Tùy chọn) Viết thêm câu trả lời của em nếu muốn:
+                    </label>
+                    <textarea
+                      id={`response-${currentQ.id}`}
+                      value={writtenResponse}
+                      onChange={(event) => setWrittenResponse(event.target.value)}
+                      disabled={isAnswerChecked}
+                      rows={2}
+                      placeholder="Em có thể ghi chú ngắn ở đây..."
+                      className="w-full resize-y rounded-2xl border border-emerald-200 bg-white px-3.5 py-2 font-vietnam text-sm text-brand-dark outline-none focus:border-emerald-500"
+                    />
+                  </div>
+                )}
               </div>
             )}
 
