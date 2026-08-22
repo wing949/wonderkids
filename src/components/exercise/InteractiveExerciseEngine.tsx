@@ -27,7 +27,6 @@ import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../..
 import { MathVisualIllustration } from './MathVisualIllustration';
 import { LessonThematicBadge } from './LessonThematicBadge';
 import { Grade1PhonicsGameZone } from './Grade1PhonicsGameZone';
-import { GRADE_1_PHONICS_GAMES } from '../../data/curriculum/vietnamese/grade1PhonicsGames';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -83,8 +82,14 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   onExit,
   onComplete,
 }) => {
-  // Determine if lesson starts with a Reading Passage or Phonics Games (Tiếng Việt 1 Tập 1)
-  const isGrade1Phonics = !!GRADE_1_PHONICS_GAMES[lesson.id] || (lesson.subject === 'vietnamese' && lesson.grade === 1 && (lesson.semester === 1 || !lesson.semester));
+  // Determine if lesson is Grade 1 Term 1 Phonics (Tiếng Việt 1 - TẬP 1 ONLY)
+  // Tiếng Việt 1 - TẬP 2 (Semester 2) is verbatim reading passages and MUST NOT show Phonics Mini-Games!
+  const isGrade1Phonics =
+    lesson.subject === 'vietnamese' &&
+    lesson.grade === 1 &&
+    lesson.semester !== 2 &&
+    !lesson.id.includes('-t2-') &&
+    (lesson.semester === 1 || lesson.id.includes('-t1-') || Number(lesson.id.match(/b(\d+)/)?.[1] || 0) <= 20);
   const hasReadingPassage = !!lesson.readingPassage;
   const vietnameseReadingPolicy = getVietnameseReadingPolicy(lesson);
   const canUseReadingPassage = vietnameseReadingPolicy !== 'source_only';

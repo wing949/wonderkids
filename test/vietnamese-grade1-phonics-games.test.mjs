@@ -87,9 +87,16 @@ describe('Tiếng Việt 1 Tập 1 - Phonics Mini-Game Verification Test', () =>
 
     // 5. Kiểm tra getPhonicsGameForLesson fallback theo tiêu đề
     const getPhonicsGameForLesson = phonicsData.getPhonicsGameForLesson;
-    const dynamicGame = getPhonicsGameForLesson({ id: 'custom-lesson-id', title: 'Bài 13: U u - Ư ư' });
+    const dynamicGame = getPhonicsGameForLesson({ id: 'custom-lesson-id', title: 'Bài 13: U u - Ư ư', semester: 1 });
     assert.ok(dynamicGame);
     assert.deepEqual(dynamicGame.targetLetters, ['u', 'ư']);
     assert.ok(dynamicGame.stages[0].instruction.includes('u'));
+
+    // 6. Kiểm tra Tiếng Việt 1 - TẬP 2 (Semester 2) KHÔNG BAO GIỜ bị kích hoạt Mini Game của Tập 1
+    const t2_b1 = getPhonicsGameForLesson({ id: 'tv-g1-b21', title: 'Bài 1: Tôi là học sinh lớp 1', semester: 2 });
+    assert.equal(t2_b1, null, 'Grade 1 Semester 2 must return null for phonics games');
+
+    const t2_b2 = getPhonicsGameForLesson({ id: 'tv-g1-t2-b2', title: 'Bài 2: Đôi tai xấu xí', semester: 2 });
+    assert.equal(t2_b2, null, 'Grade 1 Semester 2 must return null for phonics games');
   });
 });

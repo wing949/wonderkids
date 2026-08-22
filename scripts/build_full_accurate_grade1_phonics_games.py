@@ -234,10 +234,10 @@ for num, title_raw, page, letters, word_hints, seq in GRADE_1_T1_LESSONS:
   }},"""
     lines.append(block)
     
-    # If main_key is different from alt_key, also add alt_key mapping for backward compat
-    if main_key != alt_key:
-        lines.append(f"""  '{alt_key}': {{
-    lessonId: '{alt_key}',
+    # Only map tv-g1-t1-b{num} as alias if num <= 20
+    if num <= 20 and main_key != f"tv-g1-t1-b{num}":
+        lines.append(f"""  'tv-g1-t1-b{num}': {{
+    lessonId: 'tv-g1-t1-b{num}',
     lessonTitle: '{title}',
     targetLetters: {letters},
     stages: [
@@ -248,31 +248,39 @@ for num, title_raw, page, letters, word_hints, seq in GRADE_1_T1_LESSONS:
 lines.append("};\n")
 
 # Add helper function getPhonicsGameForLesson
-lines.append("""
+lines.append(r"""
 /**
- * Helper thông minh tìm kiếm hoặc sinh cấu hình Mini Game chuẩn xác 100% theo tiêu đề bài học.
- * Đảm bảo mọi bài học Tiếng Việt 1 (kể cả tra theo ID hay theo tiêu đề SGK) đều nhận đúng chữ cái!
+ * Helper thông minh tìm kiếm hoặc sinh cấu hình Mini Game chuẩn xác 100% cho Tiếng Việt 1 - TẬP 1.
+ * TUYỆT ĐỐI KHÔNG ÁP DỤNG cho Tiếng Việt 1 - TẬP 2 (vì Tập 2 là các bài đọc nguyên văn SGK).
  */
-export function getPhonicsGameForLesson(lesson: { id: string; title: string; order?: number }): LessonPhonicsGameConfig {
-  // 1. Tra cứu trực tiếp theo lesson.id
+export function getPhonicsGameForLesson(lesson: { id: string; title: string; semester?: number; order?: number }): LessonPhonicsGameConfig | null {
+  // Nếu là Tập 2 (Học kì 2) -> Trả về null để hiển thị bài đọc nguyên văn SGK chuẩn
+  if (lesson.semester === 2 || lesson.id.includes('-t2-')) {
+    return null;
+  }
+
+  // Tra cứu theo key chính xác trong Tập 1
   if (GRADE_1_PHONICS_GAMES[lesson.id]) {
     return GRADE_1_PHONICS_GAMES[lesson.id];
   }
 
-  // 2. Tra cứu theo số bài b{N} trong lesson.id
+  // Tra cứu theo số bài b{N} trong lesson.id (chỉ khi là Tập 1)
   const matchB = lesson.id.match(/b(\d+)/);
   if (matchB) {
     const num = parseInt(matchB[1], 10);
-    const key1 = `tv-g1-b${num}`;
-    const key2 = `tv-g1-t1-b${num}`;
-    if (GRADE_1_PHONICS_GAMES[key1]) return GRADE_1_PHONICS_GAMES[key1];
-    if (GRADE_1_PHONICS_GAMES[key2]) return GRADE_1_PHONICS_GAMES[key2];
+    if (lesson.id.includes('-t1-')) {
+      const key = `tv-g1-t1-b${num}`;
+      if (GRADE_1_PHONICS_GAMES[key]) return GRADE_1_PHONICS_GAMES[key];
+    } else if (num <= 20) {
+      const key = `tv-g1-b${num}`;
+      if (GRADE_1_PHONICS_GAMES[key]) return GRADE_1_PHONICS_GAMES[key];
+    }
   }
 
-  // 3. Fallback thông minh: Tự động trích xuất âm/chữ từ tiêu đề bài học (ví dụ: "Bài 13: U u - Ư ư")
+  // Fallback thông minh chỉ khi là bài học âm chữ thuộc Tập 1
   const titleParts = lesson.title.split(':');
   const letterStr = titleParts.length > 1 ? titleParts[1].trim() : lesson.title;
-  const rawLetters = letterStr.split(/[-–,]/).map((s) => s.trim().split(' ')[0]).filter(Boolean);
+  const rawLetters = letterStr.split(/[-–,]/).map((s) => s.trim().split(' ')[0].toLowerCase()).filter(Boolean);
   const targetLetters = rawLetters.length > 0 ? rawLetters : ['a'];
   const pLetter = targetLetters[0];
   const sLetter = targetLetters[1] || pLetter.toUpperCase();

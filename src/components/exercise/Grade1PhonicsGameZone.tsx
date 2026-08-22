@@ -10,7 +10,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { LessonNode } from '../../types';
-import { LessonPhonicsGameConfig, PhonicsGameStage, getPhonicsGameForLesson } from '../../data/curriculum/vietnamese/grade1PhonicsGames';
+import { PhonicsGameStage, getPhonicsGameForLesson } from '../../data/curriculum/vietnamese/grade1PhonicsGames';
 import { LetterPickGame } from './phonicsGames/LetterPickGame';
 import { BubblePopGame } from './phonicsGames/BubblePopGame';
 import { LetterAssembleGame } from './phonicsGames/LetterAssembleGame';
@@ -28,15 +28,19 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
   lesson,
   onFinishGames,
 }) => {
-  const gameConfig: LessonPhonicsGameConfig = getPhonicsGameForLesson(lesson);
-  const stages: PhonicsGameStage[] = gameConfig.stages;
+  const gameConfig = getPhonicsGameForLesson(lesson);
+  const stages: PhonicsGameStage[] = gameConfig?.stages || [];
 
   const [currentStageIdx, setCurrentStageIdx] = useState(0);
   const [isHintActive, setIsHintActive] = useState(false);
   const [starsCollected, setStarsCollected] = useState(0);
   const [isAllCompleted, setIsAllCompleted] = useState(false);
 
-  const currentStage = stages[currentStageIdx];
+  const currentStage = stages[currentStageIdx] || stages[0];
+
+  if (!gameConfig || stages.length === 0) {
+    return null;
+  }
 
   // Speech helper for instruction using natural Vietnamese TTS
   const speakInstruction = (text: string) => {
