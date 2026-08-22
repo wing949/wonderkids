@@ -99,7 +99,7 @@ try {
         missing.push(`${asset.lessonId}:${kind}`);
       }
     }
-    if (assetHashes.primary && assetHashes.primary === assetHashes.fallback) {
+    if (asset.fallbackPath && asset.fallbackPath !== asset.primaryPath && assetHashes.primary && assetHashes.primary === assetHashes.fallback) {
       identicalPrimaryAndFallback.push(asset.lessonId);
     }
   }
