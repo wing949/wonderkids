@@ -96,7 +96,7 @@ const GRADE_2_T1: CatalogRow[] = [
 ];
 
 const GRADE_2_T2: CatalogRow[] = [
-  ['Chuyện bốn mùa', 9], ['Mùa nước nổi', 12], ['Hoa mi hót', 16], ['Tết đến rồi', 19], ['Giọt nước và biển lớn', 23], ['Mùa vàng', 26],
+  ['Chuyện bốn mùa', 9], ['Mùa nước nổi', 12], ['Họa mi hót', 16], ['Tết đến rồi', 19], ['Giọt nước và biển lớn', 23], ['Mùa vàng', 26],
   ['Hạt thóc', 31], ['Luỹ tre', 34], ['Vè chim', 39], ['Khủng long', 42], ['Sự tích cây thì là', 46], ['Bờ tre đón khách', 49],
   ['Tiếng chổi tre', 54], ['Cỏ non cười rồi', 57], ['Những con sao biển', 61], ['Tạm biệt cánh cam', 64], ['Những cách chào độc đáo', 77], ['Thư viện biết đi', 80],
   ['Cảm ơn anh hà mã', 84], ['Từ chú bồ câu đến in-tơ-nét', 87], ['Mai An Tiêm', 92], ['Thư gửi bố ngoài đảo', 95], ['Bóp nát quả cam', 100], ['Chiếc rễ đa tròn', 104],
@@ -113,14 +113,14 @@ const GRADE_3_T1: CatalogRow[] = [
 
 const GRADE_3_T2: CatalogRow[] = [
   ['Bầu trời', 8], ['Mưa', 11], ['Cóc kiện Trời', 15], ['Những cái tên đáng yêu', 19], ['Ngày hội rừng xanh', 23], ['Cây gạo', 27],
-  ['Một trời xanh của tôi', 32], ['Bầy voi rừng Trường Sơn', 35], ['Lời kêu gọi toàn dân tập thể dục', 40], ['Quả hồng của thỏ con', 44], ['Chuyện bên cửa sổ', 48], ['Tay trái và tay phải', 51],
+  ['Mặt trời xanh của tôi', 32], ['Bầy voi rừng Trường Sơn', 35], ['Lời kêu gọi toàn dân tập thể dục', 40], ['Quả hồng của thỏ con', 44], ['Chuyện bên cửa sổ', 48], ['Tay trái và tay phải', 51],
   ['Mèo đi câu cá', 55], ['Học nghề', 58], ['Ngày như thế nào là đẹp?', 62], ['A lô, tớ đây', 66], ['Đất nước là gì?', 80], ['Núi quê tôi', 83],
   ['Sông Hương', 87], ['Tiếng nước mình', 91], ['Nhà rông', 95], ['Sự tích ông Đùng, bà Đùng', 98], ['Hai Bà Trưng', 102], ['Cùng Bác qua suối', 106],
   ['Ngọn lửa Ô-lim-pích', 111], ['Rô-bốt ở quanh ta', 114], ['Thư của ông Trái Đất gửi các bạn nhỏ', 118], ['Những điều nhỏ tớ làm cho Trái Đất', 122], ['Bác sĩ Y-éc-xanh', 126], ['Một mái nhà chung', 130],
 ];
 
 const GRADE_4_T1: CatalogRow[] = [
-  ['Điều kì diệu', 8], ['Thi nhạc', 12], ['Anh em sinh đôi', 16], ['Công chúa và người dẫn chuyện', 20], ['Thần lằn xanh và tắc kè', 23], ['Nghệ sĩ trống', 26],
+  ['Điều kì diệu', 8], ['Thi nhạc', 12], ['Anh em sinh đôi', 16], ['Công chúa và người dẫn chuyện', 20], ['Thằn lằn xanh và tắc kè', 23], ['Nghệ sĩ trống', 26],
   ['Những bức chân dung', 30], ['Đò ngang', 34], ['Bầu trời trong quả trứng', 39], ['Tiếng nói của cỏ cây', 44], ['Tập làm văn', 48], ['Nhà phát minh 6 tuổi', 51],
   ['Con vẹt xanh', 55], ['Chân trời cuối phố', 59], ['Gặt chữ trên non', 63], ['Trước ngày xa quê', 66], ['Vẽ màu', 77], ['Đồng cỏ nở hoa', 81],
   ['Thanh âm của núi', 85], ['Bầu trời mùa thu', 89], ['Làm thỏ con bằng giấy', 93], ['Bức tường có nhiều phép lạ', 97], ['Bét-tô-ven và bản xô-nát Ánh trăng', 101], ['Người tìm đường lên các vì sao', 105],
@@ -137,7 +137,7 @@ const GRADE_4_T2: CatalogRow[] = [
 
 const GRADE_5_T1: CatalogRow[] = [
   ['Thanh âm của gió', 8], ['Cánh đồng hoa', 13], ['Tuổi Ngựa', 18], ['Bến sông tuổi thơ', 23], ['Tiếng hạt nảy mầm', 28], ['Ngôi sao sân cỏ', 31],
-  ['Bộ sưu tập độc đáo', 36], ['Hành tinh kì lạ', 41], ['Trước cổng trời', 46], ['Kì diệu rừng xanh', 51], ['Hang Sơn Đoòng - những điều kì thú', 56], ['Những hòn đảo trên vịnh Hạ Long', 60],
+  ['Bộ sưu tập độc đáo', 36], ['Hành tinh kì lạ', 41], ['Trước cổng trời', 46], ['Kì diệu rừng xanh', 51], ['Hang Sơn Đoòng – những điều kì thú', 56], ['Những hòn đảo trên vịnh Hạ Long', 60],
   ['Mầm non', 64], ['Những ngọn núi nóng rẫy', 68], ['Bài ca về mặt trời', 72], ['Xin chào, Xa-ha-ra', 76], ['Thư gửi các học sinh', 89], ['Tấm gương tự học', 94],
   ['Trải nghiệm để sáng tạo', 98], ['Khổ luyện thành tài', 102], ['Thế giới trong trang sách', 105], ['Từ những câu chuyện ấu thơ', 110], ['Giới thiệu sách Dế Mèn phiêu lưu kí', 114], ['Tinh thần học tập của nhà Phi-lít', 117],
   ['Tiếng đàn ba-la-lai-ca trên sông Đà', 122], ['Trí tưởng tượng phong phú', 127], ['Tranh làng Hồ', 132], ['Tập hát quan họ', 136], ['Phim hoạt hình Chú ốc sên bay', 140], ['Nghệ thuật múa ba lê', 145], ['Một ngôi chùa độc đáo', 149], ['Sự tích chú Tễu', 153],
@@ -146,7 +146,7 @@ const GRADE_5_T1: CatalogRow[] = [
 const GRADE_5_T2: CatalogRow[] = [
   ['Tiếng hát của người đá', 8], ['Khúc hát ru những em bé lớn trên lưng mẹ', 13], ['Hạt gạo làng ta', 17], ['Hộp quà màu thiên thanh', 22], ['Giỏ hoa tháng Năm', 26], ['Thư của bố', 30],
   ['Đoàn thuyền đánh cá', 34], ['Khu rừng của Mát', 38], ['Hội thổi cơm thi ở Đồng Vân', 43], ['Những búp chè trên cây cổ thụ', 48], ['Hương cốm mùa thu', 53], ['Vũ điệu trên nền thổ cẩm', 57],
-  ['Đàn trưng - tiếng ca đại ngàn', 61], ['Đường quê Đồng Tháp Mười', 66], ['Xuồng ba lá quê tôi', 70], ['Về thăm Đất Mũi', 73], ['Nghìn năm văn hiến', 88], ['Người thầy của muôn đời', 93],
+  ['Đàn t’rưng – tiếng ca đại ngàn', 61], ['Đường quê Đồng Tháp Mười', 66], ['Xuồng ba lá quê tôi', 70], ['Về thăm Đất Mũi', 73], ['Nghìn năm văn hiến', 88], ['Người thầy của muôn đời', 93],
   ['Danh y Tuệ Tĩnh', 97], ['Cụ Đồ Chiểu', 101], ['Anh hùng Lao động Trần Đại Nghĩa', 106], ['Bộ đội về làng', 109], ['Về ngôi nhà đang xây', 113], ['Việt Nam quê hương ta', 117],
   ['Bài ca trái đất', 122], ['Những con hạc giấy', 126], ['Một người hùng thầm lặng', 130], ['Giờ Trái Đất', 135], ['Điện thoại di động', 140], ['Thành phố thông minh Mát-xđa', 144],
 ];

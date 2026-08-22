@@ -1476,10 +1476,10 @@ const VERIFIED_SGK_ACTIVITIES: Record<string, Question[]> = {
     openQuestion("tv-g3-b20", 27, "Vận dụng", "Kể lại hoặc chia sẻ với người thân về bài học “Cây gạo”.", "Chia sẻ với người thân bằng lời của em."),
   ],
   'tv-g3-b21': [
-    openQuestion("tv-g3-b21", 32, "Đọc hiểu • 1", "Nêu nội dung và ý nghĩa chính của bài đọc “Một trời xanh của tôi”.", "Đọc kĩ bài và chia sẻ nội dung bài “Một trời xanh của tôi”."),
-    openQuestion("tv-g3-b21", 32, "Đọc hiểu • 2", "Tìm chi tiết hoặc câu văn (câu thơ) em yêu thích nhất trong bài “Một trời xanh của tôi”.", "Ghi lại chi tiết hoặc hình ảnh ấn tượng."),
-    openQuestion("tv-g3-b21", 32, "Luyện tập • 1", "Tìm các từ ngữ chỉ sự vật, hoạt động hoặc đặc điểm nổi bật trong bài “Một trời xanh của tôi”.", "Ghi lại các từ ngữ hay."),
-    openQuestion("tv-g3-b21", 32, "Vận dụng", "Kể lại hoặc chia sẻ với người thân về bài học “Một trời xanh của tôi”.", "Chia sẻ với người thân bằng lời của em."),
+    openQuestion("tv-g3-b21", 32, "Đọc hiểu • 1", "Nêu nội dung và ý nghĩa chính của bài đọc “Mặt trời xanh của tôi”.", "Đọc kĩ bài và chia sẻ nội dung bài “Mặt trời xanh của tôi”."),
+    openQuestion("tv-g3-b21", 32, "Đọc hiểu • 2", "Tìm chi tiết hoặc câu văn (câu thơ) em yêu thích nhất trong bài “Mặt trời xanh của tôi”.", "Ghi lại chi tiết hoặc hình ảnh ấn tượng."),
+    openQuestion("tv-g3-b21", 32, "Luyện tập • 1", "Tìm các từ ngữ chỉ sự vật, hoạt động hoặc đặc điểm nổi bật trong bài “Mặt trời xanh của tôi”.", "Ghi lại các từ ngữ hay."),
+    openQuestion("tv-g3-b21", 32, "Vận dụng", "Kể lại hoặc chia sẻ với người thân về bài học “Mặt trời xanh của tôi”.", "Chia sẻ với người thân bằng lời của em."),
   ],
   'tv-g3-b22': [
     openQuestion("tv-g3-b22", 35, "Đọc hiểu • 1", "Nêu nội dung và ý nghĩa chính của bài đọc “Bầy voi rừng Trường Sơn”.", "Đọc kĩ bài và chia sẻ nội dung bài “Bầy voi rừng Trường Sơn”."),

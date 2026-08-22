@@ -1,0 +1,2430 @@
+{
+  "generatedAt": "2026-08-22T15:00:00+07:00",
+  "baseUrl": "http://127.0.0.1:3000",
+  "scope": "293 bài, loại trừ 83 bài Tiếng Việt 1 tập 1",
+  "checks": [
+    "title-visible",
+    "every-passage-paragraph-visible",
+    "no-placeholder",
+    "no-junk-markers",
+    "source-image-present",
+    "no-console-errors"
+  ],
+  "totals": {
+    "total": 293,
+    "pass": 293,
+    "fail": 0,
+    "consoleErrors": 0
+  },
+  "byBook": {
+    "tv-g1-t2": {
+      "total": 45,
+      "pass": 45,
+      "fail": 0,
+      "minDomLength": 687,
+      "maxDomLength": 1117
+    },
+    "tv-g2-t1": {
+      "total": 32,
+      "pass": 32,
+      "fail": 0,
+      "minDomLength": 688,
+      "maxDomLength": 1574
+    },
+    "tv-g2-t2": {
+      "total": 30,
+      "pass": 30,
+      "fail": 0,
+      "minDomLength": 800,
+      "maxDomLength": 1435
+    },
+    "tv-g3-t1": {
+      "total": 32,
+      "pass": 32,
+      "fail": 0,
+      "minDomLength": 834,
+      "maxDomLength": 1655
+    },
+    "tv-g3-t2": {
+      "total": 30,
+      "pass": 30,
+      "fail": 0,
+      "minDomLength": 663,
+      "maxDomLength": 1851
+    },
+    "tv-g4-t1": {
+      "total": 32,
+      "pass": 32,
+      "fail": 0,
+      "minDomLength": 924,
+      "maxDomLength": 2116
+    },
+    "tv-g4-t2": {
+      "total": 30,
+      "pass": 30,
+      "fail": 0,
+      "minDomLength": 920,
+      "maxDomLength": 2140
+    },
+    "tv-g5-t1": {
+      "total": 32,
+      "pass": 32,
+      "fail": 0,
+      "minDomLength": 1029,
+      "maxDomLength": 2251
+    },
+    "tv-g5-t2": {
+      "total": 30,
+      "pass": 30,
+      "fail": 0,
+      "minDomLength": 986,
+      "maxDomLength": 2199
+    }
+  },
+  "rows": [
+    {
+      "lessonId": "tv-g1-b21",
+      "bookId": "tv-g1-t2",
+      "title": "Tôi là học sinh lớp 1",
+      "pass": true,
+      "reasons": [],
+      "domLength": 831
+    },
+    {
+      "lessonId": "tv-g1-b22",
+      "bookId": "tv-g1-t2",
+      "title": "Đôi tai xấu xí",
+      "pass": true,
+      "reasons": [],
+      "domLength": 910
+    },
+    {
+      "lessonId": "tv-g1-b23",
+      "bookId": "tv-g1-t2",
+      "title": "Bạn của gió",
+      "pass": true,
+      "reasons": [],
+      "domLength": 762
+    },
+    {
+      "lessonId": "tv-g1-b24",
+      "bookId": "tv-g1-t2",
+      "title": "Giải thưởng tình bạn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 880
+    },
+    {
+      "lessonId": "tv-g1-b25",
+      "bookId": "tv-g1-t2",
+      "title": "Sinh nhật của voi con",
+      "pass": true,
+      "reasons": [],
+      "domLength": 913
+    },
+    {
+      "lessonId": "tv-g1-b26",
+      "bookId": "tv-g1-t2",
+      "title": "Nụ hôn trên bàn tay",
+      "pass": true,
+      "reasons": [],
+      "domLength": 956
+    },
+    {
+      "lessonId": "tv-g1-b27",
+      "bookId": "tv-g1-t2",
+      "title": "Làm anh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 777
+    },
+    {
+      "lessonId": "tv-g1-b28",
+      "bookId": "tv-g1-t2",
+      "title": "Cả nhà đi chơi núi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 925
+    },
+    {
+      "lessonId": "tv-g1-b29",
+      "bookId": "tv-g1-t2",
+      "title": "Quạt cho bà ngủ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 804
+    },
+    {
+      "lessonId": "tv-g1-b30",
+      "bookId": "tv-g1-t2",
+      "title": "Bữa cơm gia đình",
+      "pass": true,
+      "reasons": [],
+      "domLength": 933
+    },
+    {
+      "lessonId": "tv-g1-t2-b11",
+      "bookId": "tv-g1-t2",
+      "title": "Ngôi nhà",
+      "pass": true,
+      "reasons": [],
+      "domLength": 687
+    },
+    {
+      "lessonId": "tv-g1-t2-b12",
+      "bookId": "tv-g1-t2",
+      "title": "Tôi đi học",
+      "pass": true,
+      "reasons": [],
+      "domLength": 962
+    },
+    {
+      "lessonId": "tv-g1-t2-b13",
+      "bookId": "tv-g1-t2",
+      "title": "Đi học",
+      "pass": true,
+      "reasons": [],
+      "domLength": 754
+    },
+    {
+      "lessonId": "tv-g1-t2-b14",
+      "bookId": "tv-g1-t2",
+      "title": "Hoa yêu thương",
+      "pass": true,
+      "reasons": [],
+      "domLength": 989
+    },
+    {
+      "lessonId": "tv-g1-t2-b15",
+      "bookId": "tv-g1-t2",
+      "title": "Cây bàng và lớp học",
+      "pass": true,
+      "reasons": [],
+      "domLength": 795
+    },
+    {
+      "lessonId": "tv-g1-t2-b16",
+      "bookId": "tv-g1-t2",
+      "title": "Bác trống trường",
+      "pass": true,
+      "reasons": [],
+      "domLength": 995
+    },
+    {
+      "lessonId": "tv-g1-t2-b17",
+      "bookId": "tv-g1-t2",
+      "title": "Giờ ra chơi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 853
+    },
+    {
+      "lessonId": "tv-g1-t2-b18",
+      "bookId": "tv-g1-t2",
+      "title": "Rửa tay trước khi ăn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 833
+    },
+    {
+      "lessonId": "tv-g1-t2-b19",
+      "bookId": "tv-g1-t2",
+      "title": "Lời chào đi trước",
+      "pass": true,
+      "reasons": [],
+      "domLength": 780
+    },
+    {
+      "lessonId": "tv-g1-t2-b20",
+      "bookId": "tv-g1-t2",
+      "title": "Khi mẹ vắng nhà",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1041
+    },
+    {
+      "lessonId": "tv-g1-t2-b21",
+      "bookId": "tv-g1-t2",
+      "title": "Nếu không may bị lạc",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1099
+    },
+    {
+      "lessonId": "tv-g1-t2-b22",
+      "bookId": "tv-g1-t2",
+      "title": "Đèn giao thông",
+      "pass": true,
+      "reasons": [],
+      "domLength": 993
+    },
+    {
+      "lessonId": "tv-g1-t2-b23",
+      "bookId": "tv-g1-t2",
+      "title": "Kiến và chim bồ câu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1038
+    },
+    {
+      "lessonId": "tv-g1-t2-b24",
+      "bookId": "tv-g1-t2",
+      "title": "Câu chuyện của rễ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 798
+    },
+    {
+      "lessonId": "tv-g1-t2-b25",
+      "bookId": "tv-g1-t2",
+      "title": "Câu hỏi của sói",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1085
+    },
+    {
+      "lessonId": "tv-g1-t2-b26",
+      "bookId": "tv-g1-t2",
+      "title": "Chú bé chăn cừu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1053
+    },
+    {
+      "lessonId": "tv-g1-t2-b27",
+      "bookId": "tv-g1-t2",
+      "title": "Tiếng vọng của núi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1117
+    },
+    {
+      "lessonId": "tv-g1-t2-b28",
+      "bookId": "tv-g1-t2",
+      "title": "Loài chim của biển cả",
+      "pass": true,
+      "reasons": [],
+      "domLength": 948
+    },
+    {
+      "lessonId": "tv-g1-t2-b29",
+      "bookId": "tv-g1-t2",
+      "title": "Bảy sắc cầu vồng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 785
+    },
+    {
+      "lessonId": "tv-g1-t2-b30",
+      "bookId": "tv-g1-t2",
+      "title": "Chúa tể rừng xanh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 910
+    },
+    {
+      "lessonId": "tv-g1-t2-b31",
+      "bookId": "tv-g1-t2",
+      "title": "Cuộc thi tài năng rừng xanh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1020
+    },
+    {
+      "lessonId": "tv-g1-t2-b32",
+      "bookId": "tv-g1-t2",
+      "title": "Cây liễu dẻo dai",
+      "pass": true,
+      "reasons": [],
+      "domLength": 971
+    },
+    {
+      "lessonId": "tv-g1-t2-b33",
+      "bookId": "tv-g1-t2",
+      "title": "Tia nắng đi đâu?",
+      "pass": true,
+      "reasons": [],
+      "domLength": 807
+    },
+    {
+      "lessonId": "tv-g1-t2-b34",
+      "bookId": "tv-g1-t2",
+      "title": "Trong giấc mơ buổi sáng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 911
+    },
+    {
+      "lessonId": "tv-g1-t2-b35",
+      "bookId": "tv-g1-t2",
+      "title": "Ngày mới bắt đầu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 887
+    },
+    {
+      "lessonId": "tv-g1-t2-b36",
+      "bookId": "tv-g1-t2",
+      "title": "Hỏi mẹ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 709
+    },
+    {
+      "lessonId": "tv-g1-t2-b37",
+      "bookId": "tv-g1-t2",
+      "title": "Những cánh cò",
+      "pass": true,
+      "reasons": [],
+      "domLength": 964
+    },
+    {
+      "lessonId": "tv-g1-t2-b38",
+      "bookId": "tv-g1-t2",
+      "title": "Buổi trưa hè",
+      "pass": true,
+      "reasons": [],
+      "domLength": 770
+    },
+    {
+      "lessonId": "tv-g1-t2-b39",
+      "bookId": "tv-g1-t2",
+      "title": "Hoa phượng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 758
+    },
+    {
+      "lessonId": "tv-g1-t2-b40",
+      "bookId": "tv-g1-t2",
+      "title": "Cậu bé thông minh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1078
+    },
+    {
+      "lessonId": "tv-g1-t2-b41",
+      "bookId": "tv-g1-t2",
+      "title": "Lính cứu hoả",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1007
+    },
+    {
+      "lessonId": "tv-g1-t2-b42",
+      "bookId": "tv-g1-t2",
+      "title": "Lớn lên bạn làm gì?",
+      "pass": true,
+      "reasons": [],
+      "domLength": 839
+    },
+    {
+      "lessonId": "tv-g1-t2-b43",
+      "bookId": "tv-g1-t2",
+      "title": "Ruộng bậc thang ở Sa Pa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 957
+    },
+    {
+      "lessonId": "tv-g1-t2-b44",
+      "bookId": "tv-g1-t2",
+      "title": "Nhớ ơn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 715
+    },
+    {
+      "lessonId": "tv-g1-t2-b45",
+      "bookId": "tv-g1-t2",
+      "title": "Du lịch biển Việt Nam",
+      "pass": true,
+      "reasons": [],
+      "domLength": 999
+    },
+    {
+      "lessonId": "tv-g2-b1",
+      "bookId": "tv-g2-t1",
+      "title": "Tôi là học sinh lớp 2",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1231
+    },
+    {
+      "lessonId": "tv-g2-b2",
+      "bookId": "tv-g2-t1",
+      "title": "Ngày hôm qua đâu rồi?",
+      "pass": true,
+      "reasons": [],
+      "domLength": 993
+    },
+    {
+      "lessonId": "tv-g2-b3",
+      "bookId": "tv-g2-t1",
+      "title": "Niềm vui của Bi và Bống",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1195
+    },
+    {
+      "lessonId": "tv-g2-b4",
+      "bookId": "tv-g2-t1",
+      "title": "Làm việc thật là vui",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1218
+    },
+    {
+      "lessonId": "tv-g2-b5",
+      "bookId": "tv-g2-t1",
+      "title": "Em có xinh không?",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1332
+    },
+    {
+      "lessonId": "tv-g2-b6",
+      "bookId": "tv-g2-t1",
+      "title": "Một giờ học",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1574
+    },
+    {
+      "lessonId": "tv-g2-b7",
+      "bookId": "tv-g2-t1",
+      "title": "Cây xấu hổ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1278
+    },
+    {
+      "lessonId": "tv-g2-b8",
+      "bookId": "tv-g2-t1",
+      "title": "Cầu thủ dự bị",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1339
+    },
+    {
+      "lessonId": "tv-g2-b9",
+      "bookId": "tv-g2-t1",
+      "title": "Cô giáo lớp em",
+      "pass": true,
+      "reasons": [],
+      "domLength": 771
+    },
+    {
+      "lessonId": "tv-g2-b10",
+      "bookId": "tv-g2-t1",
+      "title": "Thời khoá biểu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 688
+    },
+    {
+      "lessonId": "tv-g2-b11",
+      "bookId": "tv-g2-t1",
+      "title": "Cái trống trường em",
+      "pass": true,
+      "reasons": [],
+      "domLength": 811
+    },
+    {
+      "lessonId": "tv-g2-b12",
+      "bookId": "tv-g2-t1",
+      "title": "Danh sách học sinh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 816
+    },
+    {
+      "lessonId": "tv-g2-b13",
+      "bookId": "tv-g2-t1",
+      "title": "Yêu lắm trường ơi!",
+      "pass": true,
+      "reasons": [],
+      "domLength": 884
+    },
+    {
+      "lessonId": "tv-g2-b14",
+      "bookId": "tv-g2-t1",
+      "title": "Em học vẽ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 857
+    },
+    {
+      "lessonId": "tv-g2-b15",
+      "bookId": "tv-g2-t1",
+      "title": "Cuốn sách của em",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1129
+    },
+    {
+      "lessonId": "tv-g2-b16",
+      "bookId": "tv-g2-t1",
+      "title": "Khi trang sách mở ra",
+      "pass": true,
+      "reasons": [],
+      "domLength": 933
+    },
+    {
+      "lessonId": "tv-g2-b17",
+      "bookId": "tv-g2-t1",
+      "title": "Gọi bạn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 789
+    },
+    {
+      "lessonId": "tv-g2-b18",
+      "bookId": "tv-g2-t1",
+      "title": "Tớ nhớ cậu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1390
+    },
+    {
+      "lessonId": "tv-g2-t1-b19",
+      "bookId": "tv-g2-t1",
+      "title": "Chữ A và những người bạn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1304
+    },
+    {
+      "lessonId": "tv-g2-t1-b20",
+      "bookId": "tv-g2-t1",
+      "title": "Nhím nâu kết bạn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1395
+    },
+    {
+      "lessonId": "tv-g2-t1-b21",
+      "bookId": "tv-g2-t1",
+      "title": "Thả diều",
+      "pass": true,
+      "reasons": [],
+      "domLength": 863
+    },
+    {
+      "lessonId": "tv-g2-t1-b22",
+      "bookId": "tv-g2-t1",
+      "title": "Tớ là lê-gô",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1149
+    },
+    {
+      "lessonId": "tv-g2-t1-b23",
+      "bookId": "tv-g2-t1",
+      "title": "Rồng rắn lên mây",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1161
+    },
+    {
+      "lessonId": "tv-g2-t1-b24",
+      "bookId": "tv-g2-t1",
+      "title": "Nặn đồ chơi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 857
+    },
+    {
+      "lessonId": "tv-g2-t1-b25",
+      "bookId": "tv-g2-t1",
+      "title": "Sự tích hoa tỉ muội",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1349
+    },
+    {
+      "lessonId": "tv-g2-t1-b26",
+      "bookId": "tv-g2-t1",
+      "title": "Em mang về yêu thương",
+      "pass": true,
+      "reasons": [],
+      "domLength": 922
+    },
+    {
+      "lessonId": "tv-g2-t1-b27",
+      "bookId": "tv-g2-t1",
+      "title": "Mẹ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 764
+    },
+    {
+      "lessonId": "tv-g2-t1-b28",
+      "bookId": "tv-g2-t1",
+      "title": "Trò chơi của bố",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1284
+    },
+    {
+      "lessonId": "tv-g2-t1-b29",
+      "bookId": "tv-g2-t1",
+      "title": "Cánh cửa nhớ bà",
+      "pass": true,
+      "reasons": [],
+      "domLength": 778
+    },
+    {
+      "lessonId": "tv-g2-t1-b30",
+      "bookId": "tv-g2-t1",
+      "title": "Thương ông",
+      "pass": true,
+      "reasons": [],
+      "domLength": 853
+    },
+    {
+      "lessonId": "tv-g2-t1-b31",
+      "bookId": "tv-g2-t1",
+      "title": "Ánh sáng của yêu thương",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1383
+    },
+    {
+      "lessonId": "tv-g2-t1-b32",
+      "bookId": "tv-g2-t1",
+      "title": "Chơi chong chóng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1318
+    },
+    {
+      "lessonId": "tv-g2-b19",
+      "bookId": "tv-g2-t2",
+      "title": "Chuyện bốn mùa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1385
+    },
+    {
+      "lessonId": "tv-g2-b20",
+      "bookId": "tv-g2-t2",
+      "title": "Mùa nước nổi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1257
+    },
+    {
+      "lessonId": "tv-g2-b21",
+      "bookId": "tv-g2-t2",
+      "title": "Họa mi hót",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1208
+    },
+    {
+      "lessonId": "tv-g2-b22",
+      "bookId": "tv-g2-t2",
+      "title": "Tết đến rồi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1128
+    },
+    {
+      "lessonId": "tv-g2-b23",
+      "bookId": "tv-g2-t2",
+      "title": "Giọt nước và biển lớn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 800
+    },
+    {
+      "lessonId": "tv-g2-b24",
+      "bookId": "tv-g2-t2",
+      "title": "Mùa vàng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1338
+    },
+    {
+      "lessonId": "tv-g2-b25",
+      "bookId": "tv-g2-t2",
+      "title": "Hạt thóc",
+      "pass": true,
+      "reasons": [],
+      "domLength": 847
+    },
+    {
+      "lessonId": "tv-g2-b26",
+      "bookId": "tv-g2-t2",
+      "title": "Luỹ tre",
+      "pass": true,
+      "reasons": [],
+      "domLength": 856
+    },
+    {
+      "lessonId": "tv-g2-b27",
+      "bookId": "tv-g2-t2",
+      "title": "Vè chim",
+      "pass": true,
+      "reasons": [],
+      "domLength": 812
+    },
+    {
+      "lessonId": "tv-g2-b28",
+      "bookId": "tv-g2-t2",
+      "title": "Khủng long",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1160
+    },
+    {
+      "lessonId": "tv-g2-b29",
+      "bookId": "tv-g2-t2",
+      "title": "Sự tích cây thì là",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1411
+    },
+    {
+      "lessonId": "tv-g2-b30",
+      "bookId": "tv-g2-t2",
+      "title": "Bờ tre đón khách",
+      "pass": true,
+      "reasons": [],
+      "domLength": 895
+    },
+    {
+      "lessonId": "tv-g2-t2-b13",
+      "bookId": "tv-g2-t2",
+      "title": "Tiếng chổi tre",
+      "pass": true,
+      "reasons": [],
+      "domLength": 888
+    },
+    {
+      "lessonId": "tv-g2-t2-b14",
+      "bookId": "tv-g2-t2",
+      "title": "Cỏ non cười rồi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1341
+    },
+    {
+      "lessonId": "tv-g2-t2-b15",
+      "bookId": "tv-g2-t2",
+      "title": "Những con sao biển",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1327
+    },
+    {
+      "lessonId": "tv-g2-t2-b16",
+      "bookId": "tv-g2-t2",
+      "title": "Tạm biệt cánh cam",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1206
+    },
+    {
+      "lessonId": "tv-g2-t2-b17",
+      "bookId": "tv-g2-t2",
+      "title": "Những cách chào độc đáo",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1094
+    },
+    {
+      "lessonId": "tv-g2-t2-b18",
+      "bookId": "tv-g2-t2",
+      "title": "Thư viện biết đi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1121
+    },
+    {
+      "lessonId": "tv-g2-t2-b19",
+      "bookId": "tv-g2-t2",
+      "title": "Cảm ơn anh hà mã",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1302
+    },
+    {
+      "lessonId": "tv-g2-t2-b20",
+      "bookId": "tv-g2-t2",
+      "title": "Từ chú bồ câu đến in-tơ-nét",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1220
+    },
+    {
+      "lessonId": "tv-g2-t2-b21",
+      "bookId": "tv-g2-t2",
+      "title": "Mai An Tiêm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1366
+    },
+    {
+      "lessonId": "tv-g2-t2-b22",
+      "bookId": "tv-g2-t2",
+      "title": "Thư gửi bố ngoài đảo",
+      "pass": true,
+      "reasons": [],
+      "domLength": 919
+    },
+    {
+      "lessonId": "tv-g2-t2-b23",
+      "bookId": "tv-g2-t2",
+      "title": "Bóp nát quả cam",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1435
+    },
+    {
+      "lessonId": "tv-g2-t2-b24",
+      "bookId": "tv-g2-t2",
+      "title": "Chiếc rễ đa tròn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1331
+    },
+    {
+      "lessonId": "tv-g2-t2-b25",
+      "bookId": "tv-g2-t2",
+      "title": "Đất nước chúng mình",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1168
+    },
+    {
+      "lessonId": "tv-g2-t2-b26",
+      "bookId": "tv-g2-t2",
+      "title": "Trên các miền đất nước",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1153
+    },
+    {
+      "lessonId": "tv-g2-t2-b27",
+      "bookId": "tv-g2-t2",
+      "title": "Chuyện quả bầu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1420
+    },
+    {
+      "lessonId": "tv-g2-t2-b28",
+      "bookId": "tv-g2-t2",
+      "title": "Khám phá đáy biển ở Trường Sa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1157
+    },
+    {
+      "lessonId": "tv-g2-t2-b29",
+      "bookId": "tv-g2-t2",
+      "title": "Hồ Gươm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1103
+    },
+    {
+      "lessonId": "tv-g2-t2-b30",
+      "bookId": "tv-g2-t2",
+      "title": "Cánh đồng quê em",
+      "pass": true,
+      "reasons": [],
+      "domLength": 889
+    },
+    {
+      "lessonId": "tv-g3-b1",
+      "bookId": "tv-g3-t1",
+      "title": "Ngày gặp lại",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1434
+    },
+    {
+      "lessonId": "tv-g3-b2",
+      "bookId": "tv-g3-t1",
+      "title": "Về thăm quê",
+      "pass": true,
+      "reasons": [],
+      "domLength": 870
+    },
+    {
+      "lessonId": "tv-g3-b3",
+      "bookId": "tv-g3-t1",
+      "title": "Cánh rừng trong nắng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1428
+    },
+    {
+      "lessonId": "tv-g3-b4",
+      "bookId": "tv-g3-t1",
+      "title": "Lần đầu ra biển",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1508
+    },
+    {
+      "lessonId": "tv-g3-b5",
+      "bookId": "tv-g3-t1",
+      "title": "Nhật kí tập bơi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1472
+    },
+    {
+      "lessonId": "tv-g3-b6",
+      "bookId": "tv-g3-t1",
+      "title": "Tập nấu ăn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1091
+    },
+    {
+      "lessonId": "tv-g3-b7",
+      "bookId": "tv-g3-t1",
+      "title": "Mùa hè lấp lánh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 857
+    },
+    {
+      "lessonId": "tv-g3-b8",
+      "bookId": "tv-g3-t1",
+      "title": "Tạm biệt mùa hè",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1532
+    },
+    {
+      "lessonId": "tv-g3-b9",
+      "bookId": "tv-g3-t1",
+      "title": "Đi học vui sao",
+      "pass": true,
+      "reasons": [],
+      "domLength": 936
+    },
+    {
+      "lessonId": "tv-g3-b10",
+      "bookId": "tv-g3-t1",
+      "title": "Con đường đến trường",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1541
+    },
+    {
+      "lessonId": "tv-g3-b11",
+      "bookId": "tv-g3-t1",
+      "title": "Lời giải toán đặc biệt",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1524
+    },
+    {
+      "lessonId": "tv-g3-b12",
+      "bookId": "tv-g3-t1",
+      "title": "Bài tập làm văn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1557
+    },
+    {
+      "lessonId": "tv-g3-b13",
+      "bookId": "tv-g3-t1",
+      "title": "Bàn tay cô giáo",
+      "pass": true,
+      "reasons": [],
+      "domLength": 838
+    },
+    {
+      "lessonId": "tv-g3-b14",
+      "bookId": "tv-g3-t1",
+      "title": "Cuộc họp của chữ viết",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1315
+    },
+    {
+      "lessonId": "tv-g3-t1-b15",
+      "bookId": "tv-g3-t1",
+      "title": "Thư viện",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1576
+    },
+    {
+      "lessonId": "tv-g3-t1-b16",
+      "bookId": "tv-g3-t1",
+      "title": "Ngày em vào Đội",
+      "pass": true,
+      "reasons": [],
+      "domLength": 937
+    },
+    {
+      "lessonId": "tv-g3-t1-b17",
+      "bookId": "tv-g3-t1",
+      "title": "Ngưỡng cửa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 834
+    },
+    {
+      "lessonId": "tv-g3-t1-b18",
+      "bookId": "tv-g3-t1",
+      "title": "Món quà đặc biệt",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1488
+    },
+    {
+      "lessonId": "tv-g3-t1-b19",
+      "bookId": "tv-g3-t1",
+      "title": "Khi cả nhà bé tí",
+      "pass": true,
+      "reasons": [],
+      "domLength": 923
+    },
+    {
+      "lessonId": "tv-g3-t1-b20",
+      "bookId": "tv-g3-t1",
+      "title": "Trò chuyện cùng mẹ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1577
+    },
+    {
+      "lessonId": "tv-g3-t1-b21",
+      "bookId": "tv-g3-t1",
+      "title": "Tia nắng bé nhỏ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1512
+    },
+    {
+      "lessonId": "tv-g3-t1-b22",
+      "bookId": "tv-g3-t1",
+      "title": "Để cháu nắm tay ông",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1558
+    },
+    {
+      "lessonId": "tv-g3-t1-b23",
+      "bookId": "tv-g3-t1",
+      "title": "Tôi yêu em tôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 898
+    },
+    {
+      "lessonId": "tv-g3-t1-b24",
+      "bookId": "tv-g3-t1",
+      "title": "Bạn nhỏ trong nhà",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1502
+    },
+    {
+      "lessonId": "tv-g3-t1-b25",
+      "bookId": "tv-g3-t1",
+      "title": "Những bậc đá chạm mây",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1655
+    },
+    {
+      "lessonId": "tv-g3-t1-b26",
+      "bookId": "tv-g3-t1",
+      "title": "Đi tìm mặt trời",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1637
+    },
+    {
+      "lessonId": "tv-g3-t1-b27",
+      "bookId": "tv-g3-t1",
+      "title": "Những chiếc áo ấm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1642
+    },
+    {
+      "lessonId": "tv-g3-t1-b28",
+      "bookId": "tv-g3-t1",
+      "title": "Con đường của bé",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1049
+    },
+    {
+      "lessonId": "tv-g3-t1-b29",
+      "bookId": "tv-g3-t1",
+      "title": "Ngôi nhà trong cỏ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1611
+    },
+    {
+      "lessonId": "tv-g3-t1-b30",
+      "bookId": "tv-g3-t1",
+      "title": "Những ngọn hải đăng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1453
+    },
+    {
+      "lessonId": "tv-g3-t1-b31",
+      "bookId": "tv-g3-t1",
+      "title": "Người làm đồ chơi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1636
+    },
+    {
+      "lessonId": "tv-g3-t1-b32",
+      "bookId": "tv-g3-t1",
+      "title": "Cây bút thần",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1619
+    },
+    {
+      "lessonId": "tv-g3-b15",
+      "bookId": "tv-g3-t2",
+      "title": "Bầu trời",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1219
+    },
+    {
+      "lessonId": "tv-g3-b16",
+      "bookId": "tv-g3-t2",
+      "title": "Mưa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 823
+    },
+    {
+      "lessonId": "tv-g3-b17",
+      "bookId": "tv-g3-t2",
+      "title": "Cóc kiện Trời",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1851
+    },
+    {
+      "lessonId": "tv-g3-b18",
+      "bookId": "tv-g3-t2",
+      "title": "Những cái tên đáng yêu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 663
+    },
+    {
+      "lessonId": "tv-g3-b19",
+      "bookId": "tv-g3-t2",
+      "title": "Ngày hội rừng xanh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 864
+    },
+    {
+      "lessonId": "tv-g3-b20",
+      "bookId": "tv-g3-t2",
+      "title": "Cây gạo",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1263
+    },
+    {
+      "lessonId": "tv-g3-b21",
+      "bookId": "tv-g3-t2",
+      "title": "Mặt trời xanh của tôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 870
+    },
+    {
+      "lessonId": "tv-g3-b22",
+      "bookId": "tv-g3-t2",
+      "title": "Bầy voi rừng Trường Sơn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1583
+    },
+    {
+      "lessonId": "tv-g3-b23",
+      "bookId": "tv-g3-t2",
+      "title": "Lời kêu gọi toàn dân tập thể dục",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1110
+    },
+    {
+      "lessonId": "tv-g3-b24",
+      "bookId": "tv-g3-t2",
+      "title": "Quả hồng của thỏ con",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1620
+    },
+    {
+      "lessonId": "tv-g3-b25",
+      "bookId": "tv-g3-t2",
+      "title": "Chuyện bên cửa sổ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1337
+    },
+    {
+      "lessonId": "tv-g3-t2-b12",
+      "bookId": "tv-g3-t2",
+      "title": "Tay trái và tay phải",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1555
+    },
+    {
+      "lessonId": "tv-g3-t2-b13",
+      "bookId": "tv-g3-t2",
+      "title": "Mèo đi câu cá",
+      "pass": true,
+      "reasons": [],
+      "domLength": 911
+    },
+    {
+      "lessonId": "tv-g3-t2-b14",
+      "bookId": "tv-g3-t2",
+      "title": "Học nghề",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1582
+    },
+    {
+      "lessonId": "tv-g3-t2-b15",
+      "bookId": "tv-g3-t2",
+      "title": "Ngày như thế nào là đẹp?",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1447
+    },
+    {
+      "lessonId": "tv-g3-t2-b16",
+      "bookId": "tv-g3-t2",
+      "title": "A lô, tớ đây",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1490
+    },
+    {
+      "lessonId": "tv-g3-t2-b17",
+      "bookId": "tv-g3-t2",
+      "title": "Đất nước là gì?",
+      "pass": true,
+      "reasons": [],
+      "domLength": 919
+    },
+    {
+      "lessonId": "tv-g3-t2-b18",
+      "bookId": "tv-g3-t2",
+      "title": "Núi quê tôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1425
+    },
+    {
+      "lessonId": "tv-g3-t2-b19",
+      "bookId": "tv-g3-t2",
+      "title": "Sông Hương",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1417
+    },
+    {
+      "lessonId": "tv-g3-t2-b20",
+      "bookId": "tv-g3-t2",
+      "title": "Tiếng nước mình",
+      "pass": true,
+      "reasons": [],
+      "domLength": 939
+    },
+    {
+      "lessonId": "tv-g3-t2-b21",
+      "bookId": "tv-g3-t2",
+      "title": "Nhà rông",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1372
+    },
+    {
+      "lessonId": "tv-g3-t2-b22",
+      "bookId": "tv-g3-t2",
+      "title": "Sự tích ông Đùng, bà Đùng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1648
+    },
+    {
+      "lessonId": "tv-g3-t2-b23",
+      "bookId": "tv-g3-t2",
+      "title": "Hai Bà Trưng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1818
+    },
+    {
+      "lessonId": "tv-g3-t2-b24",
+      "bookId": "tv-g3-t2",
+      "title": "Cùng Bác qua suối",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1573
+    },
+    {
+      "lessonId": "tv-g3-t2-b25",
+      "bookId": "tv-g3-t2",
+      "title": "Ngọn lửa Ô-lim-pích",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1446
+    },
+    {
+      "lessonId": "tv-g3-t2-b26",
+      "bookId": "tv-g3-t2",
+      "title": "Rô-bốt ở quanh ta",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1212
+    },
+    {
+      "lessonId": "tv-g3-t2-b27",
+      "bookId": "tv-g3-t2",
+      "title": "Thư của ông Trái Đất gửi các bạn nhỏ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1647
+    },
+    {
+      "lessonId": "tv-g3-t2-b28",
+      "bookId": "tv-g3-t2",
+      "title": "Những điều nhỏ tớ làm cho Trái Đất",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1263
+    },
+    {
+      "lessonId": "tv-g3-t2-b29",
+      "bookId": "tv-g3-t2",
+      "title": "Bác sĩ Y-éc-xanh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1695
+    },
+    {
+      "lessonId": "tv-g3-t2-b30",
+      "bookId": "tv-g3-t2",
+      "title": "Một mái nhà chung",
+      "pass": true,
+      "reasons": [],
+      "domLength": 966
+    },
+    {
+      "lessonId": "tv-g4-b1",
+      "bookId": "tv-g4-t1",
+      "title": "Điều kì diệu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 939
+    },
+    {
+      "lessonId": "tv-g4-b2",
+      "bookId": "tv-g4-t1",
+      "title": "Thi nhạc",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2035
+    },
+    {
+      "lessonId": "tv-g4-b3",
+      "bookId": "tv-g4-t1",
+      "title": "Anh em sinh đôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2010
+    },
+    {
+      "lessonId": "tv-g4-b4",
+      "bookId": "tv-g4-t1",
+      "title": "Công chúa và người dẫn chuyện",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1962
+    },
+    {
+      "lessonId": "tv-g4-b5",
+      "bookId": "tv-g4-t1",
+      "title": "Thằn lằn xanh và tắc kè",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1906
+    },
+    {
+      "lessonId": "tv-g4-b6",
+      "bookId": "tv-g4-t1",
+      "title": "Nghệ sĩ trống",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1837
+    },
+    {
+      "lessonId": "tv-g4-b7",
+      "bookId": "tv-g4-t1",
+      "title": "Những bức chân dung",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1943
+    },
+    {
+      "lessonId": "tv-g4-b8",
+      "bookId": "tv-g4-t1",
+      "title": "Đò ngang",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1992
+    },
+    {
+      "lessonId": "tv-g4-b9",
+      "bookId": "tv-g4-t1",
+      "title": "Bầu trời trong quả trứng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1062
+    },
+    {
+      "lessonId": "tv-g4-b10",
+      "bookId": "tv-g4-t1",
+      "title": "Tiếng nói của cỏ cây",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1981
+    },
+    {
+      "lessonId": "tv-g4-b11",
+      "bookId": "tv-g4-t1",
+      "title": "Tập làm văn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2055
+    },
+    {
+      "lessonId": "tv-g4-t1-b12",
+      "bookId": "tv-g4-t1",
+      "title": "Nhà phát minh 6 tuổi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1544
+    },
+    {
+      "lessonId": "tv-g4-t1-b13",
+      "bookId": "tv-g4-t1",
+      "title": "Con vẹt xanh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1991
+    },
+    {
+      "lessonId": "tv-g4-t1-b14",
+      "bookId": "tv-g4-t1",
+      "title": "Chân trời cuối phố",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1949
+    },
+    {
+      "lessonId": "tv-g4-t1-b15",
+      "bookId": "tv-g4-t1",
+      "title": "Gặt chữ trên non",
+      "pass": true,
+      "reasons": [],
+      "domLength": 957
+    },
+    {
+      "lessonId": "tv-g4-t1-b16",
+      "bookId": "tv-g4-t1",
+      "title": "Trước ngày xa quê",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1802
+    },
+    {
+      "lessonId": "tv-g4-t1-b17",
+      "bookId": "tv-g4-t1",
+      "title": "Vẽ màu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 924
+    },
+    {
+      "lessonId": "tv-g4-t1-b18",
+      "bookId": "tv-g4-t1",
+      "title": "Đồng cỏ nở hoa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1732
+    },
+    {
+      "lessonId": "tv-g4-t1-b19",
+      "bookId": "tv-g4-t1",
+      "title": "Thanh âm của núi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1565
+    },
+    {
+      "lessonId": "tv-g4-t1-b20",
+      "bookId": "tv-g4-t1",
+      "title": "Bầu trời mùa thu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1888
+    },
+    {
+      "lessonId": "tv-g4-t1-b21",
+      "bookId": "tv-g4-t1",
+      "title": "Làm thỏ con bằng giấy",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1445
+    },
+    {
+      "lessonId": "tv-g4-t1-b22",
+      "bookId": "tv-g4-t1",
+      "title": "Bức tường có nhiều phép lạ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2031
+    },
+    {
+      "lessonId": "tv-g4-t1-b23",
+      "bookId": "tv-g4-t1",
+      "title": "Bét-tô-ven và bản xô-nát Ánh trăng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2000
+    },
+    {
+      "lessonId": "tv-g4-t1-b24",
+      "bookId": "tv-g4-t1",
+      "title": "Người tìm đường lên các vì sao",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1679
+    },
+    {
+      "lessonId": "tv-g4-t1-b25",
+      "bookId": "tv-g4-t1",
+      "title": "Bay cùng ước mơ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1990
+    },
+    {
+      "lessonId": "tv-g4-t1-b26",
+      "bookId": "tv-g4-t1",
+      "title": "Con trai người làm vườn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2116
+    },
+    {
+      "lessonId": "tv-g4-t1-b27",
+      "bookId": "tv-g4-t1",
+      "title": "Nếu em có một khu vườn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1720
+    },
+    {
+      "lessonId": "tv-g4-t1-b28",
+      "bookId": "tv-g4-t1",
+      "title": "Bốn mùa mơ ước",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1017
+    },
+    {
+      "lessonId": "tv-g4-t1-b29",
+      "bookId": "tv-g4-t1",
+      "title": "Ở Vương quốc Tương Lai",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2038
+    },
+    {
+      "lessonId": "tv-g4-t1-b30",
+      "bookId": "tv-g4-t1",
+      "title": "Cánh chim nhỏ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1730
+    },
+    {
+      "lessonId": "tv-g4-t1-b31",
+      "bookId": "tv-g4-t1",
+      "title": "Nếu chúng mình có phép lạ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 996
+    },
+    {
+      "lessonId": "tv-g4-t1-b32",
+      "bookId": "tv-g4-t1",
+      "title": "Anh Ba",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1658
+    },
+    {
+      "lessonId": "tv-g4-b12",
+      "bookId": "tv-g4-t2",
+      "title": "Hải Thượng Lãn Ông",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1670
+    },
+    {
+      "lessonId": "tv-g4-b13",
+      "bookId": "tv-g4-t2",
+      "title": "Vệt phấn trên mặt bàn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1819
+    },
+    {
+      "lessonId": "tv-g4-b14",
+      "bookId": "tv-g4-t2",
+      "title": "Ông Bụt đã đến",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2033
+    },
+    {
+      "lessonId": "tv-g4-b15",
+      "bookId": "tv-g4-t2",
+      "title": "Quả ngọt cuối mùa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 952
+    },
+    {
+      "lessonId": "tv-g4-b16",
+      "bookId": "tv-g4-t2",
+      "title": "Tờ báo tường của tôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1923
+    },
+    {
+      "lessonId": "tv-g4-b17",
+      "bookId": "tv-g4-t2",
+      "title": "Tiếng ru",
+      "pass": true,
+      "reasons": [],
+      "domLength": 986
+    },
+    {
+      "lessonId": "tv-g4-b18",
+      "bookId": "tv-g4-t2",
+      "title": "Con muốn làm một cái cây",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2080
+    },
+    {
+      "lessonId": "tv-g4-b19",
+      "bookId": "tv-g4-t2",
+      "title": "Trên khóm tre đầu ngõ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1945
+    },
+    {
+      "lessonId": "tv-g4-b20",
+      "bookId": "tv-g4-t2",
+      "title": "Sự tích con Rồng cháu Tiên",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2013
+    },
+    {
+      "lessonId": "tv-g4-b21",
+      "bookId": "tv-g4-t2",
+      "title": "Cảm xúc Trường Sa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1051
+    },
+    {
+      "lessonId": "tv-g4-b22",
+      "bookId": "tv-g4-t2",
+      "title": "Sáng tháng Năm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 930
+    },
+    {
+      "lessonId": "tv-g4-t2-b12",
+      "bookId": "tv-g4-t2",
+      "title": "Chàng trai làng Phù Ủng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2018
+    },
+    {
+      "lessonId": "tv-g4-t2-b13",
+      "bookId": "tv-g4-t2",
+      "title": "Vườn của ông tôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1852
+    },
+    {
+      "lessonId": "tv-g4-t2-b14",
+      "bookId": "tv-g4-t2",
+      "title": "Trong lời mẹ hát",
+      "pass": true,
+      "reasons": [],
+      "domLength": 925
+    },
+    {
+      "lessonId": "tv-g4-t2-b15",
+      "bookId": "tv-g4-t2",
+      "title": "Người thầy đầu tiên của bố tôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1899
+    },
+    {
+      "lessonId": "tv-g4-t2-b16",
+      "bookId": "tv-g4-t2",
+      "title": "Ngựa biên phòng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 963
+    },
+    {
+      "lessonId": "tv-g4-t2-b17",
+      "bookId": "tv-g4-t2",
+      "title": "Cây đa quê hương",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1448
+    },
+    {
+      "lessonId": "tv-g4-t2-b18",
+      "bookId": "tv-g4-t2",
+      "title": "Bước mùa xuân",
+      "pass": true,
+      "reasons": [],
+      "domLength": 932
+    },
+    {
+      "lessonId": "tv-g4-t2-b19",
+      "bookId": "tv-g4-t2",
+      "title": "Đi hội chùa Hương",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1060
+    },
+    {
+      "lessonId": "tv-g4-t2-b20",
+      "bookId": "tv-g4-t2",
+      "title": "Chiều ngoại ô",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1921
+    },
+    {
+      "lessonId": "tv-g4-t2-b21",
+      "bookId": "tv-g4-t2",
+      "title": "Những cánh buồm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1659
+    },
+    {
+      "lessonId": "tv-g4-t2-b22",
+      "bookId": "tv-g4-t2",
+      "title": "Cái cầu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1025
+    },
+    {
+      "lessonId": "tv-g4-t2-b23",
+      "bookId": "tv-g4-t2",
+      "title": "Đường đi Sa Pa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1544
+    },
+    {
+      "lessonId": "tv-g4-t2-b24",
+      "bookId": "tv-g4-t2",
+      "title": "Quê ngoại",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1700
+    },
+    {
+      "lessonId": "tv-g4-t2-b25",
+      "bookId": "tv-g4-t2",
+      "title": "Khu bảo tồn động vật hoang dã Ngô-rông-gô-rô",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1637
+    },
+    {
+      "lessonId": "tv-g4-t2-b26",
+      "bookId": "tv-g4-t2",
+      "title": "Ngôi nhà của yêu thương",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2140
+    },
+    {
+      "lessonId": "tv-g4-t2-b27",
+      "bookId": "tv-g4-t2",
+      "title": "Băng tan",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1341
+    },
+    {
+      "lessonId": "tv-g4-t2-b28",
+      "bookId": "tv-g4-t2",
+      "title": "Chuyến du lịch thú vị",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1995
+    },
+    {
+      "lessonId": "tv-g4-t2-b29",
+      "bookId": "tv-g4-t2",
+      "title": "Lễ hội ở Nhật Bản",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1342
+    },
+    {
+      "lessonId": "tv-g4-t2-b30",
+      "bookId": "tv-g4-t2",
+      "title": "Ngày hội",
+      "pass": true,
+      "reasons": [],
+      "domLength": 920
+    },
+    {
+      "lessonId": "tv-g5-b1",
+      "bookId": "tv-g5-t1",
+      "title": "Thanh âm của gió",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2093
+    },
+    {
+      "lessonId": "tv-g5-b2",
+      "bookId": "tv-g5-t1",
+      "title": "Cánh đồng hoa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2043
+    },
+    {
+      "lessonId": "tv-g5-b3",
+      "bookId": "tv-g5-t1",
+      "title": "Tuổi Ngựa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1063
+    },
+    {
+      "lessonId": "tv-g5-b4",
+      "bookId": "tv-g5-t1",
+      "title": "Bến sông tuổi thơ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2038
+    },
+    {
+      "lessonId": "tv-g5-b5",
+      "bookId": "tv-g5-t1",
+      "title": "Tiếng hạt nảy mầm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1029
+    },
+    {
+      "lessonId": "tv-g5-b6",
+      "bookId": "tv-g5-t1",
+      "title": "Ngôi sao sân cỏ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2140
+    },
+    {
+      "lessonId": "tv-g5-b7",
+      "bookId": "tv-g5-t1",
+      "title": "Bộ sưu tập độc đáo",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2124
+    },
+    {
+      "lessonId": "tv-g5-b8",
+      "bookId": "tv-g5-t1",
+      "title": "Hành tinh kì lạ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2164
+    },
+    {
+      "lessonId": "tv-g5-b9",
+      "bookId": "tv-g5-t1",
+      "title": "Trước cổng trời",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1069
+    },
+    {
+      "lessonId": "tv-g5-b10",
+      "bookId": "tv-g5-t1",
+      "title": "Kì diệu rừng xanh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1623
+    },
+    {
+      "lessonId": "tv-g5-b11",
+      "bookId": "tv-g5-t1",
+      "title": "Hang Sơn Đoòng – những điều kì thú",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1528
+    },
+    {
+      "lessonId": "tv-g5-b12",
+      "bookId": "tv-g5-t1",
+      "title": "Những hòn đảo trên vịnh Hạ Long",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1600
+    },
+    {
+      "lessonId": "tv-g5-b13",
+      "bookId": "tv-g5-t1",
+      "title": "Mầm non",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1053
+    },
+    {
+      "lessonId": "tv-g5-b14",
+      "bookId": "tv-g5-t1",
+      "title": "Những ngọn núi nóng rẫy",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1670
+    },
+    {
+      "lessonId": "tv-g5-b15",
+      "bookId": "tv-g5-t1",
+      "title": "Bài ca về mặt trời",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1699
+    },
+    {
+      "lessonId": "tv-g5-b16",
+      "bookId": "tv-g5-t1",
+      "title": "Xin chào, Xa-ha-ra",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2206
+    },
+    {
+      "lessonId": "tv-g5-t1-b17",
+      "bookId": "tv-g5-t1",
+      "title": "Thư gửi các học sinh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1819
+    },
+    {
+      "lessonId": "tv-g5-t1-b18",
+      "bookId": "tv-g5-t1",
+      "title": "Tấm gương tự học",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1951
+    },
+    {
+      "lessonId": "tv-g5-t1-b19",
+      "bookId": "tv-g5-t1",
+      "title": "Trải nghiệm để sáng tạo",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2163
+    },
+    {
+      "lessonId": "tv-g5-t1-b20",
+      "bookId": "tv-g5-t1",
+      "title": "Khổ luyện thành tài",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2251
+    },
+    {
+      "lessonId": "tv-g5-t1-b21",
+      "bookId": "tv-g5-t1",
+      "title": "Thế giới trong trang sách",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1107
+    },
+    {
+      "lessonId": "tv-g5-t1-b22",
+      "bookId": "tv-g5-t1",
+      "title": "Từ những câu chuyện ấu thơ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1892
+    },
+    {
+      "lessonId": "tv-g5-t1-b23",
+      "bookId": "tv-g5-t1",
+      "title": "Giới thiệu sách Dế Mèn phiêu lưu kí",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1514
+    },
+    {
+      "lessonId": "tv-g5-t1-b24",
+      "bookId": "tv-g5-t1",
+      "title": "Tinh thần học tập của nhà Phi-lít",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1934
+    },
+    {
+      "lessonId": "tv-g5-t1-b25",
+      "bookId": "tv-g5-t1",
+      "title": "Tiếng đàn ba-la-lai-ca trên sông Đà",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1259
+    },
+    {
+      "lessonId": "tv-g5-t1-b26",
+      "bookId": "tv-g5-t1",
+      "title": "Trí tưởng tượng phong phú",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2225
+    },
+    {
+      "lessonId": "tv-g5-t1-b27",
+      "bookId": "tv-g5-t1",
+      "title": "Tranh làng Hồ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1705
+    },
+    {
+      "lessonId": "tv-g5-t1-b28",
+      "bookId": "tv-g5-t1",
+      "title": "Tập hát quan họ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2128
+    },
+    {
+      "lessonId": "tv-g5-t1-b29",
+      "bookId": "tv-g5-t1",
+      "title": "Phim hoạt hình Chú ốc sên bay",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1348
+    },
+    {
+      "lessonId": "tv-g5-t1-b30",
+      "bookId": "tv-g5-t1",
+      "title": "Nghệ thuật múa ba lê",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1650
+    },
+    {
+      "lessonId": "tv-g5-t1-b31",
+      "bookId": "tv-g5-t1",
+      "title": "Một ngôi chùa độc đáo",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1422
+    },
+    {
+      "lessonId": "tv-g5-t1-b32",
+      "bookId": "tv-g5-t1",
+      "title": "Sự tích chú Tễu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2087
+    },
+    {
+      "lessonId": "tv-g5-b17",
+      "bookId": "tv-g5-t2",
+      "title": "Tiếng hát của người đá",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2146
+    },
+    {
+      "lessonId": "tv-g5-b18",
+      "bookId": "tv-g5-t2",
+      "title": "Khúc hát ru những em bé lớn trên lưng mẹ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1224
+    },
+    {
+      "lessonId": "tv-g5-b19",
+      "bookId": "tv-g5-t2",
+      "title": "Hạt gạo làng ta",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1131
+    },
+    {
+      "lessonId": "tv-g5-b20",
+      "bookId": "tv-g5-t2",
+      "title": "Hộp quà màu thiên thanh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2112
+    },
+    {
+      "lessonId": "tv-g5-b21",
+      "bookId": "tv-g5-t2",
+      "title": "Giỏ hoa tháng Năm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2071
+    },
+    {
+      "lessonId": "tv-g5-b22",
+      "bookId": "tv-g5-t2",
+      "title": "Thư của bố",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1086
+    },
+    {
+      "lessonId": "tv-g5-b23",
+      "bookId": "tv-g5-t2",
+      "title": "Đoàn thuyền đánh cá",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1134
+    },
+    {
+      "lessonId": "tv-g5-b24",
+      "bookId": "tv-g5-t2",
+      "title": "Khu rừng của Mát",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2181
+    },
+    {
+      "lessonId": "tv-g5-b25",
+      "bookId": "tv-g5-t2",
+      "title": "Hội thổi cơm thi ở Đồng Vân",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1838
+    },
+    {
+      "lessonId": "tv-g5-t2-b10",
+      "bookId": "tv-g5-t2",
+      "title": "Những búp chè trên cây cổ thụ",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2170
+    },
+    {
+      "lessonId": "tv-g5-t2-b11",
+      "bookId": "tv-g5-t2",
+      "title": "Hương cốm mùa thu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1034
+    },
+    {
+      "lessonId": "tv-g5-t2-b12",
+      "bookId": "tv-g5-t2",
+      "title": "Vũ điệu trên nền thổ cẩm",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1493
+    },
+    {
+      "lessonId": "tv-g5-t2-b13",
+      "bookId": "tv-g5-t2",
+      "title": "Đàn t’rưng – tiếng ca đại ngàn",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1790
+    },
+    {
+      "lessonId": "tv-g5-t2-b14",
+      "bookId": "tv-g5-t2",
+      "title": "Đường quê Đồng Tháp Mười",
+      "pass": true,
+      "reasons": [],
+      "domLength": 993
+    },
+    {
+      "lessonId": "tv-g5-t2-b15",
+      "bookId": "tv-g5-t2",
+      "title": "Xuồng ba lá quê tôi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1714
+    },
+    {
+      "lessonId": "tv-g5-t2-b16",
+      "bookId": "tv-g5-t2",
+      "title": "Về thăm Đất Mũi",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1026
+    },
+    {
+      "lessonId": "tv-g5-t2-b17",
+      "bookId": "tv-g5-t2",
+      "title": "Nghìn năm văn hiến",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1419
+    },
+    {
+      "lessonId": "tv-g5-t2-b18",
+      "bookId": "tv-g5-t2",
+      "title": "Người thầy của muôn đời",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2038
+    },
+    {
+      "lessonId": "tv-g5-t2-b19",
+      "bookId": "tv-g5-t2",
+      "title": "Danh y Tuệ Tĩnh",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1701
+    },
+    {
+      "lessonId": "tv-g5-t2-b20",
+      "bookId": "tv-g5-t2",
+      "title": "Cụ Đồ Chiểu",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1993
+    },
+    {
+      "lessonId": "tv-g5-t2-b21",
+      "bookId": "tv-g5-t2",
+      "title": "Anh hùng Lao động Trần Đại Nghĩa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1739
+    },
+    {
+      "lessonId": "tv-g5-t2-b22",
+      "bookId": "tv-g5-t2",
+      "title": "Bộ đội về làng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 986
+    },
+    {
+      "lessonId": "tv-g5-t2-b23",
+      "bookId": "tv-g5-t2",
+      "title": "Về ngôi nhà đang xây",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1085
+    },
+    {
+      "lessonId": "tv-g5-t2-b24",
+      "bookId": "tv-g5-t2",
+      "title": "Việt Nam quê hương ta",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1163
+    },
+    {
+      "lessonId": "tv-g5-t2-b25",
+      "bookId": "tv-g5-t2",
+      "title": "Bài ca trái đất",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1107
+    },
+    {
+      "lessonId": "tv-g5-t2-b26",
+      "bookId": "tv-g5-t2",
+      "title": "Những con hạc giấy",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2099
+    },
+    {
+      "lessonId": "tv-g5-t2-b27",
+      "bookId": "tv-g5-t2",
+      "title": "Một người hùng thầm lặng",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2199
+    },
+    {
+      "lessonId": "tv-g5-t2-b28",
+      "bookId": "tv-g5-t2",
+      "title": "Giờ Trái Đất",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1560
+    },
+    {
+      "lessonId": "tv-g5-t2-b29",
+      "bookId": "tv-g5-t2",
+      "title": "Điện thoại di động",
+      "pass": true,
+      "reasons": [],
+      "domLength": 1651
+    },
+    {
+      "lessonId": "tv-g5-t2-b30",
+      "bookId": "tv-g5-t2",
+      "title": "Thành phố thông minh Mát-xđa",
+      "pass": true,
+      "reasons": [],
+      "domLength": 2011
+    }
+  ]
+}
