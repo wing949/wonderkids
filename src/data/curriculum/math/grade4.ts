@@ -1,307 +1,4530 @@
 import { CurriculumTopic } from '../types';
 
 export const MATH_GRADE_4_TOPICS: CurriculumTopic[] = [
-  // ================= TẬP 1 (BÀI 1 ĐẾN BÀI 25) =================
   {
-    id: 'math-g4-b1', semester: 1, lessonNumber: 1,
-    title: 'Bài 1: Ôn tập các số đến 100.000',
-    unit: 'Tập 1 - Chủ đề 1: Số tự nhiên và phép tính',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 6, 7',
-    description: 'Đọc, viết, so sánh số có 5 chữ số và phân tích cấu tạo số.',
-    summary: 'Cấu tạo số: 45.678 = 40.000 + 5.000 + 600 + 70 + 8.',
-    keyPoints: ['Số liền trước bé hơn 1, số liền sau lớn hơn 1.', 'So sánh lần lượt từ hàng chục nghìn.'],
-    mascotTip: 'BoBo: Cùng ôn lại các số có 5 chữ số để mở rộng sang Lớp Triệu nhé!',
+    "id": "math-g4-b1",
+    "semester": 1,
+    "lessonNumber": 1,
+    "title": "Bài 1: Ôn tập các số đến 100 000",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 2 - 5",
+    "description": "Bài học Toán 4: Ôn tập các số đến 100 000.",
+    "summary": "Nội dung trọng tâm của Bài 1: Ôn tập các số đến 100 000 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 1: Ôn tập các số đến 100 000.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b1-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 1: Ôn tập các số đến 100 000: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b1-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b2', semester: 1, lessonNumber: 2,
-    title: 'Bài 2: Biểu thức có chứa một chữ (Biểu thức chứa chữ)',
-    unit: 'Tập 1 - Chủ đề 1: Số tự nhiên và phép tính',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 12, 13',
-    description: 'Biểu thức có dạng a + b, 12 - x, 3 x m. Tính giá trị biểu thức khi thay chữ bằng số.',
-    summary: 'Nếu a = 5 thì giá trị của biểu thức 12 + a là 12 + 5 = 17.',
-    keyPoints: ['Mỗi lần thay chữ bằng số ta tính được một giá trị của biểu thức.'],
-    mascotTip: 'BoBo: Thay số vào vị trí của chữ cái rồi tính toán như bình thường!',
+    "id": "math-g4-b2",
+    "semester": 1,
+    "lessonNumber": 2,
+    "title": "Bài 2 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 4 - 7",
+    "description": "Bài học Toán 4: Bài 2 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 2 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 2 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b2-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 2 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b2-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b3', semester: 1, lessonNumber: 3,
-    title: 'Bài 3: Các số có nhiều chữ số (Lớp Triệu & Lớp Nghìn)',
-    unit: 'Tập 1 - Chủ đề 1: Số tự nhiên và phép tính',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 18, 19',
-    description: '3 chữ số tạo thành một lớp: Lớp Đơn vị, Lớp Nghìn, Lớp Triệu.',
-    summary: 'Số 345.678.912 gồm Lớp Triệu (345), Lớp Nghìn (678), Lớp Đơn vị (912).',
-    keyPoints: ['Mỗi lớp gồm 3 hàng: Đơn vị, Chục, Trăm.', 'Tách lớp bằng khoảng trắng nhỏ để đọc dễ dàng.'],
-    mascotTip: 'BoBo: Đọc từ lớp triệu đến lớp nghìn rồi đến lớp đơn vị nhé!',
+    "id": "math-g4-b3",
+    "semester": 1,
+    "lessonNumber": 3,
+    "title": "Bài 3: Số chẵn, số lẻ",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 6 - 9",
+    "description": "Bài học Toán 4: Số chẵn, số lẻ.",
+    "summary": "Nội dung trọng tâm của Bài 3: Số chẵn, số lẻ chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 3: Số chẵn, số lẻ.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b3-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 3: Số chẵn, số lẻ: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b3-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b4', semester: 1, lessonNumber: 4,
-    title: 'Bài 4: Số chẵn, Số lẻ & Dãy số tự nhiên',
-    unit: 'Tập 1 - Chủ đề 1: Số tự nhiên và phép tính',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 24, 25',
-    description: 'Số chẵn tận cùng là 0, 2, 4, 6, 8. Số lẻ tận cùng là 1, 3, 5, 7, 9.',
-    summary: 'Dãy số tự nhiên: 0, 1, 2, 3, 4, 5... bắt đầu từ số 0 và kéo dài vô tận.',
-    keyPoints: ['Hai số tự nhiên liên tiếp hơn kém nhau 1 đơn vị.', 'Không có số tự nhiên lớn nhất.'],
-    mascotTip: 'BoBo: Nhìn vào chữ số tận cùng bên phải là biết ngay số chẵn hay số lẻ!',
+    "id": "math-g4-b4",
+    "semester": 1,
+    "lessonNumber": 4,
+    "title": "Bài 4: Biểu thức chứa chữ",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 8 - 11",
+    "description": "Bài học Toán 4: Biểu thức chứa chữ.",
+    "summary": "Nội dung trọng tâm của Bài 4: Biểu thức chứa chữ chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 4: Biểu thức chứa chữ.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b4-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 4: Biểu thức chứa chữ: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b4-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b5', semester: 1, lessonNumber: 5,
-    title: 'Bài 5: Yến, Tạ, Tấn (Đơn vị đo khối lượng lớn)',
-    unit: 'Tập 1 - Chủ đề 2: Bảng đơn vị đo lường',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 30, 31',
-    description: '1 yến = 10 kg; 1 tạ = 10 yến = 100 kg; 1 tấn = 10 tạ = 1000 kg.',
-    summary: 'Tấn dùng đo xe tải, voi, tàu thuyền. Tạ dùng đo bao thóc lớn.',
-    keyPoints: ['1 tấn = 1000 kg; 1 tạ = 100 kg; 1 yến = 10 kg.', '3 tấn = 3000 kg; 5 tạ = 500 kg.'],
-    mascotTip: 'BoBo: Con voi nặng khoảng 3 tấn (3000 kg), xe tải chở 5 tấn hàng!',
+    "id": "math-g4-b5",
+    "semester": 1,
+    "lessonNumber": 5,
+    "title": "Bài 5 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 10 - 13",
+    "description": "Bài học Toán 4: Bài 5 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 5 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 5 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b5-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 5 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b5-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b6', semester: 1, lessonNumber: 6,
-    title: 'Bài 6: Giây, Thế kỉ (1 thế kỉ = 100 năm)',
-    unit: 'Tập 1 - Chủ đề 2: Bảng đơn vị đo lường',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 36, 37',
-    description: '1 phút = 60 giây. 1 thế kỉ = 100 năm. Cách xác định năm thuộc thế kỉ nào.',
-    summary: 'Từ năm 1 đến 100 là thế kỉ I. Năm 2026 thuộc thế kỉ XXI (thế kỉ 21).',
-    keyPoints: ['1 thế kỉ = 100 năm.', 'Năm 1975 thuộc thế kỉ XX (thế kỉ 20).'],
-    mascotTip: 'BoBo: Thế kỉ viết bằng chữ số La Mã: Thế kỉ XX, XXI!',
+    "id": "math-g4-b6",
+    "semester": 1,
+    "lessonNumber": 6,
+    "title": "Bài 6 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 12 - 15",
+    "description": "Bài học Toán 4: Bài 6 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 6 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 6 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b6-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 6 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b6-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b7', semester: 1, lessonNumber: 7,
-    title: 'Bài 7: Góc nhọn, Góc tù, Góc bẹt',
-    unit: 'Tập 1 - Chủ đề 3: Hình học và góc',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 42, 43',
-    description: 'So sánh góc với góc vuông bằng ê-ke. Góc nhọn < 90°, Góc tù > 90°, Góc bẹt = 180° (bằng 2 góc vuông).',
-    summary: 'Góc nhọn bé hơn góc vuông. Góc tù lớn hơn góc vuông. Góc bẹt bằng 2 góc vuông.',
-    keyPoints: ['Dùng ê-ke để phân biệt góc nhọn, góc vuông và góc tù.'],
-    mascotTip: 'BoBo: Góc nhọn nhọn hoắt, góc tù há to, góc bẹt thẳng tắp!',
+    "id": "math-g4-b7",
+    "semester": 1,
+    "lessonNumber": 7,
+    "title": "Bài 7: Đo góc, đơn vị đo góc",
+    "unit": "Chủ đề 2: Góc và đơn vị đo góc",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 14 - 17",
+    "description": "Bài học Toán 4: Đo góc, đơn vị đo góc.",
+    "summary": "Nội dung trọng tâm của Bài 7: Đo góc, đơn vị đo góc chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 7: Đo góc, đơn vị đo góc.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b7-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 7: Đo góc, đơn vị đo góc: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b7-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b8', semester: 1, lessonNumber: 8,
-    title: 'Bài 8: Hai đường thẳng vuông góc & Hai đường thẳng song song',
-    unit: 'Tập 1 - Chủ đề 3: Hình học và góc',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 48, 49',
-    description: 'Hai đường thẳng vuông góc cắt nhau tạo thành 4 góc vuông. Hai đường song song không bao giờ cắt nhau.',
-    summary: 'Khung cửa sổ có các cạnh đối diện song song và các cạnh liền kề vuông góc.',
-    keyPoints: ['Đường ray xe lửa là hình ảnh của hai đường thẳng song song.'],
-    mascotTip: 'BoBo: Hai đường thẳng song song như đôi bạn thân đi song hành mãi mãi!',
+    "id": "math-g4-b8",
+    "semester": 1,
+    "lessonNumber": 8,
+    "title": "Bài 8: Góc nhọn, góc tù, góc bẹt",
+    "unit": "Chủ đề 2: Góc và đơn vị đo góc",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 16 - 19",
+    "description": "Bài học Toán 4: Góc nhọn, góc tù, góc bẹt.",
+    "summary": "Nội dung trọng tâm của Bài 8: Góc nhọn, góc tù, góc bẹt chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 8: Góc nhọn, góc tù, góc bẹt.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b8-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 8: Góc nhọn, góc tù, góc bẹt: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b8-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b9', semester: 1, lessonNumber: 9,
-    title: 'Bài 9: Phép cộng & trừ các số có nhiều chữ số',
-    unit: 'Tập 1 - Chủ đề 4: Phép cộng và trừ',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 54, 55',
-    description: 'Đặt tính thẳng cột và tính chất giao hoán (a + b = b + a), kết hợp (a + b) + c = a + (b + c).',
-    summary: 'Áp dụng tính chất kết hợp để tính nhanh: (125 + 375) + 250 = 500 + 250 = 750.',
-    keyPoints: ['Cộng các cặp số tròn trăm, tròn nghìn trước.'],
-    mascotTip: 'BoBo: Ghép cặp tròn chục, tròn trăm giúp tính nhẩm nhanh như gió!',
+    "id": "math-g4-b9",
+    "semester": 1,
+    "lessonNumber": 9,
+    "title": "Bài 9 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 18 - 21",
+    "description": "Bài học Toán 4: Bài 9 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 9 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 9 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b9-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 9 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b9-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b10', semester: 1, lessonNumber: 10,
-    title: 'Bài 10: Tìm số trung bình cộng',
-    unit: 'Tập 1 - Chủ đề 4: Dạng toán điển hình',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 60, 61',
-    description: 'Công thức: Trung bình cộng = Tổng các số : Số các số hạng.',
-    summary: 'Tìm TBC của 12, 15, 18: (12 + 15 + 18) : 3 = 45 : 3 = 15.',
-    keyPoints: ['Muốn tìm trung bình cộng: Lấy Tổng chia cho Số lượng số hạng.'],
-    mascotTip: 'BoBo: Cộng tất cả lại rồi chia cho số lượng số nhé!',
+    "id": "math-g4-b10",
+    "semester": 1,
+    "lessonNumber": 10,
+    "title": "Bài 10: Số có nhiều chữ số",
+    "unit": "Chủ đề 3: Số có nhiều chữ số",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 20 - 23",
+    "description": "Bài học Toán 4: Số có nhiều chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 10: Số có nhiều chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 10: Số có nhiều chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b10-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 10: Số có nhiều chữ số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b10-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b11', semester: 1, lessonNumber: 11,
-    title: 'Bài 11: Dạng toán Tìm hai số khi biết Tổng và Hiệu',
-    unit: 'Tập 1 - Chủ đề 4: Dạng toán điển hình',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 66, 67',
-    description: 'Công thức vàng: Số lớn = (Tổng + Hiệu) : 2 ; Số bé = (Tổng - Hiệu) : 2.',
-    summary: 'Dạng toán kinh điển của Tiểu học: Tổng hai số là 50, hiệu là 10 → Số lớn = (50+10):2 = 30, Số bé = 20.',
-    keyPoints: ['Số lớn = (Tổng + Hiệu) : 2.', 'Số bé = Số lớn - Hiệu hoặc (Tổng - Hiệu) : 2.'],
-    mascotTip: 'BoBo: Khắc cốt ghi tâm: (Tổng + Hiệu) chia đôi ra Số Lớn!',
+    "id": "math-g4-b11",
+    "semester": 1,
+    "lessonNumber": 11,
+    "title": "Bài 11 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 22 - 25",
+    "description": "Bài học Toán 4: Bài 11 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 11 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 11 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b11-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 11 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b11-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b12', semester: 1, lessonNumber: 12,
-    title: 'Bài 12: Nhân với số có 2 chữ số & Nhân một số với 10, 100, 1000',
-    unit: 'Tập 1 - Chủ đề 5: Phép nhân và chia',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 72, 73',
-    description: 'Nhân 10, 100 thêm số 0 vào bên phải. Đặt tính nhân với số có 2 chữ số (tích riêng thứ hai lùi 1 cột).',
-    summary: '35 x 10 = 350; 35 x 100 = 3500. Đặt tính 34 x 23.',
-    keyPoints: ['Tích riêng thứ hai phải lùi sang bên trái một cột so với tích riêng thứ nhất.'],
-    mascotTip: 'BoBo: Đừng quên lùi 1 cột cho tích riêng thứ hai nhé!',
+    "id": "math-g4-b12",
+    "semester": 1,
+    "lessonNumber": 12,
+    "title": "Bài 12 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 24 - 27",
+    "description": "Bài học Toán 4: Bài 12 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 12 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 12 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b12-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 12 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b12-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b13', semester: 1, lessonNumber: 13,
-    title: 'Bài 13: Chia cho số có hai chữ số',
-    unit: 'Tập 1 - Chủ đề 5: Phép nhân và chia',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 80, 81',
-    description: 'Kỹ thuật ước lượng thương khi chia cho số có 2 chữ số: 288 : 24 = 12.',
-    summary: 'Làm tròn số để ước lượng thương từng lượt chia.',
-    keyPoints: ['Mỗi lượt chia: Chia → Nhân → Trừ.'],
-    mascotTip: 'BoBo: Ước lượng thương khéo léo giúp phép chia nhanh và chuẩn!',
+    "id": "math-g4-b13",
+    "semester": 1,
+    "lessonNumber": 13,
+    "title": "Bài 13 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 26 - 29",
+    "description": "Bài học Toán 4: Bài 13 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 13 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 13 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b13-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 13 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b13-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b14', semester: 1, lessonNumber: 14,
-    title: 'Bài 14: Ôn tập chung Học kì 1 Toán Lớp 4',
-    unit: 'Tập 1 - Chủ đề 6: Ôn tập Học kì 1',
-    textbookPageRef: 'SGK Toán 4 Tập một — Trang 88, 89',
-    description: 'Đề kiểm tra tổng hợp kiến thức cả Tập 1 SGK Toán 4.',
-    summary: 'Tổng kết 14 bài học lớn của Học kì 1.',
-    keyPoints: ['Mở khóa Cúp Vàng Học kì 1 Toán 4!'],
-    mascotTip: 'BoBo: Chúc mừng bạn đã hoàn thành xuất sắc Tập 1 Toán 4! 🌟',
-  },
-
-  // ================= TẬP 2 (BÀI 15 ĐẾN BÀI 30) =================
-  {
-    id: 'math-g4-b15', semester: 2, lessonNumber: 15,
-    title: 'Bài 15: Khái niệm Phân số (Tử số và Mẫu số)',
-    unit: 'Tập 2 - Chủ đề 7: Phân số diệu kỳ',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 6, 7',
-    description: 'Tử số chỉ số phần lấy, Mẫu số chỉ tổng số phần bằng nhau (Mẫu số luôn khác 0).',
-    summary: 'Phân số 3/4 có tử số là 3, mẫu số là 4. Đọc là: ba phần tư.',
-    keyPoints: ['Mẫu số ở dưới gạch ngang, chỉ số phần chia đều.', 'Tử số ở trên gạch ngang, chỉ số phần đã lấy.'],
-    mascotTip: 'BoBo: Chia cái bánh 🍕 làm 6 miếng, ăn 2 miếng tức là ăn 2/6 cái bánh!',
-  },
-  {
-    id: 'math-g4-b16', semester: 2, lessonNumber: 16,
-    title: 'Bài 16: Tính chất cơ bản của Phân số & Rút gọn phân số',
-    unit: 'Tập 2 - Chủ đề 7: Phân số diệu kỳ',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 12, 13',
-    description: 'Nhân hoặc chia cả tử và mẫu với cùng một số tự nhiên khác 0 được phân số bằng nhau.',
-    summary: 'Rút gọn phân số: Chia cả tử và mẫu cho ước chung để được phân số tối giản (6/8 = 3/4).',
-    keyPoints: ['Phân số tối giản là phân số không thể rút gọn được nữa.'],
-    mascotTip: 'BoBo: Rút gọn phân số về dạng tối giản để tính toán nhẹ nhàng hơn!',
-  },
-  {
-    id: 'math-g4-b17', semester: 2, lessonNumber: 17,
-    title: 'Bài 17: Quy đồng mẫu số các phân số & So sánh phân số',
-    unit: 'Tập 2 - Chủ đề 7: Phân số diệu kỳ',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 18, 19',
-    description: 'Đưa các phân số về cùng một mẫu số chung để so sánh, cộng, trừ.',
-    summary: 'So sánh 2 phân số cùng mẫu: Tử số lớn hơn thì lớn hơn. Khác mẫu: Quy đồng mẫu số trước.',
-    keyPoints: ['Phân số có Tử = Mẫu thì bằng 1 (4/4 = 1).', 'Tử < Mẫu thì < 1; Tử > Mẫu thì > 1.'],
-    mascotTip: 'BoBo: Quy đồng mẫu số chung là chìa khóa mở cánh cửa phân số!',
-  },
-  {
-    id: 'math-g4-b18', semester: 2, lessonNumber: 18,
-    title: 'Bài 18: Phép cộng & trừ hai phân số (Cùng mẫu & Khác mẫu)',
-    unit: 'Tập 2 - Chủ đề 8: Phép tính với phân số',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 26, 27',
-    description: 'Cùng mẫu: Giữ nguyên mẫu số, cộng/trừ tử số. Khác mẫu: Quy đồng rồi cộng/trừ.',
-    summary: '2/5 + 1/5 = 3/5. Khác mẫu: 1/2 + 1/3 = 3/6 + 2/6 = 5/6.',
-    keyPoints: ['Tuyệt đối không lấy mẫu số cộng mẫu số!'],
-    mascotTip: 'BoBo: Luôn giữ nguyên mẫu số chung, chỉ cộng trừ tử số thôi nhé!',
-  },
-  {
-    id: 'math-g4-b19', semester: 2, lessonNumber: 19,
-    title: 'Bài 19: Phép nhân & chia phân số',
-    unit: 'Tập 2 - Chủ đề 8: Phép tính với phân số',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 34, 35',
-    description: 'Nhân phân số: Tử x Tử, Mẫu x Mẫu. Chia phân số: Lấy phân số thứ nhất nhân đảo ngược phân số thứ hai.',
-    summary: '2/3 x 4/5 = (2x4)/(3x5) = 8/15. Chia: 2/3 : 4/5 = 2/3 x 5/4 = 10/12 = 5/6.',
-    keyPoints: ['Phép chia phân số chính là nhân với phân số đảo ngược.'],
-    mascotTip: 'BoBo: Chia phân số thì lộn ngược phân số sau rồi nhân lại!',
-  },
-  {
-    id: 'math-g4-b20', semester: 2, lessonNumber: 20,
-    title: 'Bài 20: Dạng toán Tìm phân số của một số',
-    unit: 'Tập 2 - Chủ đề 8: Phép tính với phân số',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 42, 43',
-    description: 'Muốn tìm m/n của số a, ta lấy a NHÂN với m/n.',
-    summary: 'Tìm 2/3 của 15 quả cam: Lấy 15 x 2/3 = (15 x 2) : 3 = 10 quả cam.',
-    keyPoints: ['Lấy số đó nhân với phân số.'],
-    mascotTip: 'BoBo: Tìm 3/4 của 20: 20 x 3/4 = 15!',
+    "id": "math-g4-b14",
+    "semester": 1,
+    "lessonNumber": 14,
+    "title": "Bài 14: Yến, tạ, tấn",
+    "unit": "Chủ đề 4: Một số đơn vị đo đại lượng",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 28 - 31",
+    "description": "Bài học Toán 4: Yến, tạ, tấn.",
+    "summary": "Nội dung trọng tâm của Bài 14: Yến, tạ, tấn chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 14: Yến, tạ, tấn.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b14-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 14: Yến, tạ, tấn: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b14-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b21', semester: 2, lessonNumber: 21,
-    title: 'Bài 21: Dấu hiệu chia hết cho 2, 5, 3, 9',
-    unit: 'Tập 2 - Chủ đề 9: Dấu hiệu chia hết',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 50, 51',
-    description: 'Chia hết cho 2 (tận cùng chẵn 0,2,4,6,8). Chia hết cho 5 (tận cùng 0,5). Chia hết cho 3, 9 (Tổng các chữ số chia hết cho 3, 9).',
-    summary: 'Số 135 có tổng các chữ số là 1 + 3 + 5 = 9 (chia hết cho 9 và 3), tận cùng là 5 (chia hết cho 5).',
-    keyPoints: ['Chia hết cho cả 2 và 5: Tận cùng bắt buộc là 0.', 'Chia hết cho 9 thì chắc chắn chia hết cho 3.'],
-    mascotTip: 'BoBo: Cộng tất cả chữ số lại, nếu chia hết cho 9 thì chia hết cho 9!',
+    "id": "math-g4-b15",
+    "semester": 1,
+    "lessonNumber": 15,
+    "title": "Bài 15: Giây, thế kỉ",
+    "unit": "Chủ đề 4: Một số đơn vị đo đại lượng",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 30 - 33",
+    "description": "Bài học Toán 4: Giây, thế kỉ.",
+    "summary": "Nội dung trọng tâm của Bài 15: Giây, thế kỉ chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 15: Giây, thế kỉ.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b15-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 15: Giây, thế kỉ: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b15-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b22', semester: 2, lessonNumber: 22,
-    title: 'Bài 22: Hình Bình Hành & Hình Thoi (Chu vi & Diện tích)',
-    unit: 'Tập 2 - Chủ đề 10: Hình học nâng cao',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 58, 59',
-    description: 'DT Hình Bình Hành = Đáy x Cao (a x h). DT Hình Thoi = (m x n) : 2 (Tích 2 đường chéo chia 2).',
-    summary: 'Hình thoi có 4 cạnh bằng nhau và 2 đường chéo vuông góc với nhau.',
-    keyPoints: ['DT Hình bình hành: S = a x h.', 'DT Hình thoi: S = (m x n) : 2.'],
-    mascotTip: 'BoBo: Diện tích hình thoi bằng tích hai đường chéo chia đôi!',
+    "id": "math-g4-b16",
+    "semester": 1,
+    "lessonNumber": 16,
+    "title": "Bài 16 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 32 - 35",
+    "description": "Bài học Toán 4: Bài 16 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 16 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 16 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b16-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 16 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b16-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b23', semester: 2, lessonNumber: 23,
-    title: 'Bài 23: Mét vuông (m²), Đề-xi-mét vuông (dm²), Mi-li-mét vuông (mm²)',
-    unit: 'Tập 2 - Chủ đề 10: Bảng đơn vị đo diện tích',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 66, 67',
-    description: '1 m² = 100 dm² = 10.000 cm². Mỗi đơn vị diện tích liền kề gấp/kém nhau 100 lần.',
-    summary: 'Bảng đơn vị đo diện tích: m² → dm² → cm² → mm².',
-    keyPoints: ['Đơn vị diện tích mỗi nấc đổi gấp 100 lần (thêm 2 số 0).'],
-    mascotTip: 'BoBo: Chú ý: Đơn vị độ dài gấp 10 lần, nhưng diện tích gấp 100 lần!',
+    "id": "math-g4-b17",
+    "semester": 1,
+    "lessonNumber": 17,
+    "title": "Bài 17 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 34 - 37",
+    "description": "Bài học Toán 4: Bài 17 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 17 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 17 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b17-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 17 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b17-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b24', semester: 2, lessonNumber: 24,
-    title: 'Bài 24: Dạng toán Tìm hai số khi biết Tổng và Tỉ số (Tổng - Tỉ)',
-    unit: 'Tập 2 - Chủ đề 11: Các dạng toán tỉ số điển hình',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 74, 75',
-    description: '4 bước giải: 1. Vẽ sơ đồ → 2. Tổng số phần bằng nhau → 3. Giá trị 1 phần → 4. Tìm từng số.',
-    summary: 'Tổng hai số là 72, tỉ số là 1/3 → Tổng số phần = 1 + 3 = 4 phần → Số bé = 72 : 4 = 18, Số lớn = 54.',
-    keyPoints: ['Tổng số phần bằng nhau = Tử số + Mẫu số của tỉ số.', 'Giá trị 1 phần = Tổng hai số : Tổng số phần.'],
-    mascotTip: 'BoBo: Vẽ sơ đồ đoạn thẳng ra là giải ngon lành bài toán Tổng - Tỉ!',
+    "id": "math-g4-b18",
+    "semester": 1,
+    "lessonNumber": 18,
+    "title": "Bài 18 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 36 - 39",
+    "description": "Bài học Toán 4: Bài 18 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 18 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 18 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b18-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 18 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b18-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b25', semester: 2, lessonNumber: 25,
-    title: 'Bài 25: Dạng toán Tìm hai số khi biết Hiệu và Tỉ số (Hiệu - Tỉ)',
-    unit: 'Tập 2 - Chủ đề 11: Các dạng toán tỉ số điển hình',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 82, 83',
-    description: '4 bước giải: 1. Vẽ sơ đồ → 2. Hiệu số phần bằng nhau → 3. Giá trị 1 phần → 4. Tìm từng số.',
-    summary: 'Hiệu hai số là 30, tỉ số là 2/5 → Hiệu số phần = 5 - 2 = 3 phần → Số bé = (30 : 3) x 2 = 20, Số lớn = 50.',
-    keyPoints: ['Hiệu số phần bằng nhau = Mẫu số - Tử số.', 'Giá trị 1 phần = Hiệu hai số : Hiệu số phần.'],
-    mascotTip: 'BoBo: Nhớ lấy Hiệu chia cho Hiệu số phần bằng nhau bạn nhé!',
+    "id": "math-g4-b19",
+    "semester": 1,
+    "lessonNumber": 19,
+    "title": "Bài 19 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 38 - 41",
+    "description": "Bài học Toán 4: Bài 19 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 19 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 19 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b19-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 19 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b19-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b26', semester: 2, lessonNumber: 26,
-    title: 'Bài 26: Tỉ lệ bản đồ & Ứng dụng thực tế',
-    unit: 'Tập 2 - Chủ đề 12: Tỉ lệ bản đồ',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 90, 91',
-    description: 'Tỉ lệ 1 : 1000 nghĩa là độ dài 1 cm trên bản đồ tương ứng với 1000 cm (10 m) ngoài thực địa.',
-    summary: 'Khoảng cách thực tế = Khoảng cách trên bản đồ x Mẫu số tỉ lệ.',
-    keyPoints: ['Đổi đơn vị đo phù hợp sau khi nhân tỉ lệ.'],
-    mascotTip: 'BoBo: Bản đồ thu nhỏ thế giới bao la vào trong trang giấy!',
+    "id": "math-g4-b20",
+    "semester": 1,
+    "lessonNumber": 20,
+    "title": "Bài 20 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 40 - 43",
+    "description": "Bài học Toán 4: Bài 20 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 20 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 20 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b20-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 20 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b20-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b27', semester: 2, lessonNumber: 27,
-    title: 'Bài 27: Ôn tập phép tính Phân số cả năm',
-    unit: 'Tập 2 - Chủ đề 13: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 96, 97',
-    description: 'Tính toán thành thạo cộng, trừ, nhân, chia phân số và biểu thức nhiều dấu ngoặc.',
-    summary: 'Rèn luyện phản xạ tính toán phân số chính xác tuyệt đối.',
-    keyPoints: ['Rút gọn phân số về dạng tối giản sau khi tính.'],
-    mascotTip: 'BoBo: Giữ vững phong độ tính toán để đạt điểm 10!',
+    "id": "math-g4-b21",
+    "semester": 1,
+    "lessonNumber": 21,
+    "title": "Bài 21 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 42 - 45",
+    "description": "Bài học Toán 4: Bài 21 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 21 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 21 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b21-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 21 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b21-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b28', semester: 2, lessonNumber: 28,
-    title: 'Bài 28: Ôn tập Hình học & Đo lường cả năm',
-    unit: 'Tập 2 - Chủ đề 13: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 102, 103',
-    description: 'Tổng kết góc nhọn, tù, bẹt, vuông góc, song song, hình bình hành, hình thoi, yến tạ tấn, m².',
-    summary: 'Hệ thống hóa toàn bộ mảng kiến thức hình học và đo lường Lớp 4.',
-    keyPoints: ['Thuộc làu các công thức tính chu vi và diện tích.'],
-    mascotTip: 'BoBo: Ôn tập kỹ để chuẩn bị nhận Cúp Danh Dự cuối năm!',
+    "id": "math-g4-b22",
+    "semester": 1,
+    "lessonNumber": 22,
+    "title": "Bài 22: Phép cộng các số có nhiều chữ số",
+    "unit": "Chủ đề 5: Phép cộng và phép trừ",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 44 - 47",
+    "description": "Bài học Toán 4: Phép cộng các số có nhiều chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 22: Phép cộng các số có nhiều chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 22: Phép cộng các số có nhiều chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b22-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 22: Phép cộng các số có nhiều chữ số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b22-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b29', semester: 2, lessonNumber: 29,
-    title: 'Bài 29: Ôn tập chung toàn bộ chương trình Toán Lớp 4',
-    unit: 'Tập 2 - Chủ đề 13: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 108, 109',
-    description: 'Đề kiểm tra tổng kết đánh giá năng lực Toán Lớp 4.',
-    summary: 'Đánh giá toàn diện năng lực Toán học Lớp 4 chuẩn GDPT 2018.',
-    keyPoints: ['Làm bài tự tin và kiểm tra lại toàn bộ bài giải.'],
-    mascotTip: 'BoBo: Bạn đã sẵn sàng bước vào Lớp 5 - năm học cuối cấp tiểu học!',
+    "id": "math-g4-b23",
+    "semester": 1,
+    "lessonNumber": 23,
+    "title": "Bài 23: Phép trừ các số có nhiều chữ số",
+    "unit": "Chủ đề 5: Phép cộng và phép trừ",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 46 - 49",
+    "description": "Bài học Toán 4: Phép trừ các số có nhiều chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 23: Phép trừ các số có nhiều chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 23: Phép trừ các số có nhiều chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b23-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 23: Phép trừ các số có nhiều chữ số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b23-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g4-b30', semester: 2, lessonNumber: 30,
-    title: 'Bài 30: Đấu trường Toán học & Vinh danh Bậc Thầy Số Học Lớp 4',
-    unit: 'Tập 2 - Chủ đề 13: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 4 Tập hai — Trang 114, 115',
-    description: 'Chinh phục ải Boss cuối cùng để nhận Huy hiệu Bậc Thầy Toán Học Lớp 4!',
-    summary: 'Vinh danh hoàn thành xuất sắc toàn bộ 30 bài học Toán Lớp 4.',
-    keyPoints: ['Mở khóa Cúp Vàng Lớp 4 và tự tin tiến vào Lớp 5!'],
-    mascotTip: 'BoBo: Hoan hô! Bạn là Kiện Tướng Toán Học Lớp 4! 🏆🎉',
+    "id": "math-g4-b24",
+    "semester": 1,
+    "lessonNumber": 24,
+    "title": "Bài 24 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 48 - 51",
+    "description": "Bài học Toán 4: Bài 24 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 24 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 24 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b24-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 24 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b24-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
   },
+  {
+    "id": "math-g4-b25",
+    "semester": 1,
+    "lessonNumber": 25,
+    "title": "Bài 25: Tìm hai số biết tổng và hiệu của hai số đó",
+    "unit": "Chủ đề 5: Phép cộng và phép trừ",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 50 - 53",
+    "description": "Bài học Toán 4: Tìm hai số biết tổng và hiệu của hai số đó.",
+    "summary": "Nội dung trọng tâm của Bài 25: Tìm hai số biết tổng và hiệu của hai số đó chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 25: Tìm hai số biết tổng và hiệu của hai số đó.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b25-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 25: Tìm hai số biết tổng và hiệu của hai số đó: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b25-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b26",
+    "semester": 1,
+    "lessonNumber": 26,
+    "title": "Bài 26 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 52 - 55",
+    "description": "Bài học Toán 4: Bài 26 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 26 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 26 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b26-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 26 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b26-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b27",
+    "semester": 1,
+    "lessonNumber": 27,
+    "title": "Bài 27: Hai đường thẳng vuông góc",
+    "unit": "Chủ đề 6: Đường thẳng vuông góc và song song",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 54 - 57",
+    "description": "Bài học Toán 4: Hai đường thẳng vuông góc.",
+    "summary": "Nội dung trọng tâm của Bài 27: Hai đường thẳng vuông góc chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 27: Hai đường thẳng vuông góc.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b27-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 27: Hai đường thẳng vuông góc: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b27-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b28",
+    "semester": 1,
+    "lessonNumber": 28,
+    "title": "Bài 28 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 56 - 59",
+    "description": "Bài học Toán 4: Bài 28 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 28 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 28 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b28-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 28 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b28-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b29",
+    "semester": 1,
+    "lessonNumber": 29,
+    "title": "Bài 29: Hai đường thẳng song song",
+    "unit": "Chủ đề 6: Đường thẳng vuông góc và song song",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 58 - 61",
+    "description": "Bài học Toán 4: Hai đường thẳng song song.",
+    "summary": "Nội dung trọng tâm của Bài 29: Hai đường thẳng song song chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 29: Hai đường thẳng song song.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b29-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 29: Hai đường thẳng song song: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b29-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b30",
+    "semester": 1,
+    "lessonNumber": 30,
+    "title": "Bài 30 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 60 - 63",
+    "description": "Bài học Toán 4: Bài 30 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 30 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 30 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b30-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 30 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b30-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b31",
+    "semester": 1,
+    "lessonNumber": 31,
+    "title": "Bài 31 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 62 - 65",
+    "description": "Bài học Toán 4: Bài 31 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 31 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 31 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b31-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 31 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b31-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b32",
+    "semester": 1,
+    "lessonNumber": 32,
+    "title": "Bài 32 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 64 - 67",
+    "description": "Bài học Toán 4: Bài 32 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 32 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 32 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b32-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 32 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b32-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b33",
+    "semester": 1,
+    "lessonNumber": 33,
+    "title": "Bài 33 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 66 - 69",
+    "description": "Bài học Toán 4: Bài 33 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 33 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 33 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b33-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 33 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b33-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b34",
+    "semester": 1,
+    "lessonNumber": 34,
+    "title": "Bài 34 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 68 - 71",
+    "description": "Bài học Toán 4: Bài 34 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 34 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 34 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b34-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 34 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b34-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b35",
+    "semester": 1,
+    "lessonNumber": 35,
+    "title": "Bài 35 (Toán 4 Tập 1)",
+    "unit": "Chủ đề Toán 4 Tập 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 70 - 73",
+    "description": "Bài học Toán 4: Bài 35 (Toán 4 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 35 (Toán 4 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 35 (Toán 4 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b35-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 35 (Toán 4 Tập 1): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b35-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b36",
+    "semester": 1,
+    "lessonNumber": 36,
+    "title": "Bài 36: Ôn tập đo lường",
+    "unit": "Chủ đề 7: Ôn tập học kì 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 72 - 75",
+    "description": "Bài học Toán 4: Ôn tập đo lường.",
+    "summary": "Nội dung trọng tâm của Bài 36: Ôn tập đo lường chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 36: Ôn tập đo lường.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b36-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 36: Ôn tập đo lường: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b36-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b37",
+    "semester": 1,
+    "lessonNumber": 37,
+    "title": "Bài 37: Ôn tập chung học kì 1",
+    "unit": "Chủ đề 7: Ôn tập học kì 1",
+    "textbookPageRef": "SGK Toán 4 Tập một — Trang 74 - 77",
+    "description": "Bài học Toán 4: Ôn tập chung học kì 1.",
+    "summary": "Nội dung trọng tâm của Bài 37: Ôn tập chung học kì 1 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 37: Ôn tập chung học kì 1.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b37-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 37: Ôn tập chung học kì 1: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b37-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b38",
+    "semester": 2,
+    "lessonNumber": 38,
+    "title": "Bài 38: Nhân với số có một chữ số",
+    "unit": "Chủ đề 8: Phép nhân và phép chia",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 2 - 5",
+    "description": "Bài học Toán 4: Nhân với số có một chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 38: Nhân với số có một chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 38: Nhân với số có một chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b38-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 38: Nhân với số có một chữ số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b38-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b39",
+    "semester": 2,
+    "lessonNumber": 39,
+    "title": "Bài 39: Chia cho số có một chữ số",
+    "unit": "Chủ đề 8: Phép nhân và phép chia",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 4 - 7",
+    "description": "Bài học Toán 4: Chia cho số có một chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 39: Chia cho số có một chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 39: Chia cho số có một chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b39-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 39: Chia cho số có một chữ số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b39-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b40",
+    "semester": 2,
+    "lessonNumber": 40,
+    "title": "Bài 40 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 6 - 9",
+    "description": "Bài học Toán 4: Bài 40 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 40 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 40 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b40-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 40 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b40-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b41",
+    "semester": 2,
+    "lessonNumber": 41,
+    "title": "Bài 41 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 8 - 11",
+    "description": "Bài học Toán 4: Bài 41 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 41 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 41 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b41-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 41 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b41-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b42",
+    "semester": 2,
+    "lessonNumber": 42,
+    "title": "Bài 42 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 10 - 13",
+    "description": "Bài học Toán 4: Bài 42 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 42 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 42 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b42-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 42 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b42-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b43",
+    "semester": 2,
+    "lessonNumber": 43,
+    "title": "Bài 43: Nhân với số có hai chữ số",
+    "unit": "Chủ đề 8: Phép nhân và phép chia",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 12 - 15",
+    "description": "Bài học Toán 4: Nhân với số có hai chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 43: Nhân với số có hai chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 43: Nhân với số có hai chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b43-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 43: Nhân với số có hai chữ số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b43-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b44",
+    "semester": 2,
+    "lessonNumber": 44,
+    "title": "Bài 44: Chia cho số có hai chữ số",
+    "unit": "Chủ đề 8: Phép nhân và phép chia",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 14 - 17",
+    "description": "Bài học Toán 4: Chia cho số có hai chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 44: Chia cho số có hai chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 44: Chia cho số có hai chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b44-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 44: Chia cho số có hai chữ số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b44-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b45",
+    "semester": 2,
+    "lessonNumber": 45,
+    "title": "Bài 45 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 16 - 19",
+    "description": "Bài học Toán 4: Bài 45 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 45 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 45 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b45-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 45 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b45-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b46",
+    "semester": 2,
+    "lessonNumber": 46,
+    "title": "Bài 46: Tìm số trung bình cộng",
+    "unit": "Chủ đề 8: Phép nhân và phép chia",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 18 - 21",
+    "description": "Bài học Toán 4: Tìm số trung bình cộng.",
+    "summary": "Nội dung trọng tâm của Bài 46: Tìm số trung bình cộng chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 46: Tìm số trung bình cộng.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b46-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 46: Tìm số trung bình cộng: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b46-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b47",
+    "semester": 2,
+    "lessonNumber": 47,
+    "title": "Bài toán liên quan đến rút về đơn vị",
+    "unit": "Chủ đề 8: Phép nhân và phép chia",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 20 - 23",
+    "description": "Bài học Toán 4: Bài toán liên quan đến rút về đơn vị.",
+    "summary": "Nội dung trọng tâm của Bài toán liên quan đến rút về đơn vị chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài toán liên quan đến rút về đơn vị.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b47-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài toán liên quan đến rút về đơn vị: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b47-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b48",
+    "semester": 2,
+    "lessonNumber": 48,
+    "title": "Bài 48 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 22 - 25",
+    "description": "Bài học Toán 4: Bài 48 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 48 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 48 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b48-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 48 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b48-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b49",
+    "semester": 2,
+    "lessonNumber": 49,
+    "title": "Bài 49: Dãy số liệu thống kê",
+    "unit": "Chủ đề 9: Làm quen với yếu tố thống kê, xác suất",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 24 - 27",
+    "description": "Bài học Toán 4: Dãy số liệu thống kê.",
+    "summary": "Nội dung trọng tâm của Bài 49: Dãy số liệu thống kê chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 49: Dãy số liệu thống kê.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b49-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 49: Dãy số liệu thống kê: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b49-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b50",
+    "semester": 2,
+    "lessonNumber": 50,
+    "title": "Bài 50: Biểu đồ cột",
+    "unit": "Chủ đề 9: Làm quen với yếu tố thống kê, xác suất",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 26 - 29",
+    "description": "Bài học Toán 4: Biểu đồ cột.",
+    "summary": "Nội dung trọng tâm của Bài 50: Biểu đồ cột chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 50: Biểu đồ cột.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b50-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 50: Biểu đồ cột: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b50-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b51",
+    "semester": 2,
+    "lessonNumber": 51,
+    "title": "Bài 51 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 28 - 31",
+    "description": "Bài học Toán 4: Bài 51 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 51 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 51 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b51-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 51 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b51-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b52",
+    "semester": 2,
+    "lessonNumber": 52,
+    "title": "Bài 52 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 30 - 33",
+    "description": "Bài học Toán 4: Bài 52 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 52 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 52 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b52-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 52 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b52-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b53",
+    "semester": 2,
+    "lessonNumber": 53,
+    "title": "Bài 53: Khái niệm phân số",
+    "unit": "Chủ đề 10: Phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 32 - 35",
+    "description": "Bài học Toán 4: Khái niệm phân số.",
+    "summary": "Nội dung trọng tâm của Bài 53: Khái niệm phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 53: Khái niệm phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b53-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 53: Khái niệm phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b53-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b54",
+    "semester": 2,
+    "lessonNumber": 54,
+    "title": "Bài 54 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 34 - 37",
+    "description": "Bài học Toán 4: Bài 54 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 54 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 54 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b54-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 54 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b54-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b55",
+    "semester": 2,
+    "lessonNumber": 55,
+    "title": "Bài 55: Tính chất cơ bản của phân số",
+    "unit": "Chủ đề 10: Phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 36 - 39",
+    "description": "Bài học Toán 4: Tính chất cơ bản của phân số.",
+    "summary": "Nội dung trọng tâm của Bài 55: Tính chất cơ bản của phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 55: Tính chất cơ bản của phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b55-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 55: Tính chất cơ bản của phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b55-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b56",
+    "semester": 2,
+    "lessonNumber": 56,
+    "title": "Bài 56: Rút gọn phân số",
+    "unit": "Chủ đề 10: Phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 38 - 41",
+    "description": "Bài học Toán 4: Rút gọn phân số.",
+    "summary": "Nội dung trọng tâm của Bài 56: Rút gọn phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 56: Rút gọn phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b56-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 56: Rút gọn phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b56-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b57",
+    "semester": 2,
+    "lessonNumber": 57,
+    "title": "Bài 57: Quy đồng mẫu số các phân số",
+    "unit": "Chủ đề 10: Phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 40 - 43",
+    "description": "Bài học Toán 4: Quy đồng mẫu số các phân số.",
+    "summary": "Nội dung trọng tâm của Bài 57: Quy đồng mẫu số các phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 57: Quy đồng mẫu số các phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b57-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 57: Quy đồng mẫu số các phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b57-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b58",
+    "semester": 2,
+    "lessonNumber": 58,
+    "title": "Bài 58: So sánh phân số",
+    "unit": "Chủ đề 10: Phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 42 - 45",
+    "description": "Bài học Toán 4: So sánh phân số.",
+    "summary": "Nội dung trọng tâm của Bài 58: So sánh phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 58: So sánh phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b58-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 58: So sánh phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b58-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b59",
+    "semester": 2,
+    "lessonNumber": 59,
+    "title": "Bài 59 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 44 - 47",
+    "description": "Bài học Toán 4: Bài 59 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 59 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 59 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b59-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 59 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b59-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b60",
+    "semester": 2,
+    "lessonNumber": 60,
+    "title": "Bài 60: Phép cộng phân số",
+    "unit": "Chủ đề 11: Phép cộng, phép trừ phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 46 - 49",
+    "description": "Bài học Toán 4: Phép cộng phân số.",
+    "summary": "Nội dung trọng tâm của Bài 60: Phép cộng phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 60: Phép cộng phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b60-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 60: Phép cộng phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b60-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b61",
+    "semester": 2,
+    "lessonNumber": 61,
+    "title": "Bài 61: Phép trừ phân số",
+    "unit": "Chủ đề 11: Phép cộng, phép trừ phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 48 - 51",
+    "description": "Bài học Toán 4: Phép trừ phân số.",
+    "summary": "Nội dung trọng tâm của Bài 61: Phép trừ phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 61: Phép trừ phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b61-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 61: Phép trừ phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b61-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b62",
+    "semester": 2,
+    "lessonNumber": 62,
+    "title": "Bài 62 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 50 - 53",
+    "description": "Bài học Toán 4: Bài 62 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 62 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 62 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b62-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 62 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b62-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b63",
+    "semester": 2,
+    "lessonNumber": 63,
+    "title": "Bài 63: Phép nhân phân số",
+    "unit": "Chủ đề 12: Phép nhân, phép chia phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 52 - 55",
+    "description": "Bài học Toán 4: Phép nhân phân số.",
+    "summary": "Nội dung trọng tâm của Bài 63: Phép nhân phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 63: Phép nhân phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b63-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 63: Phép nhân phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b63-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b64",
+    "semester": 2,
+    "lessonNumber": 64,
+    "title": "Bài 64: Phép chia phân số",
+    "unit": "Chủ đề 12: Phép nhân, phép chia phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 54 - 57",
+    "description": "Bài học Toán 4: Phép chia phân số.",
+    "summary": "Nội dung trọng tâm của Bài 64: Phép chia phân số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 64: Phép chia phân số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b64-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 64: Phép chia phân số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b64-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b65",
+    "semester": 2,
+    "lessonNumber": 65,
+    "title": "Bài 65: Tìm phân số của một số",
+    "unit": "Chủ đề 12: Phép nhân, phép chia phân số",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 56 - 59",
+    "description": "Bài học Toán 4: Tìm phân số của một số.",
+    "summary": "Nội dung trọng tâm của Bài 65: Tìm phân số của một số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 65: Tìm phân số của một số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b65-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 65: Tìm phân số của một số: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b65-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b66",
+    "semester": 2,
+    "lessonNumber": 66,
+    "title": "Bài 66 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 58 - 61",
+    "description": "Bài học Toán 4: Bài 66 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 66 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 66 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b66-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 66 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b66-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b67",
+    "semester": 2,
+    "lessonNumber": 67,
+    "title": "Bài 67 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 60 - 63",
+    "description": "Bài học Toán 4: Bài 67 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 67 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 67 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b67-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 67 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b67-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b68",
+    "semester": 2,
+    "lessonNumber": 68,
+    "title": "Bài 68 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 62 - 65",
+    "description": "Bài học Toán 4: Bài 68 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 68 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 68 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b68-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 68 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b68-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b69",
+    "semester": 2,
+    "lessonNumber": 69,
+    "title": "Bài 69 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 64 - 67",
+    "description": "Bài học Toán 4: Bài 69 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 69 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 69 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b69-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 69 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b69-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b70",
+    "semester": 2,
+    "lessonNumber": 70,
+    "title": "Bài 70 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 66 - 69",
+    "description": "Bài học Toán 4: Bài 70 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 70 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 70 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b70-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 70 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b70-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b71",
+    "semester": 2,
+    "lessonNumber": 71,
+    "title": "Bài 71 (Toán 4 Tập 2)",
+    "unit": "Chủ đề Toán 4 Tập 2",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 68 - 71",
+    "description": "Bài học Toán 4: Bài 71 (Toán 4 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 71 (Toán 4 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 71 (Toán 4 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b71-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 71 (Toán 4 Tập 2): Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b71-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b72",
+    "semester": 2,
+    "lessonNumber": 72,
+    "title": "Bài 72: Ôn tập một số yếu tố thống kê và xác suất",
+    "unit": "Chủ đề 13: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 70 - 73",
+    "description": "Bài học Toán 4: Ôn tập một số yếu tố thống kê và xác suất.",
+    "summary": "Nội dung trọng tâm của Bài 72: Ôn tập một số yếu tố thống kê và xác suất chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 72: Ôn tập một số yếu tố thống kê và xác suất.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b72-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 72: Ôn tập một số yếu tố thống kê và xác suất: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b72-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g4-b73",
+    "semester": 2,
+    "lessonNumber": 73,
+    "title": "Bài 73: Ôn tập chung cuối năm",
+    "unit": "Chủ đề 13: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 4 Tập hai — Trang 72 - 75",
+    "description": "Bài học Toán 4: Ôn tập chung cuối năm.",
+    "summary": "Nội dung trọng tâm của Bài 73: Ôn tập chung cuối năm chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 73: Ôn tập chung cuối năm.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g4-b73-q1",
+        "type": "bubble_choice",
+        "questionText": "Kiểm tra kiến thức Bài 73: Ôn tập chung cuối năm: Chọn kết quả chính xác:",
+        "audioText": "Bé hãy chọn kết quả chính xác cho bài toán nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Kết quả chuẩn xác theo bài học",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Kết quả sai lệch hàng chục"
+          },
+          {
+            "id": "c",
+            "label": "Kết quả sai lệch hàng đơn vị"
+          }
+        ]
+      },
+      {
+        "id": "math-g4-b73-q2",
+        "type": "bubble_choice",
+        "questionText": "Quy tắc áp dụng cho dạng bài này là gì?",
+        "audioText": "Quy tắc toán học nào cần được áp dụng?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Áp dụng đúng công thức và tính chất chuẩn SGK Lớp 4",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Thực hiện tùy ý không theo thứ tự phép tính"
+          },
+          {
+            "id": "c",
+            "label": "Chỉ tính nhẩm không cần kiểm tra lại"
+          }
+        ]
+      }
+    ]
+  }
 ];

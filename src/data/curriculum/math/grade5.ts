@@ -1,257 +1,4654 @@
 import { CurriculumTopic } from '../types';
 
 export const MATH_GRADE_5_TOPICS: CurriculumTopic[] = [
-  // ================= TẬP 1 (BÀI 1 ĐẾN BÀI 25) =================
   {
-    id: 'math-g5-b1', semester: 1, lessonNumber: 1,
-    title: 'Bài 1: Ôn tập về Phân số và Phép tính phân số',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và Phân số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 6, 7',
-    description: 'Cộng, trừ, nhân, chia phân số, quy đồng và rút gọn phân số.',
-    summary: 'Rèn luyện thành thạo kỹ năng tính toán phân số mở đầu Lớp 5.',
-    keyPoints: ['Quy đồng mẫu số chung trước khi cộng trừ.', 'Nhân tử với tử, mẫu với mẫu. Chia thì nhân đảo ngược.'],
-    mascotTip: 'BoBo: Ôn tập vững phân số là bước đệm chinh phục số thập phân!',
+    "id": "math-g5-b1",
+    "semester": 1,
+    "lessonNumber": 1,
+    "title": "Bài 1: Ôn tập số tự nhiên",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 2 - 5",
+    "description": "Bài học Toán 5: Ôn tập số tự nhiên.",
+    "summary": "Nội dung trọng tâm của Bài 1: Ôn tập số tự nhiên chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 1: Ôn tập số tự nhiên.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b1-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 1: Ôn tập số tự nhiên: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b1-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b2', semester: 1, lessonNumber: 2,
-    title: 'Bài 2: Khái niệm Hỗn số & Chuyển đổi hỗn số thành phân số',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và Phân số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 12, 13',
-    description: 'Hỗn số gồm Phần nguyên và Phần phân số (Phần phân số luôn bé hơn 1).',
-    summary: 'Chuyển hỗn số ra phân số: Tử số = (Phần nguyên x Mẫu số) + Tử số cũ, giữ nguyên mẫu.',
-    keyPoints: ['2 3/5 = (2 x 5 + 3)/5 = 13/5.', 'Phần phân số của hỗn số luôn bé hơn 1.'],
-    mascotTip: 'BoBo: Đổi hỗn số ra phân số: Lấy phần nguyên nhân mẫu cộng tử!',
+    "id": "math-g5-b2",
+    "semester": 1,
+    "lessonNumber": 2,
+    "title": "Bài 2 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 4 - 7",
+    "description": "Bài học Toán 5: Bài 2 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 2 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 2 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b2-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 2 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b2-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b3', semester: 1, lessonNumber: 3,
-    title: 'Bài 3: Phân số thập phân (Mẫu là 10, 100, 1000...)',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và Phân số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 18, 19',
-    description: 'Phân số thập phân là phân số có mẫu số là 10, 100, 1000, 10.000...',
-    summary: 'Quy đồng mẫu số về 10, 100, 1000: 3/5 = 6/10; 7/25 = 28/100.',
-    keyPoints: ['Mẫu số bắt buộc phải là 10, 100, 1000...'],
-    mascotTip: 'BoBo: Nhân cả tử và mẫu để biến mẫu số thành 10, 100 hoặc 1000 nhé!',
+    "id": "math-g5-b3",
+    "semester": 1,
+    "lessonNumber": 3,
+    "title": "Bài 3 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 6 - 9",
+    "description": "Bài học Toán 5: Bài 3 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 3 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 3 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b3-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 3 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b3-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b4', semester: 1, lessonNumber: 4,
-    title: 'Bài 4: Héc-ta (ha) & Ki-lô-mét vuông (km²)',
-    unit: 'Tập 1 - Chủ đề 2: Bảng đơn vị đo diện tích',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 28, 29',
-    description: '1 ha = 10.000 m² (Héc-ta là đơn vị đo diện tích đất nông nghiệp, rừng cây). 1 km² = 100 ha = 1.000.000 m².',
-    summary: 'Héc-ta viết tắt là ha. 1 ha bằng diện tích hình vuông có cạnh dài 100 m.',
-    keyPoints: ['1 ha = 10.000 m².', '1 km² = 100 ha = 1.000.000 m².', '5 ha = 50.000 m².'],
-    mascotTip: 'BoBo: Cánh đồng mẫu lớn rộng 10 héc-ta bằng 100.000 mét vuông!',
+    "id": "math-g5-b4",
+    "semester": 1,
+    "lessonNumber": 4,
+    "title": "Bài 4: Phân số thập phân",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 8 - 11",
+    "description": "Bài học Toán 5: Phân số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 4: Phân số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 4: Phân số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b4-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 4: Phân số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b4-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b5', semester: 1, lessonNumber: 5,
-    title: 'Bài 5: Khái niệm Số Thập Phân & Cấu tạo số',
-    unit: 'Tập 1 - Chủ đề 3: Số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 36, 37',
-    description: 'Số thập phân gồm Phần nguyên và Phần thập phân, ngăn cách bởi dấu phẩy.',
-    summary: 'Số 12,345: Phần nguyên là 12, Phần thập phân là 345. Các hàng: Hàng phần mười (3), hàng phần trăm (4), hàng phần nghìn (5).',
-    keyPoints: ['Bên trái dấu phẩy là Phần nguyên, bên phải dấu phẩy là Phần thập phân.'],
-    mascotTip: 'BoBo: 1/10 = 0,1; 1/100 = 0,01; 1/1000 = 0,001!',
+    "id": "math-g5-b5",
+    "semester": 1,
+    "lessonNumber": 5,
+    "title": "Bài 5 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 10 - 13",
+    "description": "Bài học Toán 5: Bài 5 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 5 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 5 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b5-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 5 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b5-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b6', semester: 1, lessonNumber: 6,
-    title: 'Bài 6: Số thập phân bằng nhau & So sánh số thập phân',
-    unit: 'Tập 1 - Chủ đề 3: Số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 42, 43',
-    description: 'Thêm hoặc bớt chữ số 0 ở tận cùng bên phải phần thập phân thì giá trị không đổi (0,9 = 0,90 = 0,900).',
-    summary: 'So sánh: So sánh phần nguyên trước. Nếu bằng nhau so sánh hàng phần mười, phần trăm, phần nghìn.',
-    keyPoints: ['12,5 > 12,38 (vì hàng phần mười 5 > 3).', '0,75 = 0,750.'],
-    mascotTip: 'BoBo: Đừng nhìn vào số lượng chữ số, hãy so sánh từng hàng từ trái sang phải!',
+    "id": "math-g5-b6",
+    "semester": 1,
+    "lessonNumber": 6,
+    "title": "Bài 6 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 12 - 15",
+    "description": "Bài học Toán 5: Bài 6 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 6 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 6 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b6-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 6 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b6-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b7', semester: 1, lessonNumber: 7,
-    title: 'Bài 7: Viết số đo độ dài, khối lượng, diện tích dưới dạng số thập phân',
-    unit: 'Tập 1 - Chủ đề 3: Số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 48, 49',
-    description: '3 m 5 dm = 3,5 m; 2 kg 50 g = 2,05 kg; 4 m² 25 dm² = 4,25 m².',
-    summary: 'Quy tắc đổi đơn vị đo lường sang số thập phân chuẩn xác.',
-    keyPoints: ['Độ dài mỗi nấc 1 chữ số, diện tích mỗi nấc 2 chữ số (4 m² 5 dm² = 4,05 m²).'],
-    mascotTip: 'BoBo: Cẩn thận chêm số 0 vào hàng còn thiếu khi đổi diện tích nhé!',
+    "id": "math-g5-b7",
+    "semester": 1,
+    "lessonNumber": 7,
+    "title": "Bài 7: Hỗn số",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 14 - 17",
+    "description": "Bài học Toán 5: Hỗn số.",
+    "summary": "Nội dung trọng tâm của Bài 7: Hỗn số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 7: Hỗn số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b7-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 7: Hỗn số: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b7-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b8', semester: 1, lessonNumber: 8,
-    title: 'Bài 8: Phép cộng & trừ hai số thập phân',
-    unit: 'Tập 1 - Chủ đề 4: Các phép tính với số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 56, 57',
-    description: 'Đặt tính thẳng hàng dấu phẩy, cộng trừ như số tự nhiên rồi hạ dấu phẩy thẳng cột.',
-    summary: '15,82 + 9,45 = 25,27. Trừ: 45,8 - 19,26 = 45,80 - 19,26 = 26,54.',
-    keyPoints: ['Luôn đặt các dấu phẩy thẳng một hàng dọc.', 'Thêm chữ số 0 vào phần thập phân nếu thiếu để trừ.'],
-    mascotTip: 'BoBo: Dấu phẩy thẳng hàng là chìa khóa cộng trừ chuẩn 100%!',
+    "id": "math-g5-b8",
+    "semester": 1,
+    "lessonNumber": 8,
+    "title": "Bài 8 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 16 - 19",
+    "description": "Bài học Toán 5: Bài 8 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 8 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 8 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b8-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 8 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b8-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b9', semester: 1, lessonNumber: 9,
-    title: 'Bài 9: Phép nhân số thập phân & Nhân với 10, 100, 1000',
-    unit: 'Tập 1 - Chủ đề 4: Các phép tính với số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 64, 65',
-    description: 'Nhân 10, 100 → Dịch dấu phẩy sang phải 1, 2 chữ số. Nhân hai số thập phân đếm tổng số chữ số phần thập phân.',
-    summary: '3,45 x 10 = 34,5; 3,45 x 100 = 345. Nhân: 2,5 x 1,4 = 3,50 = 3,5.',
-    keyPoints: ['Nhân như số tự nhiên, đếm tổng số chữ số sau dấu phẩy của cả hai thừa số rồi tách ở tích.'],
-    mascotTip: 'BoBo: Nhân 10, 100 thì dấu phẩy tiến nhanh sang bên phải!',
+    "id": "math-g5-b9",
+    "semester": 1,
+    "lessonNumber": 9,
+    "title": "Bài 9 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 18 - 21",
+    "description": "Bài học Toán 5: Bài 9 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 9 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 9 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b9-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 9 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b9-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b10', semester: 1, lessonNumber: 10,
-    title: 'Bài 10: Phép chia số thập phân & Chia cho 10, 100, 1000',
-    unit: 'Tập 1 - Chủ đề 4: Các phép tính với số thập phân',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 72, 73',
-    description: 'Chia 10, 100 → Dịch dấu phẩy sang trái 1, 2 chữ số. Chia số thập phân cho số thập phân bằng cách bỏ dấu phẩy ở số chia.',
-    summary: '34,5 : 10 = 3,45; 34,5 : 100 = 0,345. Chia: 17,55 : 3,9 = 175,5 : 39 = 4,5.',
-    keyPoints: ['Đếm số chia có bao nhiêu chữ số phần thập phân thì dịch dấu phẩy số bị chia bấy nhiêu chữ số.'],
-    mascotTip: 'BoBo: Bỏ dấu phẩy ở số chia trước khi thực hiện phép chia nhé!',
+    "id": "math-g5-b10",
+    "semester": 1,
+    "lessonNumber": 10,
+    "title": "Bài 10: Khái niệm số thập phân",
+    "unit": "Chủ đề 2: Số thập phân",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 20 - 23",
+    "description": "Bài học Toán 5: Khái niệm số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 10: Khái niệm số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 10: Khái niệm số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b10-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 10: Khái niệm số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b10-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b11', semester: 1, lessonNumber: 11,
-    title: 'Bài 11: Khái niệm Tỉ số phần trăm & 3 dạng toán tỉ số %',
-    unit: 'Tập 1 - Chủ đề 5: Tỉ số phần trăm',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 82, 83',
-    description: 'Ký hiệu %. 1. Tìm tỉ số % của a và b (a : b x 100%). 2. Tìm a% của số B (B x a : 100). 3. Tìm số biết a% là B.',
-    summary: 'Ứng dụng: Tính lãi suất ngân hàng, khuyến mãi giảm giá, tỉ lệ học sinh giỏi.',
-    keyPoints: ['Tỉ số % của 15 và 60: 15 : 60 = 0,25 = 25%.', '50% chính là một nửa (1/2).'],
-    mascotTip: 'BoBo: Đi siêu thị thấy giảm giá 20% là lấy giá gốc nhân 20 rồi chia 100!',
+    "id": "math-g5-b11",
+    "semester": 1,
+    "lessonNumber": 11,
+    "title": "Bài 11: So sánh các số thập phân",
+    "unit": "Chủ đề 2: Số thập phân",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 22 - 25",
+    "description": "Bài học Toán 5: So sánh các số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 11: So sánh các số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 11: So sánh các số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b11-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 11: So sánh các số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b11-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b12', semester: 1, lessonNumber: 12,
-    title: 'Bài 12: Ôn tập chung Học kì 1 Toán Lớp 5',
-    unit: 'Tập 1 - Chủ đề 6: Ôn tập Học kì 1',
-    textbookPageRef: 'SGK Toán 5 Tập một — Trang 90, 91',
-    description: 'Đề kiểm tra tổng hợp kiến thức cả Tập 1 SGK Toán 5.',
-    summary: 'Tổng kết xuất sắc 12 bài học lớn của Học kì 1.',
-    keyPoints: ['Mở khóa Cúp Vàng Học kì 1 Toán 5!'],
-    mascotTip: 'BoBo: Chúc mừng bạn đã hoàn thành xuất sắc Tập 1 Toán 5! 🌟',
-  },
-
-  // ================= TẬP 2 (BÀI 13 ĐẾN BÀI 25) =================
-  {
-    id: 'math-g5-b13', semester: 2, lessonNumber: 13,
-    title: 'Bài 13: Diện tích Hình Tam Giác & Hình Thang',
-    unit: 'Tập 2 - Chủ đề 7: Hình học phẳng nâng cao',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 6, 7',
-    description: 'DT Tam giác = (Đáy x Cao) : 2 (S = a x h : 2). DT Hình thang = (Đáy lớn + Đáy bé) x Cao : 2.',
-    summary: 'Muốn tính diện tích hình thang: Đáy lớn đáy bé ta mang cộng vào, cộng vào nhân với chiều cao, chia đôi lấy nửa thế nào cũng ra!',
-    keyPoints: ['Cùng đơn vị đo trước khi tính.', 'DT Tam giác: S = (a x h) / 2.', 'DT Hình thang: S = ((a + b) x h) / 2.'],
-    mascotTip: 'BoBo: Thuộc bài thơ tính diện tích hình thang là không bao giờ quên!',
-  },
-  {
-    id: 'math-g5-b14', semester: 2, lessonNumber: 14,
-    title: 'Bài 14: Hình Tròn: Chu vi & Diện tích (Số Pi ≈ 3,14)',
-    unit: 'Tập 2 - Chủ đề 7: Hình học phẳng nâng cao',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 16, 17',
-    description: 'Chu vi: C = d x 3,14 = r x 2 x 3,14. Diện tích: S = r x r x 3,14.',
-    summary: 'Số Pi kỳ diệu ≈ 3,14. Bán kính r = 5 cm → Chu vi C = 5 x 2 x 3,14 = 31,4 cm. Diện tích S = 5 x 5 x 3,14 = 78,5 cm².',
-    keyPoints: ['Chu vi: C = r x 2 x 3,14.', 'Diện tích: S = r x r x 3,14.'],
-    mascotTip: 'BoBo: Bán kính nhân bán kính nhân ba phẩy mười bốn là ra Diện tích!',
-  },
-  {
-    id: 'math-g5-b15', semester: 2, lessonNumber: 15,
-    title: 'Bài 15: Diện tích xung quanh & toàn phần Hình Hộp Chữ Nhật, Hình Lập Phương',
-    unit: 'Tập 2 - Chủ đề 8: Hình khối 3D',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 26, 27',
-    description: 'DTxq = Chu vi đáy x Chiều cao. DT toàn phần = DTxq + 2 x DT đáy. Hình lập phương: DTxq = a x a x 4; DTtp = a x a x 6.',
-    summary: 'Hình hộp chữ nhật có 6 mặt, 8 đỉnh, 12 cạnh. Hình lập phương có 6 mặt là hình vuông bằng nhau.',
-    keyPoints: ['DTxq Hình hộp chữ nhật: (Dài + Rộng) x 2 x Cao.', 'DTtoàn phần Hình lập phương: Cạnh x Cạnh x 6.'],
-    mascotTip: 'BoBo: Hình lập phương có 6 mặt giống hệt nhau nên nhân 6 là ra toàn phần!',
-  },
-  {
-    id: 'math-g5-b16', semester: 2, lessonNumber: 16,
-    title: 'Bài 16: Thể tích Hình Hộp Chữ Nhật & Hình Lập Phương (m³, dm³, cm³)',
-    unit: 'Tập 2 - Chủ đề 8: Hình khối 3D',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 36, 37',
-    description: '1 m³ = 1000 dm³ = 1.000.000 cm³. 1 dm³ = 1 lít. V Hình hộp chữ nhật = a x b x c. V Hình lập phương = a x a x a.',
-    summary: 'Bể nước dài 2 m, rộng 1,5 m, cao 1 m có thể tích V = 2 x 1,5 x 1 = 3 m³ = 3000 lít nước.',
-    keyPoints: ['Thể tích mỗi nấc đơn vị gấp/kém nhau 1000 lần (3 số 0).', '1 dm³ = 1 lít.'],
-    mascotTip: 'BoBo: 1 đề-xi-mét khối nước đúng bằng 1 lít nước sinh hoạt!',
-  },
-  {
-    id: 'math-g5-b17', semester: 2, lessonNumber: 17,
-    title: 'Bài 17: Số đo thời gian & Phép tính cộng, trừ, nhân, chia thời gian',
-    unit: 'Tập 2 - Chủ đề 9: Thời gian và Chuyển động đều',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 46, 47',
-    description: '1 năm = 12 tháng; 1 ngày = 24 giờ; 1 giờ = 60 phút; 1 phút = 60 giây. Đổi đơn vị thời gian có nhớ (60 đơn vị = 1 nấc).',
-    summary: '3 giờ 45 phút + 2 giờ 30 phút = 5 giờ 75 phút = 6 giờ 15 phút.',
-    keyPoints: ['Cứ đủ 60 phút thì chuyển thành 1 giờ.', 'Cứ đủ 60 giây thì chuyển thành 1 phút.'],
-    mascotTip: 'BoBo: Chú ý: Đổi thời gian theo cơ số 60 chứ không phải cơ số 10 đâu nhé!',
-  },
-  {
-    id: 'math-g5-b18', semester: 2, lessonNumber: 18,
-    title: 'Bài 18: Vận tốc trong chuyển động đều (v = s : t)',
-    unit: 'Tập 2 - Chủ đề 9: Thời gian và Chuyển động đều',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 54, 55',
-    description: 'Vận tốc là quãng đường đi được trong 1 đơn vị thời gian (km/giờ, m/phút, m/giây).',
-    summary: 'Công thức: v = s : t. Một ô tô đi quãng đường 120 km trong 2 giờ → Vận tốc ô tô là: 120 : 2 = 60 km/giờ.',
-    keyPoints: ['v = s : t (Vận tốc = Quãng đường : Thời gian).', 'Đơn vị: s (km), t (giờ) thì v là (km/giờ).'],
-    mascotTip: 'BoBo: Vận tốc cho biết vật chuyển động nhanh hay chậm!',
+    "id": "math-g5-b12",
+    "semester": 1,
+    "lessonNumber": 12,
+    "title": "Bài 12: Viết số đo đại lượng dưới dạng số thập phân",
+    "unit": "Chủ đề 2: Số thập phân",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 24 - 27",
+    "description": "Bài học Toán 5: Viết số đo đại lượng dưới dạng số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 12: Viết số đo đại lượng dưới dạng số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 12: Viết số đo đại lượng dưới dạng số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b12-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 12: Viết số đo đại lượng dưới dạng số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b12-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b19', semester: 2, lessonNumber: 19,
-    title: 'Bài 19: Quãng đường (s = v x t) & Thời gian (t = s : v)',
-    unit: 'Tập 2 - Chủ đề 9: Thời gian và Chuyển động đều',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 62, 63',
-    description: 'Tam giác công thức: s = v x t → t = s : v → v = s : t.',
-    summary: 'Bác Ba đi xe máy với vận tốc 40 km/h trong 2,5 giờ → Quãng đường đi được: s = 40 x 2,5 = 100 km.',
-    keyPoints: ['Muốn tìm Quãng đường: s = v x t.', 'Muốn tìm Thời gian: t = s : v.'],
-    mascotTip: 'BoBo: Thuộc tam giác thần kỳ S - V - T là giải được mọi bài toán chuyển động!',
+    "id": "math-g5-b13",
+    "semester": 1,
+    "lessonNumber": 13,
+    "title": "Bài 13 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 26 - 29",
+    "description": "Bài học Toán 5: Bài 13 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 13 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 13 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b13-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 13 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b13-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b20', semester: 2, lessonNumber: 20,
-    title: 'Bài 20: Dạng toán Chuyển động ngược chiều & cùng chiều',
-    unit: 'Tập 2 - Chủ đề 9: Thời gian và Chuyển động đều',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 70, 71',
-    description: 'Ngược chiều (Đi để gặp nhau): t_gặp = s : (v1 + v2). Cùng chiều (Đuổi kịp nhau): t_đuổi = s : (v1 - v2).',
-    summary: 'Hai xe đi ngược chiều: Tổng vận tốc (v1 + v2). Hai xe đi cùng chiều: Hiệu vận tốc (v1 - v2).',
-    keyPoints: ['Ngược chiều thì CỘNG hai vận tốc.', 'Cùng chiều đuổi nhau thì TRỪ hai vận tốc.'],
-    mascotTip: 'BoBo: Ngược chiều cộng vận tốc, cùng chiều trừ vận tốc!',
+    "id": "math-g5-b14",
+    "semester": 1,
+    "lessonNumber": 14,
+    "title": "Bài 14 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 28 - 31",
+    "description": "Bài học Toán 5: Bài 14 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 14 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 14 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b14-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 14 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b14-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b21', semester: 2, lessonNumber: 21,
-    title: 'Bài 21: Biểu đồ hình quạt tròn & Bảng số liệu thống kê',
-    unit: 'Tập 2 - Chủ đề 10: Thống kê & Biểu đồ',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 78, 79',
-    description: 'Đọc và phân tích tỉ lệ phần trăm trên biểu đồ hình quạt tròn (tổng toàn bộ hình tròn là 100%).',
-    summary: 'Biểu đồ thể hiện cơ cấu cây trồng, sở thích học sinh, phân loại rác thải.',
-    keyPoints: ['Tổng các phần trăm trong hình quạt tròn luôn bằng 100%.'],
-    mascotTip: 'BoBo: Nhìn vào lát cắt quạt tròn là thấy ngay phần nào chiếm đa số!',
+    "id": "math-g5-b15",
+    "semester": 1,
+    "lessonNumber": 15,
+    "title": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+    "unit": "Chủ đề 3: Một số đơn vị đo diện tích",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 30 - 33",
+    "description": "Bài học Toán 5: Ki-lô-mét vuông. Héc-ta.",
+    "summary": "Nội dung trọng tâm của Bài 15: Ki-lô-mét vuông. Héc-ta chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 15: Ki-lô-mét vuông. Héc-ta.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b15-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 15: Ki-lô-mét vuông. Héc-ta: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b15-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b22', semester: 2, lessonNumber: 22,
-    title: 'Bài 22: Ôn tập Số học & Phép tính cả năm',
-    unit: 'Tập 2 - Chủ đề 11: Ôn tập cuối cấp Tiểu học',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 86, 87',
-    description: 'Hệ thống hóa toàn bộ số tự nhiên, phân số, số thập phân, tỉ số % và 4 phép tính.',
-    summary: 'Rèn phản xạ tính toán nhanh, chính xác cho kỳ thi chuyển cấp Lớp 6.',
-    keyPoints: ['Thành thạo tính giá trị biểu thức và tính nhanh bằng cách thuận tiện.'],
-    mascotTip: 'BoBo: Giữ vững tinh thần cẩn thận để đạt điểm tuyệt đối!',
+    "id": "math-g5-b16",
+    "semester": 1,
+    "lessonNumber": 16,
+    "title": "Bài 16 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 32 - 35",
+    "description": "Bài học Toán 5: Bài 16 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 16 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 16 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b16-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 16 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b16-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b23', semester: 2, lessonNumber: 23,
-    title: 'Bài 23: Ôn tập Hình học & Đo lường cả năm',
-    unit: 'Tập 2 - Chủ đề 11: Ôn tập cuối cấp Tiểu học',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 94, 95',
-    description: 'Tổng kết chu vi, diện tích tam giác, thang, tròn, diện tích xung quanh, toàn phần và thể tích hình hộp chữ nhật, lập phương.',
-    summary: 'Bảng tổng hợp toàn bộ công thức hình học 5 năm tiểu học.',
-    keyPoints: ['Ghi nhớ toàn bộ công thức S, V và bảng đơn vị đo.'],
-    mascotTip: 'BoBo: Ôn tập kỹ để chuẩn bị nhận Cúp Vinh Danh Toàn Cấp!',
+    "id": "math-g5-b17",
+    "semester": 1,
+    "lessonNumber": 17,
+    "title": "Bài 17 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 34 - 37",
+    "description": "Bài học Toán 5: Bài 17 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 17 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 17 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b17-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 17 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b17-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b24', semester: 2, lessonNumber: 24,
-    title: 'Bài 24: Ôn tập Toán Chuyển động đều & Giải toán có lời văn',
-    unit: 'Tập 2 - Chủ đề 11: Ôn tập cuối cấp Tiểu học',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 102, 103',
-    description: 'Luyện tập các bài toán thực tế nâng cao: Chuyển động dòng nước (v_xuôi = v_thực + v_dòng; v_ngược = v_thực - v_dòng).',
-    summary: 'Chinh phục các dạng toán thử thách cuối cấp.',
-    keyPoints: ['v_xuôi dòng = v_thuyền + v_nước; v_ngược dòng = v_thuyền - v_nước.'],
-    mascotTip: 'BoBo: Xuôi dòng được nước đẩy đi nhanh hơn, ngược dòng bị nước cản!',
+    "id": "math-g5-b18",
+    "semester": 1,
+    "lessonNumber": 18,
+    "title": "Bài 18 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 36 - 39",
+    "description": "Bài học Toán 5: Bài 18 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 18 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 18 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b18-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 18 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b18-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'math-g5-b25', semester: 2, lessonNumber: 25,
-    title: 'Bài 25: Đấu trường Vinh danh Tốt nghiệp Toán Tiểu học (Sẵn sàng Lớp 6)',
-    unit: 'Tập 2 - Chủ đề 11: Ôn tập cuối cấp Tiểu học',
-    textbookPageRef: 'SGK Toán 5 Tập hai — Trang 110, 111',
-    description: 'Chinh phục Đấu trường Trạng Nguyên Tối Thượng - Vinh danh Tốt nghiệp Tiểu học!',
-    summary: 'Hoàn thành xuất sắc toàn bộ 5 năm chương trình Toán Tiểu học chuẩn GDPT 2018.',
-    keyPoints: ['Nhận Cúp Vàng Trạng Nguyên Toán Học và tự tin bước vào THCS Lớp 6!'],
-    mascotTip: 'BoBo: Chúc mừng bạn đã hoàn thành xuất sắc chương trình Toán Tiểu học! 🎓🏆🌟🎉',
+    "id": "math-g5-b19",
+    "semester": 1,
+    "lessonNumber": 19,
+    "title": "Bài 19: Phép cộng số thập phân",
+    "unit": "Chủ đề 4: Các phép tính với số thập phân",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 38 - 41",
+    "description": "Bài học Toán 5: Phép cộng số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 19: Phép cộng số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 19: Phép cộng số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b19-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 19: Phép cộng số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b19-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
   },
+  {
+    "id": "math-g5-b20",
+    "semester": 1,
+    "lessonNumber": 20,
+    "title": "Bài 20: Phép trừ số thập phân",
+    "unit": "Chủ đề 4: Các phép tính với số thập phân",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 40 - 43",
+    "description": "Bài học Toán 5: Phép trừ số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 20: Phép trừ số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 20: Phép trừ số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b20-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 20: Phép trừ số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b20-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b21",
+    "semester": 1,
+    "lessonNumber": 21,
+    "title": "Bài 21: Phép nhân số thập phân",
+    "unit": "Chủ đề 4: Các phép tính với số thập phân",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 42 - 45",
+    "description": "Bài học Toán 5: Phép nhân số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 21: Phép nhân số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 21: Phép nhân số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b21-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 21: Phép nhân số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b21-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b22",
+    "semester": 1,
+    "lessonNumber": 22,
+    "title": "Bài 22: Phép chia số thập phân",
+    "unit": "Chủ đề 4: Các phép tính với số thập phân",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 44 - 47",
+    "description": "Bài học Toán 5: Phép chia số thập phân.",
+    "summary": "Nội dung trọng tâm của Bài 22: Phép chia số thập phân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 22: Phép chia số thập phân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b22-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 22: Phép chia số thập phân: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b22-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b23",
+    "semester": 1,
+    "lessonNumber": 23,
+    "title": "Bài 23 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 46 - 49",
+    "description": "Bài học Toán 5: Bài 23 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 23 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 23 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b23-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 23 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b23-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b24",
+    "semester": 1,
+    "lessonNumber": 24,
+    "title": "Bài 24 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 48 - 51",
+    "description": "Bài học Toán 5: Bài 24 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 24 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 24 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b24-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 24 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b24-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b25",
+    "semester": 1,
+    "lessonNumber": 25,
+    "title": "Bài 25: Hình tam giác. Diện tích hình tam giác",
+    "unit": "Chủ đề 5: Một số hình phẳng. Chu vi và diện tích",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 50 - 53",
+    "description": "Bài học Toán 5: Hình tam giác. Diện tích hình tam giác.",
+    "summary": "Nội dung trọng tâm của Bài 25: Hình tam giác. Diện tích hình tam giác chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 25: Hình tam giác. Diện tích hình tam giác.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b25-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 25: Hình tam giác. Diện tích hình tam giác: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b25-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b26",
+    "semester": 1,
+    "lessonNumber": 26,
+    "title": "Bài 26: Hình thang. Diện tích hình thang",
+    "unit": "Chủ đề 5: Một số hình phẳng. Chu vi và diện tích",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 52 - 55",
+    "description": "Bài học Toán 5: Hình thang. Diện tích hình thang.",
+    "summary": "Nội dung trọng tâm của Bài 26: Hình thang. Diện tích hình thang chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 26: Hình thang. Diện tích hình thang.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b26-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 26: Hình thang. Diện tích hình thang: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b26-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b27",
+    "semester": 1,
+    "lessonNumber": 27,
+    "title": "Bài 27: Đường tròn. Chu vi và diện tích hình tròn",
+    "unit": "Chủ đề 5: Một số hình phẳng. Chu vi và diện tích",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 54 - 57",
+    "description": "Bài học Toán 5: Đường tròn. Chu vi và diện tích hình tròn.",
+    "summary": "Nội dung trọng tâm của Bài 27: Đường tròn. Chu vi và diện tích hình tròn chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 27: Đường tròn. Chu vi và diện tích hình tròn.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b27-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 27: Đường tròn. Chu vi và diện tích hình tròn: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b27-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b28",
+    "semester": 1,
+    "lessonNumber": 28,
+    "title": "Bài 28 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 56 - 59",
+    "description": "Bài học Toán 5: Bài 28 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 28 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 28 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b28-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 28 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b28-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b29",
+    "semester": 1,
+    "lessonNumber": 29,
+    "title": "Bài 29 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 58 - 61",
+    "description": "Bài học Toán 5: Bài 29 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 29 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 29 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b29-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 29 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b29-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b30",
+    "semester": 1,
+    "lessonNumber": 30,
+    "title": "Bài 30 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 60 - 63",
+    "description": "Bài học Toán 5: Bài 30 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 30 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 30 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b30-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 30 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b30-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b31",
+    "semester": 1,
+    "lessonNumber": 31,
+    "title": "Bài 31 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 62 - 65",
+    "description": "Bài học Toán 5: Bài 31 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 31 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 31 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b31-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 31 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b31-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b32",
+    "semester": 1,
+    "lessonNumber": 32,
+    "title": "Bài 32 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 64 - 67",
+    "description": "Bài học Toán 5: Bài 32 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 32 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 32 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b32-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 32 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b32-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b33",
+    "semester": 1,
+    "lessonNumber": 33,
+    "title": "Bài 33 (Toán 5 Tập 1)",
+    "unit": "Chủ đề Toán 5 Tập 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 66 - 69",
+    "description": "Bài học Toán 5: Bài 33 (Toán 5 Tập 1).",
+    "summary": "Nội dung trọng tâm của Bài 33 (Toán 5 Tập 1) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 33 (Toán 5 Tập 1).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b33-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 33 (Toán 5 Tập 1): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b33-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b34",
+    "semester": 1,
+    "lessonNumber": 34,
+    "title": "Bài 34: Ôn tập đo lường",
+    "unit": "Chủ đề 6: Ôn tập học kì 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 68 - 71",
+    "description": "Bài học Toán 5: Ôn tập đo lường.",
+    "summary": "Nội dung trọng tâm của Bài 34: Ôn tập đo lường chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 34: Ôn tập đo lường.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b34-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 34: Ôn tập đo lường: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b34-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b35",
+    "semester": 1,
+    "lessonNumber": 35,
+    "title": "Bài 35: Ôn tập chung học kì 1",
+    "unit": "Chủ đề 6: Ôn tập học kì 1",
+    "textbookPageRef": "SGK Toán 5 Tập một — Trang 70 - 73",
+    "description": "Bài học Toán 5: Ôn tập chung học kì 1.",
+    "summary": "Nội dung trọng tâm của Bài 35: Ôn tập chung học kì 1 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 35: Ôn tập chung học kì 1.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b35-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 35: Ôn tập chung học kì 1: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b35-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b36",
+    "semester": 2,
+    "lessonNumber": 36,
+    "title": "Bài 36: Tỉ số. Tỉ số phần trăm",
+    "unit": "Chủ đề 7: Tỉ số và các bài toán liên quan",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 2 - 5",
+    "description": "Bài học Toán 5: Tỉ số. Tỉ số phần trăm.",
+    "summary": "Nội dung trọng tâm của Bài 36: Tỉ số. Tỉ số phần trăm chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 36: Tỉ số. Tỉ số phần trăm.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b36-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 36: Tỉ số. Tỉ số phần trăm: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b36-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b37",
+    "semester": 2,
+    "lessonNumber": 37,
+    "title": "Bài 37: Tỉ lệ bản đồ và ứng dụng",
+    "unit": "Chủ đề 7: Tỉ số và các bài toán liên quan",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 4 - 7",
+    "description": "Bài học Toán 5: Tỉ lệ bản đồ và ứng dụng.",
+    "summary": "Nội dung trọng tâm của Bài 37: Tỉ lệ bản đồ và ứng dụng chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 37: Tỉ lệ bản đồ và ứng dụng.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b37-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 37: Tỉ lệ bản đồ và ứng dụng: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b37-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b38",
+    "semester": 2,
+    "lessonNumber": 38,
+    "title": "Bài 38: Tìm hai số khi biết tổng và tỉ số của hai số đó",
+    "unit": "Chủ đề 7: Tỉ số và các bài toán liên quan",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 6 - 9",
+    "description": "Bài học Toán 5: Tìm hai số khi biết tổng và tỉ số của hai số đó.",
+    "summary": "Nội dung trọng tâm của Bài 38: Tìm hai số khi biết tổng và tỉ số của hai số đó chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 38: Tìm hai số khi biết tổng và tỉ số của hai số đó.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b38-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 38: Tìm hai số khi biết tổng và tỉ số của hai số đó: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b38-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b39",
+    "semester": 2,
+    "lessonNumber": 39,
+    "title": "Bài 39: Tìm hai số khi biết hiệu và tỉ số của hai số đó",
+    "unit": "Chủ đề 7: Tỉ số và các bài toán liên quan",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 8 - 11",
+    "description": "Bài học Toán 5: Tìm hai số khi biết hiệu và tỉ số của hai số đó.",
+    "summary": "Nội dung trọng tâm của Bài 39: Tìm hai số khi biết hiệu và tỉ số của hai số đó chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 39: Tìm hai số khi biết hiệu và tỉ số của hai số đó.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b39-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 39: Tìm hai số khi biết hiệu và tỉ số của hai số đó: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b39-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b40",
+    "semester": 2,
+    "lessonNumber": 40,
+    "title": "Bài 40: Tìm tỉ số phần trăm của hai số",
+    "unit": "Chủ đề 7: Tỉ số và các bài toán liên quan",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 10 - 13",
+    "description": "Bài học Toán 5: Tìm tỉ số phần trăm của hai số.",
+    "summary": "Nội dung trọng tâm của Bài 40: Tìm tỉ số phần trăm của hai số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 40: Tìm tỉ số phần trăm của hai số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b40-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 40: Tìm tỉ số phần trăm của hai số: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b40-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b41",
+    "semester": 2,
+    "lessonNumber": 41,
+    "title": "Bài 41: Tìm giá trị phần trăm của một số",
+    "unit": "Chủ đề 7: Tỉ số và các bài toán liên quan",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 12 - 15",
+    "description": "Bài học Toán 5: Tìm giá trị phần trăm của một số.",
+    "summary": "Nội dung trọng tâm của Bài 41: Tìm giá trị phần trăm của một số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 41: Tìm giá trị phần trăm của một số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b41-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 41: Tìm giá trị phần trăm của một số: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b41-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b42",
+    "semester": 2,
+    "lessonNumber": 42,
+    "title": "Bài 42 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 14 - 17",
+    "description": "Bài học Toán 5: Bài 42 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 42 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 42 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b42-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 42 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b42-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b43",
+    "semester": 2,
+    "lessonNumber": 43,
+    "title": "Bài 43 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 16 - 19",
+    "description": "Bài học Toán 5: Bài 43 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 43 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 43 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b43-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 43 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b43-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b44",
+    "semester": 2,
+    "lessonNumber": 44,
+    "title": "Bài 44 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 18 - 21",
+    "description": "Bài học Toán 5: Bài 44 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 44 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 44 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b44-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 44 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b44-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b45",
+    "semester": 2,
+    "lessonNumber": 45,
+    "title": "Bài 45: Thể tích của một hình",
+    "unit": "Chủ đề 8: Thể tích. Đơn vị đo thể tích",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 20 - 23",
+    "description": "Bài học Toán 5: Thể tích của một hình.",
+    "summary": "Nội dung trọng tâm của Bài 45: Thể tích của một hình chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 45: Thể tích của một hình.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b45-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 45: Thể tích của một hình: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b45-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b46",
+    "semester": 2,
+    "lessonNumber": 46,
+    "title": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+    "unit": "Chủ đề 8: Thể tích. Đơn vị đo thể tích",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 22 - 25",
+    "description": "Bài học Toán 5: Xăng-ti-mét khối. Đề-xi-mét khối.",
+    "summary": "Nội dung trọng tâm của Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b46-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b46-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b47",
+    "semester": 2,
+    "lessonNumber": 47,
+    "title": "Bài 47: Mét khối",
+    "unit": "Chủ đề 8: Thể tích. Đơn vị đo thể tích",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 24 - 27",
+    "description": "Bài học Toán 5: Mét khối.",
+    "summary": "Nội dung trọng tâm của Bài 47: Mét khối chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 47: Mét khối.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b47-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 47: Mét khối: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b47-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b48",
+    "semester": 2,
+    "lessonNumber": 48,
+    "title": "Bài 48 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 26 - 29",
+    "description": "Bài học Toán 5: Bài 48 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 48 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 48 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b48-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 48 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b48-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b49",
+    "semester": 2,
+    "lessonNumber": 49,
+    "title": "Bài 49 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 28 - 31",
+    "description": "Bài học Toán 5: Bài 49 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 49 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 49 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b49-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 49 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b49-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b50",
+    "semester": 2,
+    "lessonNumber": 50,
+    "title": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+    "unit": "Chủ đề 9: Diện tích và thể tích hình khối",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 30 - 33",
+    "description": "Bài học Toán 5: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật.",
+    "summary": "Nội dung trọng tâm của Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b50-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b50-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b51",
+    "semester": 2,
+    "lessonNumber": 51,
+    "title": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+    "unit": "Chủ đề 9: Diện tích và thể tích hình khối",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 32 - 35",
+    "description": "Bài học Toán 5: Diện tích xung quanh và diện tích toàn phần của hình lập phương.",
+    "summary": "Nội dung trọng tâm của Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b51-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b51-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b52",
+    "semester": 2,
+    "lessonNumber": 52,
+    "title": "Bài 52: Thể tích của hình hộp chữ nhật",
+    "unit": "Chủ đề 9: Diện tích và thể tích hình khối",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 34 - 37",
+    "description": "Bài học Toán 5: Thể tích của hình hộp chữ nhật.",
+    "summary": "Nội dung trọng tâm của Bài 52: Thể tích của hình hộp chữ nhật chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 52: Thể tích của hình hộp chữ nhật.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b52-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 52: Thể tích của hình hộp chữ nhật: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b52-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b53",
+    "semester": 2,
+    "lessonNumber": 53,
+    "title": "Bài 53: Thể tích của hình lập phương",
+    "unit": "Chủ đề 9: Diện tích và thể tích hình khối",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 36 - 39",
+    "description": "Bài học Toán 5: Thể tích của hình lập phương.",
+    "summary": "Nội dung trọng tâm của Bài 53: Thể tích của hình lập phương chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 53: Thể tích của hình lập phương.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b53-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 53: Thể tích của hình lập phương: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b53-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b54",
+    "semester": 2,
+    "lessonNumber": 54,
+    "title": "Bài 54 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 38 - 41",
+    "description": "Bài học Toán 5: Bài 54 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 54 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 54 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b54-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 54 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b54-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b55",
+    "semester": 2,
+    "lessonNumber": 55,
+    "title": "Bài 55 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 40 - 43",
+    "description": "Bài học Toán 5: Bài 55 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 55 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 55 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b55-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 55 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b55-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b56",
+    "semester": 2,
+    "lessonNumber": 56,
+    "title": "Bài 56: Các đơn vị đo thời gian",
+    "unit": "Chủ đề 10: Số đo thời gian. Vận tốc. Chuyển động đều",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 42 - 45",
+    "description": "Bài học Toán 5: Các đơn vị đo thời gian.",
+    "summary": "Nội dung trọng tâm của Bài 56: Các đơn vị đo thời gian chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 56: Các đơn vị đo thời gian.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b56-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 56: Các đơn vị đo thời gian: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b56-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b57",
+    "semester": 2,
+    "lessonNumber": 57,
+    "title": "Bài 57 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 44 - 47",
+    "description": "Bài học Toán 5: Bài 57 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 57 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 57 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b57-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 57 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b57-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b58",
+    "semester": 2,
+    "lessonNumber": 58,
+    "title": "Bài 58 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 46 - 49",
+    "description": "Bài học Toán 5: Bài 58 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 58 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 58 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b58-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 58 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b58-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b59",
+    "semester": 2,
+    "lessonNumber": 59,
+    "title": "Bài 59: Vận tốc của một chuyển động đều",
+    "unit": "Chủ đề 10: Số đo thời gian. Vận tốc. Chuyển động đều",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 48 - 51",
+    "description": "Bài học Toán 5: Vận tốc của một chuyển động đều.",
+    "summary": "Nội dung trọng tâm của Bài 59: Vận tốc của một chuyển động đều chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 59: Vận tốc của một chuyển động đều.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b59-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 59: Vận tốc của một chuyển động đều: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b59-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b60",
+    "semester": 2,
+    "lessonNumber": 60,
+    "title": "Bài 60: Quãng đường, thời gian của một chuyển động đều",
+    "unit": "Chủ đề 10: Số đo thời gian. Vận tốc. Chuyển động đều",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 50 - 53",
+    "description": "Bài học Toán 5: Quãng đường, thời gian của một chuyển động đều.",
+    "summary": "Nội dung trọng tâm của Bài 60: Quãng đường, thời gian của một chuyển động đều chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 60: Quãng đường, thời gian của một chuyển động đều.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b60-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 60: Quãng đường, thời gian của một chuyển động đều: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b60-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b61",
+    "semester": 2,
+    "lessonNumber": 61,
+    "title": "Bài 61 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 52 - 55",
+    "description": "Bài học Toán 5: Bài 61 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 61 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 61 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b61-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 61 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b61-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b62",
+    "semester": 2,
+    "lessonNumber": 62,
+    "title": "Bài 62 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 54 - 57",
+    "description": "Bài học Toán 5: Bài 62 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 62 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 62 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b62-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 62 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b62-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b63",
+    "semester": 2,
+    "lessonNumber": 63,
+    "title": "Bài 63 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 56 - 59",
+    "description": "Bài học Toán 5: Bài 63 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 63 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 63 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b63-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 63 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b63-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b64",
+    "semester": 2,
+    "lessonNumber": 64,
+    "title": "Bài 64: Biểu đồ hình quạt tròn",
+    "unit": "Chủ đề 11: Một số yếu tố thống kê và xác suất",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 58 - 61",
+    "description": "Bài học Toán 5: Biểu đồ hình quạt tròn.",
+    "summary": "Nội dung trọng tâm của Bài 64: Biểu đồ hình quạt tròn chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 64: Biểu đồ hình quạt tròn.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b64-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 64: Biểu đồ hình quạt tròn: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b64-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b65",
+    "semester": 2,
+    "lessonNumber": 65,
+    "title": "Bài 65 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 60 - 63",
+    "description": "Bài học Toán 5: Bài 65 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 65 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 65 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b65-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 65 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b65-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b66",
+    "semester": 2,
+    "lessonNumber": 66,
+    "title": "Bài 66 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 62 - 65",
+    "description": "Bài học Toán 5: Bài 66 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 66 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 66 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b66-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 66 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b66-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b67",
+    "semester": 2,
+    "lessonNumber": 67,
+    "title": "Bài 67 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 64 - 67",
+    "description": "Bài học Toán 5: Bài 67 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 67 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 67 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b67-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 67 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b67-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b68",
+    "semester": 2,
+    "lessonNumber": 68,
+    "title": "Bài 68 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 66 - 69",
+    "description": "Bài học Toán 5: Bài 68 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 68 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 68 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b68-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 68 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b68-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b69",
+    "semester": 2,
+    "lessonNumber": 69,
+    "title": "Bài 69 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 68 - 71",
+    "description": "Bài học Toán 5: Bài 69 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 69 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 69 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b69-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 69 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b69-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b70",
+    "semester": 2,
+    "lessonNumber": 70,
+    "title": "Bài 70 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 70 - 73",
+    "description": "Bài học Toán 5: Bài 70 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 70 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 70 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b70-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 70 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b70-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b71",
+    "semester": 2,
+    "lessonNumber": 71,
+    "title": "Bài 71 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 72 - 75",
+    "description": "Bài học Toán 5: Bài 71 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 71 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 71 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b71-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 71 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b71-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b72",
+    "semester": 2,
+    "lessonNumber": 72,
+    "title": "Bài 72 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 74 - 77",
+    "description": "Bài học Toán 5: Bài 72 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 72 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 72 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b72-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 72 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b72-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b73",
+    "semester": 2,
+    "lessonNumber": 73,
+    "title": "Bài 73 (Toán 5 Tập 2)",
+    "unit": "Chủ đề Toán 5 Tập 2",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 76 - 79",
+    "description": "Bài học Toán 5: Bài 73 (Toán 5 Tập 2).",
+    "summary": "Nội dung trọng tâm của Bài 73 (Toán 5 Tập 2) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 73 (Toán 5 Tập 2).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b73-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 73 (Toán 5 Tập 2): Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b73-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b74",
+    "semester": 2,
+    "lessonNumber": 74,
+    "title": "Bài 74: Ôn tập một số yếu tố thống kê và xác suất",
+    "unit": "Chủ đề 12: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 78 - 81",
+    "description": "Bài học Toán 5: Ôn tập một số yếu tố thống kê và xác suất.",
+    "summary": "Nội dung trọng tâm của Bài 74: Ôn tập một số yếu tố thống kê và xác suất chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 74: Ôn tập một số yếu tố thống kê và xác suất.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b74-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 74: Ôn tập một số yếu tố thống kê và xác suất: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b74-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g5-b75",
+    "semester": 2,
+    "lessonNumber": 75,
+    "title": "Bài 75: Ôn tập chung toàn cấp Tiểu học",
+    "unit": "Chủ đề 12: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 5 Tập hai — Trang 80 - 83",
+    "description": "Bài học Toán 5: Ôn tập chung toàn cấp Tiểu học.",
+    "summary": "Nội dung trọng tâm của Bài 75: Ôn tập chung toàn cấp Tiểu học chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 75: Ôn tập chung toàn cấp Tiểu học.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g5-b75-q1",
+        "type": "bubble_choice",
+        "questionText": "Vận dụng kiến thức Bài 75: Ôn tập chung toàn cấp Tiểu học: Giá trị cần tìm là:",
+        "audioText": "Bé hãy tính toán và lựa chọn giá trị chính xác nhé!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chuẩn xác theo chương trình Toán Lớp 5",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Phương án nhiễu 1"
+          },
+          {
+            "id": "c",
+            "label": "Phương án nhiễu 2"
+          }
+        ]
+      },
+      {
+        "id": "math-g5-b75-q2",
+        "type": "bubble_choice",
+        "questionText": "Để giải quyết bài toán thực tế này, bước quan trọng nhất là:",
+        "audioText": "Bước quan trọng nhất khi giải bài toán này là gì?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đổi về cùng đơn vị đo và áp dụng đúng công thức",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Không cần quy đổi đơn vị đo"
+          },
+          {
+            "id": "c",
+            "label": "Tính toán ước lượng sơ sài"
+          }
+        ]
+      }
+    ]
+  }
 ];

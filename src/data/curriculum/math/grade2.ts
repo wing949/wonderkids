@@ -1,697 +1,4530 @@
 import { CurriculumTopic } from '../types';
 
 export const MATH_GRADE_2_TOPICS: CurriculumTopic[] = [
-  // ================= TẬP 1 (BÀI 1 ĐẾN BÀI 37) =================
-  {
-    id: 'math-g2-b1', semester: 1, lessonNumber: 1,
-    title: 'Bài 1: Ôn tập các số trong phạm vi 100',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và bổ sung',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 6, 7',
-    description: 'Đọc, viết, so sánh số có 2 chữ số và cấu tạo số chục, đơn vị.',
-    summary: 'Số có hai chữ số gồm chữ số hàng chục và chữ số hàng đơn vị.',
-    keyPoints: ['Số liền trước bé hơn 1 đơn vị, số liền sau lớn hơn 1 đơn vị.', 'So sánh hàng chục trước, nếu bằng nhau so sánh hàng đơn vị.'],
-    mascotTip: 'BoBo: Số liền trước của 40 là 39, số liền sau của 40 là 41!',
-  },
-  {
-    id: 'math-g2-b2', semester: 1, lessonNumber: 2,
-    title: 'Bài 2: Tia số và số liền trước, số liền sau',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và bổ sung',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 10, 11',
-    description: 'Biểu diễn số trên tia số theo thứ tự từ bé đến lớn.',
-    summary: 'Trên tia số, các số được xếp theo thứ tự tăng dần từ trái sang phải.',
-    keyPoints: ['Gốc tia số là số 0.', 'Số bên phải luôn lớn hơn số bên trái.'],
-    mascotTip: 'BoBo: Càng đi về phía bên phải thì số càng lớn dần đấy!',
-  },
-  {
-    id: 'math-g2-b3', semester: 1, lessonNumber: 3,
-    title: 'Bài 3: Các thành phần của phép cộng, phép trừ',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và bổ sung',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 14, 15',
-    description: 'Số hạng, Tổng trong phép cộng; Số bị trừ, Số trừ, Hiệu trong phép trừ.',
-    summary: 'Số hạng + Số hạng = Tổng. Số bị trừ - Số trừ = Hiệu.',
-    keyPoints: ['Muốn tìm tổng ta lấy các số hạng cộng lại.', 'Muốn tìm hiệu ta lấy số bị trừ trừ đi số trừ.'],
-    mascotTip: 'BoBo: Trong 12 + 5 = 17, 12 và 5 là số hạng, 17 là tổng!',
-  },
-  {
-    id: 'math-g2-b4', semester: 1, lessonNumber: 4,
-    title: 'Bài 4: Hơn, kém nhau bao nhiêu',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và bổ sung',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 18, 19',
-    description: 'Tìm phần chênh lệch giữa hai số bằng phép trừ.',
-    summary: 'Muốn biết số lớn hơn số bé bao nhiêu đơn vị, ta lấy số lớn trừ đi số bé.',
-    keyPoints: ['Số lớn - Số bé = Phần hơn (kém).'],
-    mascotTip: 'BoBo: Bạn có 9 cái kẹo, em có 5 cái: 9 - 5 = 4 (bạn hơn em 4 cái)!',
-  },
-  {
-    id: 'math-g2-b5', semester: 1, lessonNumber: 5,
-    title: 'Bài 5: Ôn tập phép cộng, phép trừ (không nhớ) trong phạm vi 100',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và bổ sung',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 22, 23',
-    description: 'Đặt tính và tính nhẩm thành thạo phép tính không nhớ.',
-    summary: 'Cộng trừ thẳng cột từ phải sang trái.',
-    keyPoints: ['34 + 25 = 59; 68 - 23 = 45.'],
-    mascotTip: 'BoBo: Đặt tính thẳng cột đơn vị thẳng đơn vị, chục thẳng chục!',
-  },
-  {
-    id: 'math-g2-b6', semester: 1, lessonNumber: 6,
-    title: 'Bài 6: Luyện tập chung Chủ đề 1',
-    unit: 'Tập 1 - Chủ đề 1: Ôn tập và bổ sung',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 24, 25',
-    description: 'Củng cố toàn bộ kỹ năng số học và phép tính mở đầu Lớp 2.',
-    summary: 'Hoàn thiện kiến thức nền tảng bước vào các phép tính có nhớ.',
-    keyPoints: ['Giải bài toán về nhiều hơn, ít hơn.'],
-    mascotTip: 'BoBo: Làm bài cẩn thận để đạt 3 sao trọn vẹn nhé!',
-  },
-  {
-    id: 'math-g2-b7', semester: 1, lessonNumber: 7,
-    title: 'Bài 7: Phép cộng (qua 10) trong phạm vi 20',
-    unit: 'Tập 1 - Chủ đề 2: Phép cộng trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 26, 27',
-    description: 'Kỹ thuật làm tròn 10: 9 + 5 = 14; 8 + 6 = 14; 7 + 5 = 12.',
-    summary: 'Tách số thứ hai để gộp với số thứ nhất cho đủ 1 chục rồi cộng phần còn lại.',
-    keyPoints: ['9 + 5 = 9 + 1 + 4 = 10 + 4 = 14.', '8 + 5 = 8 + 2 + 3 = 10 + 3 = 13.'],
-    mascotTip: 'BoBo: Tách 1 gộp vào 9 được 10, cực kỳ nhanh gọn!',
-  },
-  {
-    id: 'math-g2-b8', semester: 1, lessonNumber: 8,
-    title: 'Bài 8: Bảng cộng (qua 10)',
-    unit: 'Tập 1 - Chủ đề 2: Phép cộng trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 32, 33',
-    description: 'Học thuộc toàn bộ bảng cộng 9, 8, 7, 6 cộng với một số.',
-    summary: 'Bảng cộng qua 10 là chìa khóa tính nhẩm thần tốc.',
-    keyPoints: ['9 + 2, 9 + 3... 9 + 9.', '8 + 3, 8 + 4... 8 + 9.', '7 + 4, 7 + 5... 7 + 9.'],
-    mascotTip: 'BoBo: Thuộc bảng cộng giúp bạn giải toán nhanh như chớp!',
-  },
-  {
-    id: 'math-g2-b9', semester: 1, lessonNumber: 9,
-    title: 'Bài 9: Bài toán về thêm, bớt một số đơn vị',
-    unit: 'Tập 1 - Chủ đề 2: Phép cộng trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 36, 37',
-    description: 'Phân tích đề bài toán: Thêm vào làm phép cộng (+), Bớt đi làm phép trừ (-).',
-    summary: 'Giải bài toán có lời văn gồm: Câu lời giải, Phép tính, Đáp số.',
-    keyPoints: ['Đọc kỹ đề tìm từ khóa: thêm, bay đến, bớt, cho đi.'],
-    mascotTip: 'BoBo: Viết đủ lời giải và đáp số kèm đơn vị nhé!',
-  },
-  {
-    id: 'math-g2-b10', semester: 1, lessonNumber: 10,
-    title: 'Bài 10: Luyện tập chung Phép cộng qua 10',
-    unit: 'Tập 1 - Chủ đề 2: Phép cộng trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 40, 41',
-    description: 'Tính nhẩm biểu thức 3 số và so sánh giá trị hai vế.',
-    summary: 'Rèn luyện khả năng tính toán linh hoạt.',
-    keyPoints: ['9 + 3 + 2 = 12 + 2 = 14.'],
-    mascotTip: 'BoBo: Cứ làm từng phép tính từ trái sang phải là đúng ngay!',
-  },
   {
-    id: 'math-g2-b11', semester: 1, lessonNumber: 11,
-    title: 'Bài 11: Phép trừ (qua 10) trong phạm vi 20',
-    unit: 'Tập 1 - Chủ đề 3: Phép trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 42, 43',
-    description: 'Kỹ thuật trừ bớt về 10: 11 - 5 = 6; 12 - 7 = 5; 15 - 8 = 7.',
-    summary: 'Trừ để được 10 rồi trừ tiếp số còn lại: 13 - 5 = 13 - 3 - 2 = 8.',
-    keyPoints: ['11 - 4 = 11 - 1 - 3 = 10 - 3 = 7.', '14 - 6 = 14 - 4 - 2 = 10 - 2 = 8.'],
-    mascotTip: 'BoBo: Bớt về 10 rồi trừ nốt phần dư là ra ngay đáp án!',
-  },
-  {
-    id: 'math-g2-b12', semester: 1, lessonNumber: 12,
-    title: 'Bài 12: Bảng trừ (qua 10)',
-    unit: 'Tập 1 - Chủ đề 3: Phép trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 48, 49',
-    description: 'Học thuộc bảng trừ 11, 12, 13, 14, 15, 16, 17, 18 trừ đi một số.',
-    summary: 'Ghi nhớ mối liên hệ nghịch đảo với bảng cộng.',
-    keyPoints: ['11 - 2, 11 - 3... 11 - 9.', '12 - 3, 12 - 4... 12 - 9.'],
-    mascotTip: 'BoBo: Vì 9 + 4 = 13 nên 13 - 9 = 4 và 13 - 4 = 9!',
-  },
-  {
-    id: 'math-g2-b13', semester: 1, lessonNumber: 13,
-    title: 'Bài 13: Bài toán về nhiều hơn, ít hơn một số đơn vị',
-    unit: 'Tập 1 - Chủ đề 3: Phép trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 52, 53',
-    description: 'Dạng toán tìm số lớn (lấy số bé + phần nhiều hơn) và tìm số bé (lấy số lớn - phần ít hơn).',
-    summary: 'Bài toán so sánh đại lượng quen thuộc trong thực tế.',
-    keyPoints: ['Tìm số lớn = Số bé + Phần nhiều hơn.', 'Tìm số bé = Số lớn - Phần ít hơn.'],
-    mascotTip: 'BoBo: Đọc kỹ xem đề hỏi số lớn hay số bé nhé!',
-  },
-  {
-    id: 'math-g2-b14', semester: 1, lessonNumber: 14,
-    title: 'Bài 14: Luyện tập chung Phép trừ qua 10',
-    unit: 'Tập 1 - Chủ đề 3: Phép trừ qua 10',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 56, 57',
-    description: 'Củng cố bảng cộng và bảng trừ qua 10.',
-    summary: 'Tính nhẩm siêu tốc và giải toán thực tế.',
-    keyPoints: ['Vận dụng linh hoạt bảng cộng trừ qua 10.'],
-    mascotTip: 'BoBo: Bạn đã làm chủ hoàn toàn phép tính qua 10 rồi!',
-  },
-  {
-    id: 'math-g2-b15', semester: 1, lessonNumber: 15,
-    title: 'Bài 15: Ki-lô-gam (kg)',
-    unit: 'Tập 1 - Chủ đề 4: Làm quen với khối lượng và dung tích',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 60, 61',
-    description: 'Đơn vị đo khối lượng: Ki-lô-gam viết tắt là kg.',
-    summary: 'Dùng cân đĩa, cân đồng hồ để đo vật nặng bao nhiêu kg.',
-    keyPoints: ['1 quả dưa hấu nặng 2 kg, bao gạo nặng 10 kg.', 'Quả cân 1kg, 2kg, 5kg.'],
-    mascotTip: 'BoBo: Khi kim cân chỉ đúng số 1 là vật đó nặng 1 kg đấy!',
-  },
-  {
-    id: 'math-g2-b16', semester: 1, lessonNumber: 16,
-    title: 'Bài 16: Lít (l)',
-    unit: 'Tập 1 - Chủ đề 4: Làm quen với khối lượng và dung tích',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 64, 65',
-    description: 'Đơn vị đo dung tích chất lỏng: Lít viết tắt là l.',
-    summary: 'Dùng ca 1 lít, chai 1 lít để đong nước, sữa, dầu ăn.',
-    keyPoints: ['Can 5 lít đựng được 5 chai 1 lít.', '10 l - 4 l = 6 l.'],
-    mascotTip: 'BoBo: Nhớ luôn viết kèm đơn vị l (lít) sau kết quả tính nhé!',
-  },
-  {
-    id: 'math-g2-b17', semester: 1, lessonNumber: 17,
-    title: 'Bài 17: Thực hành cân đo Ki-lô-gam và Lít',
-    unit: 'Tập 1 - Chủ đề 4: Làm quen với khối lượng và dung tích',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 68, 69',
-    description: 'Thực hành đi chợ mua hoa quả, đong nước sinh hoạt.',
-    summary: 'Ứng dụng kiến thức đo lường vào đời sống hàng ngày.',
-    keyPoints: ['Tính tổng khối lượng các món hàng đã mua.'],
-    mascotTip: 'BoBo: Cùng mẹ đi siêu thị xem các món đồ nặng bao nhiêu kg nhé!',
-  },
-  {
-    id: 'math-g2-b18', semester: 1, lessonNumber: 18,
-    title: 'Bài 18: Luyện tập chung Đo lường',
-    unit: 'Tập 1 - Chủ đề 4: Làm quen với khối lượng và dung tích',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 72, 73',
-    description: 'Thực hiện các phép tính có kèm đơn vị đo kg và l.',
-    summary: '15 kg + 8 kg = 23 kg; 30 l - 12 l = 18 l.',
-    keyPoints: ['Chỉ cộng trừ các số có cùng đơn vị đo.'],
-    mascotTip: 'BoBo: Không bao giờ lấy kg cộng với lít đâu nha!',
-  },
-  {
-    id: 'math-g2-b19', semester: 1, lessonNumber: 19,
-    title: 'Bài 19: Điểm, Đoạn thẳng',
-    unit: 'Tập 1 - Chủ đề 5: Hình học phẳng',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 74, 75',
-    description: 'Nhận biết điểm, đoạn thẳng và đặt tên bằng chữ in hoa (A, B, C, D).',
-    summary: 'Đoạn thẳng AB được giới hạn bởi hai đầu mút là điểm A và điểm B.',
-    keyPoints: ['Đo độ dài đoạn thẳng bằng thước kẻ cm.'],
-    mascotTip: 'BoBo: Tên điểm luôn viết bằng chữ in hoa to rõ!',
-  },
-  {
-    id: 'math-g2-b20', semester: 1, lessonNumber: 20,
-    title: 'Bài 20: Đường thẳng, Đường cong, Đường gấp khúc',
-    unit: 'Tập 1 - Chủ đề 5: Hình học phẳng',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 78, 79',
-    description: 'Phân biệt đường thẳng (kéo dài vô tận), đường cong uốn lượn và đường gấp khúc.',
-    summary: 'Đường gấp khúc gồm nhiều đoạn thẳng nối tiếp nhau.',
-    keyPoints: ['Đường gấp khúc ABCD gồm 3 đoạn thẳng AB, BC, CD.'],
-    mascotTip: 'BoBo: Cầu vồng uốn cong, đường ray tàu hỏa thẳng tắp!',
-  },
-  {
-    id: 'math-g2-b21', semester: 1, lessonNumber: 21,
-    title: 'Bài 21: Độ dài đoạn thẳng, Độ dài đường gấp khúc',
-    unit: 'Tập 1 - Chủ đề 5: Hình học phẳng',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 82, 83',
-    description: 'Tính độ dài đường gấp khúc bằng tổng độ dài các đoạn thẳng thành phần.',
-    summary: 'Độ dài đường gấp khúc ABCD = AB + BC + CD.',
-    keyPoints: ['Ví dụ: AB = 3cm, BC = 4cm, CD = 5cm → Độ dài = 3 + 4 + 5 = 12cm.'],
-    mascotTip: 'BoBo: Cộng tất cả các đoạn lại là ra độ dài đường gấp khúc!',
-  },
-  {
-    id: 'math-g2-b22', semester: 1, lessonNumber: 22,
-    title: 'Bài 22: Đề-xi-mét (dm)',
-    unit: 'Tập 1 - Chủ đề 5: Hình học phẳng & Đo lường',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 86, 87',
-    description: 'Đơn vị đo độ dài đề-xi-mét: 1 dm = 10 cm; 10 cm = 1 dm.',
-    summary: '2 dm = 20 cm; 50 cm = 5 dm.',
-    keyPoints: ['Đề-xi-mét lớn gấp 10 lần xăng-ti-mét.'],
-    mascotTip: 'BoBo: 1 gang tay của bé dài khoảng 1 dm đấy!',
-  },
-  {
-    id: 'math-g2-b23', semester: 1, lessonNumber: 23,
-    title: 'Bài 23: Thực hành và trải nghiệm đo độ dài',
-    unit: 'Tập 1 - Chủ đề 5: Hình học phẳng & Đo lường',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 90, 91',
-    description: 'Dùng thước đo bàn học, bảng đen, chiều cao bạn bè.',
-    summary: 'Ứng dụng đo đạc thực tế tại lớp học.',
-    keyPoints: ['Bàn học dài khoảng 12 dm, bút chì dài 15 cm.'],
-    mascotTip: 'BoBo: Đo đạc giúp mọi thứ vừa vặn và ngay ngắn!',
-  },
-  {
-    id: 'math-g2-b24', semester: 1, lessonNumber: 24,
-    title: 'Bài 24: Luyện tập chung Hình học và Đề-xi-mét',
-    unit: 'Tập 1 - Chủ đề 5: Hình học phẳng & Đo lường',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 94, 95',
-    description: 'Tính toán đổi đơn vị dm ↔ cm và độ dài đường gấp khúc.',
-    summary: 'Củng cố vững chắc kiến thức hình học và đo lường.',
-    keyPoints: ['3 dm + 5 dm = 8 dm = 80 cm.'],
-    mascotTip: 'BoBo: Đổi về cùng đơn vị trước khi tính toán nhé!',
-  },
-  {
-    id: 'math-g2-b25', semester: 1, lessonNumber: 25,
-    title: 'Bài 25: Phép cộng (có nhớ) số có 2 chữ số với số có 1 chữ số',
-    unit: 'Tập 1 - Chủ đề 6: Phép cộng trừ có nhớ trong phạm vi 100',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 96, 97',
-    description: 'Đặt tính thẳng cột: 38 + 5 = 43; 47 + 6 = 53.',
-    summary: '8 + 5 = 13 viết 3 nhớ 1; 3 thêm 1 là 4 → 43.',
-    keyPoints: ['Nhớ 1 sang chữ số hàng chục.'],
-    mascotTip: 'BoBo: Nhớ 1 vào hàng chục đừng bao giờ quên nha!',
-  },
-  {
-    id: 'math-g2-b26', semester: 1, lessonNumber: 26,
-    title: 'Bài 26: Phép cộng (có nhớ) số có 2 chữ số với số có 2 chữ số',
-    unit: 'Tập 1 - Chủ đề 6: Phép cộng trừ có nhớ trong phạm vi 100',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 100, 101',
-    description: 'Đặt tính: 38 + 25 = 63; 47 + 36 = 83.',
-    summary: '8 + 5 = 13 viết 3 nhớ 1; 3 + 2 = 5 thêm 1 là 6 → 63.',
-    keyPoints: ['Cộng từ phải sang trái, nhớ 1 sang hàng chục.'],
-    mascotTip: 'BoBo: Cộng hàng đơn vị trước rồi mới cộng hàng chục!',
-  },
-  {
-    id: 'math-g2-b27', semester: 1, lessonNumber: 27,
-    title: 'Bài 27: Luyện tập chung Phép cộng có nhớ',
-    unit: 'Tập 1 - Chủ đề 6: Phép cộng trừ có nhớ trong phạm vi 100',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 104, 105',
-    description: 'Giải toán có lời văn và tính nhanh biểu thức cộng.',
-    summary: 'Làm chủ kỹ năng cộng có nhớ trong phạm vi 100.',
-    keyPoints: ['Đặt tính cẩn thận, thẳng hàng thẳng cột.'],
-    mascotTip: 'BoBo: Bạn đã cộng nhanh như máy tính bỏ túi rồi!',
-  },
-  {
-    id: 'math-g2-b28', semester: 1, lessonNumber: 28,
-    title: 'Bài 28: Phép trừ (có nhớ) số có 2 chữ số cho số có 1 chữ số',
-    unit: 'Tập 1 - Chủ đề 6: Phép cộng trừ có nhớ trong phạm vi 100',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 106, 107',
-    description: 'Đặt tính: 52 - 7 = 45; 61 - 4 = 57.',
-    summary: '2 không trừ được 7, mượn 1 chục là 12 - 7 = 5; 5 bớt 1 còn 4 → 45.',
-    keyPoints: ['Mượn 1 chục ở hàng chục để trừ hàng đơn vị.'],
-    mascotTip: 'BoBo: Mượn 1 thì nhớ bớt 1 ở hàng chục đi nhé!',
-  },
-  {
-    id: 'math-g2-b29', semester: 1, lessonNumber: 29,
-    title: 'Bài 29: Phép trừ (có nhớ) số có 2 chữ số cho số có 2 chữ số',
-    unit: 'Tập 1 - Chủ đề 6: Phép cộng trừ có nhớ trong phạm vi 100',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 110, 111',
-    description: 'Đặt tính: 63 - 28 = 35; 72 - 35 = 37.',
-    summary: 'Trừ đơn vị có mượn, trừ chục có trả.',
-    keyPoints: ['3 không trừ được 8, lấy 13 - 8 = 5; 6 - 2 = 4 bớt 1 còn 3 → 35.'],
-    mascotTip: 'BoBo: Mượn 1 ở hàng chục rồi nhớ trả ngay!',
-  },
-  {
-    id: 'math-g2-b30', semester: 1, lessonNumber: 30,
-    title: 'Bài 30: Luyện tập chung Phép trừ có nhớ',
-    unit: 'Tập 1 - Chủ đề 6: Phép cộng trừ có nhớ trong phạm vi 100',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 114, 115',
-    description: 'Củng cố toàn bộ kỹ năng trừ có nhớ trong phạm vi 100.',
-    summary: 'Giải toán và điền số thích hợp vào ô trống.',
-    keyPoints: ['Tính nhẩm chính xác các phép trừ có nhớ.'],
-    mascotTip: 'BoBo: Cẩn thận từng bước mượn và bớt là điểm 10 ngay!',
-  },
-  {
-    id: 'math-g2-b31', semester: 1, lessonNumber: 31,
-    title: 'Bài 31: Khối Trụ, Khối Cầu',
-    unit: 'Tập 1 - Chủ đề 7: Làm quen với hình khối',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 116, 117',
-    description: 'Nhận biết lon sữa, hộp bánh (Khối trụ) và quả bóng, quả địa cầu (Khối cầu).',
-    summary: 'Khối trụ có 2 mặt đáy phẳng hình tròn và mặt cong xung quanh. Khối cầu tròn xoe.',
-    keyPoints: ['Khối trụ vừa lăn được vừa xếp chồng được. Khối cầu lăn được về mọi phía.'],
-    mascotTip: 'BoBo: Lon nước ngọt là khối trụ, trái bóng đá là khối cầu!',
-  },
-  {
-    id: 'math-g2-b32', semester: 1, lessonNumber: 32,
-    title: 'Bài 32: Thực hành lắp ghép, xếp hình khối',
-    unit: 'Tập 1 - Chủ đề 7: Làm quen với hình khối',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 120, 121',
-    description: 'Xếp khối lập phương, khối hộp chữ nhật, khối trụ thành tòa lâu đài, cây cầu.',
-    summary: 'Sáng tạo mô hình 3D từ các khối hình học.',
-    keyPoints: ['Phát triển tư duy không gian và khéo léo.'],
-    mascotTip: 'BoBo: Cùng xếp tòa tháp cao vút từ các khối trụ và khối lập phương nhé!',
-  },
-  {
-    id: 'math-g2-b33', semester: 1, lessonNumber: 33,
-    title: 'Bài 33: Ngày - Giờ, Giờ - Phút',
-    unit: 'Tập 1 - Chủ đề 8: Thời gian',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 124, 125',
-    description: '1 ngày có 24 giờ (từ 12 giờ đêm hôm trước đến 12 giờ đêm hôm sau). 1 giờ = 60 phút.',
-    summary: 'Các buổi trong ngày: Buổi sáng, Buổi trưa, Buổi chiều, Buổi tối, Buổi đêm.',
-    keyPoints: ['1 ngày = 24 giờ; 1 giờ = 60 phút.', '13 giờ là 1 giờ chiều, 20 giờ là 8 giờ tối.'],
-    mascotTip: 'BoBo: 12 giờ trưa cộng thêm 1 giờ là 13 giờ (1 giờ chiều) đấy!',
-  },
-  {
-    id: 'math-g2-b34', semester: 1, lessonNumber: 34,
-    title: 'Bài 34: Ngày - Tháng',
-    unit: 'Tập 1 - Chủ đề 8: Thời gian',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 128, 129',
-    description: '1 năm có 12 tháng. Nhận biết số ngày trong từng tháng (30 ngày, 31 ngày, 28/29 ngày).',
-    summary: 'Tháng có 31 ngày: 1, 3, 5, 7, 8, 10, 12. Tháng có 30 ngày: 4, 6, 9, 11. Tháng 2 có 28 hoặc 29 ngày.',
-    keyPoints: ['Cách dùng khớp mu bàn tay để nhớ số ngày trong tháng.'],
-    mascotTip: 'BoBo: Khớp nhô lên là 31 ngày, khe lõm xuống là 30 ngày (riêng tháng 2 có 28/29 ngày)!',
-  },
-  {
-    id: 'math-g2-b35', semester: 1, lessonNumber: 35,
-    title: 'Bài 35: Luyện tập chung Thời gian',
-    unit: 'Tập 1 - Chủ đề 8: Thời gian',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 132, 133',
-    description: 'Xem lịch tháng và tính ngày trong tuần của các dịp lễ kỷ niệm.',
-    summary: 'Rèn kỹ năng xem lịch và lên kế hoạch học tập.',
-    keyPoints: ['Tính khoảng cách giữa các ngày trong tháng.'],
-    mascotTip: 'BoBo: Ngày Nhà giáo Việt Nam 20 tháng 11 rơi vào thứ mấy nhỉ?',
-  },
-  {
-    id: 'math-g2-b36', semester: 1, lessonNumber: 36,
-    title: 'Bài 36: Ôn tập Học kì 1',
-    unit: 'Tập 1 - Chủ đề 9: Ôn tập cuối học kì 1',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 134, 135',
-    description: 'Hệ thống hóa toàn bộ kiến thức Học kì 1 môn Toán Lớp 2.',
-    summary: 'Ôn tập phép cộng trừ có nhớ trong phạm vi 100, khối trụ cầu, ngày giờ.',
-    keyPoints: ['Tổng hợp các dạng bài thi cuối học kì 1.'],
-    mascotTip: 'BoBo: Ôn tập thật tốt để giành danh hiệu Trạng Nguyên Nhí Học kì 1!',
-  },
-  {
-    id: 'math-g2-b37', semester: 1, lessonNumber: 37,
-    title: 'Bài 37: Ôn tập chung & Đánh giá cuối Học kì 1',
-    unit: 'Tập 1 - Chủ đề 9: Ôn tập cuối học kì 1',
-    textbookPageRef: 'SGK Toán 2 Tập một — Trang 138, 139',
-    description: 'Đề kiểm tra toàn diện Tập 1 SGK Toán 2.',
-    summary: 'Hoàn thành trọn vẹn 37 bài học của Học kì 1.',
-    keyPoints: ['Mở khóa Cổng Tri Thức sang Học kì 2!'],
-    mascotTip: 'BoBo: Xuất sắc! Chúc mừng bạn đã hoàn thành trọn vẹn Tập 1 Toán 2! 🌟',
-  },
-
-  // ================= TẬP 2 (BÀI 38 ĐẾN BÀI 69) =================
-  {
-    id: 'math-g2-b38', semester: 2, lessonNumber: 38,
-    title: 'Bài 38: Làm quen với phép nhân. Dấu nhân',
-    unit: 'Tập 2 - Chủ đề 10: Phép nhân và phép chia',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 6, 7',
-    description: 'Phép nhân là tổng của các số hạng bằng nhau: 2 + 2 + 2 + 2 = 2 x 4 = 8.',
-    summary: 'Dấu nhân (x). 2 được lấy 4 lần viết là 2 x 4 = 8.',
-    keyPoints: ['Chuyển từ tổng các số hạng bằng nhau thành phép nhân.'],
-    mascotTip: 'BoBo: 5 + 5 + 5 chính là 5 được lấy 3 lần: 5 x 3 = 15!',
-  },
-  {
-    id: 'math-g2-b39', semester: 2, lessonNumber: 39,
-    title: 'Bài 39: Thừa số, Tích',
-    unit: 'Tập 2 - Chủ đề 10: Phép nhân và phép chia',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 10, 11',
-    description: 'Gọi tên các thành phần trong phép nhân: Thừa số x Thừa số = Tích.',
-    summary: 'Trong phép nhân 2 x 6 = 12, 2 và 6 là thừa số, 12 là tích.',
-    keyPoints: ['2 x 6 cũng được gọi là một tích.'],
-    mascotTip: 'BoBo: Thừa số nhân Thừa số bằng Tích bạn nha!',
-  },
-  {
-    id: 'math-g2-b40', semester: 2, lessonNumber: 40,
-    title: 'Bài 40: Bảng nhân 2',
-    unit: 'Tập 2 - Chủ đề 10: Phép nhân và phép chia',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 12, 13',
-    description: 'Học thuộc lòng bảng nhân 2: 2x1=2, 2x2=4... 2x10=20.',
-    summary: 'Tích trong bảng nhân 2 tăng đều 2 đơn vị.',
-    keyPoints: ['2 x 1 = 2, 2 x 2 = 4, 2 x 3 = 6, 2 x 4 = 8, 2 x 5 = 10, 2 x 6 = 12, 2 x 7 = 14, 2 x 8 = 16, 2 x 9 = 18, 2 x 10 = 20.'],
-    mascotTip: 'BoBo: Đếm thêm 2: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20!',
-  },
-  {
-    id: 'math-g2-b41', semester: 2, lessonNumber: 41,
-    title: 'Bài 41: Bảng nhân 5',
-    unit: 'Tập 2 - Chủ đề 10: Phép nhân và phép chia',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 16, 17',
-    description: 'Học thuộc lòng bảng nhân 5: 5x1=5, 5x2=10... 5x10=50.',
-    summary: 'Tích trong bảng nhân 5 luôn có tận cùng là chữ số 0 hoặc 5.',
-    keyPoints: ['5 x 1 = 5, 5 x 2 = 10, 5 x 3 = 15, 5 x 4 = 20, 5 x 5 = 25, 5 x 6 = 30, 5 x 7 = 35, 5 x 8 = 40, 5 x 9 = 45, 5 x 10 = 50.'],
-    mascotTip: 'BoBo: Nhìn vào đuôi số 0 hoặc 5 là biết ngay kết quả bảng nhân 5!',
-  },
-  {
-    id: 'math-g2-b42', semester: 2, lessonNumber: 42,
-    title: 'Bài 42: Luyện tập chung Bảng nhân 2 và 5',
-    unit: 'Tập 2 - Chủ đề 10: Phép nhân và phép chia',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 20, 21',
-    description: 'Tính nhẩm nhanh và giải bài toán nhân thực tế.',
-    summary: 'Mỗi bàn có 2 bạn, 8 bàn có tất cả: 2 x 8 = 16 bạn.',
-    keyPoints: ['Giải toán nhân có lời văn.'],
-    mascotTip: 'BoBo: Tính nhẩm thật nhanh nào: 5 x 7 = 35, 2 x 9 = 18!',
-  },
-  {
-    id: 'math-g2-b43', semester: 2, lessonNumber: 43,
-    title: 'Bài 43: Làm quen với phép chia. Dấu chia',
-    unit: 'Tập 2 - Chủ đề 11: Phép chia cơ bản',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 24, 25',
-    description: 'Ý nghĩa của phép chia là chia đều số phần hoặc chia thành các nhóm.',
-    summary: 'Dấu chia (:). Có 6 quả cam chia đều cho 2 bạn: 6 : 2 = 3 quả.',
-    keyPoints: ['Phép chia là phép tính ngược của phép nhân.'],
-    mascotTip: 'BoBo: Vì 2 x 3 = 6 nên 6 : 2 = 3 và 6 : 3 = 2!',
-  },
-  {
-    id: 'math-g2-b44', semester: 2, lessonNumber: 44,
-    title: 'Bài 44: Số bị chia, Số chia, Thương',
-    unit: 'Tập 2 - Chủ đề 11: Phép chia cơ bản',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 28, 29',
-    description: 'Gọi tên thành phần trong phép chia: Số bị chia : Số chia = Thương.',
-    summary: 'Trong 10 : 2 = 5, 10 là số bị chia, 2 là số chia, 5 là thương.',
-    keyPoints: ['10 : 2 cũng được gọi là một thương.'],
-    mascotTip: 'BoBo: Số Bị Chia đứng đầu, Số Chia đứng giữa, Thương ở đằng sau!',
-  },
-  {
-    id: 'math-g2-b45', semester: 2, lessonNumber: 45,
-    title: 'Bài 45: Bảng chia 2',
-    unit: 'Tập 2 - Chủ đề 11: Phép chia cơ bản',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 32, 33',
-    description: 'Học thuộc lòng bảng chia 2: 2:2=1, 4:2=2... 20:2=10.',
-    summary: 'Dựa vào bảng nhân 2 để hình thành bảng chia 2.',
-    keyPoints: ['2:2=1, 4:2=2, 6:2=3, 8:2=4, 10:2=5, 12:2=6, 14:2=7, 16:2=8, 18:2=9, 20:2=10.'],
-    mascotTip: 'BoBo: 16 : 2 = 8 vì 2 x 8 = 16!',
-  },
-  {
-    id: 'math-g2-b46', semester: 2, lessonNumber: 46,
-    title: 'Bài 46: Bảng chia 5',
-    unit: 'Tập 2 - Chủ đề 11: Phép chia cơ bản',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 36, 37',
-    description: 'Học thuộc lòng bảng chia 5: 5:5=1, 10:5=2... 50:5=10.',
-    summary: 'Dựa vào bảng nhân 5 để hình thành bảng chia 5.',
-    keyPoints: ['5:5=1, 10:5=2, 15:5=3, 20:5=4, 25:5=5, 30:5=6, 35:5=7, 40:5=8, 45:5=9, 50:5=10.'],
-    mascotTip: 'BoBo: 35 : 5 = 7 vì 5 x 7 = 35!',
-  },
-  {
-    id: 'math-g2-b47', semester: 2, lessonNumber: 47,
-    title: 'Bài 47: Luyện tập chung Bảng chia 2 và 5',
-    unit: 'Tập 2 - Chủ đề 11: Phép chia cơ bản',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 40, 41',
-    description: 'Tính nhẩm nhanh bảng nhân chia 2 và 5 kết hợp.',
-    summary: 'Thành thạo 4 bảng cửu chương đầu tiên.',
-    keyPoints: ['Vận dụng linh hoạt bảng nhân và bảng chia.'],
-    mascotTip: 'BoBo: Chúc mừng bạn đã nắm chắc 4 bảng nhân chia 2 và 5!',
-  },
-  {
-    id: 'math-g2-b48', semester: 2, lessonNumber: 48,
-    title: 'Bài 48: Đơn vị và Chục, Trăm',
-    unit: 'Tập 2 - Chủ đề 12: Các số đến 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 44, 45',
-    description: '10 đơn vị = 1 chục. 10 chục = 1 trăm (100).',
-    summary: 'Làm quen với khối vuông 100 ô vuông và các số tròn trăm.',
-    keyPoints: ['100, 200, 300, 400, 500, 600, 700, 800, 900, 1000.'],
-    mascotTip: 'BoBo: 10 thẻ một chục ghép lại thành 1 tấm một trăm!',
-  },
-  {
-    id: 'math-g2-b49', semester: 2, lessonNumber: 49,
-    title: 'Bài 49: Các số tròn trăm, tròn chục',
-    unit: 'Tập 2 - Chủ đề 12: Các số đến 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 48, 49',
-    description: 'Đọc, viết các số tròn trăm (100, 200...) và tròn chục (110, 120, 250...).',
-    summary: 'Cấu tạo số gồm các trăm và các chục.',
-    keyPoints: ['10 trăm = 1 nghìn (1000).'],
-    mascotTip: 'BoBo: Số 1000 gồm chữ số 1 và 3 chữ số 0 phía sau!',
-  },
-  {
-    id: 'math-g2-b50', semester: 2, lessonNumber: 50,
-    title: 'Bài 50: Các số từ 101 đến 110',
-    unit: 'Tập 2 - Chủ đề 12: Các số đến 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 52, 53',
-    description: 'Đọc: một trăm linh một (101), một trăm linh hai (102)...',
-    summary: 'Chữ "linh" chỉ hàng chục bằng 0.',
-    keyPoints: ['101, 102, 103, 104, 105 (một trăm linh năm), 106, 107, 108, 109, 110.'],
-    mascotTip: 'BoBo: Hàng chục là 0 thì đọc là "linh" bạn nhé!',
-  },
-  {
-    id: 'math-g2-b51', semester: 2, lessonNumber: 51,
-    title: 'Bài 51: Các số có ba chữ số',
-    unit: 'Tập 2 - Chủ đề 12: Các số đến 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 56, 57',
-    description: 'Đọc, viết số có 3 chữ số: Hàng trăm, Hàng chục, Hàng đơn vị.',
-    summary: '345 đọc là: ba trăm bốn mươi lăm.',
-    keyPoints: ['Hàng trăm đứng trước, hàng chục đứng giữa, hàng đơn vị đứng sau cùng.'],
-    mascotTip: 'BoBo: Đọc lần lượt từ trái sang phải: Trăm → Chục → Đơn vị!',
-  },
-  {
-    id: 'math-g2-b52', semester: 2, lessonNumber: 52,
-    title: 'Bài 52: Viết số thành tổng các trăm, chục, đơn vị',
-    unit: 'Tập 2 - Chủ đề 12: Các số đến 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 60, 61',
-    description: 'Phân tích số: 358 = 300 + 50 + 8; 706 = 700 + 6.',
-    summary: 'Mọi số có 3 chữ số đều viết được dưới dạng tổng các trăm, chục, đơn vị.',
-    keyPoints: ['420 = 400 + 20.'],
-    mascotTip: 'BoBo: Tách số ra thành từng phần giúp hiểu sâu cấu tạo số!',
-  },
-  {
-    id: 'math-g2-b53', semester: 2, lessonNumber: 53,
-    title: 'Bài 53: So sánh các số có ba chữ số',
-    unit: 'Tập 2 - Chủ đề 12: Các số đến 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 64, 65',
-    description: 'So sánh hàng trăm trước. Nếu bằng nhau so sánh hàng chục, rồi đến hàng đơn vị.',
-    summary: '435 > 398 (vì 4 trăm > 3 trăm); 562 < 568 (hàng đơn vị 2 < 8).',
-    keyPoints: ['So sánh lần lượt từ hàng lớn nhất (hàng trăm).'],
-    mascotTip: 'BoBo: Anh hàng trăm quyết định trước tiên!',
-  },
-  {
-    id: 'math-g2-b54', semester: 2, lessonNumber: 54,
-    title: 'Bài 54: Luyện tập chung Các số có 3 chữ số',
-    unit: 'Tập 2 - Chủ đề 12: Các số đến 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 68, 69',
-    description: 'Xếp thứ tự từ bé đến lớn và tìm số lớn nhất, số bé nhất.',
-    summary: 'Thành thạo cấu tạo và so sánh số đến 1000.',
-    keyPoints: ['Số bé nhất có ba chữ số là 100, số lớn nhất là 999.'],
-    mascotTip: 'BoBo: Bạn đã là cao thủ số học hàng trăm rồi!',
-  },
-  {
-    id: 'math-g2-b55', semester: 2, lessonNumber: 55,
-    title: 'Bài 55: Đơn vị Mét (m)',
-    unit: 'Tập 2 - Chủ đề 13: Đo lường độ dài lớn',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 72, 73',
-    description: 'Đơn vị đo độ dài Mét: viết tắt là m. 1 m = 10 dm = 100 cm.',
-    summary: 'Mét dùng để đo chiều dài phòng học, sân trường, chiều cao cây xanh.',
-    keyPoints: ['1 m = 10 dm; 1 m = 100 cm.', '100 cm = 1 m.'],
-    mascotTip: 'BoBo: Thước mét dài bằng 5 cây thước kẻ 20 cm cộng lại!',
-  },
-  {
-    id: 'math-g2-b56', semester: 2, lessonNumber: 56,
-    title: 'Bài 56: Đơn vị Ki-lô-mét (km)',
-    unit: 'Tập 2 - Chủ đề 13: Đo lường độ dài lớn',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 76, 77',
-    description: 'Đơn vị đo quãng đường dài: Ki-lô-mét viết tắt là km. 1 km = 1000 m.',
-    summary: 'Ki-lô-mét dùng đo khoảng cách giữa các tỉnh, đường cao tốc.',
-    keyPoints: ['1 km = 1000 m; 1000 m = 1 km.'],
-    mascotTip: 'BoBo: Quãng đường từ nhà đến trường khoảng 2 km!',
-  },
-  {
-    id: 'math-g2-b57', semester: 2, lessonNumber: 57,
-    title: 'Bài 57: Thực hành đo khoảng cách',
-    unit: 'Tập 2 - Chủ đề 13: Đo lường độ dài lớn',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 80, 81',
-    description: 'Dùng thước cuộn đo sân thể thao, đọc biển báo km trên đường.',
-    summary: 'Ứng dụng đo khoảng cách thực tế.',
-    keyPoints: ['Đọc biển chỉ dẫn khoảng cách trên đường quốc lộ.'],
-    mascotTip: 'BoBo: Biển báo "Hà Nội 50 km" nghĩa là còn cách 50 ki-lô-mét nữa!',
-  },
-  {
-    id: 'math-g2-b58', semester: 2, lessonNumber: 58,
-    title: 'Bài 58: Phép cộng (không nhớ) trong phạm vi 1000',
-    unit: 'Tập 2 - Chủ đề 14: Phép tính trong phạm vi 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 84, 85',
-    description: 'Đặt tính thẳng cột: 324 + 143 = 467.',
-    summary: 'Cộng đơn vị với đơn vị, chục với chục, trăm với trăm.',
-    keyPoints: ['4 + 3 = 7; 2 + 4 = 6; 3 + 1 = 4 → 467.'],
-    mascotTip: 'BoBo: Tính từ phải sang trái, thẳng hàng thẳng cột!',
-  },
-  {
-    id: 'math-g2-b59', semester: 2, lessonNumber: 59,
-    title: 'Bài 59: Phép trừ (không nhớ) trong phạm vi 1000',
-    unit: 'Tập 2 - Chủ đề 14: Phép tính trong phạm vi 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 88, 89',
-    description: 'Đặt tính thẳng cột: 576 - 231 = 345.',
-    summary: 'Trừ đơn vị cho đơn vị, chục cho chục, trăm cho trăm.',
-    keyPoints: ['6 - 1 = 5; 7 - 3 = 4; 5 - 2 = 3 → 345.'],
-    mascotTip: 'BoBo: Trừ từng hàng cực kỳ dễ dàng!',
-  },
-  {
-    id: 'math-g2-b60', semester: 2, lessonNumber: 60,
-    title: 'Bài 60: Phép cộng (có nhớ) trong phạm vi 1000',
-    unit: 'Tập 2 - Chủ đề 14: Phép tính trong phạm vi 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 92, 93',
-    description: 'Đặt tính: 247 + 135 = 382; 365 + 281 = 646.',
-    summary: 'Nhớ 1 sang hàng chục hoặc nhớ 1 sang hàng trăm.',
-    keyPoints: ['7 + 5 = 12 viết 2 nhớ 1; 4 + 3 = 7 thêm 1 là 8; 2 + 1 = 3 → 382.'],
-    mascotTip: 'BoBo: Nhớ thêm 1 vào hàng tiếp theo nhé!',
-  },
-  {
-    id: 'math-g2-b61', semester: 2, lessonNumber: 61,
-    title: 'Bài 61: Phép trừ (có nhớ) trong phạm vi 1000',
-    unit: 'Tập 2 - Chủ đề 14: Phép tính trong phạm vi 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 96, 97',
-    description: 'Đặt tính: 452 - 128 = 324; 536 - 271 = 265.',
-    summary: 'Mượn 1 ở hàng chục hoặc mượn 1 ở hàng trăm để trừ.',
-    keyPoints: ['2 không trừ được 8, lấy 12 - 8 = 4; 5 - 2 = 3 bớt 1 còn 2; 4 - 1 = 3 → 324.'],
-    mascotTip: 'BoBo: Mượn 1 thì nhớ bớt 1 ở hàng bên cạnh!',
-  },
-  {
-    id: 'math-g2-b62', semester: 2, lessonNumber: 62,
-    title: 'Bài 62: Luyện tập chung Phép tính phạm vi 1000',
-    unit: 'Tập 2 - Chủ đề 14: Phép tính trong phạm vi 1000',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 100, 101',
-    description: 'Tính toán thành thạo và giải toán lời văn số có 3 chữ số.',
-    summary: 'Củng cố toàn diện 4 phép tính trong phạm vi 1000.',
-    keyPoints: ['Giải toán hai phép tính.'],
-    mascotTip: 'BoBo: Bạn đã sẵn sàng chinh phục các con số lớn rồi!',
-  },
-  {
-    id: 'math-g2-b63', semester: 2, lessonNumber: 63,
-    title: 'Bài 63: Thu thập, phân loại, kiểm đếm số liệu',
-    unit: 'Tập 2 - Chủ đề 15: Một số yếu tố thống kê & xác suất',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 104, 105',
-    description: 'Đếm số lượng các loại hoa, đồ chơi và ghi chép vào bảng số liệu.',
-    summary: 'Làm quen với việc thu thập và phân loại thông tin.',
-    keyPoints: ['Kiểm đếm bằng cách gạch sổ hoặc đánh dấu.'],
-    mascotTip: 'BoBo: Đếm cẩn thận từng nhóm để không bị sót bạn nào nhé!',
-  },
-  {
-    id: 'math-g2-b64', semester: 2, lessonNumber: 64,
-    title: 'Bài 64: Biểu đồ tranh',
-    unit: 'Tập 2 - Chủ đề 15: Một số yếu tố thống kê & xác suất',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 108, 109',
-    description: 'Đọc và hiểu biểu đồ tranh (mỗi biểu tượng đại diện cho 1 hoặc nhiều vật).',
-    summary: 'Biểu đồ tranh trực quan giúp so sánh số lượng nhanh chóng.',
-    keyPoints: ['Đọc chú giải ở dưới biểu đồ tranh.'],
-    mascotTip: 'BoBo: Nhìn vào biểu đồ là biết ngay món đồ nào nhiều nhất!',
-  },
-  {
-    id: 'math-g2-b65', semester: 2, lessonNumber: 65,
-    title: 'Bài 65: Chắc chắn, Có thể, Không thể',
-    unit: 'Tập 2 - Chủ đề 15: Một số yếu tố thống kê & xác suất',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 112, 113',
-    description: 'Dự đoán khả năng xảy ra của một sự kiện (bốc bóng trong hộp kín).',
-    summary: 'Chắc chắn (100% xảy ra), Có thể (có khả năng), Không thể (hoàn toàn không xảy ra).',
-    keyPoints: ['Trong hộp toàn bóng đỏ: Chắc chắn bốc được bóng đỏ.', 'Trong hộp không có bóng xanh: Không thể bốc được bóng xanh.'],
-    mascotTip: 'BoBo: Suy luận logic để đoán xem sự việc Chắc chắn hay Không thể nhé!',
-  },
-  {
-    id: 'math-g2-b66', semester: 2, lessonNumber: 66,
-    title: 'Bài 66: Ôn tập phép nhân và phép chia',
-    unit: 'Tập 2 - Chủ đề 16: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 116, 117',
-    description: 'Hệ thống lại bảng nhân 2, 5 và bảng chia 2, 5.',
-    summary: 'Tính nhẩm nhanh và giải bài toán nhân chia.',
-    keyPoints: ['Vận dụng tính nhẩm giải bài toán thực tế.'],
-    mascotTip: 'BoBo: Thuộc làu cửu chương là tự tin đạt điểm 10!',
-  },
-  {
-    id: 'math-g2-b67', semester: 2, lessonNumber: 67,
-    title: 'Bài 67: Ôn tập phép cộng và phép trừ',
-    unit: 'Tập 2 - Chủ đề 16: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 120, 121',
-    description: 'Ôn tập cộng trừ có nhớ trong phạm vi 100 và 1000.',
-    summary: 'Rèn phản xạ tính toán không nhầm lẫn.',
-    keyPoints: ['Tính cẩn thận từng hàng số.'],
-    mascotTip: 'BoBo: Giữ vững phong độ tính toán nhé bạn nhỏ!',
-  },
-  {
-    id: 'math-g2-b68', semester: 2, lessonNumber: 68,
-    title: 'Bài 68: Ôn tập Hình học & Đo lường cả năm',
-    unit: 'Tập 2 - Chủ đề 16: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 124, 125',
-    description: 'Tổng kết điểm, đoạn thẳng, đường gấp khúc, khối trụ, cầu, dm, m, km, kg, l.',
-    summary: 'Hệ thống hóa toàn bộ kiến thức hình học và đo lường Lớp 2.',
-    keyPoints: ['Nhận diện hình khối và đổi đơn vị đo.'],
-    mascotTip: 'BoBo: Ôn tập kỹ để chuẩn bị nhận Cúp Vàng Lớp 2!',
-  },
-  {
-    id: 'math-g2-b69', semester: 2, lessonNumber: 69,
-    title: 'Bài 69: Ôn tập chung & Đấu trường Vinh danh Toán Lớp 2',
-    unit: 'Tập 2 - Chủ đề 16: Ôn tập cuối năm',
-    textbookPageRef: 'SGK Toán 2 Tập hai — Trang 128, 129',
-    description: 'Đề kiểm tra tổng kết toàn bộ 69 bài học chương trình Toán Lớp 2.',
-    summary: 'Vinh danh hoàn thành xuất sắc chương trình Toán Lớp 2 chuẩn GDPT 2018.',
-    keyPoints: ['Mở khóa Cúp Hiệp Sĩ Toán Học Lớp 2 và sẵn sàng bước vào Lớp 3!'],
-    mascotTip: 'BoBo: Tuyệt vời! Bạn là Bậc Thầy Toán Học Lớp 2! 🏆🌟🎉',
-  },
+    "id": "math-g2-b1",
+    "semester": 1,
+    "lessonNumber": 1,
+    "title": "Bài 1: Ôn tập các số đến 100",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 3 - 6",
+    "description": "Bài học Toán 2: Ôn tập các số đến 100.",
+    "summary": "Nội dung trọng tâm của Bài 1: Ôn tập các số đến 100 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 1: Ôn tập các số đến 100.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b1-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 1: Ôn tập các số đến 100: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "2 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "5"
+          },
+          {
+            "id": "c",
+            "label": "1"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b1-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 1: Ôn tập các số đến 100 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b2",
+    "semester": 1,
+    "lessonNumber": 2,
+    "title": "Bài 2: Tia số. Số liền trước, số liền sau",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 6 - 9",
+    "description": "Bài học Toán 2: Tia số. Số liền trước, số liền sau.",
+    "summary": "Nội dung trọng tâm của Bài 2: Tia số. Số liền trước, số liền sau chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 2: Tia số. Số liền trước, số liền sau.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b2-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 2: Tia số. Số liền trước, số liền sau: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "4 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "7"
+          },
+          {
+            "id": "c",
+            "label": "2"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b2-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 2: Tia số. Số liền trước, số liền sau là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b3",
+    "semester": 1,
+    "lessonNumber": 3,
+    "title": "Bài 3: Các thành phần của phép cộng, phép trừ",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 9 - 12",
+    "description": "Bài học Toán 2: Các thành phần của phép cộng, phép trừ.",
+    "summary": "Nội dung trọng tâm của Bài 3: Các thành phần của phép cộng, phép trừ chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 3: Các thành phần của phép cộng, phép trừ.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b3-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 3: Các thành phần của phép cộng, phép trừ: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "6 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "9"
+          },
+          {
+            "id": "c",
+            "label": "4"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b3-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 3: Các thành phần của phép cộng, phép trừ là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b4",
+    "semester": 1,
+    "lessonNumber": 4,
+    "title": "Bài 4: Hơn, kém nhau bao nhiêu",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 12 - 15",
+    "description": "Bài học Toán 2: Hơn, kém nhau bao nhiêu.",
+    "summary": "Nội dung trọng tâm của Bài 4: Hơn, kém nhau bao nhiêu chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 4: Hơn, kém nhau bao nhiêu.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b4-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 4: Hơn, kém nhau bao nhiêu: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "8 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "11"
+          },
+          {
+            "id": "c",
+            "label": "6"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b4-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 4: Hơn, kém nhau bao nhiêu là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b5",
+    "semester": 1,
+    "lessonNumber": 5,
+    "title": "Bài 5: Ôn tập phép cộng, phép trừ không nhớ trong phạm vi 100",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 15 - 18",
+    "description": "Bài học Toán 2: Ôn tập phép cộng, phép trừ không nhớ trong phạm vi 100.",
+    "summary": "Nội dung trọng tâm của Bài 5: Ôn tập phép cộng, phép trừ không nhớ trong phạm vi 100 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 5: Ôn tập phép cộng, phép trừ không nhớ trong phạm vi 100.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b5-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 5: Ôn tập phép cộng, phép trừ không nhớ trong phạm vi 100: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "10 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "13"
+          },
+          {
+            "id": "c",
+            "label": "8"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b5-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 5: Ôn tập phép cộng, phép trừ không nhớ trong phạm vi 100 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b6",
+    "semester": 1,
+    "lessonNumber": 6,
+    "title": "Bài 6: Luyện tập chung",
+    "unit": "Chủ đề 1: Ôn tập và bổ sung",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 18 - 21",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 6: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 6: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b6-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 6: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "12 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "15"
+          },
+          {
+            "id": "c",
+            "label": "10"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b6-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 6: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b7",
+    "semester": 1,
+    "lessonNumber": 7,
+    "title": "Bài 7: Phép cộng qua 10 trong phạm vi 20",
+    "unit": "Chủ đề 2: Phép cộng qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 21 - 24",
+    "description": "Bài học Toán 2: Phép cộng qua 10 trong phạm vi 20.",
+    "summary": "Nội dung trọng tâm của Bài 7: Phép cộng qua 10 trong phạm vi 20 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 7: Phép cộng qua 10 trong phạm vi 20.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b7-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 7: Phép cộng qua 10 trong phạm vi 20: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "14 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "17"
+          },
+          {
+            "id": "c",
+            "label": "12"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b7-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 7: Phép cộng qua 10 trong phạm vi 20 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b8",
+    "semester": 1,
+    "lessonNumber": 8,
+    "title": "Bài 8: Bảng cộng (qua 10)",
+    "unit": "Chủ đề 2: Phép cộng qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 24 - 27",
+    "description": "Bài học Toán 2: Bảng cộng (qua 10).",
+    "summary": "Nội dung trọng tâm của Bài 8: Bảng cộng (qua 10) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 8: Bảng cộng (qua 10).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b8-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 8: Bảng cộng (qua 10): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "16 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "19"
+          },
+          {
+            "id": "c",
+            "label": "14"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b8-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 8: Bảng cộng (qua 10) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b9",
+    "semester": 1,
+    "lessonNumber": 9,
+    "title": "Bài toán về thêm, bớt một số đơn vị",
+    "unit": "Chủ đề 2: Phép cộng qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 27 - 30",
+    "description": "Bài học Toán 2: Bài toán về thêm, bớt một số đơn vị.",
+    "summary": "Nội dung trọng tâm của Bài toán về thêm, bớt một số đơn vị chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài toán về thêm, bớt một số đơn vị.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b9-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài toán về thêm, bớt một số đơn vị: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "18 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "21"
+          },
+          {
+            "id": "c",
+            "label": "16"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b9-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài toán về thêm, bớt một số đơn vị là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b10",
+    "semester": 1,
+    "lessonNumber": 10,
+    "title": "Bài 10: Luyện tập chung",
+    "unit": "Chủ đề 2: Phép cộng qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 30 - 33",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 10: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 10: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b10-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 10: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "20 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "23"
+          },
+          {
+            "id": "c",
+            "label": "18"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b10-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 10: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b11",
+    "semester": 1,
+    "lessonNumber": 11,
+    "title": "Bài 11: Phép trừ qua 10 trong phạm vi 20",
+    "unit": "Chủ đề 3: Phép trừ qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 33 - 36",
+    "description": "Bài học Toán 2: Phép trừ qua 10 trong phạm vi 20.",
+    "summary": "Nội dung trọng tâm của Bài 11: Phép trừ qua 10 trong phạm vi 20 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 11: Phép trừ qua 10 trong phạm vi 20.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b11-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 11: Phép trừ qua 10 trong phạm vi 20: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "22 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "25"
+          },
+          {
+            "id": "c",
+            "label": "20"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b11-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 11: Phép trừ qua 10 trong phạm vi 20 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b12",
+    "semester": 1,
+    "lessonNumber": 12,
+    "title": "Bài 12: Bảng trừ (qua 10)",
+    "unit": "Chủ đề 3: Phép trừ qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 36 - 39",
+    "description": "Bài học Toán 2: Bảng trừ (qua 10).",
+    "summary": "Nội dung trọng tâm của Bài 12: Bảng trừ (qua 10) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 12: Bảng trừ (qua 10).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b12-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 12: Bảng trừ (qua 10): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "24 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "27"
+          },
+          {
+            "id": "c",
+            "label": "22"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b12-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 12: Bảng trừ (qua 10) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b13",
+    "semester": 1,
+    "lessonNumber": 13,
+    "title": "Bài toán về nhiều hơn, ít hơn một số đơn vị",
+    "unit": "Chủ đề 3: Phép trừ qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 39 - 42",
+    "description": "Bài học Toán 2: Bài toán về nhiều hơn, ít hơn một số đơn vị.",
+    "summary": "Nội dung trọng tâm của Bài toán về nhiều hơn, ít hơn một số đơn vị chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài toán về nhiều hơn, ít hơn một số đơn vị.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b13-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài toán về nhiều hơn, ít hơn một số đơn vị: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "26 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "29"
+          },
+          {
+            "id": "c",
+            "label": "24"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b13-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài toán về nhiều hơn, ít hơn một số đơn vị là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b14",
+    "semester": 1,
+    "lessonNumber": 14,
+    "title": "Bài 14: Luyện tập chung",
+    "unit": "Chủ đề 3: Phép trừ qua 10 trong phạm vi 20",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 42 - 45",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 14: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 14: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b14-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 14: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "28 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "31"
+          },
+          {
+            "id": "c",
+            "label": "26"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b14-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 14: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b15",
+    "semester": 1,
+    "lessonNumber": 15,
+    "title": "Bài 15: Ki-lô-gam (kg)",
+    "unit": "Chủ đề 4: Làm quen với một số đơn vị đo",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 45 - 48",
+    "description": "Bài học Toán 2: Ki-lô-gam (kg).",
+    "summary": "Nội dung trọng tâm của Bài 15: Ki-lô-gam (kg) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 15: Ki-lô-gam (kg).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b15-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 15: Ki-lô-gam (kg): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "30 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "33"
+          },
+          {
+            "id": "c",
+            "label": "28"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b15-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 15: Ki-lô-gam (kg) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b16",
+    "semester": 1,
+    "lessonNumber": 16,
+    "title": "Bài 16: Lít (l)",
+    "unit": "Chủ đề 4: Làm quen với một số đơn vị đo",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 48 - 51",
+    "description": "Bài học Toán 2: Lít (l).",
+    "summary": "Nội dung trọng tâm của Bài 16: Lít (l) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 16: Lít (l).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b16-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 16: Lít (l): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "32 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "35"
+          },
+          {
+            "id": "c",
+            "label": "30"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b16-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 16: Lít (l) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b17",
+    "semester": 1,
+    "lessonNumber": 17,
+    "title": "Bài 17: Thực hành và trải nghiệm cân, đo",
+    "unit": "Chủ đề 4: Làm quen với một số đơn vị đo",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 51 - 54",
+    "description": "Bài học Toán 2: Thực hành và trải nghiệm cân, đo.",
+    "summary": "Nội dung trọng tâm của Bài 17: Thực hành và trải nghiệm cân, đo chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 17: Thực hành và trải nghiệm cân, đo.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b17-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 17: Thực hành và trải nghiệm cân, đo: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "34 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "37"
+          },
+          {
+            "id": "c",
+            "label": "32"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b17-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 17: Thực hành và trải nghiệm cân, đo là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b18",
+    "semester": 1,
+    "lessonNumber": 18,
+    "title": "Bài 18: Luyện tập chung",
+    "unit": "Chủ đề 4: Làm quen với một số đơn vị đo",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 54 - 57",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 18: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 18: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b18-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 18: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "36 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "39"
+          },
+          {
+            "id": "c",
+            "label": "34"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b18-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 18: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b19",
+    "semester": 1,
+    "lessonNumber": 19,
+    "title": "Bài 19: Phép cộng có nhớ số có hai chữ số với số có một chữ số",
+    "unit": "Chủ đề 5: Phép cộng có nhớ trong phạm vi 100",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 57 - 60",
+    "description": "Bài học Toán 2: Phép cộng có nhớ số có hai chữ số với số có một chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 19: Phép cộng có nhớ số có hai chữ số với số có một chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 19: Phép cộng có nhớ số có hai chữ số với số có một chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b19-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 19: Phép cộng có nhớ số có hai chữ số với số có một chữ số: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "38 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "41"
+          },
+          {
+            "id": "c",
+            "label": "36"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b19-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 19: Phép cộng có nhớ số có hai chữ số với số có một chữ số là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b20",
+    "semester": 1,
+    "lessonNumber": 20,
+    "title": "Bài 20: Phép cộng có nhớ số có hai chữ số với số có hai chữ số",
+    "unit": "Chủ đề 5: Phép cộng có nhớ trong phạm vi 100",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 60 - 63",
+    "description": "Bài học Toán 2: Phép cộng có nhớ số có hai chữ số với số có hai chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 20: Phép cộng có nhớ số có hai chữ số với số có hai chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 20: Phép cộng có nhớ số có hai chữ số với số có hai chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b20-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 20: Phép cộng có nhớ số có hai chữ số với số có hai chữ số: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "40 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "43"
+          },
+          {
+            "id": "c",
+            "label": "38"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b20-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 20: Phép cộng có nhớ số có hai chữ số với số có hai chữ số là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b21",
+    "semester": 1,
+    "lessonNumber": 21,
+    "title": "Bài 21: Luyện tập chung",
+    "unit": "Chủ đề 5: Phép cộng có nhớ trong phạm vi 100",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 63 - 66",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 21: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 21: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b21-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 21: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "42 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "45"
+          },
+          {
+            "id": "c",
+            "label": "40"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b21-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 21: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b22",
+    "semester": 1,
+    "lessonNumber": 22,
+    "title": "Bài 22: Phép trừ có nhớ số có hai chữ số cho số có một chữ số",
+    "unit": "Chủ đề 6: Phép trừ có nhớ trong phạm vi 100",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 66 - 69",
+    "description": "Bài học Toán 2: Phép trừ có nhớ số có hai chữ số cho số có một chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 22: Phép trừ có nhớ số có hai chữ số cho số có một chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 22: Phép trừ có nhớ số có hai chữ số cho số có một chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b22-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 22: Phép trừ có nhớ số có hai chữ số cho số có một chữ số: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "44 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "47"
+          },
+          {
+            "id": "c",
+            "label": "42"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b22-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 22: Phép trừ có nhớ số có hai chữ số cho số có một chữ số là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b23",
+    "semester": 1,
+    "lessonNumber": 23,
+    "title": "Bài 23: Phép trừ có nhớ số có hai chữ số cho số có hai chữ số",
+    "unit": "Chủ đề 6: Phép trừ có nhớ trong phạm vi 100",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 69 - 72",
+    "description": "Bài học Toán 2: Phép trừ có nhớ số có hai chữ số cho số có hai chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 23: Phép trừ có nhớ số có hai chữ số cho số có hai chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 23: Phép trừ có nhớ số có hai chữ số cho số có hai chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b23-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 23: Phép trừ có nhớ số có hai chữ số cho số có hai chữ số: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "46 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "49"
+          },
+          {
+            "id": "c",
+            "label": "44"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b23-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 23: Phép trừ có nhớ số có hai chữ số cho số có hai chữ số là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b24",
+    "semester": 1,
+    "lessonNumber": 24,
+    "title": "Bài 24: Luyện tập chung",
+    "unit": "Chủ đề 6: Phép trừ có nhớ trong phạm vi 100",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 72 - 75",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 24: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 24: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b24-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 24: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "48 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "51"
+          },
+          {
+            "id": "c",
+            "label": "46"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b24-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 24: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b25",
+    "semester": 1,
+    "lessonNumber": 25,
+    "title": "Bài 25: Điểm, đoạn thẳng, đường thẳng, đường cong, ba điểm thẳng hàng",
+    "unit": "Chủ đề 7: Làm quen với hình phẳng",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 75 - 78",
+    "description": "Bài học Toán 2: Điểm, đoạn thẳng, đường thẳng, đường cong, ba điểm thẳng hàng.",
+    "summary": "Nội dung trọng tâm của Bài 25: Điểm, đoạn thẳng, đường thẳng, đường cong, ba điểm thẳng hàng chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 25: Điểm, đoạn thẳng, đường thẳng, đường cong, ba điểm thẳng hàng.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b25-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 25: Điểm, đoạn thẳng, đường thẳng, đường cong, ba điểm thẳng hàng: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "50 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "53"
+          },
+          {
+            "id": "c",
+            "label": "48"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b25-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 25: Điểm, đoạn thẳng, đường thẳng, đường cong, ba điểm thẳng hàng là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b26",
+    "semester": 1,
+    "lessonNumber": 26,
+    "title": "Bài 26: Đường gấp khúc. Độ dài đường gấp khúc",
+    "unit": "Chủ đề 7: Làm quen với hình phẳng",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 78 - 81",
+    "description": "Bài học Toán 2: Đường gấp khúc. Độ dài đường gấp khúc.",
+    "summary": "Nội dung trọng tâm của Bài 26: Đường gấp khúc. Độ dài đường gấp khúc chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 26: Đường gấp khúc. Độ dài đường gấp khúc.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b26-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 26: Đường gấp khúc. Độ dài đường gấp khúc: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "52 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "55"
+          },
+          {
+            "id": "c",
+            "label": "50"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b26-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 26: Đường gấp khúc. Độ dài đường gấp khúc là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b27",
+    "semester": 1,
+    "lessonNumber": 27,
+    "title": "Bài 27: Hình tứ giác",
+    "unit": "Chủ đề 7: Làm quen với hình phẳng",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 81 - 84",
+    "description": "Bài học Toán 2: Hình tứ giác.",
+    "summary": "Nội dung trọng tâm của Bài 27: Hình tứ giác chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 27: Hình tứ giác.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b27-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 27: Hình tứ giác: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "54 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "57"
+          },
+          {
+            "id": "c",
+            "label": "52"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b27-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 27: Hình tứ giác là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b28",
+    "semester": 1,
+    "lessonNumber": 28,
+    "title": "Bài 28: Thực hành và trải nghiệm vẽ, cắt, ghép hình",
+    "unit": "Chủ đề 7: Làm quen với hình phẳng",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 84 - 87",
+    "description": "Bài học Toán 2: Thực hành và trải nghiệm vẽ, cắt, ghép hình.",
+    "summary": "Nội dung trọng tâm của Bài 28: Thực hành và trải nghiệm vẽ, cắt, ghép hình chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 28: Thực hành và trải nghiệm vẽ, cắt, ghép hình.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b28-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 28: Thực hành và trải nghiệm vẽ, cắt, ghép hình: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "56 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "59"
+          },
+          {
+            "id": "c",
+            "label": "54"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b28-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 28: Thực hành và trải nghiệm vẽ, cắt, ghép hình là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b29",
+    "semester": 1,
+    "lessonNumber": 29,
+    "title": "Bài 29: Luyện tập chung",
+    "unit": "Chủ đề 7: Làm quen với hình phẳng",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 87 - 90",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 29: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 29: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b29-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 29: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "58 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "61"
+          },
+          {
+            "id": "c",
+            "label": "56"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b29-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 29: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b30",
+    "semester": 1,
+    "lessonNumber": 30,
+    "title": "Bài 30: Ngày - tháng",
+    "unit": "Chủ đề 8: Thời gian. Ngày - giờ, giờ - phút",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 90 - 93",
+    "description": "Bài học Toán 2: Ngày - tháng.",
+    "summary": "Nội dung trọng tâm của Bài 30: Ngày - tháng chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 30: Ngày - tháng.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b30-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 30: Ngày - tháng: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "60 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "63"
+          },
+          {
+            "id": "c",
+            "label": "58"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b30-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 30: Ngày - tháng là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b31",
+    "semester": 1,
+    "lessonNumber": 31,
+    "title": "Bài 31: Giờ - phút",
+    "unit": "Chủ đề 8: Thời gian. Ngày - giờ, giờ - phút",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 93 - 96",
+    "description": "Bài học Toán 2: Giờ - phút.",
+    "summary": "Nội dung trọng tâm của Bài 31: Giờ - phút chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 31: Giờ - phút.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b31-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 31: Giờ - phút: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "62 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "65"
+          },
+          {
+            "id": "c",
+            "label": "60"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b31-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 31: Giờ - phút là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b32",
+    "semester": 1,
+    "lessonNumber": 32,
+    "title": "Bài 32: Thực hành xem đồng hồ, xem lịch",
+    "unit": "Chủ đề 8: Thời gian. Ngày - giờ, giờ - phút",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 96 - 99",
+    "description": "Bài học Toán 2: Thực hành xem đồng hồ, xem lịch.",
+    "summary": "Nội dung trọng tâm của Bài 32: Thực hành xem đồng hồ, xem lịch chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 32: Thực hành xem đồng hồ, xem lịch.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b32-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 32: Thực hành xem đồng hồ, xem lịch: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "64 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "67"
+          },
+          {
+            "id": "c",
+            "label": "62"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b32-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 32: Thực hành xem đồng hồ, xem lịch là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b33",
+    "semester": 1,
+    "lessonNumber": 33,
+    "title": "Bài 33: Luyện tập chung",
+    "unit": "Chủ đề 8: Thời gian. Ngày - giờ, giờ - phút",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 99 - 102",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 33: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 33: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b33-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 33: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "66 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "69"
+          },
+          {
+            "id": "c",
+            "label": "64"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b33-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 33: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b34",
+    "semester": 1,
+    "lessonNumber": 34,
+    "title": "Bài 34: Ôn tập các số và phép tính trong phạm vi 100",
+    "unit": "Chủ đề 9: Ôn tập học kì 1",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 102 - 105",
+    "description": "Bài học Toán 2: Ôn tập các số và phép tính trong phạm vi 100.",
+    "summary": "Nội dung trọng tâm của Bài 34: Ôn tập các số và phép tính trong phạm vi 100 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 34: Ôn tập các số và phép tính trong phạm vi 100.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b34-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 34: Ôn tập các số và phép tính trong phạm vi 100: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "68 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "71"
+          },
+          {
+            "id": "c",
+            "label": "66"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b34-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 34: Ôn tập các số và phép tính trong phạm vi 100 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b35",
+    "semester": 1,
+    "lessonNumber": 35,
+    "title": "Bài 35: Ôn tập hình học và đo lường",
+    "unit": "Chủ đề 9: Ôn tập học kì 1",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 105 - 108",
+    "description": "Bài học Toán 2: Ôn tập hình học và đo lường.",
+    "summary": "Nội dung trọng tâm của Bài 35: Ôn tập hình học và đo lường chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 35: Ôn tập hình học và đo lường.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b35-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 35: Ôn tập hình học và đo lường: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "70 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "73"
+          },
+          {
+            "id": "c",
+            "label": "68"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b35-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 35: Ôn tập hình học và đo lường là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b36",
+    "semester": 1,
+    "lessonNumber": 36,
+    "title": "Bài 36: Ôn tập chung học kì 1",
+    "unit": "Chủ đề 9: Ôn tập học kì 1",
+    "textbookPageRef": "SGK Toán 2 Tập một — Trang 108 - 111",
+    "description": "Bài học Toán 2: Ôn tập chung học kì 1.",
+    "summary": "Nội dung trọng tâm của Bài 36: Ôn tập chung học kì 1 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 36: Ôn tập chung học kì 1.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b36-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 36: Ôn tập chung học kì 1: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "72 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "75"
+          },
+          {
+            "id": "c",
+            "label": "70"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b36-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 36: Ôn tập chung học kì 1 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b37",
+    "semester": 2,
+    "lessonNumber": 37,
+    "title": "Bài 37: Phép nhân",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 3 - 6",
+    "description": "Bài học Toán 2: Phép nhân.",
+    "summary": "Nội dung trọng tâm của Bài 37: Phép nhân chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 37: Phép nhân.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b37-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 37: Phép nhân: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "74 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "77"
+          },
+          {
+            "id": "c",
+            "label": "72"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b37-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 37: Phép nhân là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b38",
+    "semester": 2,
+    "lessonNumber": 38,
+    "title": "Bài 38: Thừa số, tích",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 6 - 9",
+    "description": "Bài học Toán 2: Thừa số, tích.",
+    "summary": "Nội dung trọng tâm của Bài 38: Thừa số, tích chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 38: Thừa số, tích.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b38-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 38: Thừa số, tích: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "76 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "79"
+          },
+          {
+            "id": "c",
+            "label": "74"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b38-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 38: Thừa số, tích là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b39",
+    "semester": 2,
+    "lessonNumber": 39,
+    "title": "Bài 39: Bảng nhân 2",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 9 - 12",
+    "description": "Bài học Toán 2: Bảng nhân 2.",
+    "summary": "Nội dung trọng tâm của Bài 39: Bảng nhân 2 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 39: Bảng nhân 2.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b39-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 39: Bảng nhân 2: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "78 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "81"
+          },
+          {
+            "id": "c",
+            "label": "76"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b39-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 39: Bảng nhân 2 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b40",
+    "semester": 2,
+    "lessonNumber": 40,
+    "title": "Bài 40: Bảng nhân 5",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 12 - 15",
+    "description": "Bài học Toán 2: Bảng nhân 5.",
+    "summary": "Nội dung trọng tâm của Bài 40: Bảng nhân 5 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 40: Bảng nhân 5.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b40-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 40: Bảng nhân 5: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "80 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "83"
+          },
+          {
+            "id": "c",
+            "label": "78"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b40-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 40: Bảng nhân 5 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b41",
+    "semester": 2,
+    "lessonNumber": 41,
+    "title": "Bài 41: Phép chia",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 15 - 18",
+    "description": "Bài học Toán 2: Phép chia.",
+    "summary": "Nội dung trọng tâm của Bài 41: Phép chia chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 41: Phép chia.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b41-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 41: Phép chia: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "82 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "85"
+          },
+          {
+            "id": "c",
+            "label": "80"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b41-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 41: Phép chia là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b42",
+    "semester": 2,
+    "lessonNumber": 42,
+    "title": "Bài 42: Số bị chia, số chia, thương",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 18 - 21",
+    "description": "Bài học Toán 2: Số bị chia, số chia, thương.",
+    "summary": "Nội dung trọng tâm của Bài 42: Số bị chia, số chia, thương chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 42: Số bị chia, số chia, thương.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b42-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 42: Số bị chia, số chia, thương: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "84 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "87"
+          },
+          {
+            "id": "c",
+            "label": "82"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b42-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 42: Số bị chia, số chia, thương là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b43",
+    "semester": 2,
+    "lessonNumber": 43,
+    "title": "Bài 43: Bảng chia 2",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 21 - 24",
+    "description": "Bài học Toán 2: Bảng chia 2.",
+    "summary": "Nội dung trọng tâm của Bài 43: Bảng chia 2 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 43: Bảng chia 2.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b43-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 43: Bảng chia 2: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "86 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "89"
+          },
+          {
+            "id": "c",
+            "label": "84"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b43-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 43: Bảng chia 2 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b44",
+    "semester": 2,
+    "lessonNumber": 44,
+    "title": "Bài 44: Bảng chia 5",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 24 - 27",
+    "description": "Bài học Toán 2: Bảng chia 5.",
+    "summary": "Nội dung trọng tâm của Bài 44: Bảng chia 5 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 44: Bảng chia 5.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b44-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 44: Bảng chia 5: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "88 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "91"
+          },
+          {
+            "id": "c",
+            "label": "86"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b44-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 44: Bảng chia 5 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b45",
+    "semester": 2,
+    "lessonNumber": 45,
+    "title": "Bài 45: Luyện tập chung",
+    "unit": "Chủ đề 10: Phép nhân, phép chia",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 27 - 30",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 45: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 45: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b45-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 45: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "90 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "93"
+          },
+          {
+            "id": "c",
+            "label": "88"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b45-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 45: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b46",
+    "semester": 2,
+    "lessonNumber": 46,
+    "title": "Bài 46: Khối trụ, khối cầu",
+    "unit": "Chủ đề 11: Làm quen với hình khối",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 30 - 33",
+    "description": "Bài học Toán 2: Khối trụ, khối cầu.",
+    "summary": "Nội dung trọng tâm của Bài 46: Khối trụ, khối cầu chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 46: Khối trụ, khối cầu.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b46-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 46: Khối trụ, khối cầu: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "92 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "95"
+          },
+          {
+            "id": "c",
+            "label": "90"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b46-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 46: Khối trụ, khối cầu là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b47",
+    "semester": 2,
+    "lessonNumber": 47,
+    "title": "Bài 47: Thực hành và trải nghiệm quan sát hình khối",
+    "unit": "Chủ đề 11: Làm quen với hình khối",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 33 - 36",
+    "description": "Bài học Toán 2: Thực hành và trải nghiệm quan sát hình khối.",
+    "summary": "Nội dung trọng tâm của Bài 47: Thực hành và trải nghiệm quan sát hình khối chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 47: Thực hành và trải nghiệm quan sát hình khối.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b47-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 47: Thực hành và trải nghiệm quan sát hình khối: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "94 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "97"
+          },
+          {
+            "id": "c",
+            "label": "92"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b47-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 47: Thực hành và trải nghiệm quan sát hình khối là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b48",
+    "semester": 2,
+    "lessonNumber": 48,
+    "title": "Bài 48: Luyện tập chung",
+    "unit": "Chủ đề 11: Làm quen với hình khối",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 36 - 39",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 48: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 48: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b48-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 48: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "96 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "99"
+          },
+          {
+            "id": "c",
+            "label": "94"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b48-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 48: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b49",
+    "semester": 2,
+    "lessonNumber": 49,
+    "title": "Bài 49: Đơn vị đo độ dài đề-xi-mét (dm)",
+    "unit": "Chủ đề 12: Độ dài và đơn vị đo độ dài",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 39 - 42",
+    "description": "Bài học Toán 2: Đơn vị đo độ dài đề-xi-mét (dm).",
+    "summary": "Nội dung trọng tâm của Bài 49: Đơn vị đo độ dài đề-xi-mét (dm) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 49: Đơn vị đo độ dài đề-xi-mét (dm).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b49-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 49: Đơn vị đo độ dài đề-xi-mét (dm): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "98 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "101"
+          },
+          {
+            "id": "c",
+            "label": "96"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b49-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 49: Đơn vị đo độ dài đề-xi-mét (dm) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b50",
+    "semester": 2,
+    "lessonNumber": 50,
+    "title": "Bài 50: Đơn vị đo độ dài mét (m)",
+    "unit": "Chủ đề 12: Độ dài và đơn vị đo độ dài",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 42 - 45",
+    "description": "Bài học Toán 2: Đơn vị đo độ dài mét (m).",
+    "summary": "Nội dung trọng tâm của Bài 50: Đơn vị đo độ dài mét (m) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 50: Đơn vị đo độ dài mét (m).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b50-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 50: Đơn vị đo độ dài mét (m): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "100 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "103"
+          },
+          {
+            "id": "c",
+            "label": "98"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b50-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 50: Đơn vị đo độ dài mét (m) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b51",
+    "semester": 2,
+    "lessonNumber": 51,
+    "title": "Bài 51: Đơn vị đo độ dài ki-lô-mét (km)",
+    "unit": "Chủ đề 12: Độ dài và đơn vị đo độ dài",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 45 - 48",
+    "description": "Bài học Toán 2: Đơn vị đo độ dài ki-lô-mét (km).",
+    "summary": "Nội dung trọng tâm của Bài 51: Đơn vị đo độ dài ki-lô-mét (km) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 51: Đơn vị đo độ dài ki-lô-mét (km).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b51-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 51: Đơn vị đo độ dài ki-lô-mét (km): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "102 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "105"
+          },
+          {
+            "id": "c",
+            "label": "100"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b51-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 51: Đơn vị đo độ dài ki-lô-mét (km) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b52",
+    "semester": 2,
+    "lessonNumber": 52,
+    "title": "Bài 52: Đơn vị đo độ dài mi-li-mét (mm)",
+    "unit": "Chủ đề 12: Độ dài và đơn vị đo độ dài",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 48 - 51",
+    "description": "Bài học Toán 2: Đơn vị đo độ dài mi-li-mét (mm).",
+    "summary": "Nội dung trọng tâm của Bài 52: Đơn vị đo độ dài mi-li-mét (mm) chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 52: Đơn vị đo độ dài mi-li-mét (mm).",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b52-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 52: Đơn vị đo độ dài mi-li-mét (mm): Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "104 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "107"
+          },
+          {
+            "id": "c",
+            "label": "102"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b52-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 52: Đơn vị đo độ dài mi-li-mét (mm) là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b53",
+    "semester": 2,
+    "lessonNumber": 53,
+    "title": "Bài 53: Thực hành và trải nghiệm đo độ dài",
+    "unit": "Chủ đề 12: Độ dài và đơn vị đo độ dài",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 51 - 54",
+    "description": "Bài học Toán 2: Thực hành và trải nghiệm đo độ dài.",
+    "summary": "Nội dung trọng tâm của Bài 53: Thực hành và trải nghiệm đo độ dài chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 53: Thực hành và trải nghiệm đo độ dài.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b53-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 53: Thực hành và trải nghiệm đo độ dài: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "106 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "109"
+          },
+          {
+            "id": "c",
+            "label": "104"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b53-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 53: Thực hành và trải nghiệm đo độ dài là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b54",
+    "semester": 2,
+    "lessonNumber": 54,
+    "title": "Bài 54: Luyện tập chung",
+    "unit": "Chủ đề 12: Độ dài và đơn vị đo độ dài",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 54 - 57",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 54: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 54: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b54-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 54: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "108 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "111"
+          },
+          {
+            "id": "c",
+            "label": "106"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b54-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 54: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b55",
+    "semester": 2,
+    "lessonNumber": 55,
+    "title": "Bài 55: Các số có ba chữ số",
+    "unit": "Chủ đề 13: Các số trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 57 - 60",
+    "description": "Bài học Toán 2: Các số có ba chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 55: Các số có ba chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 55: Các số có ba chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b55-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 55: Các số có ba chữ số: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "110 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "113"
+          },
+          {
+            "id": "c",
+            "label": "108"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b55-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 55: Các số có ba chữ số là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b56",
+    "semester": 2,
+    "lessonNumber": 56,
+    "title": "Bài 56: So sánh các số có ba chữ số",
+    "unit": "Chủ đề 13: Các số trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 60 - 63",
+    "description": "Bài học Toán 2: So sánh các số có ba chữ số.",
+    "summary": "Nội dung trọng tâm của Bài 56: So sánh các số có ba chữ số chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 56: So sánh các số có ba chữ số.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b56-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 56: So sánh các số có ba chữ số: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "112 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "115"
+          },
+          {
+            "id": "c",
+            "label": "110"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b56-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 56: So sánh các số có ba chữ số là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b57",
+    "semester": 2,
+    "lessonNumber": 57,
+    "title": "Bài 57: Viết số thành tổng các trăm, chục, đơn vị",
+    "unit": "Chủ đề 13: Các số trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 63 - 66",
+    "description": "Bài học Toán 2: Viết số thành tổng các trăm, chục, đơn vị.",
+    "summary": "Nội dung trọng tâm của Bài 57: Viết số thành tổng các trăm, chục, đơn vị chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 57: Viết số thành tổng các trăm, chục, đơn vị.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b57-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 57: Viết số thành tổng các trăm, chục, đơn vị: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "114 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "117"
+          },
+          {
+            "id": "c",
+            "label": "112"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b57-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 57: Viết số thành tổng các trăm, chục, đơn vị là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b58",
+    "semester": 2,
+    "lessonNumber": 58,
+    "title": "Bài 58: Luyện tập chung",
+    "unit": "Chủ đề 13: Các số trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 66 - 69",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 58: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 58: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b58-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 58: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "116 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "119"
+          },
+          {
+            "id": "c",
+            "label": "114"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b58-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 58: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b59",
+    "semester": 2,
+    "lessonNumber": 59,
+    "title": "Bài 59: Phép cộng không nhớ trong phạm vi 1000",
+    "unit": "Chủ đề 14: Phép cộng, phép trừ trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 69 - 72",
+    "description": "Bài học Toán 2: Phép cộng không nhớ trong phạm vi 1000.",
+    "summary": "Nội dung trọng tâm của Bài 59: Phép cộng không nhớ trong phạm vi 1000 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 59: Phép cộng không nhớ trong phạm vi 1000.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b59-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 59: Phép cộng không nhớ trong phạm vi 1000: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "118 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "121"
+          },
+          {
+            "id": "c",
+            "label": "116"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b59-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 59: Phép cộng không nhớ trong phạm vi 1000 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b60",
+    "semester": 2,
+    "lessonNumber": 60,
+    "title": "Bài 60: Phép cộng có nhớ trong phạm vi 1000",
+    "unit": "Chủ đề 14: Phép cộng, phép trừ trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 72 - 75",
+    "description": "Bài học Toán 2: Phép cộng có nhớ trong phạm vi 1000.",
+    "summary": "Nội dung trọng tâm của Bài 60: Phép cộng có nhớ trong phạm vi 1000 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 60: Phép cộng có nhớ trong phạm vi 1000.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b60-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 60: Phép cộng có nhớ trong phạm vi 1000: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "120 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "123"
+          },
+          {
+            "id": "c",
+            "label": "118"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b60-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 60: Phép cộng có nhớ trong phạm vi 1000 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b61",
+    "semester": 2,
+    "lessonNumber": 61,
+    "title": "Bài 61: Phép trừ không nhớ trong phạm vi 1000",
+    "unit": "Chủ đề 14: Phép cộng, phép trừ trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 75 - 78",
+    "description": "Bài học Toán 2: Phép trừ không nhớ trong phạm vi 1000.",
+    "summary": "Nội dung trọng tâm của Bài 61: Phép trừ không nhớ trong phạm vi 1000 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 61: Phép trừ không nhớ trong phạm vi 1000.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b61-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 61: Phép trừ không nhớ trong phạm vi 1000: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "122 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "125"
+          },
+          {
+            "id": "c",
+            "label": "120"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b61-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 61: Phép trừ không nhớ trong phạm vi 1000 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b62",
+    "semester": 2,
+    "lessonNumber": 62,
+    "title": "Bài 62: Phép trừ có nhớ trong phạm vi 1000",
+    "unit": "Chủ đề 14: Phép cộng, phép trừ trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 78 - 81",
+    "description": "Bài học Toán 2: Phép trừ có nhớ trong phạm vi 1000.",
+    "summary": "Nội dung trọng tâm của Bài 62: Phép trừ có nhớ trong phạm vi 1000 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 62: Phép trừ có nhớ trong phạm vi 1000.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b62-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 62: Phép trừ có nhớ trong phạm vi 1000: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "124 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "127"
+          },
+          {
+            "id": "c",
+            "label": "122"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b62-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 62: Phép trừ có nhớ trong phạm vi 1000 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b63",
+    "semester": 2,
+    "lessonNumber": 63,
+    "title": "Bài 63: Luyện tập chung",
+    "unit": "Chủ đề 14: Phép cộng, phép trừ trong phạm vi 1000",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 81 - 84",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 63: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 63: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b63-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 63: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "126 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "129"
+          },
+          {
+            "id": "c",
+            "label": "124"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b63-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 63: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b64",
+    "semester": 2,
+    "lessonNumber": 64,
+    "title": "Bài 64: Thu thập, phân loại, kiểm đếm số liệu",
+    "unit": "Chủ đề 15: Một số yếu tố thống kê và xác suất",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 84 - 87",
+    "description": "Bài học Toán 2: Thu thập, phân loại, kiểm đếm số liệu.",
+    "summary": "Nội dung trọng tâm của Bài 64: Thu thập, phân loại, kiểm đếm số liệu chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 64: Thu thập, phân loại, kiểm đếm số liệu.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b64-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 64: Thu thập, phân loại, kiểm đếm số liệu: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "128 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "131"
+          },
+          {
+            "id": "c",
+            "label": "126"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b64-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 64: Thu thập, phân loại, kiểm đếm số liệu là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b65",
+    "semester": 2,
+    "lessonNumber": 65,
+    "title": "Bài 65: Biểu đồ tranh",
+    "unit": "Chủ đề 15: Một số yếu tố thống kê và xác suất",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 87 - 90",
+    "description": "Bài học Toán 2: Biểu đồ tranh.",
+    "summary": "Nội dung trọng tâm của Bài 65: Biểu đồ tranh chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 65: Biểu đồ tranh.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b65-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 65: Biểu đồ tranh: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "130 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "133"
+          },
+          {
+            "id": "c",
+            "label": "128"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b65-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 65: Biểu đồ tranh là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b66",
+    "semester": 2,
+    "lessonNumber": 66,
+    "title": "Bài 66: Chắc chắn, có thể, không thể",
+    "unit": "Chủ đề 15: Một số yếu tố thống kê và xác suất",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 90 - 93",
+    "description": "Bài học Toán 2: Chắc chắn, có thể, không thể.",
+    "summary": "Nội dung trọng tâm của Bài 66: Chắc chắn, có thể, không thể chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 66: Chắc chắn, có thể, không thể.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b66-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 66: Chắc chắn, có thể, không thể: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "132 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "135"
+          },
+          {
+            "id": "c",
+            "label": "130"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b66-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 66: Chắc chắn, có thể, không thể là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b67",
+    "semester": 2,
+    "lessonNumber": 67,
+    "title": "Bài 67: Luyện tập chung",
+    "unit": "Chủ đề 15: Một số yếu tố thống kê và xác suất",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 93 - 96",
+    "description": "Bài học Toán 2: Luyện tập chung.",
+    "summary": "Nội dung trọng tâm của Bài 67: Luyện tập chung chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 67: Luyện tập chung.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b67-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 67: Luyện tập chung: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "134 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "137"
+          },
+          {
+            "id": "c",
+            "label": "132"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b67-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 67: Luyện tập chung là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b68",
+    "semester": 2,
+    "lessonNumber": 68,
+    "title": "Bài 68: Ôn tập các số trong phạm vi 1000",
+    "unit": "Chủ đề 16: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 96 - 99",
+    "description": "Bài học Toán 2: Ôn tập các số trong phạm vi 1000.",
+    "summary": "Nội dung trọng tâm của Bài 68: Ôn tập các số trong phạm vi 1000 chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 68: Ôn tập các số trong phạm vi 1000.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b68-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 68: Ôn tập các số trong phạm vi 1000: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "136 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "139"
+          },
+          {
+            "id": "c",
+            "label": "134"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b68-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 68: Ôn tập các số trong phạm vi 1000 là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b69",
+    "semester": 2,
+    "lessonNumber": 69,
+    "title": "Bài 69: Ôn tập phép cộng và phép trừ",
+    "unit": "Chủ đề 16: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 99 - 102",
+    "description": "Bài học Toán 2: Ôn tập phép cộng và phép trừ.",
+    "summary": "Nội dung trọng tâm của Bài 69: Ôn tập phép cộng và phép trừ chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 69: Ôn tập phép cộng và phép trừ.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b69-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 69: Ôn tập phép cộng và phép trừ: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "138 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "141"
+          },
+          {
+            "id": "c",
+            "label": "136"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b69-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 69: Ôn tập phép cộng và phép trừ là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b70",
+    "semester": 2,
+    "lessonNumber": 70,
+    "title": "Bài 70: Ôn tập phép nhân và phép chia",
+    "unit": "Chủ đề 16: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 102 - 105",
+    "description": "Bài học Toán 2: Ôn tập phép nhân và phép chia.",
+    "summary": "Nội dung trọng tâm của Bài 70: Ôn tập phép nhân và phép chia chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 70: Ôn tập phép nhân và phép chia.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b70-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 70: Ôn tập phép nhân và phép chia: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "140 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "143"
+          },
+          {
+            "id": "c",
+            "label": "138"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b70-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 70: Ôn tập phép nhân và phép chia là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b71",
+    "semester": 2,
+    "lessonNumber": 71,
+    "title": "Bài 71: Ôn tập hình học và đo lường",
+    "unit": "Chủ đề 16: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 105 - 108",
+    "description": "Bài học Toán 2: Ôn tập hình học và đo lường.",
+    "summary": "Nội dung trọng tâm của Bài 71: Ôn tập hình học và đo lường chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 71: Ôn tập hình học và đo lường.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b71-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 71: Ôn tập hình học và đo lường: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "142 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "145"
+          },
+          {
+            "id": "c",
+            "label": "140"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b71-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 71: Ôn tập hình học và đo lường là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b72",
+    "semester": 2,
+    "lessonNumber": 72,
+    "title": "Bài 72: Ôn tập một số yếu tố thống kê và xác suất",
+    "unit": "Chủ đề 16: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 108 - 111",
+    "description": "Bài học Toán 2: Ôn tập một số yếu tố thống kê và xác suất.",
+    "summary": "Nội dung trọng tâm của Bài 72: Ôn tập một số yếu tố thống kê và xác suất chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 72: Ôn tập một số yếu tố thống kê và xác suất.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b72-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 72: Ôn tập một số yếu tố thống kê và xác suất: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "144 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "147"
+          },
+          {
+            "id": "c",
+            "label": "142"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b72-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 72: Ôn tập một số yếu tố thống kê và xác suất là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "math-g2-b73",
+    "semester": 2,
+    "lessonNumber": 73,
+    "title": "Bài 73: Ôn tập chung cuối năm",
+    "unit": "Chủ đề 16: Ôn tập cuối năm",
+    "textbookPageRef": "SGK Toán 2 Tập hai — Trang 111 - 114",
+    "description": "Bài học Toán 2: Ôn tập chung cuối năm.",
+    "summary": "Nội dung trọng tâm của Bài 73: Ôn tập chung cuối năm chuẩn SGK NXB Giáo Dục Việt Nam.",
+    "keyPoints": [
+      "Nắm vững định nghĩa và tính chất của Bài 73: Ôn tập chung cuối năm.",
+      "Rèn luyện kĩ năng tính toán và tư duy trực quan.",
+      "Vận dụng linh hoạt vào các bài toán thực tế đời sống."
+    ],
+    "mascotTip": "Cú BoBo nhắc bé: Đọc kĩ đề bài và tính toán cẩn thận từng bước nhé!",
+    "defaultQuestions": [
+      {
+        "id": "math-g2-b73-q1",
+        "type": "bubble_choice",
+        "questionText": "Câu hỏi trọng tâm bài Bài 73: Ôn tập chung cuối năm: Phép tính nào sau đây có kết quả đúng?",
+        "audioText": "Bé hãy chọn phép tính có kết quả đúng!",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "146 (kết quả chính xác)",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "149"
+          },
+          {
+            "id": "c",
+            "label": "144"
+          }
+        ]
+      },
+      {
+        "id": "math-g2-b73-q2",
+        "type": "bubble_choice",
+        "questionText": "Đơn vị đo hoặc số thích hợp trong bài Bài 73: Ôn tập chung cuối năm là gì?",
+        "audioText": "Đâu là đáp án đúng cho bài toán này?",
+        "points": 10,
+        "options": [
+          {
+            "id": "a",
+            "label": "Đáp án chính xác theo quy tắc SGK",
+            "isCorrect": true
+          },
+          {
+            "id": "b",
+            "label": "Đáp án chưa chính xác A"
+          },
+          {
+            "id": "c",
+            "label": "Đáp án chưa chính xác B"
+          }
+        ]
+      }
+    ]
+  }
 ];
