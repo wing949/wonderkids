@@ -27,18 +27,39 @@ function formatSourcePages(pages: number[]): string {
   return pages.join(', ');
 }
 
-function getStudentFacingVietnameseTitle(referenceTitle: string, fallback: string): string {
-  const title = referenceTitle || fallback;
-  return title.replace(/^\s*Bài\s*(?:học\s*)?\d+\s*:\s*/i, '').trim() || fallback;
+/**
+ * Hiển thị số bài phía trước cho môn Tiếng Việt tương tự môn Toán (ví dụ: "Bài 1: Thanh âm của gió")
+ */
+export function formatLessonDisplayTitle(lesson: LessonNode): string {
+  const rawTitle = (lesson.provenance?.referenceLessonTitle || lesson.title || '').trim();
+
+  // Nếu đã có sẵn tiền tố "Bài X:" hoặc "Bài học X:", trả về nguyên văn
+  if (/^\s*Bài\s*(?:học\s*)?\d+\s*:/i.test(rawTitle)) {
+    return rawTitle;
+  }
+
+  // Trích xuất số bài từ lessonNumber, lesson.id hoặc order
+  const matchB = lesson.id.match(/b(\d+)/);
+  const lessonNumber =
+    (lesson as any).lessonNumber ||
+    (matchB ? parseInt(matchB[1], 10) : null) ||
+    lesson.order;
+
+  if (lessonNumber) {
+    return `Bài ${lessonNumber}: ${rawTitle}`;
+  }
+
+  return rawTitle;
 }
 
-export function getLessonPreviewItems(preview: string) {
+export function getLessonPreviewItems(preview: string = '') {
+  const safePreview = preview || '';
   return PREVIEW_LABELS.map((label, index) => {
     const nextLabel = PREVIEW_LABELS[index + 1];
-    const start = preview.indexOf(`${label}:`);
-    const end = nextLabel ? preview.indexOf(`${nextLabel}:`, Math.max(0, start)) : preview.length;
+    const start = safePreview.indexOf(`${label}:`);
+    const end = nextLabel ? safePreview.indexOf(`${nextLabel}:`, Math.max(0, start)) : safePreview.length;
     const raw = start >= 0
-      ? preview.slice(start + label.length + 1, end >= 0 ? end : preview.length)
+      ? safePreview.slice(start + label.length + 1, end >= 0 ? end : safePreview.length)
       : '';
     return {
       label,
@@ -58,9 +79,7 @@ export function getLessonCardContent(lesson: LessonNode) {
     : lesson.textbookPageRef
       ? `📖 ${lesson.textbookPageRef}`
       : 'Bài học';
-  const title = isVietnameseBookLesson
-    ? getStudentFacingVietnameseTitle(lesson.provenance?.referenceLessonTitle || '', lesson.title)
-    : lesson.title;
+  const title = formatLessonDisplayTitle(lesson);
   const preview = lesson.cardPreview || lesson.description;
   return {
     badge,

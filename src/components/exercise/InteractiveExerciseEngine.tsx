@@ -27,6 +27,7 @@ import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../..
 import { MathVisualIllustration } from './MathVisualIllustration';
 import { LessonThematicBadge } from './LessonThematicBadge';
 import { Grade1PhonicsGameZone } from './Grade1PhonicsGameZone';
+import { formatLessonDisplayTitle } from '../../utils/lessonCard';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -528,7 +529,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   </span>
                 </div>
                 <div className="font-baloo text-sm sm:text-base font-extrabold text-slate-600">
-                  {lesson.title}
+                  {formatLessonDisplayTitle(lesson)}
                 </div>
               </div>
             </div>
