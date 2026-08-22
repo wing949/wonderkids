@@ -1,0 +1,80 @@
+{
+  "totalLessons": 376,
+  "layer1_passed": 360,
+  "layer1_failed": [
+    {
+      "lessonId": "tv-g2-b20",
+      "reason": "startPage không khớp: 13 vs 12"
+    },
+    {
+      "lessonId": "tv-g2-b27",
+      "reason": "startPage không khớp: 116 vs 39"
+    },
+    {
+      "lessonId": "tv-g2-t2-b27",
+      "reason": "startPage không khớp: 116 vs 119"
+    },
+    {
+      "lessonId": "tv-g3-b15",
+      "reason": "startPage không khớp: 10 vs 8"
+    },
+    {
+      "lessonId": "tv-g3-b16",
+      "reason": "startPage không khớp: 70 vs 11"
+    },
+    {
+      "lessonId": "tv-g3-b17",
+      "reason": "startPage không khớp: 82 vs 15"
+    },
+    {
+      "lessonId": "tv-g3-b18",
+      "reason": "startPage không khớp: 21 vs 19"
+    },
+    {
+      "lessonId": "tv-g3-b19",
+      "reason": "startPage không khớp: 26 vs 23"
+    },
+    {
+      "lessonId": "tv-g3-b20",
+      "reason": "startPage không khớp: 30 vs 27"
+    },
+    {
+      "lessonId": "tv-g3-b21",
+      "reason": "startPage không khớp: 34 vs 32"
+    },
+    {
+      "lessonId": "tv-g3-b22",
+      "reason": "startPage không khớp: 38 vs 35"
+    },
+    {
+      "lessonId": "tv-g3-b23",
+      "reason": "startPage không khớp: 43 vs 40"
+    },
+    {
+      "lessonId": "tv-g3-b24",
+      "reason": "startPage không khớp: 46 vs 44"
+    },
+    {
+      "lessonId": "tv-g3-t2-b13",
+      "reason": "startPage không khớp: 59 vs 55"
+    },
+    {
+      "lessonId": "tv-g3-t2-b16",
+      "reason": "startPage không khớp: 70 vs 66"
+    },
+    {
+      "lessonId": "tv-g3-t2-b17",
+      "reason": "startPage không khớp: 82 vs 80"
+    }
+  ],
+  "layer2_passed": 376,
+  "layer2_failed": [],
+  "layer3_passed": 376,
+  "layer3_failed": [],
+  "layer4_passed": 376,
+  "layer4_failed": [],
+  "layer5_passed": 376,
+  "layer5_failed": [],
+  "layer6_passed": 376,
+  "layer6_failed": []
+}

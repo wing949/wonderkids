@@ -1,0 +1,450 @@
+{
+  "tv-g5-b13": {
+    "title": "Người công dân số Một",
+    "author": "Hà Văn Cầu",
+    "genre": "prose",
+    "content": [
+      "Chàng thanh niên Nguyễn Tất Thành đau đáu nỗi lo cứu nước, quyết tâm tìm con đường mới giải phóng dân tộc khỏi ách nô lệ."
+    ],
+    "sourcePages": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sourceHash": "6e97826fa4dcea36249b3cebfe06a8bc4d6624c7582b5c51240ad26c458a6d4d"
+  },
+  "tv-g5-b14": {
+    "title": "Nhà tài trợ đặc biệt của Cách mạng",
+    "author": "Theo Báo Nhân Dân",
+    "genre": "prose",
+    "content": [
+      "Nhà tư sản yêu nước Đỗ Đình Thiện đã hiến tặng hàng ngàn lạng vàng cho Chính phủ và Bác Hồ trong Tuần lễ Vàng lịch sử."
+    ],
+    "sourcePages": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "sourceHash": "0fbf13eb384ac47adbe8b1295028aafd9661127e7b79fda4bb4096267f241d03"
+  },
+  "tv-g5-b15": {
+    "title": "Thái sư Trần Thủ Độ",
+    "author": "Theo Đại Việt Sử Ký Toàn Thư",
+    "genre": "prose",
+    "content": [
+      "Thái sư Trần Thủ Độ là bậc trung thần cương trực, chí công vô tư, luôn đặt lợi ích quốc gia lên trên tình riêng."
+    ],
+    "sourcePages": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "sourceHash": "09eef4b0a09e870729ae3acec95640742979db22ce4829b6b4e90bc18ef96567"
+  },
+  "tv-g5-b16": {
+    "title": "Nhà yêu nước Nguyễn Trung Trực",
+    "author": "Theo Lịch sử Việt Nam",
+    "genre": "prose",
+    "content": [
+      "Khí phách hiên ngang bất khuất của anh hùng Nguyễn Trung Trực: “Bao giờ người Tây nhổ hết cỏ nước Nam thì mới hết người Nam đánh Tây”."
+    ],
+    "sourcePages": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "sourceHash": "53c6b0d7947c9fdf62e13abc6882c167466472ae53e7da10e3c25e771ec71d05"
+  },
+  "tv-g5-b17": {
+    "title": "Lòng dân",
+    "author": "Nguyễn Văn Xe",
+    "genre": "prose",
+    "content": [
+      "Má Năm mưu trí, dũng cảm nhận cán bộ cách mạng làm con trai, đánh lừa quân giặc để bảo vệ người chiến sĩ giải phóng."
+    ],
+    "sourcePages": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "sourceHash": "a6e23ad60268da7aea3f9d8d74255db2930d61a2a070e57e2ffb0085c0d6fd33"
+  },
+  "tv-g5-b18": {
+    "title": "Cao Bằng",
+    "author": "Trúc Thông",
+    "genre": "poem",
+    "content": [
+      "Sau khi qua Đèo Gió\nTa lại vượt Đèo Giàng\nLại vượt Đèo Cao Bắc\nThì ta tới Cao Bằng\nNgười Cao Bằng rất đỗi mến thương."
+    ],
+    "sourcePages": [
+      28,
+      29,
+      30,
+      31
+    ],
+    "sourceHash": "746ee97c5c2773fcb69a009fc4540a8eb86f83e6d88a5d21425111c844508969"
+  },
+  "tv-g5-b19": {
+    "title": "Hà Nội",
+    "author": "Trần Đăng Khoa",
+    "genre": "poem",
+    "content": [
+      "Hà Nội có Hồ Gươm\nNước xanh như pha mực\nBên hồ ngọn Tháp Bút\nViết thơ lên trời cao."
+    ],
+    "sourcePages": [
+      32,
+      33,
+      34
+    ],
+    "sourceHash": "4476c3f342c645397debd5f2b589d358c906707ce583c3d0341dae78806181c3"
+  },
+  "tv-g5-b20": {
+    "title": "Khuất Nguyên",
+    "author": "Theo Danh nhân thế giới",
+    "genre": "prose",
+    "content": [
+      "Khuất Nguyên là một nhà thơ yêu nước vĩ đại thời Chiến Quốc với tấm lòng kiên trung và những vần thơ tuyệt tác muôn đời."
+    ],
+    "sourcePages": [
+      35,
+      36,
+      37,
+      38
+    ],
+    "sourceHash": "b4d69fe07e3dc807bf43ceb3dab0e4e9f30a64ce075b06d9f4091837eed5123f"
+  },
+  "tv-g5-b21": {
+    "title": "Nghĩa thầy trò",
+    "author": "Theo Lịch sử Việt Nam",
+    "genre": "prose",
+    "content": [
+      "Thầy giáo Chu Văn An cùng các học trò về chúc thọ thầy giáo già vỡ lòng, thể hiện truyền thống tôn sư trọng đạo ngàn đời của dân tộc."
+    ],
+    "sourcePages": [
+      39,
+      40,
+      41,
+      42
+    ],
+    "sourceHash": "c5d46fa2f55cba863a0111cecdf3bad050289a102d5d661ca0d8e1800a6f3c4c"
+  },
+  "tv-g5-b22": {
+    "title": "Hội thổi cơm thi ở Đồng Vân",
+    "author": "Minh Nhương",
+    "genre": "prose",
+    "content": [
+      "Hội thổi cơm thi độc đáo mang đậm bản sắc văn hoá dân gian Bắc Bộ với sự khéo léo, nhanh nhẹn và tinh thần đoàn kết làng xóm."
+    ],
+    "sourcePages": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "sourceHash": "cd3e8efa647131f5c76702cbb8bbd14e0ba209e31196462d033c6f080191b12b"
+  },
+  "tv-g5-b23": {
+    "title": "Tranh làng Hồ",
+    "author": "Nguyễn Tuân",
+    "genre": "prose",
+    "content": [
+      "Tranh Đông Hồ rực rỡ sắc màu dân tộc với nét vẽ tươi vui, hóm hỉnh về đàn gà mẹ con, chú lợn ỉn, thể hiện ước vọng ấm no, thanh bình."
+    ],
+    "sourcePages": [
+      47,
+      48,
+      49,
+      50
+    ],
+    "sourceHash": "02c8547aef5447545e60aa54269bb3bd56c53321c24ec9f0217ab6d481016a63"
+  },
+  "tv-g5-b24": {
+    "title": "Đất Cà Mau",
+    "author": "Mai Văn Tạo",
+    "genre": "prose",
+    "content": [
+      "Mũi Cà Mau cuối trời Tổ quốc với rừng đước bạt ngàn vươn ra biển lớn và những con người kiên cường bám đất giữ làng."
+    ],
+    "sourcePages": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "sourceHash": "36a576739352eab6a7ceabf2690ae5f5941a532f7e4683b26c45db35890f5c3c"
+  },
+  "tv-g5-t2-b13": {
+    "title": "Phong cảnh đền Hùng",
+    "author": "Đoàn Minh Tuấn",
+    "genre": "prose",
+    "content": [
+      "Đền Hùng uy nghiêm trên đỉnh núi Nghĩa Lĩnh ngút ngàn thông reo, nơi hội tụ linh khí đất trời và cội nguồn dân tộc Việt Nam."
+    ],
+    "sourcePages": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "sourceHash": "51fdb5a62b35dca3f97ff9b1cb809216df3a9ca61e13313c2d09365fa131723e"
+  },
+  "tv-g5-t2-b14": {
+    "title": "Cửa sông",
+    "author": "Quang Huy",
+    "genre": "poem",
+    "content": [
+      "Nơi biển tìm về với đất\nCửa sông mở rộng lòng mình\nĐón phù sa bồi đắp\nCho đôi bờ xanh tươi."
+    ],
+    "sourcePages": [
+      59,
+      60,
+      61,
+      62
+    ],
+    "sourceHash": "b489c956e571dc38292f6abcca1acbad6a11d2bbd45f6270fab35126d168ba54"
+  },
+  "tv-g5-t2-b15": {
+    "title": "Nghìn năm văn hiến",
+    "author": "Nguyễn Khắc Viện",
+    "genre": "prose",
+    "content": [
+      "Văn Miếu - Quốc Tử Giám với 82 tấm bia tiến sĩ là minh chứng hùng hồn cho nền văn hiến rực rỡ và truyền thống hiếu học của dân tộc ta."
+    ],
+    "sourcePages": [
+      63,
+      64,
+      65,
+      66
+    ],
+    "sourceHash": "3fb30273e479e65d266103f4eeba0ee3354f297137de241e4cbec0fbb3a7e072"
+  },
+  "tv-g5-t2-b16": {
+    "title": "Sắc màu em yêu",
+    "author": "Phạm Đình Ân",
+    "genre": "poem",
+    "content": [
+      "Em yêu màu đỏ thắm\nCủa cờ Tổ quốc bay\nEm yêu màu xanh ngát\nCủa đồng lúa quê hương."
+    ],
+    "sourcePages": [
+      67,
+      68,
+      69
+    ],
+    "sourceHash": "485ad9608c70b13938cf02ecd0d853d20fd1336fa534c88f91178c045f7c262c"
+  },
+  "tv-g5-t2-b17": {
+    "title": "Con gái",
+    "author": "Đỗ Thị Ngọc Châu",
+    "genre": "prose",
+    "content": [
+      "Mơ là cô bé ngoan ngoãn, học giỏi và dũng cảm cứu bạn thoát khỏi dòng nước lũ, khẳng định giá trị và tài năng của phái nữ."
+    ],
+    "sourcePages": [
+      80,
+      81,
+      82,
+      83
+    ],
+    "sourceHash": "528fd3ef661229cdde84eea64313277c4e6c3bbe6c3ecae292227a06c3d45480"
+  },
+  "tv-g5-t2-b18": {
+    "title": "Thuần phục sư tử",
+    "author": "Truyện dân gian Ả-rập",
+    "genre": "prose",
+    "content": [
+      "Bằng sự kiên nhẫn, dịu dàng và lòng dũng cảm phi thường, người vợ trẻ đã thuần phục được con sư tử hung dữ nơi rừng sâu."
+    ],
+    "sourcePages": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "sourceHash": "16cc30ce50e639bbab20b8ebb0bb4f7a24e2c0b1159a83da14ee0eb70ec2221c"
+  },
+  "tv-g5-t2-b19": {
+    "title": "Tà áo dài Việt Nam",
+    "author": "Theo Trần Ngọc Thêm",
+    "genre": "prose",
+    "content": [
+      "Tà áo dài truyền thống thướt tha tôn vinh nét đẹp duyên dáng, kín đáo và thanh lịch của người phụ nữ Việt Nam qua nhiều thế hệ."
+    ],
+    "sourcePages": [
+      88,
+      89,
+      90,
+      91
+    ],
+    "sourceHash": "7fda7cdfa9620f1cfcc77bd65afe74142092019f416aed156b7d35a389d52ddf"
+  },
+  "tv-g5-t2-b20": {
+    "title": "Chuyện một phát minh",
+    "author": "Theo Danh nhân khoa học",
+    "genre": "prose",
+    "content": [
+      "Phát minh ra máy hơi nước của Giêm Oát đã mở ra cuộc cách mạng công nghiệp vĩ đại thúc đẩy văn minh nhân loại tiến lên."
+    ],
+    "sourcePages": [
+      92,
+      93,
+      94,
+      95
+    ],
+    "sourceHash": "3782b6c5c9f50e3fbafb2ca24f83309ab382b7935871cef6979db1db26c8e8a1"
+  },
+  "tv-g5-t2-b21": {
+    "title": "Út Vịnh",
+    "author": "Theo Báo Thiếu Niên",
+    "genre": "prose",
+    "content": [
+      "Út Vịnh dũng cảm lao vào đường ray cứu sống hai em nhỏ khỏi tai nạn tàu hỏa, là tấm gương sáng về tinh thần vì cộng đồng."
+    ],
+    "sourcePages": [
+      96,
+      97,
+      98,
+      99
+    ],
+    "sourceHash": "40988e33c93244dd739ad1b23b2befd23eac0c3d2d235a1c60a581e326216d27"
+  },
+  "tv-g5-t2-b22": {
+    "title": "Những người bạn tốt",
+    "author": "Theo Truyện thần thoại Hy Lạp",
+    "genre": "prose",
+    "content": [
+      "Đàn cá heo thông minh đã cứu sống nghệ sĩ A-ri-ôn khi chàng bị bọn cướp biển hãm hại, khẳng định tình bạn kì diệu giữa người và loài vật."
+    ],
+    "sourcePages": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "sourceHash": "e3bca65436788286445c6606e062ab6c4be00d447c67fac4d9d2ec678ef1e8ac"
+  },
+  "tv-g5-t2-b23": {
+    "title": "Hộp thư mật",
+    "author": "Hữu Mai",
+    "genre": "prose",
+    "content": [
+      "Chiến sĩ tình báo Hai Long mưu trí, dũng cảm thu thập tài liệu mật của địch, phục vụ đắc lực cho sự nghiệp giải phóng miền Nam."
+    ],
+    "sourcePages": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "sourceHash": "cf020813777d00c06ec7d50f14cbd0a864736547654c725d06e632078ad19826"
+  },
+  "tv-g5-t2-b24": {
+    "title": "Lớp học trên đường",
+    "author": "Héc-to Ma-lô",
+    "genre": "prose",
+    "content": [
+      "Cụ Vi-ta-li ân cần dạy chữ cho cậu bé Rê-mi trên chặng đường biểu diễn rong, thắp sáng niềm tin và khát vọng học tập cho em."
+    ],
+    "sourcePages": [
+      108,
+      109,
+      110,
+      111
+    ],
+    "sourceHash": "d0fb12dccdafdca279807498dc852572023f44c5d68932cc3d908fcb6043ddff"
+  },
+  "tv-g5-t2-b25": {
+    "title": "Nếu chúng mình có phép lạ",
+    "author": "Định Hải",
+    "genre": "poem",
+    "content": [
+      "Nếu chúng mình có phép lạ\nHoá trái đất thành vườn hoa\nKhông còn chiến tranh bom đạn\nMuôn nơi rộn rã tiếng cười."
+    ],
+    "sourcePages": [
+      112,
+      113,
+      114,
+      115
+    ],
+    "sourceHash": "9b4c201f8124294f8a1f6ee6e5336c30be6a32bdd1bb8e0f17306b7e58ed5a98"
+  },
+  "tv-g5-t2-b26": {
+    "title": "Tiếng rao đêm",
+    "author": "Nguyễn Khắc Khang",
+    "genre": "prose",
+    "content": [
+      "Người thương binh dũng cảm xông vào đám cháy dữ dội cứu sống em nhỏ, toả sáng phẩm chất cao quý của anh bộ đội Cụ Hồ thời bình."
+    ],
+    "sourcePages": [
+      116,
+      117,
+      118,
+      119
+    ],
+    "sourceHash": "53ab3272d530c79206781189710cb0cba90574d1de45062b6a03ed2d6fa520fc"
+  },
+  "tv-g5-t2-b27": {
+    "title": "Bầm ơi",
+    "author": "Tố Hữu",
+    "genre": "poem",
+    "content": [
+      "Bầm ơi có rét tình quê\nThương con mẹ chớ lo phiền\nCon đi đánh giặc trăm miền\nGiữ cho non nước bình yên muôn đời."
+    ],
+    "sourcePages": [
+      120,
+      121,
+      122,
+      123
+    ],
+    "sourceHash": "0cd85922e25c80034e6fc2d79bf654c78abfdf823475c1b8ae354719328fb610"
+  },
+  "tv-g5-t2-b28": {
+    "title": "Một vụ đắm tàu",
+    "author": "A-mi-xi",
+    "genre": "prose",
+    "content": [
+      "Cậu bé Giu-li-ét-ta cao thượng đã nhường chỗ trên chiếc xuồng cứu sinh duy nhất cho cô bạn gái Ma-ri-ô, hy sinh thân mình trong bão biển."
+    ],
+    "sourcePages": [
+      124,
+      125,
+      126,
+      127
+    ],
+    "sourceHash": "a3e2172f418bcce4a61dbf935ce44feb79142fcfc4d696e5ebed2e865f816e65"
+  },
+  "tv-g5-t2-b29": {
+    "title": "Con sẻ",
+    "author": "I. Tuốc-ghê-nhép",
+    "genre": "prose",
+    "content": [
+      "Con sẻ mẹ bé nhỏ dũng cảm lao xuống đối đầu với con chó săn khổng lồ để bảo vệ đứa con thơ, minh chứng cho sức mạnh vĩ đại của tình mẫu tử."
+    ],
+    "sourcePages": [
+      128,
+      129,
+      130,
+      131
+    ],
+    "sourceHash": "f93610c11db8d5a6020b5d8a110e0df6182b7f1536becbad98509bea455c0ae5"
+  },
+  "tv-g5-t2-b30": {
+    "title": "Những người bạn nhỏ",
+    "author": "Theo Báo Khăn Quàng Đỏ",
+    "genre": "prose",
+    "content": [
+      "Tình bạn trong sáng, chân thành tuổi học trò là hành trang quý báu nâng bước các em trên con đường trưởng thành tươi sáng."
+    ],
+    "sourcePages": [
+      132,
+      133,
+      134,
+      135
+    ],
+    "sourceHash": "55b9e0c3adc34b185c8f2eef6c8d22348c794e49e76a2a5a82caf2223fafaf43"
+  }
+}

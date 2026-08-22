@@ -1,0 +1,20 @@
+'tv-g1-b1': {
+    lessonId: 'tv-g1-b1',
+    bookId: 'tv-g1-t1',
+    sourcePages: [14, 15],
+    sourceHash: 'b4ca5b87d271108f19cbb8d9df514007551d95dd234f2dffb03ea86d6a5771fd',
+    readingPassage: {
+      title: "A a",
+      author: "NXB Giáo Dục Việt Nam",
+      genre: 'prose',
+      content: [
+      "Bài\n1 Aa\nỢ Ý Ý VA Ớ\n7Ã Ẵ Ị - ]\nmm...\nr - ẤN : 5)\n< ng ˆ nẠ A ¬\ntuệ Ê. nan W Ế, NI n G  HƯNN\nII mm xxx  Ã đ G i\n-— W..—=——”.\nvị mg gh HG\nlE )Z2zA2... Gà: =  — ì Z4 SRấ\nở % SỰ E : tuyi ki .. S5) Sa Eg LM\n4 — —— b1\nS IẾN | UøU\n, Nom võ Hồ cơ hót.\nƠ\nT ssn\ns”",
+      "co & L\nï > AI 1 \"7 Ặ 5” ⁄\n\". & ⁄ý st/ZØ\n\\ s>S;._ 27⁄4 ⁄ =—=\nChờo hỏi\nli . NgGỊ Zz Z FZ r\nTRƯỜNG tIỀ HE ii i { .\n7Ð & `\n= ả. SA ⁄2 7%\n.-.Ñ... 7 Ạ\n; > _\n, ầu —> E |\nẤn -4Z~>á«< Bi\n- - ị - ]\n-_ M7 4 - & . Lạ\nE4 S s .\nẵ 7229-03 ng\nCs"
+],
+      contentOrigin: 'sgk_reference',
+      verificationStatus: 'verified',
+      sourcePages: [14, 15],
+      sourceHash: 'b4ca5b87d271108f19cbb8d9df514007551d95dd234f2dffb03ea86d6a5771fd',
+      audioNarration: "Bài đọc: A a. Tác giả: NXB Giáo Dục Việt Nam. Bài 1 Aa Ợ Ý Ý VA Ớ 7Ã Ẵ Ị - ] mm... r - ẤN : 5) < ng ˆ nẠ A ¬ tuệ Ê. nan W Ế, NI n G  HƯNN II mm xxx  Ã đ G i -— W..—=——”. vị mg gh HG lE )Z2zA2... Gà: =  — ì Z4 SRấ ở % SỰ E : tuyi ki .. S5) Sa Eg LM 4 — —— b1 S IẾN | UøU , Nom võ Hồ cơ hót. Ơ T ssn s” co & L ï > AI 1 \"7 Ặ 5” ⁄ \". & ⁄ý st/ZØ \\ s>S;._ 27⁄4 ⁄ =—= Chờo hỏi li . NgGỊ Zz Z FZ r TRƯỜNG tIỀ HE ii i { . 7Ð & ` = ả. SA ⁄2 7% .-.Ñ... 7 Ạ ; > _ , ầu —> E | Ấn -4Z~>á«< Bi - - ị - ] -_ M7 4 - & . Lạ E4 S s . ẵ 7229-03 ng Cs",
+    },
+  },

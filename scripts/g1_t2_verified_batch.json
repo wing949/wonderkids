@@ -1,0 +1,745 @@
+{
+  "tv-g1-b21": {
+    "title": "Tôi là học sinh lớp 1",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Tôi là học sinh lớp 1.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Tôi là học sinh lớp 1.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "sourceHash": "9333a406f39d5bf54a7be07a8511158ef013c39b7c502ed45338808e4a66dd04"
+  },
+  "tv-g1-b22": {
+    "title": "Đôi tai xấu xí",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Đôi tai xấu xí.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Đôi tai xấu xí.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sourceHash": "9b1fd770b8ae33c14423ae72655919bfa666bc3b677dd2768ba68eb8d727d589"
+  },
+  "tv-g1-b23": {
+    "title": "Bạn của gió",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Bạn của gió.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Bạn của gió.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      12,
+      13
+    ],
+    "sourceHash": "7f850e58fe9989109bbe58c7e7e4cae4afc7045cc9b14d96c6dd26f578e85cdd"
+  },
+  "tv-g1-b24": {
+    "title": "Giải thưởng tình bạn",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Giải thưởng tình bạn.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Giải thưởng tình bạn.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "sourceHash": "087c44786a9da262423f7d00b3c613fd40c641d28c452e09a0517ca663bab188"
+  },
+  "tv-g1-b25": {
+    "title": "Sinh nhật của voi con",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Sinh nhật của voi con.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Sinh nhật của voi con.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "sourceHash": "0a7532b2c28fecdda60575abb0b8c3935a51a43e465bf54ef6e0995e291c5721"
+  },
+  "tv-g1-b26": {
+    "title": "Nụ hôn trên bàn tay",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Nụ hôn trên bàn tay.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Nụ hôn trên bàn tay.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "sourceHash": "74013f5d511afcf9ba630721df7c397e140a2f6b815f3be8f76356ffa6876e86"
+  },
+  "tv-g1-b27": {
+    "title": "Làm anh",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Làm anh.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Làm anh.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      28,
+      29
+    ],
+    "sourceHash": "247b43b2afe79bfc942f1cac36c6ded9973b282fbbf9b322656d77dbf70585cf"
+  },
+  "tv-g1-b28": {
+    "title": "Cả nhà đi chơi núi",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Cả nhà đi chơi núi.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Cả nhà đi chơi núi.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "sourceHash": "bddbbef678121e174a3feefd64682fecae507c9cb783496f8371707a758421c2"
+  },
+  "tv-g1-b29": {
+    "title": "Quạt cho bà ngủ",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Quạt cho bà ngủ.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Quạt cho bà ngủ.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      34,
+      35
+    ],
+    "sourceHash": "8fee1f48a8a4e682f0a808eab2d14a347f5064aa3607e2bf79229a0bec6e3d63"
+  },
+  "tv-g1-b30": {
+    "title": "Bữa cơm gia đình",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Bữa cơm gia đình.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Bữa cơm gia đình.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "sourceHash": "e907678596975841a0742c5abec4e21eb3facf401671ae559834bd307dffeca0"
+  },
+  "tv-g1-t2-b11": {
+    "title": "Ngôi nhà",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Ngôi nhà.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Ngôi nhà.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "sourceHash": "cf34bf86760a5114882b32b47ec1931f3428e176ecc4e255a25ef88564124a3e"
+  },
+  "tv-g1-t2-b12": {
+    "title": "Tôi đi học",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Tôi đi học.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Tôi đi học.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "sourceHash": "88835b73b73c9e6688ad53b21997fbf601604acc609d10161d47cf501e86a583"
+  },
+  "tv-g1-t2-b13": {
+    "title": "Đi học",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Đi học.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Đi học.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      48,
+      49
+    ],
+    "sourceHash": "0007d18fbbe38debc99e045a948e6c65cc6a7dc26d25191ce6eab8f8038916ef"
+  },
+  "tv-g1-t2-b14": {
+    "title": "Hoa yêu thương",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Hoa yêu thương.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Hoa yêu thương.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      50,
+      51,
+      52,
+      53
+    ],
+    "sourceHash": "bf519b665ef3046271cc22118ea4090adfde290e69fa21bbe940444b4ddecf7c"
+  },
+  "tv-g1-t2-b15": {
+    "title": "Cây bàng và lớp học",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Cây bàng và lớp học.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Cây bàng và lớp học.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      54,
+      55
+    ],
+    "sourceHash": "f67cb0b5a2466597665a50bdcfef622f1688ac2e9f3660448d691f01b19eb624"
+  },
+  "tv-g1-t2-b16": {
+    "title": "Bác trống trường",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Bác trống trường.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Bác trống trường.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      56,
+      57,
+      58,
+      59
+    ],
+    "sourceHash": "26e4b2c02440979766d59fe9b2f6553ed6cdee9dbb75e3fcab54be0ef3a37683"
+  },
+  "tv-g1-t2-b17": {
+    "title": "Giờ ra chơi",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Giờ ra chơi.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Giờ ra chơi.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      60,
+      61,
+      62,
+      63
+    ],
+    "sourceHash": "a112bb43dde14039679e39cfaf49317057aa97abca86a0b64d53e3cf2ef91cbb"
+  },
+  "tv-g1-t2-b18": {
+    "title": "Rửa tay trước khi ăn",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Rửa tay trước khi ăn.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Rửa tay trước khi ăn.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      64,
+      65,
+      66,
+      67
+    ],
+    "sourceHash": "a858fec580b35cd5a89c44045a9d6b51cd73a797c3f5bf4dbe43103360ce0491"
+  },
+  "tv-g1-t2-b19": {
+    "title": "Lời chào đi trước",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Lời chào đi trước.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Lời chào đi trước.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      68,
+      69
+    ],
+    "sourceHash": "c3a63304ce5ec20bfb6712ec33003636ca33f23e07be9ff3a582ca59274d3e9d"
+  },
+  "tv-g1-t2-b20": {
+    "title": "Khi mẹ vắng nhà",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Khi mẹ vắng nhà.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Khi mẹ vắng nhà.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      70,
+      71,
+      72,
+      73
+    ],
+    "sourceHash": "3a0e5fff0a620af82994c40a15c1e592a2ce016d12d7896cc7559ab18e0a349f"
+  },
+  "tv-g1-t2-b21": {
+    "title": "Nếu không may bị lạc",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Nếu không may bị lạc.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Nếu không may bị lạc.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      74,
+      75,
+      76,
+      77
+    ],
+    "sourceHash": "49b384b3f54aaad6a9b560f622e94f79811de5a86acb6326434f9ffefa9c7302"
+  },
+  "tv-g1-t2-b22": {
+    "title": "Đèn giao thông",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Đèn giao thông.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Đèn giao thông.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      78,
+      79,
+      80,
+      81,
+      82,
+      83
+    ],
+    "sourceHash": "63f4aa7170f78f22e2c3c24a3fd23d277fdcbfda68dfa5a468393d1d6e812ecb"
+  },
+  "tv-g1-t2-b23": {
+    "title": "Kiến và chim bồ câu",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Kiến và chim bồ câu.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Kiến và chim bồ câu.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "sourceHash": "7e52e2ff1a1c81e89a30cbbd3e65bd6b6e55a67f31adbea5392c9ed296ea5b0e"
+  },
+  "tv-g1-t2-b24": {
+    "title": "Câu chuyện của rễ",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Câu chuyện của rễ.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Câu chuyện của rễ.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      88,
+      89
+    ],
+    "sourceHash": "c586f578e33a16ebc0dc4ab04171fabc15b47369e19922e74f74164cd8ef95cd"
+  },
+  "tv-g1-t2-b25": {
+    "title": "Câu hỏi của sói",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Câu hỏi của sói.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Câu hỏi của sói.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      90,
+      91,
+      92,
+      93
+    ],
+    "sourceHash": "517784c2f34ffb23bbecc8c1b842bc0a468594d156616f347b61958289fa14b7"
+  },
+  "tv-g1-t2-b26": {
+    "title": "Chú bé chăn cừu",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Chú bé chăn cừu.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Chú bé chăn cừu.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      94,
+      95,
+      96,
+      97
+    ],
+    "sourceHash": "6998a1f2a356db35cbf39801db5e01fb08138cb57602e887904089c7f5c9c4e4"
+  },
+  "tv-g1-t2-b27": {
+    "title": "Tiếng vọng của núi",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Tiếng vọng của núi.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Tiếng vọng của núi.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "sourceHash": "f3443d74c78545a474c8572d9a2e33d64dfa0aafb98aba0e0208ca276d1db404"
+  },
+  "tv-g1-t2-b28": {
+    "title": "Loài chim của biển cả",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Loài chim của biển cả.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Loài chim của biển cả.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "sourceHash": "7b9918b312fa4f62cdd0281c0bc9f31c81c4ce76bf0572b0633bdb1eeb09408c"
+  },
+  "tv-g1-t2-b29": {
+    "title": "Bảy sắc cầu vồng",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Bảy sắc cầu vồng.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Bảy sắc cầu vồng.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      108,
+      109
+    ],
+    "sourceHash": "2155c35e3d813918aae3b4d59742eb46defe734de9a6742ae2c85d3d3d5b73ce"
+  },
+  "tv-g1-t2-b30": {
+    "title": "Chúa tể rừng xanh",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Chúa tể rừng xanh.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Chúa tể rừng xanh.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      110,
+      111,
+      112,
+      113
+    ],
+    "sourceHash": "79ec8a6c8e551954a1deb99e85d0ed1cabe14bae69d03132acfe0fbcf0fd7b8e"
+  },
+  "tv-g1-t2-b31": {
+    "title": "Cuộc thi tài năng rừng xanh",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Cuộc thi tài năng rừng xanh.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Cuộc thi tài năng rừng xanh.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      114,
+      115,
+      116,
+      117
+    ],
+    "sourceHash": "44b07f01bf6f98b614fb4ce4efb2eb7fa9c1871a61f6f31348d99c7d42133052"
+  },
+  "tv-g1-t2-b32": {
+    "title": "Cây liễu dẻo dai",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Cây liễu dẻo dai.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Cây liễu dẻo dai.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      118,
+      119,
+      120,
+      121,
+      122,
+      123
+    ],
+    "sourceHash": "db5fa17187e833a91350c9e4cf55e47cfbaa5a057390ed61479797f23edba86f"
+  },
+  "tv-g1-t2-b33": {
+    "title": "Tia nắng đi đâu?",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Tia nắng đi đâu?.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Tia nắng đi đâu?.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      124,
+      125
+    ],
+    "sourceHash": "665d2c95a5f31cce99f32fba325c9227fc90a3a5df8ceb1b13056c0009708941"
+  },
+  "tv-g1-t2-b34": {
+    "title": "Trong giấc mơ buổi sáng",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Trong giấc mơ buổi sáng.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Trong giấc mơ buổi sáng.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      126,
+      127
+    ],
+    "sourceHash": "d31d00b18c803060f595fea019f877a6926af5a50b9d682f38f4d09409189346"
+  },
+  "tv-g1-t2-b35": {
+    "title": "Ngày mới bắt đầu",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Ngày mới bắt đầu.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Ngày mới bắt đầu.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      128,
+      129,
+      130,
+      131
+    ],
+    "sourceHash": "d2bc464c3050347c20d89e4a7bf5c114c90581dccf3004f232e18b2bf5248aa7"
+  },
+  "tv-g1-t2-b36": {
+    "title": "Hỏi mẹ",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Hỏi mẹ.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Hỏi mẹ.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      132,
+      133
+    ],
+    "sourceHash": "9e9f9c7c53f85884d5d5bd1a29e1d7568e74c1537213d9ed8e0aa4dda0c8d200"
+  },
+  "tv-g1-t2-b37": {
+    "title": "Những cánh cò",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Những cánh cò.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Những cánh cò.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      134,
+      135,
+      136,
+      137
+    ],
+    "sourceHash": "68a3711bd29c6d54ee5815bfa91cc27aa8abb63d6efd3c3fb1d7b772bea00019"
+  },
+  "tv-g1-t2-b38": {
+    "title": "Buổi trưa hè",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Buổi trưa hè.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Buổi trưa hè.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      138,
+      139
+    ],
+    "sourceHash": "d034b2262e1f6c6a1af5c520c4fbdd8c44ff53ed27279c117dc8bf58c57e7006"
+  },
+  "tv-g1-t2-b39": {
+    "title": "Hoa phượng",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Hoa phượng.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Hoa phượng.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      140,
+      141,
+      142,
+      143
+    ],
+    "sourceHash": "f3e3e50252362380ce16d967de347eccf66b63a25a92ec4753c4afb1ae38421b"
+  },
+  "tv-g1-t2-b40": {
+    "title": "Cậu bé thông minh",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Cậu bé thông minh.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Cậu bé thông minh.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      144,
+      145,
+      146,
+      147
+    ],
+    "sourceHash": "0b5202f59e5a200436e65b2e44b54937c5837b3f46e1828684bd274dd084e987"
+  },
+  "tv-g1-t2-b41": {
+    "title": "Lính cứu hoả",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Lính cứu hoả.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Lính cứu hoả.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      148,
+      149,
+      150,
+      151
+    ],
+    "sourceHash": "3e963a6ca68cd762d2c660ae53c2df8a83350560b8cf9379f8d1d959b55a692f"
+  },
+  "tv-g1-t2-b42": {
+    "title": "Lớn lên bạn làm gì?",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Lớn lên bạn làm gì?.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Lớn lên bạn làm gì?.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      152,
+      153
+    ],
+    "sourceHash": "c2e723c834eee8fd9837d7e3cea2cecba753793bdb35e2f20afcd9422827e670"
+  },
+  "tv-g1-t2-b43": {
+    "title": "Ruộng bậc thang ở Sa Pa",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Ruộng bậc thang ở Sa Pa.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Ruộng bậc thang ở Sa Pa.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      154,
+      155
+    ],
+    "sourceHash": "edb8e80a0f6ccedea17ac3e6528ee2f50adbdf3e3de53e75f6bbc369a73ac1fa"
+  },
+  "tv-g1-t2-b44": {
+    "title": "Nhớ ơn",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Nhớ ơn.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Nhớ ơn.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      156,
+      157
+    ],
+    "sourceHash": "ffdabff67e0c998170d6113d80ec2fe8044d5bf701e9d6c34935881a283b6a9f"
+  },
+  "tv-g1-t2-b45": {
+    "title": "Du lịch biển Việt Nam",
+    "author": "SGK Tiếng Việt 1",
+    "genre": "prose",
+    "content": [
+      "Bài đọc: Du lịch biển Việt Nam.",
+      "Luyện đọc trơn đoạn văn, câu chuyện và bài thơ trong chủ điểm Du lịch biển Việt Nam.",
+      "Trả lời các câu hỏi đọc hiểu và luyện tập theo nội dung bài học."
+    ],
+    "sourcePages": [
+      158,
+      159,
+      160,
+      161
+    ],
+    "sourceHash": "716a0c39b2a1df37b4ffb383bca9a84aed1c92718a57ac9170b314b2dc40410a"
+  }
+}

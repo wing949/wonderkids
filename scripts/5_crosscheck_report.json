@@ -1,0 +1,1474 @@
+{
+  "totalLessons": 376,
+  "check1_passed": 376,
+  "check1_failed": [],
+  "check2_passed": 376,
+  "check2_failed": [],
+  "check3_passed": 376,
+  "check3_failed": [],
+  "check4_passed": 376,
+  "check4_failed": [],
+  "check5_passed": 11,
+  "check5_failed": [
+    {
+      "lessonId": "tv-g1-b12",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-b13",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-b14",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-b15",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-b16",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b31",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b32",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b33",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b34",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b35",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b36",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b37",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b38",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b39",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b40",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b41",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b42",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b43",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b44",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b45",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b46",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b47",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b48",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b49",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b50",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b51",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b52",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b53",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b54",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b55",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b56",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b57",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b58",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b59",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b60",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b61",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b62",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b63",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b64",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b65",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b66",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b67",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b68",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b69",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b70",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b71",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b72",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b73",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b74",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b75",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b76",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b77",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b78",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b79",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b80",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b81",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b82",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t1-b83",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b11",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b12",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b13",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b14",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b31",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b32",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b33",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b34",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b35",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b36",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b37",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b38",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b39",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b40",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b41",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b42",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b43",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b44",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g1-t2-b45",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g2-b1",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b2",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b3",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b4",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b5",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b6",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b7",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b8",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b9",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b10",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b11",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b12",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b13",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b14",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b15",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b16",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b17",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b18",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b19",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b20",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b21",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b22",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b23",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b24",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b25",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b26",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b27",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b28",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b29",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b30",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b31",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t1-b32",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b19",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b20",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b21",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b22",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b23",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b24",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b25",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b26",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b27",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b28",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b29",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-b30",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b13",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b14",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b15",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b16",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b17",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b18",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b19",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b20",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b21",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b22",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b23",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b24",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b25",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b26",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b27",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b28",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b29",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g2-t2-b30",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b1",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b2",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b3",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b4",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b5",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b6",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b7",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b8",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b9",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b10",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b11",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b12",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b13",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b14",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b15",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b16",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b17",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b18",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b19",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b20",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b21",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b22",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b23",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b24",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b25",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b26",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b27",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b28",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b29",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b30",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b31",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-t1-b32",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g3-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b12",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b13",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b14",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g3-t2-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b1",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b2",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b3",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b4",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b5",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b6",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b7",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b8",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b9",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b10",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b11",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b12",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b13",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b14",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b31",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t1-b32",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b12",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b13",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b14",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b12",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b13",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b14",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g4-t2-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b1",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b2",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b3",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b4",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b5",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b6",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b7",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b8",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b9",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b10",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b11",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b12",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b13",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b14",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b31",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t1-b32",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b10",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b11",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b12",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b13",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b14",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b15",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b16",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b17",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b18",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b19",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b20",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b21",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b22",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b23",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b24",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b25",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b26",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b27",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b28",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b29",
+      "reason": "Chưa có file audio trong audioManifest"
+    },
+    {
+      "lessonId": "tv-g5-t2-b30",
+      "reason": "Chưa có file audio trong audioManifest"
+    }
+  ]
+}

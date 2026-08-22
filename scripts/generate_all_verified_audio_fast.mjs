@@ -11,7 +11,6 @@ import { synthesizeWithRetry } from './lib/verifiedVietnameseAudioRetry.mjs';
 
 const runFile = promisify(execFile);
 const workspace = process.cwd();
-const lessonIds = process.argv.slice(2).filter((value) => !value.startsWith('--'));
 const buildDirectory = await mkdtemp(join(tmpdir(), 'wonderkids-verified-audio-build-'));
 const audioDirectory = await mkdtemp(join(tmpdir(), 'wonderkids-verified-audio-files-'));
 const manifestPath = join(workspace, 'src', 'data', 'curriculum', 'vietnamese', 'audioManifest.generated.json');
@@ -59,81 +58,95 @@ try {
       .flatMap((grade) => curriculum.getLessonsForGradeAndSubject(grade, 'vietnamese'))
       .map((lesson) => [lesson.id.replace('-l', '-b'), lesson]),
   );
+
   const verifiedLessonIds = [...runtimeLessons.values()]
     .filter((lesson) => lesson.readingPassage?.contentOrigin === 'sgk_reference'
       && lesson.readingPassage.verificationStatus === 'verified'
       && lesson.readingPassage.sourcePages?.length)
     .map((lesson) => lesson.id.replace('-l', '-b'))
     .sort();
-  const requestedTargets = lessonIds.length > 0 ? lessonIds.map((lessonId) => lessonId.replace('-l', '-b')) : verifiedLessonIds;
-  const unverifiedTargets = requestedTargets.filter((lessonId) => !verifiedLessonIds.includes(lessonId));
-  if (unverifiedTargets.length > 0) {
-    throw new Error(`Chỉ tạo audio cho transcript SGK đã xác minh: ${unverifiedTargets.join(', ')}`);
-  }
 
-  const previousManifest = JSON.parse(await readFile(manifestPath, 'utf8'));
-  const manifest = Object.fromEntries(
-    Object.entries(previousManifest).filter(([lessonId]) => verifiedLessonIds.includes(lessonId)),
-  );
   await Promise.all([
     mkdir(join(workspace, 'public', 'audio', 'curriculum'), { recursive: true }),
     mkdir(join(workspace, 'public', 'audio', 'curriculum', 'fallback'), { recursive: true }),
   ]);
 
-  for (const lessonId of requestedTargets) {
-    const lesson = runtimeLessons.get(lessonId);
-    const passage = lesson?.readingPassage;
-    if (
-      !passage
-      || passage.contentOrigin !== 'sgk_reference'
-      || passage.verificationStatus !== 'verified'
-      || !passage.sourcePages?.length
-    ) {
-      throw new Error(`${lessonId} chưa có transcript SGK đã xác minh`);
-    }
+  let manifest = {};
+  try {
+    manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  } catch {}
 
-    const text = narration.buildLessonNarration(passage);
-    const textHash = sha256(text);
-    const primaryWav = join(workspace, 'public', 'audio', 'curriculum', `${lessonId}.wav`);
-    const fallbackWav = join(workspace, 'public', 'audio', 'curriculum', 'fallback', `${lessonId}.wav`);
+  console.log(`Bắt đầu tạo audio cho ${verifiedLessonIds.length} bài học verified...`);
 
-    try {
-      const pStat = await readFile(primaryWav);
-      const fStat = await readFile(fallbackWav);
-      if (manifest[lessonId]?.transcriptHash === textHash && pStat.length > 0 && fStat.length > 0) {
-        // Already synthesized and valid
-        continue;
+  // Process with concurrency pool of 4
+  const CONCURRENCY = 4;
+  let currentIndex = 0;
+  let completedCount = 0;
+
+  async function worker(workerId) {
+    while (currentIndex < verifiedLessonIds.length) {
+      const idx = currentIndex++;
+      const lessonId = verifiedLessonIds[idx];
+      const lesson = runtimeLessons.get(lessonId);
+      const passage = lesson?.readingPassage;
+      if (!passage) continue;
+
+      const text = narration.buildLessonNarration(passage);
+      const textHash = sha256(text);
+      const primaryWav = join(workspace, 'public', 'audio', 'curriculum', `${lessonId}.wav`);
+      const fallbackWav = join(workspace, 'public', 'audio', 'curriculum', 'fallback', `${lessonId}.wav`);
+
+      try {
+        const pStat = await readFile(primaryWav);
+        const fStat = await readFile(fallbackWav);
+        if (manifest[lessonId]?.transcriptHash === textHash && pStat.length > 0 && fStat.length > 0) {
+          completedCount++;
+          continue;
+        }
+      } catch {}
+
+      const primaryMp3 = join(audioDirectory, `${lessonId}-primary-${workerId}.mp3`);
+      const fallbackMp3 = join(audioDirectory, `${lessonId}-fallback-${workerId}.mp3`);
+
+      try {
+        await synthesizeWithRetry(
+          () => synthesize(text, 'vi-VN-HoaiMyNeural', primaryMp3),
+          { onRetry: ({ attempt, attempts }) => console.warn(`TTS chính (${lessonId}) thử lại (${attempt}/${attempts}).`) },
+        );
+        await synthesizeWithRetry(
+          () => synthesize(text, 'vi-VN-NamMinhNeural', fallbackMp3),
+          { onRetry: ({ attempt, attempts }) => console.warn(`TTS fallback (${lessonId}) thử lại (${attempt}/${attempts}).`) },
+        );
+        await convertToWav(primaryMp3, primaryWav);
+        await convertToWav(fallbackMp3, fallbackWav);
+
+        manifest[lessonId] = {
+          lessonId,
+          primaryPath: `/audio/curriculum/${lessonId}.wav`,
+          fallbackPath: `/audio/curriculum/fallback/${lessonId}.wav`,
+          primaryVoice: 'Cô Hoài My',
+          fallbackVoice: 'Thầy Nam Minh',
+          transcriptHash: textHash,
+          lessonVersion: Math.max(2, Number(manifest[lessonId]?.lessonVersion || 0) + 1),
+          sourcePages: passage.sourcePages,
+        };
+
+        completedCount++;
+        console.log(`[${completedCount}/${verifiedLessonIds.length}] Đã tạo audio SGK: ${lessonId}`);
+        await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+      } catch (err) {
+        console.error(`Lỗi khi tạo audio bài ${lessonId}:`, err.message);
       }
-    } catch {}
-
-    const primaryMp3 = join(audioDirectory, `${lessonId}-primary.mp3`);
-    const fallbackMp3 = join(audioDirectory, `${lessonId}-fallback.mp3`);
-
-    await synthesizeWithRetry(
-      () => synthesize(text, 'vi-VN-HoaiMyNeural', primaryMp3),
-      { onRetry: ({ attempt, attempts }) => console.warn(`TTS chính bị ngắt, đang thử lại (${attempt}/${attempts}).`) },
-    );
-    await synthesizeWithRetry(
-      () => synthesize(text, 'vi-VN-NamMinhNeural', fallbackMp3),
-      { onRetry: ({ attempt, attempts }) => console.warn(`TTS fallback bị ngắt, đang thử lại (${attempt}/${attempts}).`) },
-    );
-    await convertToWav(primaryMp3, primaryWav);
-    await convertToWav(fallbackMp3, fallbackWav);
-
-    manifest[lessonId] = {
-      lessonId,
-      primaryPath: `/audio/curriculum/${lessonId}.wav`,
-      fallbackPath: `/audio/curriculum/fallback/${lessonId}.wav`,
-      primaryVoice: 'Cô Hoài My',
-      fallbackVoice: 'Thầy Nam Minh',
-      transcriptHash: sha256(text),
-      lessonVersion: Math.max(2, Number(manifest[lessonId]?.lessonVersion || 0) + 1),
-      sourcePages: passage.sourcePages,
-    };
-    console.log(`Đã tạo audio SGK đã duyệt: ${lessonId}`);
+    }
   }
 
+  // Run workers
+  const workers = Array.from({ length: CONCURRENCY }, (_, i) => worker(i));
+  await Promise.all(workers);
+
+  // Write final manifest with all verified lessons
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  console.log(`Hoàn tất tạo audio cho toàn bộ ${Object.keys(manifest).length} bài học SGK!`);
 } finally {
   await rm(buildDirectory, { recursive: true, force: true });
   await rm(audioDirectory, { recursive: true, force: true });

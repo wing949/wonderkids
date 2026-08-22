@@ -3,166 +3,263 @@
     "lessonId": "tv-g1-b1",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      14
+      14,
+      15
     ],
     "matchedTitle": "Bài 1: A a",
-    "matchedText": "bai 1 adq",
-    "confidence": 0.8178,
-    "status": "ocr_matched"
+    "matchedText": "A a",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b3": {
+    "lessonId": "tv-g1-b3",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      18,
+      19
+    ],
+    "matchedTitle": "Bài 3: C c",
+    "matchedText": "C c",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b2": {
+    "lessonId": "tv-g1-b2",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      16,
+      17
+    ],
+    "matchedTitle": "Bài 2: B b",
+    "matchedText": "B b",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b4": {
     "lessonId": "tv-g1-b4",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      20
+      20,
+      21
     ],
     "matchedTitle": "Bài 4: E e - Ê ê",
-    "matchedText": "bai 4 ee ee",
-    "confidence": 0.8862,
-    "status": "ocr_matched"
+    "matchedText": "E e - Ê ê",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b5": {
     "lessonId": "tv-g1-b5",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      42
+      22,
+      23
     ],
     "matchedTitle": "Bài 5: Ôn tập và kể chuyện",
-    "matchedText": "bai on tap 115 va ke chuyen",
-    "confidence": 0.8178,
-    "status": "ocr_matched"
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b6": {
     "lessonId": "tv-g1-b6",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      24
+      24,
+      25
     ],
     "matchedTitle": "Bài 6: O o",
-    "matchedText": "bai 6 oo",
-    "confidence": 0.9289,
-    "status": "ocr_matched"
+    "matchedText": "O o",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b7": {
     "lessonId": "tv-g1-b7",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      24
+      26,
+      27
     ],
-    "matchedTitle": "Bài 7: Ô ô - Ơ ơ",
-    "matchedText": "o b lo o",
-    "confidence": 0.79,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 7: Ô ô",
+    "matchedText": "Ô ô",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b8": {
     "lessonId": "tv-g1-b8",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      34
+      28,
+      29
     ],
-    "matchedTitle": "Bài 8: I i - K k",
-    "matchedText": "k i k i ki ki",
-    "confidence": 0.7543,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 8: D d - Đ đ",
+    "matchedText": "D d - Đ đ",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b9": {
     "lessonId": "tv-g1-b9",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      38
+      30,
+      31
     ],
-    "matchedTitle": "Bài 9: U u - Ư ư",
-    "matchedText": "u u d u u",
-    "confidence": 0.8178,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 9: Ơ ơ",
+    "matchedText": "Ơ ơ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b10": {
+    "lessonId": "tv-g1-b10",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      32,
+      33
+    ],
+    "matchedTitle": "Bài 10: Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b11": {
+    "lessonId": "tv-g1-b11",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      34,
+      35
+    ],
+    "matchedTitle": "Bài 11: I i - K k",
+    "matchedText": "I i - K k",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b12": {
+    "lessonId": "tv-g1-b12",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      36,
+      37
+    ],
+    "matchedTitle": "Bài 12: H h - L l",
+    "matchedText": "H h - L l",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b13": {
     "lessonId": "tv-g1-b13",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      54
+      38,
+      39
     ],
-    "matchedTitle": "Bài 13: R r - S s",
-    "matchedText": "r q s e ra se",
-    "confidence": 0.7543,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 13: U u - Ư ư",
+    "matchedText": "U u - Ư ư",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b14": {
+    "lessonId": "tv-g1-b14",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      40,
+      41
+    ],
+    "matchedTitle": "Bài 14: Ch ch - Kh kh",
+    "matchedText": "Ch ch - Kh kh",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b15": {
     "lessonId": "tv-g1-b15",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      66
+      42,
+      43
     ],
-    "matchedTitle": "Bài 15: V v - X x",
-    "matchedText": "v e x e ve xe",
-    "confidence": 0.7543,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 15: Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b16": {
     "lessonId": "tv-g1-b16",
     "bookId": "tv-g1-t1",
     "sourcePages": [
-      40
+      44,
+      45
     ],
-    "matchedTitle": "Bài 16: Ch ch - Kh kh",
-    "matchedText": "bai 4 chch kh kh",
-    "confidence": 0.8733,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 16: M m - N n",
+    "matchedText": "M m - N n",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g1-b22": {
     "lessonId": "tv-g1-b22",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      8
+      8,
+      9,
+      10,
+      11
     ],
-    "matchedTitle": "Bài 2: Đôi tai xấu xí",
-    "matchedText": "bai h vay doi tai xau xi",
+    "matchedTitle": "Đôi tai xấu xí",
+    "matchedText": "Đôi tai xấu xí",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g1-b23": {
     "lessonId": "tv-g1-b23",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      12
+      12,
+      13
     ],
-    "matchedTitle": "Bài 3: Bạn của gió",
-    "matchedText": "bai kw ban cua gio",
+    "matchedTitle": "Bạn của gió",
+    "matchedText": "Bạn của gió",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g1-b24": {
     "lessonId": "tv-g1-b24",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      64
+      14,
+      15,
+      16,
+      17
     ],
-    "matchedTitle": "Bài 4: Rửa tay trước khi ăn",
-    "matchedText": "rua tay truoc khi an cac ban dang rua tay x n",
+    "matchedTitle": "Giải thưởng tình bạn",
+    "matchedText": "Giải thưởng tình bạn",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g1-b25": {
     "lessonId": "tv-g1-b25",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      68
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
     ],
-    "matchedTitle": "Bài 5: Lời chào",
-    "matchedText": "loi chao di truoc quan sat tranh on chao",
+    "matchedTitle": "Sinh nhật của voi con",
+    "matchedText": "Sinh nhật của voi con",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g1-b28": {
     "lessonId": "tv-g1-b28",
     "bookId": "tv-g1-t2",
     "sourcePages": [
-      144
+      30,
+      31,
+      32,
+      33
     ],
-    "matchedTitle": "Bài 8: Cậu bé thông minh",
-    "matchedText": "q cau be thong minh 4 n ao quen sot tranh duoi day",
+    "matchedTitle": "Cả nhà đi chơi núi",
+    "matchedText": "Cả nhà đi chơi núi",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b1": {
     "lessonId": "tv-g2-b1",
@@ -400,165 +497,4566 @@
     "lessonId": "tv-g2-b19",
     "bookId": "tv-g2-t2",
     "sourcePages": [
-      9
+      9,
+      10,
+      11
     ],
     "matchedTitle": "Bài 19: Chuyện bốn mùa",
-    "matchedText": "4 chuyen bon mua",
+    "matchedText": "Bài 1: Chuyện bốn mùa",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g2-b20": {
     "lessonId": "tv-g2-b20",
     "bookId": "tv-g2-t2",
     "sourcePages": [
-      27
+      12,
+      13,
+      14,
+      15
     ],
-    "matchedTitle": "Bài 20: Mùa vàng",
-    "matchedText": "mua vong de co san pham thu hoach nguoi nong dan phai lam rat nhieu viec",
-    "confidence": 0.875,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 2: Mùa nước nổi",
+    "matchedText": "Mùa nước nổi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b21": {
+    "lessonId": "tv-g2-b21",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      16,
+      17,
+      18
+    ],
+    "matchedTitle": "Bài 3: Hoa mi hót",
+    "matchedText": "Hoa mi hót",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b22": {
+    "lessonId": "tv-g2-b22",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      19,
+      20,
+      21,
+      22
+    ],
+    "matchedTitle": "Bài 4: Tết đến rồi",
+    "matchedText": "Tết đến rồi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b23": {
+    "lessonId": "tv-g2-b23",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      23,
+      24,
+      25
+    ],
+    "matchedTitle": "Bài 5: Giọt nước và biển lớn",
+    "matchedText": "Giọt nước và biển lớn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b24": {
+    "lessonId": "tv-g2-b24",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "matchedTitle": "Bài 6: Mùa vàng",
+    "matchedText": "Mùa vàng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b25": {
+    "lessonId": "tv-g2-b25",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      31,
+      32,
+      33
+    ],
+    "matchedTitle": "Bài 7: Hạt thóc",
+    "matchedText": "Hạt thóc",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b26": {
+    "lessonId": "tv-g2-b26",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "matchedTitle": "Bài 8: Luỹ tre",
+    "matchedText": "Luỹ tre",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b27": {
+    "lessonId": "tv-g2-b27",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      116,
+      117,
+      118
+    ],
+    "matchedTitle": "Bài 27: Mẹ",
+    "matchedText": "Mẹ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b28": {
+    "lessonId": "tv-g2-b28",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "matchedTitle": "Bài 10: Khủng long",
+    "matchedText": "Khủng long",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b29": {
+    "lessonId": "tv-g2-b29",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      46,
+      47,
+      48
+    ],
+    "matchedTitle": "Bài 11: Sự tích cây thì là",
+    "matchedText": "Sự tích cây thì là",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-b30": {
+    "lessonId": "tv-g2-b30",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "matchedTitle": "Bài 12: Bờ tre đón khách",
+    "matchedText": "Bờ tre đón khách",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b13": {
+    "lessonId": "tv-g2-t2-b13",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      54,
+      55,
+      56
+    ],
+    "matchedTitle": "Bài 13: Tiếng chổi tre",
+    "matchedText": "Tiếng chổi tre",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b14": {
+    "lessonId": "tv-g2-t2-b14",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      57,
+      58,
+      59,
+      60
+    ],
+    "matchedTitle": "Bài 14: Cỏ non cười rồi",
+    "matchedText": "Cỏ non cười rồi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b15": {
+    "lessonId": "tv-g2-t2-b15",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      61,
+      62,
+      63
+    ],
+    "matchedTitle": "Bài 15: Những con sao biển",
+    "matchedText": "Những con sao biển",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b16": {
+    "lessonId": "tv-g2-t2-b16",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      64,
+      65,
+      66,
+      67
+    ],
+    "matchedTitle": "Bài 16: Tạm biệt cánh cam",
+    "matchedText": "Tạm biệt cánh cam",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b17": {
+    "lessonId": "tv-g2-t2-b17",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      77,
+      78,
+      79
+    ],
+    "matchedTitle": "Bài 17: Những cách chào độc đáo",
+    "matchedText": "Những cách chào độc đáo",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b18": {
+    "lessonId": "tv-g2-t2-b18",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      80,
+      81,
+      82,
+      83
+    ],
+    "matchedTitle": "Bài 18: Thư viện biết đi",
+    "matchedText": "Thư viện biết đi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b19": {
+    "lessonId": "tv-g2-t2-b19",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      84,
+      85,
+      86
+    ],
+    "matchedTitle": "Bài 19: Cảm ơn anh hà mã",
+    "matchedText": "Cảm ơn anh hà mã",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b20": {
+    "lessonId": "tv-g2-t2-b20",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      87,
+      88,
+      89,
+      90
+    ],
+    "matchedTitle": "Bài 20: Từ chú bồ câu đến in-tơ-nét",
+    "matchedText": "Từ chú bồ câu đến in-tơ-nét",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b21": {
+    "lessonId": "tv-g2-t2-b21",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      92,
+      93,
+      94
+    ],
+    "matchedTitle": "Bài 21: Mai An Tiêm",
+    "matchedText": "Mai An Tiêm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b22": {
+    "lessonId": "tv-g2-t2-b22",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "matchedTitle": "Bài 22: Thư gửi bố ngoài đảo",
+    "matchedText": "Thư gửi bố ngoài đảo",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b23": {
+    "lessonId": "tv-g2-t2-b23",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "matchedTitle": "Bài 23: Bóp nát quả cam",
+    "matchedText": "Bóp nát quả cam",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b24": {
+    "lessonId": "tv-g2-t2-b24",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      104,
+      105,
+      106,
+      107,
+      108
+    ],
+    "matchedTitle": "Bài 24: Chiếc rễ đa tròn",
+    "matchedText": "Chiếc rễ đa tròn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b25": {
+    "lessonId": "tv-g2-t2-b25",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      110,
+      111,
+      112
+    ],
+    "matchedTitle": "Bài 25: Đất nước chúng mình",
+    "matchedText": "Đất nước chúng mình",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b26": {
+    "lessonId": "tv-g2-t2-b26",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      113,
+      114,
+      115,
+      116,
+      117,
+      118
+    ],
+    "matchedTitle": "Bài 26: Trên các miền đất nước",
+    "matchedText": "Trên các miền đất nước",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b27": {
+    "lessonId": "tv-g2-t2-b27",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      119,
+      120,
+      121
+    ],
+    "matchedTitle": "Bài 27: Chuyện quả bầu",
+    "matchedText": "Chuyện quả bầu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b28": {
+    "lessonId": "tv-g2-t2-b28",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      122,
+      123,
+      124,
+      125
+    ],
+    "matchedTitle": "Bài 28: Khám phá đáy biển ở Trường Sa",
+    "matchedText": "Khám phá đáy biển ở Trường Sa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b29": {
+    "lessonId": "tv-g2-t2-b29",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      126,
+      127,
+      128
+    ],
+    "matchedTitle": "Bài 29: Hồ Gươm",
+    "matchedText": "Hồ Gươm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t2-b30": {
+    "lessonId": "tv-g2-t2-b30",
+    "bookId": "tv-g2-t2",
+    "sourcePages": [
+      129,
+      130,
+      131,
+      132
+    ],
+    "matchedTitle": "Bài 30: Cánh đồng quê em",
+    "matchedText": "Cánh đồng quê em",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g3-b5": {
     "lessonId": "tv-g3-b5",
     "bookId": "tv-g3-t1",
     "sourcePages": [
-      34
+      26,
+      27,
+      28,
+      29
     ],
-    "matchedTitle": "Bài 5: Mùa hè lấp lánh",
-    "matchedText": "nua he lap lanh doc",
-    "confidence": 0.9733,
-    "status": "ocr_matched"
+    "matchedTitle": "Bài 5: Nhật kí tập bơi",
+    "matchedText": "Nhật kí tập bơi",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g3-b8": {
     "lessonId": "tv-g3-b8",
     "bookId": "tv-g3-t1",
     "sourcePages": [
-      50
+      38,
+      39,
+      40,
+      41,
+      42
     ],
-    "matchedTitle": "Bài 8: Lời giải toán đặc biệt",
-    "matchedText": "2 v y 1 loi giai toan dac biet",
+    "matchedTitle": "Bài 8: Tạm biệt mùa hè",
+    "matchedText": "Tạm biệt mùa hè",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g3-b9": {
     "lessonId": "tv-g3-b9",
     "bookId": "tv-g3-t1",
     "sourcePages": [
-      59
+      43,
+      44,
+      45
     ],
-    "matchedTitle": "Bài 9: Bàn tay cô giáo",
-    "matchedText": "d 3 ban tay co giao doc",
+    "matchedTitle": "Bài 9: Đi học vui sao",
+    "matchedText": "Đi học vui sao",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g3-b15": {
     "lessonId": "tv-g3-b15",
     "bookId": "tv-g3-t2",
     "sourcePages": [
-      15
+      8,
+      9,
+      10
     ],
-    "matchedTitle": "Bài 15: Cóc kiện Trời",
-    "matchedText": "va coc kien troi",
+    "matchedTitle": "Bầu trời",
+    "matchedText": "Bầu trời",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g3-b16": {
     "lessonId": "tv-g3-b16",
-    "bookId": "tv-g3-t2",
+    "bookId": "tv-g3-t1",
     "sourcePages": [
-      102
+      70,
+      71,
+      72,
+      73
     ],
-    "matchedTitle": "Bài 16: Hai Bà Trưng",
-    "matchedText": "s hai ba trung",
+    "matchedTitle": "Bài 16: Ngày em vào Đội",
+    "matchedText": "Ngày em vào Đội",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g3-b20": {
     "lessonId": "tv-g3-b20",
     "bookId": "tv-g3-t2",
     "sourcePages": [
-      126
+      27,
+      28,
+      29,
+      30,
+      31
     ],
-    "matchedTitle": "Bài 20: Bác sĩ Y-éc-xanh",
-    "matchedText": "jvly bac si y ec xanh doc",
+    "matchedTitle": "Cây gạo",
+    "matchedText": "Cây gạo",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g3-b22": {
     "lessonId": "tv-g3-b22",
     "bookId": "tv-g3-t2",
     "sourcePages": [
-      110
+      35,
+      36,
+      37,
+      38,
+      39
     ],
-    "matchedTitle": "Bài 22: Trái Đất xanh của chúng mình",
-    "matchedText": "trai dat ca chung minh",
-    "confidence": 0.8257,
-    "status": "ocr_matched"
+    "matchedTitle": "Bầy voi rừng Trường Sơn",
+    "matchedText": "Bầy voi rừng Trường Sơn",
+    "confidence": 1,
+    "status": "visually_reviewed"
   },
   "tv-g4-b8": {
     "lessonId": "tv-g4-b8",
     "bookId": "tv-g4-t1",
     "sourcePages": [
-      132
+      34,
+      35,
+      36,
+      37,
+      38
     ],
-    "matchedTitle": "Bài 8: Nếu chúng mình có phép lạ",
-    "matchedText": "neu chung minh co phep la neu chung minh co phep la bat hat giong nay mam nhanh hoa trai bom thanh trai ngon",
+    "matchedTitle": "Đò ngang",
+    "matchedText": "Đò ngang",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g5-b1": {
     "lessonId": "tv-g5-b1",
     "bookId": "tv-g5-t1",
     "sourcePages": [
-      89
+      8,
+      9,
+      10,
+      11
     ],
-    "matchedTitle": "Bài 1: Thư gửi các học sinh",
-    "matchedText": "y my a thu gui cac hoc sinh c a la z am a",
+    "matchedTitle": "Thanh âm của gió",
+    "matchedText": "Thanh âm của gió",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g5-b8": {
     "lessonId": "tv-g5-b8",
     "bookId": "tv-g5-t1",
     "sourcePages": [
-      51
+      35,
+      36,
+      37,
+      38
     ],
-    "matchedTitle": "Bài 8: Kì diệu rừng xanh",
-    "matchedText": "bai iy ki dieu rung xanh",
+    "matchedTitle": "Kì nghỉ hè ý nghĩa",
+    "matchedText": "Kì nghỉ hè ý nghĩa",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g5-b20": {
     "lessonId": "tv-g5-b20",
     "bookId": "tv-g5-t2",
     "sourcePages": [
-      155
+      35,
+      36,
+      37,
+      38
     ],
-    "matchedTitle": "Bài 20: Phong cảnh đền Hùng",
-    "matchedText": "ii doc hieu phong canh den hung",
+    "matchedTitle": "Khuất Nguyên",
+    "matchedText": "Khuất Nguyên",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g5-b21": {
     "lessonId": "tv-g5-b21",
     "bookId": "tv-g5-t2",
     "sourcePages": [
-      104
+      39,
+      40,
+      41,
+      42
     ],
-    "matchedTitle": "Bài 21: Đất nước",
-    "matchedText": "dat nuoc 4 chuan bi",
+    "matchedTitle": "Nghĩa thầy trò",
+    "matchedText": "Nghĩa thầy trò",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
   },
   "tv-g5-b22": {
     "lessonId": "tv-g5-b22",
     "bookId": "tv-g5-t2",
     "sourcePages": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "matchedTitle": "Hội thổi cơm thi ở Đồng Vân",
+    "matchedText": "Hội thổi cơm thi ở Đồng Vân",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b19": {
+    "lessonId": "tv-g2-t1-b19",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      86,
+      87,
+      88
+    ],
+    "matchedTitle": "Bài 19: Chữ A và những người bạn",
+    "matchedText": "Chữ A và những người bạn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b20": {
+    "lessonId": "tv-g2-t1-b20",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      89,
+      90,
+      91,
+      92,
+      93
+    ],
+    "matchedTitle": "Bài 20: Nhím nâu kết bạn",
+    "matchedText": "Nhím nâu kết bạn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b21": {
+    "lessonId": "tv-g2-t1-b21",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      94,
+      95,
+      96
+    ],
+    "matchedTitle": "Bài 21: Thả diều",
+    "matchedText": "Thả diều",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b22": {
+    "lessonId": "tv-g2-t1-b22",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      97,
+      98,
+      99,
+      100
+    ],
+    "matchedTitle": "Bài 22: Tớ là lê-gô",
+    "matchedText": "Tớ là lê-gô",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b23": {
+    "lessonId": "tv-g2-t1-b23",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      101,
+      102,
+      103
+    ],
+    "matchedTitle": "Bài 23: Rồng rắn lên mây",
+    "matchedText": "Rồng rắn lên mây",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b24": {
+    "lessonId": "tv-g2-t1-b24",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "matchedTitle": "Bài 24: Nặn đồ chơi",
+    "matchedText": "Nặn đồ chơi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b25": {
+    "lessonId": "tv-g2-t1-b25",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      109,
+      110,
+      111
+    ],
+    "matchedTitle": "Bài 25: Sự tích hoa tỉ muội",
+    "matchedText": "Sự tích hoa tỉ muội",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b26": {
+    "lessonId": "tv-g2-t1-b26",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      112,
+      113,
+      114,
+      115
+    ],
+    "matchedTitle": "Bài 26: Em mang về yêu thương",
+    "matchedText": "Em mang về yêu thương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b27": {
+    "lessonId": "tv-g2-t1-b27",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      116,
+      117,
+      118
+    ],
+    "matchedTitle": "Bài 27: Mẹ",
+    "matchedText": "Mẹ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b28": {
+    "lessonId": "tv-g2-t1-b28",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      119,
+      120,
+      121,
+      122
+    ],
+    "matchedTitle": "Bài 28: Trò chơi của bố",
+    "matchedText": "Trò chơi của bố",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b29": {
+    "lessonId": "tv-g2-t1-b29",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      123,
+      124,
+      125
+    ],
+    "matchedTitle": "Bài 29: Cánh cửa nhớ bà",
+    "matchedText": "Cánh cửa nhớ bà",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b30": {
+    "lessonId": "tv-g2-t1-b30",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      126,
+      127,
+      128,
+      129
+    ],
+    "matchedTitle": "Bài 30: Thương ông",
+    "matchedText": "Thương ông",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b31": {
+    "lessonId": "tv-g2-t1-b31",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      130,
+      131,
+      132
+    ],
+    "matchedTitle": "Bài 31: Ánh sáng của yêu thương",
+    "matchedText": "Ánh sáng của yêu thương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g2-t1-b32": {
+    "lessonId": "tv-g2-t1-b32",
+    "bookId": "tv-g2-t1",
+    "sourcePages": [
+      133,
+      134,
+      135,
+      136
+    ],
+    "matchedTitle": "Bài 32: Chơi chong chóng",
+    "matchedText": "Chơi chong chóng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b1": {
+    "lessonId": "tv-g3-b1",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      10,
+      11,
+      12
+    ],
+    "matchedTitle": "Bài 1: Ngày gặp lại",
+    "matchedText": "Ngày gặp lại",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b2": {
+    "lessonId": "tv-g3-b2",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "matchedTitle": "Bài 2: Về thăm quê",
+    "matchedText": "Về thăm quê",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b3": {
+    "lessonId": "tv-g3-b3",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "matchedTitle": "Bài 3: Cánh rừng trong nắng",
+    "matchedText": "Cánh rừng trong nắng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b4": {
+    "lessonId": "tv-g3-b4",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "matchedTitle": "Bài 4: Lần đầu ra biển",
+    "matchedText": "Lần đầu ra biển",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b6": {
+    "lessonId": "tv-g3-b6",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "matchedTitle": "Bài 6: Tập nấu ăn",
+    "matchedText": "Tập nấu ăn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b7": {
+    "lessonId": "tv-g3-b7",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "matchedTitle": "Bài 7: Mùa hè lấp lánh",
+    "matchedText": "Mùa hè lấp lánh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b10": {
+    "lessonId": "tv-g3-b10",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "matchedTitle": "Bài 10: Con đường đến trường",
+    "matchedText": "Con đường đến trường",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b11": {
+    "lessonId": "tv-g3-b11",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      50,
+      51,
+      52,
+      53
+    ],
+    "matchedTitle": "Bài 11: Lời giải toán đặc biệt",
+    "matchedText": "Lời giải toán đặc biệt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b12": {
+    "lessonId": "tv-g3-b12",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "matchedTitle": "Bài 12: Bài tập làm văn",
+    "matchedText": "Bài tập làm văn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b13": {
+    "lessonId": "tv-g3-b13",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      59,
+      60,
+      61
+    ],
+    "matchedTitle": "Bài 13: Bàn tay cô giáo",
+    "matchedText": "Bàn tay cô giáo",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b14": {
+    "lessonId": "tv-g3-b14",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      62,
+      63,
+      64,
+      65
+    ],
+    "matchedTitle": "Bài 14: Cuộc họp của chữ viết",
+    "matchedText": "Cuộc họp của chữ viết",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b15": {
+    "lessonId": "tv-g3-t1-b15",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      66,
+      67,
+      68,
+      69
+    ],
+    "matchedTitle": "Bài 15: Thư viện",
+    "matchedText": "Thư viện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b16": {
+    "lessonId": "tv-g3-t1-b16",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      70,
+      71,
+      72,
+      73
+    ],
+    "matchedTitle": "Bài 16: Ngày em vào Đội",
+    "matchedText": "Ngày em vào Đội",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b17": {
+    "lessonId": "tv-g3-t1-b17",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      82,
+      83,
+      84,
+      85
+    ],
+    "matchedTitle": "Bài 17: Ngưỡng cửa",
+    "matchedText": "Ngưỡng cửa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b18": {
+    "lessonId": "tv-g3-t1-b18",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      86,
+      87,
+      88,
+      89
+    ],
+    "matchedTitle": "Bài 18: Món quà đặc biệt",
+    "matchedText": "Món quà đặc biệt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b19": {
+    "lessonId": "tv-g3-t1-b19",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      90,
+      91,
+      92
+    ],
+    "matchedTitle": "Bài 19: Khi cả nhà bé tí",
+    "matchedText": "Khi cả nhà bé tí",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b20": {
+    "lessonId": "tv-g3-t1-b20",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      93,
+      94,
+      95,
+      96
+    ],
+    "matchedTitle": "Bài 20: Trò chuyện cùng mẹ",
+    "matchedText": "Trò chuyện cùng mẹ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b21": {
+    "lessonId": "tv-g3-t1-b21",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      97,
+      98,
+      99
+    ],
+    "matchedTitle": "Bài 21: Tia nắng bé nhỏ",
+    "matchedText": "Tia nắng bé nhỏ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b22": {
+    "lessonId": "tv-g3-t1-b22",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "matchedTitle": "Bài 22: Để cháu nắm tay ông",
+    "matchedText": "Để cháu nắm tay ông",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b23": {
+    "lessonId": "tv-g3-t1-b23",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      104,
+      105,
+      106
+    ],
+    "matchedTitle": "Bài 23: Tôi yêu em tôi",
+    "matchedText": "Tôi yêu em tôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b24": {
+    "lessonId": "tv-g3-t1-b24",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      107,
+      108,
+      109,
+      110
+    ],
+    "matchedTitle": "Bài 24: Bạn nhỏ trong nhà",
+    "matchedText": "Bạn nhỏ trong nhà",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b25": {
+    "lessonId": "tv-g3-t1-b25",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      112,
+      113,
+      114,
+      115
+    ],
+    "matchedTitle": "Bài 25: Những bậc đá chạm mây",
+    "matchedText": "Những bậc đá chạm mây",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b26": {
+    "lessonId": "tv-g3-t1-b26",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      116,
+      117,
+      118,
+      119
+    ],
+    "matchedTitle": "Bài 26: Đi tìm mặt trời",
+    "matchedText": "Đi tìm mặt trời",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b27": {
+    "lessonId": "tv-g3-t1-b27",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      120,
+      121,
+      122,
+      123
+    ],
+    "matchedTitle": "Bài 27: Những chiếc áo ấm",
+    "matchedText": "Những chiếc áo ấm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b28": {
+    "lessonId": "tv-g3-t1-b28",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      124,
+      125,
+      126,
+      127,
+      128
+    ],
+    "matchedTitle": "Bài 28: Con đường của bé",
+    "matchedText": "Con đường của bé",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b29": {
+    "lessonId": "tv-g3-t1-b29",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      129,
+      130,
+      131,
+      132
+    ],
+    "matchedTitle": "Bài 29: Ngôi nhà trong cỏ",
+    "matchedText": "Ngôi nhà trong cỏ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b30": {
+    "lessonId": "tv-g3-t1-b30",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      133,
+      134,
+      135,
+      136
+    ],
+    "matchedTitle": "Bài 30: Những ngọn hải đăng",
+    "matchedText": "Những ngọn hải đăng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b31": {
+    "lessonId": "tv-g3-t1-b31",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      137,
+      138,
+      139
+    ],
+    "matchedTitle": "Bài 31: Người làm đồ chơi",
+    "matchedText": "Người làm đồ chơi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t1-b32": {
+    "lessonId": "tv-g3-t1-b32",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      140,
+      141,
+      142,
+      143,
+      144
+    ],
+    "matchedTitle": "Bài 32: Cây bút thần",
+    "matchedText": "Cây bút thần",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b17": {
+    "lessonId": "tv-g3-b17",
+    "bookId": "tv-g3-t1",
+    "sourcePages": [
+      82,
+      83,
+      84,
+      85
+    ],
+    "matchedTitle": "Bài 17: Ngưỡng cửa",
+    "matchedText": "Ngưỡng cửa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b18": {
+    "lessonId": "tv-g3-b18",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      19,
+      20,
+      21,
+      22
+    ],
+    "matchedTitle": "Những cái tên đáng yêu",
+    "matchedText": "Những cái tên đáng yêu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b19": {
+    "lessonId": "tv-g3-b19",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      23,
+      24,
+      25,
+      26
+    ],
+    "matchedTitle": "Ngày hội rừng xanh",
+    "matchedText": "Ngày hội rừng xanh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b21": {
+    "lessonId": "tv-g3-b21",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      32,
+      33,
+      34
+    ],
+    "matchedTitle": "Một trời xanh của tôi",
+    "matchedText": "Một trời xanh của tôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b23": {
+    "lessonId": "tv-g3-b23",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "matchedTitle": "Lời kêu gọi toàn dân tập thể dục",
+    "matchedText": "Lời kêu gọi toàn dân tập thể dục",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b24": {
+    "lessonId": "tv-g3-b24",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "matchedTitle": "Quả hồng của thỏ con",
+    "matchedText": "Quả hồng của thỏ con",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-b25": {
+    "lessonId": "tv-g3-b25",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      48,
+      49,
+      50
+    ],
+    "matchedTitle": "Chuyện bên cửa sổ",
+    "matchedText": "Chuyện bên cửa sổ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b12": {
+    "lessonId": "tv-g3-t2-b12",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "matchedTitle": "Tay trái và tay phải",
+    "matchedText": "Tay trái và tay phải",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b13": {
+    "lessonId": "tv-g3-t2-b13",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      55,
+      56,
+      57
+    ],
+    "matchedTitle": "Mèo đi câu cá",
+    "matchedText": "Mèo đi câu cá",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b14": {
+    "lessonId": "tv-g3-t2-b14",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      58,
+      59,
+      60,
+      61
+    ],
+    "matchedTitle": "Học nghề",
+    "matchedText": "Học nghề",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b15": {
+    "lessonId": "tv-g3-t2-b15",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      62,
+      63,
+      64,
+      65
+    ],
+    "matchedTitle": "Ngày như thế nào là đẹp?",
+    "matchedText": "Ngày như thế nào là đẹp?",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b16": {
+    "lessonId": "tv-g3-t2-b16",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      66,
+      67,
+      68,
+      69
+    ],
+    "matchedTitle": "A lô, tớ đây",
+    "matchedText": "A lô, tớ đây",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b17": {
+    "lessonId": "tv-g3-t2-b17",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      80,
+      81,
+      82
+    ],
+    "matchedTitle": "Đất nước là gì?",
+    "matchedText": "Đất nước là gì?",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b18": {
+    "lessonId": "tv-g3-t2-b18",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      83,
+      84,
+      85,
+      86
+    ],
+    "matchedTitle": "Núi quê tôi",
+    "matchedText": "Núi quê tôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b19": {
+    "lessonId": "tv-g3-t2-b19",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      87,
+      88,
+      89,
+      90
+    ],
+    "matchedTitle": "Sông Hương",
+    "matchedText": "Sông Hương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b20": {
+    "lessonId": "tv-g3-t2-b20",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      91,
+      92,
+      93,
       94
     ],
-    "matchedTitle": "Bài 22: Nghĩa thầy trò",
-    "matchedText": "nghia thay tro theo ha an",
+    "matchedTitle": "Tiếng nước mình",
+    "matchedText": "Tiếng nước mình",
     "confidence": 1,
-    "status": "ocr_matched"
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b21": {
+    "lessonId": "tv-g3-t2-b21",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      95,
+      96,
+      97
+    ],
+    "matchedTitle": "Nhà rông",
+    "matchedText": "Nhà rông",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b22": {
+    "lessonId": "tv-g3-t2-b22",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      98,
+      99,
+      100,
+      101
+    ],
+    "matchedTitle": "Sự tích ông Đùng, bà Đùng",
+    "matchedText": "Sự tích ông Đùng, bà Đùng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b23": {
+    "lessonId": "tv-g3-t2-b23",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      102,
+      103,
+      104,
+      105
+    ],
+    "matchedTitle": "Hai Bà Trưng",
+    "matchedText": "Hai Bà Trưng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b24": {
+    "lessonId": "tv-g3-t2-b24",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      106,
+      107,
+      108,
+      109,
+      110
+    ],
+    "matchedTitle": "Cùng Bác qua suối",
+    "matchedText": "Cùng Bác qua suối",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b25": {
+    "lessonId": "tv-g3-t2-b25",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      111,
+      112,
+      113
+    ],
+    "matchedTitle": "Ngọn lửa Ô-lim-pích",
+    "matchedText": "Ngọn lửa Ô-lim-pích",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b26": {
+    "lessonId": "tv-g3-t2-b26",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      114,
+      115,
+      116,
+      117
+    ],
+    "matchedTitle": "Rô-bốt ở quanh ta",
+    "matchedText": "Rô-bốt ở quanh ta",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b27": {
+    "lessonId": "tv-g3-t2-b27",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      118,
+      119,
+      120,
+      121
+    ],
+    "matchedTitle": "Thư của ông Trái Đất gửi các bạn nhỏ",
+    "matchedText": "Thư của ông Trái Đất gửi các bạn nhỏ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b28": {
+    "lessonId": "tv-g3-t2-b28",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      122,
+      123,
+      124,
+      125
+    ],
+    "matchedTitle": "Những điều nhỏ tớ làm cho Trái Đất",
+    "matchedText": "Những điều nhỏ tớ làm cho Trái Đất",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b29": {
+    "lessonId": "tv-g3-t2-b29",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      126,
+      127,
+      128,
+      129
+    ],
+    "matchedTitle": "Bác sĩ Y-éc-xanh",
+    "matchedText": "Bác sĩ Y-éc-xanh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g3-t2-b30": {
+    "lessonId": "tv-g3-t2-b30",
+    "bookId": "tv-g3-t2",
+    "sourcePages": [
+      130,
+      131,
+      132,
+      133
+    ],
+    "matchedTitle": "Một mái nhà chung",
+    "matchedText": "Một mái nhà chung",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b1": {
+    "lessonId": "tv-g4-b1",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "matchedTitle": "Điều kì diệu",
+    "matchedText": "Điều kì diệu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b2": {
+    "lessonId": "tv-g4-b2",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "matchedTitle": "Thi nhạc",
+    "matchedText": "Thi nhạc",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b3": {
+    "lessonId": "tv-g4-b3",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "matchedTitle": "Anh em sinh đôi",
+    "matchedText": "Anh em sinh đôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b4": {
+    "lessonId": "tv-g4-b4",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      20,
+      21,
+      22
+    ],
+    "matchedTitle": "Công chúa và người dẫn chuyện",
+    "matchedText": "Công chúa và người dẫn chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b5": {
+    "lessonId": "tv-g4-b5",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      23,
+      24,
+      25
+    ],
+    "matchedTitle": "Thằn lằn xanh và tắc kè",
+    "matchedText": "Thằn lằn xanh và tắc kè",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b6": {
+    "lessonId": "tv-g4-b6",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "matchedTitle": "Nghệ sĩ trống",
+    "matchedText": "Nghệ sĩ trống",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b7": {
+    "lessonId": "tv-g4-b7",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "matchedTitle": "Những bức chân dung",
+    "matchedText": "Những bức chân dung",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b9": {
+    "lessonId": "tv-g4-b9",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "matchedTitle": "Bầu trời trong quả trứng",
+    "matchedText": "Bầu trời trong quả trứng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b10": {
+    "lessonId": "tv-g4-b10",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "matchedTitle": "Tiếng nói của cỏ cây",
+    "matchedText": "Tiếng nói của cỏ cây",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b11": {
+    "lessonId": "tv-g4-b11",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      48,
+      49,
+      50
+    ],
+    "matchedTitle": "Tập làm văn",
+    "matchedText": "Tập làm văn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b12": {
+    "lessonId": "tv-g4-t1-b12",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "matchedTitle": "Nhà phát minh 6 tuổi",
+    "matchedText": "Nhà phát minh 6 tuổi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b13": {
+    "lessonId": "tv-g4-t1-b13",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "matchedTitle": "Con vẹt xanh",
+    "matchedText": "Con vẹt xanh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b14": {
+    "lessonId": "tv-g4-t1-b14",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      59,
+      60,
+      61,
+      62
+    ],
+    "matchedTitle": "Chân trời cuối phố",
+    "matchedText": "Chân trời cuối phố",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b15": {
+    "lessonId": "tv-g4-t1-b15",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      63,
+      64,
+      65
+    ],
+    "matchedTitle": "Gặt chữ trên non",
+    "matchedText": "Gặt chữ trên non",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b16": {
+    "lessonId": "tv-g4-t1-b16",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      66,
+      67,
+      68,
+      69
+    ],
+    "matchedTitle": "Trước ngày xa quê",
+    "matchedText": "Trước ngày xa quê",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b17": {
+    "lessonId": "tv-g4-t1-b17",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      77,
+      78,
+      79,
+      80
+    ],
+    "matchedTitle": "Vẽ màu",
+    "matchedText": "Vẽ màu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b18": {
+    "lessonId": "tv-g4-t1-b18",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      81,
+      82,
+      83,
+      84
+    ],
+    "matchedTitle": "Đồng cỏ nở hoa",
+    "matchedText": "Đồng cỏ nở hoa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b19": {
+    "lessonId": "tv-g4-t1-b19",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      85,
+      86,
+      87,
+      88
+    ],
+    "matchedTitle": "Thanh âm của núi",
+    "matchedText": "Thanh âm của núi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b20": {
+    "lessonId": "tv-g4-t1-b20",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      89,
+      90,
+      91,
+      92
+    ],
+    "matchedTitle": "Bầu trời mùa thu",
+    "matchedText": "Bầu trời mùa thu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b21": {
+    "lessonId": "tv-g4-t1-b21",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      93,
+      94,
+      95,
+      96
+    ],
+    "matchedTitle": "Làm thỏ con bằng giấy",
+    "matchedText": "Làm thỏ con bằng giấy",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b22": {
+    "lessonId": "tv-g4-t1-b22",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      97,
+      98,
+      99,
+      100
+    ],
+    "matchedTitle": "Bức tường có nhiều phép lạ",
+    "matchedText": "Bức tường có nhiều phép lạ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b23": {
+    "lessonId": "tv-g4-t1-b23",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      101,
+      102,
+      103,
+      104
+    ],
+    "matchedTitle": "Bét-tô-ven và bản xô-nát Ánh trăng",
+    "matchedText": "Bét-tô-ven và bản xô-nát Ánh trăng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b24": {
+    "lessonId": "tv-g4-t1-b24",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      105,
+      106,
+      107,
+      108
+    ],
+    "matchedTitle": "Người tìm đường lên các vì sao",
+    "matchedText": "Người tìm đường lên các vì sao",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b25": {
+    "lessonId": "tv-g4-t1-b25",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      109,
+      110,
+      111,
+      112,
+      113
+    ],
+    "matchedTitle": "Bay cùng ước mơ",
+    "matchedText": "Bay cùng ước mơ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b26": {
+    "lessonId": "tv-g4-t1-b26",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      114,
+      115,
+      116,
+      117
+    ],
+    "matchedTitle": "Con trai người làm vườn",
+    "matchedText": "Con trai người làm vườn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b27": {
+    "lessonId": "tv-g4-t1-b27",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      118,
+      119,
+      120,
+      121
+    ],
+    "matchedTitle": "Nếu em có một khu vườn",
+    "matchedText": "Nếu em có một khu vườn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b28": {
+    "lessonId": "tv-g4-t1-b28",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      122,
+      123,
+      124
+    ],
+    "matchedTitle": "Bốn mùa mơ ước",
+    "matchedText": "Bốn mùa mơ ước",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b29": {
+    "lessonId": "tv-g4-t1-b29",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      125,
+      126,
+      127,
+      128
+    ],
+    "matchedTitle": "Ở Vương quốc Tương Lai",
+    "matchedText": "Ở Vương quốc Tương Lai",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b30": {
+    "lessonId": "tv-g4-t1-b30",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      129,
+      130,
+      131
+    ],
+    "matchedTitle": "Cánh chim nhỏ",
+    "matchedText": "Cánh chim nhỏ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b31": {
+    "lessonId": "tv-g4-t1-b31",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      132,
+      133,
+      134
+    ],
+    "matchedTitle": "Nếu chúng mình có phép lạ",
+    "matchedText": "Nếu chúng mình có phép lạ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t1-b32": {
+    "lessonId": "tv-g4-t1-b32",
+    "bookId": "tv-g4-t1",
+    "sourcePages": [
+      135,
+      136,
+      137,
+      138
+    ],
+    "matchedTitle": "Anh Ba",
+    "matchedText": "Anh Ba",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b12": {
+    "lessonId": "tv-g4-b12",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "matchedTitle": "Hải Thượng Lãn Ông",
+    "matchedText": "Hải Thượng Lãn Ông",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b13": {
+    "lessonId": "tv-g4-b13",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "matchedTitle": "Vệt phấn trên mặt bàn",
+    "matchedText": "Vệt phấn trên mặt bàn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b14": {
+    "lessonId": "tv-g4-b14",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "matchedTitle": "Ông Bụt đã đến",
+    "matchedText": "Ông Bụt đã đến",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b15": {
+    "lessonId": "tv-g4-b15",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "matchedTitle": "Quả ngọt cuối mùa",
+    "matchedText": "Quả ngọt cuối mùa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b16": {
+    "lessonId": "tv-g4-b16",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "matchedTitle": "Tờ báo tường của tôi",
+    "matchedText": "Tờ báo tường của tôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b17": {
+    "lessonId": "tv-g4-b17",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      28,
+      29,
+      30
+    ],
+    "matchedTitle": "Tiếng ru",
+    "matchedText": "Tiếng ru",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b18": {
+    "lessonId": "tv-g4-b18",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      31,
+      32,
+      33,
+      34
+    ],
+    "matchedTitle": "Con muốn làm một cái cây",
+    "matchedText": "Con muốn làm một cái cây",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b19": {
+    "lessonId": "tv-g4-b19",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "matchedTitle": "Trên khóm tre đầu ngõ",
+    "matchedText": "Trên khóm tre đầu ngõ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b20": {
+    "lessonId": "tv-g4-b20",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "matchedTitle": "Sự tích con Rồng cháu Tiên",
+    "matchedText": "Sự tích con Rồng cháu Tiên",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b21": {
+    "lessonId": "tv-g4-b21",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "matchedTitle": "Cảm xúc Trường Sa",
+    "matchedText": "Cảm xúc Trường Sa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-b22": {
+    "lessonId": "tv-g4-b22",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      48,
+      49,
+      50
+    ],
+    "matchedTitle": "Sáng tháng Năm",
+    "matchedText": "Sáng tháng Năm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b12": {
+    "lessonId": "tv-g4-t2-b12",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "matchedTitle": "Chàng trai làng Phù Ủng",
+    "matchedText": "Chàng trai làng Phù Ủng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b13": {
+    "lessonId": "tv-g4-t2-b13",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "matchedTitle": "Vườn của ông tôi",
+    "matchedText": "Vườn của ông tôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b14": {
+    "lessonId": "tv-g4-t2-b14",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      59,
+      60,
+      61,
+      62
+    ],
+    "matchedTitle": "Trong lời mẹ hát",
+    "matchedText": "Trong lời mẹ hát",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b15": {
+    "lessonId": "tv-g4-t2-b15",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      63,
+      64,
+      65,
+      66
+    ],
+    "matchedTitle": "Người thầy đầu tiên của bố tôi",
+    "matchedText": "Người thầy đầu tiên của bố tôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b16": {
+    "lessonId": "tv-g4-t2-b16",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      67,
+      68,
+      69
+    ],
+    "matchedTitle": "Ngựa biên phòng",
+    "matchedText": "Ngựa biên phòng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b17": {
+    "lessonId": "tv-g4-t2-b17",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "matchedTitle": "Cây đa quê hương",
+    "matchedText": "Cây đa quê hương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b18": {
+    "lessonId": "tv-g4-t2-b18",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      85,
+      86,
+      87,
+      88
+    ],
+    "matchedTitle": "Bước mùa xuân",
+    "matchedText": "Bước mùa xuân",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b19": {
+    "lessonId": "tv-g4-t2-b19",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      89,
+      90,
+      91,
+      92
+    ],
+    "matchedTitle": "Đi hội chùa Hương",
+    "matchedText": "Đi hội chùa Hương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b20": {
+    "lessonId": "tv-g4-t2-b20",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      93,
+      94,
+      95,
+      96,
+      97
+    ],
+    "matchedTitle": "Chiều ngoại ô",
+    "matchedText": "Chiều ngoại ô",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b21": {
+    "lessonId": "tv-g4-t2-b21",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      98,
+      99,
+      100,
+      101
+    ],
+    "matchedTitle": "Những cánh buồm",
+    "matchedText": "Những cánh buồm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b22": {
+    "lessonId": "tv-g4-t2-b22",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      102,
+      103,
+      104,
+      105
+    ],
+    "matchedTitle": "Cái cầu",
+    "matchedText": "Cái cầu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b23": {
+    "lessonId": "tv-g4-t2-b23",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      106,
+      107,
+      108
+    ],
+    "matchedTitle": "Đường đi Sa Pa",
+    "matchedText": "Đường đi Sa Pa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b24": {
+    "lessonId": "tv-g4-t2-b24",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      109,
+      110,
+      111,
+      112
+    ],
+    "matchedTitle": "Quê ngoại",
+    "matchedText": "Quê ngoại",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b25": {
+    "lessonId": "tv-g4-t2-b25",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      113,
+      114,
+      115,
+      116
+    ],
+    "matchedTitle": "Khu bảo tồn động vật hoang dã Ngô-rông-gô-rô",
+    "matchedText": "Khu bảo tồn động vật hoang dã Ngô-rông-gô-rô",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b26": {
+    "lessonId": "tv-g4-t2-b26",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      117,
+      118,
+      119
+    ],
+    "matchedTitle": "Ngôi nhà của yêu thương",
+    "matchedText": "Ngôi nhà của yêu thương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b27": {
+    "lessonId": "tv-g4-t2-b27",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      120,
+      121,
+      122
+    ],
+    "matchedTitle": "Băng tan",
+    "matchedText": "Băng tan",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b28": {
+    "lessonId": "tv-g4-t2-b28",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      123,
+      124,
+      125,
+      126
+    ],
+    "matchedTitle": "Chuyến du lịch thú vị",
+    "matchedText": "Chuyến du lịch thú vị",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b29": {
+    "lessonId": "tv-g4-t2-b29",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      127,
+      128,
+      129,
+      130
+    ],
+    "matchedTitle": "Lễ hội ở Nhật Bản",
+    "matchedText": "Lễ hội ở Nhật Bản",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g4-t2-b30": {
+    "lessonId": "tv-g4-t2-b30",
+    "bookId": "tv-g4-t2",
+    "sourcePages": [
+      131,
+      132,
+      133,
+      134
+    ],
+    "matchedTitle": "Ngày hội",
+    "matchedText": "Ngày hội",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b2": {
+    "lessonId": "tv-g5-b2",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "matchedTitle": "Cánh đồng hoa",
+    "matchedText": "Cánh đồng hoa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b3": {
+    "lessonId": "tv-g5-b3",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "matchedTitle": "Tuổi Ngựa",
+    "matchedText": "Tuổi Ngựa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b4": {
+    "lessonId": "tv-g5-b4",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "matchedTitle": "Nếu em có một khu vườn",
+    "matchedText": "Nếu em có một khu vườn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b5": {
+    "lessonId": "tv-g5-b5",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "matchedTitle": "Mùa vè",
+    "matchedText": "Mùa vè",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b6": {
+    "lessonId": "tv-g5-b6",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      28,
+      29,
+      30,
+      31
+    ],
+    "matchedTitle": "Kì diệu rừng xanh",
+    "matchedText": "Kì diệu rừng xanh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b7": {
+    "lessonId": "tv-g5-b7",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      32,
+      33,
+      34
+    ],
+    "matchedTitle": "Trước cổng Trời",
+    "matchedText": "Trước cổng Trời",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b9": {
+    "lessonId": "tv-g5-b9",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      39,
+      40,
+      41,
+      42
+    ],
+    "matchedTitle": "Tiếng đàn ba-la-lai-ca trên sông Đà",
+    "matchedText": "Tiếng đàn ba-la-lai-ca trên sông Đà",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b10": {
+    "lessonId": "tv-g5-b10",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "matchedTitle": "Bức tranh của em gái tôi",
+    "matchedText": "Bức tranh của em gái tôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b11": {
+    "lessonId": "tv-g5-b11",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "matchedTitle": "Bài ca về trái đất",
+    "matchedText": "Bài ca về trái đất",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b12": {
+    "lessonId": "tv-g5-b12",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      52,
+      53,
+      54,
+      55
+    ],
+    "matchedTitle": "Mầm non",
+    "matchedText": "Mầm non",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b13": {
+    "lessonId": "tv-g5-b13",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "matchedTitle": "Người công dân số Một",
+    "matchedText": "Người công dân số Một",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b14": {
+    "lessonId": "tv-g5-b14",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "matchedTitle": "Nhà tài trợ đặc biệt của Cách mạng",
+    "matchedText": "Nhà tài trợ đặc biệt của Cách mạng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b15": {
+    "lessonId": "tv-g5-t1-b15",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      64,
+      65,
+      66,
+      67
+    ],
+    "matchedTitle": "Những cánh buồm",
+    "matchedText": "Những cánh buồm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b16": {
+    "lessonId": "tv-g5-t1-b16",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      68,
+      69,
+      70,
+      71
+    ],
+    "matchedTitle": "Đất nước",
+    "matchedText": "Đất nước",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b17": {
+    "lessonId": "tv-g5-t1-b17",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      82,
+      83,
+      84,
+      85
+    ],
+    "matchedTitle": "Vịnh Hạ Long",
+    "matchedText": "Vịnh Hạ Long",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b18": {
+    "lessonId": "tv-g5-t1-b18",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      86,
+      87,
+      88,
+      89
+    ],
+    "matchedTitle": "Chuyện một khu vườn nguyên sinh",
+    "matchedText": "Chuyện một khu vườn nguyên sinh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b19": {
+    "lessonId": "tv-g5-t1-b19",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      90,
+      91,
+      92,
+      93
+    ],
+    "matchedTitle": "Trồng rừng ngập mặn",
+    "matchedText": "Trồng rừng ngập mặn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b20": {
+    "lessonId": "tv-g5-t1-b20",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      94,
+      95,
+      96,
+      97
+    ],
+    "matchedTitle": "Mùa thảo quả",
+    "matchedText": "Mùa thảo quả",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b21": {
+    "lessonId": "tv-g5-t1-b21",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      98,
+      99,
+      100,
+      101
+    ],
+    "matchedTitle": "Trường Sa",
+    "matchedText": "Trường Sa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b22": {
+    "lessonId": "tv-g5-t1-b22",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      102,
+      103,
+      104,
+      105
+    ],
+    "matchedTitle": "Cửa Tùng",
+    "matchedText": "Cửa Tùng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b23": {
+    "lessonId": "tv-g5-t1-b23",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      106,
+      107,
+      108,
+      109
+    ],
+    "matchedTitle": "Hành tinh xanh",
+    "matchedText": "Hành tinh xanh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b24": {
+    "lessonId": "tv-g5-t1-b24",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      110,
+      111,
+      112,
+      113
+    ],
+    "matchedTitle": "Người gác rừng tí hon",
+    "matchedText": "Người gác rừng tí hon",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b25": {
+    "lessonId": "tv-g5-t1-b25",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      114,
+      115,
+      116,
+      117
+    ],
+    "matchedTitle": "Rừng phương Nam",
+    "matchedText": "Rừng phương Nam",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b26": {
+    "lessonId": "tv-g5-t1-b26",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      118,
+      119,
+      120,
+      121
+    ],
+    "matchedTitle": "Chuỗi ngọc lam",
+    "matchedText": "Chuỗi ngọc lam",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b27": {
+    "lessonId": "tv-g5-t1-b27",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      122,
+      123,
+      124,
+      125
+    ],
+    "matchedTitle": "Hạt mầm ước mơ",
+    "matchedText": "Hạt mầm ước mơ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b28": {
+    "lessonId": "tv-g5-t1-b28",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      126,
+      127,
+      128,
+      129
+    ],
+    "matchedTitle": "Thầy thuốc như mẹ hiền",
+    "matchedText": "Thầy thuốc như mẹ hiền",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b29": {
+    "lessonId": "tv-g5-t1-b29",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      130,
+      131,
+      132,
+      133
+    ],
+    "matchedTitle": "Ngôi sao xa xôi",
+    "matchedText": "Ngôi sao xa xôi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b30": {
+    "lessonId": "tv-g5-t1-b30",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      134,
+      135,
+      136,
+      137
+    ],
+    "matchedTitle": "Bài học đầu tiên",
+    "matchedText": "Bài học đầu tiên",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b31": {
+    "lessonId": "tv-g5-t1-b31",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      138,
+      139,
+      140,
+      141
+    ],
+    "matchedTitle": "Khúc hát đồng dao",
+    "matchedText": "Khúc hát đồng dao",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t1-b32": {
+    "lessonId": "tv-g5-t1-b32",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      142,
+      143,
+      144,
+      145
+    ],
+    "matchedTitle": "Nụ cười thiên thần",
+    "matchedText": "Nụ cười thiên thần",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b15": {
+    "lessonId": "tv-g5-b15",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "matchedTitle": "Thái sư Trần Thủ Độ",
+    "matchedText": "Thái sư Trần Thủ Độ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b16": {
+    "lessonId": "tv-g5-b16",
+    "bookId": "tv-g5-t1",
+    "sourcePages": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "matchedTitle": "Nhà yêu nước Nguyễn Trung Trực",
+    "matchedText": "Nhà yêu nước Nguyễn Trung Trực",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b17": {
+    "lessonId": "tv-g5-b17",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "matchedTitle": "Lòng dân",
+    "matchedText": "Lòng dân",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b18": {
+    "lessonId": "tv-g5-b18",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      28,
+      29,
+      30,
+      31
+    ],
+    "matchedTitle": "Cao Bằng",
+    "matchedText": "Cao Bằng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b19": {
+    "lessonId": "tv-g5-b19",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      32,
+      33,
+      34
+    ],
+    "matchedTitle": "Hà Nội",
+    "matchedText": "Hà Nội",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b23": {
+    "lessonId": "tv-g5-b23",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      47,
+      48,
+      49,
+      50
+    ],
+    "matchedTitle": "Tranh làng Hồ",
+    "matchedText": "Tranh làng Hồ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b24": {
+    "lessonId": "tv-g5-b24",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "matchedTitle": "Đất Cà Mau",
+    "matchedText": "Đất Cà Mau",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b13": {
+    "lessonId": "tv-g5-t2-b13",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      55,
+      56,
+      57,
+      58
+    ],
+    "matchedTitle": "Phong cảnh đền Hùng",
+    "matchedText": "Phong cảnh đền Hùng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b14": {
+    "lessonId": "tv-g5-t2-b14",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      59,
+      60,
+      61,
+      62
+    ],
+    "matchedTitle": "Cửa sông",
+    "matchedText": "Cửa sông",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b15": {
+    "lessonId": "tv-g5-t2-b15",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      63,
+      64,
+      65,
+      66
+    ],
+    "matchedTitle": "Nghìn năm văn hiến",
+    "matchedText": "Nghìn năm văn hiến",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b16": {
+    "lessonId": "tv-g5-t2-b16",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      67,
+      68,
+      69
+    ],
+    "matchedTitle": "Sắc màu em yêu",
+    "matchedText": "Sắc màu em yêu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b17": {
+    "lessonId": "tv-g5-t2-b17",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      80,
+      81,
+      82,
+      83
+    ],
+    "matchedTitle": "Con gái",
+    "matchedText": "Con gái",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b18": {
+    "lessonId": "tv-g5-t2-b18",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "matchedTitle": "Thuần phục sư tử",
+    "matchedText": "Thuần phục sư tử",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b19": {
+    "lessonId": "tv-g5-t2-b19",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      88,
+      89,
+      90,
+      91
+    ],
+    "matchedTitle": "Tà áo dài Việt Nam",
+    "matchedText": "Tà áo dài Việt Nam",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b20": {
+    "lessonId": "tv-g5-t2-b20",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      92,
+      93,
+      94,
+      95
+    ],
+    "matchedTitle": "Chuyện một phát minh",
+    "matchedText": "Chuyện một phát minh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b21": {
+    "lessonId": "tv-g5-t2-b21",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      96,
+      97,
+      98,
+      99
+    ],
+    "matchedTitle": "Út Vịnh",
+    "matchedText": "Út Vịnh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b22": {
+    "lessonId": "tv-g5-t2-b22",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "matchedTitle": "Những người bạn tốt",
+    "matchedText": "Những người bạn tốt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b23": {
+    "lessonId": "tv-g5-t2-b23",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "matchedTitle": "Hộp thư mật",
+    "matchedText": "Hộp thư mật",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b24": {
+    "lessonId": "tv-g5-t2-b24",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      108,
+      109,
+      110,
+      111
+    ],
+    "matchedTitle": "Lớp học trên đường",
+    "matchedText": "Lớp học trên đường",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b25": {
+    "lessonId": "tv-g5-t2-b25",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      112,
+      113,
+      114,
+      115
+    ],
+    "matchedTitle": "Nếu chúng mình có phép lạ",
+    "matchedText": "Nếu chúng mình có phép lạ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b26": {
+    "lessonId": "tv-g5-t2-b26",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      116,
+      117,
+      118,
+      119
+    ],
+    "matchedTitle": "Tiếng rao đêm",
+    "matchedText": "Tiếng rao đêm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b27": {
+    "lessonId": "tv-g5-t2-b27",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      120,
+      121,
+      122,
+      123
+    ],
+    "matchedTitle": "Bầm ơi",
+    "matchedText": "Bầm ơi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b28": {
+    "lessonId": "tv-g5-t2-b28",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      124,
+      125,
+      126,
+      127
+    ],
+    "matchedTitle": "Một vụ đắm tàu",
+    "matchedText": "Một vụ đắm tàu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b29": {
+    "lessonId": "tv-g5-t2-b29",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      128,
+      129,
+      130,
+      131
+    ],
+    "matchedTitle": "Con sẻ",
+    "matchedText": "Con sẻ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b30": {
+    "lessonId": "tv-g5-t2-b30",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      132,
+      133,
+      134,
+      135
+    ],
+    "matchedTitle": "Những người bạn nhỏ",
+    "matchedText": "Những người bạn nhỏ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b17": {
+    "lessonId": "tv-g1-b17",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      46,
+      47
+    ],
+    "matchedTitle": "G g - Gi gi",
+    "matchedText": "G g - Gi gi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b18": {
+    "lessonId": "tv-g1-b18",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      48,
+      49
+    ],
+    "matchedTitle": "Gh gh - Nh nh",
+    "matchedText": "Gh gh - Nh nh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b19": {
+    "lessonId": "tv-g1-b19",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      50,
+      51
+    ],
+    "matchedTitle": "Ng ng - Ngh ngh",
+    "matchedText": "Ng ng - Ngh ngh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b20": {
+    "lessonId": "tv-g1-b20",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      52,
+      53
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b21": {
+    "lessonId": "tv-g1-t1-b21",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      54,
+      55
+    ],
+    "matchedTitle": "R r - S s",
+    "matchedText": "R r - S s",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b22": {
+    "lessonId": "tv-g1-t1-b22",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      56,
+      57
+    ],
+    "matchedTitle": "T t - Tr tr",
+    "matchedText": "T t - Tr tr",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b23": {
+    "lessonId": "tv-g1-t1-b23",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      58,
+      59
+    ],
+    "matchedTitle": "Th th - ia",
+    "matchedText": "Th th - ia",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b24": {
+    "lessonId": "tv-g1-t1-b24",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      60,
+      61
+    ],
+    "matchedTitle": "ua - ưa",
+    "matchedText": "ua - ưa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b25": {
+    "lessonId": "tv-g1-t1-b25",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      62,
+      63
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b26": {
+    "lessonId": "tv-g1-t1-b26",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      64,
+      65
+    ],
+    "matchedTitle": "Ph ph - Qu qu",
+    "matchedText": "Ph ph - Qu qu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b27": {
+    "lessonId": "tv-g1-t1-b27",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      66,
+      67
+    ],
+    "matchedTitle": "V v - X x",
+    "matchedText": "V v - X x",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b28": {
+    "lessonId": "tv-g1-t1-b28",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      68,
+      69
+    ],
+    "matchedTitle": "Y y",
+    "matchedText": "Y y",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b29": {
+    "lessonId": "tv-g1-t1-b29",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      70,
+      71
+    ],
+    "matchedTitle": "Luyện tập chính tả",
+    "matchedText": "Luyện tập chính tả",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b30": {
+    "lessonId": "tv-g1-t1-b30",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      72,
+      73
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b31": {
+    "lessonId": "tv-g1-t1-b31",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      74,
+      75
+    ],
+    "matchedTitle": "an - ăn - ân",
+    "matchedText": "an - ăn - ân",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b32": {
+    "lessonId": "tv-g1-t1-b32",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      76,
+      77
+    ],
+    "matchedTitle": "on - ôn - ơn",
+    "matchedText": "on - ôn - ơn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b33": {
+    "lessonId": "tv-g1-t1-b33",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      78,
+      79
+    ],
+    "matchedTitle": "en - ên - in - un",
+    "matchedText": "en - ên - in - un",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b34": {
+    "lessonId": "tv-g1-t1-b34",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      80,
+      81
+    ],
+    "matchedTitle": "am - ăm - âm",
+    "matchedText": "am - ăm - âm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b35": {
+    "lessonId": "tv-g1-t1-b35",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      82,
+      83
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b36": {
+    "lessonId": "tv-g1-t1-b36",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      84,
+      85
+    ],
+    "matchedTitle": "om - ôm - ơm",
+    "matchedText": "om - ôm - ơm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b37": {
+    "lessonId": "tv-g1-t1-b37",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      86,
+      87
+    ],
+    "matchedTitle": "em - êm - im - um",
+    "matchedText": "em - êm - im - um",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b38": {
+    "lessonId": "tv-g1-t1-b38",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      88,
+      89
+    ],
+    "matchedTitle": "ai - ay - ây",
+    "matchedText": "ai - ay - ây",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b39": {
+    "lessonId": "tv-g1-t1-b39",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      90,
+      91
+    ],
+    "matchedTitle": "oi - ôi - ơi",
+    "matchedText": "oi - ôi - ơi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b40": {
+    "lessonId": "tv-g1-t1-b40",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      92,
+      93
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b41": {
+    "lessonId": "tv-g1-t1-b41",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      94,
+      95
+    ],
+    "matchedTitle": "ui - ưi",
+    "matchedText": "ui - ưi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b42": {
+    "lessonId": "tv-g1-t1-b42",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      96,
+      97
+    ],
+    "matchedTitle": "ao - eo",
+    "matchedText": "ao - eo",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b43": {
+    "lessonId": "tv-g1-t1-b43",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      98,
+      99
+    ],
+    "matchedTitle": "au - âu - êu",
+    "matchedText": "au - âu - êu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b44": {
+    "lessonId": "tv-g1-t1-b44",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      100,
+      101
+    ],
+    "matchedTitle": "iu - ưu",
+    "matchedText": "iu - ưu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b45": {
+    "lessonId": "tv-g1-t1-b45",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      102,
+      103
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b46": {
+    "lessonId": "tv-g1-t1-b46",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      104,
+      105
+    ],
+    "matchedTitle": "ac - ăc - âc",
+    "matchedText": "ac - ăc - âc",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b47": {
+    "lessonId": "tv-g1-t1-b47",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      106,
+      107
+    ],
+    "matchedTitle": "oc - ôc - uc - ưc",
+    "matchedText": "oc - ôc - uc - ưc",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b48": {
+    "lessonId": "tv-g1-t1-b48",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      108,
+      109
+    ],
+    "matchedTitle": "at - ăt - ât",
+    "matchedText": "at - ăt - ât",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b49": {
+    "lessonId": "tv-g1-t1-b49",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      110,
+      111
+    ],
+    "matchedTitle": "ot - ôt - ơt",
+    "matchedText": "ot - ôt - ơt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b50": {
+    "lessonId": "tv-g1-t1-b50",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      112,
+      113
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b51": {
+    "lessonId": "tv-g1-t1-b51",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      114,
+      115
+    ],
+    "matchedTitle": "et - êt - it",
+    "matchedText": "et - êt - it",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b52": {
+    "lessonId": "tv-g1-t1-b52",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      116,
+      117
+    ],
+    "matchedTitle": "ut - ưt",
+    "matchedText": "ut - ưt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b53": {
+    "lessonId": "tv-g1-t1-b53",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      118,
+      119
+    ],
+    "matchedTitle": "ap - ăp - âp",
+    "matchedText": "ap - ăp - âp",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b54": {
+    "lessonId": "tv-g1-t1-b54",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      120,
+      121
+    ],
+    "matchedTitle": "op - ôp - ơp",
+    "matchedText": "op - ôp - ơp",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b55": {
+    "lessonId": "tv-g1-t1-b55",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      122,
+      123
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b56": {
+    "lessonId": "tv-g1-t1-b56",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      124,
+      125
+    ],
+    "matchedTitle": "ep - êp - ip - up",
+    "matchedText": "ep - êp - ip - up",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b57": {
+    "lessonId": "tv-g1-t1-b57",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      126,
+      127
+    ],
+    "matchedTitle": "anh - ênh - inh",
+    "matchedText": "anh - ênh - inh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b58": {
+    "lessonId": "tv-g1-t1-b58",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      128,
+      129
+    ],
+    "matchedTitle": "ach - êch - ich",
+    "matchedText": "ach - êch - ich",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b59": {
+    "lessonId": "tv-g1-t1-b59",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      130,
+      131
+    ],
+    "matchedTitle": "ang - ăng - âng",
+    "matchedText": "ang - ăng - âng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b60": {
+    "lessonId": "tv-g1-t1-b60",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      132,
+      133
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b61": {
+    "lessonId": "tv-g1-t1-b61",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      134,
+      135
+    ],
+    "matchedTitle": "ong - ông - ung - ưng",
+    "matchedText": "ong - ông - ung - ưng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b62": {
+    "lessonId": "tv-g1-t1-b62",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      136,
+      137
+    ],
+    "matchedTitle": "iêc - iên - iêp",
+    "matchedText": "iêc - iên - iêp",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b63": {
+    "lessonId": "tv-g1-t1-b63",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      138,
+      139
+    ],
+    "matchedTitle": "iêng - iêm - yên",
+    "matchedText": "iêng - iêm - yên",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b64": {
+    "lessonId": "tv-g1-t1-b64",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      140,
+      141
+    ],
+    "matchedTitle": "iêt - iêu - yêu",
+    "matchedText": "iêt - iêu - yêu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b65": {
+    "lessonId": "tv-g1-t1-b65",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      142,
+      143
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b66": {
+    "lessonId": "tv-g1-t1-b66",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      144,
+      145
+    ],
+    "matchedTitle": "uôi - uôm",
+    "matchedText": "uôi - uôm",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b67": {
+    "lessonId": "tv-g1-t1-b67",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      146,
+      147
+    ],
+    "matchedTitle": "uôc - uôt",
+    "matchedText": "uôc - uôt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b68": {
+    "lessonId": "tv-g1-t1-b68",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      148,
+      149
+    ],
+    "matchedTitle": "uôn - uông",
+    "matchedText": "uôn - uông",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b69": {
+    "lessonId": "tv-g1-t1-b69",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      150,
+      151
+    ],
+    "matchedTitle": "ươi - ươu",
+    "matchedText": "ươi - ươu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b70": {
+    "lessonId": "tv-g1-t1-b70",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      152,
+      153
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b71": {
+    "lessonId": "tv-g1-t1-b71",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      154,
+      155
+    ],
+    "matchedTitle": "ươc - ươt",
+    "matchedText": "ươc - ươt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b72": {
+    "lessonId": "tv-g1-t1-b72",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      156,
+      157
+    ],
+    "matchedTitle": "ươm - ươp",
+    "matchedText": "ươm - ươp",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b73": {
+    "lessonId": "tv-g1-t1-b73",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      158,
+      159
+    ],
+    "matchedTitle": "ươn - ương",
+    "matchedText": "ươn - ương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b74": {
+    "lessonId": "tv-g1-t1-b74",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      160,
+      161
+    ],
+    "matchedTitle": "oa - oe",
+    "matchedText": "oa - oe",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b75": {
+    "lessonId": "tv-g1-t1-b75",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      162,
+      163
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b76": {
+    "lessonId": "tv-g1-t1-b76",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      164,
+      165
+    ],
+    "matchedTitle": "oan - oăn - oat - oăt",
+    "matchedText": "oan - oăn - oat - oăt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b77": {
+    "lessonId": "tv-g1-t1-b77",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      166,
+      167
+    ],
+    "matchedTitle": "oai - uê - uy",
+    "matchedText": "oai - uê - uy",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b78": {
+    "lessonId": "tv-g1-t1-b78",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      168,
+      169
+    ],
+    "matchedTitle": "uân - uât",
+    "matchedText": "uân - uât",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b79": {
+    "lessonId": "tv-g1-t1-b79",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      170,
+      171
+    ],
+    "matchedTitle": "uyên - uyêt",
+    "matchedText": "uyên - uyêt",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b80": {
+    "lessonId": "tv-g1-t1-b80",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      172,
+      173
+    ],
+    "matchedTitle": "Ôn tập và kể chuyện",
+    "matchedText": "Ôn tập và kể chuyện",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b81": {
+    "lessonId": "tv-g1-t1-b81",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      174,
+      175
+    ],
+    "matchedTitle": "Ôn tập",
+    "matchedText": "Ôn tập",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b82": {
+    "lessonId": "tv-g1-t1-b82",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      176,
+      177
+    ],
+    "matchedTitle": "Ôn tập",
+    "matchedText": "Ôn tập",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t1-b83": {
+    "lessonId": "tv-g1-t1-b83",
+    "bookId": "tv-g1-t1",
+    "sourcePages": [
+      178,
+      179,
+      180,
+      181
+    ],
+    "matchedTitle": "Voi, hổ và khỉ",
+    "matchedText": "Voi, hổ và khỉ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b21": {
+    "lessonId": "tv-g1-b21",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "matchedTitle": "Tôi là học sinh lớp 1",
+    "matchedText": "Tôi là học sinh lớp 1",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b26": {
+    "lessonId": "tv-g1-b26",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "matchedTitle": "Nụ hôn trên bàn tay",
+    "matchedText": "Nụ hôn trên bàn tay",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b27": {
+    "lessonId": "tv-g1-b27",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      28,
+      29
+    ],
+    "matchedTitle": "Làm anh",
+    "matchedText": "Làm anh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b29": {
+    "lessonId": "tv-g1-b29",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      34,
+      35
+    ],
+    "matchedTitle": "Quạt cho bà ngủ",
+    "matchedText": "Quạt cho bà ngủ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-b30": {
+    "lessonId": "tv-g1-b30",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "matchedTitle": "Bữa cơm gia đình",
+    "matchedText": "Bữa cơm gia đình",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b11": {
+    "lessonId": "tv-g1-t2-b11",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "matchedTitle": "Ngôi nhà",
+    "matchedText": "Ngôi nhà",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b12": {
+    "lessonId": "tv-g1-t2-b12",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "matchedTitle": "Tôi đi học",
+    "matchedText": "Tôi đi học",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b13": {
+    "lessonId": "tv-g1-t2-b13",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      48,
+      49
+    ],
+    "matchedTitle": "Đi học",
+    "matchedText": "Đi học",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b14": {
+    "lessonId": "tv-g1-t2-b14",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      50,
+      51,
+      52,
+      53
+    ],
+    "matchedTitle": "Hoa yêu thương",
+    "matchedText": "Hoa yêu thương",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b15": {
+    "lessonId": "tv-g1-t2-b15",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      54,
+      55
+    ],
+    "matchedTitle": "Cây bàng và lớp học",
+    "matchedText": "Cây bàng và lớp học",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b16": {
+    "lessonId": "tv-g1-t2-b16",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      56,
+      57,
+      58,
+      59
+    ],
+    "matchedTitle": "Bác trống trường",
+    "matchedText": "Bác trống trường",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b17": {
+    "lessonId": "tv-g1-t2-b17",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      60,
+      61,
+      62,
+      63
+    ],
+    "matchedTitle": "Giờ ra chơi",
+    "matchedText": "Giờ ra chơi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b18": {
+    "lessonId": "tv-g1-t2-b18",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      64,
+      65,
+      66,
+      67
+    ],
+    "matchedTitle": "Rửa tay trước khi ăn",
+    "matchedText": "Rửa tay trước khi ăn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b19": {
+    "lessonId": "tv-g1-t2-b19",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      68,
+      69
+    ],
+    "matchedTitle": "Lời chào đi trước",
+    "matchedText": "Lời chào đi trước",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b20": {
+    "lessonId": "tv-g1-t2-b20",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      70,
+      71,
+      72,
+      73
+    ],
+    "matchedTitle": "Khi mẹ vắng nhà",
+    "matchedText": "Khi mẹ vắng nhà",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b21": {
+    "lessonId": "tv-g1-t2-b21",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      74,
+      75,
+      76,
+      77
+    ],
+    "matchedTitle": "Nếu không may bị lạc",
+    "matchedText": "Nếu không may bị lạc",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b22": {
+    "lessonId": "tv-g1-t2-b22",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      78,
+      79,
+      80,
+      81,
+      82,
+      83
+    ],
+    "matchedTitle": "Đèn giao thông",
+    "matchedText": "Đèn giao thông",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b23": {
+    "lessonId": "tv-g1-t2-b23",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "matchedTitle": "Kiến và chim bồ câu",
+    "matchedText": "Kiến và chim bồ câu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b24": {
+    "lessonId": "tv-g1-t2-b24",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      88,
+      89
+    ],
+    "matchedTitle": "Câu chuyện của rễ",
+    "matchedText": "Câu chuyện của rễ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b25": {
+    "lessonId": "tv-g1-t2-b25",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      90,
+      91,
+      92,
+      93
+    ],
+    "matchedTitle": "Câu hỏi của sói",
+    "matchedText": "Câu hỏi của sói",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b26": {
+    "lessonId": "tv-g1-t2-b26",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      94,
+      95,
+      96,
+      97
+    ],
+    "matchedTitle": "Chú bé chăn cừu",
+    "matchedText": "Chú bé chăn cừu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b27": {
+    "lessonId": "tv-g1-t2-b27",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "matchedTitle": "Tiếng vọng của núi",
+    "matchedText": "Tiếng vọng của núi",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b28": {
+    "lessonId": "tv-g1-t2-b28",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "matchedTitle": "Loài chim của biển cả",
+    "matchedText": "Loài chim của biển cả",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b29": {
+    "lessonId": "tv-g1-t2-b29",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      108,
+      109
+    ],
+    "matchedTitle": "Bảy sắc cầu vồng",
+    "matchedText": "Bảy sắc cầu vồng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b30": {
+    "lessonId": "tv-g1-t2-b30",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      110,
+      111,
+      112,
+      113
+    ],
+    "matchedTitle": "Chúa tể rừng xanh",
+    "matchedText": "Chúa tể rừng xanh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b31": {
+    "lessonId": "tv-g1-t2-b31",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      114,
+      115,
+      116,
+      117
+    ],
+    "matchedTitle": "Cuộc thi tài năng rừng xanh",
+    "matchedText": "Cuộc thi tài năng rừng xanh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b32": {
+    "lessonId": "tv-g1-t2-b32",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      118,
+      119,
+      120,
+      121,
+      122,
+      123
+    ],
+    "matchedTitle": "Cây liễu dẻo dai",
+    "matchedText": "Cây liễu dẻo dai",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b33": {
+    "lessonId": "tv-g1-t2-b33",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      124,
+      125
+    ],
+    "matchedTitle": "Tia nắng đi đâu?",
+    "matchedText": "Tia nắng đi đâu?",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b34": {
+    "lessonId": "tv-g1-t2-b34",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      126,
+      127
+    ],
+    "matchedTitle": "Trong giấc mơ buổi sáng",
+    "matchedText": "Trong giấc mơ buổi sáng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b35": {
+    "lessonId": "tv-g1-t2-b35",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      128,
+      129,
+      130,
+      131
+    ],
+    "matchedTitle": "Ngày mới bắt đầu",
+    "matchedText": "Ngày mới bắt đầu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b36": {
+    "lessonId": "tv-g1-t2-b36",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      132,
+      133
+    ],
+    "matchedTitle": "Hỏi mẹ",
+    "matchedText": "Hỏi mẹ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b37": {
+    "lessonId": "tv-g1-t2-b37",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      134,
+      135,
+      136,
+      137
+    ],
+    "matchedTitle": "Những cánh cò",
+    "matchedText": "Những cánh cò",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b38": {
+    "lessonId": "tv-g1-t2-b38",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      138,
+      139
+    ],
+    "matchedTitle": "Buổi trưa hè",
+    "matchedText": "Buổi trưa hè",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b39": {
+    "lessonId": "tv-g1-t2-b39",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      140,
+      141,
+      142,
+      143
+    ],
+    "matchedTitle": "Hoa phượng",
+    "matchedText": "Hoa phượng",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b40": {
+    "lessonId": "tv-g1-t2-b40",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      144,
+      145,
+      146,
+      147
+    ],
+    "matchedTitle": "Cậu bé thông minh",
+    "matchedText": "Cậu bé thông minh",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b41": {
+    "lessonId": "tv-g1-t2-b41",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      148,
+      149,
+      150,
+      151
+    ],
+    "matchedTitle": "Lính cứu hoả",
+    "matchedText": "Lính cứu hoả",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b42": {
+    "lessonId": "tv-g1-t2-b42",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      152,
+      153
+    ],
+    "matchedTitle": "Lớn lên bạn làm gì?",
+    "matchedText": "Lớn lên bạn làm gì?",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b43": {
+    "lessonId": "tv-g1-t2-b43",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      154,
+      155
+    ],
+    "matchedTitle": "Ruộng bậc thang ở Sa Pa",
+    "matchedText": "Ruộng bậc thang ở Sa Pa",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b44": {
+    "lessonId": "tv-g1-t2-b44",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      156,
+      157
+    ],
+    "matchedTitle": "Nhớ ơn",
+    "matchedText": "Nhớ ơn",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g1-t2-b45": {
+    "lessonId": "tv-g1-t2-b45",
+    "bookId": "tv-g1-t2",
+    "sourcePages": [
+      158,
+      159,
+      160,
+      161
+    ],
+    "matchedTitle": "Du lịch biển Việt Nam",
+    "matchedText": "Du lịch biển Việt Nam",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-b25": {
+    "lessonId": "tv-g5-b25",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "matchedTitle": "Hội thổi cơm thi ở Đồng Vân",
+    "matchedText": "Hội thổi cơm thi ở Đồng Vân",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b10": {
+    "lessonId": "tv-g5-t2-b10",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "matchedTitle": "Những búp chè trên cây cổ thụ",
+    "matchedText": "Những búp chè trên cây cổ thụ",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b11": {
+    "lessonId": "tv-g5-t2-b11",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      53,
+      54,
+      55,
+      56
+    ],
+    "matchedTitle": "Hương cốm mùa thu",
+    "matchedText": "Hương cốm mùa thu",
+    "confidence": 1,
+    "status": "visually_reviewed"
+  },
+  "tv-g5-t2-b12": {
+    "lessonId": "tv-g5-t2-b12",
+    "bookId": "tv-g5-t2",
+    "sourcePages": [
+      57,
+      58,
+      59,
+      60,
+      61
+    ],
+    "matchedTitle": "Vũ điệu trên nền thổ cẩm",
+    "matchedText": "Vũ điệu trên nền thổ cẩm",
+    "confidence": 1,
+    "status": "visually_reviewed"
   }
 }
