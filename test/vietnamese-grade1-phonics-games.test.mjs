@@ -70,11 +70,26 @@ describe('Tiếng Việt 1 Tập 1 - Phonics Mini-Game Verification Test', () =>
     assert.ok(b2);
     assert.equal(b2.targetLetters[0], 'b');
     assert.equal(b2.stages[0].gameType, 'letter_pick');
-    assert.equal(b2.stages[1].gameType, 'letter_assemble');
+    assert.equal(b2.stages[1].gameType, 'bubble_pop');
 
     // 3. Bài 5: Ôn tập & Kể chuyện
     const b5 = GRADE_1_PHONICS_GAMES['tv-g1-b5'];
     assert.ok(b5);
     assert.equal(b5.stages[0].gameType, 'unit_review');
+
+    // 4. Bài 13: U u - Ư ư (Kiểm tra chính xác chữ u, ư theo đúng phản ánh của người dùng)
+    const b13 = GRADE_1_PHONICS_GAMES['tv-g1-b13'];
+    assert.ok(b13, 'tv-g1-b13 must exist');
+    assert.deepEqual(b13.targetLetters, ['u', 'ư']);
+    assert.ok(b13.stages[0].instruction.includes('u'));
+    assert.equal(b13.stages[0].targetSoundOrLetter, 'u');
+    assert.equal(b13.stages[0].options[0].label, 'u');
+
+    // 5. Kiểm tra getPhonicsGameForLesson fallback theo tiêu đề
+    const getPhonicsGameForLesson = phonicsData.getPhonicsGameForLesson;
+    const dynamicGame = getPhonicsGameForLesson({ id: 'custom-lesson-id', title: 'Bài 13: U u - Ư ư' });
+    assert.ok(dynamicGame);
+    assert.deepEqual(dynamicGame.targetLetters, ['u', 'ư']);
+    assert.ok(dynamicGame.stages[0].instruction.includes('u'));
   });
 });

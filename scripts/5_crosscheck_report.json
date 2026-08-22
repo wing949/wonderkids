@@ -4,215 +4,1545 @@
   "check1_failed": [],
   "check2_passed": 376,
   "check2_failed": [],
-  "check3_passed": 376,
-  "check3_failed": [],
-  "check4_passed": 376,
-  "check4_failed": [],
-  "check5_passed": 11,
-  "check5_failed": [
+  "check3_passed": 0,
+  "check3_failed": [
+    {
+      "lessonId": "tv-g1-b1",
+      "reason": "sourceHash không khớp trang sách (be07320fca08b67bb91738178517a1c8678b4e1d17886adb493b3366d9924bca vs b4ca5b87d271108f19cbb8d9df514007551d95dd234f2dffb03ea86d6a5771fd)"
+    },
+    {
+      "lessonId": "tv-g1-b2",
+      "reason": "sourceHash không khớp trang sách (39b3406f1a71ca5fe965922789b0e6154ec5ed2140581a12a27ef258995b95b1 vs b4faed820eed836b6dce42afdd185d102eb136c83fee8f501ddfa92410ed7936)"
+    },
+    {
+      "lessonId": "tv-g1-b3",
+      "reason": "sourceHash không khớp trang sách (9da983faeff066c3adad8f810b4f8081e11b0463057f9b1b1aa9e2eabee0bed9 vs 9aa2f3ea0c7d65d799165a661e2ee64a505361c31d8258c15358e8b7f6f2b5a6)"
+    },
+    {
+      "lessonId": "tv-g1-b4",
+      "reason": "sourceHash không khớp trang sách (1b112bb3ed0e35dcb03a679c39abaeb82ba807a8c8576ed462b1457ff22f6b91 vs 8ca0d523842bc92f3b98fe37aa7cb0dec62c0af61f4a3f3cb47896da4b45a60c)"
+    },
+    {
+      "lessonId": "tv-g1-b5",
+      "reason": "sourceHash không khớp trang sách (799cfa5b4b06791eead3eb58de4c4a7f4bf9033665db17a76dfcef73e6fd824d vs b4764d403353f5970bf108e5009f81010c188c1038f6d922e92674623fca4fe9)"
+    },
+    {
+      "lessonId": "tv-g1-b6",
+      "reason": "sourceHash không khớp trang sách (480def381f8bf3249b0742cb4760d91edd59c308856b4a3eb2954698345f6b27 vs 31a51de915c7d23ed9ac3142ff798069ebe03771efa9093fd35bb8d290e732ea)"
+    },
+    {
+      "lessonId": "tv-g1-b7",
+      "reason": "sourceHash không khớp trang sách (2b79262750e50e4fdfc9cf027993f4dff1977418f2091ddf622d260be999464c vs d93101112a2fd1e5701f00a11ee43c2a7d68146cbeeb06e738a5144df4c2a493)"
+    },
+    {
+      "lessonId": "tv-g1-b8",
+      "reason": "sourceHash không khớp trang sách (b249e41b2f03ed0039499f959a4a28d02250f356351a88d9f1969baa7a83ac9d vs 2d87d0ff1ffef4937c29539741b6c9ab90201373a83512790dc6a472f9b1262d)"
+    },
+    {
+      "lessonId": "tv-g1-b9",
+      "reason": "sourceHash không khớp trang sách (4007c02361331fb4f8e21110b0c6e7973c4e52a3471c139fc5756bf42de97369 vs 661cc14364a1ca3289864fff3335e304700d3d4afbc954a5c80f196f8865d709)"
+    },
+    {
+      "lessonId": "tv-g1-b10",
+      "reason": "sourceHash không khớp trang sách (8da8cbbc39baf06f9fac7ce2baa23835d82fd9c6b09aa8ec05abdb89ae360120 vs f51e4edaea970b81410b9b82f3993708787da0f22f28ca736509223851f2ca61)"
+    },
+    {
+      "lessonId": "tv-g1-b11",
+      "reason": "sourceHash không khớp trang sách (0fa3a0384185b927b524923aa8fa5038f8619ef0c261a83f2b3d974896886ad3 vs c6c69626292e9c3da4a51b08cf560c889b098060ea892f12fb57616d4e2caaf5)"
+    },
     {
       "lessonId": "tv-g1-b12",
-      "reason": "Audio hash không khớp transcript"
+      "reason": "sourceHash không khớp trang sách (2a28428e198af18287595b5900e50be2f86eb3d3ce31f8c88e2255f1e6176da1 vs 8680dd7f6280e963d48ada70210d2663046ad0afc263ec323a11c4f11a71dd39)"
     },
     {
       "lessonId": "tv-g1-b13",
-      "reason": "Audio hash không khớp transcript"
+      "reason": "sourceHash không khớp trang sách (a9f4d6c58ba0a61f0250b9e73ed2c18d3906aa6d17fb5ed6f9a5cbb34da06ba7 vs 78cd007afe103918d83b4dc08c997fb2111f0634d43df60515d8e6fecd3c7056)"
     },
     {
       "lessonId": "tv-g1-b14",
-      "reason": "Audio hash không khớp transcript"
+      "reason": "sourceHash không khớp trang sách (0a3fc932b511d94599a8c6ca34456cf741176ee74a29a36809b37b7f0d7522d9 vs 09884540f1eacaec0d1ff83161db7e55db9389897f7fd307d177ce91754c114d)"
     },
     {
       "lessonId": "tv-g1-b15",
-      "reason": "Audio hash không khớp transcript"
+      "reason": "sourceHash không khớp trang sách (bb2cb7639f923da211aeeb5aeb3b4b6f48909db91964d23326c1ecd268e899d6 vs 1a66ae301f3f5cdc6fc49c570ac84408d47aec9e7b9746209f1be5c5c5dac8aa)"
     },
     {
       "lessonId": "tv-g1-b16",
-      "reason": "Audio hash không khớp transcript"
+      "reason": "sourceHash không khớp trang sách (4a3a2a956c13e9d96f22ba37f7aaa28e2538381f8fc485c65f093c7eecaf2839 vs 14e90df366778c24c72820ac78e98a1f2055561d365a4ca0a6de98c95ed30728)"
     },
     {
       "lessonId": "tv-g1-b17",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (8f577bac934287d25c0ed8b6fa26873ac8e9d06188141c1d6af9f0b34224911d vs 244536d95a457a7d19aa1863699dc213a8d97370c2ff3adf716b8f47775016f6)"
     },
     {
       "lessonId": "tv-g1-b18",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (e9a0f70f17334ef801c8b9c2c9cdf12ec6c57cc8751d8dd796b7caf04cd9faf7 vs 1690a8d3b91d365547ea47d6cde39b77bced680a713181903abe5fc34a12a707)"
     },
     {
       "lessonId": "tv-g1-b19",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (f18a36b8915494bbb09cf596f58b985dc49cbf39d4816f0d21335a009298d773 vs 4960bda6590cf68be5d0a59a63dfe5f8db1d56d13415986837c25d9ba3908fd5)"
     },
     {
       "lessonId": "tv-g1-b20",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (e21077f23558024713464241442c8c2ae5f93e50bf85079685865ddff73c8639 vs 78f7d9215c6c14d73382b214f4ff3c3108427718fd7f24ee5fc6d5972b59a08a)"
     },
     {
       "lessonId": "tv-g1-t1-b21",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (5359f079306a60902ca75dfbd19f5c99546311f25b4bed1980b65cb8a3791af2 vs d8ec6a2df9ef93e8f85251087ec1623ca81dd89754fb1a6baba0dc2061b17db6)"
     },
     {
       "lessonId": "tv-g1-t1-b22",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (eb03c2ae3740908167e9f1284083e0cd7129cd964a6a9ddd5b885a3fdaee0fe9 vs f8670886c46c146c5f95e86c17097e3daea4882bdc23c4b575d2c7fde5e3c8b0)"
     },
     {
       "lessonId": "tv-g1-t1-b23",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (9ecc381aef0fbaca0a2692a41a3bcd2a803dc9abb0e4c1883a88fd9b924cabba vs 98f5159dd74bfda53a5c67145b2dc0040042bfbf40a50e5140041944b29a8ce1)"
     },
     {
       "lessonId": "tv-g1-t1-b24",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (ed28017c51cddbd0f3284c1433f5fbe47e42eedec25421c6afeefdaaa46600aa vs eb7b84cea8430d6e21d2191794e8b2850defe83468ded3ad2449682b2380489c)"
     },
     {
       "lessonId": "tv-g1-t1-b25",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (f50bd1c41e4c638150f477a5d25286d7eea68dbda2b06642702021e7767198e8 vs 87205cbb8060c90f7a8eb249641342105f8698a1eeb77eea26f60bb827f0de48)"
     },
     {
       "lessonId": "tv-g1-t1-b26",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (4b720779b475baf05ab46ee4714187ff06ceac2edee92b3b41ac7c03404b2e7c vs d51a6ab65e94d8d4ee5c6baa43c945a83fa9b2a28eb61c04a82938893f444d3c)"
     },
     {
       "lessonId": "tv-g1-t1-b27",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (a4cd3fe2fcbfc4976b0cf933688cc13a61992cbe3ced9e3e19bd904215ab2ca8 vs 904567f17589d829d7f3bed8009943134c281e60399c3c33a08f4666284e2df6)"
     },
     {
       "lessonId": "tv-g1-t1-b28",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (dcea0e7b979789da8c22defbd175bd07ec9e0df5fc97812ee4a753f445e0a92d vs 893d83ee8419e9b8a47fa489ad3989f95c758c040ccb93e6a8652ec0635324a5)"
     },
     {
       "lessonId": "tv-g1-t1-b29",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (aa7fdbf57fa2bae041948bcced23ceb68c84f067302662ad90084400ce7ff624 vs 22cd79751e56c3efaf9205c3cc948ada834c88c283b94444838f054cc250c77a)"
     },
     {
       "lessonId": "tv-g1-t1-b30",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (cf00031095f1f440e443f73820511d6053d9308a6a2569b8a42bbb849c52c8f3 vs 4266594d9a6a4a5841d20897de679b5b57ab6a9907e62c6f27470dc27872552a)"
     },
     {
       "lessonId": "tv-g1-t1-b31",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (aec6782351618d185c56667a1106d64a248e27cbf19ae6273e5d09247066df9b vs cabceeedf51b2c8da8ef42768a3746480a20de5143730241d11da228880c71a7)"
     },
     {
       "lessonId": "tv-g1-t1-b32",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (8877d0701d9d1a9ca0437b785a71804446bcb9c35c5a276de597078f6b78f021 vs 4186a6dca85418a40912dddc37b65384bcec30e2794d6fa5b2dd924840facf3d)"
     },
     {
       "lessonId": "tv-g1-t1-b33",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (479adea107c953e907d57c1fc1fa5c5f7d0c39d92b9d5729ac9a6f82905edca0 vs 51363eb798b453e9032495a0bb7bc2ba5894e3fd5b138454b047df0f4c2401f6)"
     },
     {
       "lessonId": "tv-g1-t1-b34",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (23a0af461eeb3fa5f305dfd3bfa5e69ac51d2d42443692727d2e59b71bc2e413 vs 46af1d877f27b0c657594b43c40ee939fb9d3fab47438dbcd12443f3e139c991)"
     },
     {
       "lessonId": "tv-g1-t1-b35",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (21d9952e0339e4ba57a52baa4deaf6756ac9ed4649b43b8721d3e00c99c8f813 vs fdbdf4c9aed6ad56684f7371f651587992f527c19fcc59ae5cfb9c8dd77c016a)"
     },
     {
       "lessonId": "tv-g1-t1-b36",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (dd8b00cdf35ae6d18a0dabafeda519b9f08cf81fb8218d536c85b0f07d658f29 vs a013ec619c8afd80d944fd2d544d20a267473224c3b69f955e5074676668a7f5)"
     },
     {
       "lessonId": "tv-g1-t1-b37",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (7080c178c640354930bd87f24775f43ad6054f557b8b6f38897701a0d0acd84d vs 7d9a034065d4baac5b0f83e089b85acc13aa69414801b442a90b8b8b212fb0d6)"
     },
     {
       "lessonId": "tv-g1-t1-b38",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (944d7816d542ea3333eddf984a2969abc2ffac2cad408fcd6d9f8277809966d8 vs 144b5b396d6ea3d1afd57a108dee3034e3cb54e57a03439d8a884b1848699e91)"
     },
     {
       "lessonId": "tv-g1-t1-b39",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (e0c2ba71f237360078d2a795f82a1bd60724faae1fa3d10afda6d760663d44bf vs 587f8dfcb3a4bff4df9aecf434e1bf74765ca71cd86e203de6d1b8e6e0ea730a)"
     },
     {
       "lessonId": "tv-g1-t1-b40",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (e5883e1e3165c033e677de85a5bcdc1ed9b60a62988b09a7df734d477fb920f0 vs 10262d22935c53ccc54d76c052ce2833f3cec80302a3019e76be22564fd7e50b)"
     },
     {
       "lessonId": "tv-g1-t1-b41",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (bec717a81deb64c92e6f57d3faef0e4221491420fabd2c5c6b3ef92c02b3216d vs b536b7a2d295065143ced42dc5f70bf227d5e1caecf4f7481b87e76a4ef6d837)"
     },
     {
       "lessonId": "tv-g1-t1-b42",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (29cab73ea7ba2d5a236ea92d6077d122a5fbb91114ffcf02ac3cf488ad366df4 vs a1ed4bc7a875842ebb6ec60b7463439a41b5426c874f618c8f3b4709c00302c5)"
     },
     {
       "lessonId": "tv-g1-t1-b43",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (4a05d467957beddfab73a2b0316fb822f9347b804dc11dbc812ee45a6728e189 vs c052e533e852ae04134cface6fababfc75514d1a4e15f0e3aed00c32ae2b6a8d)"
     },
     {
       "lessonId": "tv-g1-t1-b44",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (b3f4a2faec9642a489f1adcf4449a60c393d772191be40c6f23829e38fafdadc vs c21f4a344ad0d88d1a2505f4f9bd38a42541a956f26b68490a0e2707782b6e5d)"
     },
     {
       "lessonId": "tv-g1-t1-b45",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (1cfd3bef22c468280ec57c76a0135975298d692d6713adda21662f0dc6291785 vs 8c7beb59524ab03cf9618332ca58ea1a6eb79565c16cba53b7bae12046cd4b3d)"
     },
     {
       "lessonId": "tv-g1-t1-b46",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (a1e44aa9b9272eb9db9e1540f578b48d6bf5864874b247f75954e3bbe11d9f1b vs 713e362508c09a960a179fce25b82e414ba31bd710f004db3fb5a9e8f44aed77)"
     },
     {
       "lessonId": "tv-g1-t1-b47",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (07e084a61122881f584d6e7ad699b3e00e00bcbf150a9faf997a499772fff507 vs 2342c232b029df5bb240f439e5d156a6d19ffb054648b1588e2195a1e0c3088c)"
     },
     {
       "lessonId": "tv-g1-t1-b48",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (0192ff48960f119c1f94223e72b1ab6535efdc2367621c075af6cc319a069da4 vs bbefd0c7a1c240ec577e186f4b2b650f8f9de07c0523b39bff26dd58508c0d42)"
     },
     {
       "lessonId": "tv-g1-t1-b49",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (8485545e3753e7a55119fb098cac2e285a8f7449fb2538facdcdf7cd0a25f390 vs 00479a87321487339d20532dcce1b20389677736ebd7d7c110528423d8193980)"
     },
     {
       "lessonId": "tv-g1-t1-b50",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (60877bf1729dd2237b908ccd5b0cc55cfb1c1effe8b951d40758c9fafc50dc72 vs dafd15a3d045225ef343daaabf454f461f899d02c38d337601ddd0fcc49314b6)"
     },
     {
       "lessonId": "tv-g1-t1-b51",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (a282ac5b156b2958b36b651c696a38a95c7ba8007a427a61d62ce7be3d54c2cf vs b2735b33f2ee8d4ae4cc5d4775c4055908cb42ef24f4627d8a6bc6948aa2a0eb)"
     },
     {
       "lessonId": "tv-g1-t1-b52",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (174d4091ac9f3a12115d71d6cb4bf25043305e53c3081c230d5597b81661d75e vs d3a88534d1359001c21cf20d7ba7757382d3262a591434d3cb4ca291f7f55cde)"
     },
     {
       "lessonId": "tv-g1-t1-b53",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (e832072097e541bfd19953cd29bbe7ef288e0755096a68b2886ab62e91f4843e vs 66d0c49ba0c731371f512ad5b9021635d85e06d71612fad5be2cf4cd5f0e8952)"
     },
     {
       "lessonId": "tv-g1-t1-b54",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (3e66db9d5690018f4a306756c15fca31915947cb0230fb67bb7ab1934468580a vs 629e73bac04f356281fd532a96d8249091841587cbb9d9c261fb876ac1fe28e9)"
     },
     {
       "lessonId": "tv-g1-t1-b55",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (e20e36e20242e914891e63daa087399acf58333a6ce47bdb53515072c64a3f7f vs 42a8797b50d6b52d1da270bda8ea26f347f3a22b2d9cd5389945cb7057f9a4ae)"
     },
     {
       "lessonId": "tv-g1-t1-b56",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (f0e8365a809126ebc71ac18b76f7d4a5aa6cd2c4c2062de10394573cbdf4462a vs 2e16728d5988b6057d31daeae4e443ec65457e4547c338deebcbed2c28b65ed6)"
     },
     {
       "lessonId": "tv-g1-t1-b57",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (f733264f3cac1dc0092cceb875b448a8fdf8a37b4b2615721d821d48d6626504 vs 44529699d24c89f5f0f78dc5c6a822fb21de3e72d70e5637d2dff32d2b202f0d)"
     },
     {
       "lessonId": "tv-g1-t1-b58",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (036301d73a614e1d42ef816b1e2f4a34064c994a21ba3239d3b90f580f996f50 vs d51aad6f9f04dd57424158114f353ec1c03cfed0cd1af0ed65f0b9e5ab760ee5)"
     },
     {
       "lessonId": "tv-g1-t1-b59",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (1b3e607c302ddf7e9a405191a5ff26ff0b4e41f86be253e7cee4d0e21c225796 vs 225d74b4f8f782147b500f218075cad028133f0bdc789e10708fc2d1bd1a4f9d)"
     },
     {
       "lessonId": "tv-g1-t1-b60",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (ca1c77def1e0273936341ede7d4029fc9b88b7f327e831c01936c7327a79e790 vs 734c0ef547d1398dcd724fbd9f16ed42a50fa1160408ffdc285b1339778f483b)"
     },
     {
       "lessonId": "tv-g1-t1-b61",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (a2a67221adb88554add19ee849366550039deb07a633962d4a02b2266b448dbc vs 444fe28d0b4a8c3db00e8bfcd1e9e5e035541ca838e719c515e3aa7faab1e38e)"
     },
     {
       "lessonId": "tv-g1-t1-b62",
-      "reason": "Chưa có file audio trong audioManifest"
+      "reason": "sourceHash không khớp trang sách (3afa30b4058da23aec1c2d7bdc960c24d185e9ce14d5745f02d5efda9e4b169e vs 2b91c214d58256fa0013beefef1afe3798401fa944a5837afa80a205fe054e36)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b63",
+      "reason": "sourceHash không khớp trang sách (06665461c3acc6ef0867cc99545c42231f11542a29ba948a92732a73cf7d3cb3 vs eb21864cd29835a376db66072d928f81e5af801c0446e65576e20b0c5c0105f7)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b64",
+      "reason": "sourceHash không khớp trang sách (365af24d319bb1d0a808da6e570872e60a023b2171cf10daa7dae6775f91d8c2 vs 231b615cdf7d932294131c0aaa6ab231b74d9c7400ee6cbfecc4255755fb977a)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b65",
+      "reason": "sourceHash không khớp trang sách (af1c4ddee1604d55e2db9e6bb912498b7cecbc017eb841d0dce935298e7f51bf vs 5e5bf36dec95b743e573966585ad0b7bc6cb60c7b2c1d7d5473c6174dc143c64)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b66",
+      "reason": "sourceHash không khớp trang sách (94163dce3a72e6a6a0f992d9a57a317d646708842cafa8215af738888a3f50cd vs 8418c5dba7b0bdb455bd0555a134dfbf5f5a4c97a35eb2bbbec445fa0c307c29)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b67",
+      "reason": "sourceHash không khớp trang sách (6af1c652ec1baa363689464786c91eaa725d1e9e6798812ab582e61b5bce43b3 vs 3933871114220a64059fd0101649983113bb4e4cbfea3da43cf726cb902d4a08)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b68",
+      "reason": "sourceHash không khớp trang sách (7dbcea9ec4043f601ab75cd9e59c77bd1df666f107e46c47c1c9183b459cebf5 vs ae4eb11bd9921c078eaa2080ca28142acd56a852e0f815ba4937b4554430a31c)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b69",
+      "reason": "sourceHash không khớp trang sách (9273d0a149133ecb61dc0eb3412b44bbde3b7037db74dca973a456c849e6b060 vs a3e1bafdf4488f3e632d80c4cfd2ab6f893289d2bb3e6bfa85d76ab2e8d13b06)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b70",
+      "reason": "sourceHash không khớp trang sách (78732662748f5e9f72d734fb73e396529065206cb91f48769b7fed2efa6c9dd6 vs e68282b6055022da79bd6d134eb781660a473fa0bbab813609f7f9c580c2b445)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b71",
+      "reason": "sourceHash không khớp trang sách (546b8783a6757147cd29b70ae82b206ad2edfbea6e5af1fca41ec46cdd8dee49 vs 7d7f14ea13fc98b453d5ef7c5bc8d684281228de20efcfabe3adbe28200c3762)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b72",
+      "reason": "sourceHash không khớp trang sách (63c5818c1734deac95c67b6e7d4eac6cf655314369fd44fbc250198743393e44 vs 9198e160b9cbf1287ed72d511140d119488b58e32fc524d78309c0570eafc4d6)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b73",
+      "reason": "sourceHash không khớp trang sách (b60d26cf6e5eba752b86e8d5f04b8307dd1bf8dbfefedc52ecf5373532ce8349 vs 635cbb12275cc847870e647a6acc0fa7e13df9438b80f1eed7f7ecdbc69f8db0)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b74",
+      "reason": "sourceHash không khớp trang sách (b4726f71e31b88742f8f9627fa49d6197776619c79442bd1073d56bc0a51d1f0 vs 72ba39d790ec12301726119d234e258fd0242a9f29c9e72b23a2c451fdd77c7e)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b75",
+      "reason": "sourceHash không khớp trang sách (a00656cd1c1c242c945c2b292c7e0e284f934bf44a9c3102465839377ed80aa3 vs c39ba110010bf15af4ebbc9f9d440bb5fa2c3eeade6e40aec9aa0c6a7e9da9f5)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b76",
+      "reason": "sourceHash không khớp trang sách (74cb2057a05d39e6c1958af317834818d4cfffe67cfe01edd9191261fab58b37 vs e0cac996bb14faa0192262cbbf2751299e033b47b3988b4f2781cca671dd5c0b)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b77",
+      "reason": "sourceHash không khớp trang sách (fae67d4748abce46f932152eb93e7ff747543ea80556fb2c6729d4aedc4d2464 vs 7216647942720c20dd0841e1fba4e12d3409e87d7d3ff37435fc6752cce79530)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b78",
+      "reason": "sourceHash không khớp trang sách (100acc35263dabbcba4c00f51e41c8058d40fa89b66ca6ff7f704af06caf12aa vs 59b25296ddb82ea5c02e1be69b2a0329d6232c768331f25a518e368d13588a50)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b79",
+      "reason": "sourceHash không khớp trang sách (f0ec542fd9176eff76d543cb1c4ea1886ccd49132b3173cdde1cd24c157ffe3e vs 9cdd5dd9e478e15191dfe85f67632468bb8becb9b9e9dd938e0fd75e6409a319)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b80",
+      "reason": "sourceHash không khớp trang sách (052571e211f7ed1d7cfd8177716ceb87fba5ebd5435467bbd8419161fec6406b vs 2c196800f1e7683eeb9fb91b5d9ce0dd7ed420d4c3407d7aa527f213aee7bbbe)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b81",
+      "reason": "sourceHash không khớp trang sách (da7d74a9ede8f20b0582177f4e0c9216adef2428d5b8a19428ade107ba7c79a5 vs 72de8938596951833453198e52d2065a6328dc0b1932487818e5f112260c2ce4)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b82",
+      "reason": "sourceHash không khớp trang sách (3a7996c28d6b5a72a2e1803ec6a585e89e5a782cf25f5abd9665956f1f381470 vs 3b5a4f4ac78b0b1450e7afa238e7fe737df92b1952281884c8e66e647db7be9f)"
+    },
+    {
+      "lessonId": "tv-g1-t1-b83",
+      "reason": "sourceHash không khớp trang sách (cbed628227ab8c9ef7555da089d9d30ffb6c24b71c2152255aeb16d153aa88da vs 033da8f96351e14fdf7ef0469b89add683d040da9534221a9d7126cce41aafb6)"
+    },
+    {
+      "lessonId": "tv-g1-b21",
+      "reason": "sourceHash không khớp trang sách (9473c20c9fa5084c94ce45e237cd72a284495eaa0485a74454597a46142f90ae vs 9333a406f39d5bf54a7be07a8511158ef013c39b7c502ed45338808e4a66dd04)"
+    },
+    {
+      "lessonId": "tv-g1-b22",
+      "reason": "sourceHash không khớp trang sách (c1a74214ab39c6ba3021bcbda2d658942260ebeef3c0fb81570663405cea2884 vs 9b1fd770b8ae33c14423ae72655919bfa666bc3b677dd2768ba68eb8d727d589)"
+    },
+    {
+      "lessonId": "tv-g1-b23",
+      "reason": "sourceHash không khớp trang sách (5a0fcdf4ce0420e33c563a792c2728f1a97df305704ec4083223be2f9ae49431 vs 7f850e58fe9989109bbe58c7e7e4cae4afc7045cc9b14d96c6dd26f578e85cdd)"
+    },
+    {
+      "lessonId": "tv-g1-b24",
+      "reason": "sourceHash không khớp trang sách (7fc7297eb7e2d7ba1f9f02a8cdd679cbde47239d251ee8af6ec7cfefc063c2cb vs 087c44786a9da262423f7d00b3c613fd40c641d28c452e09a0517ca663bab188)"
+    },
+    {
+      "lessonId": "tv-g1-b25",
+      "reason": "sourceHash không khớp trang sách (31b41fbef6063db55b641632a34e2663f2446f649afaf26ac270d1d0e6705a17 vs 0a7532b2c28fecdda60575abb0b8c3935a51a43e465bf54ef6e0995e291c5721)"
+    },
+    {
+      "lessonId": "tv-g1-b26",
+      "reason": "sourceHash không khớp trang sách (e5a8d88ef69bb754c122fa4c01d963086da5d3be74188d25b129f2f7bd7983d0 vs 74013f5d511afcf9ba630721df7c397e140a2f6b815f3be8f76356ffa6876e86)"
+    },
+    {
+      "lessonId": "tv-g1-b27",
+      "reason": "sourceHash không khớp trang sách (2eb0a4519f8c3a6387f8c332b765ed312f987bba76f11047c3b6bd9fc6f3cb40 vs 247b43b2afe79bfc942f1cac36c6ded9973b282fbbf9b322656d77dbf70585cf)"
+    },
+    {
+      "lessonId": "tv-g1-b28",
+      "reason": "sourceHash không khớp trang sách (5347bb875c6df4efee56dd2d2ba6866294cb3e177faa93da334fbe41fb09697c vs bddbbef678121e174a3feefd64682fecae507c9cb783496f8371707a758421c2)"
+    },
+    {
+      "lessonId": "tv-g1-b29",
+      "reason": "sourceHash không khớp trang sách (7e1130f0b150aaef7ddb038e6a8e02db4b3d7d0d56a67fa83541fc63adb2177d vs 8fee1f48a8a4e682f0a808eab2d14a347f5064aa3607e2bf79229a0bec6e3d63)"
+    },
+    {
+      "lessonId": "tv-g1-b30",
+      "reason": "sourceHash không khớp trang sách (b01a1d371871b149fc476bcae8523221fa0da7f661e923f08424910d75c8e745 vs e907678596975841a0742c5abec4e21eb3facf401671ae559834bd307dffeca0)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b11",
+      "reason": "sourceHash không khớp trang sách (338e326594d00995aea084b6dabc1855e7d57fc324d3ba8336278cc7304a7f3c vs cf34bf86760a5114882b32b47ec1931f3428e176ecc4e255a25ef88564124a3e)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b12",
+      "reason": "sourceHash không khớp trang sách (eee9983d892c25c25fd224df6c2f1e5b3099dc8f51f0ce9619808ccdffbf9dbc vs 88835b73b73c9e6688ad53b21997fbf601604acc609d10161d47cf501e86a583)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b13",
+      "reason": "sourceHash không khớp trang sách (62dc72e858f55b09c72ce05401db7b4ff61b23476b5f72800ee9c6f5f65d385f vs 0007d18fbbe38debc99e045a948e6c65cc6a7dc26d25191ce6eab8f8038916ef)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b14",
+      "reason": "sourceHash không khớp trang sách (0607a298fa5ce0fceb10d02af099562a57799606131112537c05d97c08aea7d3 vs bf519b665ef3046271cc22118ea4090adfde290e69fa21bbe940444b4ddecf7c)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b15",
+      "reason": "sourceHash không khớp trang sách (fecc54607bceb129ad7640a139777d0d1c55593eeb251fe00d91c8b3499e1422 vs f67cb0b5a2466597665a50bdcfef622f1688ac2e9f3660448d691f01b19eb624)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b16",
+      "reason": "sourceHash không khớp trang sách (051e7441625aac96982335300fac1bdbe08df434ab0a905be8d9a4a85be6bfc4 vs 26e4b2c02440979766d59fe9b2f6553ed6cdee9dbb75e3fcab54be0ef3a37683)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b17",
+      "reason": "sourceHash không khớp trang sách (d9e6ece2603dd834b722ef4721c8fc36eea8ca37d3191d914b3ff64ed67ccf38 vs a112bb43dde14039679e39cfaf49317057aa97abca86a0b64d53e3cf2ef91cbb)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b18",
+      "reason": "sourceHash không khớp trang sách (dbdc1d11b1ae600e065c98c2ad3c34da77acd7ce7e692718bb8e76ed8df55802 vs a858fec580b35cd5a89c44045a9d6b51cd73a797c3f5bf4dbe43103360ce0491)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b19",
+      "reason": "sourceHash không khớp trang sách (0d294531337cba3d4e093a48971e4716d2ceeec25cb9617af72823185b77bca6 vs c3a63304ce5ec20bfb6712ec33003636ca33f23e07be9ff3a582ca59274d3e9d)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b20",
+      "reason": "sourceHash không khớp trang sách (86a1a2749a0be305a286f9c98912c2099e444b37279c85cfccdca03ef8656bed vs 3a0e5fff0a620af82994c40a15c1e592a2ce016d12d7896cc7559ab18e0a349f)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b21",
+      "reason": "sourceHash không khớp trang sách (e584fd01544bfd947823573d6a3fad5787320fdca51ad6a5793c5039c3d1dea6 vs 49b384b3f54aaad6a9b560f622e94f79811de5a86acb6326434f9ffefa9c7302)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b22",
+      "reason": "sourceHash không khớp trang sách (b5d3341cb4bd94f76a8acea6abf4fa67951e27c0f3e362ddb586692000f04dc3 vs 63f4aa7170f78f22e2c3c24a3fd23d277fdcbfda68dfa5a468393d1d6e812ecb)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b23",
+      "reason": "sourceHash không khớp trang sách (406f4df97fb3c1a01d74687fa6713d375557c035afa05f75a86316ea5c1aba3c vs 7e52e2ff1a1c81e89a30cbbd3e65bd6b6e55a67f31adbea5392c9ed296ea5b0e)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b24",
+      "reason": "sourceHash không khớp trang sách (cdfa7abc9791617c4c538f48883f8ff188c4ba78a2a13b77c1e0719ea426847a vs c586f578e33a16ebc0dc4ab04171fabc15b47369e19922e74f74164cd8ef95cd)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b25",
+      "reason": "sourceHash không khớp trang sách (d441045f3001f3b10be1bc785f0515112ea8bfecebc3cba251fd0590470ef885 vs 517784c2f34ffb23bbecc8c1b842bc0a468594d156616f347b61958289fa14b7)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b26",
+      "reason": "sourceHash không khớp trang sách (4d143d8339a6483c21e584236983b370af6cd09e4ddb6910def01a3ec126071d vs 6998a1f2a356db35cbf39801db5e01fb08138cb57602e887904089c7f5c9c4e4)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b27",
+      "reason": "sourceHash không khớp trang sách (34c128b19458958a5b96a58490f763dcab7bb37f1f1699e8b9cbbe7cf9ba0967 vs f3443d74c78545a474c8572d9a2e33d64dfa0aafb98aba0e0208ca276d1db404)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b28",
+      "reason": "sourceHash không khớp trang sách (4e4f8215f5edc82ef0ea36a914332f624b36928cbc4c7e412c773a4e69cbf060 vs 7b9918b312fa4f62cdd0281c0bc9f31c81c4ce76bf0572b0633bdb1eeb09408c)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b29",
+      "reason": "sourceHash không khớp trang sách (d4dbe14dff0b37a0e4d587a2b9507ff21a55977003f30067df79f0d31bc675bd vs 2155c35e3d813918aae3b4d59742eb46defe734de9a6742ae2c85d3d3d5b73ce)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b30",
+      "reason": "sourceHash không khớp trang sách (784fff1ad5ec6ab26a7362c8ea99e23d2cbe74427ce99ca6b0cce60ff581838a vs 79ec8a6c8e551954a1deb99e85d0ed1cabe14bae69d03132acfe0fbcf0fd7b8e)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b31",
+      "reason": "sourceHash không khớp trang sách (d4edeaf89af259575fd4cd540f097ea0c64874946d72bf5b595ec01167de37d6 vs 44b07f01bf6f98b614fb4ce4efb2eb7fa9c1871a61f6f31348d99c7d42133052)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b32",
+      "reason": "sourceHash không khớp trang sách (196d00a3948ffc6c936b0ed534fa0675d0770f44e79c4859f7205c138ffa511f vs db5fa17187e833a91350c9e4cf55e47cfbaa5a057390ed61479797f23edba86f)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b33",
+      "reason": "sourceHash không khớp trang sách (19ffdf583e70fd9fb7928d924502287a66ef4008a09632099b35c97de3a12c97 vs 665d2c95a5f31cce99f32fba325c9227fc90a3a5df8ceb1b13056c0009708941)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b34",
+      "reason": "sourceHash không khớp trang sách (353fd1ccd1f5e7cf566c4b60eb21c90810914d86913416ea933e029142b74358 vs d31d00b18c803060f595fea019f877a6926af5a50b9d682f38f4d09409189346)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b35",
+      "reason": "sourceHash không khớp trang sách (3d8264e424bef2fa60900e8d9f1e5eac0177ce1e441171b061b2244ef90230ce vs d2bc464c3050347c20d89e4a7bf5c114c90581dccf3004f232e18b2bf5248aa7)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b36",
+      "reason": "sourceHash không khớp trang sách (f18cd4238568c76b548f9290bd9722249efe106f4c1c41e22abf0d0c889bc835 vs 9e9f9c7c53f85884d5d5bd1a29e1d7568e74c1537213d9ed8e0aa4dda0c8d200)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b37",
+      "reason": "sourceHash không khớp trang sách (e9af9c70463523f67d0ce9327a849770117ee6bc1bccea83ad94ba202bc617dd vs 68a3711bd29c6d54ee5815bfa91cc27aa8abb63d6efd3c3fb1d7b772bea00019)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b38",
+      "reason": "sourceHash không khớp trang sách (070fec7a39b95ebab50038e8f7748a10cef1d4e044d5c8402e25d4d6550d0cf1 vs d034b2262e1f6c6a1af5c520c4fbdd8c44ff53ed27279c117dc8bf58c57e7006)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b39",
+      "reason": "sourceHash không khớp trang sách (385f783a36d80cfe46c63a6984c7fa8ee3ddc4813c624aa88639a153455e4513 vs f3e3e50252362380ce16d967de347eccf66b63a25a92ec4753c4afb1ae38421b)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b40",
+      "reason": "sourceHash không khớp trang sách (b3115beb8bfcfe5d63897a1b1ef57059af38ed78b3ef1fd8a7ffe8b5e7218e8d vs 0b5202f59e5a200436e65b2e44b54937c5837b3f46e1828684bd274dd084e987)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b41",
+      "reason": "sourceHash không khớp trang sách (8293aa668e86aca41d31e0f44cd6e96be76e5fb2f012257ed26655ca30c0c037 vs 3e963a6ca68cd762d2c660ae53c2df8a83350560b8cf9379f8d1d959b55a692f)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b42",
+      "reason": "sourceHash không khớp trang sách (c8ea1fbc81ff81f220cda05e6534bd7facd28222f017a265031e42eda4b967f9 vs c2e723c834eee8fd9837d7e3cea2cecba753793bdb35e2f20afcd9422827e670)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b43",
+      "reason": "sourceHash không khớp trang sách (3439558b1e2b9dfd7e1b7d528cdef6335d48c31bcc1608dc8c835afbad7259ba vs edb8e80a0f6ccedea17ac3e6528ee2f50adbdf3e3de53e75f6bbc369a73ac1fa)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b44",
+      "reason": "sourceHash không khớp trang sách (b5305e543204fc2b81f0cf5fd8f6689bb1a6a0393935cd712415e5d2857f06e4 vs ffdabff67e0c998170d6113d80ec2fe8044d5bf701e9d6c34935881a283b6a9f)"
+    },
+    {
+      "lessonId": "tv-g1-t2-b45",
+      "reason": "sourceHash không khớp trang sách (efc946a0b5118097bcb7e712823c59f8c1c72d5010445b56f68b732a048fb2bc vs 716a0c39b2a1df37b4ffb383bca9a84aed1c92718a57ac9170b314b2dc40410a)"
+    },
+    {
+      "lessonId": "tv-g2-b1",
+      "reason": "sourceHash không khớp trang sách (8cb13208a42f5f05dbd836743dcf4d8ab1b61de9ffa3f992e572a1ba670f8546 vs 99c9ef5ae04d890c94b2ee95b77984e2fc3a68b1aa577eacf66f23d18c2c3092)"
+    },
+    {
+      "lessonId": "tv-g2-b2",
+      "reason": "sourceHash không khớp trang sách (cec3de02aa54181364f6f04bf8be6e6c7ef3d3e09f55355b04f23a0a9de6e6a5 vs 5ca5c2292c1dd745e50db436ed4a7c927e65878425d3036b46cca9c6ed3d5bb1)"
+    },
+    {
+      "lessonId": "tv-g2-b3",
+      "reason": "sourceHash không khớp trang sách (d214fd14218687b988e7c72c5c858930e49a2f75edcf71ff8d277e4e3a4d54f8 vs 012e742345cdbf6a4c4fc142e483d67a1f17ec7a6e686468cf28305c706c3c32)"
+    },
+    {
+      "lessonId": "tv-g2-b4",
+      "reason": "sourceHash không khớp trang sách (045ab2083965bba36b2fb66406189d10869c4dc66814551fdeff9bfabf9ce2ac vs 2c37ace644a75b9dd6bee1af3258df53868424956a2d385c627e142fe614ba95)"
+    },
+    {
+      "lessonId": "tv-g2-b5",
+      "reason": "sourceHash không khớp trang sách (2e4b0f28b46ee7e5dfa41a7d9f293ef92919848e201e91a41402878d6e2fb539 vs c82f9540133175f86124588538ce2bae53964c927e856aaa59b98cc4e9271709)"
+    },
+    {
+      "lessonId": "tv-g2-b6",
+      "reason": "sourceHash không khớp trang sách (93edce4b9b680d779849e3b31394f7054618376797476368b9b122d7cc70f1e4 vs 82a520c5c83267a3101a1ffd94aa6b9c06b5a6faf71fbf08620a561e3ea3c106)"
+    },
+    {
+      "lessonId": "tv-g2-b7",
+      "reason": "sourceHash không khớp trang sách (f9de3a55e3f971ddfe0155600e01fb9cffded7335127d5f4d4b42a326eec9844 vs f7b713462e3847ea90de6679b417fa60f0a833bd7ce333dc2cc031775e6889bd)"
+    },
+    {
+      "lessonId": "tv-g2-b8",
+      "reason": "sourceHash không khớp trang sách (03d889d76a9ee584d8cf17092230cbe2caed91e9b4cfa22cf92772df4827ebba vs 44fef840b2beee1aaa260717c8a98891aca08e4e2f301f172ecda2795721d49b)"
+    },
+    {
+      "lessonId": "tv-g2-b9",
+      "reason": "sourceHash không khớp trang sách (9ee761a364d0d3379a221764801de381a0891f64cfc5ab55fe312d9d80d7abf6 vs f46703e75573523c7813808d6225d28b5b54d605e039ab9cd83fa1d7b97a246c)"
+    },
+    {
+      "lessonId": "tv-g2-b10",
+      "reason": "sourceHash không khớp trang sách (38b4f8580828367f786863806dfe5663ea6a6d3207b617e8869521be7a939db1 vs e8d935d9ad02cc69669ca9839a1596b882eb79d181f43c5cdb98ac2b9c81c023)"
+    },
+    {
+      "lessonId": "tv-g2-b11",
+      "reason": "sourceHash không khớp trang sách (9edb6a3cd9133e04af3d8fa40224df2eb28ef8f7ddc4244e8ac74762505bad34 vs ac6dfc18a8d85b1bae2668fd092a2beac54bf532470abb46efa50c466e886318)"
+    },
+    {
+      "lessonId": "tv-g2-b12",
+      "reason": "sourceHash không khớp trang sách (743be3719589ca203643f3762ac18b525278f5ff844bc82f4fc5ae9b3eab54a6 vs 4d37eb595db3255aede644c3e3982d2a0108a71ce28d4abb3ee9792404095070)"
+    },
+    {
+      "lessonId": "tv-g2-b13",
+      "reason": "sourceHash không khớp trang sách (911f7970469888bea43b338353db0834e664309063c1936c4c08accd3bc9ff36 vs e39ee050cd19340c960d82f673e220ef98e9dd461eb6fafd48e81c8d5c4ad481)"
+    },
+    {
+      "lessonId": "tv-g2-b14",
+      "reason": "sourceHash không khớp trang sách (c29591bd15a347d740bdcc36c688faa7004fa00fd34db90dcb5fd949e3250daa vs 533a03fef340007195d2877212a713381c103bc73be0b2e262e874099038c5ca)"
+    },
+    {
+      "lessonId": "tv-g2-b15",
+      "reason": "sourceHash không khớp trang sách (97569d43c615375736fde0a5d6c1d877ced99ac3e6e5c065af959da00ae59965 vs e424f07676fea04bdc3b2c52a5a0725641888f040dd59e01659fd1a6c0937435)"
+    },
+    {
+      "lessonId": "tv-g2-b16",
+      "reason": "sourceHash không khớp trang sách (f06704a1edd77a595c0779572886c0e5db4698ff161eb416984ce875507150ea vs 6bcf57b2acb666330eb1b91e44ccd8029e8b66026b9a8511f4f963e0f181213b)"
+    },
+    {
+      "lessonId": "tv-g2-b17",
+      "reason": "sourceHash không khớp trang sách (094451d88425b0c9ab24a9f7c87a41b1b4531fff3f07bebc54c4cb57f8752578 vs c6c37eddf0afa6c28290f6d055cddbb062b0816cc5f1e0119ee100ba8d2c96ff)"
+    },
+    {
+      "lessonId": "tv-g2-b18",
+      "reason": "sourceHash không khớp trang sách (1da1b793ad13c7b3ea57581076da0b6df034a7d839f5c543c5dceac2881a82c4 vs 36c864876f42ca4bf79b6886898469780f41c5b1e41b6eb9dcca33d258bec02d)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b19",
+      "reason": "sourceHash không khớp trang sách (fa5a689265c67a360e5a4ac17bb755f6a6e5d1711a081c046e5cecc2c600fa8e vs 74701cab860b3cacae5e2a3999ff357d3e3b9776a58dcf640a71a1e5996ad7a0)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b20",
+      "reason": "sourceHash không khớp trang sách (9aafec25f22685a889f332c42a24370ad725d1f27ddf6216f1dec7d989d84020 vs 8b80e68452d24ab33524fd4442010dc376a8604b11ae0853e76349aec09265ea)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b21",
+      "reason": "sourceHash không khớp trang sách (b30006dcf41e1f4135a74a96d046ff517340a37eb6139c8fa7fa91e52d1d4023 vs 57574661f4b42aed255b79a39f8c17cc11e5d2617e8d1a79fa8b05a549e7e81f)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b22",
+      "reason": "sourceHash không khớp trang sách (bd8360f6804864da285ad27dc1adc082ccbab3d0e59adfbd7639fcabd26a0941 vs 3bb96a185022098c8036036b2862eb7a68b41384358dada8e745de9fb2b5895f)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b23",
+      "reason": "sourceHash không khớp trang sách (bc1d056bf9f612f7efd4651f8783f0565760e3f9666338e77767aea71c4f2833 vs 043f37e1a573592787fbc75d78c360b33b82d731b528c0b8ae6b318096fe854a)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b24",
+      "reason": "sourceHash không khớp trang sách (ddf9a277c42c747b62724bc3e7ef199e7ef0f35d21b5be5787700d83dbf44120 vs f72c43b4ded006be4c1ad530e636549583e15a0bdd0f87e4ab52fd320dad06c4)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b25",
+      "reason": "sourceHash không khớp trang sách (997306142314f635f4e864702bb61bfdb2d09d3af1f9e0dec083f8b7be27b79b vs 12ec45cdca74d43a812788a2f07eae7c4ad4226f7c6dd111923207833346bdf8)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b26",
+      "reason": "sourceHash không khớp trang sách (aae0d08e5df908d30ecd36d51d0b9a2a8517cd0cc1e5c869caad3cccc1306041 vs ad978ad621ebda020e45b0f90a296fe46e82b71d40c86d07a74f64cdb093f5b8)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b27",
+      "reason": "sourceHash không khớp trang sách (9b5300d1c96a50025409f64a62fa66bb9896bc27451800db3501cfbb7fe37bb1 vs cbb2239daa8ac7a54243858c9f2d8924e48dfbe863f02ed991bbb55350778a4a)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b28",
+      "reason": "sourceHash không khớp trang sách (f88ad02b455aad7acf220a9844c981cb0208b4bf6df8cb315c008ea9982f5b53 vs e1dd260f0883535f1e8027b19d376f7da4505b98b015840c41ac6e6f00b4943c)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b29",
+      "reason": "sourceHash không khớp trang sách (bb4abfa3191ee5349e4cc6339809ce6b76d1756e7c64e77c65368fb0e0d5ab50 vs d4c7f3c05376c9ccfa35c592070861cad5d7c897b9f3333979f40a0a6eef801e)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b30",
+      "reason": "sourceHash không khớp trang sách (dff1675d30387acb9c4e31ddcfbd30d80e6f109ec71b04820241575fd4a682aa vs 16d6bbe594e4dd5a66105d79406dc517b54ac2361ed9bc0b1a14485a9c411389)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b31",
+      "reason": "sourceHash không khớp trang sách (1f3e3e0386d947839857daf550468496e43bc241309c5e65d869f2c862b70cfc vs 2de417bfdae7c91688282b11390db07d8c7405c47159e3863c60fad4cf51e313)"
+    },
+    {
+      "lessonId": "tv-g2-t1-b32",
+      "reason": "sourceHash không khớp trang sách (83e1e79c8bf8666aea21b3ad6da07decece8735bd84b1d4a42952c7f45489acd vs 10735137ca9ffdda7e860f102c673ef70ae2a3fbc3306120499dc1076d800ac3)"
+    },
+    {
+      "lessonId": "tv-g2-b19",
+      "reason": "sourceHash không khớp trang sách (a069f6060b874780bbef28071469fdd66f4c261bb24e3aa982e04cecc6e786c9 vs d89bc277b129b36718a24162c61644ba87f113f2987f56cd0114bfde35b9cdd6)"
+    },
+    {
+      "lessonId": "tv-g2-b20",
+      "reason": "sourceHash không khớp trang sách (16e5aca8aea70eba11eebec6917f5db0878e3520c5a24ef7116218f1cd1e8a2f vs a3a2a280a200ee0038ee60506409dc667ac933c13c85839aca1cadca5e7cfc7a)"
+    },
+    {
+      "lessonId": "tv-g2-b21",
+      "reason": "sourceHash không khớp trang sách (9d051d388b09e3f6e74a6cecd6925ab741484ffbc2d2d9fbec8324f1f2d874dd vs 07ad08314043f1a32c112a0ec13b9e090523945a91120331183f99cd916d593a)"
+    },
+    {
+      "lessonId": "tv-g2-b22",
+      "reason": "sourceHash không khớp trang sách (54e4cfbf51afe16b0e522e0f6d81b4b69bf8755ad30cea5eb7c5a8d70b120c5d vs e21463bc92b9d6e30b59d3d2a518b41a4743c550c7ac3cd0461ec3f554164ea2)"
+    },
+    {
+      "lessonId": "tv-g2-b23",
+      "reason": "sourceHash không khớp trang sách (ccb9735e804fe76b11ad021fd46247e8875ca7097536c1dfb95acc012134052e vs 6abfec0e71a11f2d13fefd2efbadb706285220733e8d56148aff0243627eebb9)"
+    },
+    {
+      "lessonId": "tv-g2-b24",
+      "reason": "sourceHash không khớp trang sách (5dd4751810228c767c1a0d2459ac480bf71e03a992b17bda88cd1fb66efdad2b vs 073765d3c91d2184c6d1ee665db3d29b08519e5a35849a795e04d0f2176f4de4)"
+    },
+    {
+      "lessonId": "tv-g2-b25",
+      "reason": "sourceHash không khớp trang sách (29c26f38ae74d6e07bd9b7c1496456041552845deb656d11f6c03f919caa0ee4 vs fa0b7a00fa679fa236b358f6a6386c560526325d47f4f97a965c8198b1e26eb9)"
+    },
+    {
+      "lessonId": "tv-g2-b26",
+      "reason": "sourceHash không khớp trang sách (15657d038b1e21cf15c98624666cc5dcba5e6829a46052011d09aeecb457661d vs fa5d329f11bb659d6076baa0a019ecfa6829cad3da52eec95261bd9ecc0202df)"
+    },
+    {
+      "lessonId": "tv-g2-b27",
+      "reason": "sourceHash không khớp trang sách (77e7b28fa28303fed68d7e4ec2b3ca2cd286fd3c0313c90deed8ba65c02e1825 vs 28dd3d4cb0c50b0fad0cd0349e992c4e5a7c811ce32483443f1674a53fae8093)"
+    },
+    {
+      "lessonId": "tv-g2-b28",
+      "reason": "sourceHash không khớp trang sách (8fdafd80005f739711c9bbede4bda45c53e2cbe76ab1a20156e39250718c07ec vs e515b64cbe05921e246a089e0fd68bad55ce50fb8777ff70a9f818a424da0e3f)"
+    },
+    {
+      "lessonId": "tv-g2-b29",
+      "reason": "sourceHash không khớp trang sách (d1264912ac90d7e5750d7c4fa2d3fe342a48485cf29034e2899d25a8cad0c077 vs 0239f000a3df1cd0efbd337cb5048f8e7bfa2ade3ac8ab48b901cfc917c6616f)"
+    },
+    {
+      "lessonId": "tv-g2-b30",
+      "reason": "sourceHash không khớp trang sách (3e1639982e2776ea206c488fcca383ccafb8b03de95b4deed33a0697d4e399de vs 3d08cf7f1ea5c76726b6d05570451c2d5583a8d94a65882806e57ebba7123d8d)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b13",
+      "reason": "sourceHash không khớp trang sách (3583f811b52b7e44d845bc958d404d1bf0691b2727e694b3c859c5e6a5e7fd69 vs 6db3f3604d955eb6e01e71c068b643877c931f9dbe9dcce1986a3089854498ad)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b14",
+      "reason": "sourceHash không khớp trang sách (e3b5aa2310b53e0de0d1759a4664590c1f179b6d8f5fe8c0028037cff5fc7e8a vs c618ebcc653a169fd0323c300a7b2c83d3da7ba98bcef78fe7400d50fd201df6)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b15",
+      "reason": "sourceHash không khớp trang sách (c93c5cc199a50474667538a3af79473eb47e32904ba0683e4834aff905b630b1 vs 30e18bcbb1f041b08b1fd489af14112c706ab111cebb83d2aa6d862f5ca115b9)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b16",
+      "reason": "sourceHash không khớp trang sách (e978ff4bbd3973513961bc8b9b836bcbe74234685b76fcbe628b1607c3b04c54 vs 26ddc42e7ae391e9f3acb91ae71ab9a71f5140d97779ec9218472c94ea2245f6)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b17",
+      "reason": "sourceHash không khớp trang sách (d1651000ed826c65db092a68aae664b65d9e1a7ff96a9bcf992a5a3208da4e3d vs 0d91f564f8f83ed84931e5f90ede4cdd79e4bbd3f2489a1b16149a97afa62697)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b18",
+      "reason": "sourceHash không khớp trang sách (d86265a0eadd0a5a2a533f65a2eb867d3784f70933e303fad0005417d5503722 vs a5c39ecae2466eb2d8fdc093d559773ae75761c6e3d30606bddb36c5ff96aac5)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b19",
+      "reason": "sourceHash không khớp trang sách (a1b92c61f703f770b7823ef08d21073d8a20dd822957db0174428b3129862f64 vs 7c9fa6e4b9805056c110c5a4c89e93af5f46cd3117949092885c0d2e797c07e2)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b20",
+      "reason": "sourceHash không khớp trang sách (37c42c09495aabf5fd85b61611e2fa02a7c632ab62a3b3641971886c6cc8c404 vs 57f62bd4d9e39f2d5a1161c9c28ed515779fe2934bb30e5aa82489a2c3212772)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b21",
+      "reason": "sourceHash không khớp trang sách (b119795ae9b3e9d17671a4cd10bf55167a0db9060a6217da06696fad6580f4ca vs 4a43303aad99496af9f5c46a551cb31e5690206f3580a806b95e0cebdf0e4cdd)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b22",
+      "reason": "sourceHash không khớp trang sách (3d90b111e8c04be6069712b3b9474940f638d08ba547b53c80e15ccd07076613 vs 1ca222c82c230fbcea8d945c07ee99890ac74a89b1d3854aee91da4cdfaf0c7f)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b23",
+      "reason": "sourceHash không khớp trang sách (acf3f8ac84d1dab0d4bdea4fe024193e051a3e9b1bb1ca1c376216863452b57c vs f6d6f062b29f0597759f1fbd5c9130c0606ed16967add69ccbe9da5ae7e6ef68)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b24",
+      "reason": "sourceHash không khớp trang sách (3301bd2a23439ab2b73ac817fe97f4b699258e6fe9440badf27d3422d97f67ca vs 644c17c303855b15320abe531e95d5e23b7434245a5e22c4a55fd90cd98fad70)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b25",
+      "reason": "sourceHash không khớp trang sách (6bc4fd3d593960e36509b22f73c5dabe72d32b1c42d0c93747aab2584b993db5 vs af199fadf9a3fede63ce7625df7d65ad2f871b123c7cce5efe1be078f080e9da)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b26",
+      "reason": "sourceHash không khớp trang sách (ec1fe00f443f00f206872a5958a2f7391b8506a8003074b46f3ae932ffd4f33e vs e2ab8835da0ca2e59b035c581fdcdad38073aab39bd7d8e3ed19d5c7a9a604a1)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b27",
+      "reason": "sourceHash không khớp trang sách (bea4b50c19b4951e6ce89048d17c5d0c07aef7b589605de280954f15cbfa0c08 vs 273ead4f96a182b39ba565cacb94fbe859eca47ee589e2d3b1d60cdf337a2a0e)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b28",
+      "reason": "sourceHash không khớp trang sách (eb58ebeefe92f54dfa55ea1a797d3b102ada92ad8bab8ae9f9b484c6e342454a vs 9009c1935a29344a6dafd2705cc04be066a1d10d150f4bc259e7b30ba655ad57)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b29",
+      "reason": "sourceHash không khớp trang sách (adc3514735d4c545a8ac1a00a98433b885c968dfeb30fa37c719ca7ff1fccc2c vs c454b59d59c3022ec46d702f0ddc8486e17b472e23f65c0ec3e8b6f61fbbe7d4)"
+    },
+    {
+      "lessonId": "tv-g2-t2-b30",
+      "reason": "sourceHash không khớp trang sách (43c62abae90225cf8dd22dc21ec3be4f06aeb62fc07676557c74e58a09c5c9bc vs ba8aae8fb568cdd25551ecb9d653c151fbf2f677fcc5671bca0e8893f4547cf6)"
+    },
+    {
+      "lessonId": "tv-g3-b1",
+      "reason": "sourceHash không khớp trang sách (fd527885a98fe34b203eb2a69d38bf3fdc64543e931a3f9afd89446fc2bbf51a vs 13c3b2c6ff56ec0bc3bb29add8e6f11c2a71576e33ca8d3ceb4144c0bf35abb0)"
+    },
+    {
+      "lessonId": "tv-g3-b2",
+      "reason": "sourceHash không khớp trang sách (3d2611807d135464292b322cb4e12b7aa49bd9fc96315ef44dbd220d3ff9b99c vs 542e29004ff71348ec2aae7a62100f694fdfbde6137da14cf81e213c39399c12)"
+    },
+    {
+      "lessonId": "tv-g3-b3",
+      "reason": "sourceHash không khớp trang sách (ed1a5084927b027963de51545a36ebb3957964e2b0d02de7d6eaa0433263c419 vs c4ab3819bdd477c2e8adae2f1091d94fe4e25ae23cda4afdc9283a87658a3c0f)"
+    },
+    {
+      "lessonId": "tv-g3-b4",
+      "reason": "sourceHash không khớp trang sách (4bc26d29a5bec5bb82683dda315881dd775ef591ce475ecb46ff2bed64960a34 vs 34d0159031146843f00d4cc0e621682547157e9ce75869171dddb2abef3cb1f6)"
+    },
+    {
+      "lessonId": "tv-g3-b5",
+      "reason": "sourceHash không khớp trang sách (35a22ca9eff360814c254f0997f5cc05afcd3f8e8b6a62d1a2c9a1ee4427c027 vs 67c8cf7080c0b109401a34dfedb4d47bb7ca7cb007a9a6c41ff61b4fe0e5eda2)"
+    },
+    {
+      "lessonId": "tv-g3-b6",
+      "reason": "sourceHash không khớp trang sách (e34d63bdc3babce0374db9b2d94aaec5a498159931cb94fb672111082c5f0594 vs 330dfe8141819be2a8a474176077be09af163906927d6ddbf78c931945fce45d)"
+    },
+    {
+      "lessonId": "tv-g3-b7",
+      "reason": "sourceHash không khớp trang sách (69b0623128cdc11549f6191644cf42637a430e6491cfe64e798c06a8a36b58be vs db0effb485b8e26f3a3a578bb2bbe1352f48e94b72269b78d14e6779e68b8785)"
+    },
+    {
+      "lessonId": "tv-g3-b8",
+      "reason": "sourceHash không khớp trang sách (d8a299cfb78c65e4d8d158d128ca7193aa34ddb3baa0f9125e97f2a918d40af1 vs d598c067872f9523f6a4bb9a83198ffd64ac40fde9aa872633905b4457c550bc)"
+    },
+    {
+      "lessonId": "tv-g3-b9",
+      "reason": "sourceHash không khớp trang sách (71ea7202dc64dabc5688a5c8d565d914cab7ec4c3851f7554a32de7b5528e584 vs 3034419b6e2d13bd42fe20ccc8fa3667e7461fe9523eacebcc776397301795e4)"
+    },
+    {
+      "lessonId": "tv-g3-b10",
+      "reason": "sourceHash không khớp trang sách (07ba19d30d8bea5fe614ad8f8189446ec21cb42b3862da28cec931dc112e3f84 vs c7e7a32a06700d60a7067533e48a4dad4e5fdb67ed1dd11821b5905a6a93ff15)"
+    },
+    {
+      "lessonId": "tv-g3-b11",
+      "reason": "sourceHash không khớp trang sách (6f670c2db6dca49e9c008179f9131422155c88324d1a16d652b442aa65b55136 vs adca5227c1caf6b31a97ff1bce5323bdc736aed8d91b1431a0440a9c4c94d0e4)"
+    },
+    {
+      "lessonId": "tv-g3-b12",
+      "reason": "sourceHash không khớp trang sách (cdbdd939b60e0de980f769ade62f643192d02dbe46a24084a58adc3947a27790 vs fe1ab67d28da5377440fafdeb49e33535349da5a4aaa0331e8e9c05a370a3cc6)"
+    },
+    {
+      "lessonId": "tv-g3-b13",
+      "reason": "sourceHash không khớp trang sách (4d5db3918e8934a6f40bc3f38f7cd3ee8bed98aa22344d62e0815ce8dcc46876 vs 0d72726771b5aef43f21255f59b49b15f95240797988c4c561626a1ea805cc26)"
+    },
+    {
+      "lessonId": "tv-g3-b14",
+      "reason": "sourceHash không khớp trang sách (60a256ddc065dcee9cbf4ca6ef5f1adc61455feca7a04a5f49e84235390b05a1 vs 20ee85b7f175e45e4eb9386593ed6ec25643647353cf6353b5213eff71403186)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b15",
+      "reason": "sourceHash không khớp trang sách (fdb23aa2dd38d71d0fd570ba8d1f9637292ff92d5ebbfdd01caf531555dd6f25 vs d228c27e3b884170150b356ef63e423f6ef903a301058466d0d80b6157bf6d25)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b16",
+      "reason": "sourceHash không khớp trang sách (84f070f4fead1065a9fd167d8a07a9c9792c00632016fecffedd7437e8741000 vs b998607407463e6775c073f462bc83376d4d2e6f078b4886d18f17add6c17ad1)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b17",
+      "reason": "sourceHash không khớp trang sách (c1ba1683315df4bbb9fe0db25d146ed6a67db819a21c29a84f608046b035184e vs 063603d74e7f84b73cf8669a23b9779578f377313a499d80f6d63eeaed247709)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b18",
+      "reason": "sourceHash không khớp trang sách (c3e6ab080d00506e22fecb974438571d7ad97237a86391b02c9cad925f2c63cb vs fcdd1fd66b53c182b64e5b78b7ba5238b1cd28bb7d31f29f9bdf87cc74671e2f)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b19",
+      "reason": "sourceHash không khớp trang sách (1fc2e12a31acd1d34f69d0a18fd8f0f9efafb8eb3e8705f9e4776f10450b91e0 vs c58be9a82e78cab54900c7d4256cea24365824e2bb82ba0de67e8436c5bae40e)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b20",
+      "reason": "sourceHash không khớp trang sách (140ccd2e23a41c9f62d0722351a3aa42715575d93a7f3b918ff5a945cbdf11f7 vs e5b33f2c71f8935719e015536430fb25c8dcece973bf7db599e92d34ab76d0cf)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b21",
+      "reason": "sourceHash không khớp trang sách (af718ab8cae0afb9b88badda6920e67f25f65ce6dc5ab5876381ff348333ba2d vs e77a1facb5e6e51e48355a48a7560b36fcfa33cd1c3e2c8dd41c01a15dbcdeb7)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b22",
+      "reason": "sourceHash không khớp trang sách (c4023bf79eadb6e404025f29aefec35d1aca75e8ac31e5457ede75dcb521ae0a vs 4e50d8e6c9094e1ec36d7464d0a7a90a14104a5d3af769cfd501c2ee702c4802)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b23",
+      "reason": "sourceHash không khớp trang sách (dbf42a3d1ecbcfd38cade1eec5d7dc1e67eaa8fae70e978d525e81131e010889 vs 6700f900e982c70cb1473f80d1e905bfe41bfc47902fa6b314c466706573baa2)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b24",
+      "reason": "sourceHash không khớp trang sách (75fad447fcfff0ab44af7507f4977711b9f0a978fc792d544c7aeca0c492f606 vs ad74a5d86003d228086a3a73683664c0de1204e8a1b0bb3d62dab720e45667bd)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b25",
+      "reason": "sourceHash không khớp trang sách (7482089005f2847ee52aa486a7e2733c4a0f5e37b60ac353081e10ea88c3a000 vs de8005b3905dc4ac44394ccae3ea40d8469e337c44728b3015f24973815f0825)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b26",
+      "reason": "sourceHash không khớp trang sách (ba51af92179fa460de5e452762482f48448629925786eadb653012b6b78835f5 vs ab49e98df38947afcadf3cdc22e94afe495d955d5ba23f0d74a9150ddaa565ba)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b27",
+      "reason": "sourceHash không khớp trang sách (832bc91cdcf2e9daba18c2e13b8f8764e54129e43ae40800bde9f4ec77029911 vs 6eea56a6803c84bf38b623c1af4c311a0a438a44a7a9d388f4ccdf113a870ee3)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b28",
+      "reason": "sourceHash không khớp trang sách (1feec9a21fa58515e3f159d9ddf0a36b17a3c9e201c044eb57b07b189c671d48 vs ce1d3e64ea85b649d4d1118236ab83eacea8bb536ade58ca1b042becb0aaa4b0)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b29",
+      "reason": "sourceHash không khớp trang sách (d2350818d0abd717e5d2ef0c7d689cc5d72e009ba9405bb22c197d4d8cac9666 vs b4ce02f23dcacfbb580177b31d97f3b413e042d606315ad18100880847f6c46f)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b30",
+      "reason": "sourceHash không khớp trang sách (5eb8c0e9e58a02c5991c2f2bef3509ecadb42f6b3b161c19b9747488a68b51bf vs ef09b390b9bbf00be1b73ab5950d2dadacf22e714617ad067fede8be56dc0a71)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b31",
+      "reason": "sourceHash không khớp trang sách (d3ba5af486234868167a4c59b44d405d87831ad3f45b7fb960d761be65dca1f2 vs 7e8d60521eb9e18a63b22e2562fe2ba9f636b02da7b0cfeb2ea9f2987f584d93)"
+    },
+    {
+      "lessonId": "tv-g3-t1-b32",
+      "reason": "sourceHash không khớp trang sách (100d12b9a2a2d586aa983c5a5ec3e0bfe9862a152120aed5b82b13519913ee45 vs 0f6d5f51eb6e64184ee667cfabebab7a1033f73ab73b8f1741b066a7b76c087a)"
+    },
+    {
+      "lessonId": "tv-g3-b15",
+      "reason": "sourceHash không khớp trang sách (e37297b2bd1adfd0a1af14de1247cad94400c8a37a0a8a64a1afb43dbc417441 vs 5dced75ccc0c1435c256a28020f991764474c58c976744807394fa7e1b30a535)"
+    },
+    {
+      "lessonId": "tv-g3-b16",
+      "reason": "sourceHash không khớp trang sách (f5ae65059bb9986da6adbe1be55737ad021ee8d5b52cd9e208b206034d75b4f4 vs f852c25b68417d5bc19d356a9dbac79a49c78030242fd475ab5a6cec35ad3222)"
+    },
+    {
+      "lessonId": "tv-g3-b17",
+      "reason": "sourceHash không khớp trang sách (7ce1e74a09b050bf6f849e0e03cdba3935fad2998677f6d90b6932f6541f3309 vs 58ada5c9b475537f4793e545136d8d3939c46cb8368fc78b57f5bfa295d8cdbb)"
+    },
+    {
+      "lessonId": "tv-g3-b18",
+      "reason": "sourceHash không khớp trang sách (e7b30a49a8758591cac25265d501ad047436666e6e316e5126c27b8a235a29af vs cfb4167418e4f9f3fe1308af537a67ec66ebf45d99d2f416dca91ef4f0818321)"
+    },
+    {
+      "lessonId": "tv-g3-b19",
+      "reason": "sourceHash không khớp trang sách (dba9abdd7350d1018e5bcc09aae21240c2fd15ea45476669f1672589ac96165d vs 8699c443c29bd00477ca387c939dcf0292437110bcd2ee0ebbf5d9fb067610dc)"
+    },
+    {
+      "lessonId": "tv-g3-b20",
+      "reason": "sourceHash không khớp trang sách (a524c3f000626806567b23dc4dad19378c1c4e0c202304d08ec6e8e26a41bcc4 vs b6c327d457eed46f40281747c1b873d1a9c88db71720fcd91f9bede1971879ff)"
+    },
+    {
+      "lessonId": "tv-g3-b21",
+      "reason": "sourceHash không khớp trang sách (3397d2a63628e019cb458468169a16657f49856ff2d8643293589b57b4c2b7e6 vs 72c2e703d92bc3993ef198fccac32a0da47d7c886a63a8bef0157fb4c1bbf2be)"
+    },
+    {
+      "lessonId": "tv-g3-b22",
+      "reason": "sourceHash không khớp trang sách (176e35aac146b1a2d7d885c6c3b3533ff939d3e0832bdaa5906fb14904fad57a vs fcf2b8882e3d72ca430935b423382d087971613aaba1ff888a8d05f2643502de)"
+    },
+    {
+      "lessonId": "tv-g3-b23",
+      "reason": "sourceHash không khớp trang sách (dae5bff05fee1190058e6a01bc5e4b6d1f75017fc7b54e2e3531db438f5bcc5e vs e04941c2072191246a65ed7b96141815d87788c4fe2502786037e08d02c2fffe)"
+    },
+    {
+      "lessonId": "tv-g3-b24",
+      "reason": "sourceHash không khớp trang sách (ee78c7cb4e9cfeaedb47d6c98ce7026a498aecfe6d49a00a6b5c94196dbd00e2 vs 30f31cef2733323a60497e0a81fbb4aa5fbc360f81b4a5d3f1018a8feede83e8)"
+    },
+    {
+      "lessonId": "tv-g3-b25",
+      "reason": "sourceHash không khớp trang sách (1476b07f792cf5452f3a17d6dba12be5d9025eb4408a279bcc4cdaaf301929c6 vs 27767508efb597bb0c4b3f03209ede6d5855b27a1bda2c447c0eaeb209250b68)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b12",
+      "reason": "sourceHash không khớp trang sách (36fa2cc71e79747785d1607d4ee2cdb2e719fba8f27c21dcc9a98f52f3a92b30 vs 09700bc6274c8373293a50228d956e83decf86b9924a7efdf2a1c888de9a1da2)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b13",
+      "reason": "sourceHash không khớp trang sách (efaeeacc9cbc63dfa22bdd8b5f97c3933f43380ad307e0a29b59985e0bc529de vs e55709c9673039717fa24d039fc30d5faff315ecbd172ba0ce90255400b01ddf)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b14",
+      "reason": "sourceHash không khớp trang sách (a4f023295ebd4aaae2433f7b6d53874315f1cf69c323a3aa08f5dc45b83988ba vs d41f536dbf401ce5ec215c28795879ce6bb1978fffda9bd3cab5f64c3aa6d92e)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b15",
+      "reason": "sourceHash không khớp trang sách (99f622294992b1869b641029a473580ff2ff6c0a56c1df07f0eeae85c14a7b85 vs a53cde97ebc8de99c91f7d8d6808f47407f07e292adb72d91bef5099419e3045)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b16",
+      "reason": "sourceHash không khớp trang sách (db66f734703530f4fdfb32d9c00b61d4179e7aad35d576ffb71f017d7a4c3ba0 vs 48e0da31ab7f6f2c368dd8b45bcab637b19e08e92f537793fb03c58ef5a102d9)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b17",
+      "reason": "sourceHash không khớp trang sách (cff4ee23100f78de533f3e7d779320a8623199c08e0ce4454386204329af63b9 vs 3dd8454a42ae717393f687978b785d3e4fe5e1b4ee56dbf5364bb4d712ab9a08)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b18",
+      "reason": "sourceHash không khớp trang sách (80f53738996c80c91b3e09728fbfc05e11a6b9a76f1d5faaece11767d623f094 vs 0d8477aa66031d655f9498bbf7990678e1abed5699ae1942555a938d575799db)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b19",
+      "reason": "sourceHash không khớp trang sách (4cd53c26e61b701ff0274ed9b90a4ad91a78ef5600c0fd9839f83f5bc90b49d7 vs 1eee643897d4c86a0598ae29a5ccdb60122b433c360cdcee56e7e48067ecf26e)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b20",
+      "reason": "sourceHash không khớp trang sách (6632b499aeae7e41892688f769bb2f4c841227ce2bb6665e1181556cbf31061f vs 7b6e3175781afab22ca04aac608d3fe3bd1aeb8c9c553f3da6fa48a70e4f92f3)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b21",
+      "reason": "sourceHash không khớp trang sách (a4165d55ef5bfe7f8501e98111557643e4b9bd509c783491918105ffaaf8eb7d vs 4cf8a8f6b70074ddc6e55195b30062eaeb308087bf2c171beefa0bd99052cf8f)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b22",
+      "reason": "sourceHash không khớp trang sách (d34743621f73cc41bc2b117c1bf92972365912dc4b6a428c0dcc4f5b76996b1f vs 82602b0cd52a9df58b9115f5994001552ea6e3380616c627559a535fba111875)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b23",
+      "reason": "sourceHash không khớp trang sách (0b547af00696818968e682566b1b67613f87466a4cd0494a6fad14f40b27889a vs ff30e084be330e8ab0a6863fc28ef382ed391f24543916669a462fa8f53d95c1)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b24",
+      "reason": "sourceHash không khớp trang sách (a579b10f9624ea8f44f1cc96733a6dfcf581a86c8ea7a1c04ad5981435e31911 vs 28b6581a142c4475b9bf28ea5b7c72e38ff79d6ab98548b31c94a49ed9215bed)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b25",
+      "reason": "sourceHash không khớp trang sách (c4cca4e606b586ba02e18294f7219a285054e799d941635bca50e569218267df vs 1da8a94721bbfb98cd6f8e314cf857682b59bf622cd1d9475577fec779dd772b)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b26",
+      "reason": "sourceHash không khớp trang sách (c4faa8ab0b7185c920bccd69907f5529705d29bba23ec951f2efb829d8f5b3ed vs 70714ec13638ff3acfb6e847f92f5a41f2cb32deb357e352802ed662eb77a407)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b27",
+      "reason": "sourceHash không khớp trang sách (aa551ccb27e49aba75568f5a965190c691b09156618e987776423d18d4826ed8 vs f3d6ce80303985a22056efbdc9e517a97116230a2e4fe11603def643207318f2)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b28",
+      "reason": "sourceHash không khớp trang sách (2ea327b3d75495a340726babb0b350671c6a7c036a94b83d5ed81438445bfa54 vs 0ad6f57d62a4d0e0ac1e818403a504aa482fe5cb2186785a7f6164a4f82abb97)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b29",
+      "reason": "sourceHash không khớp trang sách (6aa52976af3812b2888335b1a09309d043bc84567c26354fccd428d3bb4d449a vs 264ecfc4f19b7bfb930569fc1fdf17d33cd3f08f614888c84bf62458f01c7850)"
+    },
+    {
+      "lessonId": "tv-g3-t2-b30",
+      "reason": "sourceHash không khớp trang sách (c6cca4b44000fdae158cacf49c11160967222aab389f725ef1d8808524881672 vs eae59f628e0a3e63e87c75a81f3214713beb831ae8d53a23ca94633e5d5907d3)"
+    },
+    {
+      "lessonId": "tv-g4-b1",
+      "reason": "sourceHash không khớp trang sách (3da8b31f6ad52dbe2acfa022cfac6144398854884f883642a8a2b50c682ca2da vs 6303bdf9462010972e74314b5463c0417f0287965c587ea346fdcde259888a08)"
+    },
+    {
+      "lessonId": "tv-g4-b2",
+      "reason": "sourceHash không khớp trang sách (3090511e397f4fe8736e82dea0f6b9323cabad6eb8d5b2031a470abed54fffa7 vs f95e99b0f16be1d87488f019b2533fd5b9f1e2b20ed6a2d793bf1521b390bb2d)"
+    },
+    {
+      "lessonId": "tv-g4-b3",
+      "reason": "sourceHash không khớp trang sách (9153c44d42a68a0120769c3cbc31968c6a65a2dab0d077cf22a7abd73ca496cd vs b0de1ab7720c576e60676a9e6d5da319f2f7e243e701caff357a064610f890cf)"
+    },
+    {
+      "lessonId": "tv-g4-b4",
+      "reason": "sourceHash không khớp trang sách (9371068e66997f396eddbcde75e2d10affbadd65ff9db07403959b8f780356a0 vs 0d56c8daeb7158060fd30c6c22d90e16b4319cbafd20b7e697ba04ac3e50ae9c)"
+    },
+    {
+      "lessonId": "tv-g4-b5",
+      "reason": "sourceHash không khớp trang sách (d33b5c9703b70022b518e6895c61b9d8545ed40f251a93a3e15b2826bf5f374d vs 552bf5638aae65670c8a6d094cbb5b0d742a9b6d9358409ffb8f8fcf9a8a0223)"
+    },
+    {
+      "lessonId": "tv-g4-b6",
+      "reason": "sourceHash không khớp trang sách (12f0a96f961f98e5d96b86208458a3bc82f4b1bfb95a8f3937c4d65748922032 vs 3b8000f83466430bf860169434a6c8b6ee8a21380c11132ab073627f72c66e5a)"
+    },
+    {
+      "lessonId": "tv-g4-b7",
+      "reason": "sourceHash không khớp trang sách (a73613b97b2bf7b999e5e5abce4ad251d73383151aea9590833f6de2db7098ce vs 5c11edead06f252329a48dd3e4b5e9d86b71bd820d621545451ca2f62b12ae4d)"
+    },
+    {
+      "lessonId": "tv-g4-b8",
+      "reason": "sourceHash không khớp trang sách (569d05470812735a7e97b51222eb799126e4e4183df47446ec4157bb6b05ffee vs d7daff3710af8451dfff80e3312b4630e828fc03736ba2de41fd34dd2f6232de)"
+    },
+    {
+      "lessonId": "tv-g4-b9",
+      "reason": "sourceHash không khớp trang sách (8d6ec0eb03603368c86d3cc495434e1b26a8eda0d84c54427b76cfe4cc3f6810 vs 27e058ec5b5c2c2d6393aa7447f44590464930ff1b30709d8f3b1191012e3281)"
+    },
+    {
+      "lessonId": "tv-g4-b10",
+      "reason": "sourceHash không khớp trang sách (25ffbd3af37167daf5f87d7b01f24df355bc4b6fb43b68e550ffa65e9fd5c133 vs d5451d0300a45ce2ae51ab6d5261d32c9e0c08e5d7a45f39b05d05b8bd8668be)"
+    },
+    {
+      "lessonId": "tv-g4-b11",
+      "reason": "sourceHash không khớp trang sách (bd1a30349f90c738c794bd7926d386aaae65430c0fb42d1fa156b805bee1e485 vs bc334fd764f1aebf4d57932716645e37dbf72e1798bb251315db584d10820313)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b12",
+      "reason": "sourceHash không khớp trang sách (fede093ea0000e37d461f8baa28fa526f2b4774d308d70eb64d98a919ff95b33 vs 5b0a67d710e7aa645715ed7b324068037a93d818f70eee6730a9c34fd6d17538)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b13",
+      "reason": "sourceHash không khớp trang sách (8472941d9b0fa464df491dac7deba9c6901415b5d44bb242b75e7ffc102b120c vs 4cfd47ab3eb31751c235b3df0bd53abe591f7ec3293622cde28c32c1f56b1bf1)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b14",
+      "reason": "sourceHash không khớp trang sách (84c254f11a70a1f8fed6ad94488714b2fcb32d307cdf71698ee4fcc35c409ff9 vs 08e7a50d87758b28877aa27dfcaff6e156578bd09eb1e15a804091a00d368254)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b15",
+      "reason": "sourceHash không khớp trang sách (72d0a72ee76dd6bf59f2302caec34e3cb247fa5e169fbc33bbfd72f553f5a01f vs 64955c5ed4453c14feb579e7a86e2f10ead05fa663f2f2a0b2d6f8d36f2af9c2)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b16",
+      "reason": "sourceHash không khớp trang sách (cf342b99de1f40610c606b6a3e4e8a215871971f5daf43a00b42f017f504ff23 vs 55efe7d8b3242fbd304879225e8f7bc3f882d33fc1c09844c4daded182ea7453)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b17",
+      "reason": "sourceHash không khớp trang sách (c490f9308e2302dc4746fe24039344e3ccdc94771dfdd877d0eee6ed98b0ec2e vs 0b1264dd03eb0a99eef9e433d084322fbad20870b001c45971a52b12639beb8c)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b18",
+      "reason": "sourceHash không khớp trang sách (463a8aef9f4540c81b286f75190a4df2304fdff3aa5f3081ee29569283f09482 vs 11eae291fe3a1aa1d1156768d1ad6c6cfe96c9c32e0ee6b21f8253653bcb562f)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b19",
+      "reason": "sourceHash không khớp trang sách (f09c19e337d8cf6c926ce19a843d088eb4b2d03b82b49474f9dbe07fcc753a81 vs fc65fdf8e4769c4a4ef1abecf5f3dcf5f0d9c62c5bc47068c0207d87dbb47eae)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b20",
+      "reason": "sourceHash không khớp trang sách (5cf11a98c097aaa749e4baf9a11f5fd7016e0d7473b70725f07da5522aa4283f vs 79d67908e67e73d81c05987336496cdc872413f61ad1b9b94ab214db77a9f2fe)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b21",
+      "reason": "sourceHash không khớp trang sách (ffc5d7d23a809c17194f886ebcc10a503d857890d4a1a3e5fff49aeaf552c4f5 vs e224d47951960106fe7068e5e5716cd870c18a47c0e8f536a83ac7e963a90f29)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b22",
+      "reason": "sourceHash không khớp trang sách (df3deb025b1b0d65d7bb5fcac74be1ae8a4e32dbf761f2bbd0a5ded7ae6ba991 vs 17599bdc4530ae88f499df27e33d513bcf01176a6925c0482d201ae0ec8c7032)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b23",
+      "reason": "sourceHash không khớp trang sách (0d6b640b0925c313965bec3efa85b1eb36cfcdbdf5472365f7a2475d4bee3734 vs e97fa2c2d6090c438508da1dd6da4cf0c8001e570b5dd3ef124123e9c1ab1216)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b24",
+      "reason": "sourceHash không khớp trang sách (88d9f05204e7266aa08191c0b112ae8c43029aa193b4ae1fd0353227bd7fea35 vs 346abf93ea2dc50c8b592300b206637c3d394f5f0930dc8112f14d278873e10a)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b25",
+      "reason": "sourceHash không khớp trang sách (166262aefdb6f05217583b303117e51f74afbd2fe77d3ba2dd9d58e1da2d0977 vs 868f6575217febfb5d52a99e3e6d113b993fbf7ea33fcebfb3ecdb8f123cd094)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b26",
+      "reason": "sourceHash không khớp trang sách (351bf741b2321799d3acb872b9e756c13855bccb4c4fa10074c3700dceddf60c vs 13bb58dd10ab32a6eaf6efec8c086b91a616f0dd067e900513ca6d026a54b215)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b27",
+      "reason": "sourceHash không khớp trang sách (4e6a36e0fa0079f8b3892e1e53d06a4549e3166c1b454aafe8a2ff84786e3106 vs d93a09693d6590874bec79ab9335b2212abd91a9354d9e68f249b281dad25e70)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b28",
+      "reason": "sourceHash không khớp trang sách (fa6cbf521e12e80bf41514b0af1f20396b60803d7c852d5f0aa44da609d6e77d vs 32361417a74a371f1af0724d53a9f38e10239b654169dfc45dbb864dc709ce35)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b29",
+      "reason": "sourceHash không khớp trang sách (7498b176c445604fe02c0f1812f46645fad829ed6d91865d7f312b7d79799cf4 vs 5d6dddd9527fabe0b05fadea9121c1615b038f6e6b11b733ddf76241d828b486)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b30",
+      "reason": "sourceHash không khớp trang sách (b053917339c3ca981d6ab838f8b211d354c8c235834e6931570dfdd0e10de21c vs 12ccbe5d83100fcff1f2c1cc69bd2fe575043989dbe52b9480cc1b3f9356200e)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b31",
+      "reason": "sourceHash không khớp trang sách (ba6158564a2b70d5d8452d3b690e63d8fb8fccd0d57571bae95df699f7a73f2a vs 9bd2d450424b2a57206d6fa1557d257a45095a4a2d0c0a3c2dc9a374dd924d56)"
+    },
+    {
+      "lessonId": "tv-g4-t1-b32",
+      "reason": "sourceHash không khớp trang sách (fa97228c30067708ec9c6e064442d5d3ff4ed17ec2bb46ab62f5ae872eb4239a vs 2b4254ce1b50e30bb2e90d61c59c6a45feb817272d63e1fd2671590b60534e4b)"
+    },
+    {
+      "lessonId": "tv-g4-b12",
+      "reason": "sourceHash không khớp trang sách (69c72e7e31e06f9623f6e0c3bfefc651b396856b4ab281d1896bc0e8ae9c940a vs e7237ef39618a721f6f7c2acfcd8312b595d00eb7dd2090dd4595a3cedcdffc3)"
+    },
+    {
+      "lessonId": "tv-g4-b13",
+      "reason": "sourceHash không khớp trang sách (4a2c0db35cbd63fe56af557b8ccb64d02a37ead42757ebd8e4e6999675a56c8a vs 2c9d5b5ddc245d8511279c8278331124344773164a59e3e2345ccd0364138143)"
+    },
+    {
+      "lessonId": "tv-g4-b14",
+      "reason": "sourceHash không khớp trang sách (9fede10b6dae4ebd845a97b99ce9ce7606113426f7ec0a0dfc3149bf3f9c5f03 vs 7e7a4bfa74afa1a4bedbd064fbf8c3139691c689e220f7daf4c962e3462a7999)"
+    },
+    {
+      "lessonId": "tv-g4-b15",
+      "reason": "sourceHash không khớp trang sách (02a40ea95bffbe3c649bdd3bef0cd0fc3a3e5d8cbf1425f0983166e44e2966b9 vs f4253bc00ba1d20a1fd8323ba2b7d0e3e0379f7ed856b6adb93cd718e93ae94f)"
+    },
+    {
+      "lessonId": "tv-g4-b16",
+      "reason": "sourceHash không khớp trang sách (80c2b404fddb0f0f9dc3702d9d4d682315de5ec8564306caac3d796970e86ec6 vs b5f16ff3931836101e7ba62d3b7b1be52a0c38e551c7be1447a410dc397536a6)"
+    },
+    {
+      "lessonId": "tv-g4-b17",
+      "reason": "sourceHash không khớp trang sách (e49929031e3100a1226e4ecd10193beaa2e960fb816026ac8609f65ef0617877 vs 2a80b0da43baa7206264be1bb55f83da16d150f9614813d25e9c4dfd2ec675b8)"
+    },
+    {
+      "lessonId": "tv-g4-b18",
+      "reason": "sourceHash không khớp trang sách (b55da5d09fc976c8580d3ec0a3d6434b89da16fd476467c1a6179d45bc8fd9d9 vs 47d58ca5dd9a55f9b98f0c0742d61769c0381afdacf3960e9ca4ebf939e26d6a)"
+    },
+    {
+      "lessonId": "tv-g4-b19",
+      "reason": "sourceHash không khớp trang sách (2ddcbb0c34ed7bd81dbb63e59269b70c7443ec20d4b86937253f5af64f4d93d9 vs 4b71233ce2ff1ff9b67a414c77645b00826c02d07e7d4007698878e6b18994f7)"
+    },
+    {
+      "lessonId": "tv-g4-b20",
+      "reason": "sourceHash không khớp trang sách (772c687c5a2a931adcdb4e17fc2832af7cd26ec9eeded30c92b7e7b5fc7472f0 vs f74f9969390008d997c7da14d7f7adb9d58f31a3344c9d782c25e78766610115)"
+    },
+    {
+      "lessonId": "tv-g4-b21",
+      "reason": "sourceHash không khớp trang sách (06f792ee1ae29193eee7d5a1f894caffec6e210bc84ff0a5354f9481d3014261 vs c856dafb31bf1ebb914bf5cb60e893ebb4547f8e0cf11b30745f69cdc23b6e18)"
+    },
+    {
+      "lessonId": "tv-g4-b22",
+      "reason": "sourceHash không khớp trang sách (aeabb95493a1cd484319d75519a490185f2340fc24842dc2bc577ce9aecedf08 vs f35bb8ea67ff346c178c3ff2344888830867991c79d4265d2e59a0519d3a1eac)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b12",
+      "reason": "sourceHash không khớp trang sách (7a64292580ae0971248da32423003ba581e6824de6cc1356735d9a53cd37b9b5 vs b5d7d36950b5edb5bebd29d9fbbcd16130cf8f28505c6bc2d7e9d56015fdcb48)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b13",
+      "reason": "sourceHash không khớp trang sách (b1e3ac1c5c36a66530f0ae4a6877e45f2209775eb4c20dd4b0eec400f9a217f4 vs bf4f3518163fa14149364b4457ca15d790f3106c2009d691018fd51fdf08b205)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b14",
+      "reason": "sourceHash không khớp trang sách (4b3cff2f7e5835860a0352cc73b3e1cc742e8029e2eaf16a46fe57c9393fcf0b vs 85f6dc789ceace17f64f502e599b7c78177818f7982a6053f0cb90b1571369ed)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b15",
+      "reason": "sourceHash không khớp trang sách (b73303f3818d167e894991f89f70209f3a4f4e36ef7591d72e76b3b6f249a60b vs 7f457201d93cfbb20bdd4090faabbbdc8dfbe5824e0b4304a8ef31e1ee709e21)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b16",
+      "reason": "sourceHash không khớp trang sách (e1bbf80bb22f6962690060e67a8646113c3dbd3eae8f8f2e50b92de8d02f1c27 vs 01d2a3aec72549b01e31d4b37aefe81cfb1b03527baa3f73d5c468ee28c58be6)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b17",
+      "reason": "sourceHash không khớp trang sách (c9f790f218e827d1ca018bfcb1a379e6e58c7a3ec3a90c96565756be476e40c3 vs 4b17e0726f4497617269a50bc5d905226d61331160400752a3576ab2336456ee)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b18",
+      "reason": "sourceHash không khớp trang sách (fdebffaeff061265195be451bdfe8e7b190ea5fd8097031c739250a99c6d544f vs a9c9f655c8b1983e82e03f5a33b0922a3ffe44526a4b796f4402002bd9aa6dd1)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b19",
+      "reason": "sourceHash không khớp trang sách (e0157b3d4f977e0c0c29392c51ad2853d77c82d8eb0888dacac0f7e3924fb1c0 vs c43690802720ca3a159907691cf232e64c94c6043e96ab40fde361dc85d9ccd0)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b20",
+      "reason": "sourceHash không khớp trang sách (c232d11e26374b4074b65ab1eadd36c8723c1a6a67111446c7c3667389615c8c vs 307e4f2505159a14b1331811958e6cf30cd5e8f885e1e9541da25a13fc71cabf)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b21",
+      "reason": "sourceHash không khớp trang sách (b3cd1566ea39becb41798d36503805142b2b4f9c71ced1b12d4d3715ce0c7e71 vs e3bfd179439dbf1eea0fe76a97bfd6389ff2d258a75da230003a264958e7d1b4)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b22",
+      "reason": "sourceHash không khớp trang sách (4cc6b9ff96dfb95e2f440f4c35b157ce98971094f7cb9445b72db92eb8fa441c vs c6338fd6b23a96a9d2333c083db575f7d164235bdf936777d0f52d069df767a3)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b23",
+      "reason": "sourceHash không khớp trang sách (a8c0b1e3fa91c8b6b0a06a7e090e578ff71879fdc10137cc4c7c4f5b236774cb vs c4a8062cc84c0179a9ee4331138eb7129f1be6d1212dc5a83c3835cd41de3500)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b24",
+      "reason": "sourceHash không khớp trang sách (e5fbeec45ce486f9e76b0c7d56f9b799daaf0aa730ae527ef57d8497f64e5635 vs a29d339b1202dfce0843e7976a5e651f7a07aa2cad44b5caead3c8f90a57ae1a)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b25",
+      "reason": "sourceHash không khớp trang sách (99df13e6263219e95e843e265c82343af8190ce61422e96712ae5347ed285ce8 vs e7a7f2edcfb262c9044a9de58c982e3b8cbdf040dbd970f1bc5ad4bb0cc86e40)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b26",
+      "reason": "sourceHash không khớp trang sách (6339691938db0c1cf59cb0272794f0f8394b5c63772a4eb031b30083e8454787 vs fe8bbab5c915063d8019733532355ce6c0febac665aeed02783868c8c00618e3)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b27",
+      "reason": "sourceHash không khớp trang sách (de8e53f03adab8097a865e1cc1fee8129d10e113d02f36c2458ef5e079568627 vs 1e7edf86bfdf2a8501b4db839e24b88fac0ba7a5e5a663c38a64baa5011caf52)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b28",
+      "reason": "sourceHash không khớp trang sách (a591e3fb7d65ed0163d510641724592a6162a652962e3127149b57eb0ef96be9 vs a0556fa80b4eff59574daec0a16c437717fe094bd5448cd5b7d56feef4cb898d)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b29",
+      "reason": "sourceHash không khớp trang sách (9053bef94293945a07198cc2c92fc3c3ac9a98bb6471676264f7ba1ac9e21092 vs cce1efb1416a531d7a2b1e477e7328fd488b3c663430c057f6feb2b50a59899c)"
+    },
+    {
+      "lessonId": "tv-g4-t2-b30",
+      "reason": "sourceHash không khớp trang sách (a1e2d3ab4bdac14411df09d71995f7dc22c9e286638bec3fc5d298d31d323f2e vs 07e3359027228ccbf82486a0d71d665f657efdb53f99b900247784147cd6c4cb)"
+    },
+    {
+      "lessonId": "tv-g5-b1",
+      "reason": "sourceHash không khớp trang sách (81f132326305490ad1e6985c7c4412ea5651ec98b2891bf7230fe7ea2058bae1 vs 2d3fde428820eb7c770a940ecd688728477814cfd7bc960ede6981b6570bb7d3)"
+    },
+    {
+      "lessonId": "tv-g5-b2",
+      "reason": "sourceHash không khớp trang sách (68dbb38d56bda8ac09eb57f9f55b98d5d9d507b922229c57647d68201bdd6daa vs 0096745ffbf4d8165c31eb5d505d5ab3fb24e105a42d9f66a34fed6e4cb4277d)"
+    },
+    {
+      "lessonId": "tv-g5-b3",
+      "reason": "sourceHash không khớp trang sách (b253b3f1b165d3626912982234107b143579ed4244ac8682f44026a9a02dde39 vs 6f512443387bf64fef7f85fa331e2e3f95a82298a85f330a678dda94f9860a3d)"
+    },
+    {
+      "lessonId": "tv-g5-b4",
+      "reason": "sourceHash không khớp trang sách (69071dd6209a7c8711c00cc7c7f31cb2ca276cdcfeeeb92eac3b711a992de30b vs 8171e3ca2fa6810635ef3d8f3d604fc6077060a9c4d2f8c40b5efda8ee025fa1)"
+    },
+    {
+      "lessonId": "tv-g5-b5",
+      "reason": "sourceHash không khớp trang sách (0006dbdee0d1e65c5d9bb86af6dcf31e69680d06b6858a7b892363eea77cea59 vs e4aa1ff662ed041a0b144b4e40196efaea32a3cd645074d0b0c1c17a0a772d52)"
+    },
+    {
+      "lessonId": "tv-g5-b6",
+      "reason": "sourceHash không khớp trang sách (2bccc0277e7998527c7ee3f570b643bf44b7129c12e84ee66b93426443fb79af vs 0856ffd1bb38055188fbfa37629831c9654c5582f6fdc3fa152b228fc755ef93)"
+    },
+    {
+      "lessonId": "tv-g5-b7",
+      "reason": "sourceHash không khớp trang sách (9ab297eacb7f0dac445f9a04b04c0044e279bd1dd262883fdf3a3e636172b9b4 vs 789d5ae19a6b07aed292d06a7566e920eaf867b1c5d86eae0879882bd8f7ff41)"
+    },
+    {
+      "lessonId": "tv-g5-b8",
+      "reason": "sourceHash không khớp trang sách (d9c3c17027de7ac36c85b902ad5f0cc0bc6ac97514aaab9c1c803928b148e005 vs 09e8d5fbff26cfbaa949381d23fa4f69d7bcc2cad0b4c2d46b9d2abe3aa3e8f9)"
+    },
+    {
+      "lessonId": "tv-g5-b9",
+      "reason": "sourceHash không khớp trang sách (d7c0194497c29e89d4c232abf9f3eb74294013b2695ce8e023f236f3ef75a306 vs ed0072f166ccb570dead5a3251fb05cd61f978d2a249fcc5352bfbf753df0a4d)"
+    },
+    {
+      "lessonId": "tv-g5-b10",
+      "reason": "sourceHash không khớp trang sách (bf5e334a185da2f73e95fda1f51a55baca2e85f213377950e731c1580e4f93af vs 5998cde014a7a1976ebcf1e000ff5571e21c82443a8a77560bafb8ab3241eb55)"
+    },
+    {
+      "lessonId": "tv-g5-b11",
+      "reason": "sourceHash không khớp trang sách (79d27751b355ebe2b2e1c9d0eb215f60580d5236f61478c35076df4f4fec5d1f vs 1c96a7784990f6096d22afd86bb8f42e94ea9cbd59a833f8b782c2455245b288)"
+    },
+    {
+      "lessonId": "tv-g5-b12",
+      "reason": "sourceHash không khớp trang sách (42d32fff698de6d6e20ec7498e22e5afee7b08b0361f1355ed41fb133ee612e7 vs 6ccfc2b257ef6a9d00357e010ebf57cf34668be1f552ec20a5e4e250017d0968)"
+    },
+    {
+      "lessonId": "tv-g5-b13",
+      "reason": "sourceHash không khớp trang sách (6470318efb4efa702a7409d46006630a783655f8103487904ec8add0e6f87d21 vs 6470f2ac974bc50947608f1f528b8ed0fe2342aec6b358fb80022943a9ba6339)"
+    },
+    {
+      "lessonId": "tv-g5-b14",
+      "reason": "sourceHash không khớp trang sách (e584d1758136e99ba62f4bdcdaa49ea7fccfcb63fc1d6dce7f0b51afb3ec8875 vs c2031b6b76a736bc3b002529be89ce84af735d8454046a2e71c39b74afede247)"
+    },
+    {
+      "lessonId": "tv-g5-b15",
+      "reason": "sourceHash không khớp trang sách (24a369d98560093c745b970cfc2b5114eb8052adf78a123d87d4e7dadc212cca vs 005d1bed907b7b87692ed958c0d1326db0e9beb68700f50bce1f75ff3c66bcc8)"
+    },
+    {
+      "lessonId": "tv-g5-b16",
+      "reason": "sourceHash không khớp trang sách (6747bb114f3923b1c439a531f76f8a8946825618e70f63445064520d38028df1 vs 8d1ac24cd08129bf844249039985014e92b2d856d638af6b71dc81461a355c72)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b17",
+      "reason": "sourceHash không khớp trang sách (d8513c2fdb27c77ab5ef30bd233e21fae0c557957755a89ac01468bb7e0c1ab8 vs fa6014fac0f8536524cc5a2851ecfba14bec9fa8bcc2744ac8fa4c4828b04404)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b18",
+      "reason": "sourceHash không khớp trang sách (f5f00fe6acfae825ef448a6ef7f550c784503af84829b7483f5d4fc7bfb12663 vs ad126ef1ea0e70657413cf86aadc2916912932aee574a166d92d14000c1b8e3f)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b19",
+      "reason": "sourceHash không khớp trang sách (c2b1b7f5fa0f79ac5a5efbd76fe6dce5570cd645614e127e4e9b3eb29a79c552 vs d755ede6d3dcce4bc305a2ef5ae1a197b330fb39c4eaed2b0e14a0aa8a09c8a3)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b20",
+      "reason": "sourceHash không khớp trang sách (8e385b8c6005278bcd2add5dc3bb92a27f1cc9ae9ed131991f82cae692c3cc1d vs 68f63db01b739a5ecfe01bfa12d54cd7e5d7f5f124a45fb01712132af65cebe2)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b21",
+      "reason": "sourceHash không khớp trang sách (81aec627ee4ae0b614bb5b5383a3a81246b510ea21eb6da773f82b99b4f3c7df vs dfe441771629b78580cb94e790e7dcf43763ae7dec31ab5437d2a5b2a65f98fa)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b22",
+      "reason": "sourceHash không khớp trang sách (51ad13e7e2a010efdc4c3f117b7db080cff5155b3eb857b6867a08a367f82fe1 vs 2d600cd7e14166b46ce4d16a9643aed5efd1696a7d697536574722548676530f)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b23",
+      "reason": "sourceHash không khớp trang sách (69d6eb5864fbb0ee11c288acd35603a043435d8e5459f8af487748bf984495e4 vs af02be94fcaffdc9f10902a1199f3a65afe33d5f3afd2696c1c374da079d3d04)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b24",
+      "reason": "sourceHash không khớp trang sách (8969ed4c301c71d933b009c27c8e18cb707fb62000b69f2e3ac6d213d6145c3b vs ee7e78d60667e3620041d05d1ef019f4413c51b8ff3a2a2d2f883c99c661c417)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b25",
+      "reason": "sourceHash không khớp trang sách (d574b7074eff84870e266de151487a5d5dd1767f8edbe9d2c4e2377ece3e30cb vs 50677cc1975aaa5c3c6db4b891cf430be77f976f99c6859c79a857ac61e2ccc9)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b26",
+      "reason": "sourceHash không khớp trang sách (9cd90605c67665d013246a653bf8492ce8e3af22dd8bffff4778748b7a80991a vs 352fd6775cb0a0844843d34a2e554ebd3a97b698893ebfa3a39c6636d95f2589)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b27",
+      "reason": "sourceHash không khớp trang sách (09258c8f19e3c978663dd2c3473fc0e0629b6f112d15af2504f77cf531df6988 vs fda46ec880e5f07f00180d32b6251adfdd27f335ac92f3153bcc7cae8b62cac2)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b28",
+      "reason": "sourceHash không khớp trang sách (65b2ff034e765ef99a246fa6ca4bef40432afbf8cab1a7e0476e5421519212cf vs 53210fa4dc2d94d64775ea958f1888fbb9a36b873f423733f2649f2832c459aa)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b29",
+      "reason": "sourceHash không khớp trang sách (7ecee8ae1d5561fc8bd3c3952528d26221862c4c031d0cbb51a263ae7557f2d9 vs 60a69e641c9df6ccef6fa3d05941d957b64820492447f219e42513ffc6960fc3)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b30",
+      "reason": "sourceHash không khớp trang sách (84a70968a84af6359de8b7a48bcd450913b2f9c3bdfed52183da553f32cb8f82 vs c687581fc66daaaf16746eb7018094f304733ba53480aa7b20e9c0aaec121920)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b31",
+      "reason": "sourceHash không khớp trang sách (7e6cea31b77064ae0c2390f7069d2c2faaba7b65a1ba54fdf868b320614f4e02 vs 14f98bf76790b824a5fdbaf9462fdefae507c08eea5123874b315aa762850413)"
+    },
+    {
+      "lessonId": "tv-g5-t1-b32",
+      "reason": "sourceHash không khớp trang sách (92eafd2d57a1d3fee67557d1db8ad84a14ac8d2396cdea9a107bbca556a04a46 vs 74ff6d7330c43a5e971fb93cc0e0195a5d439a33c1e8d4f790906e3a0e212385)"
+    },
+    {
+      "lessonId": "tv-g5-b17",
+      "reason": "sourceHash không khớp trang sách (428c1028057c9891a34dcc2f4c8c75619738a68c2b6c5fc5cf8b48924bb36573 vs 6e97826fa4dcea36249b3cebfe06a8bc4d6624c7582b5c51240ad26c458a6d4d)"
+    },
+    {
+      "lessonId": "tv-g5-b18",
+      "reason": "sourceHash không khớp trang sách (0fbf13eb384ac47adbe8b1295028aafd9661127e7b79fda4bb4096267f241d03 vs d62cb540e5f71cc7a01f5f90aa19b82ef0e545b783a87d43aa14ece7fbe3661f)"
+    },
+    {
+      "lessonId": "tv-g5-b19",
+      "reason": "sourceHash không khớp trang sách (09eef4b0a09e870729ae3acec95640742979db22ce4829b6b4e90bc18ef96567 vs d00125629901badedd5440a7d8b78fd93238e98827f2411872ac1923030ad009)"
+    },
+    {
+      "lessonId": "tv-g5-b20",
+      "reason": "sourceHash không khớp trang sách (d70d6b79cdaa48cc499e52943d7caf4a7dfe6ca1992e0edac91f8e9652254ba6 vs 68ba1d643196e8b17976ebea6cb5ef3dbe71ef43f6760c74d5ae834a9eb87241)"
+    },
+    {
+      "lessonId": "tv-g5-b21",
+      "reason": "sourceHash không khớp trang sách (b09e268f876ae774b1533f5bd1299d356010e5908cc39824f436e08137387b8b vs 251c33ae3bff7efbe2a59a0d19e6426c89b180700920dd0b8782068e49dc019e)"
+    },
+    {
+      "lessonId": "tv-g5-b22",
+      "reason": "sourceHash không khớp trang sách (98839f27a9ad23e690f4a48d3c9978ca5ee6e8c6b3cee9f2c612ee152f3f85ca vs ca9053e4743b9e8bbabbe3b679fe514ebc3fdc75f8a597e210d84bf6e2764426)"
+    },
+    {
+      "lessonId": "tv-g5-b23",
+      "reason": "sourceHash không khớp trang sách (32e91ac9d74eb79639f2a9ed7115eb4d5fc0215cef2c2a9be83cf0049305f818 vs 413ac4bd49d0a015c2300a8191477a595457bd5d5f20a94a9f9252a0af196506)"
+    },
+    {
+      "lessonId": "tv-g5-b24",
+      "reason": "sourceHash không khớp trang sách (0187eab8c46e609cc3d1c8c814e8081e57eed980da9a5f05f21b0e01bb26d277 vs e63f985fdb94b3e3a382759fcb7e64a28403b6e4f1606e4944e03aa780d85966)"
+    },
+    {
+      "lessonId": "tv-g5-b25",
+      "reason": "sourceHash không khớp trang sách (de5544555a73fc634389b41831357a4c9d0a617cbc37cac347a7358437a028da vs cd3e8efa647131f5c76702cbb8bbd14e0ba209e31196462d033c6f080191b12b)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b10",
+      "reason": "sourceHash không khớp trang sách (02c8547aef5447545e60aa54269bb3bd56c53321c24ec9f0217ab6d481016a63 vs 31ff9b17db68aa776f2d711f654e93da8bcebae3cecf22695c61a76219eb0a5f)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b11",
+      "reason": "sourceHash không khớp trang sách (a06de749e092acab916f25ffa8c84b60f4ffe00dba0dda1441b892f0b031b6e7 vs 0af48177408b4faafba6818feceb40fd17512e50fcd99e1930e9d9594b181688)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b12",
+      "reason": "sourceHash không khớp trang sách (131ec64839ea6adc123e44633eb9dc12b422675e35ead5f685862bef9ace1b72 vs 170f0801fff080c3cd6f0888c87c16f348cdf974df3935cc3d2e1278230272fe)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b13",
+      "reason": "sourceHash không khớp trang sách (249b8f8ea4f71faed1c89735b54ccaf832611e720ce06e0e42fffffd0487555d vs 0b8053e60c775b70f87d26e3507f234ed41d6d916b0a27b271035915d5812560)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b14",
+      "reason": "sourceHash không khớp trang sách (22944d1c21a65d9d93a046201f272ff1dd7700acfc23df202750589d11de434f vs 48d48c8c9f3d067aa512af969d5678e15f1f87dbb0155d018ab6c054e3190e28)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b15",
+      "reason": "sourceHash không khớp trang sách (a5028ef034a86341d00e30df2780132eac4fd31584365e13e4698cf9071da091 vs c81ddf32379f3d7dd3cd799b137198aba8ed52f63df08eed2a463c667a27e581)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b16",
+      "reason": "sourceHash không khớp trang sách (38fe95e1d0a08c9e7e275af8595c25a8e3119c87db2dc6ba4083c98119ce5d75 vs a4ffde504f399ac96495197d063d416c5fbd09fe4f15af19f5e5d8591807e16b)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b17",
+      "reason": "sourceHash không khớp trang sách (d7c5af1b6cd116b0686a62d4fdfd9f360e6c56ad04b0bf5c9c84efbc76dd1c91 vs 7fda7cdfa9620f1cfcc77bd65afe74142092019f416aed156b7d35a389d52ddf)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b18",
+      "reason": "sourceHash không khớp trang sách (3782b6c5c9f50e3fbafb2ca24f83309ab382b7935871cef6979db1db26c8e8a1 vs a55983c0d53dfb84d0f6f42058bb5273c8cfba7859e3a56252ec308634274a95)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b19",
+      "reason": "sourceHash không khớp trang sách (40988e33c93244dd739ad1b23b2befd23eac0c3d2d235a1c60a581e326216d27 vs 4939c92d6c75787019bd38e5968779fea4f6bc5e0836d7be94665baf67da64d0)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b20",
+      "reason": "sourceHash không khớp trang sách (e3bca65436788286445c6606e062ab6c4be00d447c67fac4d9d2ec678ef1e8ac vs 2c5337df93da2ad0ae5fcbdf852bd7d38222bd2f321826037cac8699ca0159e0)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b21",
+      "reason": "sourceHash không khớp trang sách (911574e286220205bb92feffb350a6fd696f601f436930f9c5ef08adf6c1bb92 vs dfe7e2270f4313d835a2ac87768873b9815c01d8892e5e6c96f683058597ddb5)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b22",
+      "reason": "sourceHash không khớp trang sách (d0fb12dccdafdca279807498dc852572023f44c5d68932cc3d908fcb6043ddff vs 6fc46e8abae6637e911690f4ebc2b8d3dfecb2e475a5412f4787d21f11354017)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b23",
+      "reason": "sourceHash không khớp trang sách (9b4c201f8124294f8a1f6ee6e5336c30be6a32bdd1bb8e0f17306b7e58ed5a98 vs 7a6baa0bc286b7f3d2e7ac61cb8899ba9f8644d77e867a16daa1ea13f6995575)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b24",
+      "reason": "sourceHash không khớp trang sách (53ab3272d530c79206781189710cb0cba90574d1de45062b6a03ed2d6fa520fc vs ca8eed15c62f7fec1780198d2e8ccb4be5e4ab0b93bfd57b7f50eabd6f47e228)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b25",
+      "reason": "sourceHash không khớp trang sách (bc2459a5a61e4e587aba742fa3af876655a84365016001b836db150b9152a145 vs ee50c6ea199aee824f2a7e807dc1d49d718ac55a845411fb2104a481fa8f68d5)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b26",
+      "reason": "sourceHash không khớp trang sách (3ee38c926a1e73c9e5e226539e4ac37f95f81df9c9f6c65bc6824a6ffac7b4eb vs 073b6cd3a31e032d2276a59ebb167759c3925de87540f54f4549bac838a6bf10)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b27",
+      "reason": "sourceHash không khớp trang sách (36f9bd580b0ed72459d521b25c6afb687c10762005b38ee2e11a38f168dc16b8 vs dfa78f0dbb470c316242f3536b8221e24801163ff21a2724be7dfc477f5ff6b7)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b28",
+      "reason": "sourceHash không khớp trang sách (0eab55bacadacd2b42f72295dd4c80025a415d1834aa54b888be873d23a670fc vs 0af6cc1be9fb81c5bc5cb653adedfdf9c40f008fdf5b9a607950b70e987c8c98)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b29",
+      "reason": "sourceHash không khớp trang sách (47e06ff18bf8b87d7fc52e131c34e157498af095510e30689e296135dc907813 vs 0aa3dc78f7ed41c3b4a8eb068aaf780febec19adb13a0768dbfe09b950dc92df)"
+    },
+    {
+      "lessonId": "tv-g5-t2-b30",
+      "reason": "sourceHash không khớp trang sách (699e980de6cf454042dce612e7e01682f07d6fe643dee06a054f46e0a03b6e12 vs cecd527385158d6ed2eae9dd22f2bd3eee1c870d84bbba024609ee076bd475a7)"
+    }
+  ],
+  "check4_passed": 373,
+  "check4_failed": [
+    {
+      "lessonId": "tv-g2-b27",
+      "reason": "Mapping sai bookId (tv-g2-t1 vs tv-g2-t2)"
+    },
+    {
+      "lessonId": "tv-g3-b16",
+      "reason": "Mapping sai bookId (tv-g3-t1 vs tv-g3-t2)"
+    },
+    {
+      "lessonId": "tv-g3-b17",
+      "reason": "Mapping sai bookId (tv-g3-t1 vs tv-g3-t2)"
+    }
+  ],
+  "check5_passed": 58,
+  "check5_failed": [
+    {
+      "lessonId": "tv-g1-t1-b21",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-t1-b25",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-t1-b26",
+      "reason": "Audio hash không khớp transcript"
+    },
+    {
+      "lessonId": "tv-g1-t1-b30",
+      "reason": "Audio hash không khớp transcript"
     },
     {
       "lessonId": "tv-g1-t1-b63",

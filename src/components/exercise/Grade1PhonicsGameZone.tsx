@@ -10,7 +10,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { LessonNode } from '../../types';
-import { GRADE_1_PHONICS_GAMES, LessonPhonicsGameConfig, PhonicsGameStage } from '../../data/curriculum/vietnamese/grade1PhonicsGames';
+import { LessonPhonicsGameConfig, PhonicsGameStage, getPhonicsGameForLesson } from '../../data/curriculum/vietnamese/grade1PhonicsGames';
 import { LetterPickGame } from './phonicsGames/LetterPickGame';
 import { BubblePopGame } from './phonicsGames/BubblePopGame';
 import { LetterAssembleGame } from './phonicsGames/LetterAssembleGame';
@@ -28,24 +28,8 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
   lesson,
   onFinishGames,
 }) => {
-  const gameConfig: LessonPhonicsGameConfig | undefined = GRADE_1_PHONICS_GAMES[lesson.id];
-
-  // Default fallback if a specific lesson config is missing
-  const stages: PhonicsGameStage[] = gameConfig?.stages || [
-    {
-      id: `${lesson.id}-s1`,
-      gameType: 'letter_pick',
-      instruction: `Bé hãy chọn đúng chữ cái của bài học: ${lesson.title}`,
-      targetSoundOrLetter: lesson.title.split(':')[1]?.trim() || 'a',
-      hintText: 'Nhìn kỹ hình dạng của chữ cái nhé bé!',
-      options: [
-        { id: 'f-1', label: lesson.title.split(':')[1]?.trim() || 'a', isCorrect: true, color: 'pink' },
-        { id: 'f-2', label: 'o', isCorrect: false, color: 'sky' },
-        { id: 'f-3', label: 'e', isCorrect: false, color: 'amber' },
-        { id: 'f-4', label: 'u', isCorrect: false, color: 'emerald' },
-      ],
-    },
-  ];
+  const gameConfig: LessonPhonicsGameConfig = getPhonicsGameForLesson(lesson);
+  const stages: PhonicsGameStage[] = gameConfig.stages;
 
   const [currentStageIdx, setCurrentStageIdx] = useState(0);
   const [isHintActive, setIsHintActive] = useState(false);
