@@ -290,7 +290,7 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
 
     // Không cho phần đọc/câu hỏi cũ chen vào một bài SGK mới chỉ mới đối chiếu mục lục.
     // Bài chưa duyệt chỉ mở trang sách; transcript đã duyệt là ngoại lệ duy nhất.
-    let readingPassage: ReadingPassage | undefined = verifiedSgkTranscript
+    let readingPassage: ReadingPassage | undefined = verifiedSgkTranscript?.readingPassage
       || (isPendingSgkCatalog ? undefined : bundle?.passage || t.readingPassage);
 
     // Đảm bảo 100% tất cả bài học Tiếng Việt & Tiếng Anh mọi cấp học (Lớp 1-5) đều có Bài Đọc & Shadowing phong phú
@@ -437,7 +437,7 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       : rawQuestions;
     const lessonOverview = subject === 'vietnamese' && (isUnverifiedVietnamese || Boolean(verifiedSgkTranscript))
       ? (verifiedSgkTranscript
-          ? buildLessonOverview(verifiedSgkTranscript, t)
+          ? buildLessonOverview(verifiedSgkTranscript.readingPassage, t)
           : allowSupplementReading
             ? buildLessonOverview(readingPassage, t)
             : buildSourceOnlyOverview(displayedTitle, sourcePages.length > 0))
@@ -506,9 +506,10 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
           : isUnverifiedVietnamese ? t.keyPoints.map(softenUnverifiedText) : t.keyPoints,
         mascotTip: displayedMascotTip,
       },
-      readingPassage: readingPassage && isUnverifiedVietnamese && !verifiedSgkTranscript && !isPendingSgkCatalog
-        ? prepareUnverifiedPassage(readingPassage, displayedTitle)
-        : readingPassage,
+      readingPassage: verifiedSgkTranscript?.readingPassage
+        || (readingPassage && isUnverifiedVietnamese && !isPendingSgkCatalog
+          ? prepareUnverifiedPassage(readingPassage, displayedTitle)
+          : readingPassage),
       questions,
       appExtensions: isUnverifiedVietnamese && !isPendingSgkCatalog ? questions : [],
     };

@@ -7,11 +7,12 @@ import { ReadingPassage } from '../types';
  */
 export function buildLessonNarration(passage: ReadingPassage): string {
   if (passage.audioNarration?.trim()) return passage.audioNarration.trim();
+  const content = Array.isArray(passage.content) ? passage.content : (passage.content ? [passage.content] : []);
   return [
     passage.title,
-    ...passage.content,
+    ...content,
   ]
-    .map((part) => part.trim())
+    .map((part) => (part || '').toString().trim())
     .filter(Boolean)
     .join('\n');
 }

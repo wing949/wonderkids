@@ -130,6 +130,14 @@ function stopCurrentAudio() {
 }
 
 export const soundManager = {
+  play: (type: string) => {
+    if (type === 'correct') soundManager.playCorrect();
+    else if (type === 'wrong' || type === 'incorrect') soundManager.playIncorrect();
+    else if (type === 'pop' || type === 'tap') soundManager.playPop();
+    else if (type === 'star') soundManager.playStar();
+    else if (type === 'victory') soundManager.playVictory();
+    else soundManager.playPop();
+  },
   // Play short cute game sound effects (Synthesized Web Audio API)
   playCorrect: () => {
     try {
