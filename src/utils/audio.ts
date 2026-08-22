@@ -1,5 +1,6 @@
 import { TTSSettings } from '../types';
 import { getVietnameseAudioAsset } from '../data/curriculum/vietnamese/audioManifest';
+import { getQuestionAudioAsset } from '../data/curriculum/questionAudioManifest';
 import { retireAudioForFallback } from './audioFallback';
 
 let audioCtx: AudioContext | null = null;
@@ -510,6 +511,62 @@ export const soundManager = {
     };
 
     tryPlayNext();
+  },
+
+  // Play pre-recorded question / game audio if available, with graceful fallback to speakText
+  playQuestionAudio: (
+    questionId: string,
+    fallbackText: string,
+    lang: 'vi-VN' | 'en-US' = 'vi-VN',
+    onEnd?: () => void
+  ) => {
+    soundManager.stopSpeaking();
+
+    const requestSession = audioPlaybackSession;
+    const asset = getQuestionAudioAsset(questionId);
+    const sources = asset ? [asset.primaryPath, asset.fallbackPath].filter(Boolean) as string[] : [];
+
+    let currentSourceIdx = 0;
+    let hasSettled = false;
+
+    const isCurrentRequest = () => audioPlaybackSession === requestSession;
+    const finish = () => {
+      if (!isCurrentRequest() || hasSettled) return;
+      hasSettled = true;
+      currentAudioElement = null;
+      if (onEnd) onEnd();
+    };
+
+    const tryPlayNext = () => {
+      if (!isCurrentRequest() || hasSettled) return;
+      if (currentSourceIdx >= sources.length) {
+        soundManager.speakText(fallbackText, lang, onEnd);
+        return;
+      }
+
+      const url = sources[currentSourceIdx];
+      currentSourceIdx++;
+
+      const audio = new Audio(url);
+      currentAudioElement = audio;
+      audio.onended = finish;
+      audio.onerror = () => {
+        if (!isCurrentRequest() || currentAudioElement !== audio) return;
+        currentAudioElement = null;
+        tryPlayNext();
+      };
+      audio.play().catch(() => {
+        if (!isCurrentRequest() || currentAudioElement !== audio) return;
+        currentAudioElement = null;
+        tryPlayNext();
+      });
+    };
+
+    if (sources.length > 0) {
+      tryPlayNext();
+    } else {
+      soundManager.speakText(fallbackText, lang, onEnd);
+    }
   },
 
   // Fallback Web Speech Synthesis (NEVER speaks English male voice for Vietnamese)

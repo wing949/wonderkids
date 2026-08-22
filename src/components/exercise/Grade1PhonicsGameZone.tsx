@@ -42,10 +42,14 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
     return null;
   }
 
-  // Speech helper for instruction using natural Vietnamese TTS
-  const speakInstruction = (text: string) => {
+  // Speech helper for instruction using pre-recorded audio or natural Vietnamese TTS
+  const speakInstruction = (text: string, stageId?: string) => {
     soundManager.play('tap');
-    soundManager.speakText(text, 'vi-VN');
+    if (stageId) {
+      soundManager.playQuestionAudio(stageId, text, 'vi-VN');
+    } else {
+      soundManager.speakText(text, 'vi-VN');
+    }
   };
 
   useEffect(() => {
@@ -56,7 +60,7 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
 
     // Speak initial instruction
     if (stages[0]) {
-      speakInstruction(stages[0].instruction);
+      speakInstruction(stages[0].instruction, stages[0].id);
     }
   }, [lesson.id]);
 
@@ -69,7 +73,7 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
       setTimeout(() => {
         const nextIdx = currentStageIdx + 1;
         setCurrentStageIdx(nextIdx);
-        speakInstruction(stages[nextIdx].instruction);
+        speakInstruction(stages[nextIdx].instruction, stages[nextIdx].id);
       }, 600);
     } else {
       setIsAllCompleted(true);
@@ -82,14 +86,14 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
     soundManager.play('tap');
     setIsHintActive(false);
     // Trigger reset by re-speaking
-    speakInstruction(currentStage.instruction);
+    speakInstruction(currentStage.instruction, currentStage.id);
   };
 
   const handleToggleHint = () => {
     soundManager.play('tap');
     setIsHintActive((prev) => !prev);
     if (!isHintActive && currentStage.hintText) {
-      speakInstruction(currentStage.hintText);
+      speakInstruction(currentStage.hintText, `${currentStage.id}-hint`);
     }
   };
 

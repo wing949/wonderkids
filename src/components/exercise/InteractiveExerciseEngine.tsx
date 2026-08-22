@@ -187,7 +187,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     if (!currentQ) return;
     const textToRead = currentQ.audioText || currentQ.questionText;
     const lang = lesson.subject === 'english' ? 'en-US' : 'vi-VN';
-    soundManager.speakText(textToRead, lang);
+    soundManager.playQuestionAudio(currentQ.id, textToRead, lang);
   };
 
   // Play entire Reading Passage audio narration
