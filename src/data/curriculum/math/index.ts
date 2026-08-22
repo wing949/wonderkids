@@ -1,10 +1,10 @@
-import { GradeLevel } from '../../../types';
-import { CurriculumTopic } from '../types';
-import { MATH_GRADE_1_TOPICS } from './grade1';
-import { MATH_GRADE_2_TOPICS } from './grade2';
-import { MATH_GRADE_3_TOPICS } from './grade3';
-import { MATH_GRADE_4_TOPICS } from './grade4';
-import { MATH_GRADE_5_TOPICS } from './grade5';
+import { GradeLevel } from '../../../types/index.ts';
+import { CurriculumTopic } from '../types.ts';
+import { MATH_GRADE_1_TOPICS } from './grade1.ts';
+import { MATH_GRADE_2_TOPICS } from './grade2.ts';
+import { MATH_GRADE_3_TOPICS } from './grade3.ts';
+import { MATH_GRADE_4_TOPICS } from './grade4.ts';
+import { MATH_GRADE_5_TOPICS } from './grade5.ts';
 
 export const MATH_CURRICULUM_BY_GRADE: Record<GradeLevel, CurriculumTopic[]> = {
   1: MATH_GRADE_1_TOPICS,

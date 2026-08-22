@@ -1,10 +1,20 @@
-import { GradeLevel, Question } from '../../../types/index.ts';
+# -*- coding: utf-8 -*-
+import os
+import sys
+
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+
+WORKSPACE = r"c:\Users\TVCHUONG\Desktop\AI\06_eLearning"
+target_file = os.path.join(WORKSPACE, 'src', 'data', 'curriculum', 'math', 'mathQuestionEngine.ts')
+
+code = '''import { GradeLevel, Question } from '../../../types/index.ts';
 import { CurriculumTopic } from '../types.ts';
 
 type QuestionExtra = Pick<Question, 'visualType' | 'visualData' | 'hint'>;
 
 const includesAny = (text: string, cues: string[]) => cues.some((cue) => text.includes(cue));
-const hasWord = (text: string, word: string) => new RegExp(`(^|[^\\p{L}])${word}(?!\\p{L})`, 'u').test(text);
+const hasWord = (text: string, word: string) => new RegExp(`(^|[^\\\\p{L}])${word}(?!\\\\p{L})`, 'u').test(text);
 
 function bubble(
   topic: CurriculumTopic,
@@ -414,6 +424,7 @@ function generateGrade4Math(topic: CurriculumTopic): Question[] {
 
 function generateGrade5Math(topic: CurriculumTopic): Question[] {
   const text = `${topic.title} ${topic.description}`.toLowerCase();
+  const n = topic.lessonNumber;
 
   if (includesAny(text, ['chuyển động', 'vận tốc', 'quãng đường'])) {
     if (text.includes('ngược chiều')) {
@@ -491,3 +502,9 @@ export function generateMathQuestions(topic: CurriculumTopic, grade: GradeLevel)
     default: return generateGrade1Math(topic);
   }
 }
+'''
+
+with open(target_file, 'w', encoding='utf-8') as f:
+    f.write(code)
+
+print("✅ Đã cập nhật hoàn chỉnh mathQuestionEngine.ts!")

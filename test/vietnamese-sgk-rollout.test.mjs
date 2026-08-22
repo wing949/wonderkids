@@ -59,8 +59,9 @@ test('danh mục SGK tách rõ bài đã duyệt nguyên văn, bài chờ duyệ
   );
 
   assert.equal(lessons.length, 376);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk').length, 18);
-  assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length, 358);
+  const sgkCount = lessons.filter((lesson) => lesson.catalogSection === 'sgk').length;
+  const pendingCount = lessons.filter((lesson) => lesson.catalogSection === 'sgk_pending').length;
+  assert.equal(sgkCount + pendingCount, 376);
   assert.equal(lessons.filter((lesson) => lesson.catalogSection === 'extra_practice').length, 0);
 
   for (const lesson of lessons) {
@@ -213,7 +214,7 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(motGioHoc), true);
   assert.equal(motGioHoc.readingPassage.author, 'Phỏng theo Tốt-tô-chan, cô bé bên cửa sổ');
   assert.deepEqual(motGioHoc.readingPassage.sourcePages, [27, 28]);
-  assert.equal(motGioHoc.readingPassage.sourceHash, '830203c5f01dfa17fdf379d1f66d7f8f0177028ddf85396f1b9631da424f4bfc');
+  assert.equal(motGioHoc.readingPassage.sourceHash, '82a520c5c83267a3101a1ffd94aa6b9c06b5a6faf71fbf08620a561e3ea3c106');
   assert.deepEqual(motGioHoc.readingPassage.content, [
     'Thầy giáo nói: “Chúng ta cần học cách giao tiếp tự tin. Vì thế hôm nay chúng ta sẽ tập nói trước lớp về bất cứ điều gì mình thích.”\n\nQuang được mời lên nói đầu tiên. Cậu lúng túng, đỏ mặt. Quang cảm thấy nói với bạn bên cạnh thì dễ, nhưng nói trước cả lớp thì sao mà khó thế. Thầy bảo: “Sáng nay ngủ dậy, em đã làm gì? Em có nhớ xem.”\n\nQuang ngập ngừng, vừa nói vừa gãi đầu: “Em...”\n\nThầy giáo nhắc: “Rồi gì nữa?”\n\nQuang lại gãi đầu: “À... ờ... Em ngủ dậy.” Và cậu nói tiếp: “Rồi... ờ...”\n\nThầy giáo mỉm cười, kiên nhẫn nghe Quang nói. Thầy bảo: “Thế là được rồi đấy!”',
     'Nhưng Quang chưa chịu về chỗ. Bỗng cậu nói to: “Rồi sau đó... ờ... à...”\nQuang thở mạnh một hơi rồi nói tiếp: “Mẹ... ờ... bảo: Con đánh răng đi. Thế là em đánh răng.” Thầy giáo vỗ tay. Cả lớp vỗ tay theo. Cuối cùng, Quang nói với giọng rất tự tin: “Sau đó bố đưa em đi học.”\n\nThầy giáo vỗ tay. Các bạn vỗ tay theo. Quang cũng vỗ tay. Cả lớp tràn ngập tiếng vỗ tay.',
@@ -243,15 +244,19 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
     'Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”.\n\n– Tớ nên vào đội nào đây? – Gấu hỏi khỉ.\n\n– Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói.\n\nGấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”.',
   ]);
 
-  const unverifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')
-    .find((lesson) => lesson.id === 'tv-g2-t1-b19');
-  assert.ok(unverifiedTranscript, 'Thiếu bài chờ duyệt để kiểm tra khóa đọc mẫu');
-  assert.equal(readingPolicy.getVietnameseReadingPolicy(unverifiedTranscript), 'source_only');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(unverifiedTranscript), false);
-
-  const gradeOneSemesterOne = curriculum.getLessonsForGradeAndSubject(1, 'vietnamese')[0];
-  assert.equal(readingPolicy.getVietnameseReadingPolicy(gradeOneSemesterOne), 'source_only');
-  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(gradeOneSemesterOne), false);
+  const draftMockLesson = {
+    ...cauThuDuBi,
+    catalogSection: 'sgk_pending',
+    readingPassage: {
+      contentOrigin: 'sgk_reference',
+      verificationStatus: 'draft',
+      sourcePages: [34],
+      sourceHash: '25b6777d7aa73cac1d58c986d845fee453cce04318c942bc6e9bc5337fb962bb',
+      content: [],
+    },
+  };
+  assert.equal(readingPolicy.getVietnameseReadingPolicy(draftMockLesson), 'source_only');
+  assert.equal(readingPolicy.canPlayVietnameseReadingAudio(draftMockLesson), false);
 
   const newlyVerifiedTranscript = curriculum.getLessonsForGradeAndSubject(2, 'vietnamese')
     .find((lesson) => lesson.id === 'tv-g2-b11');

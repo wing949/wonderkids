@@ -157,8 +157,8 @@ test('bài học mới không bị rơi về câu ôn tập chung ngoài các b�
   assert.deepEqual(accidentalFallbacks, []);
 });
 
-test('đủ 199 bài, mã bài và số bài liên tục theo từng khối', () => {
-  const expectedCounts = { 1: 40, 2: 69, 3: 35, 4: 30, 5: 25 };
+test('đủ 342 bài, mã bài và số bài liên tục theo từng khối', () => {
+  const expectedCounts = { 1: 40, 2: 73, 3: 81, 4: 73, 5: 75 };
 
   for (const [grade, topics] of Object.entries(curriculum.MATH_CURRICULUM_BY_GRADE)) {
     assert.equal(topics.length, expectedCounts[grade], `Sai số lượng bài Toán lớp ${grade}`);
@@ -170,7 +170,7 @@ test('đủ 199 bài, mã bài và số bài liên tục theo từng khối', ()
     assert.equal(new Set(topics.map((topic) => topic.id)).size, topics.length, `Mã bài lớp ${grade} bị trùng`);
   }
 
-  assert.equal(allTopics.length, 199);
+  assert.equal(allTopics.length, 342);
 });
 
 test('mọi bài Toán có metadata và câu hỏi hợp lệ để học sinh làm được', () => {
