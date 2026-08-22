@@ -981,30 +981,12 @@ REAL_READING_PASSAGES = {
     },
     "tv-g3-b11": {
         "title": "Lời giải toán đặc biệt",
-        "author": "NXB Giáo Dục Việt Nam",
+        "author": "Theo Kể chuyện danh nhân thế giới",
         "genre": "prose",
         "content": [
-            ": Tuần : ` ? H - Á TT LỜI GIẢI TOÁN ĐẶC BIỆT ( Em thấy bởi toán dưới đây có gì đặc biệt?",
-            "Vừa gỡ vừg chó m ng no Tốt cỏ 4 con TP máy con? Bó lại cho tròn Nối loợi Ä2 10chãn vừø đủ. Ộ",
-            "s LỜI GIẢI TOÁN ĐẶC BIỆT ũ ú II đế ÂN THẾ í ] “ng —.-",
-            "-) (“Œ sở vi sơ lợi Ñ M4 — Aiyà 2 £ : Z> Ý <c;: <7",
-            "Vích-to Huy-gô bộc lộ tời năng thơ cơ của mình từ rất sớm. Hồi còn là học sinh tiểu học, cậu học chăm, thông mình, giỏi đều cóc môn. Một lần, vào giờ kiểm tra Toán cuối năm, trong khi cóc bạn khác mỏi miết làm bởi thì không hiểu sao Huy-gõ lợi ngồi cắn bút từ đầu giờ.",
-            "Thầy gióo cũng sốt ruột thay cho học trò củ mình. Chỉ còn hơi mươi phút nứa lờ phải nộp bài. Các bạn xung quanh đõ có người làm xong, thế mà Huy-gô vẫn ngồi cắn bút, hơi tại đỏ nhữ. Thầy gióo lợi giơ đồng hồ rơ xem và nhìn Huy-gô. Còn mười lăm phút nứa. Lúc này, Huy-gô bắt đầu đặt",
-            "bút viết. Thầy giáo thở phào. Nhưng liệu có kịp không nhỉ? Ông lo lắng thay cho Huy-gô. . Ặ ch [ . 2z. vợ,",
-            "i - wxaMos Huy-gô mỏi miết viết và moy thay, khi tiếng trống bóo hết giờ vơng lên thĩ cậu cũng viết xong đáp số và mong bồi lên nộp. Thầy gióo liếc nhìn bồi củg Huy-gô. Đáp số đúng rồi! Chọt thỏy reo lên:",
-            "- Lời giải bài toán được viết bằng thơ! À, rơ thế! Sau nòy, Vích-to Huy-gô đã trở thành nhở văn, nhà thơ, nhà viết kịch nổi tiếng thế giới. Tờ ngữ",
-            "Thở phðo: thở ra một hơi dời vẻ khoan khoái, nhẹ nhõm vì đã trút được điều lo lắng trong lòng. ếg) 1. Vích-to Huy-gô đã bộc lộ năng khiếu gì từ rất sóm? q. Vì Huy-gô nộp bởi đúng giờ.",
-            "b. Vì Huy-gô làm đúng đóp số. c. Vi lời giỏi toón được Huy-gô viết bằng thơ. NÔI VÀ NGHE ( Đội viên tương lai",
-            "G O) —> h l>s- .g v74 li Ạ0 ⁄ZN xá",
-            "vá > : s Chuyện gï đã xảy rơ với tờ đơn Linh đã làm gì để có tờ đơn xin vờo Đội của Linh? sạch đẹp hơn? (3) G) —2",
-            "s0) Z 4 (%2 \" À 12⁄⁄V c( P đIề; l h) LH L LH ở . .UIề",
-            "— (, Z à) \"êm H89 Chuyện gì khiến Linh cỏm thấy Vĩ sao Linh cảm thấy bất ngờ xấu hổ? vỡ vui về?",
-            "\"giao døo rao q. Tìm từ ngữ chỉ hoạt động hoặc đặc điểm có tiếng bắt đầu bằng r, ở hoặc gi. b. Giúp thỏ vượt chướng ngợi vật để về nhà bỗng cóch trả lời các câu đố,",
-            "biết rồng đóp ón của mỗi câu đố đều có tiếng chứa ơn hoặc ang. C 5 A12 Tôi là möu hoa cúc sỹ 7 Tôi là mðu hoo mới ế 3 ⁄ Đố bạn mðu gì đố?",
-            ".Ị Mong bạn đừng đoán sui 222 2 guÐ HM ....; Gà 9dyóo",
-            "cH9tđenginhimep anh, đố bạn - Gằingottua ai phản À Phải gọi buổi nao, - Hương thơm nh lên > ` U mùi một, 2",
-            ">—x—: - 2 >. le h đến — Tôi mong ôm thơnh 8 Tôi chóp cónh cho lời ZS",
-            "Tiếng tôi lỡ nốt nhọc. vị : — Tôlgibgno? >> sự Am, QUANG TU VŠN. Timhiểu thông tin về Đội Thiếu niên Tiền phong Hồ Chí Minh."
+            "Vích-to Huy-gô bộc lộ tài năng thơ ca của mình từ rất sớm. Hồi còn là học sinh tiểu học, cậu học chăm, thông minh, giỏi đều các môn.",
+            "Một lần, vào giờ kiểm tra Toán cuối năm, trong khi các bạn khác mải miết làm bài thì không hiểu sao Huy-gô lại ngồi cắn bút từ đầu giờ. Thầy giáo cũng sốt ruột thay cho học trò của mình. Chỉ còn hai mươi phút nữa là phải nộp bài. Các bạn xung quanh đã có người làm xong, thế mà Huy-gô vẫn ngồi cắn bút, hai tai đỏ nhừ. Thầy giáo lại giơ đồng hồ ra xem và nhìn Huy-gô. Còn mười lăm phút nữa. Lúc này, Huy-gô bắt đầu đặt bút viết. Thầy giáo thở phào. Nhưng liệu có kịp không nhỉ? Ông lo lắng thay cho Huy-gô.",
+            "Huy-gô mải miết viết và may thay, khi tiếng trống báo hết giờ vang lên thì cậu cũng viết xong đáp số và mang bài lên nộp. Thầy giáo liếc nhìn bài của Huy-gô. Đáp số đúng rồi! Chợt thầy reo lên:\n– Lời giải bài toán được viết bằng thơ! À, ra thế!\nSau này, Vích-to Huy-gô đã trở thành nhà văn, nhà thơ, nhà viết kịch nổi tiếng thế giới."
         ]
     },
     "tv-g3-t1-b21": {
@@ -2837,6 +2819,36 @@ REAL_READING_PASSAGES = {
             "Vừa tan học, các chữ cái và dấu câu đã ngồi lại họp. Bác chữ A dõng dạc mở đầu:\n– Thưa các bạn! Hôm nay, chúng ta họp để tìm cách giúp đỡ em Hoàng. Hoàng hoàn toàn không biết chấm câu. Có đoạn văn em viết thế này: \"Chú lính bước vào đầu chú. Đội chiếc mũ sắt dưới chân. Đi đôi giày da trên trán lấm tấm mồ hôi.\".",
             "Có tiếng xì xào:\n– Thế nghĩa là gì nhỉ?\n– Nghĩa là thế này: \"Chú lính bước vào. Đầu chú đội chiếc mũ sắt. Dưới chân đi đôi giày da. Trên trán lấm tấm mồ hôi.\".",
             "Tiếng cười rộ lên. Dấu chấm nói:\n– Theo tôi, tất cả là do cậu này chẳng bao giờ để ý đến dấu câu. Mỏi tay chỗ nào, cậu ta chấm chỗ ấy.\nCả mấy dấu câu đều lắc đầu:\n– Ẩu thế nhỉ!\nBác chữ A đề nghị:\n– Từ nay, mỗi khi em Hoàng định chấm câu, anh dấu chấm cần yêu cầu Hoàng đọc lại nội dung câu văn một lần nữa đã. Được không nào?"
+        ]
+    },
+    "tv-g3-t1-b11": {
+        "title": "Lời giải toán đặc biệt",
+        "author": "Theo Kể chuyện danh nhân thế giới",
+        "genre": "prose",
+        "content": [
+            "Vích-to Huy-gô bộc lộ tài năng thơ ca của mình từ rất sớm. Hồi còn là học sinh tiểu học, cậu học chăm, thông minh, giỏi đều các môn.",
+            "Một lần, vào giờ kiểm tra Toán cuối năm, trong khi các bạn khác mải miết làm bài thì không hiểu sao Huy-gô lại ngồi cắn bút từ đầu giờ. Thầy giáo cũng sốt ruột thay cho học trò của mình. Chỉ còn hai mươi phút nữa là phải nộp bài. Các bạn xung quanh đã có người làm xong, thế mà Huy-gô vẫn ngồi cắn bút, hai tai đỏ nhừ. Thầy giáo lại giơ đồng hồ ra xem và nhìn Huy-gô. Còn mười lăm phút nữa. Lúc này, Huy-gô bắt đầu đặt bút viết. Thầy giáo thở phào. Nhưng liệu có kịp không nhỉ? Ông lo lắng thay cho Huy-gô.",
+            "Huy-gô mải miết viết và may thay, khi tiếng trống báo hết giờ vang lên thì cậu cũng viết xong đáp số và mang bài lên nộp. Thầy giáo liếc nhìn bài của Huy-gô. Đáp số đúng rồi! Chợt thầy reo lên:\n– Lời giải bài toán được viết bằng thơ! À, ra thế!\nSau này, Vích-to Huy-gô đã trở thành nhà văn, nhà thơ, nhà viết kịch nổi tiếng thế giới."
+        ]
+    },
+    "tv-g3-b12": {
+        "title": "Bài tập làm văn",
+        "author": "Theo Pi-vô-va-rô-va",
+        "genre": "prose",
+        "content": [
+            "Có lần, cô giáo ra cho chúng tôi một đề văn ở lớp: \"Em đã làm gì để giúp đỡ mẹ?\".\nTôi loay hoay mất một lúc, rồi cầm bút và bắt đầu viết: \"Em đã nhiều lần giúp đỡ mẹ. Em quét nhà và rửa bát đĩa. Đôi khi, em giặt khăn mùi soa.\".\nĐến đây, tôi bỗng thấy bí. Quả thật, ở nhà, mẹ thường làm mọi việc. Thỉnh thoảng, mẹ bận, định bảo tôi giúp việc này việc kia, nhưng thấy tôi đang học, mẹ lại thôi.",
+            "Tôi nhìn sang Liu-xi-a, thấy bạn ấy đang viết lia lịa. Thế là tôi bỗng nhớ có lần tôi giặt bít tất của mình, bèn viết thêm: \"Em còn giặt bít tất.\".\nNhưng chẳng lẽ lại nộp một bài văn ngắn ngủn như thế này? Tôi nhìn xung quanh, mọi người vẫn viết. Lạ thật, các bạn viết gì mà nhiều thế?\nTôi cố nghĩ, rồi viết tiếp: \"Em giặt cả áo lót, áo sơ mi và quần.\". Cuối cùng, tôi kết thúc bài văn của mình: \"Em muốn giúp mẹ nhiều việc hơn, để mẹ đỡ vất vả.\".",
+            "Mấy hôm sau, sáng Chủ nhật, mẹ bảo tôi:\n– Cô-li-a này! Hôm nay con giặt áo sơ mi và quần áo lót đi nhé!\nTôi tròn xoe mắt. Nhưng rồi tôi vui vẻ nhận lời, vì đó là việc làm mà tôi đã nói trong bài tập làm văn."
+        ]
+    },
+    "tv-g3-t1-b12": {
+        "title": "Bài tập làm văn",
+        "author": "Theo Pi-vô-va-rô-va",
+        "genre": "prose",
+        "content": [
+            "Có lần, cô giáo ra cho chúng tôi một đề văn ở lớp: \"Em đã làm gì để giúp đỡ mẹ?\".\nTôi loay hoay mất một lúc, rồi cầm bút và bắt đầu viết: \"Em đã nhiều lần giúp đỡ mẹ. Em quét nhà và rửa bát đĩa. Đôi khi, em giặt khăn mùi soa.\".\nĐến đây, tôi bỗng thấy bí. Quả thật, ở nhà, mẹ thường làm mọi việc. Thỉnh thoảng, mẹ bận, định bảo tôi giúp việc này việc kia, nhưng thấy tôi đang học, mẹ lại thôi.",
+            "Tôi nhìn sang Liu-xi-a, thấy bạn ấy đang viết lia lịa. Thế là tôi bỗng nhớ có lần tôi giặt bít tất của mình, bèn viết thêm: \"Em còn giặt bít tất.\".\nNhưng chẳng lẽ lại nộp một bài văn ngắn ngủn như thế này? Tôi nhìn xung quanh, mọi người vẫn viết. Lạ thật, các bạn viết gì mà nhiều thế?\nTôi cố nghĩ, rồi viết tiếp: \"Em giặt cả áo lót, áo sơ mi và quần.\". Cuối cùng, tôi kết thúc bài văn của mình: \"Em muốn giúp mẹ nhiều việc hơn, để mẹ đỡ vất vả.\".",
+            "Mấy hôm sau, sáng Chủ nhật, mẹ bảo tôi:\n– Cô-li-a này! Hôm nay con giặt áo sơ mi và quần áo lót đi nhé!\nTôi tròn xoe mắt. Nhưng rồi tôi vui vẻ nhận lời, vì đó là việc làm mà tôi đã nói trong bài tập làm văn."
         ]
     }
 }

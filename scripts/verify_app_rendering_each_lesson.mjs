@@ -25,6 +25,9 @@ try {
   const curriculum = await import(pathToFileURL(path.join(buildDir, 'index.js')).href);
 
   const sampleIds = [
+    { grade: 3, id: 'tv-g3-b11', expectedTitle: 'Lời giải toán đặc biệt', expectedAuthor: 'Theo Kể chuyện danh nhân thế giới' },
+    { grade: 3, id: 'tv-g3-b12', expectedTitle: 'Bài tập làm văn', expectedAuthor: 'Theo Pi-vô-va-rô-va' },
+    { grade: 3, id: 'tv-g3-b14', expectedTitle: 'Cuộc họp của chữ viết', expectedAuthor: 'Phỏng theo Trần Ninh Hồ' },
     { grade: 2, id: 'tv-g2-b1', expectedTitle: 'Tôi là học sinh lớp 2', expectedAuthor: 'Hải Nam' },
     { grade: 3, id: 'tv-g3-t1-b18', expectedTitle: 'Món quà đặc biệt', expectedAuthor: 'Theo Hạt giống tâm hồn' },
     { grade: 3, id: 'tv-g3-t1-b15', expectedTitle: 'Thư viện', expectedAuthor: 'Thuỵ Anh' },
