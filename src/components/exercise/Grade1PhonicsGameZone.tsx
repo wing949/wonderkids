@@ -38,16 +38,10 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
 
   const currentStage = stages[currentStageIdx];
 
-  // Speech helper for instruction
+  // Speech helper for instruction using natural Vietnamese TTS
   const speakInstruction = (text: string) => {
     soundManager.play('tap');
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'vi-VN';
-      utterance.rate = 0.9;
-      window.speechSynthesis.speak(utterance);
-    }
+    soundManager.speakText(text, 'vi-VN');
   };
 
   useEffect(() => {

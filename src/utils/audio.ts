@@ -50,22 +50,29 @@ let cachedVoices: SpeechSynthesisVoice[] = [];
 export function getBestVoice(lang: 'vi-VN' | 'en-US' = 'vi-VN'): SpeechSynthesisVoice | null {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
 
+  cachedVoices = window.speechSynthesis.getVoices();
   if (cachedVoices.length === 0) {
-    cachedVoices = window.speechSynthesis.getVoices();
+    return null;
   }
 
   const langCode = lang.toLowerCase();
   const shortCode = langCode.split('-')[0];
 
-  const matchingVoices = cachedVoices.filter(
-    (v) => v.lang.toLowerCase() === langCode || v.lang.toLowerCase().startsWith(shortCode)
-  );
+  // If Vietnamese, filter STRICTLY for Vietnamese voices only
+  if (shortCode === 'vi') {
+    const viVoices = cachedVoices.filter(
+      (v) =>
+        v.lang.toLowerCase().includes('vi') ||
+        v.name.toLowerCase().includes('vietnam') ||
+        v.name.toLowerCase().includes('tiếng việt') ||
+        v.name.toLowerCase().includes('hoaimy') ||
+        v.name.toLowerCase().includes('namminh')
+    );
 
-  if (matchingVoices.length === 0) return null;
+    if (viVoices.length === 0) return null;
 
-  // ƯU TIÊN TUYỆT ĐỐI GIỌNG NỮ (CÔ GIÁO) CHO TIẾNG VIỆT
-  if (lang === 'vi-VN') {
-    const femaleVoice = matchingVoices.find(
+    // Ưu tiên giọng nữ (Cô giáo)
+    const femaleVoice = viVoices.find(
       (v) =>
         (v.name.includes('HoaiMy') ||
           v.name.includes('Linh') ||
@@ -80,20 +87,26 @@ export function getBestVoice(lang: 'vi-VN' | 'en-US' = 'vi-VN'): SpeechSynthesis
     );
     if (femaleVoice) return femaleVoice;
 
-    // Loại trừ giọng nam nếu còn lựa chọn khác
-    const nonMale = matchingVoices.find(
+    // Loại trừ giọng nam nếu có giọng khác
+    const nonMale = viVoices.find(
       (v) => !v.name.includes('NamMinh') && !v.name.includes('Male') && !v.name.includes('An')
     );
-    if (nonMale) return nonMale;
+    return nonMale || viVoices[0];
   }
 
-  // Đối với tiếng Anh: ưu tiên Jenny (Nữ)
+  // English voices
+  const matchingVoices = cachedVoices.filter(
+    (v) => v.lang.toLowerCase() === langCode || v.lang.toLowerCase().startsWith(shortCode)
+  );
+
+  if (matchingVoices.length === 0) return null;
+
   const highQuality = matchingVoices.find(
     (v) =>
-      v.name.includes('HoaiMy') ||
       v.name.includes('Jenny') ||
       v.name.includes('Google') ||
-      v.name.includes('Natural')
+      v.name.includes('Natural') ||
+      v.name.includes('Zira')
   );
 
   return highQuality || matchingVoices[0];
@@ -334,7 +347,7 @@ export const soundManager = {
     }
   },
 
-  // Helper: Play single audio clip from stream with fallback (Microsoft Edge Neural Voice Studio)
+  // Helper: Play single audio clip from stream with Google Cloud / Neural Voice endpoint
   playAudioClip: async (
     text: string,
     langCode: string,
@@ -342,17 +355,21 @@ export const soundManager = {
     onFinish: () => void,
     onFail: () => void
   ) => {
-    const settings = getTTSSettings();
+    const clean = text.replace(/[*#_~`💡✨⭐🔊🎉🏖️•—]/g, '').trim();
+    if (!clean) {
+      onFinish();
+      return;
+    }
 
-    // Microsoft Edge Neural Voice API /api/tts (Ultra-fast <200ms)
+    const ttsLang = langCode === 'vi' || langCode === 'vi-VN' ? 'vi' : 'en';
+
     try {
-      const encoded = encodeURIComponent(text.slice(0, 800));
-      const voice = langCode === 'en' ? settings.voiceEn : settings.voiceVi;
-      const streamUrl = `/api/tts?lang=${langCode}&voice=${voice}&text=${encoded}`;
+      const encoded = encodeURIComponent(clean.slice(0, 250));
+      const streamUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${ttsLang}&client=tw-ob&q=${encoded}`;
 
       const audio = new Audio(streamUrl);
       currentAudioElement = audio;
-      audio.playbackRate = rate || settings.speechRate;
+      audio.playbackRate = rate || 1.0;
 
       audio.onended = () => {
         currentAudioElement = null;
@@ -364,10 +381,13 @@ export const soundManager = {
         onFail();
       };
 
-      audio.play().catch(() => {
-        currentAudioElement = null;
-        onFail();
-      });
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          currentAudioElement = null;
+          onFail();
+        });
+      }
     } catch {
       onFail();
     }
@@ -492,7 +512,7 @@ export const soundManager = {
     tryPlayNext();
   },
 
-  // Fallback Web Speech Synthesis
+  // Fallback Web Speech Synthesis (NEVER speaks English male voice for Vietnamese)
   speakBrowserSpeech: (
     text: string,
     lang: 'vi-VN' | 'en-US' = 'vi-VN',
@@ -500,16 +520,58 @@ export const soundManager = {
     pitch: number = 1.0,
     rate: number = 0.95
   ) => {
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    if (typeof window === 'undefined') {
+      if (onEnd) onEnd();
+      return;
+    }
+
+    const clean = text.replace(/[*#_~`💡✨⭐🔊🎉🏖️•—]/g, '').trim();
+    if (!clean) {
+      if (onEnd) onEnd();
+      return;
+    }
+
+    const isVietnamese = lang === 'vi-VN';
+    const bestVoice = getBestVoice(lang);
+
+    // CRITICAL: If Vietnamese requested, but NO Vietnamese voice is installed in the OS,
+    // NEVER pass to window.speechSynthesis.speak because Windows/Chrome will default to Microsoft David (English male)!
+    // Instead, play Google Cloud TTS stream directly or end cleanly without playing an English male voice!
+    if (isVietnamese && !bestVoice) {
+      try {
+        const encoded = encodeURIComponent(clean.slice(0, 250));
+        const streamUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=${encoded}`;
+        const audio = new Audio(streamUrl);
+        currentAudioElement = audio;
+        audio.playbackRate = rate || 1.0;
+        audio.onended = () => {
+          currentAudioElement = null;
+          if (onEnd) onEnd();
+        };
+        audio.onerror = () => {
+          currentAudioElement = null;
+          if (onEnd) onEnd();
+        };
+        audio.play().catch(() => {
+          currentAudioElement = null;
+          if (onEnd) onEnd();
+        });
+        return;
+      } catch {
+        if (onEnd) onEnd();
+        return;
+      }
+    }
+
+    if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
 
-      const utterance = new SpeechSynthesisUtterance(text);
+      const utterance = new SpeechSynthesisUtterance(clean);
       utterance.lang = lang;
       utterance.rate = rate;
       utterance.pitch = pitch;
       utterance.volume = 1.0;
 
-      const bestVoice = getBestVoice(lang);
       if (bestVoice) {
         utterance.voice = bestVoice;
       }

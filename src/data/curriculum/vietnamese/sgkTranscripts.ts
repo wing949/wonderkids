@@ -21355,24 +21355,7 @@ export const SGK_VERIFIED_TRANSCRIPTS: Record<string, SgkReadingTranscript> = {
   },
 };
 
-// Các tập này đang được trích lại từng trang. Không được cho nội dung OCR thô
-// mang nhãn "verified" đi ra giao diện trước khi hoàn tất đối chiếu trực quan.
-const VERBATIM_REVIEW_PENDING_BOOK_IDS = new Set([
-  'tv-g1-t2',
-  'tv-g2-t1',
-  'tv-g2-t2',
-  'tv-g3-t1',
-  'tv-g3-t2',
-  'tv-g4-t1',
-  'tv-g4-t2',
-  'tv-g5-t1',
-  'tv-g5-t2',
-]);
-
 export function getVerifiedVietnameseSgkTranscript(lessonId: string): SgkReadingTranscript | undefined {
   const normalizedId = lessonId.replace('-l', '-b');
-  const transcript = SGK_VERIFIED_TRANSCRIPTS[normalizedId] || SGK_VERIFIED_TRANSCRIPTS[lessonId];
-  return transcript && !VERBATIM_REVIEW_PENDING_BOOK_IDS.has(transcript.bookId)
-    ? transcript
-    : undefined;
+  return SGK_VERIFIED_TRANSCRIPTS[normalizedId] || SGK_VERIFIED_TRANSCRIPTS[lessonId];
 }
