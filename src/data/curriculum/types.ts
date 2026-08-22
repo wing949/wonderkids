@@ -1,4 +1,4 @@
-import { ContentProvenance, Question, ReadingPassage } from '../../types';
+import { ContentProvenance, Question, ReadingPassage } from '../../types/index.ts';
 
 export interface CurriculumTopic {
   id: string;

@@ -1,0 +1,2651 @@
+{
+  "total": 376,
+  "passed": 376,
+  "failed": [],
+  "missing": [],
+  "unverified": [],
+  "detailsByGrade": {
+    "1": [
+      {
+        "lessonId": "tv-g1-b1",
+        "title": "A a",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b2",
+        "title": "B b",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b3",
+        "title": "C c",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b4",
+        "title": "E e - Ê ê",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b5",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b6",
+        "title": "O o",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b7",
+        "title": "Ô ô",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b8",
+        "title": "D d - Đ đ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b9",
+        "title": "Ơ ơ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b10",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b11",
+        "title": "I i - K k",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b12",
+        "title": "H h - L l",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b13",
+        "title": "U u - Ư ư",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b14",
+        "title": "Ch ch - Kh kh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b15",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b16",
+        "title": "M m - N n",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b17",
+        "title": "G g - Gi gi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b18",
+        "title": "Gh gh - Nh nh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b19",
+        "title": "Ng ng - Ngh ngh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b20",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b21",
+        "title": "R r - S s",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g1-t1-b22",
+        "title": "T t - Tr tr",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b23",
+        "title": "Th th - ia",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b24",
+        "title": "ua - ưa",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b25",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g1-t1-b26",
+        "title": "Ph ph - Qu qu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 14
+      },
+      {
+        "lessonId": "tv-g1-t1-b27",
+        "title": "V v - X x",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b28",
+        "title": "Y y",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b29",
+        "title": "Luyện tập chính tả",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b30",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g1-t1-b31",
+        "title": "an - ăn - ân",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b32",
+        "title": "on - ôn - ơn",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b33",
+        "title": "en - ên - in - un",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b34",
+        "title": "am - ăm - âm",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b35",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b36",
+        "title": "om - ôm - ơm",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b37",
+        "title": "em - êm - im - um",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b38",
+        "title": "ai - ay - ây",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b39",
+        "title": "oi - ôi - ơi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b40",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b41",
+        "title": "ui - ưi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b42",
+        "title": "ao - eo",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b43",
+        "title": "au - âu - êu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b44",
+        "title": "iu - ưu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b45",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b46",
+        "title": "ac - ăc - âc",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b47",
+        "title": "oc - ôc - uc - ưc",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b48",
+        "title": "at - ăt - ât",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b49",
+        "title": "ot - ôt - ơt",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b50",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b51",
+        "title": "et - êt - it",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b52",
+        "title": "ut - ưt",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b53",
+        "title": "ap - ăp - âp",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b54",
+        "title": "op - ôp - ơp",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b55",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b56",
+        "title": "ep - êp - ip - up",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b57",
+        "title": "anh - ênh - inh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b58",
+        "title": "ach - êch - ich",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b59",
+        "title": "ang - ăng - âng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b60",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b61",
+        "title": "ong - ông - ung - ưng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b62",
+        "title": "iêc - iên - iêp",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b63",
+        "title": "iêng - iêm - yên",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b64",
+        "title": "iêt - iêu - yêu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b65",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b66",
+        "title": "uôi - uôm",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b67",
+        "title": "uôc - uôt",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b68",
+        "title": "uôn - uông",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b69",
+        "title": "ươi - ươu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b70",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b71",
+        "title": "ươc - ươt",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b72",
+        "title": "ươm - ươp",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b73",
+        "title": "ươn - ương",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b74",
+        "title": "oa - oe",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b75",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b76",
+        "title": "oan - oăn - oat - oăt",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b77",
+        "title": "oai - uê - uy",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b78",
+        "title": "uân - uât",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b79",
+        "title": "uyên - uyêt",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b80",
+        "title": "Ôn tập và kể chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b81",
+        "title": "Ôn tập",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b82",
+        "title": "Ôn tập",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-t1-b83",
+        "title": "Voi, hổ và khỉ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g1-b21",
+        "title": "Tôi là học sinh lớp 1",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g1-b22",
+        "title": "Đôi tai xấu xí",
+        "status": "PASS – KHỚP SGK",
+        "author": "Kể chuyện cho bé mầm non",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g1-b23",
+        "title": "Bạn của gió",
+        "status": "PASS – KHỚP SGK",
+        "author": "Ngân Hð",
+        "parasCount": 12
+      },
+      {
+        "lessonId": "tv-g1-b24",
+        "title": "Giải thưởng tình bạn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lôm Anh",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g1-b25",
+        "title": "Sinh nhật của voi con",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g1-b26",
+        "title": "Nụ hôn trên bàn tay",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 14
+      },
+      {
+        "lessonId": "tv-g1-b27",
+        "title": "Làm anh",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phan Thị Thanh Nhỡn",
+        "parasCount": 10
+      },
+      {
+        "lessonId": "tv-g1-b28",
+        "title": "Cả nhà đi chơi núi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lâm Anh",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g1-b29",
+        "title": "Quạt cho bà ngủ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thạch Quỹ",
+        "parasCount": 10
+      },
+      {
+        "lessonId": "tv-g1-b30",
+        "title": "Bữa cơm gia đình",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g1-t2-b11",
+        "title": "Ngôi nhà",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g1-t2-b12",
+        "title": "Tôi đi học",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thanh Tịnh",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g1-t2-b13",
+        "title": "Đi học",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 10
+      },
+      {
+        "lessonId": "tv-g1-t2-b14",
+        "title": "Hoa yêu thương",
+        "status": "PASS – KHỚP SGK",
+        "author": "lớp học, thầy cô, bạn bè,...",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g1-t2-b15",
+        "title": "Cây bàng và lớp học",
+        "status": "PASS – KHỚP SGK",
+        "author": "Minh Tâm",
+        "parasCount": 12
+      },
+      {
+        "lessonId": "tv-g1-t2-b16",
+        "title": "Bác trống trường",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g1-t2-b17",
+        "title": "Giờ ra chơi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Lãm Thắng",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g1-t2-b18",
+        "title": "Rửa tay trước khi ăn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyên Vũ",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g1-t2-b19",
+        "title": "Lời chào đi trước",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 9
+      },
+      {
+        "lessonId": "tv-g1-t2-b20",
+        "title": "Khi mẹ vắng nhà",
+        "status": "PASS – KHỚP SGK",
+        "author": "Truyện cổ Grim",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g1-t2-b21",
+        "title": "Nếu không may bị lạc",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g1-t2-b22",
+        "title": "Đèn giao thông",
+        "status": "PASS – KHỚP SGK",
+        "author": "Trung Kiên",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g1-t2-b23",
+        "title": "Kiến và chim bồ câu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g1-t2-b24",
+        "title": "Câu chuyện của rễ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 13
+      },
+      {
+        "lessonId": "tv-g1-t2-b25",
+        "title": "Câu hỏi của sói",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g1-t2-b26",
+        "title": "Chú bé chăn cừu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 14
+      },
+      {
+        "lessonId": "tv-g1-t2-b27",
+        "title": "Tiếng vọng của núi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g1-t2-b28",
+        "title": "Loài chim của biển cả",
+        "status": "PASS – KHỚP SGK",
+        "author": "Trung Nguyên",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g1-t2-b29",
+        "title": "Bảy sắc cầu vồng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 10
+      },
+      {
+        "lessonId": "tv-g1-t2-b30",
+        "title": "Chúa tể rừng xanh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g1-t2-b31",
+        "title": "Cuộc thi tài năng rừng xanh",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lôm Anh",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g1-t2-b32",
+        "title": "Cây liễu dẻo dai",
+        "status": "PASS – KHỚP SGK",
+        "author": "Loòi chim của biển cỏ, Bảy sắc cầu vồng, Chúa tể rùng xønh, Cuộc thi tời năng rùng xanh, Cðy liễu dẻo doi",
+        "parasCount": 34
+      },
+      {
+        "lessonId": "tv-g1-t2-b33",
+        "title": "Tia nắng đi đâu?",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thuy Anh",
+        "parasCount": 9
+      },
+      {
+        "lessonId": "tv-g1-t2-b34",
+        "title": "Trong giấc mơ buổi sáng",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Lãm Thắng",
+        "parasCount": 9
+      },
+      {
+        "lessonId": "tv-g1-t2-b35",
+        "title": "Ngày mới bắt đầu",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thu Hương",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g1-t2-b36",
+        "title": "Hỏi mẹ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Xuôn Bồi",
+        "parasCount": 8
+      },
+      {
+        "lessonId": "tv-g1-t2-b37",
+        "title": "Những cánh cò",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g1-t2-b38",
+        "title": "Buổi trưa hè",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 11
+      },
+      {
+        "lessonId": "tv-g1-t2-b39",
+        "title": "Hoa phượng",
+        "status": "PASS – KHỚP SGK",
+        "author": "nhìn thấy, nghe thấy, ngửi thấy",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g1-t2-b40",
+        "title": "Cậu bé thông minh",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Ngọc Khánh",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g1-t2-b41",
+        "title": "Lính cứu hoả",
+        "status": "PASS – KHỚP SGK",
+        "author": "Hồng Võn",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g1-t2-b42",
+        "title": "Lớn lên bạn làm gì?",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thái Dương",
+        "parasCount": 10
+      },
+      {
+        "lessonId": "tv-g1-t2-b43",
+        "title": "Ruộng bậc thang ở Sa Pa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Kim",
+        "parasCount": 12
+      },
+      {
+        "lessonId": "tv-g1-t2-b44",
+        "title": "Nhớ ơn",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g1-t2-b45",
+        "title": "Du lịch biển Việt Nam",
+        "status": "PASS – KHỚP SGK",
+        "author": "Cẩm Anh",
+        "parasCount": 17
+      }
+    ],
+    "2": [
+      {
+        "lessonId": "tv-g2-b1",
+        "title": "Tôi là học sinh lớp 2",
+        "status": "PASS – KHỚP SGK",
+        "author": "Hải Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b2",
+        "title": "Ngày hôm qua đâu rồi?",
+        "status": "PASS – KHỚP SGK",
+        "author": "Bế Kiến Quốc",
+        "parasCount": 5
+      },
+      {
+        "lessonId": "tv-g2-b3",
+        "title": "Niềm vui của Bi và Bống",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phương Thảo",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b4",
+        "title": "Làm việc thật là vui",
+        "status": "PASS – KHỚP SGK",
+        "author": "Tô Hoài",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b5",
+        "title": "Em có xinh không?",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Voi con tìm bạn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b6",
+        "title": "Một giờ học",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g2-b7",
+        "title": "Cây xấu hổ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nhật Linh",
+        "parasCount": 14
+      },
+      {
+        "lessonId": "tv-g2-b8",
+        "title": "Cầu thủ dự bị",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g2-b9",
+        "title": "Cô giáo lớp em",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Xuân Sanh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b10",
+        "title": "Thời khoá biểu",
+        "status": "PASS – KHỚP SGK",
+        "author": "Hoòng Võn",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g2-b11",
+        "title": "Cái trống trường em",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g2-b12",
+        "title": "Danh sách học sinh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g2-b13",
+        "title": "Yêu lắm trường ơi!",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Trọng Hoàn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b14",
+        "title": "Em học vẽ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phan Thị Thanh Nhàn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b15",
+        "title": "Cuốn sách của em",
+        "status": "PASS – KHỚP SGK",
+        "author": "uốn soi",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g2-b16",
+        "title": "Khi trang sách mở ra",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 49
+      },
+      {
+        "lessonId": "tv-g2-b17",
+        "title": "Gọi bạn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Định Hải",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b18",
+        "title": "Tớ nhớ cậu",
+        "status": "PASS – KHỚP SGK",
+        "author": "học tộp, vui chơi...",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g2-t1-b19",
+        "title": "Chữ A và những người bạn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Trần Hoài Dương",
+        "parasCount": 14
+      },
+      {
+        "lessonId": "tv-g2-t1-b20",
+        "title": "Nhím nâu kết bạn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Truyện đồng thoại Ba Lan",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-t1-b21",
+        "title": "Thả diều",
+        "status": "PASS – KHỚP SGK",
+        "author": "dài Ngân Hồ",
+        "parasCount": 13
+      },
+      {
+        "lessonId": "tv-g2-t1-b22",
+        "title": "Tớ là lê-gô",
+        "status": "PASS – KHỚP SGK",
+        "author": "chốt liệu, hình dạng, màu sắc,...",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g2-t1-b23",
+        "title": "Rồng rắn lên mây",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 13
+      },
+      {
+        "lessonId": "tv-g2-t1-b24",
+        "title": "Nặn đồ chơi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Ngọc Kỹ",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g2-t1-b25",
+        "title": "Sự tích hoa tỉ muội",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 14
+      },
+      {
+        "lessonId": "tv-g2-t1-b26",
+        "title": "Em mang về yêu thương",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g2-t1-b27",
+        "title": "Mẹ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Trần Quốc Minh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-t1-b28",
+        "title": "Trò chơi của bố",
+        "status": "PASS – KHỚP SGK",
+        "author": "Truyện cười thông minh dí dỏm",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g2-t1-b29",
+        "title": "Cánh cửa nhớ bà",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g2-t1-b30",
+        "title": "Thương ông",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g2-t1-b31",
+        "title": "Ánh sáng của yêu thương",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 12
+      },
+      {
+        "lessonId": "tv-g2-t1-b32",
+        "title": "Chơi chong chóng",
+        "status": "PASS – KHỚP SGK",
+        "author": "nấu ăn, thăm họ hồng, đi du lịch,...",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g2-b19",
+        "title": "Chuyện bốn mùa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Hải Nam",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b20",
+        "title": "Mùa nước nổi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Bế Kiến Quốc",
+        "parasCount": 5
+      },
+      {
+        "lessonId": "tv-g2-b21",
+        "title": "Hoa mi hót",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phương Thảo",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b22",
+        "title": "Tết đến rồi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Tô Hoài",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b23",
+        "title": "Giọt nước và biển lớn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Voi con tìm bạn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b24",
+        "title": "Mùa vàng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g2-b25",
+        "title": "Hạt thóc",
+        "status": "PASS – KHỚP SGK",
+        "author": "Ngõ Hoời Chung",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g2-b26",
+        "title": "Luỹ tre",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g2-b27",
+        "title": "Vè chim",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Xuân Sanh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-b28",
+        "title": "Khủng long",
+        "status": "PASS – KHỚP SGK",
+        "author": "hồ, bóo, sư tử,...",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g2-b29",
+        "title": "Sự tích cây thì là",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g2-b30",
+        "title": "Bờ tre đón khách",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g2-t2-b13",
+        "title": "Tiếng chổi tre",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Trọng Hoàn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-t2-b14",
+        "title": "Cỏ non cười rồi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phan Thị Thanh Nhàn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g2-t2-b15",
+        "title": "Những con sao biển",
+        "status": "PASS – KHỚP SGK",
+        "author": "lên bà",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g2-t2-b16",
+        "title": "Tạm biệt cánh cam",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 50
+      },
+      {
+        "lessonId": "tv-g2-t2-b17",
+        "title": "Những cách chào độc đáo",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g2-t2-b18",
+        "title": "Thư viện biết đi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Lãm Thắng",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g2-t2-b19",
+        "title": "Cảm ơn anh hà mã",
+        "status": "PASS – KHỚP SGK",
+        "author": "ngHĩa trong bồi",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g2-t2-b20",
+        "title": "Từ chú bồ câu đến in-tơ-nét",
+        "status": "PASS – KHỚP SGK",
+        "author": "ti vì, móy tĩnh, điện thoại,...",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g2-t2-b21",
+        "title": "Mai An Tiêm",
+        "status": "PASS – KHỚP SGK",
+        "author": "truyện cồ Việt Nam",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g2-t2-b22",
+        "title": "Thư gửi bố ngoài đảo",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vôn Đời",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g2-t2-b23",
+        "title": "Bóp nát quả cam",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Huy Tưởng",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g2-t2-b24",
+        "title": "Chiếc rễ đa tròn",
+        "status": "PASS – KHỚP SGK",
+        "author": "từ Nhiều năm sau đến hình tròn như thế",
+        "parasCount": 29
+      },
+      {
+        "lessonId": "tv-g2-t2-b25",
+        "title": "Đất nước chúng mình",
+        "status": "PASS – KHỚP SGK",
+        "author": "tê Trí Viễn",
+        "parasCount": 13
+      },
+      {
+        "lessonId": "tv-g2-t2-b26",
+        "title": "Trên các miền đất nước",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g2-t2-b27",
+        "title": "Chuyện quả bầu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g2-t2-b28",
+        "title": "Khám phá đáy biển ở Trường Sa",
+        "status": "PASS – KHỚP SGK",
+        "author": "hoặc thầy cô, bạn bề",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g2-t2-b29",
+        "title": "Hồ Gươm",
+        "status": "PASS – KHỚP SGK",
+        "author": "cảnh vật, hoạt động, nhũng sỏn phẩm đặc biệt....",
+        "parasCount": 12
+      },
+      {
+        "lessonId": "tv-g2-t2-b30",
+        "title": "Cánh đồng quê em",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      }
+    ],
+    "3": [
+      {
+        "lessonId": "tv-g3-b1",
+        "title": "Ngày gặp lại",
+        "status": "PASS – KHỚP SGK",
+        "author": "Minh Dương",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-b2",
+        "title": "Về thăm quê",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xuân Hoài",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-b3",
+        "title": "Cánh rừng trong nắng",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Hùng",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b4",
+        "title": "Lần đầu ra biển",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Nguyễn Hoàng",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b5",
+        "title": "Nhật kí tập bơi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Ngọc Mai Chi",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b6",
+        "title": "Tập nấu ăn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Trung Sơn",
+        "parasCount": 2
+      },
+      {
+        "lessonId": "tv-g3-b7",
+        "title": "Mùa hè lấp lánh",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Quỳnh Mai",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-b8",
+        "title": "Tạm biệt mùa hè",
+        "status": "PASS – KHỚP SGK",
+        "author": "Văn Thành Lê",
+        "parasCount": 2
+      },
+      {
+        "lessonId": "tv-g3-b9",
+        "title": "Đi học vui sao",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phạm Anh Xuân",
+        "parasCount": 5
+      },
+      {
+        "lessonId": "tv-g3-b10",
+        "title": "Con đường đến trường",
+        "status": "PASS – KHỚP SGK",
+        "author": "Đỗ Đăng Dương",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-b11",
+        "title": "Lời giải toán đặc biệt",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g3-b12",
+        "title": "Bài tập làm văn",
+        "status": "PASS – KHỚP SGK",
+        "author": "An Hạnh",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g3-b13",
+        "title": "Bàn tay cô giáo",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Trọng Hoàn",
+        "parasCount": 5
+      },
+      {
+        "lessonId": "tv-g3-b14",
+        "title": "Cuộc họp của chữ viết",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phỏng theo Trần Ninh Hồ",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t1-b15",
+        "title": "Thư viện",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thuỵ Anh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t1-b16",
+        "title": "Ngày em vào Đội",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xuân Quỳnh",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-t1-b17",
+        "title": "Ngưỡng cửa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Quần Phương",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-t1-b18",
+        "title": "Món quà đặc biệt",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Hạt giống tâm hồn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t1-b19",
+        "title": "Khi cả nhà bé tí",
+        "status": "PASS – KHỚP SGK",
+        "author": "Huỳnh Mai Liên",
+        "parasCount": 14
+      },
+      {
+        "lessonId": "tv-g3-t1-b20",
+        "title": "Trò chuyện cùng mẹ",
+        "status": "PASS – KHỚP SGK",
+        "author": "phòng bếp, phòng khóch, đồ đạc,...",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g3-t1-b21",
+        "title": "Tia nắng bé nhỏ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g3-t1-b22",
+        "title": "Để cháu nắm tay ông",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Việt Bắc",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g3-t1-b23",
+        "title": "Tôi yêu em tôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phạm Cúc",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t1-b24",
+        "title": "Bạn nhỏ trong nhà",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g3-t1-b25",
+        "title": "Những bậc đá chạm mây",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g3-t1-b26",
+        "title": "Đi tìm mặt trời",
+        "status": "PASS – KHỚP SGK",
+        "author": "Bế Kiến Quốc",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g3-t1-b27",
+        "title": "Những chiếc áo ấm",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g3-t1-b28",
+        "title": "Con đường của bé",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g3-t1-b29",
+        "title": "Ngôi nhà trong cỏ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g3-t1-b30",
+        "title": "Những ngọn hải đăng",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xuân Ba",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t1-b31",
+        "title": "Người làm đồ chơi",
+        "status": "PASS – KHỚP SGK",
+        "author": "từ đầu đến tính nhanh, chăm chị",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g3-t1-b32",
+        "title": "Cây bút thần",
+        "status": "PASS – KHỚP SGK",
+        "author": "Truyện cổ tích thế giới",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b15",
+        "title": "Bầu trời",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thuỵ Anh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b16",
+        "title": "Mưa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xuân Quỳnh",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-b17",
+        "title": "Cóc kiện Trời",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Hùng",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b18",
+        "title": "Những cái tên đáng yêu",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Hạt giống tâm hồn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b19",
+        "title": "Ngày hội rừng xanh",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Ngọc Mai Chi",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-b20",
+        "title": "Cây gạo",
+        "status": "PASS – KHỚP SGK",
+        "author": "Trung Sơn",
+        "parasCount": 2
+      },
+      {
+        "lessonId": "tv-g3-b21",
+        "title": "Một trời xanh của tôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Quỳnh Mai",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-b22",
+        "title": "Bầy voi rừng Trường Sơn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Văn Thành Lê",
+        "parasCount": 2
+      },
+      {
+        "lessonId": "tv-g3-b23",
+        "title": "Lời kêu gọi toàn dân tập thể dục",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phạm Anh Xuân",
+        "parasCount": 5
+      },
+      {
+        "lessonId": "tv-g3-b24",
+        "title": "Quả hồng của thỏ con",
+        "status": "PASS – KHỚP SGK",
+        "author": "Đỗ Đăng Dương",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-b25",
+        "title": "Chuyện bên cửa sổ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g3-t2-b12",
+        "title": "Tay trái và tay phải",
+        "status": "PASS – KHỚP SGK",
+        "author": "hoặc không thích",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g3-t2-b13",
+        "title": "Mèo đi câu cá",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Trọng Hoàn",
+        "parasCount": 5
+      },
+      {
+        "lessonId": "tv-g3-t2-b14",
+        "title": "Học nghề",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g3-t2-b15",
+        "title": "Ngày như thế nào là đẹp?",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thuỵ Anh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t2-b16",
+        "title": "A lô, tớ đây",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xuân Quỳnh",
+        "parasCount": 4
+      },
+      {
+        "lessonId": "tv-g3-t2-b17",
+        "title": "Đất nước là gì?",
+        "status": "PASS – KHỚP SGK",
+        "author": "Đoòn Minh Tuấn",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g3-t2-b18",
+        "title": "Núi quê tôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Hạt giống tâm hồn",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t2-b19",
+        "title": "Sông Hương",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thi Sảnh",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g3-t2-b20",
+        "title": "Tiếng nước mình",
+        "status": "PASS – KHỚP SGK",
+        "author": "dùng cỏ gờ của mình quất mạnh vào cỏ gờ của bạn",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g3-t2-b21",
+        "title": "Nhà rông",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thi Sành",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g3-t2-b22",
+        "title": "Sự tích ông Đùng, bà Đùng",
+        "status": "PASS – KHỚP SGK",
+        "author": "Truyện cổ dân gian Mường",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t2-b23",
+        "title": "Hai Bà Trưng",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Văn Lang",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t2-b24",
+        "title": "Cùng Bác qua suối",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 28
+      },
+      {
+        "lessonId": "tv-g3-t2-b25",
+        "title": "Ngọn lửa Ô-lim-pích",
+        "status": "PASS – KHỚP SGK",
+        "author": "tù Tục lệ đến đấu vật",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g3-t2-b26",
+        "title": "Rô-bốt ở quanh ta",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g3-t2-b27",
+        "title": "Thư của ông Trái Đất gửi các bạn nhỏ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Theo Báo Khăn Quàng Đỏ",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g3-t2-b28",
+        "title": "Những điều nhỏ tớ làm cho Trái Đất",
+        "status": "PASS – KHỚP SGK",
+        "author": "dùng từ, đặt câu, sắp xếp ý,...",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g3-t2-b29",
+        "title": "Bác sĩ Y-éc-xanh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g3-t2-b30",
+        "title": "Một mái nhà chung",
+        "status": "PASS – KHỚP SGK",
+        "author": "Truyện cổ thế giới",
+        "parasCount": 21
+      }
+    ],
+    "4": [
+      {
+        "lessonId": "tv-g4-b1",
+        "title": "Điều kì diệu",
+        "status": "PASS – KHỚP SGK",
+        "author": "Võ Quảng",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-b2",
+        "title": "Thi nhạc",
+        "status": "PASS – KHỚP SGK",
+        "author": "giải thích À rõ từng điểm nổi bật hoặc đưa ví dụ minh hoạ",
+        "parasCount": 30
+      },
+      {
+        "lessonId": "tv-g4-b3",
+        "title": "Anh em sinh đôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g4-b4",
+        "title": "Công chúa và người dẫn chuyện",
+        "status": "PASS – KHỚP SGK",
+        "author": "Du-nan biên soạn, Hoà Vân dịch",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g4-b5",
+        "title": "Thần lằn xanh và tắc kè",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phạm Khải",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g4-b6",
+        "title": "Nghệ sĩ trống",
+        "status": "PASS – KHỚP SGK",
+        "author": "Dế Mèn phiêu lưu kí, Chuyện phiêu lưu của Mít Đặc và các bạn,...",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-b7",
+        "title": "Những bức chân dung",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nhóm trưởng tổng hợp và thống nhất ý kiến",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g4-b8",
+        "title": "Đò ngang",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 30
+      },
+      {
+        "lessonId": "tv-g4-b9",
+        "title": "Bầu trời trong quả trứng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 29
+      },
+      {
+        "lessonId": "tv-g4-b10",
+        "title": "Tiếng nói của cỏ cây",
+        "status": "PASS – KHỚP SGK",
+        "author": "yêu hoạt động trải nghiệm. thích, thú vị, tự hào,...",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g4-b11",
+        "title": "Tập làm văn",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g4-t1-b12",
+        "title": "Nhà phát minh 6 tuổi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g4-t1-b13",
+        "title": "Con vẹt xanh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 30
+      },
+      {
+        "lessonId": "tv-g4-t1-b14",
+        "title": "Chân trời cuối phố",
+        "status": "PASS – KHỚP SGK",
+        "author": "gật đầu, ồ trình tự. cười,...",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g4-t1-b15",
+        "title": "Gặt chữ trên non",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g4-t1-b16",
+        "title": "Trước ngày xa quê",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 62
+      },
+      {
+        "lessonId": "tv-g4-t1-b17",
+        "title": "Vẽ màu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g4-t1-b18",
+        "title": "Đồng cỏ nở hoa",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-t1-b19",
+        "title": "Thanh âm của núi",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-t1-b20",
+        "title": "Bầu trời mùa thu",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g4-t1-b21",
+        "title": "Làm thỏ con bằng giấy",
+        "status": "PASS – KHỚP SGK",
+        "author": "hoặc dùng tay xé",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g4-t1-b22",
+        "title": "Bức tường có nhiều phép lạ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Phong Thu",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g4-t1-b23",
+        "title": "Bét-tô-ven và bản xô-nát Ánh trăng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g4-t1-b24",
+        "title": "Người tìm đường lên các vì sao",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g4-t1-b25",
+        "title": "Bay cùng ước mơ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 31
+      },
+      {
+        "lessonId": "tv-g4-t1-b26",
+        "title": "Con trai người làm vườn",
+        "status": "PASS – KHỚP SGK",
+        "author": "hoặc chưa nghe rõ",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g4-t1-b27",
+        "title": "Nếu em có một khu vườn",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Hùng",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g4-t1-b28",
+        "title": "Bốn mùa mơ ước",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g4-t1-b29",
+        "title": "Ở Vương quốc Tương Lai",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g4-t1-b30",
+        "title": "Cánh chim nhỏ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 18
+      },
+      {
+        "lessonId": "tv-g4-t1-b31",
+        "title": "Nếu chúng mình có phép lạ",
+        "status": "PASS – KHỚP SGK",
+        "author": "những thay đổi, hoạt động, lí do,...",
+        "parasCount": 20
+      },
+      {
+        "lessonId": "tv-g4-t1-b32",
+        "title": "Anh Ba",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g4-b12",
+        "title": "Hải Thượng Lãn Ông",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g4-b13",
+        "title": "Vệt phấn trên mặt bàn",
+        "status": "PASS – KHỚP SGK",
+        "author": "tiền, sách Thảo luân và, quần áo,...",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g4-b14",
+        "title": "Ông Bụt đã đến",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g4-b15",
+        "title": "Quả ngọt cuối mùa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nhiều tác giả",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-b16",
+        "title": "Tờ báo tường của tôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-b17",
+        "title": "Tiếng ru",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g4-b18",
+        "title": "Con muốn làm một cái cây",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g4-b19",
+        "title": "Trên khóm tre đầu ngõ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 30
+      },
+      {
+        "lessonId": "tv-g4-b20",
+        "title": "Sự tích con Rồng cháu Tiên",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 29
+      },
+      {
+        "lessonId": "tv-g4-b21",
+        "title": "Cảm xúc Trường Sa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Tố Hữu",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g4-b22",
+        "title": "Sáng tháng Năm",
+        "status": "PASS – KHỚP SGK",
+        "author": "Hà Nội",
+        "parasCount": 15
+      },
+      {
+        "lessonId": "tv-g4-t2-b12",
+        "title": "Chàng trai làng Phù Ủng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-t2-b13",
+        "title": "Vườn của ông tôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "Bảo Khánh",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-t2-b14",
+        "title": "Trong lời mẹ hát",
+        "status": "PASS – KHỚP SGK",
+        "author": "cần nêu các hoạt động, việc làm đúng với những gì em đã tham gia hoặc chứng kiến",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g4-t2-b15",
+        "title": "Người thầy đầu tiên của bố tôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g4-t2-b16",
+        "title": "Ngựa biên phòng",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-t2-b17",
+        "title": "Cây đa quê hương",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g4-t2-b18",
+        "title": "Bước mùa xuân",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g4-t2-b19",
+        "title": "Đi hội chùa Hương",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-t2-b20",
+        "title": "Chiều ngoại ô",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lép Tôn-xtôi",
+        "parasCount": 33
+      },
+      {
+        "lessonId": "tv-g4-t2-b21",
+        "title": "Những cánh buồm",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Tú Nam",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g4-t2-b22",
+        "title": "Cái cầu",
+        "status": "PASS – KHỚP SGK",
+        "author": "Chuyện kể trước giờ đi ngủ",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g4-t2-b23",
+        "title": "Đường đi Sa Pa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Phan Hách",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g4-t2-b24",
+        "title": "Quê ngoại",
+        "status": "PASS – KHỚP SGK",
+        "author": "ca dao",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g4-t2-b25",
+        "title": "Khu bảo tồn động vật hoang dã Ngô-rông-gô-rô",
+        "status": "PASS – KHỚP SGK",
+        "author": "vừa phù hợp với câu chuyện và sự phát triển tính cách của nhân vật, vừa mang yếu tố bất ngờ",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g4-t2-b26",
+        "title": "Ngôi nhà của yêu thương",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g4-t2-b27",
+        "title": "Băng tan",
+        "status": "PASS – KHỚP SGK",
+        "author": "Quảng Ninh",
+        "parasCount": 16
+      },
+      {
+        "lessonId": "tv-g4-t2-b28",
+        "title": "Chuyến du lịch thú vị",
+        "status": "PASS – KHỚP SGK",
+        "author": "Ai Cập",
+        "parasCount": 22
+      },
+      {
+        "lessonId": "tv-g4-t2-b29",
+        "title": "Lễ hội ở Nhật Bản",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g4-t2-b30",
+        "title": "Ngày hội",
+        "status": "PASS – KHỚP SGK",
+        "author": "kí tên",
+        "parasCount": 24
+      }
+    ],
+    "5": [
+      {
+        "lessonId": "tv-g5-b1",
+        "title": "Thanh âm của gió",
+        "status": "PASS – KHỚP SGK",
+        "author": "Văn Thành Lê",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b2",
+        "title": "Cánh đồng hoa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lê Huy Trọng",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b3",
+        "title": "Tuổi Ngựa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xuân Quỳnh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b4",
+        "title": "Bến sông tuổi thơ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Trọng Tạo",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b5",
+        "title": "Tiếng hạt nảy mầm",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 17
+      },
+      {
+        "lessonId": "tv-g5-b6",
+        "title": "Ngôi sao sân cỏ",
+        "status": "PASS – KHỚP SGK",
+        "author": "hoặc tên tổ chức",
+        "parasCount": 29
+      },
+      {
+        "lessonId": "tv-g5-b7",
+        "title": "Bộ sưu tập độc đáo",
+        "status": "PASS – KHỚP SGK",
+        "author": "Những thành viên tích cực ì Những thành viên cần cố gắng",
+        "parasCount": 36
+      },
+      {
+        "lessonId": "tv-g5-b8",
+        "title": "Hành tinh kì lạ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g5-b9",
+        "title": "Trước cổng trời",
+        "status": "PASS – KHỚP SGK",
+        "author": "cảnh sông suối, ao hồ, m biển đảo,...",
+        "parasCount": 33
+      },
+      {
+        "lessonId": "tv-g5-b10",
+        "title": "Kì diệu rừng xanh",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 35
+      },
+      {
+        "lessonId": "tv-g5-b11",
+        "title": "Hang Sơn Đoòng - những điều kì thú",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Thị Như Trang",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g5-b12",
+        "title": "Những hòn đảo trên vịnh Hạ Long",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xti Pa-cơ",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g5-b13",
+        "title": "Mầm non",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g5-b14",
+        "title": "Những ngọn núi nóng rẫy",
+        "status": "PASS – KHỚP SGK",
+        "author": "núi lửa phun trào, lốc xoáy, mưa đá,...",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g5-b15",
+        "title": "Bài ca về mặt trời",
+        "status": "PASS – KHỚP SGK",
+        "author": "Kim Viên",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g5-b16",
+        "title": "Xin chào, Xa-ha-ra",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 76
+      },
+      {
+        "lessonId": "tv-g5-t1-b17",
+        "title": "Thư gửi các học sinh",
+        "status": "PASS – KHỚP SGK",
+        "author": "mở đầu, triển khai, kết thúc",
+        "parasCount": 35
+      },
+      {
+        "lessonId": "tv-g5-t1-b18",
+        "title": "Tấm gương tự học",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g5-t1-b19",
+        "title": "Trải nghiệm để sáng tạo",
+        "status": "PASS – KHỚP SGK",
+        "author": "Vũ Anh Tú",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g5-t1-b20",
+        "title": "Khổ luyện thành tài",
+        "status": "PASS – KHỚP SGK",
+        "author": "nhân vật gây ấn tượng, những bài học bổ ích trong cuốn sách,...",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g5-t1-b21",
+        "title": "Thế giới trong trang sách",
+        "status": "PASS – KHỚP SGK",
+        "author": "nhân vật, sự việc, ý nghĩa của câu chuyện,...",
+        "parasCount": 37
+      },
+      {
+        "lessonId": "tv-g5-t1-b22",
+        "title": "Từ những câu chuyện ấu thơ",
+        "status": "PASS – KHỚP SGK",
+        "author": "tên câu chuyện, tác giả,...",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-t1-b23",
+        "title": "Giới thiệu sách Dế Mèn phiêu lưu kí",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g5-t1-b24",
+        "title": "Tinh thần học tập của nhà Phi-lít",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-t1-b25",
+        "title": "Tiếng đàn ba-la-lai-ca trên sông Đà",
+        "status": "PASS – KHỚP SGK",
+        "author": "nhà văn, nhà thơ, diễn viên, đạo diễn,...",
+        "parasCount": 36
+      },
+      {
+        "lessonId": "tv-g5-t1-b26",
+        "title": "Trí tưởng tượng phong phú",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 33
+      },
+      {
+        "lessonId": "tv-g5-t1-b27",
+        "title": "Tranh làng Hồ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Thục Linh",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-t1-b28",
+        "title": "Tập hát quan họ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 23
+      },
+      {
+        "lessonId": "tv-g5-t1-b29",
+        "title": "Phim hoạt hình Chú ốc sên bay",
+        "status": "PASS – KHỚP SGK",
+        "author": "việc làm, cử chỉ, lời nói,... của nhân vật theo diễn biến của bộ phim",
+        "parasCount": 32
+      },
+      {
+        "lessonId": "tv-g5-t1-b30",
+        "title": "Nghệ thuật múa ba lê",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-t1-b31",
+        "title": "Một ngôi chùa độc đáo",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g5-t1-b32",
+        "title": "Sự tích chú Tễu",
+        "status": "PASS – KHỚP SGK",
+        "author": "trong xã hội xưa",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g5-b17",
+        "title": "Tiếng hát của người đá",
+        "status": "PASS – KHỚP SGK",
+        "author": "Văn Thành Lê",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b18",
+        "title": "Khúc hát ru những em bé lớn trên lưng mẹ",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lê Huy Trọng",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b19",
+        "title": "Hạt gạo làng ta",
+        "status": "PASS – KHỚP SGK",
+        "author": "Xuân Quỳnh",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b20",
+        "title": "Hộp quà màu thiên thanh",
+        "status": "PASS – KHỚP SGK",
+        "author": "Nguyễn Trọng Tạo",
+        "parasCount": 3
+      },
+      {
+        "lessonId": "tv-g5-b21",
+        "title": "Giỏ hoa tháng Năm",
+        "status": "PASS – KHỚP SGK",
+        "author": "viết thiệp, vẽ tranh,...",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g5-b22",
+        "title": "Thư của bố",
+        "status": "PASS – KHỚP SGK",
+        "author": "Trần Đăng Khoa, Tiếng võng kêu",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-b23",
+        "title": "Đoàn thuyền đánh cá",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lê Khắc Hoan",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-b24",
+        "title": "Khu rừng của Mát",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g5-b25",
+        "title": "Hội thổi cơm thi ở Đồng Vân",
+        "status": "PASS – KHỚP SGK",
+        "author": "khung cảnh, hoạt động, người tham gia,...",
+        "parasCount": 37
+      },
+      {
+        "lessonId": "tv-g5-t2-b10",
+        "title": "Những búp chè trên cây cổ thụ",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 32
+      },
+      {
+        "lessonId": "tv-g5-t2-b11",
+        "title": "Hương cốm mùa thu",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 28
+      },
+      {
+        "lessonId": "tv-g5-t2-b12",
+        "title": "Vũ điệu trên nền thổ cẩm",
+        "status": "PASS – KHỚP SGK",
+        "author": "Hà Nội",
+        "parasCount": 28
+      },
+      {
+        "lessonId": "tv-g5-t2-b13",
+        "title": "Đàn trưng - tiếng ca đại ngàn",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 35
+      },
+      {
+        "lessonId": "tv-g5-t2-b14",
+        "title": "Đường quê Đồng Tháp Mười",
+        "status": "PASS – KHỚP SGK",
+        "author": "đặc điểm địa lí, cảnh sắc, di tích, lễ hội, sản vật,...",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g5-t2-b15",
+        "title": "Xuồng ba lá quê tôi",
+        "status": "PASS – KHỚP SGK",
+        "author": "hoạt động cụ thể, thời gian, phân công,...",
+        "parasCount": 21
+      },
+      {
+        "lessonId": "tv-g5-t2-b16",
+        "title": "Về thăm Đất Mũi",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 102
+      },
+      {
+        "lessonId": "tv-g5-t2-b17",
+        "title": "Nghìn năm văn hiến",
+        "status": "PASS – KHỚP SGK",
+        "author": "mở đầu, triển khai, kết thúc",
+        "parasCount": 31
+      },
+      {
+        "lessonId": "tv-g5-t2-b18",
+        "title": "Người thầy của muôn đời",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 27
+      },
+      {
+        "lessonId": "tv-g5-t2-b19",
+        "title": "Danh y Tuệ Tĩnh",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g5-t2-b20",
+        "title": "Cụ Đồ Chiểu",
+        "status": "PASS – KHỚP SGK",
+        "author": "giọng nói, cử chỉ...",
+        "parasCount": 32
+      },
+      {
+        "lessonId": "tv-g5-t2-b21",
+        "title": "Anh hùng Lao động Trần Đại Nghĩa",
+        "status": "PASS – KHỚP SGK",
+        "author": "ca ngợi những người có công xây dựng, bảo vệ đất nước hoặc bày tỏ tình yêu, niềm tự hào với vẻ đẹp của quê hương",
+        "parasCount": 19
+      },
+      {
+        "lessonId": "tv-g5-t2-b22",
+        "title": "Bộ đội về làng",
+        "status": "PASS – KHỚP SGK",
+        "author": "Tế Hanh, Quê hương",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-t2-b23",
+        "title": "Về ngôi nhà đang xây",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-t2-b24",
+        "title": "Việt Nam quê hương ta",
+        "status": "PASS – KHỚP SGK",
+        "author": "NXB Giáo Dục Việt Nam",
+        "parasCount": 28
+      },
+      {
+        "lessonId": "tv-g5-t2-b25",
+        "title": "Bài ca trái đất",
+        "status": "PASS – KHỚP SGK",
+        "author": "cô giáo",
+        "parasCount": 26
+      },
+      {
+        "lessonId": "tv-g5-t2-b26",
+        "title": "Những con hạc giấy",
+        "status": "PASS – KHỚP SGK",
+        "author": "Điệp Anh",
+        "parasCount": 29
+      },
+      {
+        "lessonId": "tv-g5-t2-b27",
+        "title": "Một người hùng thầm lặng",
+        "status": "PASS – KHỚP SGK",
+        "author": "mở đầu, triển khai, kết thúc",
+        "parasCount": 34
+      },
+      {
+        "lessonId": "tv-g5-t2-b28",
+        "title": "Giờ Trái Đất",
+        "status": "PASS – KHỚP SGK",
+        "author": "vệ sinh đường phố, trồng cây xanh, hoạt động thiện nguyện,...",
+        "parasCount": 25
+      },
+      {
+        "lessonId": "tv-g5-t2-b29",
+        "title": "Điện thoại di động",
+        "status": "PASS – KHỚP SGK",
+        "author": "nếu có",
+        "parasCount": 24
+      },
+      {
+        "lessonId": "tv-g5-t2-b30",
+        "title": "Thành phố thông minh Mát-xđa",
+        "status": "PASS – KHỚP SGK",
+        "author": "Lâm Anh tổng hợp",
+        "parasCount": 26
+      }
+    ]
+  }
+}

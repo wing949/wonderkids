@@ -32,8 +32,8 @@ after(async () => {
 const ALL_TOPICS_BY_GRADE = curriculum.MATH_CURRICULUM_BY_GRADE;
 const generateMathQuestions = questionEngine.generateMathQuestions;
 
-describe('Math Question Authenticity & Quality Test (342 Lessons)', () => {
-  it('should generate authentic mathematical questions with NO placeholders for all 342 topics', () => {
+describe('Math Question Authenticity & Quality Test (342 Lessons - 5 Questions Each)', () => {
+  it('should generate exactly 5 authentic mathematical questions with NO placeholders for each of the 342 topics (total 1,710 questions)', () => {
     let totalQuestions = 0;
     const placeholderBlacklist = [
       'kết quả chuẩn xác',
@@ -51,7 +51,7 @@ describe('Math Question Authenticity & Quality Test (342 Lessons)', () => {
 
       for (const topic of topics) {
         const questions = generateMathQuestions(topic, g);
-        assert.ok(questions.length > 0, `Topic ${topic.id} generated 0 questions`);
+        assert.equal(questions.length, 5, `Topic ${topic.id} must generate exactly 5 questions (got ${questions.length})`);
         totalQuestions += questions.length;
 
         for (const q of questions) {
@@ -75,15 +75,16 @@ describe('Math Question Authenticity & Quality Test (342 Lessons)', () => {
       }
     }
 
-    assert.ok(totalQuestions >= 342, `Expected at least 342 questions, got ${totalQuestions}`);
+    assert.equal(totalQuestions, 342 * 5, `Expected 1,710 questions (342 topics × 5 questions), got ${totalQuestions}`);
   });
 
-  it('should verify specific user reported lessons have accurate mathematical problems', () => {
+  it('should verify specific user reported lessons have accurate 5-question mathematical sets', () => {
     // 1. Grade 4 Lesson 4: Biểu thức chứa chữ
     const g4 = ALL_TOPICS_BY_GRADE[4];
     const g4b4 = g4.find((t) => t.id === 'math-g4-b4');
     assert.ok(g4b4, 'math-g4-b4 must exist');
     const q_g4b4 = generateMathQuestions(g4b4, 4);
+    assert.equal(q_g4b4.length, 5);
     assert.ok(q_g4b4[0].questionText.includes('Tính giá trị của biểu thức'));
     assert.equal(q_g4b4[0].options[0].label, '60');
 
@@ -91,7 +92,8 @@ describe('Math Question Authenticity & Quality Test (342 Lessons)', () => {
     const g4b24 = g4.find((t) => t.id === 'math-g4-b24');
     assert.ok(g4b24, 'math-g4-b24 must exist');
     const q_g4b24 = generateMathQuestions(g4b24, 4);
-    assert.ok(q_g4b24[0].questionText.includes('Tính chất giao hoán'));
+    assert.equal(q_g4b24.length, 5);
+    assert.ok(q_g4b24[0].questionText.includes('Giao hoán phép cộng'));
     assert.equal(q_g4b24[0].options[0].label, 'b + a');
 
     // 3. Grade 5 Lesson 7: Hỗn số
@@ -99,6 +101,7 @@ describe('Math Question Authenticity & Quality Test (342 Lessons)', () => {
     const g5b7 = g5.find((t) => t.id === 'math-g5-b7');
     assert.ok(g5b7, 'math-g5-b7 must exist');
     const q_g5b7 = generateMathQuestions(g5b7, 5);
+    assert.equal(q_g5b7.length, 5);
     assert.ok(q_g5b7[0].questionText.includes('Chuyển hỗn số'));
     assert.equal(q_g5b7[0].options[0].label, '13/5');
   });
