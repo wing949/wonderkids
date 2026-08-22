@@ -41,6 +41,10 @@ async function convertToWav(inputPath, outputPath) {
 }
 
 try {
+  await runFile(process.execPath, ['scripts/sync_vietnamese_audio_metadata.mjs'], {
+    cwd: workspace,
+  });
+
   await build({
     entryPoints: ['src/data/curriculum/index.ts', 'src/utils/lessonNarration.ts'],
     bundle: true,

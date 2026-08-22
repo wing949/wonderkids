@@ -26,6 +26,7 @@ BACKUP_DIR = WORKSPACE / "backup_audio_wav" / "curriculum"
 BACKUP_PRIMARY = BACKUP_DIR / "primary"
 MANIFEST_PATH = WORKSPACE / "src" / "data" / "curriculum" / "vietnamese" / "audioManifest.generated.json"
 TASKS_PATH = WORKSPACE / "scripts" / "target_293_structured_reading_passages.json"
+SYNC_METADATA_SCRIPT = WORKSPACE / "scripts" / "sync_vietnamese_audio_metadata.mjs"
 
 PRIMARY_DIR.mkdir(parents=True, exist_ok=True)
 BACKUP_PRIMARY.mkdir(parents=True, exist_ok=True)
@@ -87,6 +88,9 @@ def enrich_reading_passage_prosody(passage: dict) -> tuple[str, bool]:
 print("=" * 70, flush=True)
 print("🚀 THU ÂM LẠI 293 BÀI TIẾNG VIỆT SGK — DIỄN CẢM & NGẮT NGHỈ CHUẨN SƯ PHẠM", flush=True)
 print("=" * 70, flush=True)
+
+print("🔎 Đồng bộ trang SGK của transcript và manifest trước khi sinh audio...", flush=True)
+subprocess.run(["node", str(SYNC_METADATA_SCRIPT)], cwd=WORKSPACE, check=True)
 
 tts = Vieneu(mode="v3turbo")
 

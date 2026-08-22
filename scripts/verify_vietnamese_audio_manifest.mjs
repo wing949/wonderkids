@@ -51,6 +51,7 @@ try {
   const invalid = [];
   const forbiddenDisclosureDetected = [];
   const manifestInvalid = [];
+  const sourcePageMismatches = [];
   const identicalPrimaryAndFallback = [];
   let primaryBytes = 0;
   let fallbackBytes = 0;
@@ -59,6 +60,11 @@ try {
     const lesson = runtimeLessons.get(asset.lessonId);
     const runtimeTranscript = lesson?.readingPassage ? buildLessonNarration(lesson.readingPassage) : '';
     const runtimeTranscriptHash = runtimeTranscript ? sha256(runtimeTranscript) : '';
+    const runtimeSourcePages = lesson?.readingPassage?.sourcePages || [];
+    const sourcePagesMatch = Array.isArray(asset.sourcePages)
+      && asset.sourcePages.length > 0
+      && asset.sourcePages.length === runtimeSourcePages.length
+      && asset.sourcePages.every((page, index) => page === runtimeSourcePages[index]);
     if (
       !/^[a-f0-9]{64}$/.test(asset.transcriptHash)
       || asset.transcriptHash !== runtimeTranscriptHash
@@ -66,6 +72,13 @@ try {
       || !Array.isArray(asset.sourcePages)
     ) {
       manifestInvalid.push(asset.lessonId);
+    }
+    if (!sourcePagesMatch) {
+      sourcePageMismatches.push({
+        lessonId: asset.lessonId,
+        manifest: asset.sourcePages,
+        runtime: runtimeSourcePages,
+      });
     }
     const assetHashes = {};
     for (const [kind, assetPath] of [['primary', asset.primaryPath], ['fallback', asset.fallbackPath]]) {
@@ -114,11 +127,19 @@ try {
     invalid,
     forbiddenDisclosureDetected,
     manifestInvalid,
+    sourcePageMismatches,
     identicalPrimaryAndFallback,
   };
 
   console.log(JSON.stringify(result, null, 2));
-  if (missing.length || invalid.length || forbiddenDisclosureDetected.length || manifestInvalid.length || identicalPrimaryAndFallback.length) process.exitCode = 1;
+  if (
+    missing.length
+    || invalid.length
+    || forbiddenDisclosureDetected.length
+    || manifestInvalid.length
+    || sourcePageMismatches.length
+    || identicalPrimaryAndFallback.length
+  ) process.exitCode = 1;
 } finally {
   await rm(outputDir, { recursive: true, force: true });
 }
