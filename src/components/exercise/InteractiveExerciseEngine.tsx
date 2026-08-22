@@ -26,6 +26,8 @@ import { getSourcePageView } from '../../utils/sourcePageViewer';
 import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../../utils/vietnameseReadingPolicy';
 import { MathVisualIllustration } from './MathVisualIllustration';
 import { LessonThematicBadge } from './LessonThematicBadge';
+import { Grade1PhonicsGameZone } from './Grade1PhonicsGameZone';
+import { GRADE_1_PHONICS_GAMES } from '../../data/curriculum/vietnamese/grade1PhonicsGames';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -81,13 +83,14 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   onExit,
   onComplete,
 }) => {
-  // Determine if lesson starts with a Reading Passage (e.g. Tiếng Việt & Tiếng Anh bài đọc)
+  // Determine if lesson starts with a Reading Passage or Phonics Games (Tiếng Việt 1 Tập 1)
+  const isGrade1Phonics = !!GRADE_1_PHONICS_GAMES[lesson.id] || (lesson.subject === 'vietnamese' && lesson.grade === 1 && (lesson.semester === 1 || !lesson.semester));
   const hasReadingPassage = !!lesson.readingPassage;
   const vietnameseReadingPolicy = getVietnameseReadingPolicy(lesson);
   const canUseReadingPassage = vietnameseReadingPolicy !== 'source_only';
   const canPlayReadingAudio = canPlayVietnameseReadingAudio(lesson);
   const [engineMode, setEngineMode] = useState<'reading' | 'quiz'>(hasReadingPassage ? 'reading' : 'quiz');
-  const [readingTab, setReadingTab] = useState<'full' | 'shadowing'>('full');
+  const [readingTab, setReadingTab] = useState<'games' | 'full' | 'shadowing'>(isGrade1Phonics ? 'games' : 'full');
   const [sourcePageIndex, setSourcePageIndex] = useState(0);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [isReadingDrawerOpen, setIsReadingDrawerOpen] = useState(false);
@@ -133,7 +136,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   // Clean reset all states when lesson changes
   useEffect(() => {
     setEngineMode(lesson.readingPassage ? 'reading' : 'quiz');
-    setReadingTab('full');
+    setReadingTab(isGrade1Phonics ? 'games' : 'full');
     setIsPlayingAudio(false);
     setIsReadingDrawerOpen(false);
     setShadowingIndex(0);
@@ -526,7 +529,30 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             </div>
 
             {canUseReadingPassage && <div className="order-3 flex w-full sm:order-2 sm:w-auto sm:flex-1 sm:justify-center">
-              <div className="flex max-w-md items-center justify-center gap-2 rounded-3xl bg-amber-50/80 p-1.5">
+              <div className="flex max-w-lg items-center justify-center gap-2 rounded-3xl bg-amber-50/80 p-1.5">
+                {isGrade1Phonics && (
+                  <button
+                    onClick={() => {
+                      soundManager.playPop();
+                      soundManager.stopSpeaking();
+                      voiceManager.stopListening();
+                      setIsPlayingAudio(false);
+                      setIsPlayingSentenceAudio(false);
+                      setIsVoiceRecording(false);
+                      setReadingTab('games');
+                    }}
+                    className={`flex flex-1 items-center justify-center gap-2 rounded-2xl px-3 sm:px-4 py-2 font-baloo text-xs font-extrabold transition-all cursor-pointer sm:text-sm ${
+                      readingTab === 'games'
+                        ? 'bg-gradient-to-r from-amber-400 to-orange-400 text-amber-950 shadow-pop-xs scale-102 border-2 border-amber-500'
+                        : 'text-slate-600 hover:text-amber-900 hover:bg-white/70'
+                    }`}
+                  >
+                    <span>🎮</span>
+                    <span className="whitespace-nowrap">Vui Học Âm Vần</span>
+                    <span className="flex h-2 w-2 rounded-full bg-orange-500 animate-ping" />
+                  </button>
+                )}
+
                 <button
                   onClick={() => {
                     soundManager.playPop();
@@ -679,6 +705,18 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               </div>
             </section>
           )}
+          {/* ================================================================= */}
+          {/* TAB 0: VUI HỌC ÂM VẦN CHO TIẾNG VIỆT 1 TẬP 1 (PHONICS GAME ZONE) */}
+          {/* ================================================================= */}
+          {isGrade1Phonics && readingTab === 'games' && (
+            <Grade1PhonicsGameZone
+              lesson={lesson}
+              onFinishGames={() => {
+                setEngineMode('quiz');
+              }}
+            />
+          )}
+
           {/* ================================================================= */}
           {/* TAB 1: ĐỌC TOÀN BÀI (FULL READING SCRAPBOOK CARD) */}
           {/* ================================================================= */}

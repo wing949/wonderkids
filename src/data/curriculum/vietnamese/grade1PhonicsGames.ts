@@ -399,6 +399,19 @@ export const GRADE_1_PHONICS_GAMES: Record<string, LessonPhonicsGameConfig> = {
           { id: 'opt-4', label: 'k', isCorrect: false, color: 'amber' },
         ],
       },
+      {
+        id: 'tv-g1-b10-s2',
+        gameType: 'bubble_pop',
+        instruction: 'Đập bong bóng chứa các âm đã học: "o", "ô", "ơ", "u", "ư"!',
+        targetSoundOrLetter: 'o',
+        options: [
+          { id: 'pop-1', label: 'o', isCorrect: true, color: 'pink' },
+          { id: 'pop-2', label: 'ô', isCorrect: true, color: 'purple' },
+          { id: 'pop-3', label: 'ơ', isCorrect: true, color: 'amber' },
+          { id: 'pop-4', label: 'z', isCorrect: false, color: 'sky' },
+          { id: 'pop-5', label: 'u', isCorrect: true, color: 'emerald' },
+        ],
+      },
     ],
   },
 
@@ -696,6 +709,13 @@ export const GRADE_1_PHONICS_GAMES: Record<string, LessonPhonicsGameConfig> = {
           { id: 'opt-3', label: 'Yêu tiếng Việt', isCorrect: true, color: 'sky' },
           { id: 'opt-4', label: 'Chào học kì 2', isCorrect: true, color: 'amber' },
         ],
+      },
+      {
+        id: 'tv-g1-b20-s2',
+        gameType: 'order_sequence',
+        instruction: 'Xếp các từ thành câu chúc mừng: "Bé chăm ngoan học giỏi"',
+        sequenceWords: ['Bé', 'chăm ngoan', 'học giỏi'],
+        options: [],
       },
     ],
   },
