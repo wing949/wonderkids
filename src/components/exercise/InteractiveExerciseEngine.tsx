@@ -1269,6 +1269,11 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 <span>🌱</span>
                 <span className="font-extrabold">Hoạt động Luyện thêm</span>
               </div>
+            ) : lesson.textbookPageRef && lesson.provenance?.verificationStatus === 'reference_only' ? (
+              <div className="mb-3 flex flex-wrap items-center gap-1.5 font-baloo font-bold text-xs text-sky-950 bg-sky-100/90 border border-sky-300/80 px-3.5 py-1 rounded-full w-fit">
+                <span>🧩</span>
+                <span>Luyện bổ trợ • tham chiếu {lesson.textbookPageRef}</span>
+              </div>
             ) : lesson.textbookPageRef && (
               <div className="mb-3 flex items-center gap-1.5 font-baloo font-bold text-xs text-amber-900 bg-amber-100/90 border border-amber-300/80 px-3.5 py-1 rounded-full w-fit">
                 <span>📖</span>

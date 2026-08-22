@@ -251,8 +251,8 @@ export function generateQuestionsForTopic(topic: CurriculumTopic, subject: Subje
       points: 15,
       options: [
         { id: 'a', label: mainPoint, isCorrect: true },
-        { id: 'b', label: 'Bài đọc không nhắc đến chi tiết này.' },
-        { id: 'c', label: 'Ý kiến này trái ngược với nội dung bài học.' },
+        { id: 'b', label: subject === 'vietnamese' ? 'Bài đọc không nhắc đến chi tiết này.' : 'This detail is not part of the lesson.' },
+        { id: 'c', label: subject === 'vietnamese' ? 'Ý kiến này trái ngược với nội dung bài học.' : 'This statement does not match the lesson topic.' },
       ]
     },
     {
@@ -261,12 +261,12 @@ export function generateQuestionsForTopic(topic: CurriculumTopic, subject: Subje
       questionText: subject === 'vietnamese'
         ? `Theo bài học, câu nào dưới đây nêu đúng chi tiết hoặc cách làm đẹp nhất?`
         : `Choose the correct statement according to the lesson:`,
-      audioText: `Em hãy chọn câu trả lời đúng nhất:`,
+      audioText: subject === 'vietnamese' ? 'Em hãy chọn câu trả lời đúng nhất:' : 'Choose the best answer.',
       hint: topic.keyPoints[1] || topic.summary,
       points: 15,
       options: [
         { id: 'a', label: secondPoint, isCorrect: true },
-        { id: 'b', label: 'Chi tiết này chưa chính xác theo bài học.' },
+        { id: 'b', label: subject === 'vietnamese' ? 'Chi tiết này chưa chính xác theo bài học.' : 'This statement does not match the lesson.' },
       ]
     }
   ];
@@ -311,13 +311,16 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     } else if (!readingPassage && subject === 'english') {
       readingPassage = {
         title: t.title.replace(/^Unit \d+:\s*/i, ''),
-        author: 'Global Success English SGK',
+        author: 'WonderKids — supplementary practice',
         genre: 'story',
         content: [
           t.description,
           t.summary
         ],
         audioNarration: `${t.title.replace(/^Unit \d+:\s*/i, '')}. ${t.description}. ${t.summary}`,
+        contentOrigin: 'system_generated',
+        verificationStatus: 'draft',
+        sourcePages: t.sourcePages,
         vocabularyNotes: [
           { word: 'Key vocabulary', meaning: 'Important words and expressions in this lesson.' }
         ]
@@ -361,12 +364,12 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       : null;
     let provenance: ContentProvenance = subject !== 'vietnamese'
       ? t.provenance || {
-        contentOrigin: declaredSourceType === 'sgk_official' ? 'sgk_reference' : 'pedagogical_supplement',
-        verificationStatus: 'verified',
+        contentOrigin: declaredSourceType === 'sgk_official' ? 'system_generated' : 'pedagogical_supplement',
+        verificationStatus: declaredSourceType === 'sgk_official' ? 'reference_only' : 'declared_supplement',
         referenceBook: declaredSourceBook,
         referenceDetail: declaredSourceDetail,
         note: declaredSourceType === 'sgk_official'
-          ? 'Giữ nguyên trạng thái nguồn của môn học ngoài phạm vi rà soát Tiếng Việt.'
+          ? 'Tên bài và trang dùng để tham chiếu SGK; phần mô tả, bài đọc và câu hỏi do ứng dụng biên soạn, chưa phải nguyên văn SGK.'
           : 'Nội dung bổ trợ sư phạm.',
       }
       : verifiedSgkTranscript
@@ -404,7 +407,8 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       provenance = { ...provenance, referenceUrl: referenceBook.readerUrl };
     }
     const isVerifiedSgk = provenance.contentOrigin === 'sgk_reference' && provenance.verificationStatus === 'verified';
-    const isGenerated = subject === 'vietnamese' && provenance.contentOrigin === 'system_generated';
+    const isReferenceOnly = provenance.verificationStatus === 'reference_only';
+    const isGenerated = provenance.contentOrigin === 'system_generated';
     const isUnverifiedVietnamese = subject === 'vietnamese' && !isVerifiedSgk;
     const displayedTitle = isUnverifiedVietnamese && !isPendingSgkCatalog ? cleanReferenceTitle(t.title) : t.title;
     const mappedSourcePages = subject === 'vietnamese'
@@ -420,8 +424,8 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     const allowSupplementReading = subject === 'vietnamese'
       && !isPendingSgkCatalog
       && ((grade === 1 && t.semester === 1) || provenance.contentOrigin === 'pedagogical_supplement');
-    const effectiveSourceBook = (isVerifiedSgk || isPendingSgkCatalog) ? declaredSourceBook : 'WonderKids';
-    const effectiveSourceDetail = (isVerifiedSgk || isPendingSgkCatalog) ? declaredSourceDetail : 'Nội dung luyện thêm';
+    const effectiveSourceBook = (isVerifiedSgk || isPendingSgkCatalog || isReferenceOnly) ? declaredSourceBook : 'WonderKids';
+    const effectiveSourceDetail = (isVerifiedSgk || isPendingSgkCatalog || isReferenceOnly) ? declaredSourceDetail : 'Nội dung luyện thêm';
     const verifiedSgkActivities = subject === 'vietnamese' && verifiedSgkTranscript
       ? getVerifiedVietnameseSgkActivities(normalizedId)
       : [];
@@ -480,13 +484,13 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       grade,
       semester: t.semester,
       unit: isUnverifiedVietnamese ? `SGK Tiếng Việt tập ${t.semester}` : t.unit,
-      textbookPageRef: (isVerifiedSgk || isPendingSgkCatalog) ? t.textbookPageRef : undefined,
+      textbookPageRef: (isVerifiedSgk || isPendingSgkCatalog || isReferenceOnly) ? t.textbookPageRef : undefined,
       sourceType: (isVerifiedSgk || isPendingSgkCatalog) ? 'sgk_official' : 'pedagogical_supplement',
       sourceBook: effectiveSourceBook,
       sourceDetail: effectiveSourceDetail,
-      referenceBook: (isVerifiedSgk || isPendingSgkCatalog) ? provenance.referenceBook : undefined,
-      referenceDetail: (isVerifiedSgk || isPendingSgkCatalog) ? provenance.referenceDetail : undefined,
-      referenceUrl: (isVerifiedSgk || isPendingSgkCatalog) ? provenance.referenceUrl : undefined,
+      referenceBook: (isVerifiedSgk || isPendingSgkCatalog || isReferenceOnly) ? provenance.referenceBook : undefined,
+      referenceDetail: (isVerifiedSgk || isPendingSgkCatalog || isReferenceOnly) ? provenance.referenceDetail : undefined,
+      referenceUrl: (isVerifiedSgk || isPendingSgkCatalog || isReferenceOnly) ? provenance.referenceUrl : undefined,
       provenance,
       pedagogicalObjective: isGenerated
         ? softenUnverifiedText(bundle?.pedagogicalObjective || t.pedagogicalObjective || displayedDescription)
@@ -498,7 +502,7 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
       starReward: 3,
       theoryContent: {
         summary: displayedSummary,
-        keyPoints: isGenerated
+        keyPoints: isGenerated && subject === 'vietnamese'
           ? [
             'Đọc to, rõ ràng, trôi chảy và diễn cảm nội dung bài học.',
             'Hiểu nội dung, từ ngữ và hoàn thành các hoạt động rèn luyện.',

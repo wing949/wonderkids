@@ -77,6 +77,29 @@ describe('Lesson Card Title Prefix "Bài X:" Verification Test', () => {
     assert.equal(formatLessonDisplayTitle(math1), 'Bài 1: Các số 0, 1, 2, 3, 4, 5');
     assert.equal(getLessonCardContent(math1).title, 'Bài 1: Các số 0, 1, 2, 3, 4, 5');
   });
+
+  it('keeps official English Unit titles and labels generated work as supplementary', () => {
+    const english = {
+      id: 'eng-g1-u1',
+      title: 'Unit 1: In the school playground',
+      subject: 'english',
+      grade: 1,
+      semester: 1,
+      order: 1,
+      textbookPageRef: 'Tiếng Anh 1 — Global Success — Trang 6',
+      provenance: {
+        contentOrigin: 'system_generated',
+        verificationStatus: 'reference_only',
+        referenceLessonTitle: 'Unit 1: In the school playground',
+      },
+    };
+    assert.equal(formatLessonDisplayTitle(english), 'Unit 1: In the school playground');
+    assert.equal(getLessonCardContent(english).title, 'Unit 1: In the school playground');
+    assert.equal(
+      getLessonCardContent(english).badge,
+      '🧩 Luyện bổ trợ • tham chiếu Tiếng Anh 1 — Global Success — Trang 6',
+    );
+  });
 });
 
 await rm(tempDir, { recursive: true, force: true });

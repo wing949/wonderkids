@@ -33,6 +33,10 @@ function formatSourcePages(pages: number[]): string {
 export function formatLessonDisplayTitle(lesson: LessonNode): string {
   const rawTitle = (lesson.provenance?.referenceLessonTitle || lesson.title || '').trim();
 
+  if (lesson.subject === 'english' && /^Unit\s+\d+\s*:/i.test(rawTitle)) {
+    return rawTitle;
+  }
+
   // Nếu đã có sẵn tiền tố "Bài X:" hoặc "Bài học X:", trả về nguyên văn
   if (/^\s*Bài\s*(?:học\s*)?\d+\s*:/i.test(rawTitle)) {
     return rawTitle;
@@ -77,7 +81,9 @@ export function getLessonCardContent(lesson: LessonNode) {
     : lesson.subject === 'vietnamese'
       ? '⏳ Đang đối chiếu trang SGK'
     : lesson.textbookPageRef
-      ? `📖 ${lesson.textbookPageRef}`
+      ? lesson.provenance?.verificationStatus === 'reference_only'
+        ? `🧩 Luyện bổ trợ • tham chiếu ${lesson.textbookPageRef}`
+        : `📖 ${lesson.textbookPageRef}`
       : 'Bài học';
   const title = formatLessonDisplayTitle(lesson);
   const preview = lesson.cardPreview || lesson.description;

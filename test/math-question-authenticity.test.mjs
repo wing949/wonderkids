@@ -32,8 +32,8 @@ after(async () => {
 const ALL_TOPICS_BY_GRADE = curriculum.MATH_CURRICULUM_BY_GRADE;
 const generateMathQuestions = questionEngine.generateMathQuestions;
 
-describe('Math Question Authenticity & Quality Test (342 Lessons - 5 Questions Each)', () => {
-  it('should generate exactly 5 authentic mathematical questions with NO placeholders for each of the 342 topics (total 1,710 questions)', () => {
+describe('Math Supplementary Question Quality Test (345 Lessons - 5 Questions Each)', () => {
+  it('should generate exactly 5 supplementary mathematical questions with NO placeholders for each of the 345 topics (total 1,725 questions)', () => {
     let totalQuestions = 0;
     const placeholderBlacklist = [
       'kết quả chuẩn xác',
@@ -75,7 +75,7 @@ describe('Math Question Authenticity & Quality Test (342 Lessons - 5 Questions E
       }
     }
 
-    assert.equal(totalQuestions, 342 * 5, `Expected 1,710 questions (342 topics × 5 questions), got ${totalQuestions}`);
+    assert.equal(totalQuestions, 345 * 5, `Expected 1,725 questions (345 topics × 5 questions), got ${totalQuestions}`);
   });
 
   it('should verify specific user reported lessons have accurate 5-question mathematical sets', () => {

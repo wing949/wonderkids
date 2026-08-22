@@ -825,7 +825,7 @@ test('danh mục SGK hiện không tái sử dụng ba bài bổ trợ cũ', () 
   assert.equal(supplements.length, 0);
 });
 
-test('thay đổi provenance Tiếng Việt không làm đổi nguồn hoặc phần thưởng môn khác', () => {
+test('Toán và Tiếng Anh giữ phần thưởng nhưng không tự nhận nội dung bổ trợ là nguyên văn SGK', () => {
   for (const subject of ['math', 'english']) {
     const topicsByGrade = subject === 'math'
       ? curriculum.MATH_CURRICULUM_BY_GRADE
@@ -834,8 +834,8 @@ test('thay đổi provenance Tiếng Việt không làm đổi nguồn hoặc ph
       for (const lesson of curriculum.getLessonsForGradeAndSubject(grade, subject)) {
         const topic = topicsByGrade[grade].find((item) => item.id === lesson.id);
         assert.ok(topic, `Thiếu topic gốc ${subject}: ${lesson.id}`);
-        assert.notEqual(lesson.provenance.contentOrigin, 'system_generated', `Sai nguồn ${subject}: ${lesson.id}`);
-        assert.notEqual(lesson.provenance.verificationStatus, 'reference_only', `Sai xác minh ${subject}: ${lesson.id}`);
+        assert.equal(lesson.provenance.contentOrigin, 'system_generated', `Sai nguồn ${subject}: ${lesson.id}`);
+        assert.equal(lesson.provenance.verificationStatus, 'reference_only', `Sai xác minh ${subject}: ${lesson.id}`);
         assert.equal(lesson.unit, topic.unit, `Sai unit ${subject}: ${lesson.id}`);
         assert.equal(lesson.textbookPageRef, topic.textbookPageRef, `Sai trang sách ${subject}: ${lesson.id}`);
         assert.equal(lesson.starsEarned, 0, `Sai sao đã nhận: ${lesson.id}`);

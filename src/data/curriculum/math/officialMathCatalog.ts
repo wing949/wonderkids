@@ -1,4 +1,7 @@
-// Official 342 Math Lessons Database - GDPT 2018 NXB Giao Duc Viet Nam
+// Legacy generated catalog retained for migration only. Runtime exports below are
+// rebuilt from the visually checked table of contents used by the application.
+import { normalizeVerifiedMathToc } from './officialMathCorrections.ts';
+
 export interface MathCurriculumTopic {
   id: string;
   grade: number;
@@ -14,10 +17,10 @@ export interface MathCurriculumTopic {
   mathType: string;
   difficulty: 'easy' | 'medium' | 'hard';
   mascotTip: string;
-  sourcePages: string[];
+  sourcePages: Array<string | number>;
 }
 
-export const OFFICIAL_MATH_342_CATALOG: MathCurriculumTopic[] = [
+const LEGACY_MATH_342_CATALOG: MathCurriculumTopic[] = [
   {
     "id": "math-g1-b1",
     "grade": 1,
@@ -7347,3 +7350,34 @@ export const OFFICIAL_MATH_342_CATALOG: MathCurriculumTopic[] = [
     "sourcePages": []
   }
 ];
+
+const LEGACY_MATH_BY_GRADE = LEGACY_MATH_342_CATALOG.reduce<Record<number, MathCurriculumTopic[]>>((byGrade, topic) => {
+  (byGrade[topic.grade] ||= []).push(topic);
+  return byGrade;
+}, {});
+
+const NORMALIZED_MATH_BY_GRADE = normalizeVerifiedMathToc(
+  LEGACY_MATH_BY_GRADE as unknown as Record<number, import('../types.ts').CurriculumTopic[]>,
+);
+
+export const OFFICIAL_MATH_345_CATALOG: MathCurriculumTopic[] = Object.entries(NORMALIZED_MATH_BY_GRADE)
+  .flatMap(([grade, topics]) => topics.map((topic) => ({
+    id: topic.id,
+    grade: Number(grade),
+    semester: topic.semester,
+    lessonNumber: topic.lessonNumber,
+    title: topic.title,
+    unit: topic.unit,
+    textbookPageRef: topic.textbookPageRef,
+    sourceBook: topic.sourceBook || `Toán ${grade}, NXB Giáo Dục Việt Nam`,
+    sourceType: 'sgk_official' as const,
+    pedagogicalObjective: topic.pedagogicalObjective || topic.description,
+    description: topic.description,
+    mathType: LEGACY_MATH_342_CATALOG.find((item) => item.id === topic.id)?.mathType || 'mixed_practice',
+    difficulty: LEGACY_MATH_342_CATALOG.find((item) => item.id === topic.id)?.difficulty || 'medium',
+    mascotTip: topic.mascotTip,
+    sourcePages: topic.sourcePages || [],
+  })));
+
+/** @deprecated Use OFFICIAL_MATH_345_CATALOG. */
+export const OFFICIAL_MATH_342_CATALOG = OFFICIAL_MATH_345_CATALOG;

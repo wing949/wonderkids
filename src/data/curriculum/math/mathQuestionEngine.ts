@@ -14,7 +14,23 @@ function bubble(
   hint: string,
   extra: QuestionExtra = {},
 ): Question {
-  const options = [correct, ...distractors].map((label, index) => ({
+  const uniqueLabels = [correct, ...distractors].filter((label, index, labels) => labels.indexOf(label) === index);
+  const numericMatch = String(correct).match(/-?\d+(?:[.,]\d+)?/);
+  let alternativeOffset = 1;
+  while (uniqueLabels.length < 3) {
+    if (numericMatch) {
+      const decimalSeparator = numericMatch[0].includes(',') ? ',' : '.';
+      const numericValue = Number(numericMatch[0].replace(',', '.'));
+      const replacement = String(numericValue + alternativeOffset).replace('.', decimalSeparator);
+      const candidate = String(correct).replace(numericMatch[0], replacement);
+      if (!uniqueLabels.includes(candidate)) uniqueLabels.push(candidate);
+      alternativeOffset += 1;
+    } else {
+      const candidate = uniqueLabels.length === 1 ? 'Chưa đủ dữ kiện' : 'Không thể kết luận';
+      if (!uniqueLabels.includes(candidate)) uniqueLabels.push(candidate);
+    }
+  }
+  const options = uniqueLabels.map((label, index) => ({
     id: String.fromCharCode(97 + index),
     label,
     isCorrect: index === 0,
@@ -53,7 +69,18 @@ function keypad(
 }
 
 function reviewQuestions(topic: CurriculumTopic, grade: GradeLevel): Question[] {
+  const focus = topic.title.replace(/^Bài\s+\d+\s*:\s*/i, '').trim();
   const n = topic.lessonNumber;
+  const isExplicitReview = /ôn tập|luyện tập/i.test(focus);
+  if (!isExplicitReview || grade === 5) {
+    return [
+      bubble(topic, 'q1', `Luyện bổ trợ: Nội dung trọng tâm của bài này là gì?`, focus, ['Một nội dung của bài khác', 'Một hoạt động không liên quan'], `Đọc lại tên bài: ${focus}.`),
+      bubble(topic, 'q2', `Luyện bổ trợ: Trước khi làm hoạt động về “${focus}”, em nên làm gì?`, 'Đọc kĩ yêu cầu và dữ kiện', ['Chọn ngay một đáp án bất kì', 'Bỏ qua các đơn vị và kí hiệu'], 'Đọc kĩ đề giúp em xác định đúng việc cần làm.'),
+      bubble(topic, 'q3', `Luyện bổ trợ: Khi giải bài thuộc nội dung “${focus}”, cách làm nào phù hợp?`, 'Thực hiện từng bước và ghi rõ kết quả', ['Chỉ đoán kết quả', 'Đổi sang một chủ đề khác'], 'Làm từng bước để dễ kiểm tra.'),
+      bubble(topic, 'q4', `Luyện bổ trợ: Nếu kết quả của bài “${focus}” chưa chắc chắn, em nên làm gì?`, 'Kiểm tra lại phép tính hoặc cách lập luận', ['Giữ nguyên mà không kiểm tra', 'Xóa toàn bộ dữ kiện'], 'Đối chiếu kết quả với dữ kiện ban đầu.'),
+      bubble(topic, 'q5', `Luyện bổ trợ: Dấu hiệu nào cho thấy em đã hoàn thành bài “${focus}”?`, 'Kết quả trả lời đúng yêu cầu và có kiểm tra lại', ['Chỉ chép lại tên bài', 'Bỏ trống phần trả lời'], 'Kết quả phải trả lời đúng điều đề bài hỏi.'),
+    ];
+  }
   if (grade === 1) {
     const left = (n % 5) + 3;
     const right = (n % 3) + 1;
@@ -196,7 +223,7 @@ function generateGrade1Math(topic: CurriculumTopic): Question[] {
   if (includesAny(text, ['hai chữ số', '11 đến 20', 'bảng các số', 'số đến 100', 'phạm vi 100', 'các số'])) {
     const val = 10 + ((n * 3) % 40);
     return [
-      bubble(topic, 'q1', `Bài 1 (Cấu tạo số): Số ${val} gồm mấy chục và mấy đơn vị?`, `${Math.floor(val / 10)} chục và ${val % 10} đơn vị`, [`${val % 10} chục và ${Math.floor(val / 10)} đơn vị`, `${val} chục`], 'Chữ số trước chỉ chục, sau chỉ đơn vị.'),
+      bubble(topic, 'q1', `${text.includes('bảng các số') ? 'Bảng số đến 100' : 'Bài 1 (Cấu tạo số)'}: Số ${val} gồm mấy chục và mấy đơn vị?`, `${Math.floor(val / 10)} chục và ${val % 10} đơn vị`, [`${val % 10} chục và ${Math.floor(val / 10)} đơn vị`, `${val} chục`], 'Chữ số trước chỉ chục, sau chỉ đơn vị.'),
       bubble(topic, 'q2', `Bài 2 (Thứ tự): Số liền sau của số ${val} là:`, `${val + 1}`, [`${val - 1}`, `${val + 10}`], 'Số liền sau hơn số đã cho 1 đơn vị.'),
       bubble(topic, 'q3', `Bài 3 (Thứ tự): Số liền trước của số ${val} là:`, `${val - 1}`, [`${val + 1}`, `${val - 10}`], 'Số liền trước kém số đã cho 1 đơn vị.'),
       bubble(topic, 'q4', `Bài 4 (So sánh): Trong các số ${val}, ${val + 5}, ${val - 2}, số lớn nhất là:`, `${val + 5}`, [`${val}`, `${val - 2}`], 'So sánh các số.'),
@@ -250,7 +277,7 @@ function generateGrade2Math(topic: CurriculumTopic): Question[] {
       bubble(topic, 'q5', `Bài 5 (Thử thách): Có ${f * 4} cái kẹo chia đều cho ${f} bạn. Mỗi bạn được:`, '4 cái kẹo', ['3 cái kẹo', '5 cái kẹo'], `${f * 4} : ${f} = 4 cái.`)
     ];
   }
-  if (includesAny(text, ['đường gấp khúc', 'hình tứ giác', 'khối trụ', 'khối cầu'])) {
+  if (includesAny(text, ['điểm, đoạn thẳng', 'ba điểm thẳng hàng', 'đường gấp khúc', 'hình tứ giác', 'khối trụ', 'khối cầu'])) {
     return [
       bubble(topic, 'q1', 'Bài 1 (Hình học): Hình tứ giác là hình có mấy cạnh và mấy đỉnh?', '4 cạnh và 4 đỉnh', ['3 cạnh và 3 đỉnh', '5 cạnh và 5 đỉnh'], 'Tứ giác có 4 cạnh.'),
       bubble(topic, 'q2', 'Bài 2 (Đường gấp khúc): Đường gấp khúc gồm 3 đoạn dài 3 cm, 4 cm, 5 cm có độ dài là:', '12 cm', ['10 cm', '15 cm'], '3 + 4 + 5 = 12 cm.'),
@@ -420,12 +447,19 @@ function generateGrade5Math(topic: CurriculumTopic): Question[] {
 }
 
 export function generateMathQuestions(topic: CurriculumTopic, grade: GradeLevel): Question[] {
-  switch (grade) {
-    case 1: return generateGrade1Math(topic);
-    case 2: return generateGrade2Math(topic);
-    case 3: return generateGrade3Math(topic);
-    case 4: return generateGrade4Math(topic);
-    case 5: return generateGrade5Math(topic);
-    default: return generateGrade1Math(topic);
-  }
+  const generated = (() => {
+    switch (grade) {
+      case 1: return generateGrade1Math(topic);
+      case 2: return generateGrade2Math(topic);
+      case 3: return generateGrade3Math(topic);
+      case 4: return generateGrade4Math(topic);
+      case 5: return generateGrade5Math(topic);
+      default: return generateGrade1Math(topic);
+    }
+  })();
+  return generated.map((question) => ({
+    ...question,
+    contentOrigin: 'system_generated',
+    audioText: question.audioText || question.questionText,
+  }));
 }
