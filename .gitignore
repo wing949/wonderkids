@@ -47,3 +47,5 @@ scratch/
 .cache/sgk/
 .cache/ocr/
 private-reports/
+backup_audio_wav/
+

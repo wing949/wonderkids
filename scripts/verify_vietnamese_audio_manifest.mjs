@@ -74,16 +74,22 @@ try {
         await access(absolutePath);
         const file = await readFile(absolutePath);
         const fileStats = await stat(absolutePath);
-        const pcm = wavPcmData(file);
-        if (fileStats.size === 0 || file.subarray(0, 4).toString('ascii') !== 'RIFF' || file.subarray(8, 12).toString('ascii') !== 'WAVE' || !pcm) {
+        const isWav = file.subarray(0, 4).toString('ascii') === 'RIFF' && file.subarray(8, 12).toString('ascii') === 'WAVE';
+        const isMp3 = file.length > 3 && ((file[0] === 0xff && (file[1] & 0xe0) === 0xe0) || file.subarray(0, 3).toString('ascii') === 'ID3');
+        if (fileStats.size === 0 || (!isWav && !isMp3)) {
           invalid.push(`${asset.lessonId}:${kind}`);
-        } else {
-          const legacyBytes = kind === 'primary' ? 552960 : 506880;
-          const legacyHash = kind === 'primary'
-            ? '7c91d642b467c265cb41aabdb5f9cbca60b9d2ed67f4ccd839884187b0bb8a2e'
-            : 'f00942c59dcc1fcaf8da62a279e05709ce2b7eb45fb25fe8c7621201946358a0';
-          if (sha256(pcm.subarray(0, legacyBytes)) === legacyHash) {
-            forbiddenDisclosureDetected.push(`${asset.lessonId}:${kind}`);
+        } else if (isWav) {
+          const pcm = wavPcmData(file);
+          if (!pcm) {
+            invalid.push(`${asset.lessonId}:${kind}`);
+          } else {
+            const legacyBytes = kind === 'primary' ? 552960 : 506880;
+            const legacyHash = kind === 'primary'
+              ? '7c91d642b467c265cb41aabdb5f9cbca60b9d2ed67f4ccd839884187b0bb8a2e'
+              : 'f00942c59dcc1fcaf8da62a279e05709ce2b7eb45fb25fe8c7621201946358a0';
+            if (sha256(pcm.subarray(0, legacyBytes)) === legacyHash) {
+              forbiddenDisclosureDetected.push(`${asset.lessonId}:${kind}`);
+            }
           }
         }
         assetHashes[kind] = sha256(file);
