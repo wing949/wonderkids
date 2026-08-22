@@ -1,12 +1,15 @@
 import { build } from 'esbuild';
+import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { access, mkdtemp, readFile, rm, stat } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { pathToFileURL } from 'node:url';
+import { promisify } from 'node:util';
 
 const workspace = process.cwd();
 const outputDir = await mkdtemp(join(tmpdir(), 'wonderkids-vietnamese-audio-'));
+const runFile = promisify(execFile);
 
 function wavPcmData(file) {
   let offset = 12;
@@ -45,16 +48,25 @@ try {
   const runtimeLessons = new Map(
     [1, 2, 3, 4, 5]
       .flatMap((grade) => getLessonsForGradeAndSubject(grade, 'vietnamese'))
-      .map((lesson) => [lesson.id, lesson]),
+      .map((lesson) => [lesson.id.replace('-l', '-b'), lesson]),
   );
+  const expectedLessonIds = [...runtimeLessons.entries()]
+    .filter(([, lesson]) => lesson.readingPassage?.contentOrigin === 'sgk_reference'
+      && lesson.readingPassage.verificationStatus === 'verified'
+      && lesson.readingPassage.sourcePages?.length)
+    .map(([lessonId]) => lessonId)
+    .sort();
+  const manifestLessonIds = Object.keys(VIETNAMESE_AUDIO_MANIFEST).sort();
+  const manifestLessonIdMismatch = expectedLessonIds.length !== manifestLessonIds.length
+    || expectedLessonIds.some((lessonId, index) => lessonId !== manifestLessonIds[index]);
   const missing = [];
   const invalid = [];
   const forbiddenDisclosureDetected = [];
   const manifestInvalid = [];
   const sourcePageMismatches = [];
-  const identicalPrimaryAndFallback = [];
+  const decodeInvalid = [];
+  const decodeTargets = [];
   let primaryBytes = 0;
-  let fallbackBytes = 0;
 
   for (const asset of Object.values(VIETNAMESE_AUDIO_MANIFEST)) {
     const lesson = runtimeLessons.get(asset.lessonId);
@@ -70,6 +82,9 @@ try {
       || asset.transcriptHash !== runtimeTranscriptHash
       || asset.lessonVersion < 1
       || !Array.isArray(asset.sourcePages)
+      || asset.primaryVoice !== 'Cô Giáo Vy'
+      || asset.fallbackPath !== undefined
+      || asset.fallbackVoice !== undefined
     ) {
       manifestInvalid.push(asset.lessonId);
     }
@@ -80,8 +95,7 @@ try {
         runtime: runtimeSourcePages,
       });
     }
-    const assetHashes = {};
-    for (const [kind, assetPath] of [['primary', asset.primaryPath], ['fallback', asset.fallbackPath]]) {
+    for (const [kind, assetPath] of [['primary', asset.primaryPath]]) {
       const absolutePath = join(workspace, 'public', assetPath.slice(1));
       try {
         await access(absolutePath);
@@ -105,40 +119,60 @@ try {
             }
           }
         }
-        assetHashes[kind] = sha256(file);
-        if (kind === 'primary') primaryBytes += fileStats.size;
-        else fallbackBytes += fileStats.size;
+        decodeTargets.push({ lessonId: asset.lessonId, absolutePath });
+        primaryBytes += fileStats.size;
       } catch {
         missing.push(`${asset.lessonId}:${kind}`);
       }
     }
-    if (asset.fallbackPath && asset.fallbackPath !== asset.primaryPath && assetHashes.primary && assetHashes.primary === assetHashes.fallback) {
-      identicalPrimaryAndFallback.push(asset.lessonId);
+  }
+
+  let decodeIndex = 0;
+  async function decodeWorker() {
+    while (decodeIndex < decodeTargets.length) {
+      const target = decodeTargets[decodeIndex];
+      decodeIndex += 1;
+      try {
+        const { stdout } = await runFile('ffprobe', [
+          '-v', 'error',
+          '-show_entries', 'format=duration',
+          '-of', 'default=noprint_wrappers=1:nokey=1',
+          target.absolutePath,
+        ]);
+        const duration = Number(stdout.trim());
+        if (!Number.isFinite(duration) || duration <= 0) decodeInvalid.push(target.lessonId);
+      } catch {
+        decodeInvalid.push(target.lessonId);
+      }
     }
   }
+  await Promise.all(Array.from({ length: 8 }, () => decodeWorker()));
 
   const result = {
     lessonCount: Object.keys(VIETNAMESE_AUDIO_MANIFEST).length,
+    expectedLessonCount: expectedLessonIds.length,
+    manifestLessonIdMismatch,
     primaryFiles: Object.keys(VIETNAMESE_AUDIO_MANIFEST).length - missing.filter((item) => item.endsWith(':primary')).length,
-    fallbackFiles: Object.keys(VIETNAMESE_AUDIO_MANIFEST).length - missing.filter((item) => item.endsWith(':fallback')).length,
+    fallbackFiles: 0,
+    fallbackPolicy: 'disabled',
     primaryBytes,
-    fallbackBytes,
     missing,
     invalid,
+    decodeInvalid,
     forbiddenDisclosureDetected,
     manifestInvalid,
     sourcePageMismatches,
-    identicalPrimaryAndFallback,
   };
 
   console.log(JSON.stringify(result, null, 2));
   if (
     missing.length
+    || manifestLessonIdMismatch
     || invalid.length
+    || decodeInvalid.length
     || forbiddenDisclosureDetected.length
     || manifestInvalid.length
     || sourcePageMismatches.length
-    || identicalPrimaryAndFallback.length
   ) process.exitCode = 1;
 } finally {
   await rm(outputDir, { recursive: true, force: true });

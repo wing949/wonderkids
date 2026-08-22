@@ -139,3 +139,19 @@
   background-size: 30px 30px;
   animation: moveStripe 2s linear infinite;
 }
+
+@media (max-width: 1180px), (prefers-reduced-motion: reduce) {
+  body {
+    background-attachment: scroll;
+    transition: none;
+  }
+
+  .stripe-animated {
+    animation: none !important;
+  }
+
+  .animate-bounce-subtle,
+  .animate-ping {
+    animation: none !important;
+  }
+}

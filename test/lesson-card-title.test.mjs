@@ -4,7 +4,7 @@ import { build } from 'esbuild';
 import { randomBytes } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { rm } from 'node:fs/promises';
+import { readFile, rm } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 
 const tempDir = join(tmpdir(), `wonderkids-title-${randomBytes(6).toString('hex')}`);
@@ -97,8 +97,33 @@ describe('Lesson Card Title Prefix "Bài X:" Verification Test', () => {
     assert.equal(getLessonCardContent(english).title, 'Unit 1: In the school playground');
     assert.equal(
       getLessonCardContent(english).badge,
-      '🧩 Luyện bổ trợ • tham chiếu Tiếng Anh 1 — Global Success — Trang 6',
+      '🧩 Luyện bổ trợ • Trang 6',
     );
+
+    const math = {
+      id: 'math-g5-b23',
+      title: 'Bài 23: Nhân, chia số thập phân',
+      subject: 'math',
+      grade: 5,
+      semester: 1,
+      order: 23,
+      textbookPageRef: 'SGK Toán 5 Tập một — Trang 83–85',
+      provenance: {
+        contentOrigin: 'system_generated',
+        verificationStatus: 'reference_only',
+      },
+    };
+    assert.equal(getLessonCardContent(math).badge, '🧩 Luyện bổ trợ • Trang 83–85');
+  });
+
+  it('keeps supplementary labels inside mobile cards and the lesson header', async () => {
+    const adventureMap = await readFile('src/components/adventure/AdventureMap.tsx', 'utf8');
+    const exerciseEngine = await readFile('src/components/exercise/InteractiveExerciseEngine.tsx', 'utf8');
+
+    assert.match(adventureMap, /className="inline-flex min-w-0[^\"]*truncate[^\"]*"/);
+    assert.match(adventureMap, /title=\{card\.badge\}/);
+    assert.match(exerciseEngine, /getLessonCardContent\(lesson\)\.badge/);
+    assert.match(exerciseEngine, /max-w-full[^\"]*break-words/);
   });
 });
 

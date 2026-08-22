@@ -1,0 +1,7 @@
+interface:
+  display_name: "Rà soát SGK 3 môn"
+  short_description: "Đối chiếu, sửa và phát hành nội dung SGK"
+  default_prompt: "Use $audit-curriculum-sgk to rà soát, đối chiếu và sửa nội dung Tiếng Việt, Toán hoặc Tiếng Anh theo nguồn SGK chính thức."
+
+policy:
+  allow_implicit_invocation: true

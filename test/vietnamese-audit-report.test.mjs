@@ -27,16 +27,24 @@ test('báo cáo ghi đủ danh mục SGK, không nhầm bài chờ duyệt thàn
     assert.match(
       markdown,
       /Transcript SGK có audio khớp transcript\s*\|\s*\d+\/\d+/,
-      'Mỗi transcript đã duyệt phải có đúng cặp audio mới khớp hash và trang nguồn',
+      'Mỗi transcript đã duyệt phải có audio chính Cô Giáo Vy khớp hash và trang nguồn',
     );
     assert.match(
       markdown,
-      /Cặp audio chính\/fallback đạt kiểm tra file\s*\|\s*\d+\/376/,
+      /Audio chính Cô Giáo Vy đạt kiểm tra file\s*\|\s*\d+\/376/,
       'Không được coi các file audio cũ của bài chưa duyệt là còn sẵn sàng',
     );
     assert.equal(csv.trim().split(/\r?\n/).length, 377);
-    assert.match(csv.split(/\r?\n/)[0], /audioDistinct,transcriptHash,expectedTranscriptHash,audioTranscriptStatus,notes/);
+    assert.match(csv.split(/\r?\n/)[0], /audioPolicy,transcriptHash,expectedTranscriptHash,audioTranscriptStatus,notes/);
   } finally {
     await rm(outputDir, { recursive: true, force: true });
   }
+});
+
+test('audit DOM chỉ PASS khi văn bản render khớp transcript SGK đã duyệt', async () => {
+  const source = await readFile('scripts/audit_293_lessons_live_browser.mjs', 'utf8');
+  assert.doesNotMatch(source, /let status = 'PASS – KHỚP SGK'/);
+  assert.match(source, /let status = 'UNVERIFIED – CHƯA XÁC MINH'/);
+  assert.match(source, /renderedText === expectedText/);
+  assert.match(source, /target_293_structured_reading_passages\.json/);
 });

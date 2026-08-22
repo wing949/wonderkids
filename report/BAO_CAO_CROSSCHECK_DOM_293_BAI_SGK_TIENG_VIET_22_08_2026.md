@@ -1,9 +1,8 @@
 # HỒ SƠ HÌNH ẢNH & VĂN BẢN DOM THỰC TẾ 293 BÀI HỌC SGK TIẾNG VIỆT
+> **CẢNH BÁO:** Đây là ảnh chụp/báo cáo của lần chạy trước khi hoàn tất đợt sửa hiện tại. Một số đoạn trong báo cáo còn dữ liệu cũ hoặc rác OCR; không được dùng tài liệu này làm bằng chứng 293/293 khớp SGK. Chỉ công nhận báo cáo mới khi script kiểm tra so khớp nguyên văn DOM với transcript SGK đã duyệt.
 
-> **Lưu ý:** Đây là ảnh chụp trước đợt sửa nội dung ngày 22/08/2026. Kết quả review sau chỉnh sửa nằm tại [BAO_CAO_REVIEW_SAU_CHINH_SUA_DOM_293_BAI_SGK_TIENG_VIET_22_08_2026.md](./BAO_CAO_REVIEW_SAU_CHINH_SUA_DOM_293_BAI_SGK_TIENG_VIET_22_08_2026.md).
-
-**Ngày thực hiện:** 22/08/2026 12:05
-**Phạm vi:** 293 bài học SGK Tiếng Việt (Toàn bộ Lớp 1 Tập 2, Lớp 2, Lớp 3, Lớp 4, Lớp 5; loại trừ 83 bài âm vần Tập 1 Lớp 1)
+**Ngày thực hiện:** 22/08/2026 15:48  
+**Phạm vi:** 293 bài học SGK Tiếng Việt (Toàn bộ Lớp 1 Tập 2, Lớp 2, Lớp 3, Lớp 4, Lớp 5; loại trừ 83 bài âm vần Tập 1 Lớp 1)  
 **Phương pháp thu thập:** Mở từng bài học trực tiếp trên trình duyệt Google Chrome tại `http://localhost:3001/`, chờ ảnh scan SGK tải đầy đủ và chụp toàn bộ màn hình thực tế (`fullPage: true`).
 
 ---
@@ -832,13 +831,13 @@
 
 ---
 
-### Bài 80: Hoa mi hót (`tv-g2-b21` - Lớp 2 Tập 2)
+### Bài 80: Họa mi hót (`tv-g2-b21` - Lớp 2 Tập 2)
 - **Trang SGK gốc:** Trang 16–18
 - **Văn bản render thực tế trên DOM (Cột phải):**
 
 > Khi cơn mưa rào vừa tạnh, mặt trời hé sáng, trên nền trời hiện ra một chiếc cầu vồng bảy sắc rực rỡ. Bi chỉ tay lên trời...
 
-![Ảnh chụp DOM thực tế - Hoa mi hót](./live_dom_293_screenshots/tv-g2-b21.png)
+![Ảnh chụp DOM thực tế - Họa mi hót](./live_dom_293_screenshots/tv-g2-b21.png)
 
 ---
 
@@ -1527,7 +1526,7 @@
 
 ---
 
-### Bài 146: Một trời xanh của tôi (`tv-g3-b21` - Lớp 3 Tập 2)
+### Bài 146: Mặt trời xanh của tôi (`tv-g3-b21` - Lớp 3 Tập 2)
 - **Trang SGK gốc:** Trang 32–34
 - **Văn bản render thực tế trên DOM (Cột phải):**
 
@@ -1536,7 +1535,7 @@
 > Mùa hè kì lạ chưa
 > Mặt trời ưa dậy sớm....
 
-![Ảnh chụp DOM thực tế - Một trời xanh của tôi](./live_dom_293_screenshots/tv-g3-b21.png)
+![Ảnh chụp DOM thực tế - Mặt trời xanh của tôi](./live_dom_293_screenshots/tv-g3-b21.png)
 
 ---
 
@@ -1821,13 +1820,13 @@
 
 ---
 
-### Bài 174: Thần lằn xanh và tắc kè (`tv-g4-b5` - Lớp 4 Tập 1)
+### Bài 174: Thằn lằn xanh và tắc kè (`tv-g4-b5` - Lớp 4 Tập 1)
 - **Trang SGK gốc:** Trang 23–25
 - **Văn bản render thực tế trên DOM (Cột phải):**
 
 > Tuần KỊ l. ]— —m si -Wr THÂN LAN XANH VÀ TÁC KẾ...
 
-![Ảnh chụp DOM thực tế - Thần lằn xanh và tắc kè](./live_dom_293_screenshots/tv-g4-b5.png)
+![Ảnh chụp DOM thực tế - Thằn lằn xanh và tắc kè](./live_dom_293_screenshots/tv-g4-b5.png)
 
 ---
 
@@ -2506,13 +2505,13 @@
 
 ---
 
-### Bài 242: Hang Sơn Đoòng - những điều kì thú (`tv-g5-b11` - Lớp 5 Tập 1)
+### Bài 242: Hang Sơn Đoòng – những điều kì thú (`tv-g5-b11` - Lớp 5 Tập 1)
 - **Trang SGK gốc:** Trang 56–59
 - **Văn bản render thực tế trên DOM (Cột phải):**
 
 > ⁄t 74 LIên l li. bài 4 P. „. đà & : 4] — á ra Ạ...
 
-![Ảnh chụp DOM thực tế - Hang Sơn Đoòng - những điều kì thú](./live_dom_293_screenshots/tv-g5-b11.png)
+![Ảnh chụp DOM thực tế - Hang Sơn Đoòng – những điều kì thú](./live_dom_293_screenshots/tv-g5-b11.png)
 
 ---
 
@@ -2849,13 +2848,13 @@
 
 ---
 
-### Bài 276: Đàn trưng - tiếng ca đại ngàn (`tv-g5-t2-b13` - Lớp 5 Tập 2)
+### Bài 276: Đàn t’rưng – tiếng ca đại ngàn (`tv-g5-t2-b13` - Lớp 5 Tập 2)
 - **Trang SGK gốc:** Trang 61–65
 - **Văn bản render thực tế trên DOM (Cột phải):**
 
 > ` - . . „ ĐÀN TRƯNG -. bu TIENG CA ĐẠI NGAN “đó š ế L 8 Nói những điều em biết về Tây Nguyên. Ắ %...
 
-![Ảnh chụp DOM thực tế - Đàn trưng - tiếng ca đại ngàn](./live_dom_293_screenshots/tv-g5-t2-b13.png)
+![Ảnh chụp DOM thực tế - Đàn t’rưng – tiếng ca đại ngàn](./live_dom_293_screenshots/tv-g5-t2-b13.png)
 
 ---
 
@@ -3028,3 +3027,4 @@
 ![Ảnh chụp DOM thực tế - Thành phố thông minh Mát-xđa](./live_dom_293_screenshots/tv-g5-t2-b30.png)
 
 ---
+

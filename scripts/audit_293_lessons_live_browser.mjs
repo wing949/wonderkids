@@ -14,6 +14,21 @@ console.log('===================================================================
 // Load catalog
 const catalogPath = path.join(workspace, 'scripts', 'all_376_lessons_catalog.json');
 const allLessons = JSON.parse(await fs.readFile(catalogPath, 'utf8'));
+const transcriptTasks = JSON.parse(await fs.readFile(
+  path.join(workspace, 'scripts', 'target_293_structured_reading_passages.json'),
+  'utf8',
+));
+const transcriptByLessonId = new Map(
+  transcriptTasks.map((task) => [task.lessonId.replace('-l', '-b'), task]),
+);
+
+function normalizeAuditText(value) {
+  return String(value || '')
+    .normalize('NFC')
+    .replace(/^Bài\s+\d+\s*:\s*/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
 // Filter out Grade 1 Semester 1 (83 lessons) -> Exactly 293 lessons
 const targetLessons = allLessons.filter(l => !(l.grade === 1 && l.semester === 1));
@@ -107,8 +122,9 @@ try {
       await page.screenshot({ path: screenshotFilePath, fullPage: false });
 
       const fullText = domData.paragraphs.join('\n');
-      let status = 'PASS – KHỚP SGK';
-      let reason = 'Đầy đủ tiêu đề, tác giả, ảnh scan SGK và văn bản chuẩn xác';
+      const expectedTranscript = transcriptByLessonId.get(lessonId.replace('-l', '-b'));
+      let status = 'UNVERIFIED – CHƯA XÁC MINH';
+      let reason = 'Chưa có phép so sánh nguyên văn DOM với transcript SGK đã duyệt';
 
       if (!domData.heading || domData.heading.length === 0) {
         status = 'MISSING – THIẾU NỘI DUNG';
@@ -129,13 +145,24 @@ try {
           }
         }
         // Check OCR Junk
-        if (status === 'PASS – KHỚP SGK') {
+        if (!status.startsWith('FAIL')) {
           for (const pat of ocrJunkPatterns) {
             if (pat.test(fullText)) {
               status = 'FAIL – SAI NỘI DUNG';
               reason = `Nội dung DOM chứa rác OCR: khớp mẫu ${pat.toString()}`;
               break;
             }
+          }
+        }
+        if (!status.startsWith('FAIL') && expectedTranscript?.text) {
+          const renderedText = normalizeAuditText(`${domData.heading}\n${fullText}`);
+          const expectedText = normalizeAuditText(expectedTranscript.text);
+          if (renderedText === expectedText) {
+            status = 'PASS – KHỚP TRANSCRIPT SGK ĐÃ DUYỆT';
+            reason = 'Tiêu đề và nội dung DOM khớp chính xác transcript SGK đã duyệt';
+          } else {
+            status = 'FAIL – SAI NỘI DUNG';
+            reason = 'Văn bản DOM không khớp transcript SGK đã duyệt';
           }
         }
       }

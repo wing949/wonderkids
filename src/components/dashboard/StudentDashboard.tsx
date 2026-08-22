@@ -44,7 +44,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   return (
     <div className="relative pb-24 pt-6 sm:pt-10">
       {/* Background Decorative Cloud Circles */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 -z-10 hidden overflow-hidden pointer-events-none xl:block">
         <div className="absolute -top-10 left-10 h-72 w-72 rounded-full bg-amber-100/50 blur-3xl" />
         <div className="absolute top-40 right-10 h-80 w-80 rounded-full bg-sky-100/60 blur-3xl" />
         <div className="absolute bottom-20 left-1/3 h-96 w-96 rounded-full bg-emerald-100/40 blur-3xl" />
@@ -52,7 +52,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
         {/* Hero Section: Mascot Greeting & Daily Habit Loop */}
-        <section className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-4xl border-2 border-white/80 bg-white/75 p-5 sm:p-8 shadow-washi backdrop-blur-md">
+        <section className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-4xl border-2 border-white/80 bg-white/95 p-5 sm:p-8 shadow-washi backdrop-blur-none xl:bg-white/75 xl:backdrop-blur-md">
           {/* Mascot Companion Interaction */}
           <div className="flex-1 w-full">
             <div className="flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-400 font-baloo">
@@ -176,6 +176,8 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                     <img
                       src={subjectThumbnails[subjKey]}
                       alt={subj.name}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
@@ -249,7 +251,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
         </section>
 
         {/* Daily Quests Section: Việc Tốt Mỗi Ngày */}
-        <section className="rounded-4xl bg-gradient-to-br from-orange-50/85 via-amber-50/60 to-yellow-50/75 p-6 sm:p-8 shadow-washi backdrop-blur-md">
+        <section className="rounded-4xl bg-gradient-to-br from-orange-50/95 via-amber-50/90 to-yellow-50/95 p-6 sm:p-8 shadow-washi backdrop-blur-none xl:from-orange-50/85 xl:via-amber-50/60 xl:to-yellow-50/75 xl:backdrop-blur-md">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-amber-200/40 pb-5">
             <div>
               <div className="flex items-center gap-2">

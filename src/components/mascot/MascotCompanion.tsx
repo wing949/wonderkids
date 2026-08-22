@@ -4,6 +4,7 @@ import { Volume2, Sparkles, RefreshCw } from 'lucide-react';
 import { MascotId } from '../../types';
 import { MASCOTS } from '../../data/gamificationData';
 import { soundManager } from '../../utils/audio';
+import { useCalmMotion } from '../../hooks/useCalmMotion';
 
 interface MascotCompanionProps {
   mascotId: MascotId;
@@ -23,6 +24,7 @@ export const MascotCompanion: React.FC<MascotCompanionProps> = ({
   showSpeechBubble = true,
 }) => {
   const [showSelector, setShowSelector] = useState(false);
+  const shouldCalmMotion = useCalmMotion();
   const mascot = MASCOTS[mascotId] || MASCOTS.bobo;
   const currentQuote = customMessage || mascot.quotes[mood];
 
@@ -48,11 +50,11 @@ export const MascotCompanion: React.FC<MascotCompanionProps> = ({
       {/* Mascot Avatar with Animation */}
       <div className="relative group">
         <motion.div
-          animate={{
+          animate={shouldCalmMotion ? undefined : {
             y: [0, -6, 0],
             rotate: mood === 'win' ? [0, -8, 8, 0] : [0, -2, 2, 0],
           }}
-          transition={{
+          transition={shouldCalmMotion ? undefined : {
             duration: 3,
             repeat: Infinity,
             ease: 'easeInOut',

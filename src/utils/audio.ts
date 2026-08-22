@@ -459,15 +459,14 @@ export const soundManager = {
     playNext();
   },
 
-  // Play one complete lesson asset. The only permitted fallback is the
-  // matching fallback asset for the same lesson; browser TTS is intentionally
-  // not used here because it can switch voices and read a different payload.
+  // Play exactly one approved Cô Giáo Vy asset. Vietnamese lesson audio does
+  // not switch to another file or browser voice when the primary file fails.
   playPassageAudio: (lessonId: string, _fallbackText: string, onEnd?: () => void) => {
     soundManager.stopSpeaking();
 
     const requestSession = audioPlaybackSession;
     const asset = getVietnameseAudioAsset(lessonId);
-    const sources = asset ? [asset.primaryPath, asset.fallbackPath] : [];
+    const sources = asset ? [asset.primaryPath] : [];
 
     let currentSourceIdx = 0;
     let hasSettled = false;

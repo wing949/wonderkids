@@ -7,15 +7,13 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-function wavPcmData(file) {
-  let offset = 12;
-  while (offset + 8 <= file.length) {
-    const chunkId = file.subarray(offset, offset + 4).toString('ascii');
-    const chunkSize = file.readUInt32LE(offset + 4);
-    if (chunkId === 'data') return file.subarray(offset + 8, offset + 8 + chunkSize);
-    offset += 8 + chunkSize + (chunkSize % 2);
-  }
-  throw new Error('WAV không có data chunk');
+function isSupportedAudio(file) {
+  const isWav = file.subarray(0, 4).toString('ascii') === 'RIFF'
+    && file.subarray(8, 12).toString('ascii') === 'WAVE';
+  const isMp3 = file.length > 3
+    && ((file[0] === 0xff && (file[1] & 0xe0) === 0xe0)
+      || file.subarray(0, 3).toString('ascii') === 'ID3');
+  return isWav || isMp3;
 }
 
 function sha256(data) {
@@ -272,11 +270,11 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
 
   const hoaMiHot = verified.find((lesson) => lesson.id === 'tv-g2-b21');
   assert.ok(hoaMiHot, 'Bài 3 chưa được phát hành sau khi đối chiếu trang nguồn');
-  assert.equal(hoaMiHot.title, 'Bài 3: Hoa mi hót');
+  assert.equal(hoaMiHot.title, 'Bài 3: Họa mi hót');
   assert.deepEqual(hoaMiHot.sourceCitation.sourcePages, [16, 17, 18]);
   assert.deepEqual(hoaMiHot.readingPassage?.content, [
     'Mùa xuân! Mỗi khi hoạ mi cất lên những tiếng hót vang lừng, mọi vật như có sự thay đổi kì diệu.',
-    'Trời bỗng sáng thêm ra. Những luồng sáng chiếu qua các chùm lộc mới nhú, rực rỡ hơn. Những gợn sóng trên hồ hoà nhịp với tiếng hoạ mi hót, lấp lánh thêm. Da trời bỗng xanh hơn, những làn mây trắng trắng hơn, xốp hơn, trôi nhẹ nhàng hơn. Các loài hoa nghe tiếng hót trong suốt của hoạ mi chợt bừng giấc, xoè những cánh hoa đẹp, bày đủ các màu sắc xanh tươi. Tiếng hót dịu dặt của hoạ mi giục các loài chim dạo lên những khúc nhạc tưng bừng, ngợi ca núi sông đang đổi mới.',
+    'Trời bỗng sáng thêm ra. Những luồng sáng chiếu qua các chùm lộc mới nhú, rực rỡ hơn. Những gợn sóng trên hồ hoà nhịp với tiếng hoạ mi hót, lấp lánh thêm. Da trời bỗng xanh hơn, những làn mây trắng trắng hơn, xốp hơn, trôi nhẹ nhàng hơn. Các loài hoa nghe tiếng hót trong suốt của hoạ mi chợt bừng giấc, xoè những cánh hoa đẹp, bày đủ các màu sắc xanh tươi. Tiếng hót dìu dặt của hoạ mi giục các loài chim dạo lên những khúc nhạc tưng bừng, ngợi ca núi sông đang đổi mới.',
     'Chim, mây, nước và hoa đều cho rằng tiếng hót kì diệu của hoạ mi đã làm cho tất cả bừng tỉnh giấc... Hoạ mi thấy lòng vui sướng, cố hót hay hơn.',
   ]);
   assert.equal(hoaMiHot.questions.length, 17);
@@ -289,7 +287,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.deepEqual(tetDenRoi.readingPassage?.content, [
     'Tết là khởi đầu cho một năm mới, là dịp lễ được mong chờ nhất trong năm.',
     'Vào dịp Tết, các gia đình thường gói bánh chưng hoặc bánh tét. Bánh chưng hình vuông, gói bằng lá dong. Bánh tét hình trụ, thường gói bằng lá chuối. Cả hai loại bánh đều làm từ gạo nếp, đỗ xanh, thịt lợn.',
-    'Mai và đào là những loài hoa đặc trưng cho Tết ở hai miền Nam, Bắc. Hoa mai rực rỡ sắc vàng. Hoa đào thường có màu hồng tươi, xen lẫn lá xanh và nụ hồng chùm chím.',
+    'Mai và đào là hai loài hoa đặc trưng cho Tết ở hai miền Nam, Bắc. Hoa mai rực rỡ sắc vàng. Hoa đào thường có màu hồng tươi, xen lẫn lá xanh và nụ hồng chúm chím.',
     'Ngày Tết, người lớn thường tặng trẻ em những bao lì xì xinh xắn, với mong ước các em mạnh khoẻ, giỏi giang. Tết là dịp mọi người quây quần bên nhau và dành cho nhau những lời chúc tốt đẹp.',
   ]);
   assert.equal(tetDenRoi.questions.length, 22);
@@ -300,7 +298,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(giotNuocVaBienLon.title, 'Bài 5: Giọt nước và biển lớn');
   assert.deepEqual(giotNuocVaBienLon.sourceCitation.sourcePages, [23, 24, 25]);
   assert.deepEqual(giotNuocVaBienLon.readingPassage?.content, [
-    'Tí tách tí tách\nTừng giọt\nTừng giọt\nMưa rơi\nRơi rơi.\n\nGóp lại bao ngày\nThành dòng suối nhỏ\nLượn trên bãi cỏ\nChảy xuống chân đồi.',
+    'Tí ta tí tách\nTừng giọt\nTừng giọt\nMưa rơi\nRơi rơi.',
+    'Góp lại bao ngày\nThành dòng suối nhỏ\nLượn trên bãi cỏ\nChảy xuống chân đồi.',
     'Suối gặp bạn rồi\nGóp thành sông lớn\nSông đi ra biển\nBiển thành mênh mông.',
     'Biển ơi, có biết\nBiển lớn vô cùng\nTừng giọt nước trong\nLàm nên biển đấy!',
   ]);
@@ -349,8 +348,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(veChim.title, 'Bài 9: Vè chim');
   assert.deepEqual(veChim.sourceCitation.sourcePages, [39, 40, 41]);
   assert.deepEqual(veChim.readingPassage?.content, [
-    'Hay chạy lon xon\nLà gà mới nở\nVừa đi vừa nhảy\nLà em sáo xinh\nHay nói linh tinh\nLà con liếu điếu\nHay nghịch hay tếu\nLà cậu chìa vôi\nHay chao đớp mồi\nLà chim chèo bẻo\nTính hay mách lẻo\nThím khách trước nhà\nHay nhặt lân la\nLà bà chim sẻ.',
-    'Có tình có nghĩa\nLà mẹ chim sâu\nGiục hè đến mau\nLà cô tu hú\nNhấp nhem buồn ngủ\nLà bác cú mèo...',
+    'Hay chạy lon xon\nLà gà mới nở\nVừa đi vừa nhảy\nLà em sáo xinh\nHay nói linh tinh\nLà con liếu điếu\nHay nghịch hay tếu\nLà cậu chìa vôi\nHay chao đớp mồi\nLà chim chèo bẻo\nTính hay mách lẻo\nThím khách trước nhà\nHay nhặt lân la\nLà bà chim sẻ\nCó tình có nghĩa\nLà mẹ chim sâu\nGiục hè đến mau\nLà cô tu hú\nNhấp nhem buồn ngủ\nLà bác cú mèo...',
   ]);
   assert.equal(veChim.questions.length, 16);
   assert.equal(veChim.readingPassage?.audioNarration, [veChim.readingPassage?.title, ...veChim.readingPassage?.content].join('\n'));
@@ -360,7 +358,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(khungLong.title, 'Bài 10: Khủng long');
   assert.deepEqual(khungLong.sourceCitation.sourcePages, [42, 43, 44, 45]);
   assert.deepEqual(khungLong.readingPassage?.content, [
-    'Khủng long là loài vật thường sống thành bầy đàn ở các vùng đất khô.\n\nTrong suy nghĩ của nhiều người, khủng long là loài vật khổng lồ. Nhưng trên thực tế, có loài khủng long chỉ bằng một chú chó nhỏ. Khủng long thường ăn thịt, cũng có một số loài ăn cỏ.',
+    'Khủng long là loài vật thường sống thành bầy đàn ở các vùng đất khô.',
+    'Trong suy nghĩ của nhiều người, khủng long là loài vật khổng lồ. Nhưng trên thực tế, có loài khủng long chỉ bằng một chú chó nhỏ. Khủng long thường ăn thịt, cũng có một số loài ăn cỏ.',
     'Chân khủng long thẳng và rất khoẻ. Vì thế chúng có thể đi khắp một vùng rộng lớn để kiếm ăn. Khủng long có khả năng săn mồi tốt nhờ có đôi mắt tinh tường cùng cái mũi và đôi tai thính. Khủng long cũng có khả năng tự vệ tốt nhờ vào cái đầu cứng và cái quất đuôi dũng mãnh.',
     'Trước khi con người xuất hiện, khủng long đã bị tuyệt chủng. Vì thế, chúng ta sẽ không bao giờ có thể nhìn thấy khủng long thật.',
   ]);
@@ -384,7 +383,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.deepEqual(boTreDonKhach.sourceCitation.sourcePages, [49, 50, 51, 52, 53]);
   assert.deepEqual(boTreDonKhach.readingPassage?.content, [
     'Bờ tre quanh hồ\nSuốt ngày đón khách\nMột đàn cò bạch\nHạ cánh reo mừng\nTre chợt tưng bừng\nNở đầy hoa trắng.',
-    'Đến chơi im lặng\nCó bác bồ nông\nĐứng nhìn mênh mông\nIm như tượng đá.\nMột chú bói cá\nĐỗ xuống cành mềm\nChú vụt bay lên\nĐậu vào chỗ cũ.',
+    'Đến chơi im lặng\nCó bác bồ nông\nĐứng nhìn mênh mông\nIm như tượng đá.',
+    'Một chú bói cá\nĐỗ xuống cành mềm\nChú vụt bay lên\nĐậu vào chỗ cũ.',
     'Ghé chơi đông đủ\nCả toán chim cu\nCa hát gật gù:\n“Ồ, tre rất mát!”.',
     'Khách còn chú ếch\nÌ ộp vang lừng\nGọi sao tưng bừng\nLúc ngày vừa tắt.',
   ]);
@@ -396,8 +396,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(tiengChoiTre.title, 'Bài 13: Tiếng chổi tre');
   assert.deepEqual(tiengChoiTre.sourceCitation.sourcePages, [54, 55, 56]);
   assert.deepEqual(tiengChoiTre.readingPassage?.content, [
-    'Những đêm hè\nKhi ve ve\nĐã ngủ\nTôi lắng nghe\nTrên đường Trần Phú\nTiếng chổi tre\nXao xác\nHàng me\nTiếng chổi tre\nĐêm hè\nQuét rác...',
-    'Những đêm đông\nKhi cơn dông\nVừa tắt\nTôi đứng trông\nTrên đường lặng ngắt\nChị lao công\nNhư sắt\nNhư đồng\nChị lao công\nĐêm đông\nQuét rác...',
+    'Những đêm hè\nKhi ve ve\nĐã ngủ\nTôi lắng nghe\nTrên đường Trần Phú\nTiếng chổi tre\nXao xác\nHàng me\nTiếng chổi tre\nĐêm hè\nQuét rác…',
+    'Những đêm đông\nKhi cơn dông\nVừa tắt\nTôi đứng trông\nTrên đường lặng ngắt\nChị lao công\nNhư sắt\nNhư đồng\nChị lao công\nĐêm đông\nQuét rác…',
     'Nhớ em nghe\nTiếng chổi tre\nChị quét\nNhững đêm hè\nĐêm đông gió rét\nTiếng chổi tre\nSớm tối\nĐi về\nGiữ sạch lề\nĐẹp lối\nEm nghe!',
   ]);
   assert.equal(tiengChoiTre.questions.length, 16);
@@ -545,7 +545,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(trenCacMienDatNuoc.title, 'Bài 26: Trên các miền đất nước');
   assert.deepEqual(trenCacMienDatNuoc.sourceCitation.sourcePages, [113, 114, 115, 116, 117, 118]);
   assert.deepEqual(trenCacMienDatNuoc.readingPassage?.content, [
-    'Đất nước Việt Nam thật tươi đẹp. Hãy cùng nhau đi thăm các miền đất nước qua những câu ca dao.\n\nĐầu tiên, chúng ta sẽ đến Phú Thọ, miền Bắc nước ta, nơi có đền thờ Vua Hùng, nơi được gọi là “quê cha đất tổ”:\n\nDù ai đi ngược về xuôi\nNhớ ngày Giỗ Tổ mùng Mười tháng Ba.\n\nTiếp đến, chúng ta cùng vào miền Trung:\n\nĐường vô xứ Nghệ quanh quanh\nNon xanh nước biếc như tranh hoạ đồ.',
+    'Đất nước Việt Nam thật tươi đẹp. Hãy cùng nhau đi thăm các miền đất nước qua những câu ca dao.\n\nĐầu tiên, chúng ta sẽ đến Phú Thọ, miền Bắc nước ta, nơi có đền thờ Vua Hùng, nơi được gọi là “quê cha đất tổ”.\n\nDù ai đi ngược về xuôi\nNhớ ngày Giỗ Tổ mùng Mười tháng Ba.\n\nTiếp đến, chúng ta cùng vào miền Trung:\n\nĐường vô xứ Nghệ quanh quanh\nNon xanh nước biếc như tranh hoạ đồ.',
     'Và chúng ta cùng khám phá miền đất Nam Bộ:\n\nĐồng Tháp Mười cò bay thẳng cánh\nNước Tháp Mười lóng lánh cá tôm.\n\nVậy là chúng ta đã đi qua ba miền Bắc, Trung, Nam của đất nước. Nơi nào cũng để lại biết bao tình cảm mến thương.',
   ]);
   assert.equal(trenCacMienDatNuoc.questions.length, 25);
@@ -556,8 +556,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(chuyenQuaBau.title, 'Bài 27: Chuyện quả bầu');
   assert.deepEqual(chuyenQuaBau.sourceCitation.sourcePages, [119, 120, 121]);
   assert.deepEqual(chuyenQuaBau.readingPassage?.content, [
-    'Ngày xưa có vợ chồng nọ đi rừng, bắt được một con dúi. Dúi xin tha, họ thương tình tha cho nó.\n\nĐể trả ơn, dúi báo sắp có lũ lụt rất lớn và chỉ cho họ cách tránh. Họ nói với bà con nhưng chẳng ai tin. Nghe lời dúi, họ khoét rỗng khúc gỗ to, chuẩn bị thức ăn bỏ vào đó. Vừa chuẩn bị xong mọi thứ thì mưa to, gió lớn, nước ngập mênh mông. Muôn loài chim trong rừng chết. Nhờ sống trong khúc gỗ nổi, vợ chồng nhà nọ thoát nạn.',
-    'Ít lâu sau, người vợ sinh ra một quả bầu.\n\nMột hôm, đi làm nương về, họ nghe tiếng cười đùa từ góc bếp để quả bầu. Thấy lạ, họ lấy quả bầu xuống, áp tai nghe thì có tiếng lao xao. Người vợ bèn lấy que dùi quả bầu. Lạ thay, từ trong quả bầu, những con người bé nhỏ bước ra. Người Khơ Mú ra trước. Tiếp đến, người Thái, người Mường, người Dao, người Mông, người Ê-đê, người Ba-na, người Kinh,... lần lượt ra theo.\n\nĐó là tổ tiên của các dân tộc anh em trên đất nước ta ngày nay.',
+    'Ngày xưa có vợ chồng nọ đi rừng, bắt được một con dúi. Dúi xin tha, họ thương tình tha cho nó.\n\nĐể trả ơn, dúi báo sắp có lũ lụt rất lớn và chỉ cho họ cách tránh. Họ nói với bà con nhưng chẳng ai tin. Nghe lời dúi, họ khoét rỗng khúc gỗ to, chuẩn bị thức ăn bỏ vào đó. Vừa chuẩn bị xong mọi thứ thì mưa to, gió lớn, nước ngập mênh mông. Muôn loài chìm trong biển nước. Nhờ sống trong khúc gỗ nổi, vợ chồng nhà nọ thoát nạn.',
+    'Ít lâu sau, người vợ sinh ra một quả bầu.\n\nMột hôm, đi làm nương về, họ nghe tiếng cười đùa từ gác bếp để quả bầu. Thấy lạ, họ lấy quả bầu xuống, áp tai nghe thì có tiếng lao xao. Người vợ bèn lấy que dùi quả bầu. Lạ thay, từ trong quả bầu, những con người bé nhỏ bước ra. Người Khơ Mú ra trước. Tiếp đến, người Thái, người Mường, người Dao, người Mông, người Ê-đê, người Ba-na, người Kinh,... lần lượt ra theo.\n\nĐó là tổ tiên của các dân tộc anh em trên đất nước ta ngày nay.',
   ]);
   assert.equal(chuyenQuaBau.questions.length, 16);
   assert.equal(chuyenQuaBau.readingPassage?.audioNarration, [chuyenQuaBau.readingPassage?.title, ...chuyenQuaBau.readingPassage?.content].join('\n'));
@@ -587,11 +587,19 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(canhDongQueEm.title, 'Bài 30: Cánh đồng quê em');
   assert.deepEqual(canhDongQueEm.sourceCitation.sourcePages, [129, 130, 131, 132]);
   assert.deepEqual(canhDongQueEm.readingPassage?.content, [
-    'Bé theo mẹ ra đồng\nVầng dương lên rực đỏ\nMuôn vàn kim cương nhỏ\nLấp lánh ngọn cỏ hoa.\n\nNắng ban mai hiền hoà\nTung lụa tơ vàng óng\nTrải lên muôn con sóng\nDập dờn đồng lúa xanh.\n\nĐàn chiền chiện bay quanh\nHót tích ri tích rích\nLũ châu chấu tinh nghịch\nĐu cổ uống sương rơi.\n\nSóng xanh cuộn chân trời\nCánh đồng như tranh vẽ\nBé ngân nga hát khẽ\nTrong hương lúa mênh mông.',
+    'Bé theo mẹ ra đồng\nVầng dương lên rực đỏ\nMuôn vàn kim cương nhỏ\nLấp lánh ngọn cỏ hoa.\n\nNắng ban mai hiền hoà\nTung lụa tơ vàng óng\nTrải lên muôn con sóng\nDập dờn đồng lúa xanh.\n\nĐàn chiền chiện bay quanh\nHót tích ri tích rích\nLũ châu chấu tinh nghịch\nĐu cỏ uống sương rơi.\n\nSóng xanh cuộn chân trời\nCánh đồng như tranh vẽ\nBé ngân nga hát khẽ\nTrong hương lúa mênh mông.',
   ]);
   assert.equal(canhDongQueEm.questions.length, 21);
   assert.equal(canhDongQueEm.readingPassage?.audioNarration, [canhDongQueEm.readingPassage?.title, ...canhDongQueEm.readingPassage?.content].join('\n'));
 
+  assert.equal(
+    verified.filter((lesson) => lesson.sourceCitation?.bookId === 'tv-g1-t1').length,
+    0,
+    '83 bài Tiếng Việt 1 Tập 1 đang nằm ngoài đợt phát hành 293 bài và không được gắn verified',
+  );
+
+  /* Các canary lớp 1 dưới đây được giữ làm dữ liệu đối chiếu cho đợt duyệt riêng,
+     nhưng không chạy trong phạm vi phát hành 293 bài hiện tại.
   const chuAa = verified.find((lesson) => lesson.id === 'tv-g1-b1');
   assert.ok(chuAa, 'Bài 1 lớp 1 chưa được phát hành sau khi đối chiếu trang nguồn');
   assert.equal(chuAa.title, 'Bài 1: A a');
@@ -719,6 +727,7 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.deepEqual(chuMmNn.readingPassage?.content, ['Mẹ mua nơ cho Hà.', 'm', 'n', 'mẹ', 'nơ', 'má, mẹ, mỡ, na, nê, nở.', 'cá mè, lá me, nơ đỏ, ca nô.', 'Bố mẹ cho Hà đi ca nô.']);
   assert.equal(chuMmNn.questions.length, 5);
   assert.equal(chuMmNn.readingPassage?.audioNarration, [chuMmNn.readingPassage?.title, ...chuMmNn.readingPassage?.content].join('\n'));
+  */
 });
 
 test('văn bản hiển thị của nội dung tự sinh không tự nhận là chuẩn SGK', () => {
@@ -784,7 +793,7 @@ test('thẻ dùng đúng tên bài trong mục lục và giữ đúng trạng th
   assert.deepEqual(voiHoKhi.readingPassage.content, []);
 });
 
-test('manifest audio có một file chính, một fallback và không còn câu công bố nguồn', async () => {
+test('manifest audio chỉ dùng luồng chính Cô Giáo Vy và không còn câu công bố nguồn', async () => {
   const manifest = curriculum.VIETNAMESE_AUDIO_MANIFEST;
   const verifiedLessonIds = Object.entries(curriculum.VIETNAMESE_CURRICULUM_BY_GRADE)
     .flatMap(([grade]) => curriculum.getLessonsForGradeAndSubject(Number(grade), 'vietnamese'))
@@ -796,24 +805,18 @@ test('manifest audio có một file chính, một fallback và không còn câu 
 
   for (const [lessonId, asset] of Object.entries(manifest)) {
     assert.equal(asset.lessonId, lessonId);
-    assert.equal(asset.primaryPath, `/audio/curriculum/${lessonId}.wav`);
-    assert.equal(asset.fallbackPath, `/audio/curriculum/fallback/${lessonId}.wav`);
-    assert.ok(asset.primaryVoice?.trim(), `Thiếu tên giọng chính: ${lessonId}`);
-    assert.ok(asset.fallbackVoice?.trim(), `Thiếu tên giọng fallback: ${lessonId}`);
-    assert.notEqual(asset.primaryVoice, asset.fallbackVoice, `Hai luồng dùng cùng giọng: ${lessonId}`);
+    assert.equal(asset.primaryPath, `/audio/curriculum/${lessonId}.mp3`);
+    assert.equal(asset.primaryVoice, 'Cô Giáo Vy');
+    assert.equal(asset.fallbackPath, undefined, `Không được khai báo fallback: ${lessonId}`);
+    assert.equal(asset.fallbackVoice, undefined, `Không được khai báo giọng fallback: ${lessonId}`);
     const primaryFile = join(process.cwd(), 'public', asset.primaryPath.slice(1));
-    const fallbackFile = join(process.cwd(), 'public', asset.fallbackPath.slice(1));
     await access(primaryFile);
-    await access(fallbackFile);
     assert.equal(asset.audibleDisclosureText, undefined);
     assert.match(asset.transcriptHash, /^[a-f0-9]{64}$/);
     assert.ok(asset.lessonVersion >= 1);
     assert.ok(Array.isArray(asset.sourcePages) && asset.sourcePages.length > 0);
-    const primaryPcm = wavPcmData(await readFile(primaryFile));
-    const fallbackPcm = wavPcmData(await readFile(fallbackFile));
-    assert.notEqual(sha256(primaryPcm.subarray(0, 552960)), '7c91d642b467c265cb41aabdb5f9cbca60b9d2ed67f4ccd839884187b0bb8a2e');
-    assert.notEqual(sha256(fallbackPcm.subarray(0, 506880)), 'f00942c59dcc1fcaf8da62a279e05709ce2b7eb45fb25fe8c7621201946358a0');
-    assert.notEqual(sha256(await readFile(primaryFile)), sha256(await readFile(fallbackFile)));
+    const primaryAudio = await readFile(primaryFile);
+    assert.ok(isSupportedAudio(primaryAudio), `File chính không phải audio hợp lệ: ${lessonId}`);
   }
 });
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeId } from '../../types';
+import { useCalmMotion } from '../../hooks/useCalmMotion';
 
 interface CuteDoodleBackgroundProps {
   theme?: ThemeId;
@@ -96,9 +97,34 @@ const THEME_VISUALS: Record<ThemeId, ThemeVisualConfig> = {
 
 export const CuteDoodleBackground: React.FC<CuteDoodleBackgroundProps> = ({ theme = 'ocean' }) => {
   const currentConfig = THEME_VISUALS[theme] || THEME_VISUALS.ocean;
+  const shouldCalmMotion = useCalmMotion();
+
+  if (shouldCalmMotion) {
+    return (
+      <div
+        data-ambient-motion="static"
+        className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none"
+        aria-hidden="true"
+      >
+        {currentConfig.doodles.slice(0, 3).map((doodle, idx) => (
+          <span
+            key={`${theme}-${idx}`}
+            className={`absolute ${doodle.pos} text-2xl opacity-35 sm:text-3xl`}
+          >
+            {doodle.text}
+          </span>
+        ))}
+        <div className="absolute inset-0 bg-dots opacity-30" />
+      </div>
+    );
+  }
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none transition-colors duration-500">
+    <div
+      data-ambient-motion="animated"
+      className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none transition-colors duration-500"
+      aria-hidden="true"
+    >
       {/* Soft Pastel Mesh Gradients */}
       <AnimatePresence mode="wait">
         <motion.div

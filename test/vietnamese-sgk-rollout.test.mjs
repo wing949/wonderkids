@@ -85,8 +85,8 @@ test('thẻ bài chỉ dùng nội dung học, không dùng ghi chú provenance'
   const card = cards.getLessonCardContent(lesson);
 
   assert.equal(card.badge, '📖 SGK Tiếng Việt 2 Tập một — Trang 10–12');
-  assert.equal(card.title, 'Tôi là học sinh lớp 2');
-  assert.doesNotMatch(card.title, /^Bài\s*\d+\s*:/i, 'Số bài đã nằm trong phần SGK và không lặp lại ở tiêu đề thẻ');
+  assert.equal(card.title, 'Bài 1: Tôi là học sinh lớp 2');
+  assert.match(card.title, /^Bài\s*\d+\s*:/i, 'Tiêu đề thẻ Tiếng Việt phải hiển thị số bài nhất quán với môn Toán');
   assert.equal(card.preview, lesson.cardPreview);
   assert.match(card.preview, /Nội dung:/);
   assert.match(card.preview, /Mục tiêu:/);
@@ -265,10 +265,11 @@ test('chỉ mở đọc mẫu khi transcript đã đối chiếu đúng trang SG
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(newlyVerifiedTranscript), true);
 
   const verifiedWithoutAsset = {
-    ...unverifiedTranscript,
+    ...draftMockLesson,
+    id: 'tv-g2-b999',
     catalogSection: 'sgk',
     provenance: { contentOrigin: 'sgk_reference', verificationStatus: 'verified' },
-    sourceCitation: { ...unverifiedTranscript.sourceCitation, verificationStatus: 'verified' },
+    sourceCitation: { ...draftMockLesson.sourceCitation, verificationStatus: 'verified' },
   };
   assert.equal(readingPolicy.getVietnameseReadingPolicy(verifiedWithoutAsset), 'verified_sgk');
   assert.equal(readingPolicy.canPlayVietnameseReadingAudio(verifiedWithoutAsset), false);

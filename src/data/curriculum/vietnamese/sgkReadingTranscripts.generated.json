@@ -3685,7 +3685,8 @@
     "lessonId": "tv-g2-b1",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      10
+      10,
+      11
     ],
     "sourceHash": "99c9ef5ae04d890c94b2ee95b77984e2fc3a68b1aa577eacf66f23d18c2c3092",
     "readingPassage": {
@@ -3701,7 +3702,8 @@
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
       "sourcePages": [
-        10
+        10,
+        11
       ],
       "sourceHash": "99c9ef5ae04d890c94b2ee95b77984e2fc3a68b1aa577eacf66f23d18c2c3092",
       "audioNarration": "Tôi là học sinh lớp 2 Ngày khai trường đã đến. Sáng sớm, mẹ mới gọi một câu mà tôi đã vùng dậy, khác hẳn mọi ngày. Loáng một cái, tôi đã chuẩn bị xong mọi thứ. Bố ngạc nhiên nhìn tôi, còn mẹ cười tủm tỉm. Tôi rối rít: “Con muốn đến lớp sớm nhất.”. Tôi háo hức tưởng tượng ra cảnh mình đến đầu tiên, cất tiếng chào thật to những bạn đến sau. Nhưng vừa đến cổng trường, tôi đã thấy mấy bạn cùng lớp đang ríu rít nói cười ở trong sân. Thì ra, không chỉ mình tôi muốn đến sớm nhất. Tôi chào mẹ, chạy ào vào cùng các bạn. Chúng tôi tranh nhau kể về chuyện ngày hè. Ngay cạnh chúng tôi, mấy em lớp 1 đang rụt rè níu chặt tay bố mẹ, thật giống tôi năm ngoái. Trước các em, tôi cảm thấy mình lớn bổng lên. Tôi đã là học sinh lớp 2 rồi cơ mà."
@@ -3737,7 +3739,8 @@
     "lessonId": "tv-g2-b3",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      17
+      17,
+      18
     ],
     "sourceHash": "012e742345cdbf6a4c4fc142e483d67a1f17ec7a6e686468cf28305c706c3c32",
     "readingPassage": {
@@ -3745,27 +3748,17 @@
       "author": "Theo 108 truyện mẹ kể con nghe",
       "genre": "prose",
       "content": [
-        "Khi cơn mưa vừa dứt, hai anh em Bi và Bống chợt thấy cầu vồng.",
-        "– Cầu vồng kìa! Em nhìn xem. Đẹp quá!",
-        "Bi chỉ lên bầu trời và nói tiếp:",
-        "– Anh nghe nói dưới chân cầu vồng có bảy hũ vàng đấy.",
-        "Bống hưởng ứng:",
-        "– Lát nữa, mình sẽ đi lấy về nhé! Có vàng rồi, em sẽ mua nhiều búp bê và quần áo đẹp.",
-        "– Còn anh sẽ mua một con ngựa hồng và một cái ô tô.",
-        "Bỗng nhiên, cầu vồng biến mất. Bi cười:",
-        "– Em ơi! Anh đùa đấy! Ở đó không có vàng đâu.",
-        "Bống vui vẻ:",
-        "– Thế ạ? Nếu vậy, em sẽ lấy bút màu để vẽ tặng anh ngựa hồng và ô tô.",
-        "– Còn anh sẽ vẽ tặng em nhiều búp bê và quần áo đủ các màu sắc.",
-        "Không có bảy hũ vàng dưới chân cầu vồng, hai anh em vẫn cười vui vẻ."
+        "Khi cơn mưa vừa dứt, hai anh em Bi và Bống chợt thấy cầu vồng.\n– Cầu vồng kìa! Em nhìn xem! Đẹp quá!\nBi chỉ lên bầu trời và nói tiếp:\n– Anh nghe nói dưới chân cầu vồng có bảy hũ vàng đấy.\nBống hưởng ứng:\n– Lát nữa, mình sẽ đi lấy về nhé! Có vàng rồi, em sẽ mua nhiều búp bê và quần áo đẹp.\n– Còn anh sẽ mua một con ngựa hồng và một cái ô tô.\nBỗng nhiên, cầu vồng biến mất. Bi cười:\n– Em ơi! Anh đùa đấy! Ở đó không có vàng đâu.",
+        "Bống vui vẻ:\n– Thế ạ? Nếu vậy, em sẽ lấy bút màu để vẽ tặng anh ngựa hồng và ô tô.\n– Còn anh sẽ vẽ tặng em nhiều búp bê và quần áo đủ các màu sắc.\nKhông có bảy hũ vàng dưới chân cầu vồng, hai anh em vẫn cười vui vẻ."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
       "sourcePages": [
-        17
+        17,
+        18
       ],
       "sourceHash": "012e742345cdbf6a4c4fc142e483d67a1f17ec7a6e686468cf28305c706c3c32",
-      "audioNarration": "Niềm vui của Bi và Bống Khi cơn mưa vừa dứt, hai anh em Bi và Bống chợt thấy cầu vồng. – Cầu vồng kìa! Em nhìn xem. Đẹp quá! Bi chỉ lên bầu trời và nói tiếp: – Anh nghe nói dưới chân cầu vồng có bảy hũ vàng đấy. Bống hưởng ứng: – Lát nữa, mình sẽ đi lấy về nhé! Có vàng rồi, em sẽ mua nhiều búp bê và quần áo đẹp. – Còn anh sẽ mua một con ngựa hồng và một cái ô tô. Bỗng nhiên, cầu vồng biến mất. Bi cười: – Em ơi! Anh đùa đấy! Ở đó không có vàng đâu. Bống vui vẻ: – Thế ạ? Nếu vậy, em sẽ lấy bút màu để vẽ tặng anh ngựa hồng và ô tô. – Còn anh sẽ vẽ tặng em nhiều búp bê và quần áo đủ các màu sắc. Không có bảy hũ vàng dưới chân cầu vồng, hai anh em vẫn cười vui vẻ."
+      "audioNarration": "Niềm vui của Bi và Bống\nKhi cơn mưa vừa dứt, hai anh em Bi và Bống chợt thấy cầu vồng.\n– Cầu vồng kìa! Em nhìn xem! Đẹp quá!\nBi chỉ lên bầu trời và nói tiếp:\n– Anh nghe nói dưới chân cầu vồng có bảy hũ vàng đấy.\nBống hưởng ứng:\n– Lát nữa, mình sẽ đi lấy về nhé! Có vàng rồi, em sẽ mua nhiều búp bê và quần áo đẹp.\n– Còn anh sẽ mua một con ngựa hồng và một cái ô tô.\nBỗng nhiên, cầu vồng biến mất. Bi cười:\n– Em ơi! Anh đùa đấy! Ở đó không có vàng đâu.\nBống vui vẻ:\n– Thế ạ? Nếu vậy, em sẽ lấy bút màu để vẽ tặng anh ngựa hồng và ô tô.\n– Còn anh sẽ vẽ tặng em nhiều búp bê và quần áo đủ các màu sắc.\nKhông có bảy hũ vàng dưới chân cầu vồng, hai anh em vẫn cười vui vẻ."
     }
   },
   "tv-g2-b4": {
@@ -3781,7 +3774,7 @@
       "genre": "prose",
       "content": [
         "Quanh ta, mọi vật, mọi người đều làm việc.",
-        "Cái đồng hồ tích tắc, tích tắc, báo phút, báo giờ. Con gà trống gáy vang ò ó o, báo cho mọi người biết trời sắp sáng, mau mau thức dậy. Con tu hú kêu tu hú, tu hú. Thế là sắp đến mùa vải chín. Chim bắt sâu, bảo vệ mùa màng. Cành đào nở hoa cho sắc xuân thêm rực rỡ, ngày xuân thêm tưng bừng. Chim cú mèo chập tối đứng trong hốc cây rúc cú cú cũng làm việc có ích cho đồng ruộng.",
+        "Cái đồng hồ tích tắc, tích tắc, báo phút, báo giờ. Con gà trống gáy vang ò ó o, báo cho mọi người biết trời sắp sáng, mau mau thức dậy. Con tu hú kêu tu hú, tu hú. Thế là sắp đến mùa vải chín. Chim bắt sâu, bảo vệ mùa màng. Cành đào nở hoa cho sắc xuân thêm rực rỡ, ngày xuân thêm tưng bừng. Chim cú mèo chập tối đứng trong hốc cây rúc cú cu cũng làm việc có ích cho đồng ruộng.",
         "Như mọi vật, mọi người, bé cũng làm việc. Bé làm bài. Bé đi học. Học xong, bé quét nhà, nhặt rau, chơi với em đỡ mẹ. Bé luôn luôn bận rộn, mà lúc nào cũng vui."
       ],
       "contentOrigin": "sgk_reference",
@@ -3790,44 +3783,33 @@
         20
       ],
       "sourceHash": "2c37ace644a75b9dd6bee1af3258df53868424956a2d385c627e142fe614ba95",
-      "audioNarration": "Làm việc thật là vui Quanh ta, mọi vật, mọi người đều làm việc. Cái đồng hồ tích tắc, tích tắc, báo phút, báo giờ. Con gà trống gáy vang ò ó o, báo cho mọi người biết trời sắp sáng, mau mau thức dậy. Con tu hú kêu tu hú, tu hú. Thế là sắp đến mùa vải chín. Chim bắt sâu, bảo vệ mùa màng. Cành đào nở hoa cho sắc xuân thêm rực rỡ, ngày xuân thêm tưng bừng. Chim cú mèo chập tối đứng trong hốc cây rúc cú cú cũng làm việc có ích cho đồng ruộng. Như mọi vật, mọi người, bé cũng làm việc. Bé làm bài. Bé đi học. Học xong, bé quét nhà, nhặt rau, chơi với em đỡ mẹ. Bé luôn luôn bận rộn, mà lúc nào cũng vui."
+      "audioNarration": "Làm việc thật là vui\nQuanh ta, mọi vật, mọi người đều làm việc.\nCái đồng hồ tích tắc, tích tắc, báo phút, báo giờ. Con gà trống gáy vang ò ó o, báo cho mọi người biết trời sắp sáng, mau mau thức dậy. Con tu hú kêu tu hú, tu hú. Thế là sắp đến mùa vải chín. Chim bắt sâu, bảo vệ mùa màng. Cành đào nở hoa cho sắc xuân thêm rực rỡ, ngày xuân thêm tưng bừng. Chim cú mèo chập tối đứng trong hốc cây rúc cú cu cũng làm việc có ích cho đồng ruộng.\nNhư mọi vật, mọi người, bé cũng làm việc. Bé làm bài. Bé đi học. Học xong, bé quét nhà, nhặt rau, chơi với em đỡ mẹ. Bé luôn luôn bận rộn, mà lúc nào cũng vui."
     }
   },
   "tv-g2-b5": {
     "lessonId": "tv-g2-b5",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      24
+      24,
+      25
     ],
     "sourceHash": "c82f9540133175f86124588538ce2bae53964c927e856aaa59b98cc4e9271709",
     "readingPassage": {
       "title": "Em có xinh không?",
-      "author": "Theo Ấu Phúc, Voi em đi tìm tự tin",
+      "author": "Theo Âu Phúc, Voi em đi tìm tự tin",
       "genre": "story",
       "content": [
-        "Voi em thích mặc đẹp và thích được khen xinh. Ở nhà, voi em luôn hỏi anh: “Em có xinh không?”. Voi anh bao giờ cũng khen: “Em xinh lắm!”.",
-        "Một hôm, gặp hươu, voi em hỏi:",
-        "– Em có xinh không?",
-        "Hươu ngắm voi rồi lắc đầu:",
-        "– Chưa xinh lắm vì em không có đôi sừng giống anh.",
-        "Nghe vậy, voi nhặt vài cành cây khô, gài lên đầu rồi đi tiếp.",
-        "Gặp dê, voi hỏi:",
-        "– Em có xinh không?",
-        "– Không, vì cậu không có bộ râu giống tôi.",
-        "Voi liền nhổ một khóm cỏ dại bên đường, gắn vào cằm rồi về nhà.",
-        "Về nhà với đôi sừng và bộ râu giả, voi em hớn hở hỏi anh:",
-        "– Em có xinh hơn không?",
-        "Voi anh nói:",
-        "– Trời ơi, sao em lại thêm sừng và râu thế này? Xấu lắm!",
-        "Voi em ngắm mình trong gương và thấy xấu thật. Sau khi bỏ sừng và râu đi, voi em thấy mình xinh đẹp hẳn lên. Giờ đây, voi em hiểu rằng mình chỉ xinh đẹp khi đúng là voi."
+        "Voi em thích mặc đẹp và thích được khen xinh. Ở nhà, voi em luôn hỏi anh: “Em có xinh không?”. Voi anh bao giờ cũng khen: “Em xinh lắm!”.\n\nMột hôm, gặp hươu, voi em hỏi:\n– Em có xinh không?\nHươu ngắm voi rồi lắc đầu:\n– Chưa xinh lắm vì em không có đôi sừng giống anh.\nNghe vậy, voi nhặt vài cành cây khô, gài lên đầu rồi đi tiếp.\nGặp dê, voi hỏi:\n– Em có xinh không?",
+        "– Không, vì cậu không có bộ râu giống tôi.\nVoi liền nhổ một khóm cỏ dại bên đường, gắn vào cằm rồi về nhà.\nVề nhà với đôi sừng và bộ râu giả, voi em hớn hở hỏi anh:\n– Em có xinh hơn không?\nVoi anh nói:\n– Trời ơi, sao em lại thêm sừng và râu thế này? Xấu lắm!\nVoi em ngắm mình trong gương và thấy xấu thật. Sau khi bỏ sừng và râu đi, voi em thấy mình xinh đẹp hẳn lên. Giờ đây, voi em hiểu rằng mình chỉ xinh đẹp khi đúng là voi."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
       "sourcePages": [
-        24
+        24,
+        25
       ],
       "sourceHash": "c82f9540133175f86124588538ce2bae53964c927e856aaa59b98cc4e9271709",
-      "audioNarration": "Em có xinh không? Voi em thích mặc đẹp và thích được khen xinh. Ở nhà, voi em luôn hỏi anh: “Em có xinh không?”. Voi anh bao giờ cũng khen: “Em xinh lắm!”. Một hôm, gặp hươu, voi em hỏi: – Em có xinh không? Hươu ngắm voi rồi lắc đầu: – Chưa xinh lắm vì em không có đôi sừng giống anh. Nghe vậy, voi nhặt vài cành cây khô, gài lên đầu rồi đi tiếp. Gặp dê, voi hỏi: – Em có xinh không? – Không, vì cậu không có bộ râu giống tôi. Voi liền nhổ một khóm cỏ dại bên đường, gắn vào cằm rồi về nhà. Về nhà với đôi sừng và bộ râu giả, voi em hớn hở hỏi anh: – Em có xinh hơn không? Voi anh nói: – Trời ơi, sao em lại thêm sừng và râu thế này? Xấu lắm! Voi em ngắm mình trong gương và thấy xấu thật. Sau khi bỏ sừng và râu đi, voi em thấy mình xinh đẹp hẳn lên. Giờ đây, voi em hiểu rằng mình chỉ xinh đẹp khi đúng là voi."
+      "audioNarration": "Em có xinh không?\nVoi em thích mặc đẹp và thích được khen xinh. Ở nhà, voi em luôn hỏi anh: “Em có xinh không?”. Voi anh bao giờ cũng khen: “Em xinh lắm!”.\n\nMột hôm, gặp hươu, voi em hỏi:\n– Em có xinh không?\nHươu ngắm voi rồi lắc đầu:\n– Chưa xinh lắm vì em không có đôi sừng giống anh.\nNghe vậy, voi nhặt vài cành cây khô, gài lên đầu rồi đi tiếp.\nGặp dê, voi hỏi:\n– Em có xinh không?\n– Không, vì cậu không có bộ râu giống tôi.\nVoi liền nhổ một khóm cỏ dại bên đường, gắn vào cằm rồi về nhà.\nVề nhà với đôi sừng và bộ râu giả, voi em hớn hở hỏi anh:\n– Em có xinh hơn không?\nVoi anh nói:\n– Trời ơi, sao em lại thêm sừng và râu thế này? Xấu lắm!\nVoi em ngắm mình trong gương và thấy xấu thật. Sau khi bỏ sừng và râu đi, voi em thấy mình xinh đẹp hẳn lên. Giờ đây, voi em hiểu rằng mình chỉ xinh đẹp khi đúng là voi."
     }
   },
   "tv-g2-b6": {
@@ -3840,17 +3822,11 @@
     "sourceHash": "82a520c5c83267a3101a1ffd94aa6b9c06b5a6faf71fbf08620a561e3ea3c106",
     "readingPassage": {
       "title": "Một giờ học",
-      "author": "Theo Tốt-tô-chan, cô bé bên cửa sổ",
+      "author": "Phỏng theo Tốt-tô-chan, cô bé bên cửa sổ",
       "genre": "prose",
       "content": [
-        "Thầy giáo nói: “Chúng ta cần học cách giao tiếp tự tin. Vì thế hôm nay chúng ta sẽ tập nói trước lớp về bất cứ điều gì mình thích.”.",
-        "Quang được mời lên nói đầu tiên. Cậu lúng túng, đỏ mặt. Quang cảm thấy nói với bạn bên cạnh thì dễ, nhưng nói trước cả lớp thì sao mà khó thế. Thầy bảo: “Sáng nay ngủ dậy, em đã làm gì? Em cố nhớ xem.”.",
-        "Quang ngập ngừng, vừa nói vừa gãi đầu: “Em...”.",
-        "Thầy giáo nhắc: “Rồi gì nữa?”.",
-        "Quang lại gãi đầu: “À... ờ... Em ngủ dậy.”. Và cậu nói tiếp: “Rồi... ờ...”.",
-        "Thầy giáo mỉm cười, kiên nhẫn nghe Quang nói. Thầy bảo: “Thế là được rồi đấy!”.",
-        "Nhưng Quang chưa chịu về chỗ. Bỗng câu nói to: “Rồi sau đó... ờ... à...”. Quang thở mạnh một hơi rồi nói tiếp: “Mẹ... ờ... bảo: Con đánh răng đi. Thế là em đánh răng.”. Thầy giáo vỗ tay. Cả lớp vỗ tay theo. Cuối cùng, Quang nói với giọng rất tự tin: “Sau đó bố đưa em đi học.”.",
-        "Thầy giáo vỗ tay. Các bạn vỗ tay theo. Quang cũng vỗ tay. Cả lớp tràn ngập tiếng vỗ tay."
+        "Thầy giáo nói: “Chúng ta cần học cách giao tiếp tự tin. Vì thế hôm nay chúng ta sẽ tập nói trước lớp về bất cứ điều gì mình thích.”\n\nQuang được mời lên nói đầu tiên. Cậu lúng túng, đỏ mặt. Quang cảm thấy nói với bạn bên cạnh thì dễ, nhưng nói trước cả lớp thì sao mà khó thế. Thầy bảo: “Sáng nay ngủ dậy, em đã làm gì? Em có nhớ xem.”\n\nQuang ngập ngừng, vừa nói vừa gãi đầu: “Em...”\n\nThầy giáo nhắc: “Rồi gì nữa?”\n\nQuang lại gãi đầu: “À... ờ... Em ngủ dậy.” Và cậu nói tiếp: “Rồi... ờ...”\n\nThầy giáo mỉm cười, kiên nhẫn nghe Quang nói. Thầy bảo: “Thế là được rồi đấy!”",
+        "Nhưng Quang chưa chịu về chỗ. Bỗng cậu nói to: “Rồi sau đó... ờ... à...”\nQuang thở mạnh một hơi rồi nói tiếp: “Mẹ... ờ... bảo: Con đánh răng đi. Thế là em đánh răng.” Thầy giáo vỗ tay. Cả lớp vỗ tay theo. Cuối cùng, Quang nói với giọng rất tự tin: “Sau đó bố đưa em đi học.”\n\nThầy giáo vỗ tay. Các bạn vỗ tay theo. Quang cũng vỗ tay. Cả lớp tràn ngập tiếng vỗ tay."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -3859,7 +3835,7 @@
         28
       ],
       "sourceHash": "82a520c5c83267a3101a1ffd94aa6b9c06b5a6faf71fbf08620a561e3ea3c106",
-      "audioNarration": "Một giờ học Thầy giáo nói: “Chúng ta cần học cách giao tiếp tự tin. Vì thế hôm nay chúng ta sẽ tập nói trước lớp về bất cứ điều gì mình thích.”. Quang được mời lên nói đầu tiên. Cậu lúng túng, đỏ mặt. Quang cảm thấy nói với bạn bên cạnh thì dễ, nhưng nói trước cả lớp thì sao mà khó thế. Thầy bảo: “Sáng nay ngủ dậy, em đã làm gì? Em cố nhớ xem.”. Quang ngập ngừng, vừa nói vừa gãi đầu: “Em...”. Thầy giáo nhắc: “Rồi gì nữa?”. Quang lại gãi đầu: “À... ờ... Em ngủ dậy.”. Và cậu nói tiếp: “Rồi... ờ...”. Thầy giáo mỉm cười, kiên nhẫn nghe Quang nói. Thầy bảo: “Thế là được rồi đấy!”. Nhưng Quang chưa chịu về chỗ. Bỗng câu nói to: “Rồi sau đó... ờ... à...”. Quang thở mạnh một hơi rồi nói tiếp: “Mẹ... ờ... bảo: Con đánh răng đi. Thế là em đánh răng.”. Thầy giáo vỗ tay. Cả lớp vỗ tay theo. Cuối cùng, Quang nói với giọng rất tự tin: “Sau đó bố đưa em đi học.”. Thầy giáo vỗ tay. Các bạn vỗ tay theo. Quang cũng vỗ tay. Cả lớp tràn ngập tiếng vỗ tay."
+      "audioNarration": "Một giờ học\nThầy giáo nói: “Chúng ta cần học cách giao tiếp tự tin. Vì thế hôm nay chúng ta sẽ tập nói trước lớp về bất cứ điều gì mình thích.”\n\nQuang được mời lên nói đầu tiên. Cậu lúng túng, đỏ mặt. Quang cảm thấy nói với bạn bên cạnh thì dễ, nhưng nói trước cả lớp thì sao mà khó thế. Thầy bảo: “Sáng nay ngủ dậy, em đã làm gì? Em có nhớ xem.”\n\nQuang ngập ngừng, vừa nói vừa gãi đầu: “Em...”\n\nThầy giáo nhắc: “Rồi gì nữa?”\n\nQuang lại gãi đầu: “À... ờ... Em ngủ dậy.” Và cậu nói tiếp: “Rồi... ờ...”\n\nThầy giáo mỉm cười, kiên nhẫn nghe Quang nói. Thầy bảo: “Thế là được rồi đấy!”\nNhưng Quang chưa chịu về chỗ. Bỗng cậu nói to: “Rồi sau đó... ờ... à...”\nQuang thở mạnh một hơi rồi nói tiếp: “Mẹ... ờ... bảo: Con đánh răng đi. Thế là em đánh răng.” Thầy giáo vỗ tay. Cả lớp vỗ tay theo. Cuối cùng, Quang nói với giọng rất tự tin: “Sau đó bố đưa em đi học.”\n\nThầy giáo vỗ tay. Các bạn vỗ tay theo. Quang cũng vỗ tay. Cả lớp tràn ngập tiếng vỗ tay."
     }
   },
   "tv-g2-b7": {
@@ -3892,30 +3868,26 @@
     "lessonId": "tv-g2-b8",
     "bookId": "tv-g2-t1",
     "sourcePages": [
-      34
+      34,
+      35
     ],
-    "sourceHash": "44fef840b2beee1aaa260717c8a98891aca08e4e2f301f172ecda2795721d49b",
+    "sourceHash": "25b6777d7aa73cac1d58c986d845fee453cce04318c942bc6e9bc5337fb962bb",
     "readingPassage": {
       "title": "Cầu thủ dự bị",
       "author": "Theo 100 truyện ngụ ngôn hay nhất",
       "genre": "story",
       "content": [
-        "Nhìn các bạn đá bóng, gấu con rất muốn chơi cùng. Nhưng thấy gấu con có vẻ chậm chạp và đá bóng không tốt nên chưa đội nào muốn nhận cậu.",
-        "– Gấu à, cậu làm cầu thủ dự bị nhé! – Khỉ nói.",
-        "Gấu con hơi buồn nhưng cũng đồng ý. Trong khi chờ được vào sân, gấu đi nhặt bóng cho các bạn. Gấu cố gắng chạy thật nhanh để các bạn không phải chờ lâu.",
-        "Hằng ngày, gấu đến sân bóng từ sớm để luyện tập. Gấu đá bóng ra xa, chạy đi nhặt rồi đá vào gôn, đá đi đá lại,... Cứ thế, gấu đá bóng ngày càng giỏi hơn.",
-        "Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”.",
-        "– Tớ nên vào đội nào đây? – Gấu hỏi khỉ.",
-        "– Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói.",
-        "Gấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”."
+        "Nhìn các bạn đá bóng, gấu con rất muốn chơi cùng. Nhưng thấy gấu con có vẻ chậm chạp và đá bóng không tốt nên chưa đội nào muốn nhận cậu.\n\n– Gấu à, cậu làm cầu thủ dự bị nhé! – Khỉ nói.\n\nGấu con hơi buồn nhưng cũng đồng ý. Trong khi chờ được vào sân, gấu đi nhặt bóng cho các bạn. Gấu cố gắng chạy thật nhanh để các bạn không phải chờ lâu.\n\nHằng ngày, gấu đến sân bóng từ sớm để luyện tập. Gấu đá bóng ra xa, chạy đi nhặt rồi đá vào gôn, đá đi đá lại,... Cứ thế, gấu đá bóng ngày càng giỏi hơn.",
+        "Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”.\n\n– Tớ nên vào đội nào đây? – Gấu hỏi khỉ.\n\n– Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói.\n\nGấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
       "sourcePages": [
-        34
+        34,
+        35
       ],
-      "sourceHash": "44fef840b2beee1aaa260717c8a98891aca08e4e2f301f172ecda2795721d49b",
-      "audioNarration": "Cầu thủ dự bị Nhìn các bạn đá bóng, gấu con rất muốn chơi cùng. Nhưng thấy gấu con có vẻ chậm chạp và đá bóng không tốt nên chưa đội nào muốn nhận cậu. – Gấu à, cậu làm cầu thủ dự bị nhé! – Khỉ nói. Gấu con hơi buồn nhưng cũng đồng ý. Trong khi chờ được vào sân, gấu đi nhặt bóng cho các bạn. Gấu cố gắng chạy thật nhanh để các bạn không phải chờ lâu. Hằng ngày, gấu đến sân bóng từ sớm để luyện tập. Gấu đá bóng ra xa, chạy đi nhặt rồi đá vào gôn, đá đi đá lại,... Cứ thế, gấu đá bóng ngày càng giỏi hơn. Một hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”. – Tớ nên vào đội nào đây? – Gấu hỏi khỉ. – Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói. Gấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”."
+      "sourceHash": "25b6777d7aa73cac1d58c986d845fee453cce04318c942bc6e9bc5337fb962bb",
+      "audioNarration": "Cầu thủ dự bị\nNhìn các bạn đá bóng, gấu con rất muốn chơi cùng. Nhưng thấy gấu con có vẻ chậm chạp và đá bóng không tốt nên chưa đội nào muốn nhận cậu.\n\n– Gấu à, cậu làm cầu thủ dự bị nhé! – Khỉ nói.\n\nGấu con hơi buồn nhưng cũng đồng ý. Trong khi chờ được vào sân, gấu đi nhặt bóng cho các bạn. Gấu cố gắng chạy thật nhanh để các bạn không phải chờ lâu.\n\nHằng ngày, gấu đến sân bóng từ sớm để luyện tập. Gấu đá bóng ra xa, chạy đi nhặt rồi đá vào gôn, đá đi đá lại,... Cứ thế, gấu đá bóng ngày càng giỏi hơn.\nMột hôm, đến sân bóng thấy gấu đang luyện tập, các bạn ngạc nhiên nhìn gấu rồi nói: “Cậu giỏi quá!”, “Này, vào đội tớ nhé!”, “Vào đội tớ đi!”.\n\n– Tớ nên vào đội nào đây? – Gấu hỏi khỉ.\n\n– Hiệp đầu cậu đá cho đội đỏ, hiệp sau cậu đá cho đội xanh. – Khỉ nói.\n\nGấu vui vẻ gật đầu. Cậu nghĩ: “Hoá ra làm cầu thủ dự bị cũng hay nhỉ!”."
     }
   },
   "tv-g2-b9": {
@@ -3930,18 +3902,9 @@
       "author": "Nguyễn Xuân Sanh",
       "genre": "poem",
       "content": [
-        "Sáng nào em đến lớp",
-        "Cũng thấy cô đến rồi",
-        "Đáp lời “Chào cô ạ!\"",
-        "Cô mỉm cười thật tươi.",
-        "Cô dạy em tập viết",
-        "Gió đưa thoảng hương nhài",
-        "Nắng ghé vào cửa lớp",
-        "Xem chúng em học bài.",
-        "Những lời cô giáo giảng",
-        "Ấm trang vở thơm tho",
-        "Yêu thương em ngắm mãi",
-        "Những điểm mười cô cho."
+        "Sáng nào em đến lớp\nCũng thấy cô đến rồi.\nĐáp lời “Chào cô ạ!”\nCô mỉm cười thật tươi.",
+        "Cô dạy em tập viết\nGió đưa thoảng hương nhài\nNắng ghé vào cửa lớp\nXem chúng em học bài.",
+        "Những lời cô giáo giảng\nẤm trang vở thơm tho\nYêu thương em ngắm mãi\nNhững điểm mười cô cho."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -3949,7 +3912,7 @@
         40
       ],
       "sourceHash": "f46703e75573523c7813808d6225d28b5b54d605e039ab9cd83fa1d7b97a246c",
-      "audioNarration": "Cô giáo lớp em Sáng nào em đến lớp Cũng thấy cô đến rồi Đáp lời “Chào cô ạ!\" Cô mỉm cười thật tươi. Cô dạy em tập viết Gió đưa thoảng hương nhài Nắng ghé vào cửa lớp Xem chúng em học bài. Những lời cô giáo giảng Ấm trang vở thơm tho Yêu thương em ngắm mãi Những điểm mười cô cho."
+      "audioNarration": "Cô giáo lớp em\nSáng nào em đến lớp\nCũng thấy cô đến rồi.\nĐáp lời “Chào cô ạ!”\nCô mỉm cười thật tươi.\nCô dạy em tập viết\nGió đưa thoảng hương nhài\nNắng ghé vào cửa lớp\nXem chúng em học bài.\nNhững lời cô giáo giảng\nẤm trang vở thơm tho\nYêu thương em ngắm mãi\nNhững điểm mười cô cho."
     }
   },
   "tv-g2-b10": {
@@ -3987,21 +3950,10 @@
       "author": "Thanh Hào",
       "genre": "poem",
       "content": [
-        "Mùa hè cũng nghỉ",
-        "Suốt ba tháng liền",
-        "Trống nằm ngẫm nghĩ.",
-        "Buồn không hả trống",
-        "Trong những ngày hè",
-        "Bọn mình đi vắng",
-        "Chỉ còn tiếng ve?",
-        "Cái trống lặng im",
-        "Nghiêng đầu trên gia",
-        "Chắc thấy chúng em",
-        "Nó mừng vui quá!",
-        "Kìa trống đang gọi:",
-        "Tùng! Tùng! Tùng! Tùng!",
-        "Vào năm học mới",
-        "Giọng vang tưng bừng."
+        "Mùa hè cũng nghỉ\nSuốt ba tháng liền\nTrống nằm ngẫm nghĩ.",
+        "Buồn không hả trống\nTrong những ngày hè\nBọn mình đi vắng\nChỉ còn tiếng ve?",
+        "Cái trống lặng im\nNghiêng đầu trên giá\nChắc thấy chúng em\nNó mừng vui quá!",
+        "Kìa trống đang gọi:\nTùng! Tùng! Tùng! Tùng!\nVào năm học mới\nGiọng vang tưng bừng."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -4025,6 +3977,7 @@
       "genre": "prose",
       "content": [
         "Hôm nay, chúng tôi được đọc truyện tại lớp. Cô giáo cho chúng tôi đăng kí đọc truyện theo sở thích. Dưới đây là danh sách đăng kí của tổ tôi.",
+        "Danh sách học sinh tổ 2 lớp 2C đăng kí đọc truyện\n1. Trần Trường An — Ngày khai trường\n2. Nguyễn Hà Anh — Ếch xanh đi học\n3. Nguyễn Ngọc Bảo — Ếch xanh đi học\n4. Đỗ Duy Bắc — Ngày khai trường\n5. Vũ Tiến Bình — Vì sao gà chẳng giỏi bơi?\n6. Lê Thị Cúc — Ngày khai trường\n7. Lê Gia Hân — Vì sao gà chẳng giỏi bơi?\n8. Phùng Minh Khánh — Ếch xanh đi học",
         "Dựa vào danh sách đăng kí, cô chia lớp thành ba nhóm, mỗi nhóm đọc một truyện. Chúng tôi đọc cho nhau nghe, rồi cùng nhau trao đổi về các nhân vật trong truyện mà nhóm đã chọn."
       ],
       "contentOrigin": "sgk_reference",
@@ -4067,7 +4020,7 @@
         "Có đêm trong mơ",
         "Bỗng cười khúc khích",
         "Ngỡ đang ở lớp",
-        "Cùng bạn vui đùa."
+      "Cùng bạn đùa vui."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -4181,7 +4134,7 @@
       "author": "Định Hải",
       "genre": "poem",
       "content": [
-        "Tự xa xưa thuở nào",
+      "Từ xa xưa thuở nào",
         "Trong rừng xanh sâu thẳm",
         "Đôi bạn sống bên nhau",
         "Bê vàng và dê trắng.",
@@ -4217,10 +4170,10 @@
       "author": "Theo Tun Te-le-gon",
       "genre": "prose",
       "content": [
-        "Kiến là bạn thân của sóc. Hằng ngày, hai bạn thường rủ nhau đi học. Thế rồi nhà kiến chuyển đến một khu rừng khác. Lúc chia tay, kiến rất buồn. Kiến nói: “Cậu phải thường xuyên nhớ tớ đấy.”. Sóc gật đầu nhận lời.",
-        "Một buổi sáng, sóc lấy một tờ giấy và viết thư cho kiến. Sóc nắn nót ghi: “Tớ nhớ cậu.”. Một cơn gió đi ngang qua mang theo lá thư. Chiều hôm đó, kiến đi dạo trong rừng. Một lá thư nhè nhẹ bay xuống. Kiến reo lên: “A, thư của sóc!”.",
-        "Hôm sau, kiến ngồi bên thềm và viết thư cho sóc. Kiến không biết làm sao cho sóc biết mình rất nhớ bạn. Cậu viết: \"Chào sóc!\". Nhưng kiến không định chào sóc. Cậu bèn viết một lá thư khác: \"Sóc thân mến!\". Như thế vẫn không đúng ý của kiến. Lấy một tờ giấy mới, kiến ghi: \"Sóc ơi!\". Cứ thế, cậu cặm cụi viết đi viết lại trong nhiều giờ liền.",
-        "Không lâu sau, Sóc nhận được một lá thư do kiến gửi đến. Thư viết: \"Sóc ơi, tớ cũng nhớ cậu!\"."
+        "Kiến là bạn thân của sóc. Hằng ngày, hai bạn thường rủ nhau đi học. Thế rồi nhà kiến chuyển đến một khu rừng khác. Lúc chia tay, kiến rất buồn. Kiến nói: “Cậu phải thường xuyên nhớ tớ đấy.” Sóc gật đầu nhận lời.",
+        "Một buổi sáng, sóc lấy một tờ giấy và viết thư cho kiến. Sóc nắn nót ghi: “Tớ nhớ cậu.” Một cơn gió đi ngang qua mang theo lá thư. Chiều hôm đó, kiến đi dạo trong rừng. Một lá thư nhẹ nhẹ bay xuống. Kiến reo lên: “À, thư của sóc!”.",
+        "Hôm sau, kiến ngồi bên thềm và viết thư cho sóc. Kiến không biết làm sao cho sóc biết mình rất nhớ bạn. Cậu viết: “Chào sóc!”. Nhưng kiến không định chào sóc. Cậu bèn viết một lá thư khác: “Sóc thân mến!”. Như thế vẫn không đúng ý của kiến. Lấy một tờ giấy mới, kiến ghi: “Sóc ơi!”. Cứ thế, cậu cặm cụi viết đi viết lại trong nhiều giờ liền.",
+        "Không lâu sau, sóc nhận được một lá thư do kiến gửi đến. Thư viết: “Sóc ơi, tớ cũng nhớ cậu!”."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -4701,18 +4654,12 @@
       "author": "Theo Từ Nguyên Tĩnh",
       "genre": "prose",
       "content": [
-        "Ngày đầu năm, bốn nàng tiên Xuân, Hạ, Thu, Đông gặp nhau. Đông cầm tay Xuân bảo:",
-        "– Chị là người sung sướng nhất. Ai cũng yêu chị. Chị về, cây nào cũng đâm chồi nảy lộc.",
-        "Xuân nói:",
-        "– Nhưng nhờ có em Hạ, cây trong vườn mới đơm trái ngọt, học sinh mới được nghỉ hè.",
-        "Nàng Hạ tinh nghịch xen vào:",
-        "– Thế mà thiếu nhi lại thích em Thu nhất. Không có Thu, làm sao có đêm trăng rằm rước đèn, phá cỗ,...",
-        "Giọng buồn buồn, Đông nói:",
-        "– Chỉ có em là chẳng ai yêu.",
-        "Thu đặt tay lên vai Đông, thủ thỉ:",
-        "– Có em mới có bập bùng bếp lửa nhà sàn, mọi người mới có giấc ngủ ấm trong chăn.",
-        "Bốn nàng tiên mải chuyện trò, không biết bà Đất đã đến từ lúc nào. Bà nói:",
-        "– Xuân làm cho cây lá tươi tốt. Hạ cho trái ngọt, hoa thơm. Thu làm cho trời xanh cao, học sinh nhớ ngày tựu trường. Còn cháu Đông, cháu có công ấp ủ mầm sống để xuân về cây cối đâm chồi nảy lộc. Các cháu đều có ích, đều đáng yêu."
+        "Ngày đầu năm, bốn nàng tiên Xuân, Hạ, Thu, Đông gặp nhau. Đông cầm tay Xuân bảo:\n– Chị là người sung sướng nhất. Ai cũng yêu chị. Chị về, cây nào cũng đâm chồi nảy lộc.",
+        "Xuân nói:\n– Nhưng nhờ có em Hạ, cây trong vườn mới đơm trái ngọt, học sinh mới được nghỉ hè.",
+        "Nàng Hạ tinh nghịch xen vào:\n– Thế mà thiếu nhi lại thích em Thu nhất. Không có Thu, làm sao có đêm trăng Rằm rước đèn, phá cỗ,...",
+        "Giọng buồn buồn, Đông nói:\n– Chỉ có em là chẳng ai yêu.",
+        "Thu đặt tay lên vai Đông, thủ thỉ:\n– Có em mới có bập bùng bếp lửa nhà sàn, mọi người mới có giấc ngủ ấm trong chăn.",
+        "Bốn nàng tiên mải chuyện trò, không biết bà Đất đã đến từ lúc nào. Bà nói:\n– Xuân làm cho cây lá tươi tốt. Hạ cho trái ngọt, hoa thơm. Thu làm cho trời xanh cao, học sinh nhớ ngày tựu trường. Còn cháu Đông, cháu có công ấp ủ mầm sống để xuân về cây cối đâm chồi nảy lộc. Các cháu đều có ích, đều đáng yêu."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -4737,7 +4684,7 @@
       "content": [
         "Mùa này, người làng tôi gọi là mùa nước nổi, không gọi là mùa nước lũ, vì nước lên hiền hoà. Nước mỗi ngày một dâng lên. Mưa dầm dề, mưa sướt mướt ngày này qua ngày khác.",
         "Rồi đến Rằm tháng Bảy. “Rằm tháng Bảy nước nhảy lên bờ”. Dòng sông Cửu Long đã no đầy, lại tràn qua bờ. Nước trong ao hồ, trong đồng ruộng của mùa mưa hoà lẫn với nước dòng sông Cửu Long.",
-        "Đồng ruộng, vườn tược và cây cỏ như biết giữ lại hạt phù sa ở quanh mình, nước lại trong dần. Ngồi trong nhà, ta thấy cả những đàn cá ròng ròng, từng đàn, từng đàn theo cả mẹ xuôi theo dòng nước, vào tận đồng sâu.",
+      "Đồng ruộng, vườn tược và cây cỏ như biết giữ lại hạt phù sa ở quanh mình, nước lại trong dần. Ngồi trong nhà, ta thấy cả những đàn cá ròng ròng, từng đàn, từng đàn theo cá mẹ xuôi theo dòng nước, vào tận đồng sâu.",
         "Ngủ một đêm, sáng dậy, nước ngập lên những viên gạch. Phải lấy ván, lấy tre làm cầu từ cửa trước vào đến tận bếp. Vui quá! Có cả một cây cầu lắt lẻo ngay dưới mái nhà."
       ],
       "contentOrigin": "sgk_reference",
@@ -4851,14 +4798,8 @@
       "author": "Theo Những câu chuyện hay, những bài học quý",
       "genre": "prose",
       "content": [
-        "Thu về, những quả hồng đỏ mọng, những hạt dẻ nâu bóng, những quả na mở to mắt, thơm dìu dịu. Biển lúa vàng ươm. Gió nổi lên và sóng lúa vàng dập dờn trải tới chân trời. Minh ríu rít bên mẹ:",
-        "– Mẹ ơi, con thấy quả trên cây đều chín hết cả rồi. Các bạn ấy đang mong có người đến hái đấy. Nhìn quả chín ngon thế này, chắc các bác nông dân vui lắm mẹ nhỉ?",
-        "– Đúng thế con ạ.",
-        "– Nếu mùa nào cũng được thu hoạch thì thích lắm, phải không mẹ?",
-        "Mẹ âu yếm nhìn Minh và bảo:",
-        "– Con nói đúng đấy! Mùa nào thức ấy.",
-        "Nhưng để có sản phẩm thu hoạch, trước đó người nông dân phải làm rất nhiều việc. Họ phải cày bừa, gieo hạt và ươm mầm. Rồi mưa nắng, hạn hán, họ phải chăm sóc vườn cây, ruộng đồng. Nhờ thế mà cây lớn dần, ra hoa kết trái và chín rộ đấy.",
-        "– Mẹ ơi, con hiểu rồi. Công việc của các bác nông dân vất vả quá mẹ nhỉ?"
+        "Thu về, những quả hồng đỏ mọng, những hạt dẻ nâu bóng, những quả na mở to mắt, thơm dịu dịu. Biển lúa vàng ươm. Gió nổi lên và sóng lúa vàng dập dờn trải tới chân trời.\n\nMinh ríu rít bên mẹ:\n– Mẹ ơi, con thấy quả trên cây đều chín hết cả rồi. Các bạn ấy đang mong có người đến hái đấy. Nhìn quả chín ngon thế này, chắc các bác nông dân vui lắm mẹ nhỉ?\n– Đúng thế con ạ.\n– Nếu mùa nào cũng được thu hoạch thì thích lắm, phải không mẹ?\nMẹ âu yếm nhìn Minh và bảo:\n– Con nói đúng đấy! Mùa nào thức ấy.",
+        "Nhưng để có sản phẩm thu hoạch, trước đó người nông dân phải làm rất nhiều việc. Họ phải cày bừa, gieo hạt và ươm mầm. Rồi mưa nắng, hạn hán, họ phải chăm sóc vườn cây, ruộng đồng. Nhờ thế mà cây lớn dần, ra hoa kết trái và chín rộ đấy.\n– Mẹ ơi, con hiểu rồi. Công việc của các bác nông dân vất vả quá mẹ nhỉ?"
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5025,22 +4966,8 @@
       "author": "Sự tích cây thì là – Trịnh Mạnh kể",
       "genre": "story",
       "content": [
-        "Ngày xưa, cây cối trên trái đất chưa có tên gọi. Trời bèn gọi chúng lên để đặt tên. Cây cối mừng rỡ kéo nhau lên trời. Trời chỉ tay vào từng cây và đặt tên:",
-        "– Chú thì ta đặt tên cho là cây dừa.",
-        "– Chú thì ta đặt tên cho là cây cau.",
-        "– Chú thì ta đặt tên cho là cây mít...",
-        "Trời đặt tên mãi mà vẫn chưa hết. Về sau, Trời chỉ nói vắn tắt:",
-        "– Chú thì là cây cải.",
-        "– Chú là cây ớt.",
-        "– Chú là cây tỏi...",
-        "Khi các loài cây đều đã có tên, bỗng một cái cây dáng mảnh khảnh, lá nhỏ xíu đến xin đặt tên.",
-        "– Chú bé tí xíu, chú có ích gì để ta đặt tên nào? - Trời hỏi.",
-        "Cây nhỏ liền thưa:",
-        "– Thưa trời, khi nấu canh riêu cá hoặc làm chả cá, chả mực mà không có con thì mất cả ngon ạ.",
-        "Trời liền bảo:",
-        "– Ừ, để ta nghĩ cho một cái tên. Tên chú thì... là... thì... là...",
-        "Trời còn đang suy nghĩ, cây nhỏ đã chạy đi xa rồi. Nó mừng rỡ khoe với bạn bè:",
-        "– Trời đặt tên cho tôi là cây “thì là” đấy!"
+        "Ngày xưa, cây cối trên trái đất chưa có tên gọi. Trời bèn gọi chúng lên để đặt tên. Cây cối mừng rỡ kéo nhau lên trời. Trời chỉ tay vào từng cây và đặt tên:\n– Chú thì ta đặt tên cho là cây dừa.\n– Chú thì ta đặt tên cho là cây cau.\n– Chú thì ta đặt tên cho là cây mít...\nTrời đặt tên mãi mà vẫn chưa hết. Về sau, Trời chỉ nói vắn tắt:\n– Chú thì là cây cải.\n– Chú là cây ớt.\n– Chú là cây tỏi...\nKhi các loài cây đều đã có tên, bỗng một cái cây dáng mảnh khảnh, lá nhỏ xíu đến xin đặt tên.\n– Chú bé tí xíu, chú có ích gì để ta đặt tên nào? – Trời hỏi.\nCây nhỏ liền thưa:\n– Thưa Trời, khi nấu canh riêu cá hoặc làm chả cá, chả mực mà không có con thì mất cả ngon ạ.",
+        "Trời liền bảo:\n– Ừ, để ta nghĩ cho một cái tên. Tên chú thì... là... thì... là...\nTrời còn đang suy nghĩ, cây nhỏ đã chạy đi xa rồi. Nó mừng rỡ khoe với bạn bè:\n– Trời đặt tên cho tôi là cây “thì là” đấy!"
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5162,16 +5089,8 @@
       "author": "Theo 365 truyện kể hằng đêm",
       "genre": "story",
       "content": [
-        "Mùa xuân đã đến. Cỏ trong công viên bừng tỉnh sau giấc ngủ đông. Từng đàn én từ phương Nam trở về. Trẻ em chơi đùa dưới ánh mặt trời ấm áp.",
-        "Một hôm, chị én nâu đang sửa soạn đi ngủ thì nghe thấy tiếng khóc thút thít. Lần theo tiếng khóc, én nâu tìm đến công viên nhỏ. Thấy một cây cỏ non đang khóc, én nâu hỏi:",
-        "– Em bị ốm à?",
-        "Cỏ non khóc nấc lên:",
-        "– Chị ơi, em không đứng thẳng được nữa. Các bạn nhỏ đã đến đây chơi đùa và giẫm lên em.",
-        "Én nâu lặng đi một phút rồi bỗng reo lên:",
-        "– Đừng khóc nữa! Chị sẽ giúp em.",
-        "Thế rồi, én nâu gọi thêm rất nhiều bạn của mình. Suốt đêm, cả đàn én ra sức đi tìm cỏ khô tết thành dòng chữ “Không giẫm chân lên cỏ!” đặt bên cạnh bãi cỏ. Xong việc, én nâu tươi cười bảo cỏ non:",
-        "– Từ nay em yên tâm rồi! Không còn ai giẫm lên em nữa đâu.",
-        "Cỏ non nhoẻn miệng cười và cảm ơn chị én nâu."
+        "Mùa xuân đã đến. Cỏ trong công viên bừng tỉnh sau giấc ngủ đông. Từng đàn én từ phương Nam trở về. Trẻ em chơi đùa dưới ánh mặt trời ấm áp.\n\nMột hôm, chị én nâu đang sửa soạn đi ngủ thì nghe thấy tiếng khóc thút thít. Lần theo tiếng khóc, én nâu tìm đến công viên nhỏ. Thấy một cây cỏ non đang khóc, én nâu hỏi:\n– Em bị ốm à?\nCỏ non khóc nấc lên:\n– Chị ơi, em không đứng thẳng được nữa. Các bạn nhỏ đã đến đây chơi đùa và giẫm lên em.\nÉn nâu lặng đi một phút rồi bỗng reo lên:\n– Đừng khóc nữa! Chị sẽ giúp em.",
+        "Thế rồi, én nâu gọi thêm rất nhiều bạn của mình. Suốt đêm, cả đàn én ra sức đi tìm cỏ khô tết thành dòng chữ “Không giẫm chân lên cỏ!” đặt bên cạnh bãi cỏ. Xong việc, én nâu tươi cười bảo cỏ non:\n– Từ nay em yên tâm rồi. Không còn ai giẫm lên em nữa đâu.\nCỏ non nhoẻn miệng cười và cảm ơn chị én nâu."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5194,15 +5113,8 @@
       "author": "Theo Hạt giống tâm hồn – Phép màu có giá bao nhiêu?",
       "genre": "prose",
       "content": [
-        "Một người đàn ông đang dạo bộ trên bãi biển khi chiều xuống. Biển đông người, nhưng ông lại chú ý đến một cậu bé cứ liên tục cúi xuống nhặt thứ gì đó lên rồi thả xuống biển.",
-        "Tiến lại gần hơn, ông thấy cậu bé đang nhặt những con sao biển bị thuỷ triều đánh dạt lên bờ và thả chúng trở về với đại dương.",
-        "– Cháu đang làm gì vậy? – Người đàn ông hỏi.",
-        "Cậu bé trả lời:",
-        "– Những con sao biển này sắp chết vì thiếu nước, cháu muốn giúp chúng.",
-        "– Có hàng ngàn con sao biển như vậy, liệu cháu có thể giúp được tất cả chúng không?",
-        "Cậu bé vẫn tiếp tục nhặt những con sao biển khác thả xuống biển và nói với người đàn ông:",
-        "– Cháu cũng biết như vậy, nhưng ít nhất thì cháu cũng cứu được những con sao biển này.",
-        "Người đàn ông trìu mến nhìn cậu bé và cùng cậu cứu những con sao biển."
+        "Một người đàn ông đang dạo bộ trên bãi biển khi chiều xuống. Biển đông người, nhưng ông lại chú ý đến một cậu bé cứ liên tục cúi xuống nhặt thứ gì đó lên rồi thả xuống biển.\n\nTiến lại gần hơn, ông thấy cậu bé đang nhặt những con sao biển bị thuỷ triều đánh dạt lên bờ và thả chúng trở về với đại dương.\n\n– Cháu đang làm gì vậy? – Người đàn ông hỏi.\n\nCậu bé trả lời:\n\n– Những con sao biển này sắp chết vì thiếu nước, cháu muốn giúp chúng.\n\n– Có hàng ngàn con sao biển như vậy, liệu cháu có thể giúp được tất cả chúng không?",
+        "Cậu bé vẫn tiếp tục nhặt những con sao biển khác thả xuống biển và nói với người đàn ông:\n\n– Cháu cũng biết như vậy, nhưng ít nhất thì cháu cũng cứu được những con sao biển này.\n\nNgười đàn ông trìu mến nhìn cậu bé và cùng cậu cứu những con sao biển."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5225,9 +5137,7 @@
       "author": "Minh Đăng",
       "genre": "prose",
       "content": [
-        "Chú cánh cam đi lạc vào nhà Bống. Chân chú bị thương, bước đi tập tễnh. Bống thương quá, đặt cánh cam vào một chiếc lọ nhỏ đựng đầy cỏ. Từ ngày đó, cánh cam trở thành người bạn nhỏ xíu của Bống.",
-        "Cánh cam có đôi cánh xanh biếc, óng ánh dưới ánh nắng mặt trời. Mỗi khi nghe tiếng động, chú khệ nệ ôm cái bụng tròn lẳn, trốn vào đám cỏ rối. Bống chăm sóc cánh cam rất cẩn thận. Hằng ngày, em đều bỏ vào chiếc lọ một chút nước và những ngọn cỏ xanh non.",
-        "Nhưng Bống cảm thấy cánh cam vẫn có vẻ ngơ ngác không vui, chắc chú nhớ nhà và nhớ bạn bè. Đoán vậy, Bống mang cánh cam thả ra bãi cỏ sau nhà. Tạm biệt cánh cam bé nhỏ, Bống hi vọng chú sẽ tìm được đường về căn nhà thân thương của mình."
+        "Chú cánh cam đi lạc vào nhà Bống. Chân chú bị thương, bước đi tập tễnh. Bống thương quá, đặt cánh cam vào một chiếc lọ nhỏ đựng đầy cỏ. Từ ngày đó, cánh cam trở thành người bạn nhỏ xíu của Bống.\n\nCánh cam có đôi cánh xanh biếc, óng ánh dưới ánh nắng mặt trời. Mỗi khi nghe tiếng động, chú khệ nệ ôm cái bụng tròn lẳn, trốn vào đám cỏ rối. Bống chăm sóc cánh cam rất cẩn thận. Hằng ngày, em đều bỏ vào chiếc lọ một chút nước và những ngọn cỏ xanh non.\n\nNhưng Bống cảm thấy cánh cam vẫn có vẻ ngơ ngác không vui, chắc chú nhớ nhà và nhớ bạn bè. Đoán vậy, Bống mang cánh cam thả ra bãi cỏ sau nhà. Tạm biệt cánh cam bé nhỏ, Bống hi vọng chú sẽ tìm được đường về căn nhà thân thương của mình."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5275,9 +5185,9 @@
       "author": "Hải Nam",
       "genre": "prose",
       "content": [
-        "Thư viện là nơi lưu giữ sách báo, nơi mọi người đến đọc sách hoặc mượn sách về nhà. Nhiều người nghĩ rằng thư viện chỉ nằm im một chỗ. Nhưng trên thế giới, có rất nhiều \"thư viện biết đi\".",
-        "Thư viện Lô-gô-xơ của Đức là \"thư viện nổi\" lớn nhất thế giới. Nó nằm trên một con tàu biển khổng lồ, có thể chở được 500 hành khách và đã từng đi qua 45 nước trên thế giới.",
-        "Ở Phần Lan, có hàng trăm \"thư viện di động\" trên những chiếc xe buýt cũ, chạy khắp các thành phố lớn. Ở châu Phi, một người thủ thư đã đặt thư viện trên lưng một con lạc đà. Nhờ thế, những cuốn sách có thể băng qua sa mạc để đến với người đọc."
+        "Thư viện là nơi lưu giữ sách báo, nơi mọi người đến đọc sách hoặc mượn sách về nhà. Nhiều người nghĩ rằng thư viện chỉ nằm im một chỗ. Nhưng trên thế giới, có rất nhiều “thư viện biết đi”.",
+        "Thư viện Lô-gô-xơ của Đức là “thư viện nổi” lớn nhất thế giới. Nó nằm trên một con tàu biển khổng lồ, có thể chở được 500 hành khách và đã từng đi qua 45 nước trên thế giới.",
+        "Ở Phần Lan, có hàng trăm “thư viện di động” trên những chiếc xe buýt cũ, chạy khắp các thành phố lớn. Ở châu Phi, một người thủ thư đã đặt thư viện trên lưng một con lạc đà. Nhờ thế, những cuốn sách có thể băng qua sa mạc để đến với người đọc."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5298,22 +5208,10 @@
     "readingPassage": {
       "title": "Cảm ơn anh hà mã",
       "author": "Theo Cùng con rèn thói quen tốt",
-      "genre": "poem",
+      "genre": "prose",
       "content": [
-        "Dê rủ cún vào rừng chơi, khi quay về thì bị lạc đường. Gặp cô hươu, dê hỏi:",
-        "– Cô kia, về làng đi lối nào?",
-        "– Không biết. - Hươu lắc đầu, bỏ đi.",
-        "Đi tiếp, tới một con sông, thấy anh hà mã, dê nói to:",
-        "– Bọn tôi muốn về làng, hãy đưa bọn tôi qua sông!",
-        "Hà mã phật ý, định bỏ đi. Thấy vậy, cún nói:",
-        "– Chào anh hà mã, anh giúp bọn em qua sông được không ạ?",
-        "– Được chứ! Em ngoan quá! – Hà mã vui vẻ nói.",
-        "– Cảm ơn anh! – Cún đáp rồi quay sang nói nhỏ với dê:",
-        "– Cậu quên lời cô dặn rồi à? Muốn ai đó giúp, phải hỏi một cách lịch sự, còn khi họ giúp mình, phải nói “cảm ơn”.",
-        "Dê con hơi xấu hổ. Sang bên kia sông, dê nói với hà mã:",
-        "– Cảm ơn anh đã giúp. Em biết mình sai rồi. Em xin lỗi ạ!",
-        "Hà mã mỉm cười:",
-        "– Em biết lỗi là tốt rồi. Giờ các em cứ đi theo đường này là về làng thôi."
+        "Dê rủ cún vào rừng chơi, khi quay về thì bị lạc đường. Gặp cô hươu, dê hỏi:\n– Cô kia, về làng đi lối nào?\n– Không biết. – Hươu lắc đầu, bỏ đi.\n\nĐi tiếp, tới một con sông, thấy anh hà mã, dê nói to:\n– Bọn tôi muốn về làng, hãy đưa bọn tôi qua sông!\n\nHà mã phật ý, định bỏ đi. Thấy vậy, cún nói:\n– Chào anh hà mã, anh giúp bọn em qua sông được không ạ?",
+        "– Được chứ! Em ngoan quá! – Hà mã vui vẻ nói.\n– Cảm ơn anh! – Cún đáp rồi quay sang nói nhỏ với dê:\n– Cậu quên lời cô dặn rồi à? Muốn ai đó giúp, phải hỏi một cách lịch sự, còn khi họ giúp mình, phải nói “cảm ơn”.\n\nDê con hơi xấu hổ. Sang bên kia sông, dê nói với hà mã:\n– Cảm ơn anh đã giúp. Em biết mình sai rồi. Em xin lỗi ạ!\n\nHà mã mỉm cười:\n– Em biết lỗi là tốt rồi. Giờ các em cứ đi theo đường này là về làng thôi."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5362,11 +5260,8 @@
       "author": "Theo Truyện cổ Việt Nam",
       "genre": "story",
       "content": [
-        "Ngày xưa, có một người tên là Mai An Tiêm được Vua Hùng yêu mến nhận làm con nuôi. Một lần, vì hiểu lầm lời nói của An Tiêm nên nhà vua nổi giận, đày An Tiêm ra đảo hoang.",
-        "Ở đảo hoang, hai vợ chồng An Tiêm dựng nhà bằng tre nứa, lấy cỏ phơi khô tết thành quần áo.",
-        "Một hôm, An Tiêm thấy một đàn chim bay qua thả xuống loại hạt đen nhánh. Chàng bèn nhặt và gieo xuống cát, thầm nghĩ: “Thứ quả này chim ăn được thì người cũng ăn được”. Rồi hạt nảy mầm, mọc ra một loại cây dây bò lan rộng. Cây ra hoa rồi ra quả. Quả có vỏ màu xanh thẫm, ruột đỏ, hạt đen nhánh, có vị ngọt và mát. Vợ chồng An Tiêm đem hạt gieo trồng khắp đảo.",
-        "Mùa quả chín, nhớ vua cha, An Tiêm khắc tên mình vào quả, thả xuống biển, nhờ sóng đưa vào đất liền. Một người dân vớt được quả lạ đem dâng vua. Vua hối hận cho đón vợ chồng An Tiêm trở về.",
-        "Thứ quả lạ đó là giống dưa hấu ngày nay."
+        "Ngày xưa, có một người tên là Mai An Tiêm được Vua Hùng yêu mến nhận làm con nuôi. Một lần, vì hiểu lầm lời nói của An Tiêm nên nhà vua nổi giận, đày An Tiêm ra đảo hoang.\n\nỞ đảo hoang, hai vợ chồng An Tiêm dựng nhà bằng tre nứa, lấy cỏ phơi khô kết thành quần áo.\n\nMột hôm, An Tiêm thấy một đàn chim bay qua thả xuống loại hạt đen nhánh. Chàng bèn nhặt và gieo xuống cát, thầm nghĩ: “Thứ quả này chim ăn được thì người cũng ăn được”. Rồi hạt nảy mầm, vươn thành một loại cây dây bò lan rộng. Cây ra hoa rồi ra quả. Quả có vỏ màu xanh thẫm, ruột đỏ, hạt đen nhánh, có vị ngọt và mát. Vợ chồng An Tiêm đem hạt gieo trồng khắp đảo.",
+        "Mùa quả chín, nhớ vua cha, An Tiêm khắc tên mình vào quả, thả xuống biển, nhờ sóng đưa vào đất liền. Một người dân vớt được quả lạ đem dâng vua. Vua hối hận cho đón vợ chồng An Tiêm trở về.\n\nThứ quả lạ đó là giống dưa hấu ngày nay."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5389,12 +5284,7 @@
       "author": "Xuân Quỳnh",
       "genre": "poem",
       "content": [
-        "Bây giờ sắp Tết rồi",
-        "Con viết thư gửi bố (...)",
-        "Tết con muốn gửi bố",
-        "Cái bánh chưng cho vui",
-        "Nhưng bánh thì to quá",
-        "Mà hòm thư nhỏ thôi.",
+        "Bây giờ sắp Tết rồi\nCon viết thư gửi bố (...)\n\nTết con muốn gửi bố\nCái bánh chưng cho vui\nNhưng bánh thì to quá\nMà hòm thư nhỏ thôi.",
         "Gửi hoa lại sợ héo",
         "Đường ra đảo xa xôi",
         "Con viết thư gửi vậy",
@@ -5430,16 +5320,8 @@
       "author": "Theo Nguyễn Huy Tưởng",
       "genre": "prose",
       "content": [
-        "Giặc Nguyên cho sứ thần sang giả vờ mượn đường để xâm chiếm nước ta. Thấy sứ giặc ngang ngược, Trần Quốc Toản vô cùng căm giận.",
-        "Biết vua họp bàn việc nước dưới thuyền rồng, Quốc Toản muốn được gặp để xin vua quyết đánh. Đợi mãi không gặp được vua, cậu liều chết xô mấy người lính gác, xăm xăm xuống bến.",
-        "Gặp vua, Quốc Toản quỳ xuống tâu:",
-        "– Cho giặc mượn đường là mất nước. Xin bệ hạ cho đánh!",
-        "Nói xong, cậu tự đặt thanh gươm lên gáy, xin chịu tội.",
-        "Vua cho Quốc Toản đứng dậy, ôn tồn bảo:",
-        "– Quốc Toản làm trái phép nước, lẽ ra phải trị tội. Nhưng còn trẻ mà đã biết lo việc nước, ta có lời khen.",
-        "Nói rồi, vua ban cho Quốc Toản một quả cam.",
-        "Quốc Toản ấm ức bước lên bờ: \"Vua ban cho cam quý nhưng xem ta như trẻ con, không cho dự bàn việc nước\". Nghĩ đến quân giặc ngang ngược, cậu nghiến răng, hai bàn tay bóp chặt.",
-        "Khi trở ra, Quốc Toản xoè tay cho mọi người xem cam quý. Nhưng quả cam đã nát từ bao giờ."
+        "Giặc Nguyên cho sứ thần sang giả vờ mượn đường để xâm chiếm nước ta. Thấy sứ giặc ngang ngược, Trần Quốc Toản vô cùng căm giận.\n\nBiết vua họp bàn việc nước dưới thuyền rồng, Quốc Toản muốn được gặp để xin vua quyết đánh. Đợi mãi không gặp được vua, cậu liều chết xô mấy người lính gác, xăm xăm xuống bến.\n\nGặp vua, Quốc Toản quỳ xuống tâu:\n– Cho giặc mượn đường là mất nước. Xin bệ hạ cho đánh!\nNói xong, cậu tự đặt thanh gươm lên gáy, xin chịu tội.",
+        "Vua cho Quốc Toản đứng dậy, ôn tồn bảo:\n– Quốc Toản làm trái phép nước, lẽ ra phải trị tội. Nhưng còn trẻ mà đã biết lo việc nước, ta có lời khen.\n\nNói rồi, vua ban cho Quốc Toản một quả cam.\n\nQuốc Toản ấm ức bước lên bờ: “Vua ban cho cam quý nhưng xem ta như trẻ con, không cho dự bàn việc nước.” Nghĩ đến quân giặc ngang ngược, cậu nghiến răng, hai bàn tay bóp chặt.\n\nKhi trở ra, Quốc Toản xoè tay cho mọi người xem cam quý. Nhưng quả cam đã nát từ bao giờ."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5463,15 +5345,8 @@
       "author": "Theo Mỗi câu chuyện nhỏ một bài học lớn",
       "genre": "prose",
       "content": [
-        "Một sớm hôm ấy, như thường lệ, Bác Hồ đi dạo trong vườn. Đến gần cây đa, Bác chợt thấy một chiếc rễ đa nhỏ và dài ngoằn ngoèo trên mặt đất. Chắc là trận gió đêm qua đã làm nó rơi xuống. Bác tần ngần một lát, rồi nói với chú cần vụ:",
-        "– Chú cuốn chiếc rễ này lại, rồi trồng cho nó mọc tiếp nhé!",
-        "– Chú nên làm thế này.",
-        "Nói rồi, Bác cuộn chiếc rễ thành một vòng tròn, cùng chú cần vụ buộc nó tựa vào hai cái cọc, sau đó mới vùi hai đầu rễ xuống đất.",
-        "Chú cần vụ thắc mắc:",
-        "– Thưa Bác, Bác làm thế để làm gì ạ?",
-        "Bác khẽ cười:",
-        "– Rồi chú sẽ biết.",
-        "Nhiều năm sau, chiếc rễ đã lớn và thành cây đa con có vòng lá tròn. Thiếu nhi vào thăm vườn Bác, em nào cũng thích chơi trò chui qua chui lại vòng lá ấy. Lúc đó, mọi người mới hiểu vì sao Bác cho trồng chiếc rễ đa thành hình tròn như thế."
+        "Một sớm hôm ấy, như thường lệ, Bác Hồ đi dạo trong vườn. Đến gần cây đa, Bác chợt thấy một chiếc rễ đa nhỏ và dài ngoằn ngoèo trên mặt đất. Chắc là trận gió đêm qua đã làm nó rơi xuống. Bác tần ngần một lát, rồi nói với chú cần vụ:\n– Chú cuốn chiếc rễ này lại, rồi trồng cho nó mọc tiếp nhé!\nTheo lời Bác, chú cần vụ xới đất, vùi chiếc rễ xuống. Thấy vậy, Bác ân cần bảo:\n– Chú nên làm thế này.",
+        "Nói rồi, Bác cuộn chiếc rễ thành một vòng tròn, cùng chú cần vụ buộc nó tựa vào hai cái cọc, sau đó mới vùi hai đầu rễ xuống đất.\n\nChú cần vụ thắc mắc:\n– Thưa Bác, Bác làm thế để làm gì ạ?\nBác khẽ cười:\n– Rồi chú sẽ biết.\n\nNhiều năm sau, chiếc rễ đã lớn và thành cây đa con có vòng lá tròn. Thiếu nhi vào thăm vườn Bác, em nào cũng thích chơi trò chui qua chui lại vòng lá ấy. Lúc đó, mọi người mới hiểu vì sao Bác cho trồng chiếc rễ đa thành hình tròn như thế."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5494,10 +5369,8 @@
       "author": "Trung Sơn",
       "genre": "prose",
       "content": [
-        "Việt Nam là đất nước tươi đẹp của chúng mình. Thủ đô nước mình là Hà Nội. Lá cờ Tổ quốc hình chữ nhật, nền đỏ, ở giữa có ngôi sao vàng năm cánh.",
-        "Việt Nam có những vị anh hùng có công lớn với đất nước như Hai Bà Trưng, Bà Triệu, Trần Hưng Đạo, Quang Trung, Hồ Chí Minh,... Những con người ấy đã làm rạng danh lịch sử nước nhà.",
-        "Đất nước mình có ba miền Bắc, Trung, Nam với khí hậu khác nhau. Miền Bắc một năm có bốn mùa: xuân, hạ, thu, đông. Miền Nam có hai mùa: mùa mưa và mùa khô. Miền Trung có nơi giống miền Bắc, có nơi giống miền Nam.",
-        "Trang phục truyền thống của người Việt Nam là áo dài. Áo dài thường được mặc trong dịp Tết hoặc lễ hội."
+        "Việt Nam là đất nước tươi đẹp của chúng mình. Thủ đô nước mình là Hà Nội. Lá cờ Tổ quốc hình chữ nhật, nền đỏ, ở giữa có ngôi sao vàng năm cánh.\n\nViệt Nam có những vị anh hùng có công lớn với đất nước như Hai Bà Trưng, Bà Triệu, Trần Hưng Đạo, Quang Trung, Hồ Chí Minh,... Những con người ấy đã làm rạng danh lịch sử nước nhà.",
+        "Đất nước mình có ba miền Bắc, Trung, Nam với khí hậu khác nhau. Miền Bắc một năm có bốn mùa: xuân, hạ, thu, đông. Miền Nam có hai mùa: mùa mưa và mùa khô. Miền Trung có nơi giống miền Bắc, có nơi giống miền Nam.\n\nTrang phục truyền thống của người Việt Nam là áo dài. Áo dài thường được mặc trong dịp Tết hoặc lễ hội."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5520,17 +5393,8 @@
       "author": "Thuỳ Dương tổng hợp",
       "genre": "prose",
       "content": [
-        "Đất nước Việt Nam thật tươi đẹp. Hãy cùng nhau đi thăm các miền đất nước qua những câu ca dao.",
-        "Đầu tiên, chúng ta sẽ đến Phú Thọ, miền Bắc nước ta, nơi có đền thờ Vua Hùng, nơi được gọi là “quê cha đất tổ”.",
-        "Dù ai đi ngược về xuôi",
-        "Nhớ ngày Giỗ Tổ mùng Mười tháng Ba.",
-        "Tiếp đến, chúng ta cùng vào miền Trung:",
-        "Đường vô xứ Huế quanh quanh",
-        "Non xanh nước biếc như tranh hoạ đồ.",
-        "Và chúng ta cùng khám phá miền đất Nam Bộ:",
-        "Đồng Tháp Mười cò bay thẳng cánh",
-        "Nước Tháp Mười lóng lánh cá tôm.",
-        "Vậy là chúng ta đã đi qua ba miền Bắc, Trung, Nam của đất nước. Nơi nào cũng để lại biết bao tình cảm mến thương."
+        "Đất nước Việt Nam thật tươi đẹp. Hãy cùng nhau đi thăm các miền đất nước qua những câu ca dao.\n\nĐầu tiên, chúng ta sẽ đến Phú Thọ, miền Bắc nước ta, nơi có đền thờ Vua Hùng, nơi được gọi là “quê cha đất tổ”.\n\nDù ai đi ngược về xuôi\nNhớ ngày Giỗ Tổ mùng Mười tháng Ba.\n\nTiếp đến, chúng ta cùng vào miền Trung:\n\nĐường vô xứ Nghệ quanh quanh\nNon xanh nước biếc như tranh hoạ đồ.",
+        "Và chúng ta cùng khám phá miền đất Nam Bộ:\n\nĐồng Tháp Mười cò bay thẳng cánh\nNước Tháp Mười lóng lánh cá tôm.\n\nVậy là chúng ta đã đi qua ba miền Bắc, Trung, Nam của đất nước. Nơi nào cũng để lại biết bao tình cảm mến thương."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5553,11 +5417,8 @@
       "author": "Theo Truyện cổ Khơ Mú",
       "genre": "story",
       "content": [
-        "Ngày xưa có vợ chồng nọ đi rừng, bắt được một con dúi. Dúi xin tha, họ thương tình tha cho nó.",
-        "Để trả ơn, dúi báo sắp có lũ lụt rất lớn và chỉ cho họ cách tránh. Họ nói với bà con nhưng chẳng ai tin. Nghe lời dúi, họ khoét rỗng khúc gỗ to, chuẩn bị thức ăn bỏ vào đó. Vừa chuẩn bị xong mọi thứ thì mưa to, gió lớn, nước ngập mênh mông. Muôn loài chìm trong biển nước. Nhờ sống trong khúc gỗ nổi, vợ chồng nhà nọ thoát nạn.",
-        "Ít lâu sau, người vợ sinh ra một quả bầu.",
-        "Một hôm, đi làm nương về, họ nghe tiếng cười đùa từ gác bếp để quả bầu. Thấy lạ, họ lấy quả bầu xuống, áp tai nghe thì có tiếng lao xao. Người vợ bèn lấy que dùi quả bầu. Lạ thay, từ trong quả bầu, những con người bé nhỏ bước ra. Người Khơ Mú ra trước. Tiếp đến, người Thái, người Mường, người Dao, người Mông, người Ê-đê, người Ba-na, người Kinh,... lần lượt ra theo.",
-        "Đó là tổ tiên của các dân tộc anh em trên đất nước ta ngày nay."
+        "Ngày xưa có vợ chồng nọ đi rừng, bắt được một con dúi. Dúi xin tha, họ thương tình tha cho nó.\n\nĐể trả ơn, dúi báo sắp có lũ lụt rất lớn và chỉ cho họ cách tránh. Họ nói với bà con nhưng chẳng ai tin. Nghe lời dúi, họ khoét rỗng khúc gỗ to, chuẩn bị thức ăn bỏ vào đó. Vừa chuẩn bị xong mọi thứ thì mưa to, gió lớn, nước ngập mênh mông. Muôn loài chìm trong biển nước. Nhờ sống trong khúc gỗ nổi, vợ chồng nhà nọ thoát nạn.",
+        "Ít lâu sau, người vợ sinh ra một quả bầu.\n\nMột hôm, đi làm nương về, họ nghe tiếng cười đùa từ gác bếp để quả bầu. Thấy lạ, họ lấy quả bầu xuống, áp tai nghe thì có tiếng lao xao. Người vợ bèn lấy que dùi quả bầu. Lạ thay, từ trong quả bầu, những con người bé nhỏ bước ra. Người Khơ Mú ra trước. Tiếp đến, người Thái, người Mường, người Dao, người Mông, người Ê-đê, người Ba-na, người Kinh,... lần lượt ra theo.\n\nĐó là tổ tiên của các dân tộc anh em trên đất nước ta ngày nay."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5580,9 +5441,7 @@
       "author": "Theo Nguyễn Xuân Thuỷ",
       "genre": "prose",
       "content": [
-        "Nhắc đến Trường Sa, ngoài các đảo, người ta nhắc đến biển. Mà biển thì có muôn vàn điều kì thú. Thám hiểm đáy biển ở Trường Sa của nước ta sẽ thấy bao điều thú vị.",
-        "Biển ở Trường Sa có những loài cá đẹp rực rỡ và lạ mắt. Từng đàn cá đủ màu sắc, dày đặc đến hàng trăm con tạo nên một tấm thảm hoa di động. Những vỉa san hô chạy dài từ chân mỗi đảo xuống sâu dần dưới đáy biển. San hô làm cho đáy biển trông như một bức tranh khổng lồ, đẹp như những toà lâu đài trong truyện cổ tích.",
-        "Trường Sa là vùng biển thân yêu của Tổ quốc, có cảnh đẹp kì thú và hàng nghìn loài vật sống dưới biển."
+        "Nhắc đến Trường Sa, ngoài các đảo, người ta nhắc đến biển. Mà biển thì có muôn vàn điều kì thú. Thám hiểm đáy biển ở Trường Sa của nước ta sẽ thấy bao điều thú vị.\n\nBiển ở Trường Sa có những loài cá đẹp rực rỡ và lạ mắt. Từng đàn cá đủ màu sắc, dày đặc đến hàng trăm con tạo nên một tấm thảm hoa di động. Những vỉa san hô chạy dài từ chân mỗi đảo xuống sâu dần dưới đáy biển. San hô làm cho đáy biển trông như một bức tranh khổng lồ, đẹp như những toà lâu đài trong truyện cổ tích.\n\nTrường Sa là vùng biển thân yêu của Tổ quốc, có cảnh đẹp kì thú và hàng nghìn loài vật sống dưới biển."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5605,9 +5464,7 @@
       "author": "Theo Ngô Quân Miện",
       "genre": "prose",
       "content": [
-        "Nhà tôi ở Hà Nội, cách Hồ Gươm không xa. Từ trên cao nhìn xuống, mặt hồ như một chiếc gương bầu dục lớn, sáng long lanh.",
-        "Cầu Thê Húc màu son, cong cong như con tôm, dẫn vào đền Ngọc Sơn. Mái đền lấp ló bên gốc đa già, rễ lá xum xuê. Xa một chút là Tháp Rùa, tường rêu cổ kính. Tháp xây trên gò đất giữa hồ, cỏ mọc xanh um.",
-        "Có buổi, người ta thấy có con rùa lớn, đầu to như trái bưởi, nhô lên khỏi mặt nước. Rùa như lắng nghe tiếng chuông đồng hồ trên tầng cao nhà bưu điện, buông từng tiếng ngân nga trong gió. Tôi thầm nghĩ: không biết có phải rùa đã từng ngậm thanh kiếm của vua Lê thắng giặc đó không?"
+        "Nhà tôi ở Hà Nội, cách Hồ Gươm không xa. Từ trên cao nhìn xuống, mặt hồ như một chiếc gương bầu dục lớn, sáng long lanh.\n\nCầu Thê Húc màu son, cong cong như con tôm, dẫn vào đền Ngọc Sơn. Mái đền lấp ló bên gốc đa già, rễ lá xum xuê. Xa một chút là Tháp Rùa, tường rêu cổ kính. Tháp xây trên gò đất giữa hồ, cỏ mọc xanh um.\n\nCó buổi, người ta thấy có con rùa lớn, đầu to như trái bưởi, nhô lên khỏi mặt nước. Rùa như lắng nghe tiếng chuông đồng hồ trên tầng cao nhà bưu điện, buông từng tiếng ngân nga trong gió. Tôi thầm nghĩ: không biết có phải rùa đã từng ngậm thanh kiếm của vua Lê thắng giặc đó không?"
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",
@@ -5630,10 +5487,7 @@
       "author": "Bùi Minh Huế",
       "genre": "poem",
       "content": [
-        "Bé theo mẹ ra đồng\nVầng dương lên rực đỏ\nMuôn vàn kim cương nhỏ\nLấp lánh ngọn cỏ hoa.",
-        "Nắng ban mai hiền hoà\nTung lụa tơ vàng óng\nTrải lên muôn con sóng\nDập dờn đồng lúa xanh.",
-        "Đàn chiền chiện bay quanh\nHót tích ri tích rích\nLũ châu chấu tinh nghịch\nĐu cỏ uống sương rơi.",
-        "Sóng xanh cuộn chân trời\nCánh đồng như tranh vẽ\nBé ngân nga hát khẽ\nTrong hương lúa mênh mông."
+        "Bé theo mẹ ra đồng\nVầng dương lên rực đỏ\nMuôn vàn kim cương nhỏ\nLấp lánh ngọn cỏ hoa.\n\nNắng ban mai hiền hoà\nTung lụa tơ vàng óng\nTrải lên muôn con sóng\nDập dờn đồng lúa xanh.\n\nĐàn chiền chiện bay quanh\nHót tích ri tích rích\nLũ châu chấu tinh nghịch\nĐu cỏ uống sương rơi.\n\nSóng xanh cuộn chân trời\nCánh đồng như tranh vẽ\nBé ngân nga hát khẽ\nTrong hương lúa mênh mông."
       ],
       "contentOrigin": "sgk_reference",
       "verificationStatus": "verified",

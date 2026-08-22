@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
   Star,
@@ -18,6 +18,11 @@ import { CuteButton } from '../ui/CuteButton';
 import { Modal } from '../ui/Modal';
 import { soundManager } from '../../utils/audio';
 import { getLessonCardContent, getLessonSemester, isLessonInSemester } from '../../utils/lessonCard';
+import {
+  getNextLessonLimit,
+  LESSON_BATCH_SIZE,
+  takeLessonGroupsBatch,
+} from '../../utils/lessonListPerformance';
 
 interface AdventureMapProps {
   currentGrade: GradeLevel;
@@ -38,6 +43,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
   const [selectedSemester, setSelectedSemester] = useState<0 | 1 | 2>(0); // 0: Cả năm, 1: Tập 1, 2: Tập 2
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid'); // 'grid' (Lưới 3 cột) hoặc 'map' (Bản đồ)
   const [activeUnitFilter, setActiveUnitFilter] = useState<string>('all');
+  const [visibleLessonLimit, setVisibleLessonLimit] = useState(LESSON_BATCH_SIZE);
 
   const subject = SUBJECTS_CONFIG[selectedSubject] || SUBJECTS_CONFIG.math;
 
@@ -90,6 +96,21 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
     return groupedUnits.filter((g) => g.unitTitle === activeUnitFilter);
   }, [groupedUnits, activeUnitFilter]);
 
+  const totalDisplayedLessons = useMemo(
+    () => displayedUnits.reduce((total, group) => total + group.lessons.length, 0),
+    [displayedUnits]
+  );
+  const visibleUnits = useMemo(
+    () => takeLessonGroupsBatch(displayedUnits, visibleLessonLimit),
+    [displayedUnits, visibleLessonLimit]
+  );
+  const visibleLessonCount = Math.min(visibleLessonLimit, totalDisplayedLessons);
+  const hasMoreLessons = visibleLessonCount < totalDisplayedLessons;
+
+  useEffect(() => {
+    setVisibleLessonLimit(LESSON_BATCH_SIZE);
+  }, [currentGrade, selectedSubject, selectedSemester, activeUnitFilter, viewMode]);
+
   const handleNodeClick = (lesson: LessonNode) => {
     soundManager.playPop();
     if (!lesson.isLocked) {
@@ -99,7 +120,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
 
   const scrollToUnit = (unitTitle: string) => {
     soundManager.playPop();
-    setActiveUnitFilter('all');
+    setActiveUnitFilter(unitTitle);
     setTimeout(() => {
       const element = document.getElementById(`unit-section-${unitTitle.replace(/\s+/g, '-')}`);
       if (element) {
@@ -130,7 +151,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
     <div className="relative min-h-[calc(100vh-5rem)] pb-24 pt-4 sm:pt-6">
       <div className="mx-auto max-w-[1520px] px-3 sm:px-6 lg:px-8">
         {/* ================= TOP NAVIGATION & CONTROLS ================= */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-200/80 bg-white/70 backdrop-blur-md p-4 sm:p-5 rounded-3xl shadow-xs">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-200/80 bg-white/90 backdrop-blur-none p-4 sm:p-5 rounded-3xl shadow-xs xl:bg-white/70 xl:backdrop-blur-md">
           {/* Title & Subject Info */}
           <div className="flex items-center gap-3">
             <button
@@ -218,7 +239,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
           {/* ================= LEFT COLUMN: MASCOT, MỤC LỤC, BỘ LỌC & THI ĐUA ================= */}
           <aside className="hidden lg:block w-80 xl:w-[340px] shrink-0 sticky top-20 max-h-[calc(100vh-5.5rem)] overflow-y-auto pr-1 pb-10 space-y-4 custom-scrollbar">
             {/* Mascot Buddy Interaction Box */}
-            <div className="rounded-3xl bg-white/95 p-4 sm:p-5 shadow-washi backdrop-blur-md text-center relative overflow-hidden border border-slate-200/70">
+            <div className="rounded-3xl bg-white/95 p-4 sm:p-5 shadow-washi backdrop-blur-none xl:backdrop-blur-md text-center relative overflow-hidden border border-slate-200/70">
               <div className="relative mx-auto h-28 w-28 rounded-3xl p-1 bg-amber-50 shadow-xs mb-3 group">
                 <img
                   src={mascotImg}
@@ -238,7 +259,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             </div>
 
             {/* Semester Filter Pill Card */}
-            <div className="rounded-3xl bg-white p-4 sm:p-5 shadow-washi backdrop-blur-md border border-slate-200/70">
+            <div className="rounded-3xl bg-white p-4 sm:p-5 shadow-washi backdrop-blur-none xl:backdrop-blur-md border border-slate-200/70">
               <h3 className="font-baloo font-black text-base text-brand-dark flex items-center gap-2 mb-3">
                 <BookOpen size={18} className="text-amber-500" />
                 <span>Chọn học kỳ</span>
@@ -269,7 +290,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             </div>
 
             {/* Quick Chapter Jump Table of Contents */}
-            <div className="rounded-3xl bg-white p-4 sm:p-5 shadow-washi backdrop-blur-md border border-slate-200/70">
+            <div className="rounded-3xl bg-white p-4 sm:p-5 shadow-washi backdrop-blur-none xl:backdrop-blur-md border border-slate-200/70">
               <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
                 <h3 className="font-baloo font-black text-base text-brand-dark flex items-center gap-2">
                   <Sparkles size={18} className="text-emerald-500" />
@@ -303,7 +324,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             </div>
 
             {/* Daily Quest Card */}
-            <div className="rounded-3xl bg-white/95 p-4 sm:p-5 shadow-washi backdrop-blur-md border border-slate-200/70">
+            <div className="rounded-3xl bg-white/95 p-4 sm:p-5 shadow-washi backdrop-blur-none xl:backdrop-blur-md border border-slate-200/70">
               <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
                 <h4 className="font-baloo font-black text-base text-brand-dark flex items-center gap-2">
                   <Gift size={18} className="text-rose-500" />
@@ -326,7 +347,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             </div>
 
             {/* Class Leaderboard Widget */}
-            <div className="rounded-3xl bg-white/95 p-4 sm:p-5 shadow-washi backdrop-blur-md border border-slate-200/70">
+            <div className="rounded-3xl bg-white/95 p-4 sm:p-5 shadow-washi backdrop-blur-none xl:backdrop-blur-md border border-slate-200/70">
               <h4 className="font-baloo font-black text-base text-brand-dark flex items-center gap-2 mb-3 pb-2 border-b border-slate-100">
                 <Award size={18} className="text-amber-500" />
                 <span>Bảng Vàng Lớp {currentGrade}</span>
@@ -380,11 +401,11 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             {/* ================= CHẾ ĐỘ 1: LƯỚI THẺ BÀI HỌC (EXPANDED GRID VIEW) ================= */}
             {viewMode === 'grid' && (
               <div className="space-y-8">
-                {displayedUnits.map((group, groupIdx) => (
+                {visibleUnits.map((group, groupIdx) => (
                   <div
                     key={groupIdx}
                     id={`unit-section-${group.unitTitle.replace(/\s+/g, '-')}`}
-                    className="rounded-4xl bg-[#fffdf9]/95 p-5 sm:p-7 shadow-washi backdrop-blur-md border border-amber-100/50 transition-all"
+                    className="rounded-4xl bg-[#fffdf9]/95 p-5 sm:p-7 shadow-washi backdrop-blur-none xl:backdrop-blur-md border border-amber-100/50 transition-all"
                   >
                     {/* Unit Chapter Header Banner */}
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-amber-100/60 pb-4 mb-5">
@@ -402,7 +423,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                         </div>
                       </div>
                       <span className="rounded-full bg-slate-100 px-3 py-1 font-baloo font-bold text-xs text-slate-600 border border-slate-200/60">
-                        {group.lessons.length} Bài học
+                        {displayedUnits.find((item) => item.unitTitle === group.unitTitle)?.lessons.length || group.lessons.length} Bài học
                       </span>
                     </div>
 
@@ -413,12 +434,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                         const card = getLessonCardContent(lesson);
 
                         return (
-                          <motion.div
+                          <div
                             key={lesson.id}
-                            whileHover={{ y: -4 }}
-                            whileTap={{ scale: 0.98 }}
                             onClick={() => handleNodeClick(lesson)}
-                            className={`group relative flex min-h-[286px] flex-col justify-between rounded-3xl p-5 transition-all duration-300 cursor-pointer select-none ${
+                            className={`group relative flex min-h-[286px] flex-col justify-between rounded-3xl p-5 transition-[transform,box-shadow,border-color] duration-200 cursor-pointer select-none hover:-translate-y-1 active:scale-[0.98] [content-visibility:auto] [contain-intrinsic-size:286px] ${
                               isPassed
                                 ? 'bg-gradient-to-b from-amber-50/80 via-white to-white border border-amber-300/80 shadow-[0_4px_16px_rgba(245,158,11,0.08)] hover:border-amber-400 hover:shadow-[0_12px_24px_rgba(245,158,11,0.16)]'
                                 : 'bg-white border border-slate-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:border-emerald-400 hover:shadow-[0_12px_24px_rgba(16,185,129,0.14)]'
@@ -427,10 +446,13 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                             {/* Top Badge: Textbook Page Reference & Star Reward */}
                             <div>
                               <div className="flex items-center justify-between gap-2 mb-3">
-                                <span className="inline-flex items-center gap-1.5 rounded-xl bg-slate-100 px-3 py-1 font-vietnam text-xs font-bold text-slate-700 whitespace-nowrap border border-slate-200/50">
+                                <span
+                                  className="inline-flex min-w-0 items-center gap-1.5 truncate rounded-xl bg-slate-100 px-3 py-1 font-vietnam text-xs font-bold text-slate-700 whitespace-nowrap border border-slate-200/50"
+                                  title={card.badge}
+                                >
                                   {card.badge}
                                 </span>
-                                <div className="inline-flex items-center text-amber-950 bg-amber-50 px-2.5 py-1 rounded-xl text-xs font-baloo font-black whitespace-nowrap border border-amber-200/70 shadow-2xs">
+                                <div className="inline-flex shrink-0 items-center text-amber-950 bg-amber-50 px-2.5 py-1 rounded-xl text-xs font-baloo font-black whitespace-nowrap border border-amber-200/70 shadow-2xs">
                                   <span>+{lesson.starReward} ⭐</span>
                                 </div>
                               </div>
@@ -472,7 +494,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                                 <span className="whitespace-nowrap">{isPassed ? 'Học lại' : 'Vào học'}</span>
                               </div>
                             </div>
-                          </motion.div>
+                          </div>
                         );
                       })}
                     </div>
@@ -484,12 +506,12 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             {/* ================= CHẾ ĐỘ 2: BẢN ĐỒ ĐẢO PHIÊU LƯU UỐN LƯỢN CHUẨN DUOLINGO / MARIO ISLAND ================= */}
             {viewMode === 'map' && (
               <div className="space-y-12 py-2">
-                {displayedUnits.map((group, groupIdx) => {
+                {visibleUnits.map((group, groupIdx) => {
                   return (
                     <div
                       key={groupIdx}
                       id={`unit-section-${group.unitTitle.replace(/\s+/g, '-')}`}
-                      className="relative rounded-4xl border-3 border-white bg-white/80 p-6 sm:p-10 shadow-washi backdrop-blur-md overflow-hidden"
+                      className="relative rounded-4xl border-3 border-white bg-white/95 p-6 sm:p-10 shadow-washi backdrop-blur-none xl:bg-white/80 xl:backdrop-blur-md overflow-hidden"
                     >
                       {/* Chapter Island Header Banner */}
                       <div
@@ -613,7 +635,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                                           : 'border-slate-200 bg-white/85 text-slate-500'
                                       }`}
                                   >
-                                    <div className="flex items-center justify-center gap-1.5 text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md mb-1 mx-auto w-fit whitespace-nowrap">
+                                    <div className="mx-auto mb-1 flex min-w-0 max-w-full items-center justify-center gap-1.5 overflow-hidden text-ellipsis whitespace-nowrap rounded-md bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800" title={card.badge}>
                                       {card.badge}
                                     </div>
                                     <h4
@@ -657,6 +679,25 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
                     </div>
                   );
                 })}
+              </div>
+            )}
+
+            {hasMoreLessons && (
+              <div className="mt-6 flex flex-col items-center gap-2 pb-4 text-center">
+                <p className="font-baloo text-sm font-bold text-slate-600" aria-live="polite">
+                  Đang hiển thị {visibleLessonCount}/{totalDisplayedLessons} bài
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    soundManager.playPop();
+                    setVisibleLessonLimit((current) => getNextLessonLimit(current, totalDisplayedLessons));
+                  }}
+                  className="flex min-h-12 min-w-48 items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-emerald-500 px-6 py-3 font-baloo text-base font-black text-white shadow-[0_4px_0_#047857] transition-transform active:translate-y-1 active:shadow-none"
+                >
+                  <Sparkles size={18} />
+                  Xem thêm {Math.min(LESSON_BATCH_SIZE, totalDisplayedLessons - visibleLessonCount)} bài
+                </button>
               </div>
             )}
           </main>

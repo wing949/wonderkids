@@ -1,4 +1,5 @@
 import { build } from 'esbuild';
+import { createHash } from 'node:crypto';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -21,9 +22,16 @@ function serializeJson(value) {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
 
+function sha256(value) {
+  return createHash('sha256').update(value).digest('hex');
+}
+
 try {
   await build({
-    entryPoints: ['src/data/curriculum/index.ts'],
+    entryPoints: {
+      curriculum: 'src/data/curriculum/index.ts',
+      narration: 'src/utils/lessonNarration.ts',
+    },
     bundle: true,
     format: 'esm',
     platform: 'node',
@@ -34,12 +42,15 @@ try {
   });
 
   const { getLessonsForGradeAndSubject } = await import(
-    pathToFileURL(join(outputDir, 'index.js')).href
+    pathToFileURL(join(outputDir, 'curriculum.js')).href
+  );
+  const { buildLessonNarration } = await import(
+    pathToFileURL(join(outputDir, 'narration.js')).href
   );
   const runtimeLessons = new Map(
     [1, 2, 3, 4, 5]
       .flatMap((grade) => getLessonsForGradeAndSubject(grade, 'vietnamese'))
-      .map((lesson) => [lesson.id, lesson]),
+      .map((lesson) => [lesson.id.replace('-l', '-b'), lesson]),
   );
   const tasks = JSON.parse(await readFile(tasksPath, 'utf8'));
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
@@ -52,60 +63,63 @@ try {
   const taskChanges = [];
   const manifestChanges = [];
   const taskIds = tasks.map((task) => task.lessonId);
-  const manifestIds = Object.keys(manifest);
   const uniqueTaskIds = new Set(taskIds);
-  const uniqueManifestIds = new Set(manifestIds);
+  const rebuiltManifest = {};
 
   if (tasks.length !== 293) {
     errors.push(`danh sách sinh audio có ${tasks.length} bài, yêu cầu đúng 293 bài`);
   }
-  if (manifestIds.length !== 293) {
-    errors.push(`manifest audio có ${manifestIds.length} bài, yêu cầu đúng 293 bài`);
-  }
   if (uniqueTaskIds.size !== taskIds.length) {
     errors.push('danh sách sinh audio có lessonId bị trùng');
   }
-  const missingFromManifest = [...uniqueTaskIds].filter((lessonId) => !uniqueManifestIds.has(lessonId));
-  const missingFromTasks = [...uniqueManifestIds].filter((lessonId) => !uniqueTaskIds.has(lessonId));
-  if (missingFromManifest.length > 0 || missingFromTasks.length > 0) {
-    errors.push(
-      `task/manifest không cùng tập lessonId (thiếu ở manifest: ${missingFromManifest.join(', ') || '0'}; thiếu ở task: ${missingFromTasks.join(', ') || '0'})`,
-    );
-  }
-
-  function getRuntimePages(lessonId) {
+  function getRuntimeLesson(lessonId) {
     const lesson = runtimeLessons.get(lessonId);
-    const pages = lesson?.readingPassage?.sourcePages;
     if (!lesson) {
       errors.push(`${lessonId}: không tồn tại trong chương trình runtime`);
       return null;
     }
+    const pages = lesson.readingPassage?.sourcePages;
     if (!Array.isArray(pages) || pages.length === 0 || pages.some((page) => !Number.isInteger(page) || page < 1)) {
       errors.push(`${lessonId}: transcript runtime không có sourcePages hợp lệ`);
       return null;
     }
-    return [...pages];
+    return lesson;
   }
 
   for (const task of tasks) {
-    const pages = getRuntimePages(task.lessonId);
-    if (!pages) continue;
+    const lesson = getRuntimeLesson(task.lessonId);
+    if (!lesson) continue;
+    const pages = [...lesson.readingPassage.sourcePages];
+    const text = buildLessonNarration(lesson.readingPassage);
+    const textHash = sha256(text);
+    const changedFields = [];
     if (!samePages(task.sourcePages, pages)) {
-      taskChanges.push({ lessonId: task.lessonId, from: task.sourcePages, to: pages });
       task.sourcePages = pages;
+      changedFields.push('sourcePages');
     }
-  }
+    if (task.text !== text) {
+      task.text = text;
+      task.textLength = text.length;
+      changedFields.push('text');
+    }
+    if (task.textHash !== textHash) {
+      task.textHash = textHash;
+      changedFields.push('textHash');
+    }
+    if (changedFields.length > 0) taskChanges.push({ lessonId: task.lessonId, fields: changedFields });
 
-  for (const [manifestId, asset] of Object.entries(manifest)) {
-    if (asset.lessonId !== manifestId) {
-      errors.push(`${manifestId}: lessonId trong manifest là ${asset.lessonId || '(trống)'}`);
-      continue;
-    }
-    const pages = getRuntimePages(asset.lessonId);
-    if (!pages) continue;
-    if (!samePages(asset.sourcePages, pages)) {
-      manifestChanges.push({ lessonId: asset.lessonId, from: asset.sourcePages, to: pages });
-      asset.sourcePages = pages;
+    const previous = manifest[task.lessonId] || {};
+    const next = {
+      lessonId: task.lessonId,
+      primaryPath: `/audio/curriculum/${task.lessonId}.mp3`,
+      primaryVoice: 'Cô Giáo Vy',
+      transcriptHash: textHash,
+      lessonVersion: Math.max(1, Number(previous.lessonVersion || 1)),
+      sourcePages: pages,
+    };
+    rebuiltManifest[task.lessonId] = next;
+    if (JSON.stringify(previous) !== JSON.stringify(next)) {
+      manifestChanges.push({ lessonId: task.lessonId, fields: ['primary-only-manifest'] });
     }
   }
 
@@ -115,7 +129,7 @@ try {
 
   const result = {
     checkedTasks: tasks.length,
-    checkedManifestAssets: Object.keys(manifest).length,
+    checkedManifestAssets: Object.keys(rebuiltManifest).length,
     uniqueLessonIds: uniqueTaskIds.size,
     taskUpdates: taskChanges.length,
     manifestUpdates: manifestChanges.length,
@@ -131,7 +145,7 @@ try {
       await writeFile(tasksPath, serializeJson(tasks), 'utf8');
     }
     if (!checkOnly && manifestChanges.length > 0) {
-      await writeFile(manifestPath, serializeJson(manifest), 'utf8');
+      await writeFile(manifestPath, serializeJson(rebuiltManifest), 'utf8');
     }
     console.log(JSON.stringify(result, null, 2));
   }

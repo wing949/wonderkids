@@ -1,35 +1,113 @@
 import React, { Suspense, useRef, useState, useEffect } from 'react';
 import { GradeLevel, ThemeId, PortalView, SubjectType, MascotId, StudentProfile, LessonNode, DailyQuest, StarShopItem } from './types';
 import { INITIAL_DAILY_QUESTS } from './data/gamificationData';
-import { getLessonsForGradeAndSubject } from './data/curriculum';
 import { Header } from './components/layout/Header';
 import { BottomNav } from './components/layout/BottomNav';
 import { StudentDashboard } from './components/dashboard/StudentDashboard';
-import { AdventureMap } from './components/adventure/AdventureMap';
-import { InteractiveExerciseEngine } from './components/exercise/InteractiveExerciseEngine';
 import { VictoryModal } from './components/rewards/VictoryModal';
 import { ProfileModal } from './components/profile/ProfileModal';
 import { StarShopModal } from './components/profile/StarShopModal';
-import { ParentPortal } from './components/parent/ParentPortal';
 import { AdminLogin } from './components/admin/AdminLogin';
-import { QuizArena } from './components/arena/QuizArena';
 import { Modal } from './components/ui/Modal';
 import { CuteDoodleBackground } from './components/common/CuteDoodleBackground';
 import { checkAdminSession, logoutAdmin } from './utils/adminAccess';
 import { createAdminAuthRequestTracker } from './utils/adminAuthRequestTracker';
-import { AdminTab, AppRoute, findLessonById, getAppPath, parseAppRoute } from './utils/appRoute';
+import { AdminTab, AppRoute, getAppPath, parseAppRoute } from './utils/appRoute';
 import { isControlPanelRoute } from './utils/controlPanelRoute';
+import { loadCurriculumLesson, loadLessonsForGradeAndSubject } from './utils/curriculumLoader';
 
 const AdminCMS = React.lazy(async () => {
   const module = await import('./components/admin/AdminCMS');
   return { default: module.AdminCMS };
 });
 
+const AdventureMap = React.lazy(async () => {
+  const module = await import('./components/adventure/AdventureMap');
+  return { default: module.AdventureMap };
+});
+
+const InteractiveExerciseEngine = React.lazy(async () => {
+  const module = await import('./components/exercise/InteractiveExerciseEngine');
+  return { default: module.InteractiveExerciseEngine };
+});
+
+const ParentPortal = React.lazy(async () => {
+  const module = await import('./components/parent/ParentPortal');
+  return { default: module.ParentPortal };
+});
+
+const QuizArena = React.lazy(async () => {
+  const module = await import('./components/arena/QuizArena');
+  return { default: module.QuizArena };
+});
+
+const PortalLoading = () => (
+  <div className="mx-auto flex min-h-[50vh] max-w-xl items-center justify-center px-6 text-center font-baloo text-lg font-black text-brand-dark">
+    <span className="rounded-3xl bg-white/95 px-6 py-5 shadow-washi">Đang mở góc học tập… ✨</span>
+  </div>
+);
+
+const PortalLoadFailure: React.FC<{
+  message: string;
+  onRetry: () => void;
+  onBack: () => void;
+}> = ({ message, onRetry, onBack }) => (
+  <div className="mx-auto flex min-h-[50vh] max-w-xl items-center justify-center px-6 text-center">
+    <div className="w-full rounded-3xl bg-white/95 px-6 py-6 shadow-washi">
+      <div className="text-4xl" aria-hidden="true">🛟</div>
+      <h2 className="mt-2 font-baloo text-xl font-black text-brand-dark">Chưa mở được bài học</h2>
+      <p className="mt-2 font-vietnam text-sm font-semibold text-slate-600">{message}</p>
+      <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <button onClick={onBack} className="min-h-12 rounded-2xl bg-slate-100 px-4 font-baloo font-black text-slate-700">
+          Về danh sách bài
+        </button>
+        <button onClick={onRetry} className="min-h-12 rounded-2xl bg-emerald-500 px-4 font-baloo font-black text-white shadow-pop-sm">
+          Thử mở lại
+        </button>
+      </div>
+    </div>
+  </div>
+);
+
+class LazyLoadBoundary extends React.Component<React.PropsWithChildren, { hasError: boolean }> {
+  state = { hasError: false };
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: unknown) {
+    console.error('Failed to load a learning screen', error);
+  }
+
+  render() {
+    if (!this.state.hasError) return this.props.children;
+
+    return (
+      <div className="mx-auto flex min-h-[50vh] max-w-xl items-center justify-center px-6 text-center">
+        <div className="w-full rounded-3xl bg-white/95 px-6 py-6 shadow-washi">
+          <div className="text-4xl" aria-hidden="true">🔄</div>
+          <h2 className="mt-2 font-baloo text-xl font-black text-brand-dark">Mạng đang hơi chậm</h2>
+          <p className="mt-2 font-vietnam text-sm font-semibold text-slate-600">
+            Bé thử tải lại màn hình nhé. Kết quả học trước đó vẫn được giữ nguyên.
+          </p>
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <a href="/" className="flex min-h-12 items-center justify-center rounded-2xl bg-slate-100 px-4 font-baloo font-black text-slate-700">
+              Về trang chủ
+            </a>
+            <button onClick={() => window.location.reload()} className="min-h-12 rounded-2xl bg-emerald-500 px-4 font-baloo font-black text-white shadow-pop-sm">
+              Tải lại
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 const STORAGE_KEY_PROFILE = 'wonderkids_profile_v1';
 const STORAGE_KEY_GRADE = 'wonderkids_grade_v1';
 const STORAGE_KEY_THEME = 'wonderkids_theme_v1';
-const ROUTEABLE_SUBJECTS: SubjectType[] = ['math', 'vietnamese', 'english', 'logic'];
-const ROUTEABLE_GRADES: GradeLevel[] = [1, 2, 3, 4, 5];
 
 const INITIAL_PROFILE: StudentProfile = {
   name: 'Bé An Nhiên',
@@ -97,43 +175,32 @@ const getPortalForRoute = (route: AppRoute): PortalView => {
   }
 };
 
-const findCurriculumLesson = (lessonId: string): LessonNode | null => {
-  for (const subject of ROUTEABLE_SUBJECTS) {
-    for (const grade of ROUTEABLE_GRADES) {
-      const lesson = findLessonById(getLessonsForGradeAndSubject(grade, subject), lessonId);
-      if (lesson) return lesson;
-    }
-  }
-  return null;
-};
-
 export const App: React.FC = () => {
   const [initialRoute] = useState<AppRoute>(getInitialAppRoute);
-  const [initialLesson] = useState<LessonNode | null>(() => (
-    initialRoute.kind === 'exercise' ? findCurriculumLesson(initialRoute.lessonId) : null
-  ));
   const [profile, setProfile] = useState<StudentProfile>(getInitialProfile);
   const [currentGrade, setCurrentGrade] = useState<GradeLevel>(() => {
     if (initialRoute.kind === 'adventure') return initialRoute.grade;
-    if (initialLesson) return initialLesson.grade;
     const p = getInitialProfile();
     return p.grade || getInitialGrade();
   });
   const [currentTheme, setCurrentTheme] = useState<ThemeId>(getInitialTheme);
   const [currentPortal, setCurrentPortal] = useState<PortalView>(() => (
-    initialRoute.kind === 'exercise' && !initialLesson ? 'student' : getPortalForRoute(initialRoute)
+    getPortalForRoute(initialRoute)
   ));
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const adminAuthRequestTracker = useRef(createAdminAuthRequestTracker());
   const [selectedSubject, setSelectedSubject] = useState<SubjectType>(() => {
     if (initialRoute.kind === 'adventure') return initialRoute.subject;
-    return initialLesson?.subject || 'math';
+    return 'math';
   });
   const [adminTab, setAdminTab] = useState<AdminTab>(() => (
     initialRoute.kind === 'admin' ? initialRoute.tab : 'curriculum'
   ));
   
-  const [activeLesson, setActiveLesson] = useState<LessonNode | null>(initialLesson);
+  const [activeLesson, setActiveLesson] = useState<LessonNode | null>(null);
+  const [isLessonLoading, setIsLessonLoading] = useState(initialRoute.kind === 'exercise');
+  const [lessonLoadError, setLessonLoadError] = useState<string | null>(null);
+  const lessonLoadRequest = useRef(0);
   const [lessonSessionKey, setLessonSessionKey] = useState(0);
   const [dailyQuests] = useState<DailyQuest[]>(INITIAL_DAILY_QUESTS);
 
@@ -176,6 +243,11 @@ export const App: React.FC = () => {
     setIsProfileModalOpen(false);
     setIsShopModalOpen(false);
     setIsQuestsModalOpen(false);
+    if (route.kind !== 'exercise') {
+      lessonLoadRequest.current += 1;
+      setIsLessonLoading(false);
+      setLessonLoadError(null);
+    }
 
     switch (route.kind) {
       case 'profile':
@@ -196,16 +268,28 @@ export const App: React.FC = () => {
         setCurrentPortal('adventure');
         return;
       case 'exercise': {
-        const lesson = findCurriculumLesson(route.lessonId);
-        if (!lesson) {
-          setCurrentPortal('student');
-          return;
-        }
-        setCurrentGrade(lesson.grade);
-        setSelectedSubject(lesson.subject);
-        setActiveLesson(lesson);
-        setLessonSessionKey((prev) => prev + 1);
+        const requestId = ++lessonLoadRequest.current;
+        setActiveLesson(null);
+        setIsLessonLoading(true);
+        setLessonLoadError(null);
         setCurrentPortal('exercise');
+        void loadCurriculumLesson(route.lessonId).then((lesson) => {
+          if (requestId !== lessonLoadRequest.current) return;
+          if (!lesson) {
+            setLessonLoadError('Không tìm thấy bài học này. Bé có thể quay lại danh sách và chọn bài khác.');
+            return;
+          }
+          setCurrentGrade(lesson.grade);
+          setSelectedSubject(lesson.subject);
+          setActiveLesson(lesson);
+          setLessonSessionKey((prev) => prev + 1);
+        }).catch((error) => {
+          if (requestId !== lessonLoadRequest.current) return;
+          console.error('Failed to load lesson data', error);
+          setLessonLoadError('Kết nối chưa ổn định nên dữ liệu bài học chưa tải xong.');
+        }).finally(() => {
+          if (requestId === lessonLoadRequest.current) setIsLessonLoading(false);
+        });
         return;
       }
       case 'parent':
@@ -230,6 +314,10 @@ export const App: React.FC = () => {
     }
     applyAppRoute(route);
   };
+
+  useEffect(() => {
+    if (initialRoute.kind === 'exercise') applyAppRoute(initialRoute);
+  }, []);
 
   useEffect(() => {
     let isCurrent = true;
@@ -278,7 +366,16 @@ export const App: React.FC = () => {
 
   // Handler: Start a lesson
   const handleStartLesson = (lesson: LessonNode) => {
-    navigateTo({ kind: 'exercise', lessonId: lesson.id });
+    const path = getAppPath({ kind: 'exercise', lessonId: lesson.id });
+    if (window.location.pathname !== path) window.history.pushState({}, '', path);
+    lessonLoadRequest.current += 1;
+    setIsLessonLoading(false);
+    setLessonLoadError(null);
+    setCurrentGrade(lesson.grade);
+    setSelectedSubject(lesson.subject);
+    setActiveLesson(lesson);
+    setLessonSessionKey((prev) => prev + 1);
+    setCurrentPortal('exercise');
   };
 
   // Handler: Select subject from Dashboard
@@ -357,6 +454,7 @@ export const App: React.FC = () => {
       )}
 
       {/* Main Portals Router */}
+      <LazyLoadBoundary key={currentPortal}>
       <main className="min-h-[calc(100vh-5rem)]">
         {currentPortal === 'student' && (
           <StudentDashboard
@@ -373,47 +471,65 @@ export const App: React.FC = () => {
         )}
 
         {currentPortal === 'adventure' && (
-          <AdventureMap
-            currentGrade={currentGrade}
-            selectedSubject={selectedSubject}
-            onSelectSubject={handleSelectSubject}
-            onStartLesson={handleStartLesson}
-            onBackToDashboard={returnToStudentPortal}
-          />
+          <Suspense fallback={<PortalLoading />}>
+            <AdventureMap
+              currentGrade={currentGrade}
+              selectedSubject={selectedSubject}
+              onSelectSubject={handleSelectSubject}
+              onStartLesson={handleStartLesson}
+              onBackToDashboard={returnToStudentPortal}
+            />
+          </Suspense>
         )}
 
         {currentPortal === 'exercise' && activeLesson && (
-          <InteractiveExerciseEngine
-            key={`${activeLesson.id}-${lessonSessionKey}`}
-            lesson={activeLesson}
-            onExit={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
-            onComplete={handleCompleteLesson}
+          <Suspense fallback={<PortalLoading />}>
+            <InteractiveExerciseEngine
+              key={`${activeLesson.id}-${lessonSessionKey}`}
+              lesson={activeLesson}
+              onExit={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
+              onComplete={handleCompleteLesson}
+            />
+          </Suspense>
+        )}
+
+        {currentPortal === 'exercise' && isLessonLoading && <PortalLoading />}
+
+        {currentPortal === 'exercise' && lessonLoadError && !isLessonLoading && (
+          <PortalLoadFailure
+            message={lessonLoadError}
+            onRetry={() => applyAppRoute(parseAppRoute(window.location.pathname))}
+            onBack={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
           />
         )}
 
         {currentPortal === 'arena' && (
-          <QuizArena
-            onBackToDashboard={returnToStudentPortal}
-            onVictory={(xp, stars) => {
-              setProfile((prev) => ({
-                ...prev,
-                xp: prev.xp + xp,
-                stars: prev.stars + stars,
-              }));
-            }}
-          />
+          <Suspense fallback={<PortalLoading />}>
+            <QuizArena
+              onBackToDashboard={returnToStudentPortal}
+              onVictory={(xp, stars) => {
+                setProfile((prev) => ({
+                  ...prev,
+                  xp: prev.xp + xp,
+                  stars: prev.stars + stars,
+                }));
+              }}
+            />
+          </Suspense>
         )}
 
         {currentPortal === 'parent' && (
-          <ParentPortal
-            onBackToStudent={returnToStudentPortal}
-            onRewardStars={(stars) => {
-              setProfile((prev) => ({
-                ...prev,
-                stars: prev.stars + stars,
-              }));
-            }}
-          />
+          <Suspense fallback={<PortalLoading />}>
+            <ParentPortal
+              onBackToStudent={returnToStudentPortal}
+              onRewardStars={(stars) => {
+                setProfile((prev) => ({
+                  ...prev,
+                  stars: prev.stars + stars,
+                }));
+              }}
+            />
+          </Suspense>
         )}
 
         {currentPortal === 'admin' && isAdminAuthenticated && (
@@ -438,6 +554,7 @@ export const App: React.FC = () => {
           />
         )}
       </main>
+      </LazyLoadBoundary>
 
       {/* Mobile Bottom Dock (Hidden in exercise mode) */}
       {currentPortal !== 'exercise' && currentPortal !== 'admin' && currentPortal !== 'admin-login' && (
@@ -458,14 +575,17 @@ export const App: React.FC = () => {
         xpEarned={lastEarnedXp}
         onContinue={() => {
           setIsVictoryModalOpen(false);
-          // Auto advance to next lesson in full SGK curriculum
-          const currentLessons = getLessonsForGradeAndSubject(currentGrade, selectedSubject);
-          const currentIdx = currentLessons.findIndex((l) => l.id === activeLesson?.id);
-          if (currentIdx !== -1 && currentIdx + 1 < currentLessons.length) {
-            handleStartLesson(currentLessons[currentIdx + 1]);
-          } else {
+          void loadLessonsForGradeAndSubject(currentGrade, selectedSubject).then((currentLessons) => {
+            const currentIdx = currentLessons.findIndex((lesson) => lesson.id === activeLesson?.id);
+            if (currentIdx !== -1 && currentIdx + 1 < currentLessons.length) {
+              handleStartLesson(currentLessons[currentIdx + 1]);
+            } else {
+              navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade });
+            }
+          }).catch((error) => {
+            console.error('Failed to load the next lesson', error);
             navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade });
-          }
+          });
         }}
         onBackToDashboard={() => {
           setIsVictoryModalOpen(false);

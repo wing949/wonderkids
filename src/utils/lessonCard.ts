@@ -27,6 +27,11 @@ function formatSourcePages(pages: number[]): string {
   return pages.join(', ');
 }
 
+function formatCompactPageReference(reference: string): string {
+  const pageMatch = reference.match(/\bTrang\s+(.+)$/i);
+  return pageMatch ? `Trang ${pageMatch[1].trim()}` : '';
+}
+
 /**
  * Hiển thị số bài phía trước cho môn Tiếng Việt tương tự môn Toán (ví dụ: "Bài 1: Thanh âm của gió")
  */
@@ -76,13 +81,16 @@ export function getLessonCardContent(lesson: LessonNode) {
   const vietnamesePages = lesson.sourceCitation?.sourcePages || [];
   const vietnameseVolume = lesson.semester === 2 ? 'hai' : 'một';
   const isVietnameseBookLesson = lesson.subject === 'vietnamese' && vietnamesePages.length > 0;
+  const compactPageReference = lesson.textbookPageRef
+    ? formatCompactPageReference(lesson.textbookPageRef)
+    : '';
   const badge = isVietnameseBookLesson
     ? `📖 SGK Tiếng Việt ${lesson.grade} Tập ${vietnameseVolume} — Trang ${formatSourcePages(vietnamesePages)}`
     : lesson.subject === 'vietnamese'
       ? '⏳ Đang đối chiếu trang SGK'
     : lesson.textbookPageRef
       ? lesson.provenance?.verificationStatus === 'reference_only'
-        ? `🧩 Luyện bổ trợ • tham chiếu ${lesson.textbookPageRef}`
+        ? `🧩 Luyện bổ trợ${compactPageReference ? ` • ${compactPageReference}` : ''}`
         : `📖 ${lesson.textbookPageRef}`
       : 'Bài học';
   const title = formatLessonDisplayTitle(lesson);

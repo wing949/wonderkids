@@ -34,12 +34,16 @@ function samePages(left = [], right = []) {
 }
 
 async function audioInfo(assetPath) {
+  if (!assetPath) return { valid: false, hash: '' };
   const absolutePath = join(workspace, 'public', assetPath.slice(1));
   try {
     const [file, fileStat] = await Promise.all([readFile(absolutePath), stat(absolutePath)]);
-    const valid = fileStat.size > 44
-      && file.subarray(0, 4).toString('ascii') === 'RIFF'
+    const isWav = file.subarray(0, 4).toString('ascii') === 'RIFF'
       && file.subarray(8, 12).toString('ascii') === 'WAVE';
+    const isMp3 = file.length > 3
+      && ((file[0] === 0xff && (file[1] & 0xe0) === 0xe0)
+        || file.subarray(0, 3).toString('ascii') === 'ID3');
+    const valid = fileStat.size > 44 && (isWav || isMp3);
     return { valid, hash: createHash('sha256').update(file).digest('hex') };
   } catch {
     return { valid: false, hash: '' };
@@ -66,9 +70,9 @@ try {
     for (const topic of topics) {
       const lesson = lessons.find((item) => item.id === topic.id);
       const asset = curriculum.VIETNAMESE_AUDIO_MANIFEST[topic.id.replace('-l', '-b')];
-      const [primary, fallback] = asset
-        ? await Promise.all([audioInfo(asset.primaryPath), audioInfo(asset.fallbackPath)])
-        : [{ valid: false, hash: '' }, { valid: false, hash: '' }];
+      const primary = asset
+        ? await audioInfo(asset.primaryPath)
+        : { valid: false, hash: '' };
       const verifiedSgk = curriculum.isPublishableVietnameseSgkLesson(lesson);
       const sourceMapping = curriculum.VIETNAMESE_LESSON_PAGE_MAPPINGS[lesson.id];
       const catalogPending = lesson.catalogSection === 'sgk_pending';
@@ -81,8 +85,8 @@ try {
         : '';
       const audioTranscriptMatched = verifiedTranscript
         && primary.valid
-        && fallback.valid
-        && Boolean(primary.hash && fallback.hash && primary.hash !== fallback.hash)
+        && asset?.primaryVoice === 'Cô Giáo Vy'
+        && asset?.fallbackPath === undefined
         && asset?.transcriptHash === expectedTranscriptHash
         && samePages(asset?.sourcePages, lesson.readingPassage?.sourcePages);
       const audioTranscriptStatus = !verifiedTranscript
@@ -118,15 +122,14 @@ try {
         sgkActivityCount: verifiedSgk ? lesson.questions.length : 0,
         appExtensionCount: lesson.appExtensions?.length || 0,
         audioPrimary: primary.valid ? 'valid' : 'missing_or_invalid',
-        audioFallback: fallback.valid ? 'valid' : 'missing_or_invalid',
-        audioDistinct: Boolean(primary.hash && fallback.hash && primary.hash !== fallback.hash),
+        audioPolicy: 'primary_only_co_giao_vy',
         transcriptHash: asset?.transcriptHash || '',
         expectedTranscriptHash,
         audioTranscriptStatus,
         notes: verifiedSgk
           ? 'Nguyên văn và hoạt động đã nhập có trang/tiểu ý nguồn; tiếp tục bổ sung tiểu ý SGK trước khi công bố hoàn tất bài.'
           : audioTranscriptStatus === 'matched'
-            ? 'Bài đọc và cặp audio đã khớp transcript SGK; hoạt động Luyện thêm vẫn được tách riêng.'
+            ? 'Bài đọc và audio chính Cô Giáo Vy đã khớp transcript SGK; hoạt động Luyện thêm vẫn được tách riêng.'
           : verifiedTranscript
             ? 'Transcript SGK đã duyệt nhưng audio chưa khớp hash hoặc trang nguồn; không được phát làm giọng đọc SGK.'
           : readingStatus === 'supplement_reading_allowed'
@@ -144,7 +147,7 @@ try {
   const catalogPendingLessons = rows.filter((row) => row.contentStatus === 'sgk_catalog_pending').length;
   const sgkActivities = rows.reduce((sum, row) => sum + row.sgkActivityCount, 0);
   const appExtensions = rows.reduce((sum, row) => sum + row.appExtensionCount, 0);
-  const audioReady = rows.filter((row) => row.audioPrimary === 'valid' && row.audioFallback === 'valid' && row.audioDistinct).length;
+  const audioReady = rows.filter((row) => row.audioPrimary === 'valid').length;
   const referenceRows = rows.filter((row) => row.declaredReferenceTitle);
   const sourceMatched = rows.filter((row) => row.sourcePages).length;
   const visuallyReviewed = referenceRows.filter((row) => row.sourceMappingStatus === 'visually_reviewed').length;
@@ -179,7 +182,7 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 - OCR đã rà 1.584/1.584 trang; **${sourceMatched}/${rows.length} bài** đã có trang mở bài từ mục lục, trong đó **${visuallyReviewed} bài** có thêm ánh xạ trang đã kiểm tra trực quan và **${sourceUnmatched} bài** chưa có trang.
 - Hiện có **${verifiedTranscripts} transcript SGK đã duyệt**. Văn bản/audio chính của **${blockedReadings} bài** đã bị khóa để không phát nội dung tự sinh thay cho SGK.
 - Có **${catalogPendingLessons} bài trong danh mục SGK chờ đối chiếu nguyên văn**; chúng không được gắn nhãn Luyện thêm và không sinh câu hỏi hoặc audio.
-- Kho kỹ thuật hiện có một file chính và một fallback hợp lệ cho **${audioReady}/${rows.length} bài**. Chỉ **${verifiedTranscriptAudioReady}/${verifiedTranscripts} transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép dùng cặp audio này làm giọng đọc SGK.
+- Kho kỹ thuật chỉ dùng audio chính Cô Giáo Vy, không chuyển giọng fallback. Hiện có file chính hợp lệ cho **${audioReady}/${rows.length} bài**. Chỉ **${verifiedTranscriptAudioReady}/${verifiedTranscripts} transcript SGK đã duyệt** có hash transcript và trang nguồn khớp để được phép mở nút nghe.
 
 ## Thống kê
 
@@ -198,7 +201,7 @@ Nguồn: 10 đường dẫn đọc sách chính thức do quản trị cung cấ
 | Bài đang khóa văn bản/audio chính | ${blockedReadings} |
 | Hoạt động SGK đã xác minh | ${sgkActivities} |
 | Luyện thêm trong bài | ${appExtensions} |
-| Cặp audio chính/fallback đạt kiểm tra file | ${audioReady}/${rows.length} |
+| Audio chính Cô Giáo Vy đạt kiểm tra file | ${audioReady}/${rows.length} |
 
 ## Tiến độ từng sách
 
@@ -214,14 +217,14 @@ ${lessonTable}
 
 ## Cổng phát hành
 
-Một bài chỉ được tính vào nội dung SGK khi có trích dẫn trang, hash nguồn, trạng thái \`verified\`, ánh xạ một-một giữa từng tiểu ý SGK và hoạt động app, cùng cặp audio khớp transcript. OCR chỉ là bản nháp; không tự động trở thành nội dung đã duyệt.
+Một bài chỉ được tính vào nội dung SGK khi có trích dẫn trang, hash nguồn, trạng thái \`verified\`, ánh xạ một-một giữa từng tiểu ý SGK và hoạt động app, cùng audio chính Cô Giáo Vy khớp transcript. OCR chỉ là bản nháp; không tự động trở thành nội dung đã duyệt.
 `;
 
   const headers = [
     'lessonId', 'grade', 'semester', 'appTitle', 'cardPreview', 'declaredReferenceTitle',
     'declaredReferenceDetail', 'sourceMappingStatus', 'sourcePages', 'readingStatus',
     'contentStatus', 'sgkActivityCount', 'appExtensionCount',
-    'audioPrimary', 'audioFallback', 'audioDistinct', 'transcriptHash', 'expectedTranscriptHash',
+    'audioPrimary', 'audioPolicy', 'transcriptHash', 'expectedTranscriptHash',
     'audioTranscriptStatus', 'notes',
   ];
   const csv = [headers.join(','), ...rows.map((row) => headers.map((header) => csvCell(row[header])).join(','))].join('\n') + '\n';

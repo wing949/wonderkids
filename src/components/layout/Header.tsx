@@ -38,10 +38,10 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-white/80 bg-white/85 backdrop-blur-md shadow-sm transition-colors">
+    <header className="sticky top-0 z-40 w-full border-b border-white/80 bg-white/95 backdrop-blur-none shadow-sm transition-colors xl:bg-white/85 xl:backdrop-blur-md">
       <div className="mx-auto flex h-16 sm:h-20 max-w-[1520px] items-center justify-between gap-2 px-3 sm:px-6 lg:px-8">
         {/* Left: Logo & Portal Badges */}
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-4">
           <button
             onClick={() => {
               soundManager.playPop();
@@ -54,7 +54,8 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             <div className="shrink-0">
               <div className="flex items-center gap-1.5 font-baloo font-extrabold text-lg sm:text-2xl text-brand-dark tracking-tight leading-none whitespace-nowrap">
-                <span>WonderKids</span>
+                <span className="hidden sm:inline">WonderKids</span>
+                <span className="sm:hidden">WK</span>
                 <span className="text-amber-500 font-extrabold text-sm sm:text-base">VN</span>
               </div>
               <p className="text-[11px] sm:text-xs font-bold text-slate-500 font-vietnam hidden sm:block whitespace-nowrap">
@@ -64,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
 
           {/* Grade Selector Pills */}
-          <div className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1 rounded-full border border-slate-200/80 shrink-0">
+          <div className="hidden xl:flex items-center gap-1 bg-slate-100/80 p-1 rounded-full border border-slate-200/80 shrink-0">
             {([1, 2, 3, 4, 5] as GradeLevel[]).map((g) => {
               const isSelected = g === currentGrade;
               return (
@@ -88,14 +89,14 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Right: Gamification Badges & Portals */}
-        <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+        <div className="flex min-w-0 items-center gap-1 sm:gap-2.5 shrink-0">
           {/* Kid Profile / Avatar Button (Opens ProfileModal) */}
           <button
             onClick={() => {
               soundManager.playPop();
               onOpenBadges();
             }}
-            className="flex items-center gap-1.5 sm:gap-2 rounded-full border-2 border-amber-300 bg-gradient-to-r from-amber-100 to-yellow-100 px-2.5 sm:px-3 py-1 shadow-sm hover:scale-105 transition-transform shrink-0 cursor-pointer"
+            className="hidden sm:flex items-center gap-1.5 sm:gap-2 rounded-full border-2 border-amber-300 bg-gradient-to-r from-amber-100 to-yellow-100 px-2.5 sm:px-3 py-1 shadow-sm hover:scale-105 transition-transform shrink-0 cursor-pointer"
             title="Hồ sơ & Avatar của bé (Nhấn để chọn 16 con vật ngộ nghĩnh)"
           >
             <span className="text-lg sm:text-xl leading-none">{currentAvatarEmoji}</span>
@@ -106,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Streak Badge */}
           <div
-            className="flex items-center gap-1 sm:gap-1.5 rounded-full border-2 border-orange-200 bg-orange-50/90 px-2.5 sm:px-3 py-1 text-orange-700 shadow-sm shrink-0 whitespace-nowrap"
+            className="flex items-center gap-1 sm:gap-1.5 rounded-full border-2 border-orange-200 bg-orange-50/90 px-2 sm:px-3 py-1 text-orange-700 shadow-sm shrink-0 whitespace-nowrap"
             title={`Chuỗi học tập liên tục: ${profile.streak} ngày`}
           >
             <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-orange-500 fill-orange-500 animate-bounce-subtle shrink-0" />
@@ -120,7 +121,7 @@ export const Header: React.FC<HeaderProps> = ({
               soundManager.playPop();
               onOpenShop();
             }}
-            className="flex items-center gap-1 sm:gap-1.5 rounded-full border-2 border-amber-200 bg-amber-50/90 px-2.5 sm:px-3 py-1 text-amber-800 shadow-sm hover:scale-105 transition-transform shrink-0 whitespace-nowrap"
+            className="flex items-center gap-1 sm:gap-1.5 rounded-full border-2 border-amber-200 bg-amber-50/90 px-2 sm:px-3 py-1 text-amber-800 shadow-sm hover:scale-105 transition-transform shrink-0 whitespace-nowrap"
             title="Ngôi sao tích lũy (Nhấn để mở Cửa hàng đổi quà)"
           >
             <Star className="h-4 w-4 sm:h-5 sm:w-5 text-amber-500 fill-amber-400 shrink-0" />
@@ -196,7 +197,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Portal Switcher (Góc Bé / Phụ Huynh) - Desktop Only */}
-          <div className="hidden lg:flex items-center gap-1 bg-slate-100/90 p-1 rounded-full border border-slate-200 shrink-0">
+          <div className="hidden xl:flex items-center gap-1 bg-slate-100/90 p-1 rounded-full border border-slate-200 shrink-0">
             <button
               onClick={() => {
                 soundManager.playPop();

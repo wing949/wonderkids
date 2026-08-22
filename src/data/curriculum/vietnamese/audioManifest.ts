@@ -3,9 +3,7 @@ import rawManifest from './audioManifest.generated.json';
 export interface VietnameseAudioAsset {
   lessonId: string;
   primaryPath: string;
-  fallbackPath: string;
   primaryVoice: string;
-  fallbackVoice: string;
   transcriptHash: string;
   lessonVersion: number;
   sourcePages: number[];

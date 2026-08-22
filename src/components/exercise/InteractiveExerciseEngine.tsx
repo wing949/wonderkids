@@ -27,7 +27,7 @@ import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../..
 import { MathVisualIllustration } from './MathVisualIllustration';
 import { LessonThematicBadge } from './LessonThematicBadge';
 import { Grade1PhonicsGameZone } from './Grade1PhonicsGameZone';
-import { formatLessonDisplayTitle } from '../../utils/lessonCard';
+import { formatLessonDisplayTitle, getLessonCardContent } from '../../utils/lessonCard';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -478,7 +478,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
   const hasSelectedAnswer = currentQ
     ? currentQ.gradingMode === 'self_confirm'
-      ? hasSelfConfirmed || writtenResponse.trim().length > 0 || lesson.grade <= 2
+      ? hasSelfConfirmed || writtenResponse.trim().length > 0
       : (currentQ.type === 'bubble_choice' || currentQ.type === 'audio_listen' || currentQ.type === 'fill_blank' || currentQ.type === 'spelling_blend')
       ? selectedOptionId !== null
       : currentQ.type === 'keypad'
@@ -535,11 +535,17 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 <div className="font-baloo text-sm sm:text-base font-extrabold text-slate-600">
                   {formatLessonDisplayTitle(lesson)}
                 </div>
+                <div
+                  className="mt-1 max-w-full break-words font-vietnam text-[11px] font-bold leading-snug text-slate-500 sm:text-xs"
+                  title={getLessonCardContent(lesson).badge}
+                >
+                  {getLessonCardContent(lesson).badge}
+                </div>
               </div>
             </div>
 
             {canUseReadingPassage && <div className="order-3 flex w-full sm:order-2 sm:w-auto sm:flex-1 sm:justify-center">
-              <div className="flex max-w-lg items-center justify-center gap-2 rounded-3xl bg-amber-50/80 p-1.5">
+              <div className="flex w-full min-w-0 max-w-lg items-center justify-center gap-1 rounded-3xl bg-amber-50/80 p-1.5 sm:gap-2">
                 {isGrade1Phonics && (
                   <button
                     onClick={() => {
@@ -573,14 +579,15 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     setIsShadowingRecording(false);
                     setReadingTab('full');
                   }}
-                  className={`flex flex-1 items-center justify-center gap-2 rounded-2xl px-4 py-2 font-baloo text-xs font-extrabold transition-all cursor-pointer sm:text-sm ${
+                  className={`flex min-w-0 flex-1 items-center justify-center gap-1 rounded-2xl px-2 py-2 font-baloo text-xs font-extrabold transition-all cursor-pointer sm:gap-2 sm:px-4 sm:text-sm ${
                     readingTab === 'full'
                       ? 'bg-amber-400 text-amber-950 shadow-pop-xs scale-102 border-2 border-amber-500'
                       : 'text-slate-600 hover:text-brand-dark hover:bg-white/70'
                   }`}
                 >
                   <span>📖</span>
-                  <span className="whitespace-nowrap">Đọc Toàn Bài</span>
+                  <span className="whitespace-nowrap sm:hidden">Đọc bài</span>
+                  <span className="hidden whitespace-nowrap sm:inline">Đọc Toàn Bài</span>
                 </button>
 
                 <button
@@ -593,14 +600,15 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     setIsVoiceRecording(false);
                     setReadingTab('shadowing');
                   }}
-                  className={`flex flex-1 items-center justify-center gap-2 rounded-2xl px-4 py-2 font-baloo text-xs font-extrabold transition-all cursor-pointer sm:text-sm ${
+                  className={`flex min-w-0 flex-1 items-center justify-center gap-1 rounded-2xl px-2 py-2 font-baloo text-xs font-extrabold transition-all cursor-pointer sm:gap-2 sm:px-4 sm:text-sm ${
                     readingTab === 'shadowing'
                       ? 'bg-purple-600 text-white shadow-pop-xs scale-102 border-2 border-purple-700'
                       : 'text-slate-600 hover:text-purple-900 hover:bg-white/70'
                   }`}
                 >
                   <span>🎙️</span>
-                  <span className="whitespace-nowrap">Luyện Shadowing</span>
+                  <span className="whitespace-nowrap sm:hidden">Shadowing</span>
+                  <span className="hidden sm:inline"><span className="whitespace-nowrap">Luyện Shadowing</span></span>
                   <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
                 </button>
               </div>
@@ -663,6 +671,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     src={sourcePageView.imageUrl}
                     alt={`Trang ${sourcePageView.pageNumber} - ${lesson.title}`}
                     loading="eager"
+                    decoding="async"
                     className="h-full w-auto max-w-full object-contain"
                   />
                 </figure>
@@ -1178,7 +1187,12 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 setEngineMode('quiz');
               }}
             >
-              {canUseReadingPassage ? 'Con Đã Đọc Xong - Trả Lời Câu Hỏi ⭐' : 'Vào Phần Luyện Tập ⭐'}
+              {canUseReadingPassage ? (
+                <>
+                  <span className="sm:hidden">Trả lời câu hỏi ⭐</span>
+                  <span className="hidden sm:inline">Con Đã Đọc Xong - Trả Lời Câu Hỏi ⭐</span>
+                </>
+              ) : 'Vào Phần Luyện Tập ⭐'}
             </CuteButton>
           </div>
         </div>
@@ -1358,23 +1372,20 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   </p>
                 </div>
 
-                {/* Optional textarea for Grade 3-5 only */}
-                {lesson.grade >= 3 && (
-                  <div className="pt-3 border-t border-emerald-200/80">
-                    <label htmlFor={`response-${currentQ.id}`} className="block font-baloo font-bold text-xs sm:text-sm text-slate-600 mb-1.5">
-                      (Tùy chọn) Viết thêm câu trả lời của em nếu muốn:
-                    </label>
-                    <textarea
-                      id={`response-${currentQ.id}`}
-                      value={writtenResponse}
-                      onChange={(event) => setWrittenResponse(event.target.value)}
-                      disabled={isAnswerChecked}
-                      rows={2}
-                      placeholder="Em có thể ghi chú ngắn ở đây..."
-                      className="w-full resize-y rounded-2xl border border-emerald-200 bg-white px-3.5 py-2 font-vietnam text-sm text-brand-dark outline-none focus:border-emerald-500"
-                    />
-                  </div>
-                )}
+                <div className="pt-3 border-t border-emerald-200/80">
+                  <label htmlFor={`response-${currentQ.id}`} className="block font-baloo font-bold text-xs sm:text-sm text-slate-600 mb-1.5">
+                    Viết câu trả lời của em:
+                  </label>
+                  <textarea
+                    id={`response-${currentQ.id}`}
+                    value={writtenResponse}
+                    onChange={(event) => setWrittenResponse(event.target.value)}
+                    disabled={isAnswerChecked}
+                    rows={2}
+                    placeholder={lesson.grade <= 2 ? 'Bé có thể viết ngắn hoặc bấm xác nhận sau khi trả lời miệng.' : 'Em viết câu trả lời ngắn ở đây...'}
+                    className="w-full resize-y rounded-2xl border border-emerald-200 bg-white px-3.5 py-2 font-vietnam text-sm text-brand-dark outline-none focus:border-emerald-500"
+                  />
+                </div>
               </div>
             )}
 
