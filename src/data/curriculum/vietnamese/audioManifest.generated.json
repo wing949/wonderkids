@@ -7,7 +7,8 @@
     "lessonVersion": 2,
     "sourcePages": [
       4
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-b22": {
     "lessonId": "tv-g1-b22",
@@ -17,17 +18,29 @@
     "lessonVersion": 2,
     "sourcePages": [
       8
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-b23": {
     "lessonId": "tv-g1-b23",
     "primaryPath": "/audio/curriculum/tv-g1-b23.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "c408b86f613531ddabf9cc60e3c9b5042c67523b7f5d0318fb30bfae3da7bfae",
-    "lessonVersion": 2,
+    "lessonVersion": 4,
     "sourcePages": [
       12
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "758d8840667b3475031a87ee4dcb1a5a79bf422dd39b9f13a2326ca7c391743b",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 33769,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 119,
+    "audioSha256": "80ff6a6b3dec393fabe384e1d4bf9d587208b4f3f528be0c281ab6d647568477",
+    "isExpressive": true
   },
   "tv-g1-b24": {
     "lessonId": "tv-g1-b24",
@@ -37,7 +50,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       14
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-b25": {
     "lessonId": "tv-g1-b25",
@@ -47,7 +61,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       18
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-b26": {
     "lessonId": "tv-g1-b26",
@@ -58,18 +73,30 @@
     "sourcePages": [
       24,
       25
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-b27": {
     "lessonId": "tv-g1-b27",
     "primaryPath": "/audio/curriculum/tv-g1-b27.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "7f32dcc20861faabb9afa2971de08e790d1339cc6f07e950bcea09102faaa9fc",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       28,
       29
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "4a286930758beb9ed008a0ea6b80d7642008c006ae231f36ced896ddaeac957d",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 31587,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 125.4,
+    "audioSha256": "baa5a797980c27fc777a4361bb9ad56ec17d93417908f901bd23b33189e3e2ae",
+    "isExpressive": true
   },
   "tv-g1-b28": {
     "lessonId": "tv-g1-b28",
@@ -80,18 +107,30 @@
     "sourcePages": [
       30,
       31
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-b29": {
     "lessonId": "tv-g1-b29",
     "primaryPath": "/audio/curriculum/tv-g1-b29.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "c9a65391bb828285c8e552e226f0276f4d82c37af2e855f5e2310897826aaa38",
-    "lessonVersion": 1,
+    "lessonVersion": 4,
     "sourcePages": [
       34,
       35
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c702978024b0ae1a6740a3f3f0ac1afc91f40209a86d8cc39093bc7bd4b9bbf2",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 33483,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 121.9,
+    "audioSha256": "15c9453ca2600ced0647414d59010e937ea2373a981b999e8023c82034c1ed9e",
+    "isExpressive": true
   },
   "tv-g1-b30": {
     "lessonId": "tv-g1-b30",
@@ -102,18 +141,30 @@
     "sourcePages": [
       36,
       37
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b11": {
     "lessonId": "tv-g1-t2-b11",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b11.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "305370b301448ba3cdb02149f1956befad58e6de561d9f37dd7e03e173d954d9",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       40,
       41
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "ef497dc142477294a74154324262949372455ffa5b340aaab0b2c8fb63bd56f5",
+    "segmentCount": 13,
+    "stanzaCount": 3,
+    "lineCount": 12,
+    "durationMs": 26683,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 112.4,
+    "audioSha256": "a68553b695b71519e3ff6db4abeb2858ea5a17c5d52eff131ac27093e9730701",
+    "isExpressive": true
   },
   "tv-g1-t2-b12": {
     "lessonId": "tv-g1-t2-b12",
@@ -124,18 +175,30 @@
     "sourcePages": [
       44,
       45
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b13": {
     "lessonId": "tv-g1-t2-b13",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b13.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "a3fc5e63311e504d399a8f34fa91287448a840514f8a0456a08c2d00d8400457",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       48,
       49
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "0a1d064f325c20f74a50aebb041ec99330e8f9e995ac4bd2a9a14edfc698201b",
+    "segmentCount": 13,
+    "stanzaCount": 3,
+    "lineCount": 12,
+    "durationMs": 28896,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128.7,
+    "audioSha256": "fba054583062a9c540ee9a307b114b64006ae456551e96428267322c810b2502",
+    "isExpressive": true
   },
   "tv-g1-t2-b14": {
     "lessonId": "tv-g1-t2-b14",
@@ -146,17 +209,29 @@
     "sourcePages": [
       50,
       51
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b15": {
     "lessonId": "tv-g1-t2-b15",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b15.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "fb67c4d4c0367bababf2bdf1ab874a12d91e2e1e992e4ab8204eee35ea7585d7",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       54
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "fd205ee7e60b38ff3263c01586eaf4f4b3632a2c48d9d916ff22396f1962b4d4",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 31995,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 129.4,
+    "audioSha256": "9ca4a4e2607bd0ed8ca5ac94f2835c514889b0bf19797ea4958330145d1cdfd8",
+    "isExpressive": true
   },
   "tv-g1-t2-b16": {
     "lessonId": "tv-g1-t2-b16",
@@ -166,17 +241,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       56
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b17": {
     "lessonId": "tv-g1-t2-b17",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b17.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "1a5c9cea1ceb1c8378776bbf518bf4a0ca2a5c8b4043e4c638f22b2747bce75e",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       60
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "9e02db8690646622cc4fb68774b33ad159e166710d3007ef6abbdd821acd954b",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 39131,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 127.3,
+    "audioSha256": "1c170f235fe9a2528817dac171cc368ddc36973bafcd1394ace17f009aa1a5be",
+    "isExpressive": true
   },
   "tv-g1-t2-b18": {
     "lessonId": "tv-g1-t2-b18",
@@ -186,17 +273,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       64
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b19": {
     "lessonId": "tv-g1-t2-b19",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b19.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "643af430f3217d24bc063ccda5263abfd3e0d25d8e516dd26e4151578a0d4860",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       68
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "282acade110aea40db12bec77479c44afd62b167f011bc6479899ec9c1c2ab69",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 31290,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 130.4,
+    "audioSha256": "1b58c8c55ac30e33918af066da2bf93d5c448e7b4d3fa1564d42ffd03d8ef261",
+    "isExpressive": true
   },
   "tv-g1-t2-b20": {
     "lessonId": "tv-g1-t2-b20",
@@ -206,7 +305,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       70
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g1-t2-b21": {
     "lessonId": "tv-g1-t2-b21",
@@ -216,7 +316,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       74
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b22": {
     "lessonId": "tv-g1-t2-b22",
@@ -226,7 +327,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       78
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b23": {
     "lessonId": "tv-g1-t2-b23",
@@ -236,17 +338,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       84
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g1-t2-b24": {
     "lessonId": "tv-g1-t2-b24",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b24.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "ef1dbf9612bb78462d91d7cbb25108fdfcab7a6afbd6e1b734add9a689a1c1d4",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       88
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "e4423a2b0cee90f9b0b8a22ff85f6a37a0f6414da1acb1642aa4ba6d758f6ceb",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 35216,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 115.9,
+    "audioSha256": "2024ac59a3c3161a774d6baa7a79964b45130eb75a648689304085463d7fd8af",
+    "isExpressive": true
   },
   "tv-g1-t2-b25": {
     "lessonId": "tv-g1-t2-b25",
@@ -256,7 +370,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       90
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b26": {
     "lessonId": "tv-g1-t2-b26",
@@ -266,7 +381,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       94
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g1-t2-b27": {
     "lessonId": "tv-g1-t2-b27",
@@ -276,7 +392,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       98
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b28": {
     "lessonId": "tv-g1-t2-b28",
@@ -286,17 +403,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       104
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b29": {
     "lessonId": "tv-g1-t2-b29",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b29.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "1777a673a64c173fc5c1ea5f05d8f835f13d106bfdb40f6513c19b50b241d27c",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       108
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "b7fb4431d2b8e14740287fb9335afc5d839805a8eed6700499b3cfdef8d60b68",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 32773,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 124.5,
+    "audioSha256": "74bfd2acec1b7d8961cd17e59bed7ea36c0fe5a08a0744ddec2d3f745c9f48f4",
+    "isExpressive": true
   },
   "tv-g1-t2-b30": {
     "lessonId": "tv-g1-t2-b30",
@@ -306,7 +435,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       110
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b31": {
     "lessonId": "tv-g1-t2-b31",
@@ -316,7 +446,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       114
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b32": {
     "lessonId": "tv-g1-t2-b32",
@@ -326,27 +457,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       118
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b33": {
     "lessonId": "tv-g1-t2-b33",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b33.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "d889c05dd1bf67158e4168d185b1c83b5a04d2b747ddc9c8a9d7e1ef75c2badd",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       124
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "6b2aadae6b0c636cc5f133cb33605f550fab8badcabaf923adf80c6bf3fe2206",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 33269,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 126.2,
+    "audioSha256": "5506655041f22094f9a474973738833c4be271a03888f6def5f2b1247d67e87d",
+    "isExpressive": true
   },
   "tv-g1-t2-b34": {
     "lessonId": "tv-g1-t2-b34",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b34.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "52aef5f5d986e9d047e9a35c504d1bf8cbc13c9bdf9cb6f959433b7daa359ddc",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       126
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "ea727cb44e86cf33c43bcc4837a70cfa28a09a1a5b458291551d1e7f94fe7800",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 38772,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 133.1,
+    "audioSha256": "393128dbb699044bdc41c703e3b1657041ff92f4bb0c4ac5236dcc7bf464a10e",
+    "isExpressive": true
   },
   "tv-g1-t2-b35": {
     "lessonId": "tv-g1-t2-b35",
@@ -356,17 +510,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       128
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b36": {
     "lessonId": "tv-g1-t2-b36",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b36.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "8a6f931ddde3ba778e3101504472299dc6f04254fd416478829d922bc0bff232",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       132
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c3024f8d193a8729fc67137e9d89f752d62cb95865c145184819450c6f07e8df",
+    "segmentCount": 13,
+    "stanzaCount": 3,
+    "lineCount": 12,
+    "durationMs": 25362,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 118.3,
+    "audioSha256": "6acb36c780036affe062ee59b8b8914583149c8b6d13d87541d8873562b6ccde",
+    "isExpressive": true
   },
   "tv-g1-t2-b37": {
     "lessonId": "tv-g1-t2-b37",
@@ -376,27 +542,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       134
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b38": {
     "lessonId": "tv-g1-t2-b38",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b38.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "fcdbc9d6795d4d65322a25ed9722f4153cf2e755a24c44c6ef271c0fd11fdb11",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       138
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "5382e0b54000c37b803fab00bbdd5467f2f78e0b3e0dfa2248eb054c2b76fdaf",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 33695,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 119.3,
+    "audioSha256": "9d776f445eb87604cedfa7c6098af9079f999c062753cf1a8afdd05ff24bf91f",
+    "isExpressive": true
   },
   "tv-g1-t2-b39": {
     "lessonId": "tv-g1-t2-b39",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b39.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "a8cc3e49c25a39ecac0ec4852779b431c1a02534a380e4ba8d0d1e9eda9f5779",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       140
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "51011afcb1aca67fa3ef9faa6b2dcdd9344eaab616e94290420bc4f4dba16226",
+    "segmentCount": 13,
+    "stanzaCount": 3,
+    "lineCount": 12,
+    "durationMs": 28489,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 132.7,
+    "audioSha256": "d5c8ce28e80a936bbd4cbd7867336b44c525468df0db2ad6b870f9dbad538820",
+    "isExpressive": true
   },
   "tv-g1-t2-b40": {
     "lessonId": "tv-g1-t2-b40",
@@ -406,7 +595,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       144
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g1-t2-b41": {
     "lessonId": "tv-g1-t2-b41",
@@ -416,17 +606,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       148
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b42": {
     "lessonId": "tv-g1-t2-b42",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b42.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "a5db5abb6043b5dba128e079f85880f631feca0fd254624c7d791cf2f1fca153",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       152
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c965dce51a2a709ad0e3e5b1f2dfe5f215882517437d949da69a24a709a5efff",
+    "segmentCount": 16,
+    "stanzaCount": 4,
+    "lineCount": 15,
+    "durationMs": 37346,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128.5,
+    "audioSha256": "2522eb2a77b2a5439796c6a650a9a633c929330ff6ea4a13aa593c54df7b7ea9",
+    "isExpressive": true
   },
   "tv-g1-t2-b43": {
     "lessonId": "tv-g1-t2-b43",
@@ -436,17 +638,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       154
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g1-t2-b44": {
     "lessonId": "tv-g1-t2-b44",
     "primaryPath": "/audio/curriculum/tv-g1-t2-b44.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "7cd72762df39db29c6334612f0cb565be8a6c7bf3d349186870e8ea7b82f30bc",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       156
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "ea0351c5d70b60f223b8433b541137f3d1409777d65b38474e161430d4d9ed5c",
+    "segmentCount": 15,
+    "stanzaCount": 7,
+    "lineCount": 14,
+    "durationMs": 28199,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 114.9,
+    "audioSha256": "18e693e7164732bf139e912d47c6268ab5ea3932858dc79878a63fae41c30898",
+    "isExpressive": true
   },
   "tv-g1-t2-b45": {
     "lessonId": "tv-g1-t2-b45",
@@ -456,7 +670,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       158
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b1": {
     "lessonId": "tv-g2-b1",
@@ -467,17 +682,29 @@
     "sourcePages": [
       10,
       11
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b2": {
     "lessonId": "tv-g2-b2",
     "primaryPath": "/audio/curriculum/tv-g2-b2.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "06b470cfec36e17a4e98a802eaf8f3fed4d995d0af5cdeefee2c11823962a7a5",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       13
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "4bbcea7c0d417b369f431ef8dd5e63e8f6c13b9fcb5e43a9507d27a64aa7f18c",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 41694,
+    "effectiveTempo": 0.7409,
+    "wordsPerMinute": 128.1,
+    "audioSha256": "cd1b6b72ea632114e6f13e88e78409ecd2509ca7587904649cf557935bd4dc8f",
+    "isExpressive": true
   },
   "tv-g2-b3": {
     "lessonId": "tv-g2-b3",
@@ -488,7 +715,8 @@
     "sourcePages": [
       17,
       18
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b4": {
     "lessonId": "tv-g2-b4",
@@ -498,7 +726,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       20
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b5": {
     "lessonId": "tv-g2-b5",
@@ -509,7 +738,8 @@
     "sourcePages": [
       24,
       25
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g2-b6": {
     "lessonId": "tv-g2-b6",
@@ -520,7 +750,8 @@
     "sourcePages": [
       27,
       28
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b7": {
     "lessonId": "tv-g2-b7",
@@ -530,7 +761,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       31
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b8": {
     "lessonId": "tv-g2-b8",
@@ -541,17 +773,29 @@
     "sourcePages": [
       34,
       35
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g2-b9": {
     "lessonId": "tv-g2-b9",
     "primaryPath": "/audio/curriculum/tv-g2-b9.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "8c8d8d0e63123dc4d20003782ab4e4817514eecb3b92047152ff16901120bab0",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       40
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "64214802da4f4e740d4b623f6b9d75ac8a5bd0ee967881125aa72a340a660863",
+    "segmentCount": 13,
+    "stanzaCount": 3,
+    "lineCount": 12,
+    "durationMs": 29096,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 132,
+    "audioSha256": "b318346591aafccb428fbc915d7083b0b09a591fa406a43aeaa140c319242b9a",
+    "isExpressive": true
   },
   "tv-g2-b10": {
     "lessonId": "tv-g2-b10",
@@ -561,17 +805,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       43
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b11": {
     "lessonId": "tv-g2-b11",
     "primaryPath": "/audio/curriculum/tv-g2-b11.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "22f97280b8f8af90332b00370f9a0b721ea0d492d1c105bb8464cea7d3ab9849",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       48
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "062beab05d69a6f7adf9640a665175efed2a0b954ad33a6d5370f8f284ef9007",
+    "segmentCount": 16,
+    "stanzaCount": 4,
+    "lineCount": 15,
+    "durationMs": 33828,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 113.5,
+    "audioSha256": "d3bcef4adfc2097d7e22f67c52d200db2ec1b277afb3a83126a68d2adb6347a0",
+    "isExpressive": true
   },
   "tv-g2-b12": {
     "lessonId": "tv-g2-b12",
@@ -581,27 +837,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       51
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b13": {
     "lessonId": "tv-g2-b13",
     "primaryPath": "/audio/curriculum/tv-g2-b13.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "5038d84f40bd67146cc0912df6538668131c36316c9c43a7baadd249e7f7bf39",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       55
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "faff3f7a6d92edb1c7af58061f72554d4ab521d9763d928077773abb2b921fe9",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 40894,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 123.2,
+    "audioSha256": "16398183312405a48a737383e7d6040ebb9349ed38cb5707574e8975aa97effb",
+    "isExpressive": true
   },
   "tv-g2-b14": {
     "lessonId": "tv-g2-b14",
     "primaryPath": "/audio/curriculum/tv-g2-b14.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "ae39c0ae67d0a74a746ae8a2181d3407bbda81019a37988f16c8f66011b03bb4",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       58
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "eb2d2d5e3c2984bad26d3b68dc966eb26a6262f289342f9b90ab346fa223fced",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 38877,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128.1,
+    "audioSha256": "8d1d8be1d82893be9671158c164b8971d4569cbd5026f00426d894d1eb14b722",
+    "isExpressive": true
   },
   "tv-g2-b15": {
     "lessonId": "tv-g2-b15",
@@ -611,27 +890,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       63
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b16": {
     "lessonId": "tv-g2-b16",
     "primaryPath": "/audio/curriculum/tv-g2-b16.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "5e59ca081a6dda5cdac75d8ee3c8ba4ec325392d3e763eba893ca34ce57a8b91",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       66
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "689cdf8d1c2c614ebb79e5995d3faaec7238a8106a749466c737ba9558fd049d",
+    "segmentCount": 19,
+    "stanzaCount": 4,
+    "lineCount": 18,
+    "durationMs": 43620,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 130.7,
+    "audioSha256": "4f7d97029ffb55bd62ebd8561f9b4e383c88b459ebe289547d44b5e67f040585",
+    "isExpressive": true
   },
   "tv-g2-b17": {
     "lessonId": "tv-g2-b17",
     "primaryPath": "/audio/curriculum/tv-g2-b17.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "f8392545e2988afc03262151850e7a74955b1e92ec86b52c58614d3acb02f8fa",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       79
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "13d5912f03daec6387d4e763f48312120b2684d0606f09ec685e0ef68637aae5",
+    "segmentCount": 15,
+    "stanzaCount": 3,
+    "lineCount": 14,
+    "durationMs": 33798,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 127.8,
+    "audioSha256": "caab7c8f41458de8d9a953640fe985997625eb7b5a4aac946cce40187ed2219b",
+    "isExpressive": true
   },
   "tv-g2-b18": {
     "lessonId": "tv-g2-b18",
@@ -641,7 +943,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       82
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t1-b19": {
     "lessonId": "tv-g2-t1-b19",
@@ -651,7 +954,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       86
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t1-b20": {
     "lessonId": "tv-g2-t1-b20",
@@ -661,17 +965,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       89
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t1-b21": {
     "lessonId": "tv-g2-t1-b21",
     "primaryPath": "/audio/curriculum/tv-g2-t1-b21.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "ae951f96080afe8da54024429b9f2d9961d5359b452094ad0de0141755bb1540",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       94
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "71ad10a24e18446fb0759a56b91432c0e2b69d6819777d4a828b72233fc395be",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 42350,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 117.6,
+    "audioSha256": "0b25bf7dc4805df617f1f1f3941eb847359df8b2b740dc396962488815fa165b",
+    "isExpressive": true
   },
   "tv-g2-t1-b22": {
     "lessonId": "tv-g2-t1-b22",
@@ -681,7 +997,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       97
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t1-b23": {
     "lessonId": "tv-g2-t1-b23",
@@ -691,17 +1008,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       101
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t1-b24": {
     "lessonId": "tv-g2-t1-b24",
     "primaryPath": "/audio/curriculum/tv-g2-t1-b24.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "d518d575c6ec585d5664fc39575523a8beb6fb811aaaa159d7f8eac726cf3742",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       104
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "1bd74e3f7b3e0966c63e2d120aca269eebaaf1f37c73ae881b85fc1d8e25d15a",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 40687,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 122.4,
+    "audioSha256": "3b28080509f811ce6b741eb2e1a2751057c0a524ba3d58f2d0f9d2d3e6807e38",
+    "isExpressive": true
   },
   "tv-g2-t1-b25": {
     "lessonId": "tv-g2-t1-b25",
@@ -711,27 +1040,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       109
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g2-t1-b26": {
     "lessonId": "tv-g2-t1-b26",
     "primaryPath": "/audio/curriculum/tv-g2-t1-b26.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "416203d65d705cadfc207fb5bd5b40de0fa4a839cded14df33bbb55a08d8e4e6",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       112
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "ab91ff2907d9def0512ca96178e0741d577ce5b5db849f4d689ad6fe144d2e76",
+    "segmentCount": 19,
+    "stanzaCount": 4,
+    "lineCount": 18,
+    "durationMs": 43897,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 129.8,
+    "audioSha256": "e3a14dcb994484de9c0f4286057aac5f9cd617f5b0eb76391dba1716f3cdb628",
+    "isExpressive": true
   },
   "tv-g2-t1-b27": {
     "lessonId": "tv-g2-t1-b27",
     "primaryPath": "/audio/curriculum/tv-g2-t1-b27.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "a9942151f58cda25c623dd450286109bc6ded842e581351db8c911cc04f6fc1f",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       116
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "aa483e9bee467c142804608e80ec46d39e417bb1b1569f886734618940a92899",
+    "segmentCount": 11,
+    "stanzaCount": 5,
+    "lineCount": 10,
+    "durationMs": 31592,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 134.8,
+    "audioSha256": "b53b491cdbd871cc8bcbc03ffa96df48bc31730ec938b97e069561a86ecdd78c",
+    "isExpressive": true
   },
   "tv-g2-t1-b28": {
     "lessonId": "tv-g2-t1-b28",
@@ -741,27 +1093,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       119
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t1-b29": {
     "lessonId": "tv-g2-t1-b29",
     "primaryPath": "/audio/curriculum/tv-g2-t1-b29.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "5c72f5da500af1c7b822816af1aa96ede35acd0e098113a4d46f41e6b3f516cd",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       123
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "a03f3a72f999f6f56bbecb5277d03653a7b60b8eaa009d61dc7adf89a093591a",
+    "segmentCount": 13,
+    "stanzaCount": 3,
+    "lineCount": 12,
+    "durationMs": 29541,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 132,
+    "audioSha256": "002aa7c9c2ef44696ceae54edb93422b4132a100e8de60deff7bebef967df294",
+    "isExpressive": true
   },
   "tv-g2-t1-b30": {
     "lessonId": "tv-g2-t1-b30",
     "primaryPath": "/audio/curriculum/tv-g2-t1-b30.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "c27baccea273f88282406166b22f4a127670633ee661e4b897c52ba0cf081970",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       126
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "6218ecb91e66ecbd63d9e1fd3487f25bea7d1f9f8c22d027bf9a4d35a2cd5029",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 44124,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 111.5,
+    "audioSha256": "794b64a090fabceb21c1c3679af17ecfc61a387d9b0c01abbfb1dec9bc2d4f9b",
+    "isExpressive": true
   },
   "tv-g2-t1-b31": {
     "lessonId": "tv-g2-t1-b31",
@@ -772,7 +1147,8 @@
     "sourcePages": [
       130,
       131
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t1-b32": {
     "lessonId": "tv-g2-t1-b32",
@@ -782,7 +1158,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       133
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b19": {
     "lessonId": "tv-g2-b19",
@@ -792,7 +1169,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       9
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b20": {
     "lessonId": "tv-g2-b20",
@@ -802,7 +1180,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       12
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b21": {
     "lessonId": "tv-g2-b21",
@@ -812,7 +1191,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       16
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b22": {
     "lessonId": "tv-g2-b22",
@@ -822,17 +1202,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       19
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b23": {
     "lessonId": "tv-g2-b23",
     "primaryPath": "/audio/curriculum/tv-g2-b23.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "ea6218cb95bc1e5912c395be6acb5d25280d9283a22e6b3984829fc8bdf0596a",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       23
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "a6e461e9add86666acf60f4c716344ce68d43c90620716671a0b168ebe17d9ee",
+    "segmentCount": 18,
+    "stanzaCount": 4,
+    "lineCount": 17,
+    "durationMs": 34762,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 112.2,
+    "audioSha256": "1069a6c8a059a913d5762117ddf193cfad8da23b1e0b0841169e2ba32424b456",
+    "isExpressive": true
   },
   "tv-g2-b24": {
     "lessonId": "tv-g2-b24",
@@ -842,37 +1234,71 @@
     "lessonVersion": 1,
     "sourcePages": [
       26
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b25": {
     "lessonId": "tv-g2-b25",
     "primaryPath": "/audio/curriculum/tv-g2-b25.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "1286989b02198334a364163aadeec77fff3f30452afd4127592f190c6f7167b9",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       31
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "e569bd8e3e8e6a7d6d4b29791b82bcedd71cd71a76282db5bc5d96333ffcd3eb",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 37376,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 131.6,
+    "audioSha256": "ceca3e3f40b16460037e419391102cdc22a2842aa4e423bf3e036fbb63330e4b",
+    "isExpressive": true
   },
   "tv-g2-b26": {
     "lessonId": "tv-g2-b26",
     "primaryPath": "/audio/curriculum/tv-g2-b26.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "409d5616cd2f13bad0e0ac36cbc690250e2394dec407b6c2f062ecc3f73d4f70",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       34
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "24fb29e617ca43f8f2d106579880d7cac5d8bf053d3114da1860b250680f29bf",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 39355,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 125,
+    "audioSha256": "b12cc432483943de530a1ce924f8c61df989ea7ae27a4ea8d0a6e2a68c05b303",
+    "isExpressive": true
   },
   "tv-g2-b27": {
     "lessonId": "tv-g2-b27",
     "primaryPath": "/audio/curriculum/tv-g2-b27.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "1ef8acedab3e6179f4a5b257ce1d4d595453014449fec4b1f86e9befaa0c3677",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       39
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c4b57b92f89b66c8d50a5032cb60d249ca6df5f704365422e6f85590bdedbd3f",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 40768,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 120.7,
+    "audioSha256": "02a6026c3d67813d358aee59813ccbd6e1b46d966d21243dc62220939e5ffa53",
+    "isExpressive": true
   },
   "tv-g2-b28": {
     "lessonId": "tv-g2-b28",
@@ -882,7 +1308,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       42
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-b29": {
     "lessonId": "tv-g2-b29",
@@ -892,27 +1319,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       46
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g2-b30": {
     "lessonId": "tv-g2-b30",
     "primaryPath": "/audio/curriculum/tv-g2-b30.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "7c391459db540c365f7a21d649b7b70fc0259a46358fb1e96adf09f023d4cfd4",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       49
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "49c0b988a0cbb32ceb8e5ff3296a20e90002d69fb373f423418586cb63c83a49",
+    "segmentCount": 23,
+    "stanzaCount": 5,
+    "lineCount": 22,
+    "durationMs": 44918,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 122.9,
+    "audioSha256": "d0ce5f347691c89a719225ab275fce8ec8f231829d122235b8b879dfbe9277ba",
+    "isExpressive": true
   },
   "tv-g2-t2-b13": {
     "lessonId": "tv-g2-t2-b13",
     "primaryPath": "/audio/curriculum/tv-g2-t2-b13.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "3f66e28e711bc5819014f540a2f5ec3e8b93829ec6308b5865e323f79ad28dde",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       54
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "d704c87d907673d3e468abcedb24cb31afe742fef95c362ebe364dac5b008f0f",
+    "segmentCount": 34,
+    "stanzaCount": 3,
+    "lineCount": 33,
+    "durationMs": 50925,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 106,
+    "audioSha256": "ab61c31f67f49ffecf887ff949662b67ba72245f88cdec82c3ce09deeb533e1e",
+    "isExpressive": true
   },
   "tv-g2-t2-b14": {
     "lessonId": "tv-g2-t2-b14",
@@ -922,7 +1372,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       57
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g2-t2-b15": {
     "lessonId": "tv-g2-t2-b15",
@@ -932,7 +1383,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       61
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b16": {
     "lessonId": "tv-g2-t2-b16",
@@ -942,7 +1394,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       64
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b17": {
     "lessonId": "tv-g2-t2-b17",
@@ -952,7 +1405,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       77
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b18": {
     "lessonId": "tv-g2-t2-b18",
@@ -962,7 +1416,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       80
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b19": {
     "lessonId": "tv-g2-t2-b19",
@@ -972,7 +1427,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       84
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b20": {
     "lessonId": "tv-g2-t2-b20",
@@ -982,7 +1438,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       87
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b21": {
     "lessonId": "tv-g2-t2-b21",
@@ -992,17 +1449,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       92
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g2-t2-b22": {
     "lessonId": "tv-g2-t2-b22",
     "primaryPath": "/audio/curriculum/tv-g2-t2-b22.mp3",
     "primaryVoice": "Cô Giáo Vy",
-    "transcriptHash": "187ec8b5a70f1937f5dc6ec1cfa72909dae112f5d81c838d36203ec0c147b71b",
-    "lessonVersion": 1,
+    "transcriptHash": "ac7bb56ddce7316064a5d9c8cebf5fe452f789a047ec0c4b3deeb28a2a800d4c",
+    "lessonVersion": 2,
     "sourcePages": [
       95
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "d7f6861131d38b124be9e4b077a4afefcb2b910244077dfeaab57af2a4f71b1f",
+    "segmentCount": 19,
+    "stanzaCount": 5,
+    "lineCount": 18,
+    "durationMs": 44053,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 130.8,
+    "audioSha256": "af5126f418f77135cf154044dfcfa864cf9c0928278f1863894831f616021584",
+    "isExpressive": true
   },
   "tv-g2-t2-b23": {
     "lessonId": "tv-g2-t2-b23",
@@ -1013,7 +1482,8 @@
     "sourcePages": [
       100,
       101
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b24": {
     "lessonId": "tv-g2-t2-b24",
@@ -1023,7 +1493,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       104
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b25": {
     "lessonId": "tv-g2-t2-b25",
@@ -1033,7 +1504,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       110
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b26": {
     "lessonId": "tv-g2-t2-b26",
@@ -1043,7 +1515,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       113
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b27": {
     "lessonId": "tv-g2-t2-b27",
@@ -1053,7 +1526,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       119
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g2-t2-b28": {
     "lessonId": "tv-g2-t2-b28",
@@ -1063,7 +1537,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       122
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b29": {
     "lessonId": "tv-g2-t2-b29",
@@ -1073,17 +1548,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       126
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g2-t2-b30": {
     "lessonId": "tv-g2-t2-b30",
     "primaryPath": "/audio/curriculum/tv-g2-t2-b30.mp3",
     "primaryVoice": "Cô Giáo Vy",
-    "transcriptHash": "1a3b534dcb63ac025a664bed461d9650fb10f8730b5ffd9acc0c8403981752b8",
-    "lessonVersion": 1,
+    "transcriptHash": "c7e29aa6993d6352512a5c3fb242dab64ae91ab57345c9eeae73095dfc3230be",
+    "lessonVersion": 2,
     "sourcePages": [
       129
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "e94c2e4a6e61763f28be7b5056b6ea35cefc9bbf1a6b1d1abeb3099e2c8eac6d",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 37823,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 133.3,
+    "audioSha256": "a173cc20fe03f1bd4b8fd0f0c8f80f0a2a075b25aa4d8a3ca3a9f310d2cb309e",
+    "isExpressive": true
   },
   "tv-g3-b1": {
     "lessonId": "tv-g3-b1",
@@ -1094,18 +1581,30 @@
     "sourcePages": [
       10,
       11
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-b2": {
     "lessonId": "tv-g3-b2",
     "primaryPath": "/audio/curriculum/tv-g3-b2.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "494d7f482670d5a23ef0db4116a56b5c422395c03425230c15aec00d5b209d0b",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       13,
       14
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "167da8b55363342d1bf34210f27cad8b539fd73f6cbcdd52cff97349de157c28",
+    "segmentCount": 19,
+    "stanzaCount": 5,
+    "lineCount": 18,
+    "durationMs": 42043,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 132.7,
+    "audioSha256": "28250f558c7c4d0ba044336844edfc6df7273983343f0ea56efe92dc20b781ba",
+    "isExpressive": true
   },
   "tv-g3-b3": {
     "lessonId": "tv-g3-b3",
@@ -1116,7 +1615,8 @@
     "sourcePages": [
       17,
       18
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b4": {
     "lessonId": "tv-g3-b4",
@@ -1127,7 +1627,8 @@
     "sourcePages": [
       21,
       22
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b5": {
     "lessonId": "tv-g3-b5",
@@ -1138,7 +1639,8 @@
     "sourcePages": [
       26,
       27
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b6": {
     "lessonId": "tv-g3-b6",
@@ -1149,18 +1651,30 @@
     "sourcePages": [
       30,
       31
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b7": {
     "lessonId": "tv-g3-b7",
     "primaryPath": "/audio/curriculum/tv-g3-b7.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "d7fac8c9e99eceb7fb5ff0936df96b3786d3045a2f8c8af7306d49c05804cc51",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       34,
       35
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "496d6c5467a0e7613d9492a1bc0521b7837a2f522cd2d21a8d414365279c140b",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 37769,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 133.4,
+    "audioSha256": "07b46140789086df714da9aea38ac53e00ee4e0b3adadb22ea88932166c39e7b",
+    "isExpressive": true
   },
   "tv-g3-b8": {
     "lessonId": "tv-g3-b8",
@@ -1171,18 +1685,30 @@
     "sourcePages": [
       38,
       39
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b9": {
     "lessonId": "tv-g3-b9",
     "primaryPath": "/audio/curriculum/tv-g3-b9.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "f92d2f71b34c87168432b1f50412ae9a315a891feb9a7e3d6f8b417366742c5e",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       43,
       44
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "215e601861fd94f8b8307d6d5c51e47dc14b63f6f4a27893791cd59e3cbc1ead",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 46523,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 134.1,
+    "audioSha256": "4b818aada73e1ae4752079c3025d5e3cac36a3e84663fcde83425761478384ec",
+    "isExpressive": true
   },
   "tv-g3-b10": {
     "lessonId": "tv-g3-b10",
@@ -1193,7 +1719,8 @@
     "sourcePages": [
       46,
       47
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b11": {
     "lessonId": "tv-g3-b11",
@@ -1204,7 +1731,8 @@
     "sourcePages": [
       50,
       51
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b12": {
     "lessonId": "tv-g3-b12",
@@ -1215,18 +1743,30 @@
     "sourcePages": [
       54,
       55
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b13": {
     "lessonId": "tv-g3-b13",
     "primaryPath": "/audio/curriculum/tv-g3-b13.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "0f3296367af8468e040f346f33e818ada08777238b047df742ab7568d3c452e4",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       59,
       60
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "8ecfae1e741d55a628de882bb260f6018efb9ebbe0d01aca1e41f6dbc83d2500",
+    "segmentCount": 19,
+    "stanzaCount": 5,
+    "lineCount": 18,
+    "durationMs": 38315,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 119,
+    "audioSha256": "6233ee2aebdbeadc0c3f1ef506fa665b4c2bb99861e5130a8e5206e41d36591c",
+    "isExpressive": true
   },
   "tv-g3-b14": {
     "lessonId": "tv-g3-b14",
@@ -1236,7 +1776,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       62
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b15": {
     "lessonId": "tv-g3-t1-b15",
@@ -1247,29 +1788,52 @@
     "sourcePages": [
       66,
       67
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b16": {
     "lessonId": "tv-g3-t1-b16",
     "primaryPath": "/audio/curriculum/tv-g3-t1-b16.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "da09cd1194a88ad55c9149defb452307730b4d4907f29eb50bdad05908eb14ae",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       70,
       71
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "90404afe4e895299d63eeac4fcda2c7f6f649de59190e076cce751d4a74eb3ab",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 46390,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 134.5,
+    "audioSha256": "eef99bb44f24d5b7e743e96b82735423029dd67fe3fcf913b3ff36c90075932f",
+    "isExpressive": true
   },
   "tv-g3-t1-b17": {
     "lessonId": "tv-g3-t1-b17",
     "primaryPath": "/audio/curriculum/tv-g3-t1-b17.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "7cf0557c8fcd7f2c5c3e25d4a06f49bfef98179d00bfc84f8d67034607e15358",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       82,
       83
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "1f2c07f8bd6f27029d959f60f24eea1661da607971420d5ffc95cf1dfa9d3935",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 37499,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 131.2,
+    "audioSha256": "f63e9d4bbac1ac943983d9fb24d554edf77146d1204669dae81427cfe1d55d4b",
+    "isExpressive": true
   },
   "tv-g3-t1-b18": {
     "lessonId": "tv-g3-t1-b18",
@@ -1280,18 +1844,30 @@
     "sourcePages": [
       86,
       87
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b19": {
     "lessonId": "tv-g3-t1-b19",
     "primaryPath": "/audio/curriculum/tv-g3-t1-b19.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "d16e4cb163a5d6e6a9e189d0afc9d465329ea9e2a02ac5f866eda095da872778",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       90,
       91
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "24c110aa1b8dcbf4df70153cfe48162947d04671b5d96e80bbccacb6f914fe14",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 46987,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 134.1,
+    "audioSha256": "dcc17f3143a3daa0fd53a5df453eecaae5255128054713dbe57ac9c6e6333bec",
+    "isExpressive": true
   },
   "tv-g3-t1-b20": {
     "lessonId": "tv-g3-t1-b20",
@@ -1302,7 +1878,8 @@
     "sourcePages": [
       93,
       94
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-t1-b21": {
     "lessonId": "tv-g3-t1-b21",
@@ -1313,7 +1890,8 @@
     "sourcePages": [
       97,
       98
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b22": {
     "lessonId": "tv-g3-t1-b22",
@@ -1324,18 +1902,30 @@
     "sourcePages": [
       100,
       101
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b23": {
     "lessonId": "tv-g3-t1-b23",
     "primaryPath": "/audio/curriculum/tv-g3-t1-b23.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "5083c3dfb4d7792356b5664ed165238ae323d4f226eee0132910cc9125375659",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       104,
       105
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "ad48c3b3dad67a1a2e571bdec3eb0a00c5dfbd3aa6a90dc722a73654bb47fb94",
+    "segmentCount": 24,
+    "stanzaCount": 6,
+    "lineCount": 23,
+    "durationMs": 46993,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 122.6,
+    "audioSha256": "843b801f969250c998831844e0fa370b6a2cc1f03c0b704aee8f6b8cb2def037",
+    "isExpressive": true
   },
   "tv-g3-t1-b24": {
     "lessonId": "tv-g3-t1-b24",
@@ -1346,7 +1936,8 @@
     "sourcePages": [
       107,
       108
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b25": {
     "lessonId": "tv-g3-t1-b25",
@@ -1357,7 +1948,8 @@
     "sourcePages": [
       112,
       113
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-t1-b26": {
     "lessonId": "tv-g3-t1-b26",
@@ -1368,7 +1960,8 @@
     "sourcePages": [
       116,
       117
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-t1-b27": {
     "lessonId": "tv-g3-t1-b27",
@@ -1379,18 +1972,30 @@
     "sourcePages": [
       120,
       121
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b28": {
     "lessonId": "tv-g3-t1-b28",
     "primaryPath": "/audio/curriculum/tv-g3-t1-b28.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "89714d57ad152001e0c831c05a41349002e8e9737b87199f00c6f013f64e2525",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       124,
       125
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "7ca4ca9112cb8dcdf3b28e87ba2fa42da9b140ac6471f6e9250a00318932fe22",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 58105,
+    "effectiveTempo": 0.75242,
+    "wordsPerMinute": 128,
+    "audioSha256": "96ede53296e0b083947a8908d8badf6415ea0e4921e19e262a9825fd9121e457",
+    "isExpressive": true
   },
   "tv-g3-t1-b29": {
     "lessonId": "tv-g3-t1-b29",
@@ -1401,7 +2006,8 @@
     "sourcePages": [
       129,
       130
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b30": {
     "lessonId": "tv-g3-t1-b30",
@@ -1412,7 +2018,8 @@
     "sourcePages": [
       133,
       134
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t1-b31": {
     "lessonId": "tv-g3-t1-b31",
@@ -1423,7 +2030,8 @@
     "sourcePages": [
       137,
       138
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-t1-b32": {
     "lessonId": "tv-g3-t1-b32",
@@ -1434,7 +2042,8 @@
     "sourcePages": [
       140,
       141
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-b15": {
     "lessonId": "tv-g3-b15",
@@ -1445,18 +2054,30 @@
     "sourcePages": [
       8,
       9
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b16": {
     "lessonId": "tv-g3-b16",
     "primaryPath": "/audio/curriculum/tv-g3-b16.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "61086957c582b3708dc077447a55524534bf9af23e30bc1e2e9aae9d8248c765",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       11,
       12
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "90a3d5f1921161fca49b23fd34918ab139165615775140bb5753a9e58e4a1024",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 42318,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 114.8,
+    "audioSha256": "ba49dbf63dea61219da8f5aa196fe68eabd31f1c1155083a0611db09f21ea63c",
+    "isExpressive": true
   },
   "tv-g3-b17": {
     "lessonId": "tv-g3-b17",
@@ -1467,7 +2088,8 @@
     "sourcePages": [
       15,
       16
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-b18": {
     "lessonId": "tv-g3-b18",
@@ -1478,17 +2100,29 @@
     "sourcePages": [
       19,
       20
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b19": {
     "lessonId": "tv-g3-b19",
     "primaryPath": "/audio/curriculum/tv-g3-b19.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "9bf748416374ec2c22f89edbb937e5031a076b0fd1584779c6983970bee0844b",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       23
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "4a1e3cd529cbf28728ec18f9f682098bad40debefc21cd6fb67195ce761a6f23",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 40817,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 123.5,
+    "audioSha256": "5c94b94955f79056e804967fd6bff0d84702158a409ba0c585bc1ef38052869b",
+    "isExpressive": true
   },
   "tv-g3-b20": {
     "lessonId": "tv-g3-b20",
@@ -1499,17 +2133,29 @@
     "sourcePages": [
       27,
       28
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b21": {
     "lessonId": "tv-g3-b21",
     "primaryPath": "/audio/curriculum/tv-g3-b21.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "e3e283bf14f93f8e57fa7065ee93c2658857792984dcf4366ec4331ae06615d4",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       32
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "b5d0b3436debd6819596800fabb55d468645e0fce7be5f21909d1357ff5f50e2",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 42995,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 118.6,
+    "audioSha256": "178ee5683efe62b2f16eb6d34e732227c90fa768c0221adcf20887c46760e9a3",
+    "isExpressive": true
   },
   "tv-g3-b22": {
     "lessonId": "tv-g3-b22",
@@ -1520,7 +2166,8 @@
     "sourcePages": [
       35,
       36
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b23": {
     "lessonId": "tv-g3-b23",
@@ -1530,7 +2177,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       41
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-b24": {
     "lessonId": "tv-g3-b24",
@@ -1541,7 +2189,8 @@
     "sourcePages": [
       44,
       45
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-b25": {
     "lessonId": "tv-g3-b25",
@@ -1552,7 +2201,8 @@
     "sourcePages": [
       48,
       49
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-t2-b12": {
     "lessonId": "tv-g3-t2-b12",
@@ -1563,18 +2213,30 @@
     "sourcePages": [
       51,
       52
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g3-t2-b13": {
     "lessonId": "tv-g3-t2-b13",
     "primaryPath": "/audio/curriculum/tv-g3-t2-b13.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "8bbca110b4cf499131925f234e507ec64657f7f981c0c5afdfb7c981f1689adc",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       55,
       56
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "f3c8654c8be714fe776dfaaf13da0962efac45ac885dd716fa19b1faa7a4e9ec",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 48381,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 124,
+    "audioSha256": "d31610a20bce98c2dc8984d6690c35dd32963e46c7b10fe3ecdccbd02d5ffa3e",
+    "isExpressive": true
   },
   "tv-g3-t2-b14": {
     "lessonId": "tv-g3-t2-b14",
@@ -1585,7 +2247,8 @@
     "sourcePages": [
       58,
       59
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b15": {
     "lessonId": "tv-g3-t2-b15",
@@ -1596,7 +2259,8 @@
     "sourcePages": [
       62,
       63
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b16": {
     "lessonId": "tv-g3-t2-b16",
@@ -1607,17 +2271,29 @@
     "sourcePages": [
       66,
       67
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b17": {
     "lessonId": "tv-g3-t2-b17",
     "primaryPath": "/audio/curriculum/tv-g3-t2-b17.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "9e517787927996e620594cb9d1082a71ddb12b7ed83f1f9f7869e43aa7ec81c2",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       80
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c3a49281f27a385aa3f5c25a3aa67762a5e06579f4c852baae8a7fa195ca7880",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 50439,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 119,
+    "audioSha256": "bed433bbb8726bb49b0157e24af125d86ecd775d986c828ee49574e7ced8a856",
+    "isExpressive": true
   },
   "tv-g3-t2-b18": {
     "lessonId": "tv-g3-t2-b18",
@@ -1627,7 +2303,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       83
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b19": {
     "lessonId": "tv-g3-t2-b19",
@@ -1638,18 +2315,30 @@
     "sourcePages": [
       87,
       88
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b20": {
     "lessonId": "tv-g3-t2-b20",
     "primaryPath": "/audio/curriculum/tv-g3-t2-b20.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "d7e3da2cd390ce259af5301022496d265e38539dc10d12c5f2fb5fede357be9f",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       91,
       92
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "97c29a1f3fee357dcd934b6b989229f7b464918c0a0e460e4f8b8fc1b546559c",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 48267,
+    "effectiveTempo": 0.74632,
+    "wordsPerMinute": 128,
+    "audioSha256": "acfc77f5813d82d5fefe4ca19a7923f4246f1dfaa791dfdbf76e18f93b1b9ed9",
+    "isExpressive": true
   },
   "tv-g3-t2-b21": {
     "lessonId": "tv-g3-t2-b21",
@@ -1659,7 +2348,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       95
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b22": {
     "lessonId": "tv-g3-t2-b22",
@@ -1670,7 +2360,8 @@
     "sourcePages": [
       98,
       99
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b23": {
     "lessonId": "tv-g3-t2-b23",
@@ -1681,7 +2372,8 @@
     "sourcePages": [
       102,
       103
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b24": {
     "lessonId": "tv-g3-t2-b24",
@@ -1692,7 +2384,8 @@
     "sourcePages": [
       106,
       107
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b25": {
     "lessonId": "tv-g3-t2-b25",
@@ -1703,7 +2396,8 @@
     "sourcePages": [
       111,
       112
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b26": {
     "lessonId": "tv-g3-t2-b26",
@@ -1714,7 +2408,8 @@
     "sourcePages": [
       114,
       115
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b27": {
     "lessonId": "tv-g3-t2-b27",
@@ -1725,7 +2420,8 @@
     "sourcePages": [
       118,
       119
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b28": {
     "lessonId": "tv-g3-t2-b28",
@@ -1735,7 +2431,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       122
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b29": {
     "lessonId": "tv-g3-t2-b29",
@@ -1746,27 +2443,50 @@
     "sourcePages": [
       126,
       127
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g3-t2-b30": {
     "lessonId": "tv-g3-t2-b30",
     "primaryPath": "/audio/curriculum/tv-g3-t2-b30.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "0ac81ba80df910c42cad3c16c4b51cc307535b259e325d3fa9dd050a14513758",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       130
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "f41bb5956cd82478d0671ee87c3d5536147180776b01ab93c3d4ae3fee69f474",
+    "segmentCount": 27,
+    "stanzaCount": 7,
+    "lineCount": 26,
+    "durationMs": 55140,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 117.5,
+    "audioSha256": "6a8802ccd668ce5ec5fbdd2c5548fe4d0d89b5a364f11d0688ab95f9fdb3fd99",
+    "isExpressive": true
   },
   "tv-g4-b1": {
     "lessonId": "tv-g4-b1",
     "primaryPath": "/audio/curriculum/tv-g4-b1.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "720a51207c3f091b32437dfa49406d418b9398154f7cbea3e5eb665ec292006a",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       8
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "dc36bc32ba0bccf613cd355aa6126748803130557770762c96ac1a501d20a206",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 46032,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 134.3,
+    "audioSha256": "59174ec283c299ea5e151b7f47f4dbbd9f4fddab3d1c196cf940103df4f96e6c",
+    "isExpressive": true
   },
   "tv-g4-b2": {
     "lessonId": "tv-g4-b2",
@@ -1776,7 +2496,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       12
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b3": {
     "lessonId": "tv-g4-b3",
@@ -1786,7 +2507,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       16
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b4": {
     "lessonId": "tv-g4-b4",
@@ -1796,7 +2518,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       20
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b5": {
     "lessonId": "tv-g4-b5",
@@ -1806,7 +2529,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       23
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b6": {
     "lessonId": "tv-g4-b6",
@@ -1816,7 +2540,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       26
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b7": {
     "lessonId": "tv-g4-b7",
@@ -1826,7 +2551,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       30
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b8": {
     "lessonId": "tv-g4-b8",
@@ -1836,17 +2562,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       34
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b9": {
     "lessonId": "tv-g4-b9",
     "primaryPath": "/audio/curriculum/tv-g4-b9.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "c54ddc421d767625eb268c3cba0b5936430087703766f7f57a4b7c3ad63fef26",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       39
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "1413b65c4f432978fbb218f09dc969b65b4f7318eb337226dffe0a77dff3a8aa",
+    "segmentCount": 25,
+    "stanzaCount": 3,
+    "lineCount": 24,
+    "durationMs": 55793,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 134.4,
+    "audioSha256": "58018bfd006c39cf2b7f59e584636b0f9f096ed101413609f69c6e58163a3e13",
+    "isExpressive": true
   },
   "tv-g4-b10": {
     "lessonId": "tv-g4-b10",
@@ -1856,7 +2594,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       44
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b11": {
     "lessonId": "tv-g4-b11",
@@ -1866,7 +2605,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       48
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b12": {
     "lessonId": "tv-g4-t1-b12",
@@ -1876,7 +2616,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       51
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b13": {
     "lessonId": "tv-g4-t1-b13",
@@ -1886,7 +2627,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       55
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g4-t1-b14": {
     "lessonId": "tv-g4-t1-b14",
@@ -1896,17 +2638,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       59
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b15": {
     "lessonId": "tv-g4-t1-b15",
     "primaryPath": "/audio/curriculum/tv-g4-t1-b15.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "3642d29da4f1e7ceee80e84a24c18e1165959adfcd1661f55712476c47af8f51",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       63
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "6be20adff46848b2c1cde3f76a5acaa19b4016ba3599f3fd260e0d19ca73e20e",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 49488,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 126.1,
+    "audioSha256": "04148ec29787f67492f405174830dff0499bf5e6d1dd98dd0537a13c0056e8c3",
+    "isExpressive": true
   },
   "tv-g4-t1-b16": {
     "lessonId": "tv-g4-t1-b16",
@@ -1916,17 +2670,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       66
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b17": {
     "lessonId": "tv-g4-t1-b17",
     "primaryPath": "/audio/curriculum/tv-g4-t1-b17.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "8285ef737c40fd59b2ced53c6e0522ba0964bbe485b460bb96dd556da4d4bbe8",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       77
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "ba13d736a75b849867acde64872bf88877e3467a5c33bedcfca013d1633d60b3",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 48306,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 126.7,
+    "audioSha256": "bd3cd5746358a06bd5ca3420a6483382143b7e3dd9fc16f90c2a0a226324f3c5",
+    "isExpressive": true
   },
   "tv-g4-t1-b18": {
     "lessonId": "tv-g4-t1-b18",
@@ -1936,7 +2702,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       81
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b19": {
     "lessonId": "tv-g4-t1-b19",
@@ -1946,7 +2713,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       85
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b20": {
     "lessonId": "tv-g4-t1-b20",
@@ -1956,7 +2724,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       89
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b21": {
     "lessonId": "tv-g4-t1-b21",
@@ -1966,7 +2735,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       93
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b22": {
     "lessonId": "tv-g4-t1-b22",
@@ -1976,7 +2746,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       97
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b23": {
     "lessonId": "tv-g4-t1-b23",
@@ -1986,7 +2757,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       101
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b24": {
     "lessonId": "tv-g4-t1-b24",
@@ -1996,7 +2768,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       105
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b25": {
     "lessonId": "tv-g4-t1-b25",
@@ -2006,7 +2779,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       109
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b26": {
     "lessonId": "tv-g4-t1-b26",
@@ -2016,7 +2790,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       114
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b27": {
     "lessonId": "tv-g4-t1-b27",
@@ -2026,17 +2801,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       118
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b28": {
     "lessonId": "tv-g4-t1-b28",
     "primaryPath": "/audio/curriculum/tv-g4-t1-b28.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "4b0d34786512cdd885bbb3188c595ed0ff46e149affbb547339677ee8e902b7f",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       122
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "71071b125974fb4ef9a5fb0a72ceeac51c82798ffb289d22b5bbc564f980fcb1",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 58109,
+    "effectiveTempo": 0.71196,
+    "wordsPerMinute": 128,
+    "audioSha256": "9512b0c466aa7d537e9fe27f93a7bc20a026ea947fe0f1f840180b160fcbc1b0",
+    "isExpressive": true
   },
   "tv-g4-t1-b29": {
     "lessonId": "tv-g4-t1-b29",
@@ -2046,7 +2833,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       125
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t1-b30": {
     "lessonId": "tv-g4-t1-b30",
@@ -2056,17 +2844,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       129
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g4-t1-b31": {
     "lessonId": "tv-g4-t1-b31",
     "primaryPath": "/audio/curriculum/tv-g4-t1-b31.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "93aa6fef8c68a235bcea2be1f177ff0cfef677916ca19c26567bef9dc5da0a5f",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       132
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "afa09beef5f5ef96956368e6f47340d5835ae521be5304fd826e1125f7e75574",
+    "segmentCount": 18,
+    "stanzaCount": 5,
+    "lineCount": 17,
+    "durationMs": 50602,
+    "effectiveTempo": 0.74392,
+    "wordsPerMinute": 128.1,
+    "audioSha256": "76b658f552f539eaee1540801e71f9522834fd41baa3544fa0c67b73897b04d2",
+    "isExpressive": true
   },
   "tv-g4-t1-b32": {
     "lessonId": "tv-g4-t1-b32",
@@ -2076,7 +2876,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       135
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b12": {
     "lessonId": "tv-g4-b12",
@@ -2086,7 +2887,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       8
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b13": {
     "lessonId": "tv-g4-b13",
@@ -2096,7 +2898,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       12
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b14": {
     "lessonId": "tv-g4-b14",
@@ -2106,17 +2909,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       16
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b15": {
     "lessonId": "tv-g4-b15",
     "primaryPath": "/audio/curriculum/tv-g4-b15.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "e3d741248ceaa519116698945ba9a6df8b404b1f2df3751166fec9cb84c99d50",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       20
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "87af2333f48a699f76c8ae1f7d0694968ba013dfe14b77d2a9ecae75433fd735",
+    "segmentCount": 15,
+    "stanzaCount": 3,
+    "lineCount": 14,
+    "durationMs": 46689,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 131.1,
+    "audioSha256": "46418da90473706367f8d4f1ae6b5d33a1c66c5ba01b9c3e61e31832aa8937ba",
+    "isExpressive": true
   },
   "tv-g4-b16": {
     "lessonId": "tv-g4-b16",
@@ -2126,17 +2941,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       24
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g4-b17": {
     "lessonId": "tv-g4-b17",
     "primaryPath": "/audio/curriculum/tv-g4-b17.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "779abf4f8c45416decb291e345592c70bbf7cce5af7a79a6d0ca92774e468a21",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       28
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "8723b29d5c222ac0f87085a56b44d1c841ba82557622e137ea6626a631892350",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 54003,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 130,
+    "audioSha256": "88c899f23dbc6c03207065a4554fbc8285f39de5cbb2c031a4c099135d43c5b6",
+    "isExpressive": true
   },
   "tv-g4-b18": {
     "lessonId": "tv-g4-b18",
@@ -2146,7 +2973,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       31
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b19": {
     "lessonId": "tv-g4-b19",
@@ -2156,7 +2984,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       35
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-b20": {
     "lessonId": "tv-g4-b20",
@@ -2166,27 +2995,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       40
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g4-b21": {
     "lessonId": "tv-g4-b21",
     "primaryPath": "/audio/curriculum/tv-g4-b21.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "f25d41750117c33df3b5c0fa7389ed92a017e1d04e9dc33cc639a0a86f19d66e",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       44
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "816ed638727c681c55426d7477a84f6048455b3fc2f77ea07cd40af6138caed5",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 57868,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128.6,
+    "audioSha256": "a8c891b887c6977a0b4c9c092feb256207c75cd7f2b7fde28ac962fecf8bad7f",
+    "isExpressive": true
   },
   "tv-g4-b22": {
     "lessonId": "tv-g4-b22",
     "primaryPath": "/audio/curriculum/tv-g4-b22.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "26231199300e96de078832338f61ecda12e906b19c2b2203fa7839cabc5bb3af",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       48
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "2d99f5787170724cb52aa908b0ab540c3f4efaab0823066d52c7e02912d8af94",
+    "segmentCount": 15,
+    "stanzaCount": 3,
+    "lineCount": 14,
+    "durationMs": 47324,
+    "effectiveTempo": 0.74788,
+    "wordsPerMinute": 128.1,
+    "audioSha256": "e04058da82e921ccac312e4ab9cccedc160c44fc733af8854fd720a651d5ac14",
+    "isExpressive": true
   },
   "tv-g4-t2-b12": {
     "lessonId": "tv-g4-t2-b12",
@@ -2196,7 +3048,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       51
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g4-t2-b13": {
     "lessonId": "tv-g4-t2-b13",
@@ -2206,17 +3059,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       55
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b14": {
     "lessonId": "tv-g4-t2-b14",
     "primaryPath": "/audio/curriculum/tv-g4-t2-b14.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "42594601e5a1e4eee51a059391796139cfe4581c19d54dd74c178eb779e98d4c",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       59
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "64c9dccdeb27fea6eb24c5a2c399740538bb063b032e82062f57e52b6ea064fb",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 45390,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 132.2,
+    "audioSha256": "7cbc3c78ef27469bed7eb31f3c1e4402b8441f5dbab44a017b4001a96c1535a8",
+    "isExpressive": true
   },
   "tv-g4-t2-b15": {
     "lessonId": "tv-g4-t2-b15",
@@ -2226,17 +3091,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       63
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b16": {
     "lessonId": "tv-g4-t2-b16",
     "primaryPath": "/audio/curriculum/tv-g4-t2-b16.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "e85c6855e0fd3c80c2f1d3a8a4313d90c1b5ed9c73bd62d516d6f6e87d820136",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       67
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "986f1ce9322b7f42d8e41ba25816fd9238601da88a56a97038a5a63f19898369",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 46633,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 132.5,
+    "audioSha256": "c896eef4d10d2aee90eb99b15defb84ad6972fb370076fe00444d03bfda6b88a",
+    "isExpressive": true
   },
   "tv-g4-t2-b17": {
     "lessonId": "tv-g4-t2-b17",
@@ -2246,27 +3123,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       80
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b18": {
     "lessonId": "tv-g4-t2-b18",
     "primaryPath": "/audio/curriculum/tv-g4-t2-b18.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "f9979c4e2da595880ed012e48d97c646128c631c3eeda9e402370c5f27582fe9",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       85
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "2e3a20670585f37bcb02d6603146e1d08f30ded4a53b02489399697a1cdc7f45",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 50853,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 116.8,
+    "audioSha256": "6f34c3feebb4767cbd3ed77060f7e009ee9645cc99411d17d9e58046f6141a85",
+    "isExpressive": true
   },
   "tv-g4-t2-b19": {
     "lessonId": "tv-g4-t2-b19",
     "primaryPath": "/audio/curriculum/tv-g4-t2-b19.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "915235108d8d077c5ded0547b8b7538ce0fbdff625e56f8ee970544ee93f70cd",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       89
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "ba6bbee1e8435f5c954a0ef54b00b9e492901888e9adca89ab18733e6f4aae17",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 56655,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 131.3,
+    "audioSha256": "6656cd131b7a9d948e14796c1b34efeba144c43f48796882464be11d73be23aa",
+    "isExpressive": true
   },
   "tv-g4-t2-b20": {
     "lessonId": "tv-g4-t2-b20",
@@ -2276,7 +3176,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       93
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b21": {
     "lessonId": "tv-g4-t2-b21",
@@ -2286,17 +3187,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       98
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b22": {
     "lessonId": "tv-g4-t2-b22",
     "primaryPath": "/audio/curriculum/tv-g4-t2-b22.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "ddf891fce146681aeb84ba10be2c176795c14cea0e579bf0abc30578f5bde68b",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       102
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "78c72c317f13821a9577b7505c4d1c2dd298817256956755e4d0d7e71ab3d1ef",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 59984,
+    "effectiveTempo": 0.72155,
+    "wordsPerMinute": 128,
+    "audioSha256": "1a950bc18a1226353505dd9f8bef6bbb077959eab70e7c17c6a7f1db6ddc7343",
+    "isExpressive": true
   },
   "tv-g4-t2-b23": {
     "lessonId": "tv-g4-t2-b23",
@@ -2306,7 +3219,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       106
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b24": {
     "lessonId": "tv-g4-t2-b24",
@@ -2316,7 +3230,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       109
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b25": {
     "lessonId": "tv-g4-t2-b25",
@@ -2326,7 +3241,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       113
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b26": {
     "lessonId": "tv-g4-t2-b26",
@@ -2336,7 +3252,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       117
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b27": {
     "lessonId": "tv-g4-t2-b27",
@@ -2346,7 +3263,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       120
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b28": {
     "lessonId": "tv-g4-t2-b28",
@@ -2356,7 +3274,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       123
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b29": {
     "lessonId": "tv-g4-t2-b29",
@@ -2366,17 +3285,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       127
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g4-t2-b30": {
     "lessonId": "tv-g4-t2-b30",
     "primaryPath": "/audio/curriculum/tv-g4-t2-b30.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "eadeefdc006755a780a33f9357845c8860c13a1fdee06a8fa5b591c51f0a3d0c",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       131
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "041de00dc0cec703ead42ff15783db92535b975e6c636421d7118d253c7087b6",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 48969,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 125,
+    "audioSha256": "b0a89ccc56b10e06396707c708bdf5e2e34e4339f85974fbd76ac2fe77032edd",
+    "isExpressive": true
   },
   "tv-g5-b1": {
     "lessonId": "tv-g5-b1",
@@ -2386,7 +3317,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       8
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b2": {
     "lessonId": "tv-g5-b2",
@@ -2396,17 +3328,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       13
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b3": {
     "lessonId": "tv-g5-b3",
     "primaryPath": "/audio/curriculum/tv-g5-b3.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "0d1e5cde586a880148fdcc5ade5386a689c43e257c1538b940548897b099fcf9",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       18
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "f01a66a33e483c8af7b17a9cbdc182a744d16b4be8fef3744d0889ed4b936545",
+    "segmentCount": 27,
+    "stanzaCount": 4,
+    "lineCount": 26,
+    "durationMs": 63049,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128.5,
+    "audioSha256": "f4178a1f784e78201f019d71f00e9d1a40cfc90c5da1dbefafd7f547dd2056b2",
+    "isExpressive": true
   },
   "tv-g5-b4": {
     "lessonId": "tv-g5-b4",
@@ -2416,17 +3360,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       23
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b5": {
     "lessonId": "tv-g5-b5",
     "primaryPath": "/audio/curriculum/tv-g5-b5.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "6f5f16df1a776b1e789b89722a22efb8258375dfb8171ea5a096384f85fb9873",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       28
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "71be5857d538be0d920d42c9ec5ae1a8fd491ab10f3f9f21f5a72f195e4f03e4",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 56143,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 132.5,
+    "audioSha256": "4d5e2fede7ee977ab75ed494c1facf95d0e7482ce384aaa3551752b6ab928bcf",
+    "isExpressive": true
   },
   "tv-g5-b6": {
     "lessonId": "tv-g5-b6",
@@ -2436,7 +3392,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       31
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b7": {
     "lessonId": "tv-g5-b7",
@@ -2446,7 +3403,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       36
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b8": {
     "lessonId": "tv-g5-b8",
@@ -2456,17 +3414,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       41
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b9": {
     "lessonId": "tv-g5-b9",
     "primaryPath": "/audio/curriculum/tv-g5-b9.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "7cabd44eb6b8a34d5240eea57d38b4ba9725bad5083b5b4392bcc26b18f4011f",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       46
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "b9d5d80ffdaa6c6d8f2d8843c0f4f8847a597fb2d2cc250cd7ec4e764083a164",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 60141,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 122.7,
+    "audioSha256": "bd137b8eec215a5801ee6c16b82f47e69effe80ae661f2e46ccdd7d8edde81f2",
+    "isExpressive": true
   },
   "tv-g5-b10": {
     "lessonId": "tv-g5-b10",
@@ -2476,7 +3446,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       51
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b11": {
     "lessonId": "tv-g5-b11",
@@ -2486,7 +3457,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       56
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b12": {
     "lessonId": "tv-g5-b12",
@@ -2496,17 +3468,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       60
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b13": {
     "lessonId": "tv-g5-b13",
     "primaryPath": "/audio/curriculum/tv-g5-b13.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "47d2ed7a6e386b8dd43af563b462bd5568b5f8437d4ecede26db5cb913619e59",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       64
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "8bf7a1bb41368298392b02b2d7605fb23e519b8e18b07ccc5a6b0b6366829b8f",
+    "segmentCount": 27,
+    "stanzaCount": 6,
+    "lineCount": 26,
+    "durationMs": 62349,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128,
+    "audioSha256": "ff9356319496bb50940e09f4b55bf211968fc0b9e22fc04bf247cca0c339308a",
+    "isExpressive": true
   },
   "tv-g5-b14": {
     "lessonId": "tv-g5-b14",
@@ -2516,7 +3500,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       68
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b15": {
     "lessonId": "tv-g5-b15",
@@ -2526,7 +3511,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       72
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b16": {
     "lessonId": "tv-g5-b16",
@@ -2536,7 +3522,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       76
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b17": {
     "lessonId": "tv-g5-t1-b17",
@@ -2546,7 +3533,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       89
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b18": {
     "lessonId": "tv-g5-t1-b18",
@@ -2556,7 +3544,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       94
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b19": {
     "lessonId": "tv-g5-t1-b19",
@@ -2566,7 +3555,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       98
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g5-t1-b20": {
     "lessonId": "tv-g5-t1-b20",
@@ -2576,17 +3566,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       102
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g5-t1-b21": {
     "lessonId": "tv-g5-t1-b21",
     "primaryPath": "/audio/curriculum/tv-g5-t1-b21.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "42ee2dce25a3cd3b67ded0bcc43d8a38399b9cc28a3d4ee7011773bc58197fd5",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       105
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c24154afdcfab7e770678bbfea3179342e1272f62d461f19eb7c5cf585f2545d",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 62327,
+    "effectiveTempo": 0.68614,
+    "wordsPerMinute": 128,
+    "audioSha256": "47e74ee016249a23a438399d1f3abbf1d6c089d800654bea4d6e8d6e7683c83f",
+    "isExpressive": true
   },
   "tv-g5-t1-b22": {
     "lessonId": "tv-g5-t1-b22",
@@ -2596,7 +3598,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       110
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g5-t1-b23": {
     "lessonId": "tv-g5-t1-b23",
@@ -2606,7 +3609,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       114
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b24": {
     "lessonId": "tv-g5-t1-b24",
@@ -2616,18 +3620,30 @@
     "lessonVersion": 1,
     "sourcePages": [
       117
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b25": {
     "lessonId": "tv-g5-t1-b25",
     "primaryPath": "/audio/curriculum/tv-g5-t1-b25.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "e8b28ccbbc4d282c8bd074dadbbcfa1ce4fa01393852b8c2c65e141aea41f60c",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       122,
       123
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "378e60e7ed258d0a3f24107663a5303e9fb01a6ea64c8704223fb76a2c488022",
+    "segmentCount": 25,
+    "stanzaCount": 5,
+    "lineCount": 24,
+    "durationMs": 69938,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 129.5,
+    "audioSha256": "e7909e9a308acb14421eac05eface537d16a051931ef9367b48a25ab6bea2245",
+    "isExpressive": true
   },
   "tv-g5-t1-b26": {
     "lessonId": "tv-g5-t1-b26",
@@ -2637,7 +3653,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       127
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g5-t1-b27": {
     "lessonId": "tv-g5-t1-b27",
@@ -2647,7 +3664,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       132
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b28": {
     "lessonId": "tv-g5-t1-b28",
@@ -2657,7 +3675,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       136
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b29": {
     "lessonId": "tv-g5-t1-b29",
@@ -2667,7 +3686,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       140
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b30": {
     "lessonId": "tv-g5-t1-b30",
@@ -2677,7 +3697,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       145
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g5-t1-b31": {
     "lessonId": "tv-g5-t1-b31",
@@ -2687,7 +3708,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       149
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t1-b32": {
     "lessonId": "tv-g5-t1-b32",
@@ -2697,7 +3719,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       153
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b17": {
     "lessonId": "tv-g5-b17",
@@ -2707,27 +3730,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       8
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g5-b18": {
     "lessonId": "tv-g5-b18",
     "primaryPath": "/audio/curriculum/tv-g5-b18.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "0380a0c9ea00ca25afdec9be556c1c503fa45805b8abecc2b33b809aa940a934",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       13
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c882626525a881a9bb1a6af6e2e2f21c37951e5c3c1a1143b79ef5e38595e972",
+    "segmentCount": 20,
+    "stanzaCount": 2,
+    "lineCount": 19,
+    "durationMs": 74507,
+    "effectiveTempo": 0.69347,
+    "wordsPerMinute": 128,
+    "audioSha256": "1f6d3ea141979cfcce1e0bf0549d4ab34b06a60e4345b184e730638b92235a68",
+    "isExpressive": true
   },
   "tv-g5-b19": {
     "lessonId": "tv-g5-b19",
     "primaryPath": "/audio/curriculum/tv-g5-b19.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "bcf977315ea7449764d4aa06443c6696c868eb7ce1903d9031a985dd7980fd1b",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       17
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "bebc7e974d09f4abd5d046199589fbfee3df67bdd8f2fcd3188d348855250194",
+    "segmentCount": 37,
+    "stanzaCount": 5,
+    "lineCount": 36,
+    "durationMs": 72564,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 122.4,
+    "audioSha256": "b8ecdde84c5356e340b731f43721f437b3d3d30ae5dadfef4c76258a2d6b650f",
+    "isExpressive": true
   },
   "tv-g5-b20": {
     "lessonId": "tv-g5-b20",
@@ -2737,7 +3783,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       22
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b21": {
     "lessonId": "tv-g5-b21",
@@ -2747,27 +3794,50 @@
     "lessonVersion": 1,
     "sourcePages": [
       26
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b22": {
     "lessonId": "tv-g5-b22",
     "primaryPath": "/audio/curriculum/tv-g5-b22.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "c85af1184eb74198becb70b98cceb9ec3b6a6ce3f47965dfa7f7c3f3578a79c4",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       30
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "e2157aa74f6e462779a2c098fbe245449dd4aebec4250f7e6432fce5c981a0bd",
+    "segmentCount": 17,
+    "stanzaCount": 4,
+    "lineCount": 16,
+    "durationMs": 61853,
+    "effectiveTempo": 0.73819,
+    "wordsPerMinute": 128,
+    "audioSha256": "6aca47ab2b4796b4b9d10710f2853942f990ca636a39cd1d52a743d8edfcd13a",
+    "isExpressive": true
   },
   "tv-g5-b23": {
     "lessonId": "tv-g5-b23",
     "primaryPath": "/audio/curriculum/tv-g5-b23.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "bc4748852e1b47b2c7d689bdc8c9629b675cf8ca86c7a7db721190c9c64175c6",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       34
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "07b6c4947edbbe54c71591828e38935d50b8e3aac7da02093b8df0c3e4354464",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 67485,
+    "effectiveTempo": 0.74193,
+    "wordsPerMinute": 128,
+    "audioSha256": "b0e4ae334664bb0c16dc0ec49f6567874af9f8220dfc440d7fc992507303e3e2",
+    "isExpressive": true
   },
   "tv-g5-b24": {
     "lessonId": "tv-g5-b24",
@@ -2777,7 +3847,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       38
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-b25": {
     "lessonId": "tv-g5-b25",
@@ -2787,7 +3858,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       43
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b10": {
     "lessonId": "tv-g5-t2-b10",
@@ -2797,17 +3869,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       48
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b11": {
     "lessonId": "tv-g5-t2-b11",
     "primaryPath": "/audio/curriculum/tv-g5-t2-b11.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "0f1a8f1752986c7787336111f16d675c3e132e18423fc49266289dcf42c04d1e",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       53
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "c14e237fa4d85c804503eea703a26752db409458b24427f39589ae7b00b5e1a2",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 58576,
+    "effectiveTempo": 0.74342,
+    "wordsPerMinute": 128,
+    "audioSha256": "4e78681a02c7d9262ea3aee1f63c8f631d2cfd68bfa6ffdcdb270083827fe22f",
+    "isExpressive": true
   },
   "tv-g5-t2-b12": {
     "lessonId": "tv-g5-t2-b12",
@@ -2817,7 +3901,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       57
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b13": {
     "lessonId": "tv-g5-t2-b13",
@@ -2827,17 +3912,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       61
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b14": {
     "lessonId": "tv-g5-t2-b14",
     "primaryPath": "/audio/curriculum/tv-g5-t2-b14.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "e81c3bc30fafce13932612be09c7280b11caa9466c7934e25deb5941165a65d2",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       66
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "d3ad04ba804bc836732c02a5e2d016dfe38ea68b8bf7461b24b0b558d456ad67",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 48890,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128.9,
+    "audioSha256": "eaa858976f4b74c639548eb6841498d175a800858e4ca5dc57d064c8a038768b",
+    "isExpressive": true
   },
   "tv-g5-t2-b15": {
     "lessonId": "tv-g5-t2-b15",
@@ -2847,17 +3944,29 @@
     "lessonVersion": 1,
     "sourcePages": [
       70
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b16": {
     "lessonId": "tv-g5-t2-b16",
     "primaryPath": "/audio/curriculum/tv-g5-t2-b16.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "94df032ce28fe040e6f678ac1c65df421a0f3087d349be2a98fc3f8ab21fb3d1",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       73
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "febc31df66c05655b21227e2a7a376e5109be16a88fe2f26c0f3432763d2ae8c",
+    "segmentCount": 25,
+    "stanzaCount": 6,
+    "lineCount": 24,
+    "durationMs": 57745,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 128.8,
+    "audioSha256": "e8a787efe4c95253faaa501b74013e23cf4cc1fc30282855dca3c48b187ea0f7",
+    "isExpressive": true
   },
   "tv-g5-t2-b17": {
     "lessonId": "tv-g5-t2-b17",
@@ -2867,7 +3976,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       88
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b18": {
     "lessonId": "tv-g5-t2-b18",
@@ -2877,7 +3987,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       93
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b19": {
     "lessonId": "tv-g5-t2-b19",
@@ -2887,7 +3998,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       97
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b20": {
     "lessonId": "tv-g5-t2-b20",
@@ -2897,7 +4009,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       101
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b21": {
     "lessonId": "tv-g5-t2-b21",
@@ -2907,47 +4020,92 @@
     "lessonVersion": 1,
     "sourcePages": [
       106
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b22": {
     "lessonId": "tv-g5-t2-b22",
     "primaryPath": "/audio/curriculum/tv-g5-t2-b22.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "3f53a7448c6c5c88b589227dacafce4027d7bb0c25e0367b0efdf3d0e643ee48",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       109
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "636b985616e5311cb04dcda9579fdc561c018fe7d26ce417c49007ed44c2b0e9",
+    "segmentCount": 23,
+    "stanzaCount": 4,
+    "lineCount": 22,
+    "durationMs": 55292,
+    "effectiveTempo": 0.74963,
+    "wordsPerMinute": 128,
+    "audioSha256": "6fda5388a743cc106eef3bfeb4ba0f311ef428d856031fecfec2dbc0be19189f",
+    "isExpressive": true
   },
   "tv-g5-t2-b23": {
     "lessonId": "tv-g5-t2-b23",
     "primaryPath": "/audio/curriculum/tv-g5-t2-b23.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "ba5c0330884cd5134ad09b6296430dea12491a497f1320bea29326215853e717",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       113
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "1983a65cb01594a0a17df96d953acd177962ae6b47b42792df3a2c0ac0223f8d",
+    "segmentCount": 21,
+    "stanzaCount": 6,
+    "lineCount": 20,
+    "durationMs": 62323,
+    "effectiveTempo": 0.7433,
+    "wordsPerMinute": 128,
+    "audioSha256": "882a1a7b06a45dd77c27c3ef373623a3488ab48203da5abac76475604f0c4318",
+    "isExpressive": true
   },
   "tv-g5-t2-b24": {
     "lessonId": "tv-g5-t2-b24",
     "primaryPath": "/audio/curriculum/tv-g5-t2-b24.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "f4ac8ea8431d14b9e649b022b4795bf3af3ac71f9924e4b1791a05f5d3cebe23",
-    "lessonVersion": 1,
+    "lessonVersion": 3,
     "sourcePages": [
       117
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "3aa0c07bcafab20602bb169978f5fd190497e0e85d3269f36059835776a869bf",
+    "segmentCount": 21,
+    "stanzaCount": 5,
+    "lineCount": 20,
+    "durationMs": 67940,
+    "effectiveTempo": 0.71236,
+    "wordsPerMinute": 128.1,
+    "audioSha256": "422490e9dbe6ae272156e3ff3f6206d696225d38c2213a1a4d4557bc17661af8",
+    "isExpressive": true
   },
   "tv-g5-t2-b25": {
     "lessonId": "tv-g5-t2-b25",
     "primaryPath": "/audio/curriculum/tv-g5-t2-b25.mp3",
     "primaryVoice": "Cô Giáo Vy",
-    "transcriptHash": "963c2cd504d7cbfae964b8b47c8d239667a978fb71a5f64799772099ae30b7e7",
-    "lessonVersion": 1,
+    "transcriptHash": "1201da3f9799dfadcfcbdd59ecf09f2b560a1490f975a9a0e4e1aa98fd60e053",
+    "lessonVersion": 4,
     "sourcePages": [
       122
-    ]
+    ],
+    "genre": "poem",
+    "prosodyVersion": 4,
+    "prosodyHash": "e139d7737438931be5cda8105e944a44102337fc1bab19fa13db40866c4fcdf2",
+    "segmentCount": 19,
+    "stanzaCount": 3,
+    "lineCount": 18,
+    "durationMs": 61049,
+    "effectiveTempo": 0.8,
+    "wordsPerMinute": 134.6,
+    "audioSha256": "2ea4d46f9426e7b812c2058f3a9013555799c54ba31208619fa4a03a1721b602",
+    "isExpressive": true
   },
   "tv-g5-t2-b26": {
     "lessonId": "tv-g5-t2-b26",
@@ -2957,7 +4115,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       126
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b27": {
     "lessonId": "tv-g5-t2-b27",
@@ -2968,7 +4127,8 @@
     "sourcePages": [
       130,
       131
-    ]
+    ],
+    "genre": "story"
   },
   "tv-g5-t2-b28": {
     "lessonId": "tv-g5-t2-b28",
@@ -2978,7 +4138,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       135
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b29": {
     "lessonId": "tv-g5-t2-b29",
@@ -2988,7 +4149,8 @@
     "lessonVersion": 1,
     "sourcePages": [
       140
-    ]
+    ],
+    "genre": "prose"
   },
   "tv-g5-t2-b30": {
     "lessonId": "tv-g5-t2-b30",
@@ -2998,6 +4160,7 @@
     "lessonVersion": 1,
     "sourcePages": [
       144
-    ]
+    ],
+    "genre": "prose"
   }
 }

@@ -10,6 +10,7 @@ import { promisify } from 'node:util';
 const workspace = process.cwd();
 const outputDir = await mkdtemp(join(tmpdir(), 'wonderkids-vietnamese-audio-'));
 const runFile = promisify(execFile);
+const tasksPath = join(workspace, 'scripts', 'target_293_structured_reading_passages.json');
 
 function wavPcmData(file) {
   let offset = 12;
@@ -45,6 +46,8 @@ try {
   const { VIETNAMESE_AUDIO_MANIFEST } = await import(pathToFileURL(join(outputDir, 'data', 'curriculum', 'vietnamese', 'audioManifest.js')).href);
   const { getLessonsForGradeAndSubject } = await import(pathToFileURL(join(outputDir, 'data', 'curriculum', 'index.js')).href);
   const { buildLessonNarration } = await import(pathToFileURL(join(outputDir, 'utils', 'lessonNarration.js')).href);
+  const generationTasks = JSON.parse(await readFile(tasksPath, 'utf8'));
+  const taskByLessonId = new Map(generationTasks.map((task) => [task.lessonId, task]));
   const runtimeLessons = new Map(
     [1, 2, 3, 4, 5]
       .flatMap((grade) => getLessonsForGradeAndSubject(grade, 'vietnamese'))
@@ -65,11 +68,13 @@ try {
   const manifestInvalid = [];
   const sourcePageMismatches = [];
   const decodeInvalid = [];
+  const poetryProsodyInvalid = [];
   const decodeTargets = [];
   let primaryBytes = 0;
 
   for (const asset of Object.values(VIETNAMESE_AUDIO_MANIFEST)) {
     const lesson = runtimeLessons.get(asset.lessonId);
+    const task = taskByLessonId.get(asset.lessonId);
     const runtimeTranscript = lesson?.readingPassage ? buildLessonNarration(lesson.readingPassage) : '';
     const runtimeTranscriptHash = runtimeTranscript ? sha256(runtimeTranscript) : '';
     const runtimeSourcePages = lesson?.readingPassage?.sourcePages || [];
@@ -83,6 +88,7 @@ try {
       || asset.lessonVersion < 1
       || !Array.isArray(asset.sourcePages)
       || asset.primaryVoice !== 'Cô Giáo Vy'
+      || asset.genre !== task?.readingPassage?.genre
       || asset.fallbackPath !== undefined
       || asset.fallbackVoice !== undefined
     ) {
@@ -117,6 +123,21 @@ try {
             if (sha256(pcm.subarray(0, legacyBytes)) === legacyHash) {
               forbiddenDisclosureDetected.push(`${asset.lessonId}:${kind}`);
             }
+          }
+        }
+        if (task?.readingPassage?.genre === 'poem') {
+          const plan = task.prosodyPlan;
+          if (
+            !plan
+            || asset.prosodyVersion !== plan.version
+            || asset.prosodyHash !== plan.prosodyHash
+            || asset.segmentCount !== plan.segments.length
+            || asset.stanzaCount !== plan.stanzaCount
+            || asset.lineCount !== plan.lineCount
+            || asset.audioSha256 !== sha256(file)
+            || asset.isExpressive !== true
+          ) {
+            poetryProsodyInvalid.push(asset.lessonId);
           }
         }
         decodeTargets.push({ lessonId: asset.lessonId, absolutePath });
@@ -162,6 +183,7 @@ try {
     forbiddenDisclosureDetected,
     manifestInvalid,
     sourcePageMismatches,
+    poetryProsodyInvalid,
   };
 
   console.log(JSON.stringify(result, null, 2));
@@ -173,6 +195,7 @@ try {
     || forbiddenDisclosureDetected.length
     || manifestInvalid.length
     || sourcePageMismatches.length
+    || poetryProsodyInvalid.length
   ) process.exitCode = 1;
 } finally {
   await rm(outputDir, { recursive: true, force: true });

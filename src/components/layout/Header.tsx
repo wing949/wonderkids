@@ -96,10 +96,14 @@ export const Header: React.FC<HeaderProps> = ({
               soundManager.playPop();
               onOpenBadges();
             }}
-            className="hidden sm:flex items-center gap-1.5 sm:gap-2 rounded-full border-2 border-amber-300 bg-gradient-to-r from-amber-100 to-yellow-100 px-2.5 sm:px-3 py-1 shadow-sm hover:scale-105 transition-transform shrink-0 cursor-pointer"
+            aria-label={`Mở hồ sơ của ${profile.name}, đang học lớp ${currentGrade}`}
+            className="flex min-h-12 items-center gap-1 sm:gap-2 rounded-full border-2 border-amber-300 bg-gradient-to-r from-amber-100 to-yellow-100 px-2 sm:px-3 py-1 shadow-sm hover:scale-105 transition-transform shrink-0 cursor-pointer"
             title="Hồ sơ & Avatar của bé (Nhấn để chọn 16 con vật ngộ nghĩnh)"
           >
             <span className="text-lg sm:text-xl leading-none">{currentAvatarEmoji}</span>
+            <span className="font-baloo font-black text-[11px] text-amber-950 sm:hidden whitespace-nowrap">
+              Lớp {currentGrade}
+            </span>
             <span className="font-baloo font-black text-xs sm:text-sm text-brand-dark hidden md:inline truncate max-w-[90px]">
               {profile.name}
             </span>

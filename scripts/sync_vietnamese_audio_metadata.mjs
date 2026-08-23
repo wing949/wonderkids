@@ -4,6 +4,7 @@ import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { buildVietnameseProsodyPlan } from './vietnamese_poetry_prosody.mjs';
 
 const workspace = process.cwd();
 const checkOnly = process.argv.includes('--check');
@@ -90,6 +91,16 @@ try {
     const lesson = getRuntimeLesson(task.lessonId);
     if (!lesson) continue;
     const pages = [...lesson.readingPassage.sourcePages];
+    const readingPassage = {
+      title: lesson.readingPassage.title,
+      content: [...lesson.readingPassage.content],
+      author: lesson.readingPassage.author || '',
+      genre: lesson.readingPassage.genre || 'prose',
+      ...(lesson.readingPassage.genre === 'poem'
+        ? { stanzaBoundariesVerified: lesson.readingPassage.stanzaBoundariesVerified === true }
+        : {}),
+    };
+    const prosodyPlan = buildVietnameseProsodyPlan(readingPassage);
     const text = buildLessonNarration(lesson.readingPassage);
     const textHash = sha256(text);
     const changedFields = [];
@@ -106,6 +117,14 @@ try {
       task.textHash = textHash;
       changedFields.push('textHash');
     }
+    if (JSON.stringify(task.readingPassage) !== JSON.stringify(readingPassage)) {
+      task.readingPassage = readingPassage;
+      changedFields.push('readingPassage');
+    }
+    if (JSON.stringify(task.prosodyPlan) !== JSON.stringify(prosodyPlan)) {
+      task.prosodyPlan = prosodyPlan;
+      changedFields.push('prosodyPlan');
+    }
     if (changedFields.length > 0) taskChanges.push({ lessonId: task.lessonId, fields: changedFields });
 
     const previous = manifest[task.lessonId] || {};
@@ -116,7 +135,38 @@ try {
       transcriptHash: textHash,
       lessonVersion: Math.max(1, Number(previous.lessonVersion || 1)),
       sourcePages: pages,
+      genre: readingPassage.genre,
     };
+    if (
+      previous.prosodyHash === prosodyPlan.prosodyHash
+      && previous.prosodyVersion === prosodyPlan.version
+      && previous.segmentCount === prosodyPlan.segments.length
+    ) {
+      const spokenWordCount = prosodyPlan.segments
+        .flatMap((segment) => segment.text.trim().split(/\s+/u))
+        .filter(Boolean).length;
+      const measuredWordsPerMinute = Number.isFinite(previous.durationMs) && previous.durationMs > 0
+        ? Math.round(spokenWordCount * 600000 / previous.durationMs) / 10
+        : undefined;
+      const effectiveTempo = Number.isFinite(previous.effectiveTempo)
+        ? previous.effectiveTempo
+        : (readingPassage.genre === 'poem' ? prosodyPlan.tempo : undefined);
+      const wordsPerMinute = Number.isFinite(previous.wordsPerMinute)
+        ? previous.wordsPerMinute
+        : (readingPassage.genre === 'poem' ? measuredWordsPerMinute : undefined);
+      Object.assign(next, {
+        prosodyVersion: previous.prosodyVersion,
+        prosodyHash: previous.prosodyHash,
+        segmentCount: previous.segmentCount,
+        stanzaCount: previous.stanzaCount,
+        lineCount: previous.lineCount,
+        durationMs: previous.durationMs,
+        effectiveTempo,
+        wordsPerMinute,
+        audioSha256: previous.audioSha256,
+        isExpressive: previous.isExpressive,
+      });
+    }
     rebuiltManifest[task.lessonId] = next;
     if (JSON.stringify(previous) !== JSON.stringify(next)) {
       manifestChanges.push({ lessonId: task.lessonId, fields: ['primary-only-manifest'] });

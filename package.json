@@ -9,6 +9,7 @@
     "generate:curriculum-audio": "node scripts/generate_curriculum_audio.mjs",
     "verify:curriculum-audio": "node scripts/generate_curriculum_audio.mjs --verify",
     "verify:vietnamese-audio": "node scripts/verify_vietnamese_audio_manifest.mjs",
+    "verify:vietnamese-poetry-audio": "node scripts/verify_vietnamese_poetry_audio.mjs",
     "sync:vietnamese-audio-metadata": "node scripts/sync_vietnamese_audio_metadata.mjs",
     "generate:vietnamese-verified-audio": "node scripts/generate_verified_vietnamese_audio.mjs",
     "migrate:vietnamese-audio": "python scripts/remove_vietnamese_audio_disclosure.py",

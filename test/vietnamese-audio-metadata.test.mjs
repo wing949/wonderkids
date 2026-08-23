@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { build } from 'esbuild';
+import { createHash } from 'node:crypto';
 import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -81,6 +82,45 @@ test('293 bài có manifest hợp lệ đều mở được nút Nghe toàn bộ
     .map((lesson) => lesson.id);
 
   assert.deepEqual(locked, []);
+});
+
+test('87 bài thơ đã phát hành có audio chính khớp kế hoạch khổ và dòng', async () => {
+  const poems = generationTasks.filter((task) => task.readingPassage.genre === 'poem');
+  assert.equal(poems.length, 87);
+
+  const failures = [];
+  for (const task of poems) {
+    const asset = audioManifest.VIETNAMESE_AUDIO_MANIFEST[task.lessonId];
+    const file = await readFile(join('public', asset.primaryPath.slice(1)));
+    const audioSha256 = createHash('sha256').update(file).digest('hex');
+    const spokenWordCount = task.prosodyPlan.segments
+      .flatMap((segment) => segment.text.trim().split(/\s+/u))
+      .filter(Boolean).length;
+    const expectedWordsPerMinute = Math.round(
+      spokenWordCount * 600000 / asset.durationMs,
+    ) / 10;
+    if (
+      asset.primaryVoice !== 'Cô Giáo Vy'
+      || asset.genre !== 'poem'
+      || asset.prosodyVersion !== task.prosodyPlan.version
+      || asset.prosodyHash !== task.prosodyPlan.prosodyHash
+      || asset.segmentCount !== task.prosodyPlan.segments.length
+      || asset.stanzaCount !== task.prosodyPlan.stanzaCount
+      || asset.lineCount !== task.prosodyPlan.lineCount
+      || !Number.isFinite(asset.effectiveTempo)
+      || asset.effectiveTempo <= 0
+      || !Number.isFinite(asset.wordsPerMinute)
+      || asset.wordsPerMinute !== expectedWordsPerMinute
+      || asset.wordsPerMinute < 100
+      || asset.wordsPerMinute > 135
+      || asset.audioSha256 !== audioSha256
+      || !asset.isExpressive
+    ) {
+      failures.push(task.lessonId);
+    }
+  }
+
+  assert.deepEqual(failures, []);
 });
 
 test.after(async () => {

@@ -348,7 +348,11 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(veChim.title, 'Bài 9: Vè chim');
   assert.deepEqual(veChim.sourceCitation.sourcePages, [39, 40, 41]);
   assert.deepEqual(veChim.readingPassage?.content, [
-    'Hay chạy lon xon\nLà gà mới nở\nVừa đi vừa nhảy\nLà em sáo xinh\nHay nói linh tinh\nLà con liếu điếu\nHay nghịch hay tếu\nLà cậu chìa vôi\nHay chao đớp mồi\nLà chim chèo bẻo\nTính hay mách lẻo\nThím khách trước nhà\nHay nhặt lân la\nLà bà chim sẻ\nCó tình có nghĩa\nLà mẹ chim sâu\nGiục hè đến mau\nLà cô tu hú\nNhấp nhem buồn ngủ\nLà bác cú mèo...',
+    'Hay chạy lon xon\nLà gà mới nở\nVừa đi vừa nhảy\nLà em sáo xinh',
+    'Hay nói linh tinh\nLà con liếu điếu\nHay nghịch hay tếu\nLà cậu chìa vôi',
+    'Hay chao đớp mồi\nLà chim chèo bẻo\nTính hay mách lẻo\nThím khách trước nhà',
+    'Hay nhặt lân la\nLà bà chim sẻ\nCó tình có nghĩa\nLà mẹ chim sâu',
+    'Giục hè đến mau\nLà cô tu hú\nNhấp nhem buồn ngủ\nLà bác cú mèo...',
   ]);
   assert.equal(veChim.questions.length, 16);
   assert.equal(veChim.readingPassage?.audioNarration, [veChim.readingPassage?.title, ...veChim.readingPassage?.content].join('\n'));
@@ -499,7 +503,8 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(thuGuiBoNgoaiDao.title, 'Bài 22: Thư gửi bố ngoài đảo');
   assert.deepEqual(thuGuiBoNgoaiDao.sourceCitation.sourcePages, [95, 96, 97, 98, 99]);
   assert.deepEqual(thuGuiBoNgoaiDao.readingPassage?.content, [
-    'Bây giờ sắp Tết rồi\nCon viết thư gửi bố (...)\n\nTết con muốn gửi bố\nCái bánh chưng cho vui\nNhưng bánh thì to quá\nMà hòm thư nhỏ thôi.',
+    'Bây giờ sắp Tết rồi\nCon viết thư gửi bố (...)',
+    'Tết con muốn gửi bố\nCái bánh chưng cho vui\nNhưng bánh thì to quá\nMà hòm thư nhỏ thôi.',
     'Gửi hoa lại sợ héo\nĐường ra đảo xa xôi\nCon viết thư gửi vậy\nHẳn bố bằng lòng thôi.',
     'Ngoài ấy chắc nhiều gió\nĐảo không có gì che\nNgoài ấy chắc nhiều sóng\nBố lúc nào cũng nghe.',
     'Bà bảo: hàng rào biển\nLà bố đấy, bố ơi\nCùng các chú bạn bố\nGiữ đảo và giữ trời.',
@@ -587,7 +592,10 @@ test('chỉ bài đã đối chiếu nguyên văn mới mở bài đọc và ho�
   assert.equal(canhDongQueEm.title, 'Bài 30: Cánh đồng quê em');
   assert.deepEqual(canhDongQueEm.sourceCitation.sourcePages, [129, 130, 131, 132]);
   assert.deepEqual(canhDongQueEm.readingPassage?.content, [
-    'Bé theo mẹ ra đồng\nVầng dương lên rực đỏ\nMuôn vàn kim cương nhỏ\nLấp lánh ngọn cỏ hoa.\n\nNắng ban mai hiền hoà\nTung lụa tơ vàng óng\nTrải lên muôn con sóng\nDập dờn đồng lúa xanh.\n\nĐàn chiền chiện bay quanh\nHót tích ri tích rích\nLũ châu chấu tinh nghịch\nĐu cỏ uống sương rơi.\n\nSóng xanh cuộn chân trời\nCánh đồng như tranh vẽ\nBé ngân nga hát khẽ\nTrong hương lúa mênh mông.',
+    'Bé theo mẹ ra đồng\nVầng dương lên rực đỏ\nMuôn vàn kim cương nhỏ\nLấp lánh ngọn cỏ hoa.',
+    'Nắng ban mai hiền hoà\nTung lụa tơ vàng óng\nTrải lên muôn con sóng\nDập dờn đồng lúa xanh.',
+    'Đàn chiền chiện bay quanh\nHót tích ri tích rích\nLũ châu chấu tinh nghịch\nĐu cỏ uống sương rơi.',
+    'Sóng xanh cuộn chân trời\nCánh đồng như tranh vẽ\nBé ngân nga hát khẽ\nTrong hương lúa mênh mông.',
   ]);
   assert.equal(canhDongQueEm.questions.length, 21);
   assert.equal(canhDongQueEm.readingPassage?.audioNarration, [canhDongQueEm.readingPassage?.title, ...canhDongQueEm.readingPassage?.content].join('\n'));

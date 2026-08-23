@@ -7,6 +7,17 @@ export interface VietnameseAudioAsset {
   transcriptHash: string;
   lessonVersion: number;
   sourcePages: number[];
+  genre?: 'poem' | 'story' | 'prose';
+  prosodyVersion?: number;
+  prosodyHash?: string;
+  segmentCount?: number;
+  stanzaCount?: number;
+  lineCount?: number;
+  durationMs?: number;
+  effectiveTempo?: number;
+  wordsPerMinute?: number;
+  audioSha256?: string;
+  isExpressive?: boolean;
 }
 
 function normalizeLessonId(lessonId: string): string {

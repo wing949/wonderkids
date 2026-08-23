@@ -69,22 +69,23 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
       icon="🐾"
       maxWidth="2xl"
     >
-      <div className="space-y-5">
+      <div className="space-y-4 sm:space-y-5">
         {/* Tab Navigation */}
-        <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
+        <div className="grid grid-cols-2 gap-2 border-b border-slate-100 pb-3">
           <button
             onClick={() => {
               soundManager.playPop();
               setActiveTab('edit');
             }}
-            className={`flex items-center gap-2 px-4 py-2 rounded-2xl font-baloo font-black text-sm transition-all cursor-pointer ${
+            className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-2 py-2 font-baloo text-sm font-black transition-all cursor-pointer sm:px-4 ${
               activeTab === 'edit'
                 ? 'bg-amber-400 text-brand-dark shadow-xs border-2 border-amber-500 scale-102'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`}
           >
             <User size={16} />
-            <span>🐾 Hồ Sơ & Đổi Avatar</span>
+            <span className="sm:hidden">Hồ sơ</span>
+            <span className="hidden sm:inline">Hồ Sơ & Đổi Avatar</span>
           </button>
 
           <button
@@ -92,14 +93,15 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               soundManager.playPop();
               setActiveTab('achievements');
             }}
-            className={`flex items-center gap-2 px-4 py-2 rounded-2xl font-baloo font-black text-sm transition-all cursor-pointer ${
+            className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-2 py-2 font-baloo text-sm font-black transition-all cursor-pointer sm:px-4 ${
               activeTab === 'achievements'
                 ? 'bg-purple-500 text-white shadow-xs border-2 border-purple-600 scale-102'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`}
           >
             <Trophy size={16} />
-            <span>🏆 Thành Tích & Huy Hiệu</span>
+            <span className="sm:hidden">Thành tích</span>
+            <span className="hidden sm:inline">Thành Tích & Huy Hiệu</span>
           </button>
         </div>
 
@@ -107,7 +109,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
         {activeTab === 'edit' && (
           <div className="space-y-5">
             {/* Live Profile Card Preview */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 rounded-3xl border-3 border-amber-300 bg-gradient-to-br from-amber-50/90 via-orange-50/70 to-yellow-50/90 p-4 sm:p-5 shadow-washi">
+            <div data-testid="profile-preview" className="hidden items-center gap-4 rounded-3xl border-3 border-amber-300 bg-gradient-to-br from-amber-50/90 via-orange-50/70 to-yellow-50/90 p-4 shadow-washi sm:flex sm:flex-row sm:p-5">
               {/* Avatar Highlight Preview */}
               <div className="relative group">
                 <div
@@ -146,17 +148,19 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Input Name */}
               <div className="space-y-1.5">
-                <label className="font-baloo font-extrabold text-sm text-brand-dark flex items-center gap-1.5">
+                <label htmlFor="kid-profile-name" className="font-baloo font-extrabold text-sm text-brand-dark flex items-center gap-1.5">
                   <Edit3 size={15} className="text-amber-500" />
                   <span>Tên / Biệt Danh Của Bé:</span>
                 </label>
                 <input
+                  id="kid-profile-name"
+                  aria-label="Tên hoặc biệt danh của bé"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Nhập tên của bé..."
                   maxLength={30}
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-2.5 font-baloo font-bold text-base text-brand-dark focus:border-amber-400 focus:outline-none shadow-inner"
+                  className="min-h-12 w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-2.5 font-baloo font-bold text-base text-brand-dark focus:border-amber-400 focus:outline-none shadow-inner"
                 />
               </div>
 
@@ -165,16 +169,18 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                 <label className="font-baloo font-extrabold text-sm text-brand-dark flex items-center gap-1.5">
                   <span>Khối Lớp Đang Học:</span>
                 </label>
-                <div className="flex items-center gap-1.5">
+                <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
                   {([1, 2, 3, 4, 5] as GradeLevel[]).map((g) => (
                     <button
                       key={g}
                       type="button"
+                      aria-label={`Chọn lớp ${g}`}
+                      aria-pressed={selectedGrade === g}
                       onClick={() => {
                         soundManager.playPop();
                         setSelectedGrade(g);
                       }}
-                      className={`flex-1 py-2 rounded-xl font-baloo font-black text-xs sm:text-sm transition-all border-2 cursor-pointer ${
+                      className={`min-h-12 whitespace-nowrap rounded-xl border-2 px-2 py-2 font-baloo text-xs font-black transition-all cursor-pointer sm:text-sm ${
                         selectedGrade === g
                           ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs scale-105'
                           : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200'
@@ -300,11 +306,11 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
             </div>
 
             {/* Save Button Action */}
-            <div className="pt-2 flex items-center justify-end gap-3 border-t border-slate-100">
+            <div className="sticky bottom-0 z-10 -mx-1 flex items-center justify-end gap-2 border-t border-slate-100 bg-white/95 px-1 pb-1 pt-3 sm:gap-3">
               <button
                 type="button"
                 onClick={onClose}
-                className="px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm text-slate-600 hover:bg-slate-100 transition-colors"
+                className="min-h-12 whitespace-nowrap rounded-2xl px-4 py-2.5 font-baloo text-sm font-bold text-slate-600 transition-colors hover:bg-slate-100 sm:px-5"
               >
                 Đóng
               </button>
@@ -312,7 +318,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               <button
                 type="button"
                 onClick={handleSave}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-2xl font-baloo font-black text-sm text-amber-950 transition-all shadow-pop-xs cursor-pointer border-2 ${
+                className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl border-2 px-4 py-2.5 font-baloo text-sm font-black text-amber-950 transition-all shadow-pop-xs cursor-pointer sm:px-6 ${
                   isSavedRecently
                     ? 'bg-emerald-400 border-emerald-500 text-white'
                     : 'bg-amber-400 hover:bg-amber-500 border-amber-500 active:scale-95'
