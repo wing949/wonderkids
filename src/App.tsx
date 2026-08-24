@@ -13,6 +13,7 @@ import { CuteDoodleBackground } from './components/common/CuteDoodleBackground';
 import { checkAdminSession, logoutAdmin } from './utils/adminAccess';
 import { createAdminAuthRequestTracker } from './utils/adminAuthRequestTracker';
 import { AdminTab, AppRoute, getAppPath, parseAppRoute } from './utils/appRoute';
+import { getPortalForRoute } from './utils/portalRoute';
 import { isControlPanelRoute } from './utils/controlPanelRoute';
 import { loadCurriculumLesson, loadLessonsForGradeAndSubject } from './utils/curriculumLoader';
 
@@ -39,6 +40,11 @@ const ParentPortal = React.lazy(async () => {
 const QuizArena = React.lazy(async () => {
   const module = await import('./components/arena/QuizArena');
   return { default: module.QuizArena };
+});
+
+const PracticePortal = React.lazy(async () => {
+  const module = await import('./components/practice/PracticePortal');
+  return { default: module.PracticePortal };
 });
 
 const PortalLoading = () => (
@@ -161,19 +167,10 @@ const getInitialTheme = (): ThemeId => {
 };
 
 const getInitialAppRoute = (): AppRoute => (
-  typeof window === 'undefined' ? { kind: 'student' } : parseAppRoute(window.location.pathname)
+  typeof window === 'undefined' ? { kind: 'student' } : parseAppRoute(`${window.location.pathname}${window.location.search}`)
 );
 
-const getPortalForRoute = (route: AppRoute): PortalView => {
-  switch (route.kind) {
-    case 'adventure': return 'adventure';
-    case 'exercise': return 'exercise';
-    case 'parent': return 'parent';
-    case 'arena': return 'arena';
-    case 'admin': return 'admin-login';
-    default: return 'student';
-  }
-};
+type PracticeAppRoute = Extract<AppRoute, { kind: 'practice-hub' | 'practice-list' | 'practice-set' }>;
 
 export const App: React.FC = () => {
   const [initialRoute] = useState<AppRoute>(getInitialAppRoute);
@@ -186,6 +183,11 @@ export const App: React.FC = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeId>(getInitialTheme);
   const [currentPortal, setCurrentPortal] = useState<PortalView>(() => (
     getPortalForRoute(initialRoute)
+  ));
+  const [practiceRoute, setPracticeRoute] = useState<PracticeAppRoute>(() => (
+    initialRoute.kind === 'practice-hub' || initialRoute.kind === 'practice-list' || initialRoute.kind === 'practice-set'
+      ? initialRoute
+      : { kind: 'practice-hub' }
   ));
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const adminAuthRequestTracker = useRef(createAdminAuthRequestTracker());
@@ -298,6 +300,13 @@ export const App: React.FC = () => {
       case 'arena':
         setCurrentPortal('arena');
         return;
+      case 'practice-hub':
+      case 'practice-list':
+      case 'practice-set':
+        setPracticeRoute(route);
+        if (route.kind !== 'practice-hub') setCurrentGrade(route.grade);
+        setCurrentPortal('practice');
+        return;
       case 'admin':
         setAdminTab(route.tab);
         setCurrentPortal(isAdminAuthenticated ? 'admin' : 'admin-login');
@@ -309,7 +318,7 @@ export const App: React.FC = () => {
 
   const navigateTo = (route: AppRoute) => {
     const path = getAppPath(route);
-    if (typeof window !== 'undefined' && window.location.pathname !== path) {
+    if (typeof window !== 'undefined' && `${window.location.pathname}${window.location.search}` !== path) {
       window.history.pushState({}, '', path);
     }
     applyAppRoute(route);
@@ -335,7 +344,7 @@ export const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const syncPortalWithPath = () => applyAppRoute(parseAppRoute(window.location.pathname));
+    const syncPortalWithPath = () => applyAppRoute(parseAppRoute(`${window.location.pathname}${window.location.search}`));
 
     window.addEventListener('popstate', syncPortalWithPath);
     return () => window.removeEventListener('popstate', syncPortalWithPath);
@@ -350,6 +359,8 @@ export const App: React.FC = () => {
       navigateTo({ kind: 'parent' });
     } else if (portal === 'arena') {
       navigateTo({ kind: 'arena' });
+    } else if (portal === 'practice') {
+      navigateTo({ kind: 'practice-hub' });
     }
   };
 
@@ -463,6 +474,7 @@ export const App: React.FC = () => {
             onSelectSubject={handleSelectSubject}
             onOpenAdventure={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
             onOpenArena={() => navigateTo({ kind: 'arena' })}
+            onOpenPractice={() => navigateTo({ kind: 'practice-hub' })}
             onOpenShop={() => navigateTo({ kind: 'shop' })}
             onOpenQuests={() => navigateTo({ kind: 'quests' })}
             onMascotChange={handleMascotChange}
@@ -508,6 +520,23 @@ export const App: React.FC = () => {
             <QuizArena
               onBackToDashboard={returnToStudentPortal}
               onVictory={(xp, stars) => {
+                setProfile((prev) => ({
+                  ...prev,
+                  xp: prev.xp + xp,
+                  stars: prev.stars + stars,
+                }));
+              }}
+            />
+          </Suspense>
+        )}
+
+        {currentPortal === 'practice' && (
+          <Suspense fallback={<PortalLoading />}>
+            <PracticePortal
+              route={practiceRoute}
+              onNavigate={navigateTo}
+              onBack={returnToStudentPortal}
+              onReward={(xp, stars) => {
                 setProfile((prev) => ({
                   ...prev,
                   xp: prev.xp + xp,

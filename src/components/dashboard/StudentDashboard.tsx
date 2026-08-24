@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Swords, Gift, Map, Sparkles, CheckCircle2, ChevronRight } from 'lucide-react';
+import { ArrowRight, Swords, Gift, Map, Sparkles, CheckCircle2, ChevronRight, BookOpenCheck } from 'lucide-react';
 import { SubjectType, GradeLevel, MascotId, StudentProfile, DailyQuest } from '../../types';
 import { SUBJECTS_CONFIG, GRADE_SUBJECT_DESCRIPTIONS } from '../../data/curriculumData';
 import { CuteButton } from '../ui/CuteButton';
@@ -14,6 +14,7 @@ interface StudentDashboardProps {
   onSelectSubject: (subject: SubjectType) => void;
   onOpenAdventure: () => void;
   onOpenArena: () => void;
+  onOpenPractice: () => void;
   onOpenShop: () => void;
   onOpenQuests: () => void;
   onMascotChange: (id: MascotId) => void;
@@ -26,6 +27,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   onSelectSubject,
   onOpenAdventure,
   onOpenArena,
+  onOpenPractice,
   onOpenShop,
   onOpenQuests,
   onMascotChange,
@@ -356,8 +358,35 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           </div>
         </section>
 
-        {/* Quick Action Banners (Quiz Arena & Star Shop) */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {/* Quick Action Banners */}
+        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          <button
+            type="button"
+            onClick={() => {
+              soundManager.playPop();
+              onOpenPractice();
+            }}
+            className="group relative min-h-48 overflow-hidden rounded-4xl bg-gradient-to-r from-amber-400 to-orange-500 p-6 text-left text-white shadow-md transition-all hover:scale-[1.02] hover:shadow-xl active:scale-[0.99] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
+          >
+            <div className="relative z-10 flex items-center justify-between gap-4">
+              <div>
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/25 px-3 py-1 font-baloo text-xs font-extrabold backdrop-blur">
+                  <BookOpenCheck size={14} /> 4 môn • Lớp 1–5
+                </span>
+                <h3 className="mt-2 font-baloo text-2xl font-extrabold sm:text-3xl">
+                  Kho Luyện Đề 📝
+                </h3>
+                <p className="mt-1 max-w-xs font-vietnam text-xs font-semibold text-amber-50 sm:text-sm">
+                  240 đề tự biên soạn theo chủ điểm, từ củng cố đến thi thử.
+                </p>
+                <span className="mt-4 inline-flex min-h-12 items-center gap-1 rounded-full bg-white px-4 py-2 font-baloo text-sm font-extrabold text-orange-700 shadow-sm transition-colors group-hover:bg-emerald-100">
+                  Chọn đề luyện <ArrowRight size={16} />
+                </span>
+              </div>
+              <div className="shrink-0 text-6xl sm:text-7xl" aria-hidden="true">📚</div>
+            </div>
+          </button>
+
           {/* Arena Banner */}
           <div
             onClick={() => {

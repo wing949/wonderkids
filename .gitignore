@@ -46,6 +46,8 @@ scratch/
 # Private SGK source cache (official page images and OCR drafts)
 .cache/sgk/
 .cache/ocr/
+.cache/violympic/
+.cache/wonderkids-practice-ui-*/
+refer/violympic-toan Lớp 2.pdf
 private-reports/
 backup_audio_wav/
-

@@ -25,7 +25,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             onPortalChange('student');
           }}
           className={`flex flex-col items-center gap-1 p-1 font-baloo font-bold text-xs ${
-            currentPortal === 'student' ? 'text-emerald-600 scale-105' : 'text-slate-500'
+            currentPortal === 'student' || currentPortal === 'practice' ? 'text-emerald-600 scale-105' : 'text-slate-500'
           }`}
         >
           <Home size={20} />

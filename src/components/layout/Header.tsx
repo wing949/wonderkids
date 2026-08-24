@@ -208,7 +208,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onPortalChange('student');
               }}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-baloo font-bold text-xs sm:text-sm whitespace-nowrap transition-all ${
-                currentPortal === 'student' || currentPortal === 'adventure' || currentPortal === 'exercise'
+                currentPortal === 'student' || currentPortal === 'adventure' || currentPortal === 'exercise' || currentPortal === 'practice'
                   ? 'bg-amber-400 text-brand-dark shadow-sm'
                   : 'text-slate-600 hover:text-brand-dark hover:bg-white/50'
               }`}

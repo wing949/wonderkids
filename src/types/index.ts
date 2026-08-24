@@ -6,7 +6,7 @@ export type MascotId = 'bobo' | 'miumiu' | 'pipi' | 'bipbip';
 
 export type ThemeId = 'ocean' | 'space' | 'jungle' | 'candy' | 'sunny';
 
-export type PortalView = 'student' | 'parent' | 'admin' | 'admin-login' | 'adventure' | 'lesson' | 'exercise' | 'arena';
+export type PortalView = 'student' | 'parent' | 'admin' | 'admin-login' | 'adventure' | 'lesson' | 'exercise' | 'arena' | 'practice';
 
 export type QuestionType = 
   | 'bubble_choice' 
