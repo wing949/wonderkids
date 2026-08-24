@@ -68,6 +68,227 @@ export const MASCOTS: Record<string, Mascot> = {
       tryAgain: 'Bip bip! Đang tính toán lại... Hãy chọn phương án khác nhé!',
       rest: 'Pin năng lượng cần sạc: hãy nghỉ ngơi 5 phút nghen!',
     }
+  },
+  dino: {
+    id: 'dino',
+    name: 'Khủng Long T-Rex',
+    title: 'Dũng Sĩ Thám Hiểm',
+    description: 'Dũng cảm, yêu thích thám hiểm và vượt qua mọi thử thách!',
+    avatar: '🦖',
+    color: '#22C55E',
+    badge: 'Móng Vuốt Dũng Sĩ',
+    subject: 'all',
+    quotes: {
+      greeting: 'Gào! Khủng Long T-Rex dũng cảm đã sẵn sàng vượt mọi thử thách cùng bạn!',
+      cheer: 'Tiến lên nào! Sức mạnh tri thức của bạn là vô địch!',
+      win: 'Tuyệt vời! Một chiến thắng vang dội của dũng sĩ nhí!',
+      tryAgain: 'Dũng sĩ không bao giờ bỏ cuộc! Cùng thử lại một lần nữa nào!',
+      rest: 'Dừng chân nghỉ ngơi, nạp năng lượng để tiếp tục hành trình nhé!',
+    }
+  },
+  bunny: {
+    id: 'bunny',
+    name: 'Thỏ Con Miffy',
+    title: 'Bạn Nhỏ Nhanh Nhẹn',
+    description: 'Nhanh nhẹn, thông minh và cực kỳ đáng yêu!',
+    avatar: '🐰',
+    color: '#EC4899',
+    badge: 'Tai Thỏ Thần Tốc',
+    subject: 'all',
+    quotes: {
+      greeting: 'Nhún nhảy cùng Thỏ Miffy nào! Hôm nay chúng mình sẽ giải bài siêu nhanh!',
+      cheer: 'Bạn làm nhanh và chuẩn xác quá đi thôi!',
+      win: 'Yêu bạn quá! Điểm 10 xuất sắc cho bạn nhỏ chăm ngoan!',
+      tryAgain: 'Cùng Thỏ Miffy đọc kỹ lại đề bài một xíu nghen!',
+      rest: 'Mắt xinh nghỉ ngơi một chút rồi chúng mình học tiếp nhé!',
+    }
+  },
+  bear: {
+    id: 'bear',
+    name: 'Gấu Nâu Teddy',
+    title: 'Bạn Gấu Chăm Chỉ',
+    description: 'Ấm áp, kiên trì và chăm chỉ học tập mỗi ngày!',
+    avatar: '🐻',
+    color: '#F97316',
+    badge: 'Trái Tim Ấm Áp',
+    subject: 'all',
+    quotes: {
+      greeting: 'Chào bạn! Gấu Teddy chúc bạn có một buổi học thật vui và bổ ích!',
+      cheer: 'Bạn học rất chăm chỉ, Gấu Teddy rất tự hào về bạn!',
+      win: 'Hoan hô! Thêm một ngôi sao vàng rực rỡ nữa rồi nè!',
+      tryAgain: 'Kiên trì là chìa khóa thành công! Cố lên bạn ơi!',
+      rest: 'Uống một ly nước ấm và vươn vai cùng Gấu Teddy nhé!',
+    }
+  },
+  lion: {
+    id: 'lion',
+    name: 'Sư Tử Simba',
+    title: 'Thủ Lĩnh Tri Thức',
+    description: 'Tự tin, kiêu hãnh và luôn dẫn đầu mọi bảng vàng!',
+    avatar: '🦁',
+    color: '#D97706',
+    badge: 'Vương Miện Thủ Lĩnh',
+    subject: 'all',
+    quotes: {
+      greeting: 'Chào bạn nhỏ! Hãy cùng Sư Tử Simba dẫn đầu mọi bảng xếp hạng hôm nay!',
+      cheer: 'Phong độ đỉnh cao của một thủ lĩnh thực thụ!',
+      win: 'Chiến thắng oanh liệt! Bạn quá xuất sắc!',
+      tryAgain: 'Bản lĩnh thủ lĩnh là không bao giờ chùn bước!',
+      rest: 'Thủ lĩnh nghỉ ngơi một lát để tinh thần luôn sắc bén nhé!',
+    }
+  },
+  cat: {
+    id: 'cat',
+    name: 'Mèo Kitty',
+    title: 'Mèo Con Đáng Yêu',
+    description: 'Dịu dàng, khéo tay và yêu thích các câu đố vui!',
+    avatar: '🐱',
+    color: '#F43F5E',
+    badge: 'Chuông Vàng May Mắn',
+    subject: 'all',
+    quotes: {
+      greeting: 'Meo meo! Mèo Kitty rất vui được đồng hành cùng bạn học tập hôm nay!',
+      cheer: 'Khéo léo và thông minh lắm, tiếp tục phát huy nha!',
+      win: 'Xinh xắn và giỏi giang! Thưởng cho bạn ngàn lời khen!',
+      tryAgain: 'Meo~ Không sao đâu, thử lại một lần nữa là trúng ngay!',
+      rest: 'Chớp mắt và tập thể dục nhẹ nhàng cùng Kitty nhé!',
+    }
+  },
+  puppy: {
+    id: 'puppy',
+    name: 'Cún Corgi',
+    title: 'Bạn Cún Vui Tươi',
+    description: 'Trung thành, hoạt bát và luôn mang lại tiếng cười!',
+    avatar: '🐶',
+    color: '#EAB308',
+    badge: 'Vòng Cổ May Mắn',
+    subject: 'all',
+    quotes: {
+      greeting: 'Gâu gâu! Hôm nay chúng mình sẽ có một ngày học siêu vui và ngập tràn năng lượng!',
+      cheer: 'Tuyệt đỉnh! Đuôi Corgi đang vẫy mừng bạn nè!',
+      win: 'Đỉnh nóc kịch trần! Bạn làm bài chuẩn không cần chỉnh!',
+      tryAgain: 'Cùng đánh hơi tìm ra đáp án đúng nào bạn ơi!',
+      rest: 'Chạy nhảy một chút rồi mình cùng quay lại học nghen!',
+    }
+  },
+  panda: {
+    id: 'panda',
+    name: 'Gấu Trúc Panda',
+    title: 'Nhà Hiền Triết',
+    description: 'Bình tĩnh, sâu sắc và kiên nhẫn giải quyết bài khó!',
+    avatar: '🐼',
+    color: '#64748B',
+    badge: 'Lá Trúc Thông Thái',
+    subject: 'all',
+    quotes: {
+      greeting: 'Bình tĩnh, tự tin và tập trung — Panda sẽ cùng bạn chinh phục mọi bài học!',
+      cheer: 'Tư duy rất sâu sắc và mạch lạc!',
+      win: 'Trí tuệ tuyệt vời! Kết quả hoàn hảo không tì vết!',
+      tryAgain: 'Hít một hơi thật sâu và suy nghĩ chậm rãi lại nhé!',
+      rest: 'Thư giãn tâm trí 5 phút cùng rừng trúc xanh mát!',
+    }
+  },
+  unicorn: {
+    id: 'unicorn',
+    name: 'Kỳ Lân Cầu Vồng',
+    title: 'Phép Màu Sáng Tạo',
+    description: 'Phép màu trí tuệ, rực rỡ sắc màu và giàu trí tưởng tượng!',
+    avatar: '🦄',
+    color: '#8B5CF6',
+    badge: 'Sừng Phép Màu',
+    subject: 'all',
+    quotes: {
+      greeting: 'Phép màu tri thức đã sẵn sàng! Cùng Kỳ Lân mở ra thế giới sắc màu nhé!',
+      cheer: 'Trí tưởng tượng và sự sáng tạo của bạn thật tuyệt vời!',
+      win: 'Phép thuật kỳ diệu! Bạn đã giải đố thành công rực rỡ!',
+      tryAgain: 'Mỗi lần thử lại là một tia sáng học hỏi mới!',
+      rest: 'Ngắm nhìn cầu vồng và nạp lại năng lượng phép màu nghen!',
+    }
+  },
+  penguin: {
+    id: 'penguin',
+    name: 'Cánh Cụt Nhỏ',
+    title: 'Nhà Thám Hiểm Băng',
+    description: 'Bền bỉ, can đảm và thích trượt băng vượt thử thách!',
+    avatar: '🐧',
+    color: '#0284C7',
+    badge: 'Bông Tuyết Tri Thức',
+    subject: 'all',
+    quotes: {
+      greeting: 'Chào bạn thám hiểm! Cánh Cụt sẽ cùng bạn trượt băng qua mọi thử thách!',
+      cheer: 'Vững vàng và kiên định, bạn làm tốt lắm!',
+      win: 'Chạm đỉnh núi băng thành công! Bạn siêu thật đấy!',
+      tryAgain: 'Trượt ngã thì đứng dậy trượt tiếp, cùng Cánh Cụt thử lại nhé!',
+      rest: 'Nghỉ ngơi một chút cho mát mẻ rồi học tiếp nha!',
+    }
+  },
+  koala: {
+    id: 'koala',
+    name: 'Gấu Koala',
+    title: 'Bạn Nhỏ Hiền Hòa',
+    description: 'Hiền hậu, lắng nghe và luôn học tập với tâm thế tích cực!',
+    avatar: '🐨',
+    color: '#6B7280',
+    badge: 'Lá Bạch Đàn Xanh',
+    subject: 'all',
+    quotes: {
+      greeting: 'Xin chào! Hãy cùng Koala học bài một cách nhẹ nhàng và hiệu quả nhé!',
+      cheer: 'Bạn lắng nghe và ghi nhớ bài học rất cẩn thận!',
+      win: 'Tuyệt lắm! Từng bước nhỏ làm nên thành tích lớn!',
+      tryAgain: 'Nhẹ nhàng đọc lại câu hỏi, bạn sẽ thấy ngay lời giải!',
+      rest: 'Ngồi thẳng lưng, hít thở đều và mỉm cười nào!',
+    }
+  },
+  tiger: {
+    id: 'tiger',
+    name: 'Hổ Con Tiger',
+    title: 'Chiến Binh Bứt Phá',
+    description: 'Năng động, dũng mãnh và bứt phá mọi giới hạn bài tập!',
+    avatar: '🐯',
+    color: '#EA580C',
+    badge: 'Huy Hiệu Mãnh Hổ',
+    subject: 'all',
+    quotes: {
+      greeting: 'Gầm vang trí tuệ! Hôm nay chúng mình sẽ bứt phá mọi giới hạn điểm số!',
+      cheer: 'Nhanh nhẹn, chuẩn xác và đầy uy lực!',
+      win: 'Chiến thắng vẻ vang! Bạn đúng là chiến binh nhí cừ khôi!',
+      tryAgain: 'Tập trung cao độ và tung đòn quyết định nào!',
+      rest: 'Nghỉ ngơi lấy lại sức mạnh rồi tiếp tục bứt phá nghen!',
+    }
+  },
+  astronaut: {
+    id: 'astronaut',
+    name: 'Phi Hành Gia',
+    title: 'Nhà Vũ Trụ Tương Lai',
+    description: 'Khám phá vũ trụ khoa học, bay cao và vươn xa tri thức!',
+    avatar: '🚀',
+    color: '#9333EA',
+    badge: 'Tên Lửa Siêu Thanh',
+    subject: 'all',
+    quotes: {
+      greeting: '3... 2... 1... Phóng tên lửa! Khám phá dải ngân hà kiến thức cùng Phi Hành Gia nhé!',
+      cheer: 'Tín hiệu xuất sắc từ trạm vũ trụ trí tuệ!',
+      win: 'Đáp cánh hoàn hảo trên hành tinh điểm 10!',
+      tryAgain: 'Điều chỉnh tọa độ và phóng lại lần nữa nào!',
+      rest: 'Trạng thái không trọng lực: nghỉ ngơi thư giãn mắt nhé!',
+    }
+  },
+  princess: {
+    id: 'princess',
+    name: 'Công Chúa Tri Thức',
+    title: 'Ngôi Sao Chăm Ngoan',
+    description: 'Xinh đẹp, lễ phép và chăm ngoan học giỏi nhất trường!',
+    avatar: '👑',
+    color: '#C026D3',
+    badge: 'Vương Miện Lấp Lánh',
+    subject: 'all',
+    quotes: {
+      greeting: 'Chào bạn yêu quý! Hôm nay vương quốc tri thức đón chào một ngôi sao chăm ngoan!',
+      cheer: 'Bạn học rất ngoan và thông minh, vương miện tỏa sáng!',
+      win: 'Xứng đáng vương miện danh dự! Chúc mừng bạn!',
+      tryAgain: 'Công chúa tri thức luôn kiên trì và tự tin, thử lại nghen!',
+      rest: 'Uống một ngụm nước và thưởng thức giờ nghỉ ngắn nhé!',
+    }
   }
 };
 
@@ -271,6 +492,7 @@ export const MOCK_PARENT_REPORT: ParentReport = {
 export interface CuteAvatarOption {
   id: string;
   name: string;
+  shortName: string;
   emoji: string;
   bgColor: string;
   borderColor: string;
@@ -280,20 +502,20 @@ export interface CuteAvatarOption {
 }
 
 export const CUTE_ANIMAL_AVATARS: CuteAvatarOption[] = [
-  { id: 'bobo', name: 'Cú BoBo', emoji: '🦉', bgColor: '#ECFDF5', borderColor: '#10B981', textColor: '#065F46', description: 'Thông thái, tính nhẩm thần tốc', tag: 'Toán học' },
-  { id: 'miumiu', name: 'Cáo MiuMiu', emoji: '🦊', bgColor: '#FFFBEB', borderColor: '#F59E0B', textColor: '#92400E', description: 'Kể chuyện hay, văn thơ bay bổng', tag: 'Tiếng Việt' },
-  { id: 'pipi', name: 'Cá Heo PiPi', emoji: '🐬', bgColor: '#F0F9FF', borderColor: '#0EA5E9', textColor: '#075985', description: 'Ngoại ngữ siêu đỉnh, thích bơi lội', tag: 'Tiếng Anh' },
-  { id: 'dino', name: 'Khủng Long T-Rex', emoji: '🦖', bgColor: '#F0FDF4', borderColor: '#22C55E', textColor: '#166534', description: 'Dũng cảm, yêu thích thám hiểm', tag: 'Dũng sĩ' },
-  { id: 'bunny', name: 'Thỏ Con Miffy', emoji: '🐰', bgColor: '#FDF2F8', borderColor: '#EC4899', textColor: '#9D174D', description: 'Nhanh nhẹn, đáng yêu', tag: 'Nhanh nhẹn' },
-  { id: 'bear', name: 'Gấu Nâu Teddy', emoji: '🐻', bgColor: '#FFF7ED', borderColor: '#F97316', textColor: '#9A3412', description: 'Ấm áp, chăm chỉ học tập', tag: 'Chăm chỉ' },
-  { id: 'lion', name: 'Sư Tử Simba', emoji: '🦁', bgColor: '#FEF3C7', borderColor: '#D97706', textColor: '#78350F', description: 'Tự tin, thủ lĩnh tri thức', tag: 'Thủ lĩnh' },
-  { id: 'cat', name: 'Mèo Kitty', emoji: '🐱', bgColor: '#FCE7F3', borderColor: '#F43F5E', textColor: '#881337', description: 'Dịu dàng, khéo tay hay làm', tag: 'Dễ thương' },
-  { id: 'puppy', name: 'Cún Corgi', emoji: '🐶', bgColor: '#FEF08A', borderColor: '#EAB308', textColor: '#713F12', description: 'Trung thành, luôn vui vẻ', tag: 'Vui tươi' },
-  { id: 'panda', name: 'Gấu Trúc Panda', emoji: '🐼', bgColor: '#F1F5F9', borderColor: '#64748B', textColor: '#0F172A', description: 'Bình tĩnh, kiên nhẫn giải đố', tag: 'Kiên nhẫn' },
-  { id: 'unicorn', name: 'Kỳ Lân Cầu Vồng', emoji: '🦄', bgColor: '#F5F3FF', borderColor: '#8B5CF6', textColor: '#5B21B6', description: 'Phép màu trí tuệ, sáng tạo', tag: 'Sáng tạo' },
-  { id: 'penguin', name: 'Cánh Cụt Nhỏ', emoji: '🐧', bgColor: '#E0F2FE', borderColor: '#38BDF8', textColor: '#0369A1', description: 'Bền bỉ, thích phiêu lưu băng tuyết', tag: 'Thám hiểm' },
-  { id: 'koala', name: 'Gấu Koala', emoji: '🐨', bgColor: '#F3F4F6', borderColor: '#9CA3AF', textColor: '#374151', description: 'Hiền hậu, tập trung lắng nghe', tag: 'Tập trung' },
-  { id: 'tiger', name: 'Hổ Con Tiger', emoji: '🐯', bgColor: '#FFEDD5', borderColor: '#FB923C', textColor: '#9A3412', description: 'Năng động, bứt phá mọi bài tập', tag: 'Bứt phá' },
-  { id: 'astronaut', name: 'Phi Hành Gia', emoji: '🚀', bgColor: '#EDE9FE', borderColor: '#A855F7', textColor: '#6B21A8', description: 'Khám phá vũ trụ khoa học', tag: 'Khoa học' },
-  { id: 'princess', name: 'Công Chúa Tri Thức', emoji: '👑', bgColor: '#FDF4FF', borderColor: '#E879F9', textColor: '#86198F', description: 'Xinh đẹp, chăm ngoan học giỏi', tag: 'Chăm ngoan' },
+  { id: 'bobo', name: 'Cú BoBo', shortName: 'Cú BoBo', emoji: '🦉', bgColor: '#ECFDF5', borderColor: '#10B981', textColor: '#065F46', description: 'Thông thái, tính nhẩm thần tốc', tag: 'Toán học' },
+  { id: 'miumiu', name: 'Cáo MiuMiu', shortName: 'Cáo MiuMiu', emoji: '🦊', bgColor: '#FFFBEB', borderColor: '#F59E0B', textColor: '#92400E', description: 'Kể chuyện hay, văn thơ bay bổng', tag: 'Tiếng Việt' },
+  { id: 'pipi', name: 'Cá Heo PiPi', shortName: 'Cá Heo', emoji: '🐬', bgColor: '#F0F9FF', borderColor: '#0EA5E9', textColor: '#075985', description: 'Ngoại ngữ siêu đỉnh, thích bơi lội', tag: 'Tiếng Anh' },
+  { id: 'dino', name: 'Khủng Long T-Rex', shortName: 'Khủng Long', emoji: '🦖', bgColor: '#F0FDF4', borderColor: '#22C55E', textColor: '#166534', description: 'Dũng cảm, yêu thích thám hiểm', tag: 'Dũng sĩ' },
+  { id: 'bunny', name: 'Thỏ Con Miffy', shortName: 'Thỏ Con', emoji: '🐰', bgColor: '#FDF2F8', borderColor: '#EC4899', textColor: '#9D174D', description: 'Nhanh nhẹn, đáng yêu', tag: 'Nhanh nhẹn' },
+  { id: 'bear', name: 'Gấu Nâu Teddy', shortName: 'Gấu Nâu', emoji: '🐻', bgColor: '#FFF7ED', borderColor: '#F97316', textColor: '#9A3412', description: 'Ấm áp, chăm chỉ học tập', tag: 'Chăm chỉ' },
+  { id: 'lion', name: 'Sư Tử Simba', shortName: 'Sư Tử', emoji: '🦁', bgColor: '#FEF3C7', borderColor: '#D97706', textColor: '#78350F', description: 'Tự tin, thủ lĩnh tri thức', tag: 'Thủ lĩnh' },
+  { id: 'cat', name: 'Mèo Kitty', shortName: 'Mèo Con', emoji: '🐱', bgColor: '#FCE7F3', borderColor: '#F43F5E', textColor: '#881337', description: 'Dịu dàng, khéo tay hay làm', tag: 'Dễ thương' },
+  { id: 'puppy', name: 'Cún Corgi', shortName: 'Cún Corgi', emoji: '🐶', bgColor: '#FEF08A', borderColor: '#EAB308', textColor: '#713F12', description: 'Trung thành, luôn vui vẻ', tag: 'Vui tươi' },
+  { id: 'panda', name: 'Gấu Trúc Panda', shortName: 'Gấu Trúc', emoji: '🐼', bgColor: '#F1F5F9', borderColor: '#64748B', textColor: '#0F172A', description: 'Bình tĩnh, kiên nhẫn giải đố', tag: 'Kiên nhẫn' },
+  { id: 'unicorn', name: 'Kỳ Lân Cầu Vồng', shortName: 'Kỳ Lân', emoji: '🦄', bgColor: '#F5F3FF', borderColor: '#8B5CF6', textColor: '#5B21B6', description: 'Phép màu trí tuệ, sáng tạo', tag: 'Sáng tạo' },
+  { id: 'penguin', name: 'Cánh Cụt Nhỏ', shortName: 'Cánh Cụt', emoji: '🐧', bgColor: '#E0F2FE', borderColor: '#38BDF8', textColor: '#0369A1', description: 'Bền bỉ, thích phiêu lưu băng tuyết', tag: 'Thám hiểm' },
+  { id: 'koala', name: 'Gấu Koala', shortName: 'Gấu Koala', emoji: '🐨', bgColor: '#F3F4F6', borderColor: '#9CA3AF', textColor: '#374151', description: 'Hiền hậu, tập trung lắng nghe', tag: 'Tập trung' },
+  { id: 'tiger', name: 'Hổ Con Tiger', shortName: 'Hổ Con', emoji: '🐯', bgColor: '#FFEDD5', borderColor: '#FB923C', textColor: '#9A3412', description: 'Năng động, bứt phá mọi bài tập', tag: 'Bứt phá' },
+  { id: 'astronaut', name: 'Phi Hành Gia', shortName: 'Phi Hành Gia', emoji: '🚀', bgColor: '#EDE9FE', borderColor: '#A855F7', textColor: '#6B21A8', description: 'Khám phá vũ trụ khoa học', tag: 'Khoa học' },
+  { id: 'princess', name: 'Công Chúa Tri Thức', shortName: 'Công Chúa', emoji: '👑', bgColor: '#FDF4FF', borderColor: '#E879F9', textColor: '#86198F', description: 'Xinh đẹp, chăm ngoan học giỏi', tag: 'Chăm ngoan' },
 ];

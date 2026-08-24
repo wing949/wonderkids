@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { ShieldCheck, Clock, CheckCircle2, Award, Plus, ArrowLeft, Eye, TrendingUp, Trash2, Check } from 'lucide-react';
-import { MOCK_PARENT_REPORT } from '../../data/gamificationData';
-import { ParentReport, ParentTask } from '../../types';
+import React, { useEffect, useState } from 'react';
+import { ShieldCheck, Clock, CheckCircle2, Award, Plus, ArrowLeft, Eye, TrendingUp, Trash2, Check, Pencil, X } from 'lucide-react';
+import { CUTE_ANIMAL_AVATARS } from '../../data/gamificationData';
+import { GradeLevel, ParentReport, ParentTask, StudentProfile } from '../../types';
+import type { ManagedKid } from '../../utils/parentAccount';
 import { CuteButton } from '../ui/CuteButton';
 import { CandyProgressBar } from '../ui/CandyProgressBar';
 import { soundManager } from '../../utils/audio';
-
-const STORAGE_KEY_PARENT_REPORT = 'wonderkids_parent_report_v1';
-
-const getInitialParentReport = (): ParentReport => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY_PARENT_REPORT);
-    if (saved) {
-      return JSON.parse(saved);
-    }
-  } catch (e) {
-    console.error('Failed to load parent report from localStorage', e);
-  }
-  return MOCK_PARENT_REPORT;
-};
+import { MASCOT_3D_IMAGES } from '../profile/ProfileModal';
 
 interface ParentPortalProps {
+  kids: ManagedKid[];
+  activeKidId: string;
+  report: ParentReport;
+  onSelectKid: (kidId: string) => void;
+  onAddKid: (profile: StudentProfile) => void;
+  onUpdateKid: (kidId: string, changes: Partial<StudentProfile>) => void;
+  onUpdateReport: (report: ParentReport) => void;
   onBackToStudent: () => void;
   onRewardStars?: (stars: number) => void;
 }
@@ -34,26 +29,95 @@ const QUICK_CHORE_SUGGESTIONS = [
   { title: 'Quét và dọn gọn phòng học 🧹', stars: 2 },
 ];
 
-export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onRewardStars }) => {
-  const [report, setReport] = useState<ParentReport>(getInitialParentReport);
+export const ParentPortal: React.FC<ParentPortalProps> = ({
+  kids,
+  activeKidId,
+  report,
+  onSelectKid,
+  onAddKid,
+  onUpdateKid,
+  onUpdateReport,
+  onBackToStudent,
+  onRewardStars,
+}) => {
   const [screenLimit, setScreenLimit] = useState(report.screenTimeLimitMinutes);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskStars, setNewTaskStars] = useState(1);
   const [activeTab, setActiveTab] = useState<'overview' | 'tasks'>('overview');
+  const [profileFormMode, setProfileFormMode] = useState<'add' | 'edit' | null>(null);
+  const [editingKidId, setEditingKidId] = useState<string | null>(null);
+  const [kidName, setKidName] = useState('');
+  const [kidGrade, setKidGrade] = useState<GradeLevel>(1);
+  const [kidAvatarId, setKidAvatarId] = useState(CUTE_ANIMAL_AVATARS[0].id);
 
-  // Sync state to localStorage whenever report or screenLimit changes
   useEffect(() => {
-    try {
-      const updatedReport = { ...report, screenTimeLimitMinutes: screenLimit };
-      localStorage.setItem(STORAGE_KEY_PARENT_REPORT, JSON.stringify(updatedReport));
-    } catch (e) {}
-  }, [report, screenLimit]);
+    setScreenLimit(report.screenTimeLimitMinutes);
+    setNewTaskTitle('');
+  }, [activeKidId, report.screenTimeLimitMinutes]);
+
+  const updateReport = (updater: (current: ParentReport) => ParentReport) => {
+    onUpdateReport(updater(report));
+  };
+
+  const openAddKidForm = () => {
+    soundManager.playPop();
+    setProfileFormMode('add');
+    setEditingKidId(null);
+    setKidName('');
+    setKidGrade(1);
+    setKidAvatarId(CUTE_ANIMAL_AVATARS[0].id);
+  };
+
+  const openEditKidForm = (kid: ManagedKid) => {
+    soundManager.playPop();
+    setProfileFormMode('edit');
+    setEditingKidId(kid.id);
+    setKidName(kid.profile.name);
+    setKidGrade(kid.profile.grade);
+    setKidAvatarId(kid.profile.avatarId || kid.profile.selectedMascot);
+  };
+
+  const closeKidForm = () => {
+    setProfileFormMode(null);
+    setEditingKidId(null);
+  };
+
+  const handleSaveKid = (event: React.FormEvent) => {
+    event.preventDefault();
+    const name = kidName.trim();
+    if (!name) return;
+    soundManager.playPop();
+    if (profileFormMode === 'edit' && editingKidId) {
+      onUpdateKid(editingKidId, { name, grade: kidGrade, avatarId: kidAvatarId });
+    } else {
+      onAddKid({
+        name,
+        kidCode: `WK-${Date.now().toString(36).slice(-6).toUpperCase()}`,
+        grade: kidGrade,
+        selectedMascot: ['bobo', 'miumiu', 'pipi', 'bipbip'].includes(kidAvatarId)
+          ? kidAvatarId as StudentProfile['selectedMascot']
+          : 'bobo',
+        avatarId: kidAvatarId,
+        motto: '🌟 Mỗi ngày học một chút, vui là chính!',
+        theme: 'ocean',
+        stars: 0,
+        gems: 0,
+        xp: 0,
+        level: 1,
+        streak: 0,
+        streakFrozen: false,
+        totalLessonsCompleted: 0,
+        accuracyRate: 0,
+      });
+    }
+    closeKidForm();
+  };
 
   // Approve a task and grant actual stars to student
   const handleApproveTask = (task: ParentTask) => {
     soundManager.playCorrect();
     onRewardStars?.(task.rewardStars);
-    setReport((prev) => ({
+    updateReport((prev) => ({
       ...prev,
       parentTasks: prev.parentTasks.map((t) =>
         t.id === task.id ? { ...t, isApproved: true, isCompleted: true } : t
@@ -64,7 +128,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
   // Toggle completed status (e.g. kid marked finished or parent marked done)
   const handleToggleComplete = (taskId: string) => {
     soundManager.playPop();
-    setReport((prev) => ({
+    updateReport((prev) => ({
       ...prev,
       parentTasks: prev.parentTasks.map((t) =>
         t.id === taskId ? { ...t, isCompleted: !t.isCompleted } : t
@@ -75,7 +139,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
   // Delete a task
   const handleDeleteTask = (taskId: string) => {
     soundManager.playPop();
-    setReport((prev) => ({
+    updateReport((prev) => ({
       ...prev,
       parentTasks: prev.parentTasks.filter((t) => t.id !== taskId),
     }));
@@ -93,7 +157,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
       isCompleted: false,
       isApproved: false,
     };
-    setReport((prev) => ({
+    updateReport((prev) => ({
       ...prev,
       parentTasks: [newTask, ...prev.parentTasks],
     }));
@@ -110,7 +174,7 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
       isCompleted: false,
       isApproved: false,
     };
-    setReport((prev) => ({
+    updateReport((prev) => ({
       ...prev,
       parentTasks: [newTask, ...prev.parentTasks],
     }));
@@ -156,6 +220,131 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
           </CuteButton>
         </div>
 
+        <section className="rounded-4xl border border-purple-100 bg-white/95 p-4 shadow-washi sm:p-5">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="font-baloo text-xs font-black uppercase tracking-wide text-purple-600">Tài khoản gia đình</p>
+              <h2 className="font-baloo text-xl font-black text-brand-dark sm:text-2xl">Quản lý hồ sơ các Bé</h2>
+              <p className="font-vietnam text-xs font-semibold text-slate-500">Chọn đúng Bé trước khi xem báo cáo hoặc giao việc.</p>
+            </div>
+            <button
+              type="button"
+              onClick={openAddKidForm}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-4 font-baloo text-sm font-black text-white shadow-[0_4px_0_#047857] transition-transform hover:-translate-y-0.5 active:translate-y-1 active:shadow-none"
+            >
+              <Plus size={18} /> Thêm Bé
+            </button>
+          </div>
+
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {kids.map((kid) => {
+              const avatar = CUTE_ANIMAL_AVATARS.find((item) => item.id === (kid.profile.avatarId || kid.profile.selectedMascot));
+              const isActive = kid.id === activeKidId;
+              return (
+                <div
+                  key={kid.id}
+                  className={`relative flex min-h-24 items-center gap-3 rounded-3xl border-2 p-3 transition-all ${isActive
+                      ? 'border-emerald-400 bg-emerald-50 shadow-[0_4px_0_#a7f3d0]'
+                      : 'border-slate-200 bg-slate-50 hover:border-purple-200 hover:bg-purple-50/60'
+                    }`}
+                >
+                  <button
+                    type="button"
+                    aria-label={`Chuyển sang hồ sơ ${kid.profile.name}`}
+                    onClick={() => {
+                      soundManager.playPop();
+                      onSelectKid(kid.id);
+                    }}
+                    className="flex min-w-0 flex-1 items-center gap-3 text-left"
+                  >
+                    {(() => {
+                      const avatarId = kid.profile.avatarId || kid.profile.selectedMascot || 'bobo';
+                      const avatarImg = MASCOT_3D_IMAGES[avatarId];
+                      return (
+                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm overflow-hidden border border-slate-100" aria-hidden="true">
+                          {avatarImg ? (
+                            <img src={avatarImg} alt={avatar?.name} className="h-full w-full object-cover" />
+                          ) : (
+                            avatar?.emoji || '🦉'
+                          )}
+                        </span>
+                      );
+                    })()}
+                    <span className="min-w-0">
+                      <span className="block truncate font-baloo text-lg font-black text-brand-dark">{kid.profile.name}</span>
+                      <span className="block font-vietnam text-xs font-bold text-slate-500">Lớp {kid.profile.grade} • {kid.profile.stars} ⭐ • Cấp {kid.profile.level}</span>
+                      {isActive && <span className="mt-1 inline-flex rounded-full bg-emerald-500 px-2 py-0.5 font-baloo text-[11px] font-black text-white">Đang xem</span>}
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    aria-label={`Chỉnh sửa hồ sơ ${kid.profile.name}`}
+                    onClick={() => openEditKidForm(kid)}
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white text-purple-700 shadow-sm transition-colors hover:bg-purple-100"
+                  >
+                    <Pencil size={17} />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+
+          {profileFormMode && (
+            <form onSubmit={handleSaveKid} className="mt-4 rounded-3xl border border-purple-200 bg-purple-50/70 p-4">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="font-baloo text-lg font-black text-brand-dark">
+                  {profileFormMode === 'add' ? 'Thêm hồ sơ Bé mới' : 'Chỉnh sửa hồ sơ Bé'}
+                </h3>
+                <button type="button" onClick={closeKidForm} className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-slate-500" aria-label="Đóng biểu mẫu">
+                  <X size={18} />
+                </button>
+              </div>
+              <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-[1.4fr_0.7fr_1fr_auto] sm:items-end">
+                <label className="font-baloo text-xs font-black text-slate-600">
+                  Tên của Bé
+                  <input
+                    aria-label="Tên của Bé"
+                    value={kidName}
+                    onChange={(event) => setKidName(event.target.value)}
+                    required
+                    maxLength={40}
+                    placeholder="Ví dụ: Bé Minh Anh"
+                    className="mt-1 min-h-12 w-full rounded-2xl border border-slate-200 bg-white px-4 font-vietnam text-sm font-semibold outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-200"
+                  />
+                </label>
+                <label className="font-baloo text-xs font-black text-slate-600">
+                  Lớp của Bé
+                  <select
+                    aria-label="Lớp của Bé"
+                    value={kidGrade}
+                    onChange={(event) => setKidGrade(Number(event.target.value) as GradeLevel)}
+                    className="mt-1 min-h-12 w-full rounded-2xl border border-slate-200 bg-white px-3 font-baloo text-sm font-black text-brand-dark outline-none focus:border-purple-400"
+                  >
+                    {[1, 2, 3, 4, 5].map((grade) => <option key={grade} value={grade}>Lớp {grade}</option>)}
+                  </select>
+                </label>
+                <label className="font-baloo text-xs font-black text-slate-600">
+                  Bạn đồng hành
+                  <select
+                    aria-label="Ảnh đại diện của Bé"
+                    value={kidAvatarId}
+                    onChange={(event) => setKidAvatarId(event.target.value)}
+                    className="mt-1 min-h-12 w-full rounded-2xl border border-slate-200 bg-white px-3 font-baloo text-sm font-black text-brand-dark outline-none focus:border-purple-400"
+                  >
+                    {CUTE_ANIMAL_AVATARS.map((avatar) => <option key={avatar.id} value={avatar.id}>{avatar.emoji} {avatar.name}</option>)}
+                  </select>
+                </label>
+                <button
+                  type="submit"
+                  className="min-h-12 rounded-2xl bg-purple-600 px-5 font-baloo text-sm font-black text-white shadow-[0_4px_0_#6d28d9] active:translate-y-1 active:shadow-none"
+                >
+                  {profileFormMode === 'add' ? 'Tạo hồ sơ Bé' : 'Lưu thay đổi'}
+                </button>
+              </div>
+            </form>
+          )}
+        </section>
+
         {/* Tab Navigation Bar */}
         <div className="flex flex-wrap items-center gap-2 border-b border-slate-200 pb-3">
           <button
@@ -164,11 +353,10 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
               soundManager.playPop();
               setActiveTab('overview');
             }}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
-              activeTab === 'overview'
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${activeTab === 'overview'
                 ? 'bg-purple-600 text-white shadow-md'
                 : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-            }`}
+              }`}
           >
             <TrendingUp size={16} /> Báo Cáo Học Tập & Thời Gian
           </button>
@@ -179,11 +367,10 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
               soundManager.playPop();
               setActiveTab('tasks');
             }}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${
-              activeTab === 'tasks'
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-baloo font-bold text-sm transition-all cursor-pointer ${activeTab === 'tasks'
                 ? 'bg-purple-600 text-white shadow-md'
                 : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-            }`}
+              }`}
           >
             <Award size={16} /> ⭐ Sổ Việc Tốt ({report.parentTasks.filter((t) => !t.isApproved).length})
           </button>
@@ -244,7 +431,11 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
                   max="60"
                   step="5"
                   value={screenLimit}
-                  onChange={(e) => setScreenLimit(Number(e.target.value))}
+                  onChange={(e) => {
+                    const nextLimit = Number(e.target.value);
+                    setScreenLimit(nextLimit);
+                    onUpdateReport({ ...report, screenTimeLimitMinutes: nextLimit });
+                  }}
                   className="w-full accent-emerald-600 cursor-pointer h-2 bg-slate-200 rounded-lg"
                 />
                 <div className="flex justify-between text-[11px] font-bold text-slate-400 font-baloo mt-1">
@@ -291,8 +482,8 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
                         sub.subject === 'Toán Học'
                           ? 'math'
                           : sub.subject === 'Tiếng Việt'
-                          ? 'vietnamese'
-                          : 'english'
+                            ? 'vietnamese'
+                            : 'english'
                       }
                       height="sm"
                       showStarIndicator={false}
@@ -374,109 +565,108 @@ export const ParentPortal: React.FC<ParentPortalProps> = ({ onBackToStudent, onR
 
             {/* Add New Task Form */}
             <form onSubmit={handleAddTask} className="mt-5 flex flex-col sm:flex-row gap-3">
-            <input
-              type="text"
-              placeholder="Nhập việc nhà (Ví dụ: Tưới cây, Đọc sách 15 phút, Tự rửa cốc...)"
-              value={newTaskTitle}
-              onChange={(e) => setNewTaskTitle(e.target.value)}
-              className="flex-1 rounded-2xl bg-white px-4 py-2.5 font-vietnam text-sm shadow-xs outline-none border border-amber-200/80 focus:ring-2 focus:ring-amber-400"
-            />
-            <div className="flex items-center gap-2">
-              <select
-                value={newTaskStars}
-                onChange={(e) => setNewTaskStars(Number(e.target.value))}
-                className="rounded-2xl bg-white px-3 py-2.5 font-baloo font-bold text-sm text-brand-dark shadow-xs outline-none border border-amber-200/80 cursor-pointer"
-              >
-                <option value={1}>+1 ⭐ Sao</option>
-                <option value={2}>+2 ⭐ Sao</option>
-                <option value={3}>+3 ⭐ Sao</option>
-                <option value={5}>+5 ⭐ Sao</option>
-              </select>
-              <CuteButton
-                type="submit"
-                variant="amber"
-                size="md"
-                icon={<Plus size={18} />}
-              >
-                Thêm Việc
-              </CuteButton>
-            </div>
-          </form>
-
-          {/* Tasks List */}
-          <div className="mt-6 space-y-3">
-            {report.parentTasks.length === 0 ? (
-              <div className="text-center py-8 text-slate-400 font-baloo text-sm">
-                Chưa có việc nhà nào. Hãy thêm việc tốt cho con ở phía trên nhé! 🌟
-              </div>
-            ) : (
-              report.parentTasks.map((task) => (
-                <div
-                  key={task.id}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl bg-white p-4 shadow-xs border border-amber-100 transition-all hover:border-amber-200"
+              <input
+                type="text"
+                placeholder="Nhập việc nhà (Ví dụ: Tưới cây, Đọc sách 15 phút, Tự rửa cốc...)"
+                value={newTaskTitle}
+                onChange={(e) => setNewTaskTitle(e.target.value)}
+                className="flex-1 rounded-2xl bg-white px-4 py-2.5 font-vietnam text-sm shadow-xs outline-none border border-amber-200/80 focus:ring-2 focus:ring-amber-400"
+              />
+              <div className="flex items-center gap-2">
+                <select
+                  value={newTaskStars}
+                  onChange={(e) => setNewTaskStars(Number(e.target.value))}
+                  className="rounded-2xl bg-white px-3 py-2.5 font-baloo font-bold text-sm text-brand-dark shadow-xs outline-none border border-amber-200/80 cursor-pointer"
                 >
-                  <div className="flex items-center gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleToggleComplete(task.id)}
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-colors cursor-pointer ${
-                        task.isCompleted || task.isApproved
-                          ? 'bg-emerald-100 text-emerald-700'
-                          : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
-                      }`}
-                      title={task.isCompleted ? 'Bé đã làm xong' : 'Đánh dấu bé đã làm xong'}
-                    >
-                      {task.isCompleted || task.isApproved ? <Check size={18} /> : <span className="text-xs">○</span>}
-                    </button>
-                    <div>
-                      <h5 className={`font-baloo font-bold text-base ${task.isApproved ? 'text-slate-500 line-through' : 'text-brand-dark'}`}>
-                        {task.title}
-                      </h5>
-                      <span className="font-baloo text-xs font-bold text-amber-700">
-                        Thưởng: +{task.rewardStars} Sao Vàng ⭐
-                      </span>
-                    </div>
-                  </div>
+                  <option value={1}>+1 ⭐ Sao</option>
+                  <option value={2}>+2 ⭐ Sao</option>
+                  <option value={3}>+3 ⭐ Sao</option>
+                  <option value={5}>+5 ⭐ Sao</option>
+                </select>
+                <CuteButton
+                  type="submit"
+                  variant="amber"
+                  size="md"
+                  icon={<Plus size={18} />}
+                >
+                  Thêm Việc
+                </CuteButton>
+              </div>
+            </form>
 
-                  <div className="flex items-center gap-2 self-end sm:self-auto">
-                    {task.isApproved ? (
-                      <span className="inline-flex items-center gap-1 font-baloo font-extrabold text-xs text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-full">
-                        <CheckCircle2 size={16} /> Đã Thưởng Sao
-                      </span>
-                    ) : task.isCompleted ? (
-                      <button
-                        type="button"
-                        onClick={() => handleApproveTask(task)}
-                        className="inline-flex items-center gap-1 font-baloo font-black text-xs sm:text-sm text-white bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-xl shadow-xs transition-all hover:scale-105 active:scale-95 cursor-pointer"
-                      >
-                        Bé Đã Làm Xong - Duyệt Thưởng +{task.rewardStars}⭐
-                      </button>
-                    ) : (
+            {/* Tasks List */}
+            <div className="mt-6 space-y-3">
+              {report.parentTasks.length === 0 ? (
+                <div className="text-center py-8 text-slate-400 font-baloo text-sm">
+                  Chưa có việc nhà nào. Hãy thêm việc tốt cho con ở phía trên nhé! 🌟
+                </div>
+              ) : (
+                report.parentTasks.map((task) => (
+                  <div
+                    key={task.id}
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl bg-white p-4 shadow-xs border border-amber-100 transition-all hover:border-amber-200"
+                  >
+                    <div className="flex items-center gap-3">
                       <button
                         type="button"
                         onClick={() => handleToggleComplete(task.id)}
-                        className="font-baloo text-xs font-bold text-slate-500 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 px-3 py-1.5 rounded-full transition-colors cursor-pointer"
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-colors cursor-pointer ${task.isCompleted || task.isApproved
+                            ? 'bg-emerald-100 text-emerald-700'
+                            : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
+                          }`}
+                        title={task.isCompleted ? 'Bé đã làm xong' : 'Đánh dấu bé đã làm xong'}
                       >
-                        Đang làm (Nhấn để đánh dấu xong)
+                        {task.isCompleted || task.isApproved ? <Check size={18} /> : <span className="text-xs">○</span>}
                       </button>
-                    )}
+                      <div>
+                        <h5 className={`font-baloo font-bold text-base ${task.isApproved ? 'text-slate-500 line-through' : 'text-brand-dark'}`}>
+                          {task.title}
+                        </h5>
+                        <span className="font-baloo text-xs font-bold text-amber-700">
+                          Thưởng: +{task.rewardStars} Sao Vàng ⭐
+                        </span>
+                      </div>
+                    </div>
 
-                    <button
-                      type="button"
-                      onClick={() => handleDeleteTask(task.id)}
-                      className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-colors cursor-pointer"
-                      title="Xóa việc này"
-                    >
-                      <Trash2 size={16} />
-                    </button>
+                    <div className="flex items-center gap-2 self-end sm:self-auto">
+                      {task.isApproved ? (
+                        <span className="inline-flex items-center gap-1 font-baloo font-extrabold text-xs text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-full">
+                          <CheckCircle2 size={16} /> Đã Thưởng Sao
+                        </span>
+                      ) : task.isCompleted ? (
+                        <button
+                          type="button"
+                          onClick={() => handleApproveTask(task)}
+                          className="inline-flex items-center gap-1 font-baloo font-black text-xs sm:text-sm text-white bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-xl shadow-xs transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                        >
+                          Bé Đã Làm Xong - Duyệt Thưởng +{task.rewardStars}⭐
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => handleToggleComplete(task.id)}
+                          className="font-baloo text-xs font-bold text-slate-500 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 px-3 py-1.5 rounded-full transition-colors cursor-pointer"
+                        >
+                          Đang làm (Nhấn để đánh dấu xong)
+                        </button>
+                      )}
+
+                      <button
+                        type="button"
+                        onClick={() => handleDeleteTask(task.id)}
+                        className="p-2 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-colors cursor-pointer"
+                        title="Xóa việc này"
+                      >
+                        <Trash2 size={16} />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))
-            )}
-          </div>
-        </section>
-      )}
+                ))
+              )}
+            </div>
+          </section>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
 };

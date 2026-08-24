@@ -21,6 +21,34 @@ const MOTTO_PRESETS = [
   '🎨 Bé thông minh, nhanh nhẹn và sáng tạo!'
 ];
 
+const PROFILE_THEME_OPTIONS = [
+  { id: 'ocean', label: 'Biển Xanh', icon: '🌊', surface: '#E0F2FE', textClass: 'text-sky-950', ringClass: 'ring-sky-400' },
+  { id: 'space', label: 'Vũ Trụ', icon: '🚀', surface: '#EDE9FE', textClass: 'text-purple-950', ringClass: 'ring-purple-400' },
+  { id: 'jungle', label: 'Rừng Xanh', icon: '🌴', surface: '#D1FAE5', textClass: 'text-emerald-950', ringClass: 'ring-emerald-400' },
+  { id: 'candy', label: 'Kẹo Ngọt', icon: '🍬', surface: '#FCE7F3', textClass: 'text-pink-950', ringClass: 'ring-pink-400' },
+  { id: 'sunny', label: 'Nắng Ấm', icon: '☀️', surface: '#FEF3C7', textClass: 'text-amber-950', ringClass: 'ring-amber-400' },
+] as const;
+
+export const MASCOT_3D_IMAGES: Record<string, string> = {
+  bobo: '/assets/bobo_math.jpg',
+  miumiu: '/assets/miumiu_story.jpg',
+  pipi: '/assets/pipi_english.jpg',
+  bipbip: '/assets/bipbip_logic.jpg',
+  lion: '/assets/mascots/mascot_lion.jpg',
+  dino: '/assets/mascots/mascot_dino.jpg',
+  bunny: '/assets/mascots/mascot_bunny.jpg',
+  bear: '/assets/mascots/mascot_bear.jpg',
+  cat: '/assets/mascots/mascot_cat.jpg',
+  puppy: '/assets/mascots/mascot_puppy.jpg',
+  panda: '/assets/mascots/mascot_panda.jpg',
+  unicorn: '/assets/mascots/mascot_unicorn.jpg',
+  penguin: '/assets/mascots/mascot_penguin.jpg',
+  koala: '/assets/mascots/mascot_koala.jpg',
+  tiger: '/assets/mascots/mascot_tiger.jpg',
+  astronaut: '/assets/mascots/mascot_astronaut.jpg',
+  princess: '/assets/mascots/mascot_princess.jpg',
+};
+
 export const ProfileModal: React.FC<ProfileModalProps> = ({
   isOpen,
   onClose,
@@ -40,10 +68,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
 
   const handleSave = () => {
     soundManager.playVictory();
-    // Map avatarId back to mascot if it matches
-    const mascotKey = ['bobo', 'miumiu', 'pipi', 'bipbip'].includes(selectedAvatarId)
-      ? selectedAvatarId
-      : profile.selectedMascot;
+    const mascotKey = selectedAvatarId;
 
     onUpdateProfile({
       name: name.trim() || 'Bé An Nhiên',
@@ -71,7 +96,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
     >
       <div className="space-y-4 sm:space-y-5">
         {/* Tab Navigation */}
-        <div className="grid grid-cols-2 gap-2 border-b border-slate-100 pb-3">
+        <div className="grid grid-cols-2 gap-2 pb-2">
           <button
             onClick={() => {
               soundManager.playPop();
@@ -79,7 +104,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
             }}
             className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-2 py-2 font-baloo text-sm font-black transition-all cursor-pointer sm:px-4 ${
               activeTab === 'edit'
-                ? 'bg-amber-400 text-brand-dark shadow-xs border-2 border-amber-500 scale-102'
+                ? 'bg-amber-400 text-brand-dark shadow-xs scale-102'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`}
           >
@@ -95,7 +120,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
             }}
             className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-2 py-2 font-baloo text-sm font-black transition-all cursor-pointer sm:px-4 ${
               activeTab === 'achievements'
-                ? 'bg-purple-500 text-white shadow-xs border-2 border-purple-600 scale-102'
+                ? 'bg-purple-500 text-white shadow-xs scale-102'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`}
           >
@@ -109,14 +134,23 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
         {activeTab === 'edit' && (
           <div className="space-y-5">
             {/* Live Profile Card Preview */}
-            <div data-testid="profile-preview" className="hidden items-center gap-4 rounded-3xl border-3 border-amber-300 bg-gradient-to-br from-amber-50/90 via-orange-50/70 to-yellow-50/90 p-4 shadow-washi sm:flex sm:flex-row sm:p-5">
+            <div data-testid="profile-preview" className="hidden items-center gap-4 rounded-3xl bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100/80 p-4 shadow-[0_10px_30px_rgba(180,83,9,0.10)] sm:flex sm:flex-row sm:p-5">
               {/* Avatar Highlight Preview */}
               <div className="relative group">
                 <div
-                  className="flex h-24 w-24 items-center justify-center rounded-3xl border-4 border-white text-5xl shadow-pop-sm transition-transform group-hover:scale-105"
-                  style={{ backgroundColor: currentAvatar.bgColor, borderColor: currentAvatar.borderColor }}
+                  className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-3xl text-5xl shadow-md transition-transform group-hover:scale-105"
+                  style={{ backgroundColor: currentAvatar.bgColor }}
                 >
-                  <span className="animate-bounce-subtle">{currentAvatar.emoji}</span>
+                  {MASCOT_3D_IMAGES[selectedAvatarId] ? (
+                    <img
+                      src={MASCOT_3D_IMAGES[selectedAvatarId]}
+                      alt={currentAvatar.name}
+                      decoding="async"
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <span className="animate-bounce-subtle">{currentAvatar.emoji}</span>
+                  )}
                 </div>
                 <span className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 font-baloo font-black text-xs text-white border-2 border-white shadow-xs">
                   L{selectedGrade}
@@ -160,7 +194,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Nhập tên của bé..."
                   maxLength={30}
-                  className="min-h-12 w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-2.5 font-baloo font-bold text-base text-brand-dark focus:border-amber-400 focus:outline-none shadow-inner"
+                  className="min-h-12 w-full rounded-2xl border border-slate-200/80 bg-slate-50/80 px-4 py-2.5 font-baloo font-bold text-base text-brand-dark shadow-inner focus:border-amber-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-200"
                 />
               </div>
 
@@ -180,10 +214,10 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                         soundManager.playPop();
                         setSelectedGrade(g);
                       }}
-                      className={`min-h-12 whitespace-nowrap rounded-xl border-2 px-2 py-2 font-baloo text-xs font-black transition-all cursor-pointer sm:text-sm ${
+                      className={`min-h-12 whitespace-nowrap rounded-xl px-2 py-2 font-baloo text-xs font-black transition-all cursor-pointer sm:text-sm ${
                         selectedGrade === g
-                          ? 'bg-emerald-500 text-white border-emerald-600 shadow-xs scale-105'
-                          : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200'
+                          ? 'bg-emerald-500 text-white shadow-xs scale-105'
+                          : 'bg-emerald-50 text-emerald-900 hover:bg-emerald-100'
                       }`}
                     >
                       Lớp {g}
@@ -198,7 +232,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               <div className="flex items-center justify-between">
                 <label className="font-baloo font-extrabold text-sm text-brand-dark flex items-center gap-1.5">
                   <Sparkles size={15} className="text-amber-500" />
-                  <span>Chọn Avatar Con Vật Ngộ Nghĩnh (16 nhân vật):</span>
+                  <span>Chọn Avatar Con Vật 3D Disney (16 nhân vật):</span>
                 </label>
                 <span className="font-baloo text-xs font-bold text-slate-500">
                   Đang chọn: {currentAvatar.name}
@@ -208,6 +242,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               <div className="grid grid-cols-4 sm:grid-cols-8 gap-2.5 max-h-56 overflow-y-auto p-1 scrollbar-thin">
                 {CUTE_ANIMAL_AVATARS.map((item) => {
                   const isSelected = item.id === selectedAvatarId;
+                  const img = MASCOT_3D_IMAGES[item.id];
                   return (
                     <button
                       key={item.id}
@@ -216,19 +251,32 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                         soundManager.playPop();
                         setSelectedAvatarId(item.id);
                       }}
+                      aria-pressed={isSelected}
                       title={`${item.name} - ${item.description}`}
-                      className={`group relative flex flex-col items-center justify-center p-2 rounded-2xl border-2 transition-all cursor-pointer text-center ${
+                      className={`group relative flex flex-col items-center justify-center p-1.5 sm:p-2 rounded-2xl transition-all cursor-pointer text-center ${
                         isSelected
-                          ? 'border-amber-400 ring-3 ring-amber-300 shadow-pop-xs scale-105'
-                          : 'border-slate-200 hover:border-slate-300 hover:scale-102 bg-white'
+                          ? 'ring-2 ring-amber-400 shadow-[0_5px_14px_rgba(245,158,11,0.18)] scale-105'
+                          : 'shadow-[0_3px_10px_rgba(46,41,78,0.06)] hover:scale-102 hover:shadow-md'
                       }`}
-                      style={{ backgroundColor: isSelected ? item.bgColor : undefined }}
+                      style={{ backgroundColor: item.bgColor }}
                     >
-                      <span className="text-3xl transition-transform group-hover:scale-110">
-                        {item.emoji}
-                      </span>
-                      <span className="mt-1 font-baloo font-bold text-[10px] sm:text-[11px] text-slate-700 leading-none truncate w-full">
-                        {item.name.split(' ')[0]}
+                      <div className="mb-1 flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/70 shadow-2xs sm:h-12 sm:w-12">
+                        {img ? (
+                          <img
+                            src={img}
+                            alt={item.name}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          />
+                        ) : (
+                          <span className="text-3xl transition-transform group-hover:scale-110">
+                            {item.emoji}
+                          </span>
+                        )}
+                      </div>
+                      <span className="font-baloo font-bold text-[10px] sm:text-[11px] text-slate-700 leading-tight truncate w-full px-0.5">
+                        {item.shortName || item.name}
                       </span>
                       {isSelected && (
                         <div className="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-amber-500 text-white text-[10px] font-black shadow-xs">
@@ -248,26 +296,22 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                 <span>Chủ Đề Thế Giới Học Tập:</span>
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-                {[
-                  { id: 'ocean', label: 'Biển Xanh', icon: '🌊', bg: 'bg-sky-100 text-sky-950 border-sky-300' },
-                  { id: 'space', label: 'Vũ Trụ', icon: '🚀', bg: 'bg-purple-100 text-purple-950 border-purple-300' },
-                  { id: 'jungle', label: 'Rừng Xanh', icon: '🌴', bg: 'bg-emerald-100 text-emerald-950 border-emerald-300' },
-                  { id: 'candy', label: 'Kẹo Ngọt', icon: '🍬', bg: 'bg-pink-100 text-pink-950 border-pink-300' },
-                  { id: 'sunny', label: 'Nắng Ấm', icon: '☀️', bg: 'bg-amber-100 text-amber-950 border-amber-300' },
-                ].map((t) => {
+                {PROFILE_THEME_OPTIONS.map((t) => {
                   const isThemeSelected = selectedTheme === t.id;
                   return (
                     <button
                       key={t.id}
                       type="button"
+                      aria-pressed={isThemeSelected}
                       onClick={() => {
                         soundManager.playPop();
                         setSelectedTheme(t.id as ThemeId);
                       }}
-                      className={`flex items-center justify-center gap-1.5 p-2 rounded-2xl border-2 font-baloo font-bold text-xs transition-all cursor-pointer ${
+                      style={{ backgroundColor: t.surface }}
+                      className={`flex min-h-12 items-center justify-center gap-1.5 rounded-2xl p-2 font-baloo text-xs font-bold transition-all cursor-pointer ${t.textClass} ${
                         isThemeSelected
-                          ? `${t.bg} shadow-pop-xs scale-102 font-extrabold ring-2 ring-amber-400`
-                          : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+                          ? `shadow-[0_4px_12px_rgba(46,41,78,0.10)] scale-102 font-extrabold ring-2 ${t.ringClass}`
+                          : 'shadow-[0_2px_8px_rgba(46,41,78,0.05)] hover:brightness-95 hover:shadow-sm'
                       }`}
                     >
                       <span className="text-base">{t.icon}</span>
@@ -293,10 +337,10 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                       soundManager.playPop();
                       setMotto(m);
                     }}
-                    className={`px-3 py-1 rounded-xl font-vietnam text-xs font-semibold transition-all border text-left cursor-pointer ${
+                    className={`px-3 py-1 rounded-xl font-vietnam text-xs font-semibold transition-all text-left cursor-pointer ${
                       motto === m
-                        ? 'bg-amber-100 text-amber-900 border-amber-300 font-bold shadow-2xs'
-                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                        ? 'bg-amber-100 text-amber-900 font-bold shadow-2xs ring-1 ring-amber-300'
+                        : 'bg-slate-100/80 text-slate-600 hover:bg-slate-200/80'
                     }`}
                   >
                     {m}
