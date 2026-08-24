@@ -49,6 +49,14 @@ export const MASCOT_3D_IMAGES: Record<string, string> = {
   princess: '/assets/mascots/mascot_princess.jpg',
 };
 
+const THEME_SURFACE_COLORS: Record<ThemeId, string> = {
+  ocean: '#E6F4FE',
+  space: '#F1EDFE',
+  jungle: '#E8FAF0',
+  candy: '#FDF0F7',
+  sunny: '#FFF9E6',
+};
+
 export const ProfileModal: React.FC<ProfileModalProps> = ({
   isOpen,
   onClose,
@@ -83,7 +91,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
     setTimeout(() => {
       setIsSavedRecently(false);
       onClose();
-    }, 800);
+    }, 900);
   };
 
   return (
@@ -92,11 +100,12 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
       onClose={onClose}
       title="Hồ Sơ & Avatar Của Bé"
       icon="🐾"
-      maxWidth="2xl"
+      maxWidth="xl"
+      containerBgStyle={{ backgroundColor: THEME_SURFACE_COLORS[selectedTheme] || '#E6F4FE' }}
     >
-      <div className="space-y-4 sm:space-y-5">
-        {/* Tab Navigation */}
-        <div className="grid grid-cols-2 gap-2 pb-2">
+      <div className="space-y-5">
+        {/* Navigation Tabs */}
+        <div className="grid grid-cols-2 gap-2 rounded-2xl bg-black/5 p-1">
           <button
             onClick={() => {
               soundManager.playPop();
@@ -104,8 +113,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
             }}
             className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-2 py-2 font-baloo text-sm font-black transition-all cursor-pointer sm:px-4 ${
               activeTab === 'edit'
-                ? 'bg-amber-400 text-brand-dark shadow-xs scale-102'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                ? 'bg-amber-400 text-brand-dark shadow-sm scale-102'
+                : 'bg-white/80 text-slate-700 hover:bg-white shadow-2xs'
             }`}
           >
             <User size={16} />
@@ -120,8 +129,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
             }}
             className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-2 py-2 font-baloo text-sm font-black transition-all cursor-pointer sm:px-4 ${
               activeTab === 'achievements'
-                ? 'bg-purple-500 text-white shadow-xs scale-102'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                ? 'bg-purple-500 text-white shadow-sm scale-102'
+                : 'bg-white/80 text-slate-700 hover:bg-white shadow-2xs'
             }`}
           >
             <Trophy size={16} />
@@ -133,13 +142,12 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
         {/* TAB 1: EDIT PROFILE & CUTE ANIMAL AVATARS */}
         {activeTab === 'edit' && (
           <div className="space-y-5">
-            {/* Live Profile Card Preview */}
-            <div data-testid="profile-preview" className="hidden items-center gap-4 rounded-3xl bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100/80 p-4 shadow-[0_10px_30px_rgba(180,83,9,0.10)] sm:flex sm:flex-row sm:p-5">
+            {/* Live Profile Card Preview - Pure White Card */}
+            <div data-testid="profile-preview" className="hidden items-center gap-4 rounded-3xl bg-white p-4 shadow-[0_6px_20px_rgba(0,0,0,0.06)] sm:flex sm:flex-row sm:p-5">
               {/* Avatar Highlight Preview */}
               <div className="relative group">
                 <div
-                  className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-3xl text-5xl shadow-md transition-transform group-hover:scale-105"
-                  style={{ backgroundColor: currentAvatar.bgColor }}
+                  className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-3xl text-5xl shadow-sm transition-transform group-hover:scale-105 bg-slate-50"
                 >
                   {MASCOT_3D_IMAGES[selectedAvatarId] ? (
                     <img
@@ -163,7 +171,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                   <h3 className="font-baloo text-2xl font-black text-brand-dark">
                     {name || 'Bé An Nhiên'}
                   </h3>
-                  <span className="rounded-full bg-amber-200/90 px-3 py-0.5 font-baloo text-xs font-black text-amber-950">
+                  <span className="rounded-full bg-amber-100 px-3 py-0.5 font-baloo text-xs font-black text-amber-950 shadow-2xs">
                     Mã Bé: {profile.kidCode}
                   </span>
                 </div>
@@ -172,7 +180,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                   {currentAvatar.name} • {currentAvatar.description}
                 </p>
 
-                <p className="font-vietnam text-xs font-semibold text-amber-900/90 italic bg-amber-100/70 px-3 py-1 rounded-xl inline-block">
+                <p className="font-vietnam text-xs font-semibold text-slate-700 italic bg-slate-100/90 px-3 py-1 rounded-xl inline-block shadow-2xs">
                   "{motto}"
                 </p>
               </div>
@@ -194,7 +202,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Nhập tên của bé..."
                   maxLength={30}
-                  className="min-h-12 w-full rounded-2xl border border-slate-200/80 bg-slate-50/80 px-4 py-2.5 font-baloo font-bold text-base text-brand-dark shadow-inner focus:border-amber-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-200"
+                  className="min-h-12 w-full rounded-2xl bg-white px-4 py-2.5 font-baloo font-bold text-base text-brand-dark shadow-[0_2px_8px_rgba(0,0,0,0.05)] focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-300"
                 />
               </div>
 
@@ -217,7 +225,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                       className={`min-h-12 whitespace-nowrap rounded-xl px-2 py-2 font-baloo text-xs font-black transition-all cursor-pointer sm:text-sm ${
                         selectedGrade === g
                           ? 'bg-emerald-500 text-white shadow-xs scale-105'
-                          : 'bg-emerald-50 text-emerald-900 hover:bg-emerald-100'
+                          : 'bg-white text-slate-700 shadow-[0_2px_6px_rgba(0,0,0,0.04)] hover:bg-slate-50'
                       }`}
                     >
                       Lớp {g}
@@ -227,19 +235,19 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               </div>
             </div>
 
-            {/* Mascot / Cute Animal Avatars Grid (16 Avatars inspired by mykidspace.online) */}
+            {/* Mascot / Cute Animal Avatars Grid */}
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <label className="font-baloo font-extrabold text-sm text-brand-dark flex items-center gap-1.5">
                   <Sparkles size={15} className="text-amber-500" />
                   <span>Chọn Avatar Con Vật 3D Disney (16 nhân vật):</span>
                 </label>
-                <span className="font-baloo text-xs font-bold text-slate-500">
-                  Đang chọn: {currentAvatar.name}
+                <span className="font-baloo text-xs font-bold text-slate-600">
+                  Đang chọn: <strong className="text-brand-dark">{currentAvatar.name}</strong>
                 </span>
               </div>
 
-              <div className="grid grid-cols-4 sm:grid-cols-8 gap-2.5 max-h-56 overflow-y-auto p-1 scrollbar-thin">
+              <div className="grid grid-cols-4 sm:grid-cols-8 gap-2.5 max-h-56 overflow-y-auto p-1.5 scrollbar-thin">
                 {CUTE_ANIMAL_AVATARS.map((item) => {
                   const isSelected = item.id === selectedAvatarId;
                   const img = MASCOT_3D_IMAGES[item.id];
@@ -253,15 +261,15 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                       }}
                       aria-pressed={isSelected}
                       title={`${item.name} - ${item.description}`}
+                      style={{ backgroundColor: item.bgColor }}
                       className={`group relative flex flex-col items-center justify-center p-1.5 sm:p-2 rounded-2xl transition-all cursor-pointer text-center ${
                         isSelected
-                          ? 'ring-2 ring-amber-400 shadow-[0_5px_14px_rgba(245,158,11,0.18)] scale-105'
-                          : 'shadow-[0_3px_10px_rgba(46,41,78,0.06)] hover:scale-102 hover:shadow-md'
+                          ? 'ring-3 ring-amber-400 shadow-[0_6px_18px_rgba(245,158,11,0.22)] scale-105'
+                          : 'shadow-[0_3px_10px_rgba(0,0,0,0.05)] hover:scale-102 hover:shadow-md'
                       }`}
-                      style={{ backgroundColor: item.bgColor }}
                     >
-                      <div className="mb-1 flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/70 shadow-2xs sm:h-12 sm:w-12">
-                        {img ? (
+                      <div className="mb-1 flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/80 shadow-2xs sm:h-12 sm:w-12">
+                        {isSelected && img ? (
                           <img
                             src={img}
                             alt={item.name}
@@ -310,8 +318,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                       style={{ backgroundColor: t.surface }}
                       className={`flex min-h-12 items-center justify-center gap-1.5 rounded-2xl p-2 font-baloo text-xs font-bold transition-all cursor-pointer ${t.textClass} ${
                         isThemeSelected
-                          ? `shadow-[0_4px_12px_rgba(46,41,78,0.10)] scale-102 font-extrabold ring-2 ${t.ringClass}`
-                          : 'shadow-[0_2px_8px_rgba(46,41,78,0.05)] hover:brightness-95 hover:shadow-sm'
+                          ? `shadow-[0_4px_14px_rgba(0,0,0,0.10)] scale-102 font-extrabold ring-2 ${t.ringClass}`
+                          : 'shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:shadow-xs'
                       }`}
                     >
                       <span className="text-base">{t.icon}</span>
@@ -337,10 +345,10 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                       soundManager.playPop();
                       setMotto(m);
                     }}
-                    className={`px-3 py-1 rounded-xl font-vietnam text-xs font-semibold transition-all text-left cursor-pointer ${
+                    className={`px-3 py-1.5 rounded-xl font-vietnam text-xs font-semibold transition-all text-left cursor-pointer bg-white ${
                       motto === m
-                        ? 'bg-amber-100 text-amber-900 font-bold shadow-2xs ring-1 ring-amber-300'
-                        : 'bg-slate-100/80 text-slate-600 hover:bg-slate-200/80'
+                        ? 'text-amber-900 font-extrabold shadow-xs ring-2 ring-amber-400'
+                        : 'text-slate-700 shadow-[0_2px_6px_rgba(0,0,0,0.04)] hover:bg-slate-50'
                     }`}
                   >
                     {m}
@@ -350,11 +358,11 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
             </div>
 
             {/* Save Button Action */}
-            <div className="sticky bottom-0 z-10 -mx-1 flex items-center justify-end gap-2 border-t border-slate-100 bg-white/95 px-1 pb-1 pt-3 sm:gap-3">
+            <div className="sticky bottom-0 z-10 -mx-1 flex items-center justify-end gap-2 border-t border-slate-200/60 bg-transparent px-1 pb-1 pt-3 sm:gap-3">
               <button
                 type="button"
                 onClick={onClose}
-                className="min-h-12 whitespace-nowrap rounded-2xl px-4 py-2.5 font-baloo text-sm font-bold text-slate-600 transition-colors hover:bg-slate-100 sm:px-5"
+                className="min-h-12 whitespace-nowrap rounded-2xl bg-white px-4 py-2.5 font-baloo text-sm font-bold text-slate-600 shadow-2xs transition-colors hover:bg-slate-100 sm:px-5"
               >
                 Đóng
               </button>
@@ -362,10 +370,10 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
               <button
                 type="button"
                 onClick={handleSave}
-                className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl border-2 px-4 py-2.5 font-baloo text-sm font-black text-amber-950 transition-all shadow-pop-xs cursor-pointer sm:px-6 ${
+                className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-4 py-2.5 font-baloo text-sm font-black transition-all shadow-pop-xs cursor-pointer sm:px-6 ${
                   isSavedRecently
-                    ? 'bg-emerald-400 border-emerald-500 text-white'
-                    : 'bg-amber-400 hover:bg-amber-500 border-amber-500 active:scale-95'
+                    ? 'bg-emerald-500 text-white'
+                    : 'bg-amber-400 hover:bg-amber-500 text-amber-950 active:scale-95'
                 }`}
               >
                 {isSavedRecently ? (
@@ -386,41 +394,48 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
         {/* TAB 2: ACHIEVEMENTS & BADGES */}
         {activeTab === 'achievements' && (
           <div className="space-y-5">
-            {/* Stats Grid */}
+            {/* Stats Grid - Pure White Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="rounded-2xl border-2 border-orange-200 bg-orange-50/80 p-3.5 text-center">
+              <div className="rounded-2xl bg-white p-3.5 text-center shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.10)] transition-all">
                 <Flame className="mx-auto h-6 w-6 text-orange-500" />
                 <div className="font-baloo font-black text-2xl text-brand-dark mt-1">{profile.streak} ngày</div>
                 <span className="font-vietnam text-xs font-bold text-slate-500">Chuỗi Streak 🔥</span>
               </div>
 
-              <div className="rounded-2xl border-2 border-amber-200 bg-amber-50/80 p-3.5 text-center">
+              <div className="rounded-2xl bg-white p-3.5 text-center shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.10)] transition-all">
                 <Star className="mx-auto h-6 w-6 text-amber-500 fill-amber-400" />
                 <div className="font-baloo font-black text-2xl text-brand-dark mt-1">{profile.stars} ⭐</div>
                 <span className="font-vietnam text-xs font-bold text-slate-500">Ngôi Sao Vàng</span>
               </div>
 
-              <div className="rounded-2xl border-2 border-emerald-200 bg-emerald-50/80 p-3.5 text-center">
+              <div className="rounded-2xl bg-white p-3.5 text-center shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.10)] transition-all">
                 <CheckCircle2 className="mx-auto h-6 w-6 text-emerald-500" />
                 <div className="font-baloo font-black text-2xl text-brand-dark mt-1">{profile.totalLessonsCompleted} bài</div>
                 <span className="font-vietnam text-xs font-bold text-slate-500">Đã Hoàn Thành</span>
               </div>
 
-              <div className="rounded-2xl border-2 border-purple-200 bg-purple-50/80 p-3.5 text-center">
+              <div className="rounded-2xl bg-white p-3.5 text-center shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.10)] transition-all">
                 <Shield className="mx-auto h-6 w-6 text-purple-500" />
                 <div className="font-baloo font-black text-2xl text-brand-dark mt-1">{profile.accuracyRate}%</div>
                 <span className="font-vietnam text-xs font-bold text-slate-500">Độ Chính Xác</span>
               </div>
             </div>
 
-            {/* Level & XP Progress Card */}
-            <div className="rounded-3xl border-2 border-amber-200 bg-amber-50/60 p-4 space-y-2">
-              <div className="flex justify-between items-center text-xs sm:text-sm font-baloo font-black text-brand-dark">
-                <span>⚡ Cấp độ {profile.level}: Tập Sự Tri Thức</span>
-                <span className="text-emerald-700">{profile.xp}/500 XP</span>
-              </div>
-              <CandyProgressBar value={profile.xp} max={500} color="gold" height="md" showStarIndicator={true} />
-            </div>
+            {/* Level & XP Progress Card - Pure White Card */}
+            {(() => {
+              const XP_PER_LEVEL = 500;
+              const currentLevelXp = profile.xp % XP_PER_LEVEL;
+              const levelPercentage = Math.round((currentLevelXp / XP_PER_LEVEL) * 100);
+              return (
+                <div className="rounded-3xl bg-white p-4 space-y-2.5 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+                  <div className="flex justify-between items-center text-xs sm:text-sm font-baloo font-black text-brand-dark">
+                    <span>⚡ Cấp độ {profile.level}: Tập Sự Tri Thức</span>
+                    <span className="text-amber-900 font-extrabold">{currentLevelXp} / {XP_PER_LEVEL} XP ({levelPercentage}%)</span>
+                  </div>
+                  <CandyProgressBar value={currentLevelXp} max={XP_PER_LEVEL} color="gold" height="md" showStarIndicator={true} />
+                </div>
+              );
+            })()}
 
             {/* Badges Collection Hall */}
             <div>
@@ -435,10 +450,10 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                 {BADGES_LIST.map((badge) => (
                   <div
                     key={badge.id}
-                    className={`rounded-2xl border-2 p-3.5 text-center transition-all ${
+                    className={`rounded-2xl p-3.5 text-center transition-all ${
                       badge.isUnlocked
-                        ? 'border-amber-300 bg-gradient-to-b from-amber-50 to-white shadow-xs'
-                        : 'border-slate-200 bg-slate-50/50 opacity-50'
+                        ? 'bg-white shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:scale-102 cursor-pointer'
+                        : 'bg-white/70 opacity-60 shadow-[0_2px_8px_rgba(0,0,0,0.04)]'
                     }`}
                   >
                     <div className="text-3xl mb-1">{badge.isUnlocked ? badge.icon : '🔒'}</div>
@@ -447,7 +462,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                       {badge.description}
                     </p>
                     {badge.isUnlocked && badge.unlockedDate && (
-                      <span className="inline-block mt-2 font-baloo text-[11px] text-amber-900 font-bold bg-amber-100 px-2 py-0.5 rounded-md">
+                      <span className="inline-block mt-2 font-baloo text-[11px] text-amber-900 font-bold bg-amber-100 px-2 py-0.5 rounded-md shadow-2xs">
                         Đạt: {badge.unlockedDate}
                       </span>
                     )}

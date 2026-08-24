@@ -10,6 +10,8 @@ interface ModalProps {
   icon?: string;
   children: React.ReactNode;
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+  containerClassName?: string;
+  containerBgStyle?: React.CSSProperties;
 }
 
 export const Modal: React.FC<ModalProps> = ({
@@ -19,6 +21,8 @@ export const Modal: React.FC<ModalProps> = ({
   icon,
   children,
   maxWidth = 'lg',
+  containerClassName = '',
+  containerBgStyle,
 }) => {
   const dialogRef = useRef<HTMLDivElement>(null);
   const onCloseRef = useRef(onClose);
@@ -116,7 +120,8 @@ export const Modal: React.FC<ModalProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-            className={`relative z-10 max-h-[calc(100dvh-1rem)] w-full ${maxWidthStyles[maxWidth]} overflow-y-auto rounded-4xl border-4 border-white bg-white/95 p-4 shadow-2xl sm:max-h-[calc(100dvh-3rem)] sm:p-8`}
+            className={`relative z-10 max-h-[calc(100dvh-1rem)] w-full ${maxWidthStyles[maxWidth]} overflow-y-auto rounded-4xl border-4 border-white/90 p-4 shadow-2xl sm:max-h-[calc(100dvh-3rem)] sm:p-8 transition-colors duration-300 ${containerClassName || 'bg-white/95'}`}
+            style={containerBgStyle}
           >
             {/* Header */}
             {(title || icon) && (
