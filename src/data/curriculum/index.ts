@@ -22,6 +22,8 @@ import {
   getVerifiedVietnameseSgkActivityPages,
 } from './vietnamese';
 import { ENGLISH_CURRICULUM_BY_GRADE } from './english';
+import { getEnglishVocabularyNote } from './english/englishSupplementContent';
+import { generateEnglishQuestions } from './english/englishQuestionEngine';
 
 export * from './types';
 export * from './math';
@@ -163,6 +165,10 @@ export function generateQuestionsForTopic(topic: CurriculumTopic, subject: Subje
     return generateMathQuestions(topic, grade);
   }
 
+  if (subject === 'english') {
+    return generateEnglishQuestions(topic, grade);
+  }
+
   // 3. If specific reading passage bundle exists for Vietnamese
   if (subject === 'vietnamese' && VIETNAMESE_READING_PASSAGES[topic.id]) {
     return VIETNAMESE_READING_PASSAGES[topic.id].questions;
@@ -235,7 +241,7 @@ export function generateQuestionsForTopic(topic: CurriculumTopic, subject: Subje
     ];
   }
 
-  // Default pedagogical question generator for reading comprehension & concepts (Tiếng Việt & Tiếng Anh)
+  // Default pedagogical question generator for Vietnamese reading comprehension.
   const mainPoint = topic.keyPoints[0] || topic.summary;
   const secondPoint = topic.keyPoints[1] || topic.summary;
 
@@ -309,21 +315,21 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
         ]
       };
     } else if (!readingPassage && subject === 'english') {
+      const practiceContent = [
+        t.description,
+        `Learning goal: ${t.summary}`,
+        `Practice: ${t.keyPoints.join(' ')}`,
+      ];
       readingPassage = {
         title: t.title.replace(/^Unit \d+:\s*/i, ''),
         author: 'WonderKids — supplementary practice',
         genre: 'story',
-        content: [
-          t.description,
-          t.summary
-        ],
-        audioNarration: `${t.title.replace(/^Unit \d+:\s*/i, '')}. ${t.description}. ${t.summary}`,
+        content: practiceContent,
+        audioNarration: `${t.title.replace(/^Unit \d+:\s*/i, '')}. ${practiceContent.join(' ')}`,
         contentOrigin: 'system_generated',
         verificationStatus: 'draft',
         sourcePages: t.sourcePages,
-        vocabularyNotes: [
-          { word: 'Key vocabulary', meaning: 'Important words and expressions in this lesson.' }
-        ]
+        vocabularyNotes: [getEnglishVocabularyNote(t)],
       };
     }
 

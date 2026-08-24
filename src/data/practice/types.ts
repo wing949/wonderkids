@@ -1,8 +1,21 @@
 import type { GradeLevel } from '../../types/index.ts';
 
 export type PracticeSubject = 'math' | 'vietnamese' | 'english' | 'math_en';
+export type PracticeTrack = 'general' | 'ioe_simulation' | 'trang_nguyen_simulation';
+export type CompetitionPracticeTrack = Exclude<PracticeTrack, 'general'>;
 export type PracticeDifficulty = 'basic' | 'application' | 'challenge';
-export type PracticeItemType = 'single_choice' | 'short_answer' | 'ordering' | 'matching';
+export type PracticeItemType =
+  | 'single_choice'
+  | 'short_answer'
+  | 'ordering'
+  | 'matching'
+  | 'letter_fill'
+  | 'word_fill'
+  | 'true_false'
+  | 'picture_choice'
+  | 'odd_one_out'
+  | 'listening_choice'
+  | 'listening_input';
 export type PracticeSetLevel = 'foundation' | 'acceleration' | 'advanced' | 'mock_exam';
 
 export interface PracticeOption {
@@ -17,9 +30,15 @@ export interface PracticeMatchingPair {
 }
 
 export interface PracticeAudio {
+  itemId?: string;
   assetPath: string;
+  voice?: string;
+  language?: string;
   transcript: string;
   transcriptHash: string;
+  sourceHash?: string;
+  fileHash?: string;
+  durationMs?: number;
   verificationStatus: 'draft' | 'verified';
 }
 
@@ -46,7 +65,7 @@ export interface PracticeSection {
   title: string;
   instruction: string;
   activityTypes: PracticeItemType[];
-  maxPoints: 100;
+  maxPoints: number;
   items: PracticeItem[];
 }
 
@@ -57,8 +76,11 @@ export interface PracticeSet {
   setNumber: number;
   title: string;
   level: PracticeSetLevel;
-  totalPoints: 300;
-  timeLimitSeconds?: 1800;
+  track?: PracticeTrack;
+  totalPoints: number;
+  timeLimitSeconds?: number;
+  maxAudioPlays?: number;
+  allowedAudioRates?: number[];
   sections: [PracticeSection, PracticeSection, PracticeSection];
 }
 
@@ -66,15 +88,26 @@ export interface PracticePackManifest {
   id: string;
   subject: PracticeSubject;
   subjectLabel: string;
+  track?: PracticeTrack;
   grade: GradeLevel;
   version: string;
   contentOrigin: 'system_generated';
   verificationStatus: 'draft' | 'verified';
-  releaseStatus: 'review_required' | 'published';
+  releaseStatus: 'draft' | 'review_required' | 'pending_audio' | 'published';
   officialDisclaimer: string;
   sourceLabel: string;
   alignmentSources: string[];
   sets: PracticeSet[];
+}
+
+export interface CompetitionSeason {
+  id: string;
+  track: CompetitionPracticeTrack;
+  schoolYear: string;
+  referenceUrls: string[];
+  officialRoundCount: number;
+  eligibleGrades: GradeLevel[];
+  updatedAt: string;
 }
 
 export interface PracticeCorrectionLog {

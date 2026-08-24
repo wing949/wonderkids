@@ -69,18 +69,7 @@ function keypad(
 }
 
 function reviewQuestions(topic: CurriculumTopic, grade: GradeLevel): Question[] {
-  const focus = topic.title.replace(/^Bài\s+\d+\s*:\s*/i, '').trim();
   const n = topic.lessonNumber;
-  const isExplicitReview = /ôn tập|luyện tập/i.test(focus);
-  if (!isExplicitReview || grade === 5) {
-    return [
-      bubble(topic, 'q1', `Luyện bổ trợ: Nội dung trọng tâm của bài này là gì?`, focus, ['Một nội dung của bài khác', 'Một hoạt động không liên quan'], `Đọc lại tên bài: ${focus}.`),
-      bubble(topic, 'q2', `Luyện bổ trợ: Trước khi làm hoạt động về “${focus}”, em nên làm gì?`, 'Đọc kĩ yêu cầu và dữ kiện', ['Chọn ngay một đáp án bất kì', 'Bỏ qua các đơn vị và kí hiệu'], 'Đọc kĩ đề giúp em xác định đúng việc cần làm.'),
-      bubble(topic, 'q3', `Luyện bổ trợ: Khi giải bài thuộc nội dung “${focus}”, cách làm nào phù hợp?`, 'Thực hiện từng bước và ghi rõ kết quả', ['Chỉ đoán kết quả', 'Đổi sang một chủ đề khác'], 'Làm từng bước để dễ kiểm tra.'),
-      bubble(topic, 'q4', `Luyện bổ trợ: Nếu kết quả của bài “${focus}” chưa chắc chắn, em nên làm gì?`, 'Kiểm tra lại phép tính hoặc cách lập luận', ['Giữ nguyên mà không kiểm tra', 'Xóa toàn bộ dữ kiện'], 'Đối chiếu kết quả với dữ kiện ban đầu.'),
-      bubble(topic, 'q5', `Luyện bổ trợ: Dấu hiệu nào cho thấy em đã hoàn thành bài “${focus}”?`, 'Kết quả trả lời đúng yêu cầu và có kiểm tra lại', ['Chỉ chép lại tên bài', 'Bỏ trống phần trả lời'], 'Kết quả phải trả lời đúng điều đề bài hỏi.'),
-    ];
-  }
   if (grade === 1) {
     const left = (n % 5) + 3;
     const right = (n % 3) + 1;
@@ -141,6 +130,16 @@ function reviewQuestions(topic: CurriculumTopic, grade: GradeLevel): Question[] 
 function generateGrade1Math(topic: CurriculumTopic): Question[] {
   const text = `${topic.title} ${topic.description}`.toLowerCase();
   const n = topic.lessonNumber;
+
+  if (includesAny(text, ['nhiều hơn', 'ít hơn', 'bằng nhau', 'so sánh số'])) {
+    return [
+      bubble(topic, 'q1', 'Bài 1 (So sánh): Nhóm A có 6 quả bóng, nhóm B có 4 quả bóng. Nhóm nào có nhiều bóng hơn?', 'Nhóm A', ['Nhóm B', 'Hai nhóm bằng nhau'], 'So sánh 6 với 4.'),
+      bubble(topic, 'q2', 'Bài 2 (So sánh): Điền dấu thích hợp: 7 ... 5', '>', ['<', '='], '7 lớn hơn 5.'),
+      bubble(topic, 'q3', 'Bài 3 (So sánh): Điền dấu thích hợp: 3 ... 3', '=', ['>', '<'], 'Hai số cùng bằng 3.'),
+      bubble(topic, 'q4', 'Bài 4 (Nhiều hơn): Lan có 8 bông hoa, Mai có 6 bông hoa. Lan nhiều hơn Mai mấy bông hoa?', '2 bông hoa', ['14 bông hoa', '1 bông hoa'], 'Lấy 8 - 6 = 2.'),
+      bubble(topic, 'q5', 'Bài 5 (Ít hơn): Trong các số 9, 2, 6, số bé nhất là số nào?', '2', ['6', '9'], 'So sánh lần lượt ba số.')
+    ];
+  }
 
   if (includesAny(text, ['vị trí', 'định hướng', 'trên, dưới', 'trái, phải'])) {
     return [
@@ -236,6 +235,16 @@ function generateGrade1Math(topic: CurriculumTopic): Question[] {
 function generateGrade2Math(topic: CurriculumTopic): Question[] {
   const text = `${topic.title} ${topic.description}`.toLowerCase();
   const n = topic.lessonNumber;
+
+  if (includesAny(text, ['thành phần của phép cộng', 'thành phần của phép trừ'])) {
+    return [
+      bubble(topic, 'q1', 'Bài 1 (Số hạng): Trong phép tính 27 + 15 = 42, số 27 và số 15 được gọi là gì?', 'Số hạng', ['Tổng', 'Hiệu'], 'Các số được cộng với nhau gọi là số hạng.'),
+      bubble(topic, 'q2', 'Bài 2 (Tổng): Trong phép tính 27 + 15 = 42, số 42 được gọi là gì?', 'Tổng', ['Số hạng', 'Số trừ'], 'Kết quả của phép cộng gọi là tổng.'),
+      bubble(topic, 'q3', 'Bài 3 (Số bị trừ): Trong phép tính 63 - 21 = 42, số 63 được gọi là gì?', 'Số bị trừ', ['Số trừ', 'Hiệu'], 'Số đứng trước dấu trừ là số bị trừ.'),
+      bubble(topic, 'q4', 'Bài 4 (Số trừ): Trong phép tính 63 - 21 = 42, số 21 được gọi là gì?', 'Số trừ', ['Số bị trừ', 'Tổng'], 'Số được bớt đi gọi là số trừ.'),
+      bubble(topic, 'q5', 'Bài 5 (Hiệu): Trong phép tính 63 - 21 = 42, số 42 được gọi là gì?', 'Hiệu', ['Tổng', 'Số hạng'], 'Kết quả của phép trừ gọi là hiệu.')
+    ];
+  }
 
   if (includesAny(text, ['chắc chắn', 'có thể', 'không thể', 'thống kê', 'biểu đồ tranh', 'kiểm đếm'])) {
     return [
@@ -397,6 +406,16 @@ function generateGrade4Math(topic: CurriculumTopic): Question[] {
 
 function generateGrade5Math(topic: CurriculumTopic): Question[] {
   const text = `${topic.title} ${topic.description}`.toLowerCase();
+
+  if (includesAny(text, ['số tự nhiên'])) {
+    return [
+      bubble(topic, 'q1', 'Bài 1 (Giá trị chữ số): Trong số 4 582 731, chữ số 8 có giá trị là:', '80 000', ['8 000', '800 000'], 'Chữ số 8 đứng ở hàng chục nghìn.'),
+      bubble(topic, 'q2', 'Bài 2 (So sánh): Số lớn nhất trong các số 45 678; 45 687; 45 768 là:', '45 768', ['45 687', '45 678'], 'So sánh lần lượt từ hàng cao nhất.'),
+      bubble(topic, 'q3', 'Bài 3 (Tính toán): 12 450 + 7 550 = ?', '20 000', ['19 000', '20 100'], 'Đặt tính thẳng hàng rồi cộng.'),
+      bubble(topic, 'q4', 'Bài 4 (Tính toán): 36 000 : 9 = ?', '4 000', ['400', '40 000'], '36 : 9 = 4, giữ ba chữ số 0.'),
+      bubble(topic, 'q5', 'Bài 5 (Thứ tự thực hiện): 125 × 8 - 250 = ?', '750', ['1 000', '500'], 'Tính phép nhân trước: 125 × 8 = 1 000; rồi trừ 250.')
+    ];
+  }
 
   if (includesAny(text, ['hỗn số', 'phân số thập phân'])) {
     return [

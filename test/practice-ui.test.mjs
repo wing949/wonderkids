@@ -49,7 +49,7 @@ function render(route) {
   }));
 }
 
-test('hub luyện đề hiển thị đủ bốn môn, năm lớp và nhãn tự biên soạn', () => {
+test('hub luyện đề mặc định hiển thị bốn môn Violympic, năm lớp và nhãn tự biên soạn', () => {
   const html = render({ kind: 'practice-hub' });
   assert.match(html, /Kho Luyện Đề/u);
   assert.match(html, /Toán bằng tiếng Anh/u);
@@ -57,8 +57,14 @@ test('hub luyện đề hiển thị đủ bốn môn, năm lớp và nhãn tự
   assert.match(html, /Tiếng Anh/u);
   assert.match(html, /Nội dung luyện tập tự biên soạn/u);
   for (let grade = 1; grade <= 5; grade += 1) assert.match(html, new RegExp(`Lớp ${grade}`));
-  assert.match(html, /18 vòng Toán lớp 2/u);
-  assert.match(html, /Chờ kiểm duyệt nguồn/u);
+  assert.doesNotMatch(html, /18 vòng Toán lớp 2/u);
+  assert.doesNotMatch(html, /Chờ kiểm duyệt nguồn/u);
+  assert.match(html, /violympic_logo\.png/u);
+  assert.doesNotMatch(html, /trangnguyen_logo\.svg/u);
+  assert.doesNotMatch(html, /ioe_logo\.png/u);
+  assert.match(html, /https:\/\/violympic\.vn\//u);
+  assert.doesNotMatch(html, /https:\/\/trangnguyen\.edu\.vn\//u);
+  assert.doesNotMatch(html, /https:\/\/ioe\.vn\//u);
 });
 
 test('danh sách một tổ hợp hiển thị đủ 12 đề và phân biệt thi thử 30 phút', () => {
@@ -87,7 +93,7 @@ test('đề 11 hiển thị đồng hồ mô phỏng 30 phút còn đề 1 khôn
   assert.match(practiceHtml, /Không giới hạn thời gian/u);
 });
 
-test('Dashboard có lối vào kho luyện đề nhưng giữ nguyên Đấu Trường hiện tại', () => {
+test('Dashboard chỉ còn một thẻ chung cho Kho luyện đề và Đấu trường', () => {
   assert.ifError(buildError);
   const html = renderToStaticMarkup(React.createElement(dashboardModule.StudentDashboard, {
     profile: {
@@ -98,7 +104,6 @@ test('Dashboard có lối vào kho luyện đề nhưng giữ nguyên Đấu Tr�
     currentGrade: 1,
     onSelectSubject() {},
     onOpenAdventure() {},
-    onOpenArena() {},
     onOpenPractice() {},
     onOpenShop() {},
     onOpenQuests() {},
@@ -108,6 +113,7 @@ test('Dashboard có lối vào kho luyện đề nhưng giữ nguyên Đấu Tr�
   assert.match(html, /Kho Luyện Đề/u);
   assert.match(html, /240 đề/u);
   assert.match(html, /Đấu Trường Trí Tuệ/u);
+  assert.equal((html.match(/data-practice-arena-entry/gu) || []).length, 1);
 });
 
 test('DOM của đủ 240 đề hiển thị đúng tiêu đề, điều hướng và không có dữ liệu rác', () => {

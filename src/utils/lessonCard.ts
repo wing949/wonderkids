@@ -27,6 +27,12 @@ function formatSourcePages(pages: number[]): string {
   return pages.join(', ');
 }
 
+export function getLessonHeaderSourceLabel(lesson: LessonNode): string {
+  const pages = lesson.sourceCitation?.sourcePages || [];
+  const pageLabel = formatSourcePages(pages);
+  return pageLabel ? `${lesson.unit} • Trang ${pageLabel}` : lesson.unit;
+}
+
 function formatCompactPageReference(reference: string): string {
   const pageMatch = reference.match(/\bTrang\s+(.+)$/i);
   return pageMatch ? `Trang ${pageMatch[1].trim()}` : '';

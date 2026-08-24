@@ -121,6 +121,7 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
 }
 
 let currentAudioElement: HTMLAudioElement | null = null;
+let activePassageAudioElement: HTMLAudioElement | null = null;
 let audioPlaybackSession = 0;
 let activePassageRequest: AbortController | null = null;
 let activePassageObjectUrl: string | null = null;
@@ -135,12 +136,21 @@ function releasePassageObjectUrl() {
 function stopCurrentAudio() {
   if (!currentAudioElement) return;
 
-  currentAudioElement.onended = null;
-  currentAudioElement.onerror = null;
-  currentAudioElement.pause();
-  currentAudioElement.currentTime = 0;
+  const audio = currentAudioElement;
+  audio.onended = null;
+  audio.onerror = null;
+  audio.pause();
+  audio.currentTime = 0;
+  if (activePassageAudioElement === audio) activePassageAudioElement = null;
   currentAudioElement = null;
   releasePassageObjectUrl();
+}
+
+function applyPlaybackRate(audio: HTMLAudioElement, rate: number): void {
+  const safeRate = Number.isFinite(rate) ? Math.min(2, Math.max(0.5, rate)) : 1;
+  audio.playbackRate = safeRate;
+  audio.preservesPitch = true;
+  (audio as HTMLAudioElement & { webkitPreservesPitch?: boolean }).webkitPreservesPitch = true;
 }
 
 export const soundManager = {
@@ -348,6 +358,12 @@ export const soundManager = {
     }
   },
 
+  setPassagePlaybackRate: (rate: number) => {
+    if (activePassageAudioElement && currentAudioElement === activePassageAudioElement) {
+      applyPlaybackRate(activePassageAudioElement, rate);
+    }
+  },
+
   // Helper: Play single audio clip from stream with Google Cloud / Neural Voice endpoint
   playAudioClip: async (
     text: string,
@@ -461,7 +477,12 @@ export const soundManager = {
 
   // Play exactly one approved Cô Giáo Vy asset. Vietnamese lesson audio does
   // not switch to another file or browser voice when the primary file fails.
-  playPassageAudio: (lessonId: string, _fallbackText: string, onEnd?: () => void) => {
+  playPassageAudio: (
+    lessonId: string,
+    _fallbackText: string,
+    onEnd?: () => void,
+    playbackRate: number = 1,
+  ) => {
     soundManager.stopSpeaking();
 
     const requestSession = audioPlaybackSession;
@@ -475,6 +496,7 @@ export const soundManager = {
     const finish = () => {
       if (!isCurrentRequest() || hasSettled) return;
       hasSettled = true;
+      activePassageAudioElement = null;
       currentAudioElement = null;
       if (onEnd) onEnd();
     };
@@ -491,12 +513,15 @@ export const soundManager = {
 
       const audio = new Audio(url);
       currentAudioElement = audio;
+      activePassageAudioElement = audio;
+      applyPlaybackRate(audio, playbackRate);
 
       audio.onended = finish;
 
       audio.onerror = () => {
         if (!isCurrentRequest() || currentAudioElement !== audio) return;
         retireAudioForFallback(audio);
+        if (activePassageAudioElement === audio) activePassageAudioElement = null;
         currentAudioElement = null;
         tryPlayNext();
       };
@@ -504,6 +529,7 @@ export const soundManager = {
       audio.play().catch(() => {
         if (!isCurrentRequest() || currentAudioElement !== audio) return;
         retireAudioForFallback(audio);
+        if (activePassageAudioElement === audio) activePassageAudioElement = null;
         currentAudioElement = null;
         tryPlayNext();
       });

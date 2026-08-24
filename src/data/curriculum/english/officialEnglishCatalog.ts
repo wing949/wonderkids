@@ -1,4 +1,5 @@
 import { CurriculumTopic } from '../types.ts';
+import { getEnglishSupplementContent } from './englishSupplementContent.ts';
 
 type OfficialEnglishBook = {
   grade: number;
@@ -124,8 +125,10 @@ export function buildOfficialEnglishCatalog(): Record<number, CurriculumTopic[]>
     book.units.forEach(([unitTitle, startPage], index) => {
       const lessonNumber = firstLessonNumber + index;
       const title = `Unit ${lessonNumber}: ${unitTitle}`;
+      const lessonId = `eng-g${book.grade}-u${lessonNumber}`;
+      const supplement = getEnglishSupplementContent(lessonId);
       result[book.grade].push({
-        id: `eng-g${book.grade}-u${lessonNumber}`,
+        id: lessonId,
         semester: book.semester,
         lessonNumber,
         title,
@@ -145,13 +148,10 @@ export function buildOfficialEnglishCatalog(): Record<number, CurriculumTopic[]>
           note: 'Không trình bày phần mô tả, bài đọc hoặc câu hỏi do ứng dụng tạo như nguyên văn SGK.',
         },
         pedagogicalObjective: `Luyện từ vựng, mẫu câu, nghe, nói, đọc và viết theo chủ đề “${unitTitle}”.`,
-        description: `Làm quen chủ đề “${unitTitle}” qua từ vựng, mẫu câu và hoạt động giao tiếp phù hợp lứa tuổi.`,
-        summary: `Nội dung luyện tập bổ trợ cho Unit ${lessonNumber}: ${unitTitle}.`,
-        keyPoints: [
-          `Use words and sentence patterns about “${unitTitle}”.`,
-          'Listen, speak, read and write through short practice activities.',
-        ],
-        mascotTip: `PiPi: Let’s practise Unit ${lessonNumber} together!`,
+        description: supplement.description,
+        summary: supplement.summary,
+        keyPoints: supplement.keyPoints,
+        mascotTip: supplement.mascotTip,
       });
     });
   }

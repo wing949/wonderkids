@@ -5,6 +5,7 @@ export interface PracticeProgress {
   currentSectionIndex: number;
   currentItemIndex: number;
   answers: Record<string, string | string[]>;
+  audioPlayCounts: Record<string, number>;
   startedAt: number;
   updatedAt: number;
   completedAt?: number;
@@ -21,6 +22,7 @@ export function createPracticeProgress(setId: string, now = Date.now()): Practic
     currentSectionIndex: 0,
     currentItemIndex: 0,
     answers: {},
+    audioPlayCounts: {},
     startedAt: now,
     updatedAt: now,
   };
@@ -35,6 +37,25 @@ export function recordPracticeAnswer(
   return {
     ...progress,
     answers: { ...progress.answers, [itemId]: answer },
+    updatedAt: Math.max(now, progress.updatedAt),
+  };
+}
+
+export function canPlayPracticeAudio(progress: PracticeProgress, itemId: string, maxPlays?: number): boolean {
+  return maxPlays === undefined || (progress.audioPlayCounts?.[itemId] || 0) < maxPlays;
+}
+
+export function recordPracticeAudioPlay(
+  progress: PracticeProgress,
+  itemId: string,
+  now = Date.now(),
+): PracticeProgress {
+  return {
+    ...progress,
+    audioPlayCounts: {
+      ...(progress.audioPlayCounts || {}),
+      [itemId]: (progress.audioPlayCounts?.[itemId] || 0) + 1,
+    },
     updatedAt: Math.max(now, progress.updatedAt),
   };
 }
@@ -82,6 +103,7 @@ export function restartPracticeAttempt(progress: PracticeProgress, now = Date.no
     currentSectionIndex: 0,
     currentItemIndex: 0,
     answers: {},
+    audioPlayCounts: {},
     startedAt: now,
     updatedAt: now,
     lastCompletedAt: undefined,
@@ -121,11 +143,11 @@ function shortAnswersAreEquivalent(expected: string, actual: string): boolean {
 }
 
 export function isPracticeAnswerCorrect(
-  item: { type: 'single_choice' | 'short_answer' | 'ordering' | 'matching'; correctAnswer: string | string[] },
+  item: { type: 'single_choice' | 'short_answer' | 'ordering' | 'matching' | 'letter_fill' | 'word_fill' | 'true_false' | 'picture_choice' | 'odd_one_out' | 'listening_choice' | 'listening_input'; correctAnswer: string | string[] },
   answer: string | string[] | undefined,
 ): boolean {
   if (answer === undefined) return false;
-  if (item.type === 'short_answer' && typeof item.correctAnswer === 'string' && typeof answer === 'string') {
+  if (['short_answer', 'letter_fill', 'word_fill', 'listening_input'].includes(item.type) && typeof item.correctAnswer === 'string' && typeof answer === 'string') {
     return shortAnswersAreEquivalent(item.correctAnswer, answer);
   }
   const expected = Array.isArray(item.correctAnswer) ? item.correctAnswer.map(normalizeScalar) : normalizeScalar(item.correctAnswer);
@@ -144,7 +166,7 @@ export function readPracticeProgress(storage: Pick<Storage, 'getItem'>, setId: s
     if (!raw) return null;
     const parsed = JSON.parse(raw) as Record<string, PracticeProgress>;
     const progress = parsed[setId];
-    return progress?.setId === setId ? progress : null;
+    return progress?.setId === setId ? { ...progress, audioPlayCounts: progress.audioPlayCounts || {} } : null;
   } catch {
     return null;
   }

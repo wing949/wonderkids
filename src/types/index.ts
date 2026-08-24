@@ -2,7 +2,25 @@ export type SubjectType = 'math' | 'vietnamese' | 'english' | 'logic';
 
 export type GradeLevel = 1 | 2 | 3 | 4 | 5;
 
-export type MascotId = 'bobo' | 'miumiu' | 'pipi' | 'bipbip';
+export type MascotId =
+  | 'bobo'
+  | 'miumiu'
+  | 'pipi'
+  | 'bipbip'
+  | 'dino'
+  | 'bunny'
+  | 'bear'
+  | 'lion'
+  | 'cat'
+  | 'puppy'
+  | 'panda'
+  | 'unicorn'
+  | 'penguin'
+  | 'koala'
+  | 'tiger'
+  | 'astronaut'
+  | 'princess'
+  | (string & {});
 
 export type ThemeId = 'ocean' | 'space' | 'jungle' | 'candy' | 'sunny';
 

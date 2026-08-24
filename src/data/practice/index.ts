@@ -1,16 +1,20 @@
 import type { GradeLevel } from '../../types/index.ts';
 import { buildPracticePack } from './generator.ts';
-import type { PracticePackManifest, PracticeSet, PracticeSubject } from './types.ts';
+import { buildCompetitionPack } from './competitionGenerator.ts';
+import type { CompetitionPracticeTrack, PracticeAudio, PracticePackManifest, PracticeSet, PracticeSubject } from './types.ts';
 
 export * from './types.ts';
 export * from './blueprints.ts';
 export * from './audit.ts';
 export * from './releaseGate.ts';
+export * from './competitionGenerator.ts';
+export * from './competitionReleaseGate.ts';
 
 export const PRACTICE_SUBJECTS: PracticeSubject[] = ['math', 'vietnamese', 'english', 'math_en'];
 export const PRACTICE_GRADES: GradeLevel[] = [1, 2, 3, 4, 5];
 
 const packCache = new Map<string, PracticePackManifest>();
+const competitionPackCache = new Map<string, PracticePackManifest>();
 
 export function getPracticePack(subject: PracticeSubject, grade: GradeLevel): PracticePackManifest {
   const key = `${subject}-${grade}`;
@@ -30,6 +34,34 @@ export function getPracticePacks(): PracticePackManifest[] {
 export function getPracticeSet(subject: PracticeSubject, grade: GradeLevel, setNumber: number): PracticeSet | null {
   if (!Number.isInteger(setNumber) || setNumber < 1 || setNumber > 12) return null;
   return getPracticePack(subject, grade).sets[setNumber - 1] || null;
+}
+
+export function getCompetitionPack(track: CompetitionPracticeTrack, grade: GradeLevel): PracticePackManifest {
+  const key = `${track}-${grade}`;
+  const cached = competitionPackCache.get(key);
+  if (cached) return cached;
+  const pack = buildCompetitionPack(track, grade);
+  competitionPackCache.set(key, pack);
+  return pack;
+}
+
+export function getCompetitionPacks(): PracticePackManifest[] {
+  const tracks: CompetitionPracticeTrack[] = ['ioe_simulation', 'trang_nguyen_simulation'];
+  return tracks.flatMap((track) => PRACTICE_GRADES.map((grade) => getCompetitionPack(track, grade)));
+}
+
+export function getCompetitionSet(track: CompetitionPracticeTrack, grade: GradeLevel, setNumber: number): PracticeSet | null {
+  if (!Number.isInteger(setNumber) || setNumber < 1 || setNumber > 12) return null;
+  return getCompetitionPack(track, grade).sets[setNumber - 1] || null;
+}
+
+export function getCompetitionAudioManifest(): Required<PracticeAudio>[] {
+  return getCompetitionPacks()
+    .filter((pack) => pack.track === 'ioe_simulation')
+    .flatMap((pack) => pack.sets)
+    .flatMap((set) => set.sections)
+    .flatMap((section) => section.items)
+    .flatMap((item) => item.audio ? [item.audio as Required<PracticeAudio>] : []);
 }
 
 export interface LegacyPracticePack {

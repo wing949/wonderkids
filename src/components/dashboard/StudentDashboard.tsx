@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Swords, Gift, Map, Sparkles, CheckCircle2, ChevronRight, BookOpenCheck } from 'lucide-react';
+import { ArrowRight, Gift, Map, CheckCircle2, ChevronRight, BookOpenCheck } from 'lucide-react';
 import { SubjectType, GradeLevel, MascotId, StudentProfile, DailyQuest } from '../../types';
 import { SUBJECTS_CONFIG, GRADE_SUBJECT_DESCRIPTIONS } from '../../data/curriculumData';
 import { CuteButton } from '../ui/CuteButton';
@@ -13,7 +13,6 @@ interface StudentDashboardProps {
   currentGrade: GradeLevel;
   onSelectSubject: (subject: SubjectType) => void;
   onOpenAdventure: () => void;
-  onOpenArena: () => void;
   onOpenPractice: () => void;
   onOpenShop: () => void;
   onOpenQuests: () => void;
@@ -26,7 +25,6 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   currentGrade,
   onSelectSubject,
   onOpenAdventure,
-  onOpenArena,
   onOpenPractice,
   onOpenShop,
   onOpenQuests,
@@ -53,27 +51,22 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
       </div>
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
-        {/* Hero Section: Mascot Greeting & Daily Habit Loop */}
-        <section className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-4xl border-2 border-white/80 bg-white/95 p-5 sm:p-8 shadow-washi backdrop-blur-none xl:bg-white/75 xl:backdrop-blur-md">
+        {/* Hero Section: Spacious Mascot Greeting & Habit Loop */}
+        <section className="relative z-30 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-8 rounded-3xl border-2 border-white/80 bg-white/95 p-5 sm:p-6 shadow-washi backdrop-blur-none xl:bg-white/85 xl:backdrop-blur-md">
           {/* Mascot Companion Interaction */}
-          <div className="flex-1 w-full">
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-400 font-baloo">
-              <Sparkles size={14} className="text-amber-500" />
-              <span>Góc Học Tập Lớp {currentGrade}</span>
-            </div>
-
-            <h1 className="mt-1 font-baloo text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
+          <div className="flex-1 w-full min-w-0">
+            <h1 className="font-baloo text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight leading-tight">
               Hôm nay con muốn học gì?
             </h1>
 
-            <p className="mt-1.5 text-sm sm:text-base font-semibold text-slate-600 font-vietnam max-w-xl">
+            <p className="mt-1 text-xs sm:text-sm font-semibold text-slate-500 font-vietnam">
               Chọn một góc học nhé — mỗi ngày một chút, vừa giỏi vừa vui! 🌟
             </p>
 
             {/* Mascot Active Greeting Bubble */}
-            <div className="mt-4">
+            <div className="mt-3.5">
               <MascotCompanion
-                mascotId={profile.selectedMascot}
+                mascotId={profile.avatarId || profile.selectedMascot}
                 mood="greeting"
                 onMascotChange={onMascotChange}
                 size="md"
@@ -81,43 +74,54 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             </div>
           </div>
 
-          {/* Level & XP Box */}
-          <div className="w-full md:w-80 shrink-0 rounded-3xl border-2 border-amber-200/80 bg-gradient-to-br from-amber-50 to-orange-50/80 p-5 shadow-sm">
-            <div className="flex items-center justify-between">
-              <div>
-                <span className="font-baloo font-extrabold text-xs text-amber-800 uppercase">
-                  Cấp độ {profile.level}
-                </span>
-                <h4 className="font-baloo font-extrabold text-lg text-brand-dark">
-                  Tập Sự Tri Thức
-                </h4>
-              </div>
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400 text-2xl shadow-pop-sm">
-                🎖️
-              </div>
-            </div>
+          {/* Level & XP Box - Expanded & Borderless */}
+          {(() => {
+            const XP_PER_LEVEL = 500;
+            const currentLevelXp = profile.xp % XP_PER_LEVEL;
+            const levelPercentage = Math.round((currentLevelXp / XP_PER_LEVEL) * 100);
+            return (
+              <div className="w-full md:w-80 lg:w-88 xl:w-96 shrink-0 rounded-3xl bg-amber-50/70 p-4 sm:p-5">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="font-baloo font-extrabold text-xs text-amber-800 uppercase tracking-wide">
+                      Cấp độ {profile.level}
+                    </span>
+                    <h4 className="font-baloo font-black text-lg sm:text-xl text-brand-dark leading-tight">
+                      Tập Sự Tri Thức
+                    </h4>
+                  </div>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-400 text-2xl shadow-pop-xs">
+                    🎖️
+                  </div>
+                </div>
 
-            <div className="mt-3">
-              <div className="flex justify-between text-xs font-bold text-slate-600 mb-1 font-baloo">
-                <span>Tiến độ Level:</span>
-                <span>{profile.xp} / 500 XP</span>
-              </div>
-              <CandyProgressBar value={profile.xp} max={500} color="gold" height="md" showStarIndicator={false} />
-            </div>
+                <div className="mt-3">
+                  <div className="flex justify-between text-xs font-bold text-slate-700 mb-1 font-baloo">
+                    <span>Tiến độ lên Cấp {profile.level + 1}:</span>
+                    <span className="text-amber-900 font-extrabold">{currentLevelXp} / {XP_PER_LEVEL} XP ({levelPercentage}%)</span>
+                  </div>
+                  <CandyProgressBar value={currentLevelXp} max={XP_PER_LEVEL} color="gold" height="md" showStarIndicator={false} />
+                </div>
 
-            <div className="mt-3 flex items-center justify-between text-xs text-slate-500 font-vietnam font-semibold pt-2 border-t border-amber-200/60">
-              <span>Đã xong: <strong className="text-brand-dark">{profile.totalLessonsCompleted} bài</strong></span>
-              <button
-                onClick={() => {
-                  soundManager.playPop();
-                  onOpenShop();
-                }}
-                className="text-amber-700 font-baloo font-bold hover:underline"
-              >
-                Đổi quà ⭐
-              </button>
-            </div>
-          </div>
+                <div className="mt-3 flex items-center justify-between text-xs text-slate-600 font-vietnam font-bold pt-2.5 border-t border-amber-200/80">
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <span>Đã xong: <strong className="text-brand-dark text-sm">{profile.totalLessonsCompleted} bài</strong></span>
+                    <span className="text-slate-300">•</span>
+                    <span>Tổng: <strong className="text-amber-900 text-sm">{profile.xp} XP</strong></span>
+                  </div>
+                  <button
+                    onClick={() => {
+                      soundManager.playPop();
+                      onOpenShop();
+                    }}
+                    className="text-amber-800 font-baloo font-extrabold text-xs sm:text-sm hover:underline hover:text-amber-950 cursor-pointer bg-amber-200/70 px-2.5 py-1 rounded-xl shadow-2xs transition-all hover:scale-105 shrink-0"
+                  >
+                    Đổi quà ⭐
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
         </section>
 
         {/* 3 Core Subjects Cards (Scrapbook Washi Cards) */}
@@ -153,7 +157,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               const handleClick = () => {
                 soundManager.playPop();
                 if (subjKey === 'logic') {
-                  onOpenArena();
+                  onOpenPractice();
                 } else {
                   onSelectSubject(subjKey);
                 }
@@ -252,6 +256,158 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           </div>
         </section>
 
+        {/* Quick Action Cards (Kho Luyện Đề & Đảo Tri Thức) - Style Scrapbook đồng bộ với các thẻ trên */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {/* Card 1: Kho Luyện Đề & Đấu Trường Trí Tuệ */}
+          <article
+            data-practice-arena-entry
+            onClick={() => {
+              soundManager.playPop();
+              onOpenPractice();
+            }}
+            style={{ transform: 'rotate(-1deg)' }}
+            className="group relative flex h-full flex-col lg:grid lg:grid-cols-[40%_1fr] lg:items-stretch rounded-[1.5rem] sm:rounded-[2rem] border-2 border-white/90 bg-[#fffdf9]/95 p-3 sm:p-4 shadow-washi transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-2xl cursor-pointer select-none"
+          >
+            {/* Washi Tape Strip at Top Center */}
+            <span
+              aria-hidden="true"
+              className="absolute -top-2.5 sm:-top-3.5 left-1/2 h-5 sm:h-6 w-20 sm:w-28 -translate-x-1/2 rotate-[-4deg] rounded-[4px] shadow-2xs z-10 pointer-events-none bg-amber-400/60"
+            />
+
+            {/* Left Column: Big Cover Illustration */}
+            <div className="relative h-44 sm:h-52 lg:h-full lg:min-h-48 overflow-hidden rounded-[1.2rem] sm:rounded-[1.5rem] bg-[#fffbeb] shadow-xs">
+              <img
+                src="/assets/practice_arena_cover.jpg"
+                alt="Kho Luyện Đề & Đấu Trường Trí Tuệ"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+
+              {/* Floating Icon Badge */}
+              <span className="absolute top-2.5 left-2.5 flex h-10 w-10 items-center justify-center rounded-2xl bg-white/90 backdrop-blur text-2xl shadow-xs border border-white">
+                🏆
+              </span>
+            </div>
+
+            {/* Right Column: Title, Subtitle, Description & Button */}
+            <div className="flex flex-1 flex-col justify-between px-1.5 pt-3 pb-1 sm:px-4 sm:py-2">
+              <div>
+                {/* Top Badge */}
+                <div className="flex items-center justify-between gap-2">
+                  <span className="px-3 py-1 rounded-full font-baloo font-extrabold text-xs bg-amber-100 text-amber-800 shadow-2xs">
+                    Luyện tập • Thi thử • Xếp hạng
+                  </span>
+                </div>
+
+                {/* Subject Name & Subtitle */}
+                <h3 className="font-baloo text-2xl sm:text-[1.75rem] font-black tracking-tight leading-tight mt-2 text-amber-600">
+                  Kho Luyện Đề &amp; Đấu Trường
+                </h3>
+                <p className="font-baloo font-bold text-sm text-brand-dark mt-0.5">
+                  Đấu trường Violympic, IOE, Trạng Nguyên
+                </p>
+
+                {/* Description */}
+                <p className="mt-2 font-vietnam text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed text-justify line-clamp-3">
+                  240 đề và ngân hàng câu hỏi chung: luyện theo năng lực hoặc thi thử Violympic, IOE, Trạng Nguyên.
+                </p>
+              </div>
+
+              {/* Bottom Action Button */}
+              <div className="mt-4 pt-3 border-t border-slate-100/90">
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    soundManager.playPop();
+                    onOpenPractice();
+                  }}
+                  className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-amber-500 px-5 font-baloo font-black text-white shadow-[0_5px_0_#b45309] transition-transform active:translate-y-1 active:shadow-none"
+                >
+                  <BookOpenCheck size={18} aria-hidden="true" />
+                  <span>Mở góc luyện &amp; thi</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          {/* Card 2: Đảo Tri Thức Diệu Kỳ */}
+          <article
+            onClick={() => {
+              soundManager.playPop();
+              onOpenAdventure();
+            }}
+            style={{ transform: 'rotate(1.2deg)' }}
+            className="group relative flex h-full flex-col lg:grid lg:grid-cols-[40%_1fr] lg:items-stretch rounded-[1.5rem] sm:rounded-[2rem] border-2 border-white/90 bg-[#fffdf9]/95 p-3 sm:p-4 shadow-washi transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-2xl cursor-pointer select-none"
+          >
+            {/* Washi Tape Strip at Top Center */}
+            <span
+              aria-hidden="true"
+              className="absolute -top-2.5 sm:-top-3.5 left-1/2 h-5 sm:h-6 w-20 sm:w-28 -translate-x-1/2 rotate-[-4deg] rounded-[4px] shadow-2xs z-10 pointer-events-none bg-teal-400/60"
+            />
+
+            {/* Left Column: Big Cover Illustration */}
+            <div className="relative h-44 sm:h-52 lg:h-full lg:min-h-48 overflow-hidden rounded-[1.2rem] sm:rounded-[1.5rem] bg-[#f0fdfa] shadow-xs">
+              <img
+                src="/assets/adventure_map_cover.jpg"
+                alt="Đảo Tri Thức Diệu Kỳ"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+
+              {/* Floating Icon Badge */}
+              <span className="absolute top-2.5 left-2.5 flex h-10 w-10 items-center justify-center rounded-2xl bg-white/90 backdrop-blur text-2xl shadow-xs border border-white">
+                🗺️
+              </span>
+            </div>
+
+            {/* Right Column: Title, Subtitle, Description & Button */}
+            <div className="flex flex-1 flex-col justify-between px-1.5 pt-3 pb-1 sm:px-4 sm:py-2">
+              <div>
+                {/* Top Badge */}
+                <div className="flex items-center justify-between gap-2">
+                  <span className="px-3 py-1 rounded-full font-baloo font-extrabold text-xs bg-teal-100 text-teal-800 shadow-2xs">
+                    Lộ Trình Học Tập GDPT 2018
+                  </span>
+                </div>
+
+                {/* Subject Name & Subtitle */}
+                <h3 className="font-baloo text-2xl sm:text-[1.75rem] font-black tracking-tight leading-tight mt-2 text-teal-700">
+                  Đảo Tri Thức Diệu Kỳ 🏝️
+                </h3>
+                <p className="font-baloo font-bold text-sm text-brand-dark mt-0.5">
+                  Hành trình phiêu lưu cùng 4 Mascot
+                </p>
+
+                {/* Description */}
+                <p className="mt-2 font-vietnam text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed text-justify line-clamp-3">
+                  Chinh phục từng ải bài học Toán, Tiếng Việt, Tiếng Anh theo chuẩn SGK, mở khóa rương báu bí mật!
+                </p>
+              </div>
+
+              {/* Bottom Action Button */}
+              <div className="mt-4 pt-3 border-t border-slate-100/90">
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    soundManager.playPop();
+                    onOpenAdventure();
+                  }}
+                  className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-teal-500 px-5 font-baloo font-black text-white shadow-[0_5px_0_#0f766e] transition-transform active:translate-y-1 active:shadow-none"
+                >
+                  <Map size={18} aria-hidden="true" />
+                  <span>Khám phá bản đồ</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+
         {/* Daily Quests Section: Việc Tốt Mỗi Ngày */}
         <section className="rounded-4xl bg-gradient-to-br from-orange-50/95 via-amber-50/90 to-yellow-50/95 p-6 sm:p-8 shadow-washi backdrop-blur-none xl:from-orange-50/85 xl:via-amber-50/60 xl:to-yellow-50/75 xl:backdrop-blur-md">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-amber-200/40 pb-5">
@@ -292,8 +448,8 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               const targetSubject: SubjectType = quest.id.includes('math')
                 ? 'math'
                 : quest.id.includes('vietnamese')
-                ? 'vietnamese'
-                : 'english';
+                  ? 'vietnamese'
+                  : 'english';
 
               return (
                 <motion.div
@@ -304,11 +460,10 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                     soundManager.playPop();
                     onSelectSubject(targetSubject);
                   }}
-                  className={`group relative rounded-3xl p-4 transition-all cursor-pointer select-none ${
-                    quest.isCompleted
+                  className={`group relative rounded-3xl p-4 transition-all cursor-pointer select-none ${quest.isCompleted
                       ? 'bg-emerald-50/95 shadow-sm hover:shadow-md'
                       : 'bg-white shadow-xs hover:shadow-md'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex items-center gap-2.5">
@@ -355,98 +510,6 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                 </motion.div>
               );
             })}
-          </div>
-        </section>
-
-        {/* Quick Action Banners */}
-        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-          <button
-            type="button"
-            onClick={() => {
-              soundManager.playPop();
-              onOpenPractice();
-            }}
-            className="group relative min-h-48 overflow-hidden rounded-4xl bg-gradient-to-r from-amber-400 to-orange-500 p-6 text-left text-white shadow-md transition-all hover:scale-[1.02] hover:shadow-xl active:scale-[0.99] focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
-          >
-            <div className="relative z-10 flex items-center justify-between gap-4">
-              <div>
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/25 px-3 py-1 font-baloo text-xs font-extrabold backdrop-blur">
-                  <BookOpenCheck size={14} /> 4 môn • Lớp 1–5
-                </span>
-                <h3 className="mt-2 font-baloo text-2xl font-extrabold sm:text-3xl">
-                  Kho Luyện Đề 📝
-                </h3>
-                <p className="mt-1 max-w-xs font-vietnam text-xs font-semibold text-amber-50 sm:text-sm">
-                  240 đề tự biên soạn theo chủ điểm, từ củng cố đến thi thử.
-                </p>
-                <span className="mt-4 inline-flex min-h-12 items-center gap-1 rounded-full bg-white px-4 py-2 font-baloo text-sm font-extrabold text-orange-700 shadow-sm transition-colors group-hover:bg-emerald-100">
-                  Chọn đề luyện <ArrowRight size={16} />
-                </span>
-              </div>
-              <div className="shrink-0 text-6xl sm:text-7xl" aria-hidden="true">📚</div>
-            </div>
-          </button>
-
-          {/* Arena Banner */}
-          <div
-            onClick={() => {
-              soundManager.playPop();
-              onOpenArena();
-            }}
-            className="group relative overflow-hidden rounded-4xl bg-gradient-to-r from-purple-500 to-indigo-600 p-6 text-white shadow-md hover:shadow-xl cursor-pointer transition-all hover:scale-[1.02] active:scale-[0.99]"
-          >
-            <div className="relative z-10 flex items-center justify-between">
-              <div>
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 font-baloo text-xs font-extrabold backdrop-blur">
-                  <Swords size={14} /> Thách Đấu Nhanh
-                </span>
-                <h3 className="mt-2 font-baloo text-2xl sm:text-3xl font-extrabold">
-                  Đấu Trường Trí Tuệ ⚔️
-                </h3>
-                <p className="mt-1 font-vietnam text-xs sm:text-sm font-semibold text-purple-100 max-w-xs">
-                  Thử thách 10 câu hỏi tốc độ cùng AI Mascot và bạn bè!
-                </p>
-                <div className="mt-4">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-1.5 font-baloo font-extrabold text-sm text-purple-700 shadow-sm group-hover:bg-amber-300 group-hover:text-purple-900 transition-colors">
-                    Vào đấu trường <ArrowRight size={16} />
-                  </span>
-                </div>
-              </div>
-              <div className="text-6xl sm:text-7xl shrink-0 animate-bounce-subtle">
-                🏆
-              </div>
-            </div>
-          </div>
-
-          {/* Adventure Map Banner */}
-          <div
-            onClick={() => {
-              soundManager.playPop();
-              onOpenAdventure();
-            }}
-            className="group relative overflow-hidden rounded-4xl bg-gradient-to-r from-sky-500 to-teal-500 p-6 text-white shadow-md hover:shadow-xl cursor-pointer transition-all hover:scale-[1.02] active:scale-[0.99]"
-          >
-            <div className="relative z-10 flex items-center justify-between">
-              <div>
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 font-baloo text-xs font-extrabold backdrop-blur">
-                  <Map size={14} /> Lộ Trình Học Tập
-                </span>
-                <h3 className="mt-2 font-baloo text-2xl sm:text-3xl font-extrabold">
-                  Đảo Tri Thức Diệu Kỳ 🏝️
-                </h3>
-                <p className="mt-1 font-vietnam text-xs sm:text-sm font-semibold text-sky-100 max-w-xs">
-                  Chinh phục từng ải bài học, mở khóa rương báu bí mật!
-                </p>
-                <div className="mt-4">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-1.5 font-baloo font-extrabold text-sm text-sky-700 shadow-sm group-hover:bg-yellow-300 group-hover:text-sky-900 transition-colors">
-                    Khám phá bản đồ <ArrowRight size={16} />
-                  </span>
-                </div>
-              </div>
-              <div className="text-6xl sm:text-7xl shrink-0 animate-bounce-subtle">
-                🗺️
-              </div>
-            </div>
           </div>
         </section>
       </div>

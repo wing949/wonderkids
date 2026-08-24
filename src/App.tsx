@@ -1,6 +1,6 @@
-import React, { Suspense, useRef, useState, useEffect } from 'react';
+import React, { Suspense, useMemo, useRef, useState, useEffect } from 'react';
 import { GradeLevel, ThemeId, PortalView, SubjectType, MascotId, StudentProfile, LessonNode, DailyQuest, StarShopItem } from './types';
-import { INITIAL_DAILY_QUESTS } from './data/gamificationData';
+import { INITIAL_DAILY_QUESTS, MOCK_PARENT_REPORT } from './data/gamificationData';
 import { Header } from './components/layout/Header';
 import { BottomNav } from './components/layout/BottomNav';
 import { StudentDashboard } from './components/dashboard/StudentDashboard';
@@ -16,6 +16,18 @@ import { AdminTab, AppRoute, getAppPath, parseAppRoute } from './utils/appRoute'
 import { getPortalForRoute } from './utils/portalRoute';
 import { isControlPanelRoute } from './utils/controlPanelRoute';
 import { loadCurriculumLesson, loadLessonsForGradeAndSubject } from './utils/curriculumLoader';
+import {
+  addManagedKid,
+  createEmptyParentReport,
+  createKidScopedStorage,
+  getActiveManagedKid,
+  loadParentAccount,
+  persistParentAccount,
+  selectManagedKid,
+  updateManagedKidProfile,
+  updateManagedKidReport,
+  type ParentAccount,
+} from './utils/parentAccount';
 
 const AdminCMS = React.lazy(async () => {
   const module = await import('./components/admin/AdminCMS');
@@ -35,11 +47,6 @@ const InteractiveExerciseEngine = React.lazy(async () => {
 const ParentPortal = React.lazy(async () => {
   const module = await import('./components/parent/ParentPortal');
   return { default: module.ParentPortal };
-});
-
-const QuizArena = React.lazy(async () => {
-  const module = await import('./components/arena/QuizArena');
-  return { default: module.QuizArena };
 });
 
 const PracticePortal = React.lazy(async () => {
@@ -111,10 +118,6 @@ class LazyLoadBoundary extends React.Component<React.PropsWithChildren, { hasErr
   }
 }
 
-const STORAGE_KEY_PROFILE = 'wonderkids_profile_v1';
-const STORAGE_KEY_GRADE = 'wonderkids_grade_v1';
-const STORAGE_KEY_THEME = 'wonderkids_theme_v1';
-
 const INITIAL_PROFILE: StudentProfile = {
   name: 'Bé An Nhiên',
   kidCode: 'WK-8829',
@@ -133,59 +136,45 @@ const INITIAL_PROFILE: StudentProfile = {
   accuracyRate: 92,
 };
 
-const getInitialProfile = (): StudentProfile => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY_PROFILE);
-    if (saved) {
-      return { ...INITIAL_PROFILE, ...JSON.parse(saved) };
-    }
-  } catch (e) {
-    console.error('Failed to load profile from localStorage', e);
-  }
-  return INITIAL_PROFILE;
-};
+const createFallbackParentAccount = (): ParentAccount => ({
+  version: 1,
+  activeKidId: 'kid-wk-8829',
+  kids: [{
+    id: 'kid-wk-8829',
+    profile: { ...INITIAL_PROFILE },
+    report: MOCK_PARENT_REPORT,
+    createdAt: 0,
+    updatedAt: 0,
+  }],
+  updatedAt: 0,
+});
 
-const getInitialGrade = (): GradeLevel => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY_GRADE);
-    if (saved) {
-      const g = parseInt(saved, 10);
-      if ([1, 2, 3, 4, 5].includes(g)) return g as GradeLevel;
-    }
-  } catch (e) {}
-  return 1;
-};
-
-const getInitialTheme = (): ThemeId => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY_THEME);
-    if (saved && ['ocean', 'space', 'jungle', 'candy', 'sunny'].includes(saved)) {
-      return saved as ThemeId;
-    }
-  } catch (e) {}
-  return 'ocean';
+const getInitialParentAccount = (): ParentAccount => {
+  if (typeof window === 'undefined') return createFallbackParentAccount();
+  return loadParentAccount(window.localStorage, INITIAL_PROFILE, MOCK_PARENT_REPORT);
 };
 
 const getInitialAppRoute = (): AppRoute => (
   typeof window === 'undefined' ? { kind: 'student' } : parseAppRoute(`${window.location.pathname}${window.location.search}`)
 );
 
-type PracticeAppRoute = Extract<AppRoute, { kind: 'practice-hub' | 'practice-list' | 'practice-set' }>;
+type PracticeAppRoute = Extract<AppRoute, { kind: 'practice-hub' | 'practice-list' | 'practice-set' | 'practice-competition-list' | 'practice-competition-set' | 'practice-custom-set' }>;
 
 export const App: React.FC = () => {
   const [initialRoute] = useState<AppRoute>(getInitialAppRoute);
-  const [profile, setProfile] = useState<StudentProfile>(getInitialProfile);
+  const [parentAccount, setParentAccount] = useState<ParentAccount>(getInitialParentAccount);
+  const activeKid = getActiveManagedKid(parentAccount);
+  const profile = activeKid.profile;
   const [currentGrade, setCurrentGrade] = useState<GradeLevel>(() => {
     if (initialRoute.kind === 'adventure') return initialRoute.grade;
-    const p = getInitialProfile();
-    return p.grade || getInitialGrade();
+    return activeKid.profile.grade;
   });
-  const [currentTheme, setCurrentTheme] = useState<ThemeId>(getInitialTheme);
+  const [currentTheme, setCurrentTheme] = useState<ThemeId>(activeKid.profile.theme);
   const [currentPortal, setCurrentPortal] = useState<PortalView>(() => (
     getPortalForRoute(initialRoute)
   ));
   const [practiceRoute, setPracticeRoute] = useState<PracticeAppRoute>(() => (
-    initialRoute.kind === 'practice-hub' || initialRoute.kind === 'practice-list' || initialRoute.kind === 'practice-set'
+    initialRoute.kind === 'practice-hub' || initialRoute.kind === 'practice-list' || initialRoute.kind === 'practice-set' || initialRoute.kind === 'practice-competition-list' || initialRoute.kind === 'practice-competition-set' || initialRoute.kind === 'practice-custom-set'
       ? initialRoute
       : { kind: 'practice-hub' }
   ));
@@ -198,7 +187,7 @@ export const App: React.FC = () => {
   const [adminTab, setAdminTab] = useState<AdminTab>(() => (
     initialRoute.kind === 'admin' ? initialRoute.tab : 'curriculum'
   ));
-  
+
   const [activeLesson, setActiveLesson] = useState<LessonNode | null>(null);
   const [isLessonLoading, setIsLessonLoading] = useState(initialRoute.kind === 'exercise');
   const [lessonLoadError, setLessonLoadError] = useState<string | null>(null);
@@ -214,27 +203,33 @@ export const App: React.FC = () => {
 
   const [lastEarnedStars, setLastEarnedStars] = useState(3);
   const [lastEarnedXp, setLastEarnedXp] = useState(100);
+  const previousActiveKidId = useRef(activeKid.id);
 
-  // Persist profile to localStorage
-  useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY_PROFILE, JSON.stringify(profile));
-    } catch (e) {}
-  }, [profile]);
+  const updateActiveProfile = (updater: Partial<StudentProfile> | ((current: StudentProfile) => StudentProfile)) => {
+    setParentAccount((currentAccount) => {
+      const currentKid = getActiveManagedKid(currentAccount);
+      const nextProfile = typeof updater === 'function' ? updater(currentKid.profile) : { ...currentKid.profile, ...updater };
+      return updateManagedKidProfile(currentAccount, currentKid.id, nextProfile);
+    });
+  };
 
-  // Persist grade to localStorage
-  useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY_GRADE, currentGrade.toString());
-    } catch (e) {}
-  }, [currentGrade]);
+  const activeKidStorage = useMemo(() => (
+    typeof window === 'undefined' ? undefined : createKidScopedStorage(window.localStorage, activeKid.id)
+  ), [activeKid.id]);
 
-  // Persist theme to localStorage
+  // Persist the complete family account. The legacy single-profile keys are only
+  // read once by loadParentAccount during migration and are no longer authoritative.
   useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY_THEME, currentTheme);
-    } catch (e) {}
-  }, [currentTheme]);
+    if (typeof window === 'undefined') return;
+    persistParentAccount(window.localStorage, parentAccount);
+  }, [parentAccount]);
+
+  useEffect(() => {
+    if (previousActiveKidId.current === activeKid.id) return;
+    previousActiveKidId.current = activeKid.id;
+    setCurrentGrade(activeKid.profile.grade);
+    setCurrentTheme(activeKid.profile.theme);
+  }, [activeKid.id, activeKid.profile.grade, activeKid.profile.theme]);
 
   // Apply theme to document element
   useEffect(() => {
@@ -298,11 +293,15 @@ export const App: React.FC = () => {
         setCurrentPortal('parent');
         return;
       case 'arena':
-        setCurrentPortal('arena');
+        setPracticeRoute({ kind: 'practice-hub', mode: 'arena' });
+        setCurrentPortal('practice');
         return;
       case 'practice-hub':
       case 'practice-list':
       case 'practice-set':
+      case 'practice-competition-list':
+      case 'practice-competition-set':
+      case 'practice-custom-set':
         setPracticeRoute(route);
         if (route.kind !== 'practice-hub') setCurrentGrade(route.grade);
         setCurrentPortal('practice');
@@ -400,7 +399,7 @@ export const App: React.FC = () => {
     setLastEarnedXp(xpEarned);
 
     // Update student profile
-    setProfile((prev) => ({
+    updateActiveProfile((prev) => ({
       ...prev,
       stars: prev.stars + starsEarned,
       xp: prev.xp + xpEarned,
@@ -412,7 +411,7 @@ export const App: React.FC = () => {
 
   // Handler: Buy item from Star Shop
   const handleBuyShopItem = (item: StarShopItem) => {
-    setProfile((prev) => ({
+    updateActiveProfile((prev) => ({
       ...prev,
       stars: Math.max(0, prev.stars - item.costStars),
     }));
@@ -420,16 +419,17 @@ export const App: React.FC = () => {
 
   // Handler: Change Mascot
   const handleMascotChange = (id: MascotId) => {
-    setProfile((prev) => ({
+    updateActiveProfile((prev) => ({
       ...prev,
       selectedMascot: id,
+      avatarId: id,
     }));
   };
 
   // Handler: Change Grade
   const handleGradeChange = (grade: GradeLevel) => {
     setCurrentGrade(grade);
-    setProfile((prev) => ({ ...prev, grade }));
+    updateActiveProfile({ grade });
     if (currentPortal === 'adventure') {
       navigateTo({ kind: 'adventure', subject: selectedSubject, grade });
     }
@@ -438,7 +438,7 @@ export const App: React.FC = () => {
   // Handler: Change Theme
   const handleThemeChange = (theme: ThemeId) => {
     setCurrentTheme(theme);
-    setProfile((prev) => ({ ...prev, theme }));
+    updateActiveProfile({ theme });
   };
 
   return (
@@ -466,123 +466,125 @@ export const App: React.FC = () => {
 
       {/* Main Portals Router */}
       <LazyLoadBoundary key={currentPortal}>
-      <main className="min-h-[calc(100vh-5rem)]">
-        {currentPortal === 'student' && (
-          <StudentDashboard
-            profile={profile}
-            currentGrade={currentGrade}
-            onSelectSubject={handleSelectSubject}
-            onOpenAdventure={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
-            onOpenArena={() => navigateTo({ kind: 'arena' })}
-            onOpenPractice={() => navigateTo({ kind: 'practice-hub' })}
-            onOpenShop={() => navigateTo({ kind: 'shop' })}
-            onOpenQuests={() => navigateTo({ kind: 'quests' })}
-            onMascotChange={handleMascotChange}
-            dailyQuests={dailyQuests}
-          />
-        )}
-
-        {currentPortal === 'adventure' && (
-          <Suspense fallback={<PortalLoading />}>
-            <AdventureMap
+        <main className="min-h-[calc(100vh-5rem)]">
+          {currentPortal === 'student' && (
+            <StudentDashboard
+              profile={profile}
               currentGrade={currentGrade}
-              selectedSubject={selectedSubject}
               onSelectSubject={handleSelectSubject}
-              onStartLesson={handleStartLesson}
-              onBackToDashboard={returnToStudentPortal}
+              onOpenAdventure={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
+              onOpenPractice={() => navigateTo({ kind: 'practice-hub' })}
+              onOpenShop={() => navigateTo({ kind: 'shop' })}
+              onOpenQuests={() => navigateTo({ kind: 'quests' })}
+              onMascotChange={handleMascotChange}
+              dailyQuests={dailyQuests}
             />
-          </Suspense>
-        )}
+          )}
 
-        {currentPortal === 'exercise' && activeLesson && (
-          <Suspense fallback={<PortalLoading />}>
-            <InteractiveExerciseEngine
-              key={`${activeLesson.id}-${lessonSessionKey}`}
-              lesson={activeLesson}
-              onExit={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
-              onComplete={handleCompleteLesson}
+          {currentPortal === 'adventure' && (
+            <Suspense fallback={<PortalLoading />}>
+              <AdventureMap
+                currentGrade={currentGrade}
+                selectedSubject={selectedSubject}
+                onSelectSubject={handleSelectSubject}
+                onStartLesson={handleStartLesson}
+                onBackToDashboard={returnToStudentPortal}
+              />
+            </Suspense>
+          )}
+
+          {currentPortal === 'exercise' && activeLesson && (
+            <Suspense fallback={<PortalLoading />}>
+              <InteractiveExerciseEngine
+                key={`${activeLesson.id}-${lessonSessionKey}`}
+                lesson={activeLesson}
+                onExit={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
+                onComplete={handleCompleteLesson}
+              />
+            </Suspense>
+          )}
+
+          {currentPortal === 'exercise' && isLessonLoading && <PortalLoading />}
+
+          {currentPortal === 'exercise' && lessonLoadError && !isLessonLoading && (
+            <PortalLoadFailure
+              message={lessonLoadError}
+              onRetry={() => applyAppRoute(parseAppRoute(window.location.pathname))}
+              onBack={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
             />
-          </Suspense>
-        )}
+          )}
 
-        {currentPortal === 'exercise' && isLessonLoading && <PortalLoading />}
+          {currentPortal === 'practice' && (
+            <Suspense fallback={<PortalLoading />}>
+              <PracticePortal
+                route={practiceRoute}
+                playerName={profile.name}
+                currentGrade={currentGrade}
+                storage={activeKidStorage}
+                onNavigate={navigateTo}
+                onBack={returnToStudentPortal}
+                onReward={(xp, stars) => {
+                  updateActiveProfile((prev) => ({
+                    ...prev,
+                    xp: prev.xp + xp,
+                    stars: prev.stars + stars,
+                  }));
+                }}
+              />
+            </Suspense>
+          )}
 
-        {currentPortal === 'exercise' && lessonLoadError && !isLessonLoading && (
-          <PortalLoadFailure
-            message={lessonLoadError}
-            onRetry={() => applyAppRoute(parseAppRoute(window.location.pathname))}
-            onBack={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
-          />
-        )}
+          {currentPortal === 'parent' && (
+            <Suspense fallback={<PortalLoading />}>
+              <ParentPortal
+                kids={parentAccount.kids}
+                activeKidId={activeKid.id}
+                report={activeKid.report}
+                onSelectKid={(kidId) => setParentAccount((current) => selectManagedKid(current, kidId))}
+                onAddKid={(newProfile) => setParentAccount((current) => (
+                  addManagedKid(current, newProfile, createEmptyParentReport(MOCK_PARENT_REPORT))
+                ))}
+                onUpdateKid={(kidId, changes) => {
+                  if (kidId === activeKid.id && changes.grade) setCurrentGrade(changes.grade);
+                  if (kidId === activeKid.id && changes.theme) setCurrentTheme(changes.theme);
+                  setParentAccount((current) => updateManagedKidProfile(current, kidId, changes));
+                }}
+                onUpdateReport={(nextReport) => setParentAccount((current) => (
+                  updateManagedKidReport(current, current.activeKidId, nextReport)
+                ))}
+                onBackToStudent={returnToStudentPortal}
+                onRewardStars={(stars) => {
+                  updateActiveProfile((prev) => ({
+                    ...prev,
+                    stars: prev.stars + stars,
+                  }));
+                }}
+              />
+            </Suspense>
+          )}
 
-        {currentPortal === 'arena' && (
-          <Suspense fallback={<PortalLoading />}>
-            <QuizArena
-              onBackToDashboard={returnToStudentPortal}
-              onVictory={(xp, stars) => {
-                setProfile((prev) => ({
-                  ...prev,
-                  xp: prev.xp + xp,
-                  stars: prev.stars + stars,
-                }));
+          {currentPortal === 'admin' && isAdminAuthenticated && (
+            <Suspense fallback={<div className="p-10 text-center font-baloo text-lg font-bold text-slate-600">Đang mở khu vực quản trị…</div>}>
+              <AdminCMS
+                activeTab={adminTab}
+                onBackToStudent={returnToStudentPortal}
+                onLogout={handleAdminLogout}
+                onTabChange={(tab) => navigateTo({ kind: 'admin', tab })}
+              />
+            </Suspense>
+          )}
+
+          {(currentPortal === 'admin-login' || (currentPortal === 'admin' && !isAdminAuthenticated)) && (
+            <AdminLogin
+              onAuthenticated={() => {
+                adminAuthRequestTracker.current.invalidate();
+                setIsAdminAuthenticated(true);
+                setCurrentPortal('admin');
               }}
-            />
-          </Suspense>
-        )}
-
-        {currentPortal === 'practice' && (
-          <Suspense fallback={<PortalLoading />}>
-            <PracticePortal
-              route={practiceRoute}
-              onNavigate={navigateTo}
-              onBack={returnToStudentPortal}
-              onReward={(xp, stars) => {
-                setProfile((prev) => ({
-                  ...prev,
-                  xp: prev.xp + xp,
-                  stars: prev.stars + stars,
-                }));
-              }}
-            />
-          </Suspense>
-        )}
-
-        {currentPortal === 'parent' && (
-          <Suspense fallback={<PortalLoading />}>
-            <ParentPortal
               onBackToStudent={returnToStudentPortal}
-              onRewardStars={(stars) => {
-                setProfile((prev) => ({
-                  ...prev,
-                  stars: prev.stars + stars,
-                }));
-              }}
             />
-          </Suspense>
-        )}
-
-        {currentPortal === 'admin' && isAdminAuthenticated && (
-          <Suspense fallback={<div className="p-10 text-center font-baloo text-lg font-bold text-slate-600">Đang mở khu vực quản trị…</div>}>
-            <AdminCMS
-              activeTab={adminTab}
-              onBackToStudent={returnToStudentPortal}
-              onLogout={handleAdminLogout}
-              onTabChange={(tab) => navigateTo({ kind: 'admin', tab })}
-            />
-          </Suspense>
-        )}
-
-        {(currentPortal === 'admin-login' || (currentPortal === 'admin' && !isAdminAuthenticated)) && (
-          <AdminLogin
-            onAuthenticated={() => {
-              adminAuthRequestTracker.current.invalidate();
-              setIsAdminAuthenticated(true);
-              setCurrentPortal('admin');
-            }}
-            onBackToStudent={returnToStudentPortal}
-          />
-        )}
-      </main>
+          )}
+        </main>
       </LazyLoadBoundary>
 
       {/* Mobile Bottom Dock (Hidden in exercise mode) */}
@@ -633,7 +635,7 @@ export const App: React.FC = () => {
         onClose={returnToStudentPortal}
         profile={profile}
         onUpdateProfile={(updated) => {
-          setProfile((prev) => ({ ...prev, ...updated }));
+          updateActiveProfile(updated);
           if (updated.grade) {
             setCurrentGrade(updated.grade);
           }
@@ -668,9 +670,8 @@ export const App: React.FC = () => {
             {dailyQuests.map((quest) => (
               <div
                 key={quest.id}
-                className={`p-3.5 rounded-2xl border-2 flex items-center justify-between ${
-                  quest.isCompleted ? 'border-emerald-300 bg-emerald-50' : 'border-slate-200 bg-slate-50'
-                }`}
+                className={`p-3.5 rounded-2xl border-2 flex items-center justify-between ${quest.isCompleted ? 'border-emerald-300 bg-emerald-50' : 'border-slate-200 bg-slate-50'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{quest.icon}</span>

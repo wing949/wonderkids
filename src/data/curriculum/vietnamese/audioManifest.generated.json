@@ -734,12 +734,22 @@
     "primaryPath": "/audio/curriculum/tv-g2-b5.mp3",
     "primaryVoice": "Cô Giáo Vy",
     "transcriptHash": "3ed0e4a228d1f7d310e9c9aa5891691df712bf4d431f62beb413a3758599270d",
-    "lessonVersion": 1,
+    "lessonVersion": 2,
     "sourcePages": [
       24,
       25
     ],
-    "genre": "story"
+    "genre": "story",
+    "prosodyVersion": 4,
+    "prosodyHash": "05c13d622e19a5bf715388057aac904aa5f4b13fb238c04cf0337617f9f4de38",
+    "segmentCount": 1,
+    "stanzaCount": 0,
+    "lineCount": 0,
+    "durationMs": 69938,
+    "effectiveTempo": 1.0,
+    "wordsPerMinute": 162.1,
+    "audioSha256": "f45e2dc38659dda5c1b8c45e72c613a6b2171c06440708027d143883498dc7ee",
+    "isExpressive": true
   },
   "tv-g2-b6": {
     "lessonId": "tv-g2-b6",

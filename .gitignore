@@ -51,3 +51,14 @@ scratch/
 refer/violympic-toan Lớp 2.pdf
 private-reports/
 backup_audio_wav/
+tmp_*/
+reports/
+report/live_dom_293_screenshots/
+*.png.backup
+__pycache__/
+*.pyc
+*.traineddata
+test_bunny_pollinations.jpg
+test_rabbit_3d.png
+implementation_plan_*
+

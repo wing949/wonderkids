@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Star, Gem, UserCheck, BookOpen, Trophy, ShoppingBag } from 'lucide-react';
+import { Flame, Star, Gem, UserCheck, BookOpen } from 'lucide-react';
 import { GradeLevel, ThemeId, PortalView, StudentProfile } from '../../types';
 import { CUTE_ANIMAL_AVATARS } from '../../data/gamificationData';
 import { soundManager } from '../../utils/audio';
@@ -16,6 +16,26 @@ interface HeaderProps {
   onOpenBadges: () => void;
 }
 
+const MASCOT_3D_IMAGES: Record<string, string> = {
+  bobo: '/assets/bobo_math.jpg',
+  miumiu: '/assets/miumiu_story.jpg',
+  pipi: '/assets/pipi_english.jpg',
+  bipbip: '/assets/bipbip_logic.jpg',
+  lion: '/assets/mascots/mascot_lion.jpg',
+  dino: '/assets/mascots/mascot_dino.jpg',
+  bunny: '/assets/mascots/mascot_bunny.jpg',
+  bear: '/assets/mascots/mascot_bear.jpg',
+  cat: '/assets/mascots/mascot_cat.jpg',
+  puppy: '/assets/mascots/mascot_puppy.jpg',
+  panda: '/assets/mascots/mascot_panda.jpg',
+  unicorn: '/assets/mascots/mascot_unicorn.jpg',
+  penguin: '/assets/mascots/mascot_penguin.jpg',
+  koala: '/assets/mascots/mascot_koala.jpg',
+  tiger: '/assets/mascots/mascot_tiger.jpg',
+  astronaut: '/assets/mascots/mascot_astronaut.jpg',
+  princess: '/assets/mascots/mascot_princess.jpg',
+};
+
 export const Header: React.FC<HeaderProps> = ({
   profile,
   currentGrade,
@@ -27,7 +47,9 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenShop,
   onOpenBadges,
 }) => {
-  const currentAvatarEmoji = CUTE_ANIMAL_AVATARS.find((a) => a.id === (profile.avatarId || profile.selectedMascot))?.emoji || '🦉';
+  const currentAvatarId = profile.avatarId || profile.selectedMascot || 'bobo';
+  const currentAvatarImg = MASCOT_3D_IMAGES[currentAvatarId];
+  const currentAvatarEmoji = CUTE_ANIMAL_AVATARS.find((a) => a.id === currentAvatarId)?.emoji || '🦉';
 
   const themes: { id: ThemeId; label: string; icon: string }[] = [
     { id: 'ocean', label: 'Biển Xanh', icon: '🌊' },
@@ -97,10 +119,14 @@ export const Header: React.FC<HeaderProps> = ({
               onOpenBadges();
             }}
             aria-label={`Mở hồ sơ của ${profile.name}, đang học lớp ${currentGrade}`}
-            className="flex min-h-12 items-center gap-1 sm:gap-2 rounded-full border-2 border-amber-300 bg-gradient-to-r from-amber-100 to-yellow-100 px-2 sm:px-3 py-1 shadow-sm hover:scale-105 transition-transform shrink-0 cursor-pointer"
-            title="Hồ sơ & Avatar của bé (Nhấn để chọn 16 con vật ngộ nghĩnh)"
+            className="flex min-h-12 items-center gap-1.5 sm:gap-2 rounded-full bg-amber-100/90 hover:bg-amber-200/80 px-2.5 sm:px-3.5 py-1.5 shadow-2xs hover:scale-105 transition-transform shrink-0 cursor-pointer"
+            title="Hồ sơ & Avatar của bé (Nhấn để chọn 16 con vật 3D Disney)"
           >
-            <span className="text-lg sm:text-xl leading-none">{currentAvatarEmoji}</span>
+            {currentAvatarImg ? (
+              <img src={currentAvatarImg} alt="Avatar" className="h-6 w-6 sm:h-7 sm:w-7 rounded-full object-cover shadow-2xs" />
+            ) : (
+              <span className="text-lg sm:text-xl leading-none">{currentAvatarEmoji}</span>
+            )}
             <span className="font-baloo font-black text-[11px] text-amber-950 sm:hidden whitespace-nowrap">
               Lớp {currentGrade}
             </span>
@@ -111,7 +137,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Streak Badge */}
           <div
-            className="flex items-center gap-1 sm:gap-1.5 rounded-full border-2 border-orange-200 bg-orange-50/90 px-2 sm:px-3 py-1 text-orange-700 shadow-sm shrink-0 whitespace-nowrap"
+            className="flex items-center gap-1 sm:gap-1.5 rounded-full bg-orange-50/90 px-2.5 sm:px-3.5 py-1.5 text-orange-700 shadow-2xs shrink-0 whitespace-nowrap"
             title={`Chuỗi học tập liên tục: ${profile.streak} ngày`}
           >
             <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-orange-500 fill-orange-500 animate-bounce-subtle shrink-0" />
@@ -125,7 +151,7 @@ export const Header: React.FC<HeaderProps> = ({
               soundManager.playPop();
               onOpenShop();
             }}
-            className="flex items-center gap-1 sm:gap-1.5 rounded-full border-2 border-amber-200 bg-amber-50/90 px-2 sm:px-3 py-1 text-amber-800 shadow-sm hover:scale-105 transition-transform shrink-0 whitespace-nowrap"
+            className="flex items-center gap-1 sm:gap-1.5 rounded-full bg-amber-50/90 hover:bg-amber-100/80 px-2.5 sm:px-3.5 py-1.5 text-amber-800 shadow-2xs hover:scale-105 transition-transform shrink-0 whitespace-nowrap"
             title="Ngôi sao tích lũy (Nhấn để mở Cửa hàng đổi quà)"
           >
             <Star className="h-4 w-4 sm:h-5 sm:w-5 text-amber-500 fill-amber-400 shrink-0" />
@@ -134,36 +160,12 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Gems */}
           <div
-            className="hidden sm:flex items-center gap-1 sm:gap-1.5 rounded-full border-2 border-sky-200 bg-sky-50/90 px-2.5 sm:px-3 py-1 text-sky-800 shadow-sm shrink-0 whitespace-nowrap"
+            className="hidden sm:flex items-center gap-1 sm:gap-1.5 rounded-full bg-sky-50/90 px-2.5 sm:px-3.5 py-1.5 text-sky-800 shadow-2xs shrink-0 whitespace-nowrap"
             title="Kim cương năng lượng"
           >
             <Gem className="h-4 w-4 text-sky-500 fill-sky-400 shrink-0" />
             <span className="font-baloo font-extrabold text-xs sm:text-sm">{profile.gems}</span>
           </div>
-
-          {/* Badges / Trophy Button */}
-          <button
-            onClick={() => {
-              soundManager.playPop();
-              onOpenBadges();
-            }}
-            className="hidden sm:flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-purple-100 hover:text-purple-700 transition-colors"
-            title="Bộ sưu tập Huy hiệu"
-          >
-            <Trophy size={18} />
-          </button>
-
-          {/* Shop Button */}
-          <button
-            onClick={() => {
-              soundManager.playPop();
-              onOpenShop();
-            }}
-            className="hidden sm:flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-amber-100 hover:text-amber-700 transition-colors"
-            title="Cửa hàng đổi quà"
-          >
-            <ShoppingBag size={18} />
-          </button>
 
           {/* Theme Selector Pill */}
           <div className="relative group hidden md:block shrink-0">

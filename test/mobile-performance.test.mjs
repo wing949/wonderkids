@@ -17,6 +17,8 @@ await build({
     'src/components/common/CuteDoodleBackground.tsx',
     'src/components/layout/Header.tsx',
     'src/components/profile/ProfileModal.tsx',
+    'src/components/exercise/InteractiveExerciseEngine.tsx',
+    'src/data/curriculum/index.ts',
   ],
   bundle: true,
   format: 'esm',
@@ -33,6 +35,8 @@ const { AdventureMap } = await import(pathToFileURL(join(tempDir, 'AdventureMap.
 const { CuteDoodleBackground } = await import(pathToFileURL(join(tempDir, 'CuteDoodleBackground.js')).href);
 const { Header } = await import(pathToFileURL(join(tempDir, 'Header.js')).href);
 const { ProfileModal } = await import(pathToFileURL(join(tempDir, 'ProfileModal.js')).href);
+const { InteractiveExerciseEngine } = await import(pathToFileURL(join(tempDir, 'InteractiveExerciseEngine.js')).href);
+const { getLessonsForGradeAndSubject } = await import(pathToFileURL(join(tempDir, 'index.js')).href);
 
 const mobileProfile = {
   name: 'Bé Minh',
@@ -53,6 +57,7 @@ const mobileProfile = {
 let dom;
 let compactQueryMatches = false;
 let reducedMotionQueryMatches = false;
+const createdAudioElements = [];
 
 before(() => {
   dom = new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>', {
@@ -69,6 +74,20 @@ before(() => {
   globalThis.SVGElement = dom.window.SVGElement;
   globalThis.getComputedStyle = dom.window.getComputedStyle;
   globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+  globalThis.Audio = class {
+    constructor(src) {
+      this.src = src;
+      this.currentTime = 0;
+      this.playbackRate = 1;
+      this.preservesPitch = false;
+      this.onended = null;
+      this.onerror = null;
+      createdAudioElements.push(this);
+    }
+
+    play() { return Promise.resolve(); }
+    pause() {}
+  };
   dom.window.matchMedia = (query) => ({
     matches: query.includes('max-width') ? compactQueryMatches : reducedMotionQueryMatches,
     media: query,
@@ -294,5 +313,192 @@ describe('Mobile and iPad performance safeguards', () => {
     assert.match(appSource, /class LazyLoadBoundary/);
     assert.match(appSource, /loadCurriculumLesson\(route\.lessonId\)[\s\S]*?\.catch\(/);
     assert.match(appSource, /loadLessonsForGradeAndSubject\([\s\S]*?\.catch\(/);
+  });
+
+  it('lets a child change the speed of prerecorded reading audio on mobile', async () => {
+    const lesson = getLessonsForGradeAndSubject(2, 'vietnamese')
+      .find((item) => item.id === 'tv-g2-b2');
+    assert.ok(lesson, 'Cần bài đọc đã phát hành để kiểm tra điều khiển tốc độ');
+
+    const host = document.createElement('div');
+    document.body.append(host);
+    const root = createRoot(host);
+
+    await act(async () => {
+      root.render(React.createElement(InteractiveExerciseEngine, {
+        lesson,
+        onExit() {},
+        onComplete() {},
+      }));
+    });
+
+    const lessonInfo = host.querySelector('[aria-label="Thông tin bài học"]');
+    assert.ok(lessonInfo, 'Thanh đầu phải có vùng thông tin bài học rõ ràng');
+    assert.equal(lessonInfo.children.length, 2, 'Thông tin bài học chỉ gồm nguồn/trang và tên bài');
+    assert.match(
+      lessonInfo.firstElementChild?.textContent || '',
+      /SGK Tiếng Việt 2 tập 1\s*•\s*Trang 13, 14, 16/iu,
+    );
+
+    const readingCard = host.querySelector('section[aria-label="Nội dung bài đọc"]');
+    assert.ok(readingCard, 'Cột nội dung bên phải phải là vùng bài đọc có nhãn rõ ràng');
+
+    const audioControls = host.querySelector('[aria-label="Điều khiển nghe bài đọc"]');
+    assert.ok(audioControls, 'Cụm tốc độ và nút loa phải nằm trên thanh đầu trang');
+    assert.equal(
+      readingCard.querySelector('[aria-label="Điều khiển nghe bài đọc"]'),
+      null,
+      'Cột bài đọc không được lặp lại cụm điều khiển audio',
+    );
+
+    const speedControl = audioControls.querySelector('select[aria-label="Tốc độ đọc audio thu sẵn"]');
+    assert.ok(speedControl, 'Bài đọc phải có lựa chọn tốc độ cho audio thu sẵn');
+    assert.match(speedControl.className, /min-h-12/);
+    assert.equal(speedControl.value, '1', 'Tốc độ mặc định phải là 1.0x');
+    assert.deepEqual(
+      [...speedControl.options].map((option) => option.value),
+      ['0.8', '1', '1.2'],
+    );
+
+    const playButton = audioControls.querySelector('button[aria-label="Nghe toàn bài"]');
+    assert.ok(playButton, 'Nút nghe phải nằm trong cụm điều khiển trên thanh đầu trang');
+    assert.equal((playButton.textContent || '').trim(), '', 'Nút nghe chỉ hiển thị biểu tượng loa');
+    assert.match(playButton.className, /h-12/);
+    assert.match(playButton.className, /w-12/);
+    await act(async () => playButton.click());
+    assert.equal(playButton.getAttribute('aria-label'), 'Dừng đọc mẫu');
+    assert.match(
+      playButton.querySelector('svg')?.getAttribute('class') || '',
+      /lucide-square/,
+      'Khi đang phát phải hiện biểu tượng dừng, không dùng biểu tượng tạm dừng',
+    );
+    const passageAudio = createdAudioElements.at(-1);
+
+    speedControl.value = '0.8';
+    await act(async () => {
+      speedControl.dispatchEvent(new window.Event('change', { bubbles: true }));
+    });
+
+    assert.equal(passageAudio.playbackRate, 0.8);
+    assert.equal(passageAudio.preservesPitch, true);
+    assert.equal(createdAudioElements.at(-1), passageAudio, 'Đổi tốc độ không được khởi động lại audio');
+
+    await act(async () => root.unmount());
+    host.remove();
+  });
+
+  it('plays an English reading passage with an English browser voice', async () => {
+    const lesson = getLessonsForGradeAndSubject(5, 'english')
+      .find((item) => item.id === 'eng-g5-u1');
+    assert.ok(lesson, 'Cần bài Tiếng Anh có nội dung đọc để kiểm tra nút loa');
+
+    const spokenUtterances = [];
+    const englishVoice = { name: 'Microsoft Jenny Online', lang: 'en-US' };
+    class TestSpeechSynthesisUtterance {
+      constructor(text) {
+        this.text = text;
+        this.lang = '';
+        this.rate = 1;
+        this.pitch = 1;
+        this.volume = 1;
+        this.voice = null;
+        this.onend = null;
+        this.onerror = null;
+      }
+    }
+    globalThis.SpeechSynthesisUtterance = TestSpeechSynthesisUtterance;
+    Object.defineProperty(window, 'speechSynthesis', {
+      configurable: true,
+      value: {
+        getVoices: () => [englishVoice],
+        cancel() {},
+        speak(utterance) { spokenUtterances.push(utterance); },
+      },
+    });
+
+    const host = document.createElement('div');
+    document.body.append(host);
+    const root = createRoot(host);
+
+    await act(async () => {
+      root.render(React.createElement(InteractiveExerciseEngine, {
+        lesson,
+        onExit() {},
+        onComplete() {},
+      }));
+    });
+
+    const playButton = host.querySelector('button[aria-label="Nghe toàn bài"]');
+    assert.ok(playButton, 'Bài Tiếng Anh phải có nút nghe toàn bài');
+
+    await act(async () => playButton.click());
+
+    assert.equal(spokenUtterances.length, 1, 'Bấm loa phải thực sự gửi nội dung tới bộ đọc');
+    assert.equal(spokenUtterances[0].lang, 'en-US');
+    assert.equal(spokenUtterances[0].rate, 1);
+    assert.match(spokenUtterances[0].text, /All about me!/u);
+    assert.match(spokenUtterances[0].text, /What is your address\?/u);
+    assert.equal(playButton.getAttribute('aria-label'), 'Dừng đọc mẫu');
+
+    await act(async () => root.unmount());
+    host.remove();
+    delete globalThis.SpeechSynthesisUtterance;
+    delete window.speechSynthesis;
+  });
+
+  it('disables the speed selector when a lesson has no approved prerecorded audio', async () => {
+    const publishedLesson = getLessonsForGradeAndSubject(2, 'vietnamese')
+      .find((item) => item.id === 'tv-g2-b2');
+    assert.ok(publishedLesson);
+    const lessonWithoutAudio = { ...publishedLesson, id: 'tv-g2-b2-without-audio' };
+    const host = document.createElement('div');
+    document.body.append(host);
+    const root = createRoot(host);
+
+    await act(async () => {
+      root.render(React.createElement(InteractiveExerciseEngine, {
+        lesson: lessonWithoutAudio,
+        onExit() {},
+        onComplete() {},
+      }));
+    });
+
+    const speedControl = host.querySelector('select[aria-label="Tốc độ đọc audio thu sẵn"]');
+    assert.ok(speedControl);
+    assert.equal(speedControl.disabled, true);
+
+    await act(async () => root.unmount());
+    host.remove();
+  });
+
+  it('keeps every verified SGK line break when rendering prose in the right column', async () => {
+    const lesson = getLessonsForGradeAndSubject(2, 'vietnamese')
+      .find((item) => item.id === 'tv-g2-b5');
+    assert.ok(lesson, 'Cần bài Em có xinh không? để kiểm tra dòng lời thoại theo SGK');
+
+    const host = document.createElement('div');
+    document.body.append(host);
+    const root = createRoot(host);
+
+    await act(async () => {
+      root.render(React.createElement(InteractiveExerciseEngine, {
+        lesson,
+        onExit() {},
+        onComplete() {},
+      }));
+    });
+
+    const readingText = host.querySelector(
+      'section[aria-label="Nội dung bài đọc"] [aria-label="Văn bản bài đọc"]',
+    );
+    assert.ok(readingText, 'Cột phải phải có vùng văn bản bài đọc riêng');
+    assert.equal(
+      readingText.firstElementChild?.querySelectorAll('br').length,
+      8,
+      'Tám dấu xuống dòng của trang đầu bài mẫu phải được giữ nguyên trên DOM',
+    );
+
+    await act(async () => root.unmount());
+    host.remove();
   });
 });

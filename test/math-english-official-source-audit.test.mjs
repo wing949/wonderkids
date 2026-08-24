@@ -105,6 +105,48 @@ test('nội dung luyện tập không giả là nguyên văn SGK và câu hỏi 
   }
 });
 
+test('92 Unit Tiếng Anh có nội dung luyện cụ thể thay vì lặp lại tên chủ đề', () => {
+  const lessons = [1, 2, 3, 4, 5]
+    .flatMap((grade) => curriculum.getLessonsForGradeAndSubject(grade, 'english'));
+
+  assert.equal(lessons.length, 92);
+  for (const lesson of lessons) {
+    const content = lesson.readingPassage?.content?.join(' ') ?? '';
+    const vocabulary = lesson.readingPassage?.vocabularyNotes ?? [];
+    const questionText = lesson.questions.map((question) => question.questionText).join(' ');
+    const optionText = lesson.questions
+      .flatMap((question) => question.options ?? [])
+      .map((option) => option.label)
+      .join(' ');
+
+    assert.doesNotMatch(content, /Làm quen chủ đề|Nội dung luyện tập bổ trợ cho Unit/i, lesson.id);
+    assert.doesNotMatch(content, /Use words and sentence patterns about/i, lesson.id);
+    assert.ok(content.length >= 80, `${lesson.id} chưa có đủ nội dung luyện cụ thể`);
+    assert.ok(vocabulary.length > 0, `${lesson.id} thiếu từ hoặc mẫu câu trọng tâm`);
+    assert.notEqual(vocabulary[0]?.word, 'Key vocabulary', `${lesson.id} còn chú giải giữ chỗ`);
+    assert.equal(lesson.questions.length, 5, `${lesson.id} phải có 5 hoạt động luyện cụ thể`);
+    assert.doesNotMatch(questionText, /What is the main topic|Choose the correct statement according to the lesson/i, lesson.id);
+    assert.doesNotMatch(optionText, /This detail is not part of the lesson|This statement does not match the lesson/i, lesson.id);
+  }
+
+  const fishAndChipShop = lessons.find((lesson) => lesson.id === 'eng-g1-u5');
+  const unit5Content = fishAndChipShop.readingPassage.content.join(' ');
+  assert.match(unit5Content, /Letter I\/i/i);
+  assert.match(unit5Content, /fish/i);
+  assert.match(unit5Content, /chips/i);
+  assert.match(unit5Content, /I like fish/i);
+  assert.match(unit5Content, /\/ɪ\//);
+
+  const unit5Questions = fishAndChipShop.questions.map((question) => question.questionText).join(' ');
+  assert.match(unit5Questions, /Letter I\/i/i);
+  assert.match(unit5Questions, /fish/i);
+  assert.match(unit5Questions, /\/ɪ\//);
+
+  const correctOptionPositions = lessons.flatMap((lesson) => lesson.questions)
+    .map((question) => question.options.findIndex((option) => option.isCorrect));
+  assert.deepEqual(new Set(correctOptionPositions), new Set([0, 1, 2]), 'Đáp án đúng không được luôn nằm ở cùng một vị trí');
+});
+
 test('437 đường dẫn bài Toán và Tiếng Anh giữ đúng mã bài khi chia sẻ hoặc tải lại', () => {
   const lessonIds = [
     ...Object.values(curriculum.MATH_CURRICULUM_BY_GRADE).flat().map((topic) => topic.id),

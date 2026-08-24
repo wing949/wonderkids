@@ -11,6 +11,27 @@ interface CandyProgressBarProps {
   showStarIndicator?: boolean;
 }
 
+const COLOR_CONFIGS = {
+  gold: {
+    barStyle: { background: 'linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #D97706 100%)' },
+  },
+  math: {
+    barStyle: { background: 'linear-gradient(90deg, #34D399 0%, #10B981 100%)' },
+  },
+  vietnamese: {
+    barStyle: { background: 'linear-gradient(90deg, #F59E0B 0%, #EA580C 100%)' },
+  },
+  english: {
+    barStyle: { background: 'linear-gradient(90deg, #38BDF8 0%, #2563EB 100%)' },
+  },
+  logic: {
+    barStyle: { background: 'linear-gradient(90deg, #C084FC 0%, #6366F1 100%)' },
+  },
+  rainbow: {
+    barStyle: { background: 'linear-gradient(90deg, #EC4899 0%, #A855F7 50%, #06B6D4 100%)' },
+  },
+};
+
 export const CandyProgressBar: React.FC<CandyProgressBarProps> = ({
   value,
   max = 100,
@@ -20,34 +41,33 @@ export const CandyProgressBar: React.FC<CandyProgressBarProps> = ({
   className = '',
   showStarIndicator = true,
 }) => {
-  const percentage = Math.min(100, Math.max(0, (value / max) * 100));
+  const safeMax = max > 0 ? max : 100;
+  const percentage = Math.min(100, Math.max(0, (value / safeMax) * 100));
+  const colorCfg = COLOR_CONFIGS[color] || COLOR_CONFIGS.gold;
 
   const heightStyles = {
-    sm: 'h-3',
+    sm: 'h-3.5',
     md: 'h-5',
     lg: 'h-7',
   };
 
-  const gradientStyles = {
-    math: 'from-emerald-400 to-teal-500',
-    vietnamese: 'from-amber-400 to-orange-500',
-    english: 'from-sky-400 to-blue-500',
-    logic: 'from-purple-400 to-indigo-500',
-    gold: 'from-yellow-400 to-amber-500',
-    rainbow: 'from-pink-400 via-purple-400 to-cyan-400',
-  };
-
   return (
     <div className={`relative flex items-center w-full ${className}`}>
-      <div className={`w-full overflow-hidden rounded-full bg-slate-200/80 p-0.5 shadow-inner border border-slate-300/60 ${heightStyles[height]}`}>
+      {/* Outer Track with inset depth */}
+      <div className={`relative w-full overflow-hidden rounded-full bg-slate-200/90 p-0.5 shadow-inner border border-slate-300/70 ${heightStyles[height]}`}>
+        {/* Animated Filled Progress */}
         <motion.div
-          className={`relative h-full rounded-full bg-gradient-to-r ${gradientStyles[color]} stripe-animated shadow-sm`}
+          className="relative h-full rounded-full shadow-sm overflow-hidden"
+          style={colorCfg.barStyle}
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          {/* Subtle glossy highlight */}
-          <div className="absolute inset-x-0 top-0 h-1/2 rounded-t-full bg-white/30" />
+          {/* Animated Candy Stripes Overlay */}
+          <div className="absolute inset-0 opacity-35 stripe-animated pointer-events-none" />
+
+          {/* Top Glossy Reflection */}
+          <div className="absolute inset-x-0 top-0 h-1/2 rounded-t-full bg-gradient-to-b from-white/50 to-transparent pointer-events-none" />
         </motion.div>
       </div>
 
@@ -63,9 +83,10 @@ export const CandyProgressBar: React.FC<CandyProgressBarProps> = ({
 
       {showLabel && (
         <span className="ml-2.5 shrink-0 font-baloo font-bold text-sm text-brand-dark">
-          {value}/{max}
+          {Math.round(percentage)}%
         </span>
       )}
     </div>
   );
 };
+

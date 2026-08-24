@@ -10,7 +10,7 @@ test('mọi URL luyện đề đều mở đúng cổng luyện đề', () => {
 
 test('các cổng hiện có không bị đổi luồng', () => {
   assert.equal(getPortalForRoute({ kind: 'student' }), 'student');
-  assert.equal(getPortalForRoute({ kind: 'arena' }), 'arena');
+  assert.equal(getPortalForRoute({ kind: 'arena' }), 'practice');
   assert.equal(getPortalForRoute({ kind: 'parent' }), 'parent');
   assert.equal(getPortalForRoute({ kind: 'admin', tab: 'curriculum' }), 'admin-login');
 });

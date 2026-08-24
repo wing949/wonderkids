@@ -98,16 +98,34 @@ test('câu hỏi không chèn tên bài để che việc dùng chung mẫu', () 
 });
 
 test('câu hỏi bổ trợ không có phương án rác và bài ôn số tự nhiên không bị trộn chủ đề', () => {
-  const optionText = allTopics.flatMap((topic) => questionsFor(topic))
+  const allQuestions = allTopics.flatMap((topic) => questionsFor(topic));
+  const questionText = allQuestions.map((question) => question.questionText).join('\n');
+  const optionText = allQuestions
     .flatMap((question) => question.options ?? [])
     .map((option) => option.label)
     .join('\n');
-  assert.doesNotMatch(optionText, /Kết quả khác/i);
+
+  assert.doesNotMatch(questionText, /Luyện bổ trợ:\s*Nội dung trọng tâm của bài này là gì/i);
+  assert.doesNotMatch(
+    optionText,
+    /Kết quả khác|Một nội dung của bài khác|Một hoạt động không liên quan|Chọn ngay một đáp án bất kì|Đổi sang một chủ đề khác|Giữ nguyên mà không kiểm tra|Xóa toàn bộ dữ kiện|Chỉ chép lại tên bài|Bỏ trống phần trả lời/i,
+  );
 
   const grade5Lesson1 = questionsFor(topicById('math-g5-b1'))
     .map((question) => question.questionText)
     .join(' ');
   assert.doesNotMatch(grade5Lesson1, /phân số|số thập phân|tam giác|vận tốc|phần trăm/i);
+});
+
+test('bài về thành phần phép cộng và phép trừ hỏi đúng kiến thức Toán', () => {
+  const lessonQuestions = questionsFor(topicById('math-g2-b3'));
+  const lessonText = lessonQuestions.map((question) => question.questionText).join(' ');
+
+  assert.match(lessonText, /số hạng/i);
+  assert.match(lessonText, /tổng/i);
+  assert.match(lessonText, /số bị trừ/i);
+  assert.match(lessonText, /số trừ/i);
+  assert.match(lessonText, /hiệu/i);
 });
 
 test('bài học mới không bị rơi về câu ôn tập chung ngoài các bài luyện tập', () => {

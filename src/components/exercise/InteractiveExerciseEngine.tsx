@@ -9,7 +9,7 @@ import {
   Check,
   Sparkles,
   BookOpen,
-  Pause,
+  Square,
   X,
   Mic,
   MicOff,
@@ -27,7 +27,7 @@ import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../..
 import { MathVisualIllustration } from './MathVisualIllustration';
 import { LessonThematicBadge } from './LessonThematicBadge';
 import { Grade1PhonicsGameZone } from './Grade1PhonicsGameZone';
-import { formatLessonDisplayTitle, getLessonCardContent } from '../../utils/lessonCard';
+import { formatLessonDisplayTitle, getLessonCardContent, getLessonHeaderSourceLabel } from '../../utils/lessonCard';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
@@ -41,6 +41,8 @@ interface ShadowingSentenceItem {
   cleanWords: string[];
   paragraphIndex: number;
 }
+
+type ReadingPlaybackRate = 0.8 | 1 | 1.2;
 
 // Helper to segment any reading passage into clean sentences
 function parseShadowingSentences(passage: ReadingPassage): ShadowingSentenceItem[] {
@@ -99,6 +101,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   const [readingTab, setReadingTab] = useState<'games' | 'full' | 'shadowing'>(isGrade1Phonics ? 'games' : 'full');
   const [sourcePageIndex, setSourcePageIndex] = useState(0);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [readingPlaybackRate, setReadingPlaybackRate] = useState<ReadingPlaybackRate>(1);
   const [isReadingDrawerOpen, setIsReadingDrawerOpen] = useState(false);
 
   // Shadowing Engine State
@@ -190,19 +193,36 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     soundManager.playQuestionAudio(currentQ.id, textToRead, lang);
   };
 
-  // Play entire Reading Passage audio narration
+  const startPassageAudio = (playbackRate: ReadingPlaybackRate) => {
+    if (!lesson.readingPassage) return;
+
+    const narration = buildLessonNarration(lesson.readingPassage);
+    setIsPlayingAudio(true);
+
+    if (lesson.subject === 'english') {
+      soundManager.stopSpeaking();
+      soundManager.speakBrowserSpeech(narration, 'en-US', () => {
+        setIsPlayingAudio(false);
+      }, 1, playbackRate);
+      return;
+    }
+
+    soundManager.playPassageAudio(lesson.id, narration, () => {
+      setIsPlayingAudio(false);
+    }, playbackRate);
+  };
+
+  // Play entire Reading Passage audio narration. English supplementary lessons
+  // use the browser's English voice; verified Vietnamese lessons keep using the
+  // single approved prerecorded asset from their manifest.
   const handleTogglePassageAudio = () => {
-    if (!lesson.readingPassage || !canPlayVietnameseReadingAudio(lesson)) return;
+    if (!lesson.readingPassage || !canPlayReadingAudio) return;
 
     if (isPlayingAudio) {
       soundManager.stopSpeaking();
       setIsPlayingAudio(false);
     } else {
-      setIsPlayingAudio(true);
-      const narration = buildLessonNarration(lesson.readingPassage);
-      soundManager.playPassageAudio(lesson.id, narration, () => {
-        setIsPlayingAudio(false);
-      });
+      startPassageAudio(readingPlaybackRate);
     }
   };
 
@@ -525,22 +545,24 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               >
                 <ArrowLeft size={20} />
               </button>
-              <div>
+              <div aria-label="Thông tin bài học">
                 <div className="flex items-center gap-1.5">
                   <span className="text-base">📖</span>
                   <span className="font-baloo font-bold text-xs sm:text-sm text-amber-800 uppercase tracking-wider">
-                    {lesson.unit}
+                    {getLessonHeaderSourceLabel(lesson)}
                   </span>
                 </div>
                 <div className="font-baloo text-sm sm:text-base font-extrabold text-slate-600">
                   {formatLessonDisplayTitle(lesson)}
                 </div>
-                <div
-                  className="mt-1 max-w-full break-words font-vietnam text-[11px] font-bold leading-snug text-slate-500 sm:text-xs"
-                  title={getLessonCardContent(lesson).badge}
-                >
-                  {getLessonCardContent(lesson).badge}
-                </div>
+                {lesson.subject !== 'vietnamese' && (
+                  <div
+                    className="mt-1 max-w-full break-words font-vietnam text-[11px] font-bold leading-snug text-slate-500 sm:text-xs"
+                    title={getLessonCardContent(lesson).badge}
+                  >
+                    {getLessonCardContent(lesson).badge}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -614,29 +636,52 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               </div>
             </div>}
 
-            {/* Audio Read Aloud Button: khóa trong thời gian duyệt transcript SGK. */}
-            {canUseReadingPassage && <button
-              onClick={handleTogglePassageAudio}
-              disabled={!canPlayReadingAudio}
-              title={canPlayReadingAudio ? 'Nghe toàn bộ bài đọc' : 'Audio mẫu sẽ được bổ sung sau khi duyệt nội dung'}
-              className={`order-2 flex shrink-0 items-center gap-2 rounded-2xl px-4 py-2.5 font-baloo text-sm font-bold whitespace-nowrap transition-all shadow-xs sm:order-3 ${
-                isPlayingAudio
-                  ? 'bg-rose-500 text-white animate-pulse shadow-pop-sm'
-                  : 'bg-amber-400 text-amber-950 shadow-pop-sm hover:bg-amber-300'
-              } disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:bg-amber-400`}
-            >
-              {isPlayingAudio ? (
-                <>
-                  <Pause size={18} />
-                  <span>Dừng đọc mẫu</span>
-                </>
-              ) : (
-                <>
-                  <Volume2 size={18} />
-                  <span>Nghe toàn bài</span>
-                </>
-              )}
-            </button>}
+            {canUseReadingPassage && (
+              <div
+                aria-label="Điều khiển nghe bài đọc"
+                className="order-2 flex shrink-0 items-center justify-end gap-2 sm:order-3"
+              >
+                <label className="flex min-h-12 shrink-0 items-center rounded-2xl bg-amber-50 px-1.5 font-baloo text-xs font-bold text-amber-900 shadow-xs">
+                  <span className="sr-only">Tốc độ đọc</span>
+                  <select
+                    aria-label={lesson.subject === 'english' ? 'Tốc độ đọc bài Tiếng Anh' : 'Tốc độ đọc audio thu sẵn'}
+                    value={readingPlaybackRate}
+                    onChange={(event) => {
+                      const nextRate = Number(event.target.value) as ReadingPlaybackRate;
+                      setReadingPlaybackRate(nextRate);
+                      if (lesson.subject === 'english' && isPlayingAudio) {
+                        soundManager.stopSpeaking();
+                        startPassageAudio(nextRate);
+                      } else {
+                        soundManager.setPassagePlaybackRate(nextRate);
+                      }
+                    }}
+                    disabled={!canPlayReadingAudio}
+                    className="min-h-12 cursor-pointer rounded-xl bg-white px-2 font-baloo text-sm font-black text-amber-950 outline-none ring-1 ring-amber-200 focus:ring-2 focus:ring-amber-400 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <option value={0.8}>0.8x Chậm</option>
+                    <option value={1}>1.0x Chuẩn</option>
+                    <option value={1.2}>1.2x Nhanh</option>
+                  </select>
+                </label>
+
+                <button
+                  type="button"
+                  onClick={handleTogglePassageAudio}
+                  disabled={!canPlayReadingAudio}
+                  aria-label={isPlayingAudio ? 'Dừng đọc mẫu' : 'Nghe toàn bài'}
+                  title={canPlayReadingAudio ? (isPlayingAudio ? 'Dừng đọc mẫu' : 'Nghe toàn bộ bài đọc') : 'Audio mẫu sẽ được bổ sung sau khi duyệt nội dung'}
+                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl transition-all shadow-xs ${
+                    isPlayingAudio
+                      ? 'animate-pulse bg-rose-500 text-white shadow-pop-sm'
+                      : 'bg-amber-400 text-amber-950 shadow-pop-sm hover:bg-amber-300'
+                  } disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:bg-amber-400`}
+                >
+                  {isPlayingAudio ? <Square aria-hidden="true" size={20} /> : <Volume2 aria-hidden="true" size={20} />}
+                </button>
+              </div>
+            )}
+
           </div>
 
           <div className={`grid items-start gap-6 ${sourcePageView ? 'xl:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]' : ''}`}>
@@ -740,7 +785,10 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
           {/* TAB 1: ĐỌC TOÀN BÀI (FULL READING SCRAPBOOK CARD) */}
           {/* ================================================================= */}
           {canUseReadingPassage && readingTab === 'full' && (
-            <div className="rounded-4xl bg-[#fffdfa] p-6 sm:p-10 shadow-washi border border-amber-200/70">
+            <section
+              aria-label="Nội dung bài đọc"
+              className="relative rounded-4xl border border-amber-200/70 bg-[#fffdfa] p-6 shadow-washi sm:p-10"
+            >
 
               {isExtraPractice && !hasVerifiedSgkReading && (
                 <div className="mb-5 flex items-center gap-2 font-baloo text-sm font-black text-emerald-800">
@@ -750,9 +798,9 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               )}
 
               {/* Passage Header Block (Centered, Balanced & Symmetrical) */}
-              <div className="text-center border-b border-amber-200/50 pb-6 mb-6 space-y-2">
+              <div className="mb-6 border-b border-amber-200/50 pb-6 text-center">
                 {/* Main Reading Title with Cute Thematic Sticker Badge */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 pt-1">
+                <div className="flex flex-col items-center justify-center gap-3.5 pt-1 sm:flex-row sm:gap-5">
                   <LessonThematicBadge
                     lessonId={lesson.id}
                     lessonNumber={lesson.order || (lesson.id.match(/b(\d+)/) ? parseInt(lesson.id.match(/b(\d+)/)![1]) : 2)}
@@ -762,11 +810,11 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     size="md"
                   />
                   <div className="text-center sm:text-left">
-                    <h2 className="font-baloo text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-950 tracking-wide">
+                    <h2 className="font-baloo text-2xl font-extrabold tracking-wide text-amber-950 sm:text-3xl md:text-4xl">
                       {passage.title}
                     </h2>
                     {passage.author && (
-                      <p className="font-vietnam italic text-xs sm:text-sm font-semibold text-amber-800/80 mt-1">
+                      <p className="mt-1 font-vietnam text-xs font-semibold italic text-amber-800/80 sm:text-sm">
                         Nguồn nội dung: {passage.author}
                       </p>
                     )}
@@ -774,11 +822,11 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 </div>
 
                 {/* Decorative warm accent line */}
-                <div className="w-20 sm:w-28 h-1 bg-amber-300/70 rounded-full mx-auto mt-3" />
+                <div className="mx-auto mt-3 h-1 w-20 rounded-full bg-amber-300/70 sm:w-28" />
               </div>
 
               {/* Passage Body Paragraphs / Verses */}
-              <div className="space-y-6">
+              <div aria-label="Văn bản bài đọc" className="space-y-6">
                 {passage.content.map((paragraph, pIdx) => (
                   <div
                     key={pIdx}
@@ -788,7 +836,12 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                         : 'text-justify indent-6 sm:indent-8'
                     }`}
                   >
-                    {paragraph}
+                    {paragraph.split('\n').map((line, lineIndex) => (
+                      <React.Fragment key={`${pIdx}-${lineIndex}`}>
+                        {lineIndex > 0 && <br />}
+                        {line}
+                      </React.Fragment>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -895,7 +948,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   )}
                 </footer>
               )}
-            </div>
+            </section>
           )}
 
           {/* ================================================================= */}

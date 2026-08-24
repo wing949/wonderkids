@@ -20,7 +20,7 @@ await build({
 });
 
 const lessonCardModule = await import(pathToFileURL(join(tempDir, 'lessonCard.js')).href);
-const { formatLessonDisplayTitle, getLessonCardContent } = lessonCardModule;
+const { formatLessonDisplayTitle, getLessonCardContent, getLessonHeaderSourceLabel } = lessonCardModule;
 
 describe('Lesson Card Title Prefix "Bài X:" Verification Test', () => {
   it('should format Vietnamese lessons with "Bài X:" prefix matching Math', () => {
@@ -63,6 +63,23 @@ describe('Lesson Card Title Prefix "Bài X:" Verification Test', () => {
     };
     assert.equal(formatLessonDisplayTitle(tv5_3), 'Bài 3: Tuổi Ngựa');
     assert.equal(getLessonCardContent(tv5_3).title, 'Bài 3: Tuổi Ngựa');
+  });
+
+  it('gộp nguồn sách và trang vào một hàng duy nhất trên đầu bài học', () => {
+    const lesson = {
+      id: 'tv-g2-b5',
+      subject: 'vietnamese',
+      grade: 2,
+      semester: 1,
+      unit: 'SGK TIẾNG VIỆT 2 TẬP 1',
+      title: 'Em có xinh không?',
+      sourceCitation: { bookId: 'tv-g2-t1', sourcePages: [24, 25, 26] },
+    };
+
+    assert.equal(
+      getLessonHeaderSourceLabel(lesson),
+      'SGK TIẾNG VIỆT 2 TẬP 1 • Trang 24–26',
+    );
   });
 
   it('should preserve existing "Bài X:" prefixes for Math and other subjects', () => {

@@ -25,14 +25,25 @@ test('hai cột SGK thẳng mép trên, không chèn băng giấy trang trí tr�
 
   assert.match(
     fullReadingSection,
-    /rounded-4xl bg-\[#fffdfa\] p-6 sm:p-10 shadow-washi border border-amber-200\/70">/,
+    /aria-label="Nội dung bài đọc"[\s\S]*?className="relative rounded-4xl border border-amber-200\/70 bg-\[#fffdfa\] p-6 shadow-washi sm:p-10"/,
     'Khung bài đọc không được có khoảng đẩy riêng ở phía trên',
   );
   assert.doesNotMatch(fullReadingSection, /Washi tape header deco/);
+  assert.doesNotMatch(
+    fullReadingSection,
+    /sm:pt-14/,
+    'Điều khiển audio không được tạo một hàng trống riêng phía trên tiêu đề',
+  );
+  assert.doesNotMatch(
+    fullReadingSection,
+    /Điều khiển nghe bài đọc/,
+    'Cột bài đọc không được lặp lại cụm điều khiển audio trên thanh đầu trang',
+  );
+  assert.match(readerSource, /aria-label="Điều khiển nghe bài đọc"/);
 });
 
 test('khi đang duyệt nội dung SGK vẫn hiện khu Đọc và Shadowing nhưng khóa audio cũ', () => {
-  assert.match(readerSource, /canUseReadingPassage && <button/);
+  assert.match(readerSource, /aria-label=\{isPlayingAudio \? 'Dừng đọc mẫu' : 'Nghe toàn bài'\}/);
   assert.match(readerSource, /disabled=\{!canPlayReadingAudio\}/);
   assert.match(
     readerSource,
