@@ -444,12 +444,10 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           {/* 3 Quests Grid with Interactive Click to Action */}
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
             {dailyQuests.map((quest) => {
-              // Map quest ID to corresponding subject
-              const targetSubject: SubjectType = quest.id.includes('math')
-                ? 'math'
-                : quest.id.includes('vietnamese')
-                  ? 'vietnamese'
-                  : 'english';
+              // Map quest directly to its corresponding subject
+              const targetSubject: SubjectType = quest.subject || (
+                quest.id.includes('math') ? 'math' : quest.id.includes('vietnamese') ? 'vietnamese' : 'english'
+              );
 
               return (
                 <motion.div

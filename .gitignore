@@ -47,14 +47,13 @@ scratch/
 .cache/sgk/
 .cache/ocr/
 .cache/violympic/
-.cache/wonderkids-practice-ui-*/
-refer/violympic-toan Lớp 2.pdf
-private-reports/
-backup_audio_wav/
+refer/
+tmp/
 tmp_*/
 reports/
 report/live_dom_293_screenshots/
-*.png.backup
+backup_audio_wav/
+private-reports/
 __pycache__/
 *.pyc
 *.traineddata

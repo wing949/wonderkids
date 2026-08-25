@@ -670,8 +670,13 @@ export const App: React.FC = () => {
             {dailyQuests.map((quest) => (
               <div
                 key={quest.id}
-                className={`p-3.5 rounded-2xl border-2 flex items-center justify-between ${quest.isCompleted ? 'border-emerald-300 bg-emerald-50' : 'border-slate-200 bg-slate-50'
-                  }`}
+                onClick={() => {
+                  setIsQuestsModalOpen(false);
+                  handleSelectSubject(quest.subject || 'math');
+                }}
+                className={`p-3.5 rounded-2xl flex items-center justify-between transition-all cursor-pointer shadow-xs hover:shadow-md hover:scale-[1.01] ${
+                  quest.isCompleted ? 'bg-emerald-50/90' : 'bg-white hover:bg-amber-50/60'
+                }`}
               >
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{quest.icon}</span>
@@ -680,9 +685,12 @@ export const App: React.FC = () => {
                     <p className="font-vietnam text-xs text-slate-500 font-medium">{quest.subtitle}</p>
                   </div>
                 </div>
-                <span className="font-baloo font-bold text-xs bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">
-                  {quest.isCompleted ? '✓ Xong' : `${quest.progress}/${quest.maxProgress}`}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="font-baloo font-bold text-xs bg-amber-100 text-amber-900 px-2.5 py-1 rounded-full shadow-2xs">
+                    {quest.isCompleted ? '✓ Đã xong' : `${quest.progress}/${quest.maxProgress}`}
+                  </span>
+                  <span className="font-baloo font-bold text-xs text-amber-700">➔</span>
+                </div>
               </div>
             ))}
           </div>

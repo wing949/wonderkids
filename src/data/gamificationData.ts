@@ -1,4 +1,4 @@
-import { Mascot, DailyQuest, Badge, StarShopItem, ParentReport } from '../types';
+import type { Mascot, DailyQuest, Badge, StarShopItem, ParentReport } from '../types/index.ts';
 
 export const MASCOTS: Record<string, Mascot> = {
   bobo: {
