@@ -1307,9 +1307,25 @@ export function PracticeExam({
               <h1 className="font-baloo text-xl font-black leading-snug text-brand-dark sm:text-2xl">{set.title}</h1>
             </div>
           </div>
-          <div role={set.timeLimitSeconds ? 'timer' : undefined} aria-live={set.timeLimitSeconds && [60, 30, 10].includes(secondsLeft) ? 'polite' : 'off'} className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-4 font-baloo font-black ${set.timeLimitSeconds ? 'bg-rose-100 text-rose-700' : 'bg-emerald-100 text-emerald-800'}`}>
-            <Clock3 size={20} aria-hidden="true" />
-            <span>{set.timeLimitSeconds ? formatTime(secondsLeft) : 'Không giới hạn thời gian'}</span>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                const restarted = restartPracticeAttempt(progress);
+                setProgress(restarted);
+                setCurrentIndex(0);
+                onQuestionChange(1);
+                setSecondsLeft(set.timeLimitSeconds || 0);
+              }}
+              title="Xóa câu trả lời đã lưu và làm lại từ đầu"
+              className="flex min-h-12 items-center justify-center gap-1.5 whitespace-nowrap rounded-2xl bg-slate-100 px-3 font-baloo text-xs font-black text-slate-600 transition-colors hover:bg-slate-200"
+            >
+              <RotateCcw size={16} /> Làm lại từ đầu
+            </button>
+            <div role={set.timeLimitSeconds ? 'timer' : undefined} aria-live={set.timeLimitSeconds && [60, 30, 10].includes(secondsLeft) ? 'polite' : 'off'} className={`flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl px-4 font-baloo font-black ${set.timeLimitSeconds ? 'bg-rose-100 text-rose-700' : 'bg-emerald-100 text-emerald-800'}`}>
+              <Clock3 size={20} aria-hidden="true" />
+              <span>{set.timeLimitSeconds ? formatTime(secondsLeft) : 'Không giới hạn thời gian'}</span>
+            </div>
           </div>
         </header>
 

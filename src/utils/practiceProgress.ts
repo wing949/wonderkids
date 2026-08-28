@@ -1,4 +1,4 @@
-export const PRACTICE_PROGRESS_STORAGE_KEY = 'wonderkids_practice_progress_v1';
+export const PRACTICE_PROGRESS_STORAGE_KEY = 'wonderkids_practice_progress_v2_official';
 
 export interface PracticeProgress {
   setId: string;
