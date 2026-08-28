@@ -1,5 +1,7 @@
 import type { GradeLevel } from '../../types/index.ts';
 import { getCompetitionPack, getPracticePack } from './index.ts';
+import { getViolympicDigitalItems } from './violympicDigitalReferenceBank.ts';
+import { getViolympicReferenceItems } from './violympicReferenceBank.ts';
 import type {
   PracticeDifficulty,
   PracticeItem,
@@ -51,13 +53,55 @@ function sourceItems(filter: QuestionBankFilter): PracticeItem[] {
       .flatMap((section) => section.items);
   }
   if (filter.competition === 'trang_nguyen') {
-    return getCompetitionPack('trang_nguyen_simulation', filter.grade).sets
+    const authoredTn = getCompetitionPack('trang_nguyen_simulation', filter.grade).sets
       .flatMap((set) => set.sections)
       .flatMap((section) => section.items);
+    return mergeUniqueItems(
+      getViolympicReferenceItems({ subject: 'vietnamese', grade: filter.grade }),
+      authoredTn,
+    );
   }
-  return getPracticePack(filter.subject, filter.grade).sets
+  const authoredItems = getPracticePack(filter.subject, filter.grade).sets
     .flatMap((set) => set.sections)
     .flatMap((section) => section.items);
+  if (filter.subject === 'english') return authoredItems;
+  const ocrItems = getViolympicReferenceItems({ subject: filter.subject as any, grade: filter.grade });
+  const digitalItems = getViolympicDigitalItems({ subject: filter.subject, grade: filter.grade });
+  return mergeUniqueItems(
+    ocrItems,
+    mergeUniqueItems(digitalItems, authoredItems),
+  );
+}
+
+function normalizeQuestionPart(value: string): string {
+  return value
+    .normalize('NFKC')
+    .toLocaleLowerCase('vi')
+    .replace(/[?!.:,;]+/gu, '')
+    .replace(/\s+/gu, ' ')
+    .trim();
+}
+
+function questionContentSignature(item: PracticeItem): string {
+  const rawAnswers = Array.isArray(item.correctAnswer) ? item.correctAnswer : [item.correctAnswer];
+  const answer = rawAnswers
+    .map((rawAnswer) => item.options?.find((option) => option.id === rawAnswer)?.label || rawAnswer)
+    .map(normalizeQuestionPart)
+    .sort()
+    .join('|');
+  return `${normalizeQuestionPart(item.prompt)}|${normalizeQuestionPart(answer)}`;
+}
+
+function mergeUniqueItems(primary: PracticeItem[], secondary: PracticeItem[]): PracticeItem[] {
+  const result: PracticeItem[] = [];
+  const seen = new Set<string>();
+  for (const item of primary.concat(secondary)) {
+    const signature = questionContentSignature(item);
+    if (seen.has(signature)) continue;
+    seen.add(signature);
+    result.push(item);
+  }
+  return result;
 }
 
 export function getQuestionBankItems(filter: QuestionBankFilter): PracticeItem[] {

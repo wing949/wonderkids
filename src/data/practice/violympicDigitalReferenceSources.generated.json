@@ -1,0 +1,3204 @@
+{
+  "version": "2026.08.25",
+  "contentPolicy": "verified_text_layer_extraction_only",
+  "stats": {
+    "totalFiles": 207,
+    "rawNonOcrFiles": 108,
+    "rawOcrFiles": 99,
+    "copyableDocumentFiles": 104,
+    "unsupportedContainerFiles": 4,
+    "totalPdfFiles": 200,
+    "uniquePdfDocuments": 183,
+    "primaryGradeDocuments": 176,
+    "duplicateFilesRemoved": 17,
+    "excludedOutsidePrimary": 9,
+    "excludedAmbiguousGrade": 0,
+    "textExtractableDocuments": 80,
+    "ocrRequiredDocuments": 95,
+    "unreadableDocuments": 1,
+    "questionMarkers": 9179,
+    "solutionMarkers": 193,
+    "extractedVerifiedItems": 12
+  },
+  "sources": [
+    {
+      "id": "vio-ref-549804bac0b8",
+      "title": "4.2.26 TTV1 mã 1",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 15,
+      "sha256": "549804BAC0B847BD2B8805BE93BDF35F1E92378CB879BB1452868480C97243FB",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-4b699d5abbb2",
+      "title": "Ctr. TTV lớp 1 mã 1",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "4B699D5ABBB23C82EE46B6F6F591FEFF275E89F5447AD7EBD877E155B934E888",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-d4fada7879fd",
+      "title": "DA TTV1 QG 2026",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 41,
+      "sha256": "D4FADA7879FDFBA79CA8460A531C15E21BD3E7563CE8DAAC4A0CA568219A5561",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 329,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-3a341291a7dd",
+      "title": "DA TTV1 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 42,
+      "sha256": "3A341291A7DDC80D8C03954C40F83DA4AE0CA0CB3788E5CF97CA69F3A057D4DF",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 329,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-7ae096cdbd53",
+      "title": "DE TTV1 QG 2026",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 38,
+      "sha256": "7AE096CDBD53627073817C58CA7CBC4437ED7E84429517D6EFBCE548840DAD97",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 330,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-b74a9fabbf04",
+      "title": "DE TTV1 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 39,
+      "sha256": "B74A9FABBF044221F63011A11DD93F13F93FBE2FFBBBF74848046550F9F737ED",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 330,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-7f0cccf1ab47",
+      "title": "L1 gốc Violympic",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 97,
+      "sha256": "7F0CCCF1AB476CF78C6805FDEAA7CF96B4FCE1EDD98E8D0D414EE7DDB8504895",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-720b37419c83",
+      "title": "Lớp 1 sách ôn toán Violympic",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "solution"
+      ],
+      "fileType": "pdf",
+      "pageCount": 97,
+      "sha256": "720B37419C83CF9BA7624B680C0449162D6099E96595A2B44B717AA9FFAE5661",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-9d3d379627b4",
+      "title": "Lớp 1_mã 1",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "9D3D379627B4EEAB0D05F34F0DF251B19051A267A14A9DC40D5176CA41560D9E",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-396dd94bc418",
+      "title": "Lớp 1_mã 2",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "396DD94BC418A71FBCE643EA012AB64D4E59D1A4D9E660D0C73564D1A107809E",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1658ed37fbc0",
+      "title": "Lớp 1_mã 3",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 39,
+      "sha256": "1658ED37FBC0D3B3A26178F19A75F2DCEC5B4D9E0F2047547409B8BF07840FDF",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-2c0b5067ff22",
+      "title": "Ngày 1. TTA lớp 1 mã 1",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "2C0B5067FF22CB8812A286BF67DD499E12F6291C476471B5FA9B26369964506F",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-18c554f72caa",
+      "title": "Ngày 1. TTV lớp 1 mã 3",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "18C554F72CAAE8F8169B8771B4B897052C2045E1321D43E548243D68C94F44C8",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-bf1bbfaeaa29",
+      "title": "Ngày 1. TTV lớp 1 mã 4",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "BF1BBFAEAA29BBF0FC37E23D3F1C999AAC4FBCCD39829925660A5242620F8B0F",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-089ef7a7db2f",
+      "title": "TTV tỉnh violympic lớp 1 năm 24-25 ĐÁ",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 28,
+      "sha256": "089EF7A7DB2FC16CCE9A03503FBB4019C015C6CD5894910E143C004B0CCF55E9",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a4ca4deada56",
+      "title": "TTV tỉnh violympic lớp 1 năm 24-25 ĐỀ",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "A4CA4DEADA56E8722DE713723E253D2217C2E1B3DED32A10F242355A17C9398A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-acbb0cd3828b",
+      "title": "TTV1 -Mã 4 đê thi cấp tỉnh",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 17,
+      "sha256": "ACBB0CD3828B5B22FE8AD65A607D6C79E4982676557A78A69FBDD024FDA92EDD",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-4663b80cc643",
+      "title": "TTV1 FILE 10",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "docx",
+      "pageCount": 0,
+      "sha256": "4663B80CC643AEDB78CF43968A051FC287E17EBD5C6AD694BDC39B90AF35D3E1",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 324,
+      "solutionMarkerCount": 6,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1f8a01e3aa70",
+      "title": "Tài liệu Toán lớp 1 - mixed",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "1F8A01E3AA709BCD42987FC3730A77AAE800C254297A47B4E1F517F6345F54E6",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-5e07840148f0",
+      "title": "Tài liệu Toán lớp 1 - mixed",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "5E07840148F08F74507D3AB761447AE1F4D0AA55D1DF7975BE9DE82DF05EBBE1",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-aa591d6220ac",
+      "title": "Tài liệu Toán lớp 1 - mixed",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "AA591D6220AC3202943111AC67F5A29BC6CAA08A3DB8A54881F1B4830FBE5D55",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f7a0b0ee15eb",
+      "title": "Tài liệu Toán lớp 1 - mixed",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 15,
+      "sha256": "F7A0B0EE15EB1BC9FFF363B61F0F84B798A5AB42A62909439916C1DC666AF4DD",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-778e2a06193d",
+      "title": "Violympic TTV1-CAPTINH2526-PHAN DAP AN",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 49,
+      "sha256": "778E2A06193D98820622CB6FDA2C85F0B69F2275FBD1F867545E3F3C5D24696E",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-cdc69818fd22",
+      "title": "ttv1-4.2.26",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "CDC69818FD229D26BFB162C6EE8A60301766140CD0FD82FE1FFDB5C34FA63246",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-25e5d8a5786c",
+      "title": "đề thật tv L1",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 33,
+      "sha256": "25E5D8A5786CB62485B60CEB64FEBC227B582362777029EC9CD45B504C0F893A",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-8e994d61f12e",
+      "title": "đề thật tv L1.2",
+      "subject": "math",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 32,
+      "sha256": "8E994D61F12E087A5111E7ACF6E4EBD8EC8A03554ABCB1C2029377B25C38B9B2",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-918a825b29ed",
+      "title": "BỘ ĐỀ THI VIOLYPIC TOÁN LỚP 2 CÓ ĐÁP ÁN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 31,
+      "sha256": "918A825B29EDA1715052F0DBCF9E448976BB2615F762BAEA5A028788E66801BF",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 380,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-5ed756c6214b",
+      "title": "DA.TTV2 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 24,
+      "sha256": "5ED756C6214B1F31140C752676CD17C2E1CAAC1AF85E4E5DC555396BC4E63D5B",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 309,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-25f3d5ad5a3c",
+      "title": "DE TTV2 QG 2026",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 29,
+      "sha256": "25F3D5AD5A3CA7B326FB4873C67FF0D88F09863E289B7A8C937352415F8E1C9C",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 308,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-2d56ea4106cd",
+      "title": "DE TTV2 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "2D56EA4106CD4917B3CFE1852D48EC076E50319DB44A2131A58EC18703B50B6D",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 308,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-fd87fe794de3",
+      "title": "IQ2425-ÔN TTV2-QG-PHANDAN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 50,
+      "sha256": "FD87FE794DE337C1B597CC06E5FE435856113FBB427F2EE506ACA12CCFD0D63B",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-b9024761919c",
+      "title": "IQ2425-ÔN TTV2-QG-PHANDE",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 50,
+      "sha256": "B9024761919C2CA2C5219DFC21153F008BBCFCB9396E0A0DD23824F9F75B3955",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-8a6aaa40c961",
+      "title": "L2 gốc Violympic",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 144,
+      "sha256": "8A6AAA40C96141DFC622297E7F16BC2C1DC11D91282E1AB5B4CDE17528C58AA4",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-cbd48c37ac9d",
+      "title": "Lớp 2 sách Toán Violympic",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "solution"
+      ],
+      "fileType": "pdf",
+      "pageCount": 144,
+      "sha256": "CBD48C37AC9D24912E38A005A0B0A93D91FED29CE09F43D2281724A2C07A55D5",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-85986fe9d8ed",
+      "title": "Lớp 2_Mã 1_Cấp tỉnh-TTV violympic",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "85986FE9D8ED2C9FAA0CD92975C3C9338EE62614E564C944FC90FF0CE9165A32",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-acaf03783fa7",
+      "title": "Lớp 2_Mã 3_tỉnh",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 34,
+      "sha256": "ACAF03783FA798C1685934DD88699B3B1F277AEB71B87199BCBACFA550498FEC",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-bc83757b5cbf",
+      "title": "Lớp 2_mã 2_cấp tỉnh",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 37,
+      "sha256": "BC83757B5CBF4AA656263FDF067F1B81D23C99FBF953638C39120CEBC5DE235B",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-66d3d1bbec6a",
+      "title": "TTV tỉnh violympic lớp 2 năm 24-25 ĐÁ",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 32,
+      "sha256": "66D3D1BBEC6A0C16010CAE4DDE33A70064E47082DF41A75FFFDFACAAB5D3D45A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-6092820df145",
+      "title": "TTV tỉnh violympic lớp 2 năm 24-25 ĐỀ",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 24,
+      "sha256": "6092820DF14550A4BD691C1DC1FDBAA8FAEDEE7C03D30DAA3E96D117BCCCC04E",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-437a2100e6d3",
+      "title": "TTV2-CAPTINH-PHANDAPAN 2526",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 61,
+      "sha256": "437A2100E6D37BB11E857426F7191BC0AF9E60F35ADF73E7578D9A58BABE5A5E",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-289cdb9d4c0b",
+      "title": "TTV2-CAPTINH-PHANDE 2526",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 49,
+      "sha256": "289CDB9D4C0B987B990B27B2E13DFBC2754E83D77C032D149645428FD56A4841",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f15bda20e438",
+      "title": "TTV2-OCH-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 70,
+      "sha256": "F15BDA20E438406931A3A4D5DDAA7B7DB53F880D54BE1418708ED2E8185EA427",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e669eea934d5",
+      "title": "TTV2-OCH-PHANDE",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 53,
+      "sha256": "E669EEA934D52F9C96F9DB07BA7BB72AEBBA5BDB8591B56E79550A88212CC9D6",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-47eaad3e54f8",
+      "title": "TTV2-V7-OCT-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 75,
+      "sha256": "47EAAD3E54F8E143B9B299C341FCBE3CA5FABCDC9B5BA944590503FF2BAF31A1",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f5bf9ece059b",
+      "title": "Tiệm sách nhà Noel - Tết",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 1,
+      "sha256": "F5BF9ECE059BBD7A7597E7C7BA53FCB0985B4EB787394DA917E6BC868CCD9085",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-fb6a371db8c0",
+      "title": "Ttv2v10 -onquocgia-phandapan",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 50,
+      "sha256": "FB6A371DB8C0F1A866BF7A062E58C02BBB923C4A538CF1E132843B04E720856F",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-35f09fcf1baf",
+      "title": "Tài liệu Toán lớp 2 - mixed",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 33,
+      "sha256": "35F09FCF1BAFCD9EC5167A4A8FB0CBE99D376BFF8E4B91779506D8858F4C7298",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-b67a98b97ff8",
+      "title": "Violympic TTV2-CAPTINH 2526-PHAN DAP AN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 61,
+      "sha256": "B67A98B97FF87B08EB12AB96F931D0365E85AD420881EF01E3821BB01AAC5F30",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-ef6789f8ef53",
+      "title": "Violympic TTV2-CAPTINH2526-PHAN DE",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 49,
+      "sha256": "EF6789F8EF538597B5BE0871DF17BA721B0094F571B7FFCE102D219854E04CF6",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f505660b4a50",
+      "title": "cac-dang-toan-tu-luyen-thi-violympic-toan-lop-2",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 7,
+      "sha256": "F505660B4A506802778C62A236CDC13281EA64480BF95C90E1DE56D221AF676F",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 56,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-b495e376f35a",
+      "title": "ttv2 -4.2.26",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 29,
+      "sha256": "B495E376F35AEBF5FCE12ED081CA142C7AE32C8745D5C6E5C0666DB8C271B541",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-50ef0e69bf37",
+      "title": "ĐỀ L2 CHÍNH THỨC VIOLYMPIC QG TTV (22-3-2026)",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 19,
+      "sha256": "50EF0E69BF37903DB708C91134A7FF7114E39650FEF4B4389F603007746A2108",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-31fcdff6866e",
+      "title": "ĐỀ TTV2 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 29,
+      "sha256": "31FCDFF6866E31925CD8533C1F4049B05061E9174954A6189EBFF3AFDCE177BE",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 308,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-c8b3ed740ed7",
+      "title": "252-de-thi-toan-violympic-lop-3",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 23,
+      "sha256": "C8B3ED740ED7267F0912E55F5E592BBEE016B01C01F316AE9743D1B8497FEA3B",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-dcc7a8df1292",
+      "title": "4.2.26 TTV3 mã 1",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 15,
+      "sha256": "DCC7A8DF129271FB481CDECBD6A466B814061BE08934092D966CE0F22CD82803",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a20b8354ebb7",
+      "title": "DA TTV3 QG 2026",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 46,
+      "sha256": "A20B8354EBB7250B131F31B9A7633DDE4FC088363CF62B9E04B54E97B8F57452",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 307,
+      "solutionMarkerCount": 171,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-f503cdc73585",
+      "title": "DE TTV3 QG 2026",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 27,
+      "sha256": "F503CDC73585DCEB4407590EB3F1DAF8A15972C52ED01A46B33CE4A202D19145",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 306,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-9079cadae20c",
+      "title": "L3 gốc Violympic",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 170,
+      "sha256": "9079CADAE20C12EA27F34DF84ADE5C22C787A541424F892C4245A2D673C8B968",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f4df8963fcb5",
+      "title": "Lớp 3 cấp tỉnh",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "F4DF8963FCB5225900B33F4B2CE7A31871C4EBBEF53D32C5254AC7367FE14DD5",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e386f6db5499",
+      "title": "Lớp 3 sách Toán Violympic",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "solution"
+      ],
+      "fileType": "pdf",
+      "pageCount": 170,
+      "sha256": "E386F6DB5499F3D72FB170CD7AEC799C6F1E9D53F55F2DA8D30D4BD52D33B6D2",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e45963fa05ae",
+      "title": "Ngày 1. TTA lớp 3 mã 1",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 16,
+      "sha256": "E45963FA05AEA3BDA0D8C310ED4776EAF5B23B4DF6CB7998A0F6E0B320785836",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-c4ff3848887d",
+      "title": "Ngày 1.TTV lớp 3 mã 1",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 31,
+      "sha256": "C4FF3848887D505BFAE4FC90901B7DC787F40AEB7CDD7F1FFA7B7454E18F5145",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-03f4710dad63",
+      "title": "ONCT-TTV3-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 56,
+      "sha256": "03F4710DAD638986B2D1D4DF9D59EEB57DD0502E37BEF519C3C955E290D613A8",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-b26f53b8e332",
+      "title": "TTV violympic 3 tỉnh 24-25 ĐÁ",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 45,
+      "sha256": "B26F53B8E33291F7A2ADFE0526CF43B229DE93F00267613AC1D9B582FEBE26B9",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 211,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-ad1e1d444b6a",
+      "title": "TTV violympic 3 tỉnh 24-25 ĐỀ",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 27,
+      "sha256": "AD1E1D444B6ABB198E48144B854F0C4DE1039C7FAC2BBEB90F58A311167DD957",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 211,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-29dd5118adc2",
+      "title": "TTV3 cấp tỉnh (Mã 02)_2024-2025",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 10,
+      "sha256": "29DD5118ADC207E115E4E8F942D53C3EC2E67F27522735FADC2FF182088E4A7F",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-ba934f61f4d1",
+      "title": "TTV3-OCH- PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 71,
+      "sha256": "BA934F61F4D191A71FBA77F1487DBD67B7CBAFB9A6FB8E9705F0800FA512E3E6",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-256a56bc6043",
+      "title": "TTV3-OCH-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 52,
+      "sha256": "256A56BC6043D18FADFDFE01C8D68C134E2752BEF603B860A650B67AB6F6A39E",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-6b5f3041141f",
+      "title": "TTV3-VONG10-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "6B5F3041141F23E18EA6591EB416851C356387EDF77B1B358D8B06382B30D4D9",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-307d8d2b97b2",
+      "title": "TTV3-VONG10-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 6,
+      "sha256": "307D8D2B97B29B8742B79E4688208D21466D1CBA7498AB98B1E4141BED90C3AC",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-437f153d58ab",
+      "title": "TTV3-VONG2-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 11,
+      "sha256": "437F153D58AB12AC91093025E8C2A15A785BD6EDE1EF9884760246C3F2680D8B",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a7c0d061fbf8",
+      "title": "TTV3-VONG4-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 10,
+      "sha256": "A7C0D061FBF8525371E8D5BF2A1193D84E61FAF2A476D22118CE44D1BBB45998",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f9b593db05b9",
+      "title": "TTV3-VONG5-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 13,
+      "sha256": "F9B593DB05B984C3ED70DBA4899D866BB0D3A177BDE20CE3BE1FC5BE57F5C3DA",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1faab4462862",
+      "title": "TTV3-VONG5-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 9,
+      "sha256": "1FAAB446286278E4EEDABE66104D37B79EAD53ACCA8D0C64ECBC8B702ECC4A81",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-d9b8cc849f40",
+      "title": "TTV3-VONG6-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "D9B8CC849F40641511A1ACD5F97DED03D73AF12404B5AB33C36079B873C3DFDE",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-60748f475684",
+      "title": "TTV3-VONG7-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 6,
+      "sha256": "60748F4756842F71C9AD6475145A0E853D201D473C13FA5E003CD4E043C2814B",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-7370d9b9634c",
+      "title": "TTV3-VONG7-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 4,
+      "sha256": "7370D9B9634CFB1FE985B18494E8FA107CE3255A2C0AEA44279C85919A6A2E5C",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-03d0343f10c5",
+      "title": "TTV3-VONG8-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "03D0343F10C566C715CC1B24B8806B1F7C9C6BDED0EAF242653064E5D6456A47",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e73cfafb93ca",
+      "title": "TTV3-VONG8-PHANDE",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 7,
+      "sha256": "E73CFAFB93CAF7F90B1BFB05726E7333140D1D852DC3B1E63E9788F4FACB6732",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-42f616dd7469",
+      "title": "TTV3V9-ONTINH-PHANDE IQ",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 40,
+      "sha256": "42F616DD7469D6238091E66F693793DDBC88AEA42F1E2D6DDEB4BFC7BFFEDD72",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-73fd43b47dce",
+      "title": "Tài liệu Toán lớp 3 - mixed",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "73FD43B47DCE4EC8CFEAB5715835674E3D191A5187AAAE4B170B05E3C698A013",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-86f674eccb8c",
+      "title": "Tài liệu Toán lớp 3 - mixed",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "86F674ECCB8C11028BB38C7C0264911188C2F7B0C84205EF28918A2859DEF6D4",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-9365fc3ae25c",
+      "title": "ttv3-v10-onquocgia-phande",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 43,
+      "sha256": "9365FC3AE25C7D2195CCC6EAB6FF4E0F1A0645DE50C42E6A9892108386006423",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-478a007f412b",
+      "title": "ttv3.1-4.2.26",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "478A007F412BF6BBB12DCA7507F25E76A5E38AA33150AE2B3C316D59657591AB",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a559684d4b80",
+      "title": "ĐỀ L3 CHÍNH THỨC VIOLYMPIC QG TTV",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 23,
+      "sha256": "A559684D4B8010DE25108B6D86C861B56BFBC85812EFECB494BD8D52C8C68250",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-d6c235ccbf67",
+      "title": "ĐỀ TTV3 QG 2026",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 26,
+      "sha256": "D6C235CCBF6797FA2C2F398B1012285239E2BCCCD37AA2F24D96E4BDF8D1F201",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 306,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-75473fc5d249",
+      "title": "đề thật tv L3",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "75473FC5D249867E155F5428218DA238161EA3B7A1A68E2632A04BD055C9486F",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-aaddde506028",
+      "title": "đề thật tv L3.2",
+      "subject": "math",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 37,
+      "sha256": "AADDDE506028116265C63037EA00AC6A7189EC3567A77D3CD9431BF248D7466C",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-8315cd6bb1b4",
+      "title": "DA TTV4 QG 2026",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 41,
+      "sha256": "8315CD6BB1B49280D1D21C1F989425298BFE47221FE6F5F9C07918B92C304D1B",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 375,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e6e160db743c",
+      "title": "DA TTV4 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 42,
+      "sha256": "E6E160DB743C4BF245B0708ECB898728DDE0BCF01EBEE7C86EC6D7444C7DF75B",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 375,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1f2115e84260",
+      "title": "DE TTV4 QG 2026",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "1F2115E8426076B91C838D44D9D37AFFDC4DC5232DFBEFCC5F121C6535A46BBC",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 374,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-00e41a27425d",
+      "title": "DE TTV4 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 31,
+      "sha256": "00E41A27425DB0516A6DA457F20C575F6C65F6B4D062BD8A1DB77BBFF2D1C10E",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 374,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a06106f1b995",
+      "title": "IQ2425-ÔN TTV4-QG-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 55,
+      "sha256": "A06106F1B995D5567B10C1F3CF83B8CCD6FBC21353DFC2329C6420AD764A233D",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a484ecccc186",
+      "title": "IQ2425-ÔN TTV4-QG-PHANDE",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 40,
+      "sha256": "A484ECCCC1860671B8FE987AEE2934038A2E8153FA88BD4AABA7D3EF5EC13576",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-459801a2289d",
+      "title": "L4 gốc Violympic",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 190,
+      "sha256": "459801A2289D18E033BD812B5E0D2398AB90648A6B9C2512DDEED8C40F4AAB29",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1c412a54ed5b",
+      "title": "Lớp 4_mã 1",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 72,
+      "sha256": "1C412A54ED5BC0220A13914D83E52C1FDEE570C46350D7BEF37F484A6A5F26BB",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1a8983166c1f",
+      "title": "Lớp 4_mã 2",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "1A8983166C1F831F614E62753A99FF3E92DA9BEBE5AEFA29B7E520AEF1A3B3A5",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-0c4fa302a25d",
+      "title": "Ngày 1. TTA lớp 4 mã 1",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 15,
+      "sha256": "0C4FA302A25D523E4B28BDF6DD3CA0B105EE6DCF9F4819AA852C6A40E32FD450",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-9257d71b9c5b",
+      "title": "OnCapHuyen-ttv4-phandapan",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 53,
+      "sha256": "9257D71B9C5B53AAD483497307158DD92CF32F1CAAAFE71DAB94D5A33D31B522",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-d1c51c131067",
+      "title": "TTV tỉnh violympic lớp 4 năm 24-25 ĐỀ",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 19,
+      "sha256": "D1C51C1310679DF7976B3320C924167B38F115DE218EC6465527B1BAEA373345",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-2f5a0875ec07",
+      "title": "TTV4-OnCapTinh-phandapan",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 49,
+      "sha256": "2F5A0875EC075CA8FE69B5B83A87D8DF70CD714002D03121FA38D5589989BDB8",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-dc24751889b7",
+      "title": "TTV4-VONG5-PHANDE",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 13,
+      "sha256": "DC24751889B735D320E5DCCEA4D65256A2A9B246C93C94BE698DA799AB42B72D",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-fceaadc49344",
+      "title": "Tài liệu Toán lớp 4 - answer",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 61,
+      "sha256": "FCEAADC4934408141AFA1A0E18010884A5E2934278CBEE1C3E6FC7D157CE403A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1f2004c38552",
+      "title": "Tài liệu Toán lớp 4 - mixed",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "1F2004C3855299B016440D5D02107E54C139E409914DEFBAB7B69A5440948B53",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-3e54cd995a59",
+      "title": "Tài liệu Toán lớp 4 - mixed",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "3E54CD995A5983F6FFE03398BAFB64A79092374E83AF70D9B884C82D5D2C9B2F",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-42e3ebaa9ea5",
+      "title": "Tài liệu Toán lớp 4 - mixed",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "42E3EBAA9EA5AB3D8C4777C729623A83193984641C1572A833D44B575CA4A828",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-b87f0187a805",
+      "title": "Tài liệu Toán lớp 4 - mixed",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 41,
+      "sha256": "B87F0187A805531102BAFAA92DCB4D80F095EF9106D326B8845D2CFB35CEBEE6",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-ffee2fcd75c9",
+      "title": "Tài liệu Toán lớp 4 - mixed",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 5,
+      "sha256": "FFEE2FCD75C96F72D6AF509AF3E68C43399C9828FC663DDFAF1B6EC73892AA9A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-2b7f1a876c47",
+      "title": "V10-TTV4-QG-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 55,
+      "sha256": "2B7F1A876C47700469226178931E788D501A598FCC186922E85E0A6028FB773D",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-966c303c3ff4",
+      "title": "DA TTV5 QG 2026",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 63,
+      "sha256": "966C303C3FF4BD9FAE21525CEC59AE2EF9E20243232B04C71FBE6FEB6CE949D1",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 359,
+      "solutionMarkerCount": 7,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-6f16be408eb7",
+      "title": "DA TTV5 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 64,
+      "sha256": "6F16BE408EB7E83FAB3FAE347513231FC8BAD482E047982BE98FCBA61A08B161",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 359,
+      "solutionMarkerCount": 7,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-7c26f4c38c50",
+      "title": "DE TTV5 QG 2026",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 43,
+      "sha256": "7C26F4C38C502317968A62D4D4F2FB8B562FFA55ED7BC2AE8AAA69F428909B41",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 358,
+      "solutionMarkerCount": 1,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e90b792e5a94",
+      "title": "DE TTV5 QG 2026.HN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 44,
+      "sha256": "E90B792E5A94F1FE91CB8EFD17535165B91B976CD46560B8A37C44F71765D1C4",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 358,
+      "solutionMarkerCount": 1,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-181af8a87251",
+      "title": "L5 gốc Violympic",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 223,
+      "sha256": "181AF8A87251CB43C9600E6078F15E155A29B18A22683BD2FDBA847EC4AE2579",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e3787bee0ef7",
+      "title": "Lớp 5 sách toán Violympic",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "solution"
+      ],
+      "fileType": "pdf",
+      "pageCount": 223,
+      "sha256": "E3787BEE0EF7C192E34D9130BFF2E459F979DB19720503C6B1E09B9FAC9B924A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-660b88381442",
+      "title": "Lớp 5. Violympic 18-2",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "660B883814425C86C0D640D9A0A37C6DBCE514A6C53FD6B36C673687046AEF24",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-5d2d4f7602dc",
+      "title": "Ngày 1.TTV5 đề 1",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "5D2D4F7602DCAA712ACFF6C96B73191958487462B9CA4163B0C8A58A1FD4D9CB",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-b4a040c72de6",
+      "title": "Ngày 1.TTV5 đề 2",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "B4A040C72DE6720BFB7C4D4FEE315F3CB6C5276A5CE91A4A7F2EF4B5659525CF",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-c26f7af0f27e",
+      "title": "TTV5 cấp tỉnh (Mã 02)_2024-2025",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "C26F7AF0F27E2B7CC7EEF4AA097364F9AFF1261F99AA11AA8950F3E13FF785E3",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-02bf7b6f7343",
+      "title": "TTV5-OCH-DAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 59,
+      "sha256": "02BF7B6F7343B72372C853DAD45932C254BD6C8865EA47CB6EBC9F2C649170C2",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f3d82d672953",
+      "title": "TTV5-VONG1-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "F3D82D6729531682955849FC073911B5FCBADABB4A320120F4CB9E3662390463",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-fb638de549e5",
+      "title": "TTV5-VONG2-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 13,
+      "sha256": "FB638DE549E5E75AFE8915A50D62DBA5F0FE3208C1E036D8F9F65A67B5568F1A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-04f8c549a5fa",
+      "title": "TTV5-VONG2-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 7,
+      "sha256": "04F8C549A5FAADAC5DC920455C10B5E46815BD804C108C7AC57C588AA048AB6F",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-2ad5821ce3b1",
+      "title": "TTV5-VONG3-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "2AD5821CE3B16230A195CA733A026178FBDC1E1275F5EF9A60552FFFB2A37B42",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-0b8430fa0a2e",
+      "title": "TTV5-VONG4-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 11,
+      "sha256": "0B8430FA0A2E3F11E178A95826213D24CF15CC179911CCE8D3522E541C643E75",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-409eb8d44747",
+      "title": "TTV5-VONG4-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 7,
+      "sha256": "409EB8D4474701CBB00EA9CC21A0448FB42D60C0165D9580BC156F9ECF26B81A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-518cf1a1c6c9",
+      "title": "TTV5-VONG5-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 13,
+      "sha256": "518CF1A1C6C9B1D29F00730B7558756136A0F2852329620A0D34EC506D90E7B8",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-645fa0cb78d4",
+      "title": "TTV5-VONG5-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "645FA0CB78D4E61256F3DFF22D0683156BD8CF601E6E49CDF23DB92CB0C1F24A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-d46803348180",
+      "title": "TTV5-VONG6-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 12,
+      "sha256": "D46803348180A6F021378986DB09AEA12980676E1756B19446CA8306C1A9B177",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-294d52b0a60c",
+      "title": "TTV5-VONG6-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "294D52B0A60C2F18F53C6858691F4CC8B89875F5A11A884CCE288696D00FFC38",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-3d3e51489d2a",
+      "title": "TTV5-VONG7-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 9,
+      "sha256": "3D3E51489D2ADCDAC61FFA88029D3ED393D93DF19EDD223B50368422F30C5621",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-1f4023b982cd",
+      "title": "TTV5-VONG7-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 5,
+      "sha256": "1F4023B982CDA7B3B989E0C2C631595FCAC97AE5AD9244668A01DEE7AAFA940F",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-b629f765cde1",
+      "title": "TTV5-VONG8--PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 5,
+      "sha256": "B629F765CDE1182044F1387730C9DC71B7CBFEE56628D9C263ACCBBB7FBFD203",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-2c33b4f6ee8d",
+      "title": "TTV5-VONG8-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "2C33B4F6EE8D4ECE1F95582A0A4AEE07C352E8D1735E82D9EB0433A13C4C92E9",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-c6fc9d6e1b4f",
+      "title": "TTV5-VONG9-PHANDAPAN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer",
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 9,
+      "sha256": "C6FC9D6E1B4F2141BF5F40C39D3B4C06D8C136754DF848291939CD06A0DB71C4",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-e28760bf8aec",
+      "title": "TTV5-VONG9-PHANDE",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 5,
+      "sha256": "E28760BF8AEC1A51426FD2817F364123E4BA5D169FFB8D374588827AF54FD175",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-97bbcbab51f7",
+      "title": "Tài liệu Toán lớp 5 - answer",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 79,
+      "sha256": "97BBCBAB51F7DEB888F0C381777EB6849FFA00C23BB3A65DAF7E1B7885B96E75",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-03a94202a637",
+      "title": "Tài liệu Toán lớp 5 - mixed",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "03A94202A6373C3BB7AA87478A0897E87DF61781081EA1FFE996D3560072F2C7",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-75572142a7df",
+      "title": "Tài liệu Toán lớp 5 - mixed",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 5,
+      "sha256": "75572142A7DF61D7ABDBD4AB10FD35B192C9C854B751C8D545E24195234A87BF",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-c713cdd44682",
+      "title": "Tài liệu Toán lớp 5 - question",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 43,
+      "sha256": "C713CDD44682C39B8ED2FAD263201D40E49D8B88E34BF011A07A03EFD49B92DC",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-08c5074cf445",
+      "title": "Violympic TTV5-CAPTINH2526-PHAN DAP AN",
+      "subject": "math",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 58,
+      "sha256": "08C5074CF4453C39FEC13C9F00FF00705606F1DE4A2E0EC8D9ED3E87F9433014",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a4f3a091ef75",
+      "title": "3.2 TT Anh lớp 1 mã 2",
+      "subject": "math_en",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "A4F3A091EF7520E1D809754C65156372252FE19AAD248281C1536AB41CED32F0",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-00c37926603c",
+      "title": "Đề thi toán TA các vòng",
+      "subject": "math_en",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 29,
+      "sha256": "00C37926603CFC3129D33ABEF4CDE690589ACE2065E8034E6096BDEA29610F1E",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 163,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-4acc81b3945b",
+      "title": "CT-V7-TTA2-PHANDE",
+      "subject": "math_en",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 29,
+      "sha256": "4ACC81B3945B1B304C8DC5096FB43A01638BA70F1718D3E83EC788C45AF3B8E4",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-73fde2b57eeb",
+      "title": "TTA2 cấp tỉnh (Mã 01)_2024-2025",
+      "subject": "math_en",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 13,
+      "sha256": "73FDE2B57EEB376326134E6F7ABC1E252D29492272A30CC1835BD3401C35BE57",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-3155b600e68c",
+      "title": "de-luyen-thi-violympic-toan-tieng-anh-lop-2",
+      "subject": "math_en",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 5,
+      "sha256": "3155B600E68C7EBF5F051E5EBDC8D805A3EBDF22263440082F9C4A0B24EDD542",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 20,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-21baf3467fa2",
+      "title": "000d07b6-8992-4e53-8055-dc990daad53c-tonghopdethiviolympictoantienganhlop3tatcacacvong1",
+      "subject": "math_en",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 19,
+      "sha256": "21BAF3467FA2850FCA69DA5A5A2C4C0433EE78D89958C41C04210848A7C3303C",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-5a8519c55597",
+      "title": "0c982060-393d-454b-8f8e-c32b559d0a42-tonghopdethiviolympictoantienganhlop3tatcacacvongcodapan2",
+      "subject": "math_en",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 15,
+      "sha256": "5A8519C55597BE1A3E5FC6E87E4947ECE94B54CBB9D9611EBFFD7B1A6805BB76",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 200,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-d4ed0c8a21de",
+      "title": "TTA3 cấp tỉnh (Mã 01)_2024-2025",
+      "subject": "math_en",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 14,
+      "sha256": "D4ED0C8A21DE0096AC78C18077BD17B74F1E787D37D94183F3789CF46314AD7F",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-7d656b97662b",
+      "title": "TTA3-ONTRUONG-PHANDAPAN",
+      "subject": "math_en",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 47,
+      "sha256": "7D656B97662B9EF4838F2702D0C7828831D48E9654052F515EAEAF0A30617D6E",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-3b2efa03ae87",
+      "title": "Tài liệu Toán tiếng Anh lớp 3 - mixed",
+      "subject": "math_en",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "3B2EFA03AE87CFEC677D8889A3F56FBF127DE34703DD19ED675CDA919A05B8DF",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-97e785842378",
+      "title": "Tài liệu Toán tiếng Anh lớp 3 - mixed",
+      "subject": "math_en",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "97E785842378A0751553E06F70070849D95D3E7C98B3F7A9D8736AA0CBD5788A",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-77a55f152932",
+      "title": "c0e34d7f-7137-4802-807e-237b85cc4017-tonghopdethiviolympictoantienganhlop3tatcacacvongcodapan3",
+      "subject": "math_en",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 19,
+      "sha256": "77A55F15293287FC4174E432EDB39E585F810CA4BFC6BC943001CBD6E283D910",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 180,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-f1c3e1e4e418",
+      "title": "Toán tiếng anh 4",
+      "subject": "math_en",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 36,
+      "sha256": "F1C3E1E4E41829D683C3972D75772E88262B2146B922A1047CA856258F5DA862",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-4ee9b10eafaa",
+      "title": "Tài liệu Toán tiếng Anh lớp 4 - answer",
+      "subject": "math_en",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 51,
+      "sha256": "4EE9B10EAFAACA66A2D42B2D3397D6576E30CF40B27F6194CA42CEA18995728E",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-8461aa451fca",
+      "title": "Tài liệu Toán tiếng Anh lớp 4 - answer",
+      "subject": "math_en",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 48,
+      "sha256": "8461AA451FCACBB4E727DAC54431C97D6D906BD96BFE55083B89D61DF4AA5271",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-a182c5ef2705",
+      "title": "Tài liệu Toán tiếng Anh lớp 4 - question",
+      "subject": "math_en",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 46,
+      "sha256": "A182C5EF270598D8B4813505224FCD12B85CB367EFBDEBCA003A9C673272BE8B",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-9d016fdd46be",
+      "title": "Violympic Math grade 4",
+      "subject": "math_en",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 69,
+      "sha256": "9D016FDD46BEACDF690F9DB0919B7047C50B031C133CED20F9E06866A55CCF9D",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 436,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-3389b6e9d493",
+      "title": "tong-hop-de-thi-violympic-toan-tieng-anh-lop-4-tat-ca-cac-vong-co-dap-an-1",
+      "subject": "math_en",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 15,
+      "sha256": "3389B6E9D493E0AB5FD6AC14684584F35EE2327BBEC388504137A930E46ED8C4",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 50,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-55148af8155d",
+      "title": "tong-hop-de-thi-violympic-toan-tieng-anh-lop-4-tat-ca-cac-vong-co-dap-an-3",
+      "subject": "math_en",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 21,
+      "sha256": "55148AF8155D07F9D8DC8569FC314AE3AAC9087577A55270A30B2AD3BF975F37",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 216,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-fe946ffbc354",
+      "title": "3.2 TT Anh lớp 5 mã 2",
+      "subject": "math_en",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 30,
+      "sha256": "FE946FFBC3548CF306911B2EF4225B6FCEF448448EEABEEBFAB4E1BFDC38E3E7",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-974f811d28da",
+      "title": "ONQUOCGIA-TTA5-PHANDAPAN",
+      "subject": "math_en",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 53,
+      "sha256": "974F811D28DAB97AC425A3AD4BD8B07625C62ED699EAD39CDFF60C14E1F014B4",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-3c30d3f7bfc0",
+      "title": "TTA5 cấp tỉnh (Mã 01)_2024-2025",
+      "subject": "math_en",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 10,
+      "sha256": "3C30D3F7BFC073C681662E95BF7578CBFA5400022E2098B6A44F1E57231F22CF",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-30d23fa862be",
+      "title": "Tài liệu Toán tiếng Anh lớp 5 - answer",
+      "subject": "math_en",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 56,
+      "sha256": "30D23FA862BE2E6257CCDDB46D5FC54A0C980E85904430B37B91D3DFA8D1F447",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-641460e92241",
+      "title": "Tài liệu Toán tiếng Anh lớp 5 - question",
+      "subject": "math_en",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 51,
+      "sha256": "641460E92241E289A2EB0165C09329ECE7CCF28D33CED7D08B9B139F1B4C529F",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-879d446e327f",
+      "title": "IQ violympic TOAN TV 1-2025-OCH-PHAN Dap an",
+      "subject": "vietnamese",
+      "grades": [
+        1
+      ],
+      "roles": [
+        "answer"
+      ],
+      "fileType": "pdf",
+      "pageCount": 0,
+      "sha256": "879D446E327F632D12238BF1717F4807E8E05677717048A2C39421A32EB70824",
+      "extractionStatus": "unreadable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-adeb4ba39f53",
+      "title": "TV2 cấp tỉnh (Mã 01)_2024-2025",
+      "subject": "vietnamese",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 18,
+      "sha256": "ADEB4BA39F5352FF8FC7633B948A42674FBD0DE6194F9FE5F93C5A0A2F048A6E",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-0e2a951b00e5",
+      "title": "Tài liệu Tiếng Việt lớp 2 - mixed",
+      "subject": "vietnamese",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 31,
+      "sha256": "0E2A951B00E5A37EBB83C57D7C82AD1FA296AF461A0F85271FD8A10AA431ED0E",
+      "extractionStatus": "ocr_required",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-7276028ec3d3",
+      "title": "Tài liệu Tiếng Việt lớp 2 - mixed",
+      "subject": "vietnamese",
+      "grades": [
+        2
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 37,
+      "sha256": "7276028EC3D3DAAA247B71A38E73E4AEDF68DF5B0ECDDE9125D03B3AA7BC50E8",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-552d1d6083ba",
+      "title": "TV3 cấp tỉnh (Mã 01)_2024-2025",
+      "subject": "vietnamese",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 11,
+      "sha256": "552D1D6083BA2A303EAF764642A6C093DD399C1173D0CCDB612882D3E99D6A05",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-06b6395d00c4",
+      "title": "Violympic_TV3_thi cấp Trường_mã 01_25-26",
+      "subject": "vietnamese",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "question"
+      ],
+      "fileType": "pdf",
+      "pageCount": 11,
+      "sha256": "06B6395D00C475E1C4D3B335DDDC728217CED89771E6D90541783B500EF2699E",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 1
+    },
+    {
+      "id": "vio-ref-612512b50f32",
+      "title": "violympic TV3 2ma ngày 3.2.2026",
+      "subject": "vietnamese",
+      "grades": [
+        3
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 67,
+      "sha256": "612512B50F327A2912AF67A639A1F0995EE9ED358D54C6ED81B36C253267AD55",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-3ab6917704ce",
+      "title": "TV4 cấp tỉnh (Mã 01)_2024-2025",
+      "subject": "vietnamese",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 17,
+      "sha256": "3AB6917704CE866C2D350C8D65589138495EFCB7F477E03DE4771BDC553D1C86",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-944d0bb47679",
+      "title": "Tài liệu Tiếng Việt lớp 4 - mixed",
+      "subject": "vietnamese",
+      "grades": [
+        4
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 37,
+      "sha256": "944D0BB4767986FE864B1B58B33E3146A49E750FADC8E84385B82BCE60095E1C",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-c335cae76fea",
+      "title": "TV5_ cấp tỉnh (Mã 01)_2024-2025",
+      "subject": "vietnamese",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 8,
+      "sha256": "C335CAE76FEA15FB4A648377FEF62718FF8742443B9DA1B6B5EC9F6C20D2C57B",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 30,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    },
+    {
+      "id": "vio-ref-96172a78ccd9",
+      "title": "Tài liệu Tiếng Việt lớp 5 - mixed",
+      "subject": "vietnamese",
+      "grades": [
+        5
+      ],
+      "roles": [
+        "mixed"
+      ],
+      "fileType": "pdf",
+      "pageCount": 33,
+      "sha256": "96172A78CCD9F22E7AE382447EE7AB207CF19D25F9AA9B5B9862670C7F85DC01",
+      "extractionStatus": "text_extractable",
+      "questionMarkerCount": 0,
+      "solutionMarkerCount": 0,
+      "duplicateCopies": 0
+    }
+  ]
+}

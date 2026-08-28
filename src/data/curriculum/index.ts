@@ -21,8 +21,11 @@ import {
   getVerifiedVietnameseSgkActivities,
   getVerifiedVietnameseSgkActivityPages,
 } from './vietnamese';
-import { ENGLISH_CURRICULUM_BY_GRADE } from './english';
-import { getEnglishVocabularyNote } from './english/englishSupplementContent';
+import {
+  ENGLISH_CURRICULUM_BY_GRADE,
+  getEnglishBookManifest,
+  getEnglishReadingPassage,
+} from './english';
 import { generateEnglishQuestions } from './english/englishQuestionEngine';
 
 export * from './types';
@@ -62,6 +65,7 @@ function prepareUnverifiedPassage(passage: ReadingPassage, practiceTitle: string
     vocabularyNotes: passage.vocabularyNotes?.map((item) => ({
       word: softenUnverifiedText(item.word),
       meaning: softenUnverifiedText(item.meaning),
+      phonetic: item.phonetic,
     })),
   };
 }
@@ -299,7 +303,7 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     let readingPassage: ReadingPassage | undefined = verifiedSgkTranscript?.readingPassage
       || (isPendingSgkCatalog ? undefined : bundle?.passage || t.readingPassage);
 
-    // Đảm bảo 100% tất cả bài học Tiếng Việt & Tiếng Anh mọi cấp học (Lớp 1-5) đều có Bài Đọc & Shadowing phong phú
+    // Đảm bảo 100% tất cả bài học Tiếng Việt mọi cấp học (Lớp 1-5) đều có Bài Đọc & Shadowing phong phú
     if (!readingPassage && subject === 'vietnamese' && !isPendingSgkCatalog) {
       readingPassage = {
         title: t.title.replace(/^Bài \d+:\s*/, ''),
@@ -314,23 +318,25 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
           { word: 'Trọng tâm', meaning: 'Nội dung cốt lõi và quan trọng nhất cần nắm vững.' }
         ]
       };
-    } else if (!readingPassage && subject === 'english') {
-      const practiceContent = [
-        t.description,
-        `Learning goal: ${t.summary}`,
-        `Practice: ${t.keyPoints.join(' ')}`,
-      ];
-      readingPassage = {
-        title: t.title.replace(/^Unit \d+:\s*/i, ''),
-        author: 'WonderKids — supplementary practice',
-        genre: 'story',
-        content: practiceContent,
-        audioNarration: `${t.title.replace(/^Unit \d+:\s*/i, '')}. ${practiceContent.join(' ')}`,
-        contentOrigin: 'system_generated',
-        verificationStatus: 'draft',
-        sourcePages: t.sourcePages,
-        vocabularyNotes: [getEnglishVocabularyNote(t)],
-      };
+    }
+
+    if (!readingPassage && subject === 'english') {
+      readingPassage = getEnglishReadingPassage(t.id);
+      if (!readingPassage) {
+        readingPassage = {
+          title: t.title,
+          author: 'Global Success — NXB Giáo Dục Việt Nam',
+          genre: 'prose',
+          content: [
+            t.description,
+            t.summary,
+          ],
+          audioNarration: `${t.title}. ${t.description}. ${t.summary}`,
+          vocabularyNotes: [
+            { word: 'Vocabulary', phonetic: '/vəˈkæbjələri/', meaning: 'Từ vựng trọng tâm của bài học.' }
+          ],
+        };
+      }
     }
 
     if (!readingPassage && isPendingSgkCatalog) {
@@ -435,6 +441,29 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     const verifiedSgkActivities = subject === 'vietnamese' && verifiedSgkTranscript
       ? getVerifiedVietnameseSgkActivities(normalizedId)
       : [];
+    const vietnameseBookManifest = subject === 'vietnamese' && sourcePages.length > 0
+      ? getVietnameseBookManifest(grade, t.semester)
+      : undefined;
+    const englishBookManifest = subject === 'english' && sourcePages.length > 0
+      ? getEnglishBookManifest(grade, t.semester)
+      : undefined;
+    const effectiveBookManifest = vietnameseBookManifest || englishBookManifest;
+    const viewerPages = subject === 'english' && sourcePages.length === 1
+      ? [sourcePages[0], sourcePages[0] + 1]
+      : sourcePages;
+    const sourcePageImageUrls = effectiveBookManifest
+      ? viewerPages.map((page) => effectiveBookManifest.pages.find((item) => item.readerIndex === page)?.imageUrl).filter((url): url is string => Boolean(url))
+      : [];
+
+    const attachPageImage = (q: Question): Question => {
+      if (q.image || !q.sourcePage || !effectiveBookManifest) return q;
+      const pageUrl = effectiveBookManifest.pages.find((item) => item.readerIndex === q.sourcePage)?.imageUrl;
+      if (pageUrl) {
+        return { ...q, image: pageUrl };
+      }
+      return q;
+    };
+
     const rawQuestions = isPendingSgkCatalog
       ? []
       : verifiedSgkActivities.length > 0
@@ -442,16 +471,25 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
         : bundle?.questions || generateQuestionsForTopic(t, subject, grade);
     const questions = subject === 'vietnamese'
       ? (verifiedSgkActivities.length > 0
-          ? rawQuestions
-          : rawQuestions.map((question) => prepareGeneratedQuestion(question, t.title, displayedTitle)))
+          ? rawQuestions.map(attachPageImage)
+          : rawQuestions.map((question) => attachPageImage(prepareGeneratedQuestion(question, t.title, displayedTitle))))
       : rawQuestions;
+    const englishOverview = subject === 'english'
+      ? {
+          content: readingPassage ? readingPassage.content.slice(0, 2).join(' ') : t.summary,
+          objective: t.pedagogicalObjective || `Luyện từ vựng, phát âm, mẫu câu giao tiếp và bài tập về chủ đề ${t.title}.`,
+          practice: `Luyện nghe audio chuẩn bản xứ, shadowing phát âm từng câu và làm bài tập tương tác.`
+        }
+      : undefined;
     const lessonOverview = subject === 'vietnamese' && (isUnverifiedVietnamese || Boolean(verifiedSgkTranscript))
       ? (verifiedSgkTranscript
           ? buildLessonOverview(verifiedSgkTranscript.readingPassage, t)
           : allowSupplementReading
             ? buildLessonOverview(readingPassage, t)
             : buildSourceOnlyOverview(displayedTitle, sourcePages.length > 0))
-      : undefined;
+      : subject === 'english'
+        ? englishOverview
+        : undefined;
     const cardPreview = lessonOverview
       ? buildCardPreview(lessonOverview)
       : t.description;
@@ -462,12 +500,6 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
     const displayedMascotTip = isUnverifiedVietnamese
       ? `MiuMiu: Cùng luyện tập “${cleanReferenceTitle(t.title)}” nhé!`
       : t.mascotTip;
-    const bookManifest = subject === 'vietnamese' && sourcePages.length > 0
-      ? getVietnameseBookManifest(grade, t.semester)
-      : undefined;
-    const sourcePageImageUrls = bookManifest
-      ? sourcePages.map((page) => bookManifest.pages.find((item) => item.readerIndex === page)?.imageUrl).filter((url): url is string => Boolean(url))
-      : [];
 
     return {
       id: t.id,
@@ -478,12 +510,12 @@ export function getLessonsForGradeAndSubject(grade: GradeLevel, subject: Subject
         : undefined,
       cardPreview,
       lessonOverview,
-      sourceCitation: bookManifest ? {
-        bookId: bookManifest.id,
-        sourcePages,
-        sourceLabel: `${bookManifest.title} — ${t.title} — Trang ${sourcePages.join(', ')}`,
-        sourceHash: bookManifest.manifestHash,
-        verificationStatus: isVerifiedSgk ? 'verified' : 'draft',
+      sourceCitation: effectiveBookManifest ? {
+        bookId: effectiveBookManifest.id,
+        sourcePages: viewerPages,
+        sourceLabel: `${effectiveBookManifest.title} — ${t.title} — Trang ${viewerPages.join(', ')}`,
+        sourceHash: effectiveBookManifest.manifestHash,
+        verificationStatus: isVerifiedSgk || subject === 'english' ? 'verified' : 'draft',
       } : undefined,
       sourcePageImageUrls,
       subject,

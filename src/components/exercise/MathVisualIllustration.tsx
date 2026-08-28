@@ -48,17 +48,43 @@ export const MathVisualIllustration: React.FC<MathVisualIllustrationProps> = ({
     if (isUrl) {
       return (
         <div className="my-4 flex justify-center">
-          <img
-            src={rawImage}
-            alt="Minh họa bài tập"
-            className="max-h-56 rounded-3xl object-contain shadow-xs border border-amber-200 bg-white p-2"
-          />
+          <motion.div
+            initial={{ scale: 0.9, y: 8, opacity: 0 }}
+            animate={{ scale: 1, y: 0, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+            className="p-3 sm:p-4 bg-gradient-to-b from-amber-50/90 via-white to-orange-50/80 rounded-3xl border-2 border-amber-300 shadow-pop-sm flex items-center justify-center max-w-[340px] max-h-[220px]"
+          >
+            <img
+              src={rawImage}
+              alt="Minh họa SGK"
+              className="max-h-40 sm:max-h-48 w-auto object-contain rounded-2xl filter drop-shadow-sm select-none transform hover:scale-105 transition-transform"
+            />
+          </motion.div>
         </div>
       );
     }
+
+    const emojiMatch = rawImage.match(/^([\p{Emoji}\u200d\uFE0F]+)(?:\s*(.+))?$/u);
+    const emojiPart = emojiMatch ? emojiMatch[1] : rawImage;
+    const labelPart = emojiMatch && emojiMatch[2] ? emojiMatch[2] : '';
+
     return (
-      <div className="my-4 flex flex-wrap justify-center items-center gap-3 py-3 text-4xl sm:text-5xl tracking-widest bg-amber-50/70 rounded-3xl border border-amber-200 shadow-2xs">
-        {rawImage}
+      <div className="my-4 flex flex-col items-center justify-center">
+        <motion.div
+          initial={{ scale: 0.85, y: 10, opacity: 0 }}
+          animate={{ scale: 1, y: 0, opacity: 1 }}
+          transition={{ type: 'spring', stiffness: 350, damping: 20 }}
+          className="flex flex-col items-center justify-center p-5 sm:p-6 bg-gradient-to-b from-amber-50/95 via-white to-orange-50/90 rounded-3xl border-2 border-amber-300/80 shadow-pop-sm min-w-[180px] max-w-[260px]"
+        >
+          <span className="text-6xl sm:text-7xl filter drop-shadow-md select-none transform hover:scale-110 transition-transform">
+            {emojiPart}
+          </span>
+          {labelPart && (
+            <span className="mt-2.5 px-3 py-0.5 rounded-full bg-amber-100/80 border border-amber-200 text-amber-950 font-baloo font-bold text-xs tracking-wide">
+              {labelPart}
+            </span>
+          )}
+        </motion.div>
       </div>
     );
   }

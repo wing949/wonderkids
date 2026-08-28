@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { LessonNode } from '../../types';
 import { PhonicsGameStage, getPhonicsGameForLesson } from '../../data/curriculum/vietnamese/grade1PhonicsGames';
+import { getEnglishPhonicsGameForLesson } from '../../data/curriculum/english/grade1PhonicsGames';
 import { LetterPickGame } from './phonicsGames/LetterPickGame';
 import { BubblePopGame } from './phonicsGames/BubblePopGame';
 import { LetterAssembleGame } from './phonicsGames/LetterAssembleGame';
@@ -28,7 +29,9 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
   lesson,
   onFinishGames,
 }) => {
-  const gameConfig = getPhonicsGameForLesson(lesson);
+  const gameConfig = lesson.subject === 'english'
+    ? getEnglishPhonicsGameForLesson(lesson.id)
+    : getPhonicsGameForLesson(lesson);
   const stages: PhonicsGameStage[] = gameConfig?.stages || [];
 
   const [currentStageIdx, setCurrentStageIdx] = useState(0);
@@ -36,19 +39,24 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
   const [starsCollected, setStarsCollected] = useState(0);
   const [isAllCompleted, setIsAllCompleted] = useState(false);
 
+  const mascotEmoji = lesson.subject === 'english' ? '🐬' : '🦊';
+  const mascotZoneTitle = lesson.subject === 'english' ? 'Phonics Fun Zone • Grade 1' : 'Khu Vui Học Âm Vần • Lớp 1';
+
   const currentStage = stages[currentStageIdx] || stages[0];
 
   if (!gameConfig || stages.length === 0) {
     return null;
   }
 
-  // Speech helper for instruction using pre-recorded audio or natural Vietnamese TTS
+  const lang = lesson.subject === 'english' ? 'en-US' : 'vi-VN';
+
+  // Speech helper for instruction using pre-recorded audio or natural TTS
   const speakInstruction = (text: string, stageId?: string) => {
     soundManager.play('tap');
-    if (stageId) {
-      soundManager.playQuestionAudio(stageId, text, 'vi-VN');
+    if (stageId && lesson.subject !== 'english') {
+      soundManager.playQuestionAudio(stageId, text, lang);
     } else {
-      soundManager.speakText(text, 'vi-VN');
+      soundManager.speakText(text, lang);
     }
   };
 
@@ -110,12 +118,12 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
             whileHover={{ rotate: [-5, 5, -5, 0] }}
             className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-amber-400 to-orange-400 p-1 shadow-pop-sm flex items-center justify-center shrink-0"
           >
-            <span className="text-2xl sm:text-3xl">🦊</span>
+            <span className="text-2xl sm:text-3xl">{mascotEmoji}</span>
           </motion.div>
           <div>
             <div className="flex items-center gap-1.5 font-baloo text-xs font-black tracking-wider text-amber-800 uppercase">
               <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-spin" />
-              <span>Khu Vui Học Âm Vần • Lớp 1</span>
+              <span>{mascotZoneTitle}</span>
             </div>
             <h2 className="font-baloo text-lg sm:text-2xl font-black text-amber-950">
               {lesson.title}
@@ -139,7 +147,7 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
             {/* Mascot Instruction Speech Bubble */}
             <div className="relative mb-4 p-3.5 sm:p-4 bg-white rounded-2xl border-2 border-amber-300 shadow-sm flex items-center justify-between gap-3">
               <p className="font-vietnam text-sm sm:text-base font-bold text-slate-800 leading-relaxed">
-                🦊 {currentStage.instruction}
+                {mascotEmoji} {currentStage.instruction}
               </p>
               <button
                 type="button"
@@ -228,7 +236,7 @@ export const Grade1PhonicsGameZone: React.FC<Grade1PhonicsGameZoneProps> = ({
               }}
               className="px-8 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-baloo text-lg font-black shadow-pop-sm flex items-center gap-2 transition-transform active:scale-95 cursor-pointer"
             >
-              <span>Vào Làm Bài Luyện Tập Thêm</span>
+              <span>{lesson.subject === 'english' ? 'Làm Bài Luyện Tập Tiếp Theo ⭐' : 'Vào Làm Bài Luyện Tập Thêm'}</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </motion.div>

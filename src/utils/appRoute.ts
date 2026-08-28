@@ -4,6 +4,8 @@ import type { QuestionBankCompetition, QuestionBankDifficulty } from '../data/pr
 
 export type AdminTab = 'curriculum' | 'question_builder' | 'tts_settings';
 
+export type LogicGameId = 'vat-gi-bien-mat' | 'lat-the-tim-doi' | 'tim-quy-luat' | 'me-cung';
+
 export type AppRoute =
   | { kind: 'student' }
   | { kind: 'profile' }
@@ -19,6 +21,8 @@ export type AppRoute =
   | { kind: 'practice-custom-set'; competition: QuestionBankCompetition; grade: GradeLevel; subject: PracticeSubject; topic?: string; difficulty: QuestionBankDifficulty; questionCount: number; questionNumber?: number }
   | { kind: 'adventure'; subject: SubjectType; grade: GradeLevel; viewMode?: 'grid' | 'map' }
   | { kind: 'exercise'; lessonId: string }
+  | { kind: 'logic-hub' }
+  | { kind: 'logic-game'; gameId: LogicGameId; level?: number }
   | { kind: 'admin'; tab: AdminTab };
 
 const SUBJECT_SLUGS: Record<string, SubjectType> = {
@@ -95,6 +99,16 @@ export function parseAppRoute(pathname: string): AppRoute {
   if (segments.length === 1 && segments[0] === 'doi-qua') return { kind: 'shop' };
   if (segments.length === 1 && segments[0] === 'nhiem-vu') return { kind: 'quests' };
   if (segments.length === 1 && segments[0] === 'phu-huynh') return { kind: 'parent' };
+  if (segments.length === 1 && (segments[0] === 'tu-duy' || segments[0] === 'logic')) return { kind: 'logic-hub' };
+  if (segments.length === 2 && (segments[0] === 'tu-duy' || segments[0] === 'logic')) {
+    const gameSlug = segments[1];
+    const level = Number(query.get('cap-do') || query.get('level')) || undefined;
+    const validGames: LogicGameId[] = ['vat-gi-bien-mat', 'lat-the-tim-doi', 'tim-quy-luat', 'me-cung'];
+    if (validGames.includes(gameSlug as LogicGameId)) {
+      return { kind: 'logic-game', gameId: gameSlug as LogicGameId, ...(level ? { level } : {}) };
+    }
+    return { kind: 'logic-hub' };
+  }
   if (segments.length === 1 && segments[0] === 'dau-truong') return { kind: 'practice-hub', mode: 'arena' };
   if (segments.length === 1 && segments[0] === 'luyen-de') {
     return query.get('che-do') === 'thi-thu'
@@ -228,6 +242,11 @@ export function getAppPath(route: AppRoute): string {
       return `/luyen-de/tu-chon?${query.toString()}`;
     }
     case 'exercise': return `/bai-hoc/${encodeURIComponent(route.lessonId)}`;
+    case 'logic-hub': return '/tu-duy';
+    case 'logic-game': {
+      const base = `/tu-duy/${route.gameId}`;
+      return route.level ? `${base}?cap-do=${route.level}` : base;
+    }
     case 'admin': {
       const tabPath = ADMIN_TAB_PATHS[route.tab];
       return tabPath ? `/cp/${tabPath}` : '/cp';

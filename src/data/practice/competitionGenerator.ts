@@ -144,6 +144,9 @@ function ioeItem(grade: GradeLevel, setNumber: number, index: number, count: num
   let topic: string;
   let audio: PracticeAudio | undefined;
 
+  let imageUrl: string | undefined;
+  let imageAlt: string | undefined;
+
   if (variant === 4) {
     const amount = ((index + setNumber + grade) % (grade * 4 + 6)) + 1;
     const transcript = grade <= 2
@@ -180,6 +183,13 @@ function ioeItem(grade: GradeLevel, setNumber: number, index: number, count: num
     answer = word;
     explanation = `The word “${word}” completes the sentence correctly.`;
     topic = 'Sentence patterns';
+    if (word === 'cat') {
+      imageUrl = '/assets/practice/cute_kittens.webp';
+      imageAlt = 'Mèo con 3D Disney Pixar';
+    } else if (word === 'dog') {
+      imageUrl = '/assets/practice/puppy_park.webp';
+      imageAlt = 'Cún con 3D Disney Pixar';
+    }
   } else {
     type = 'ordering';
     const tokens = ['This', 'is', 'the', 'word', word];
@@ -195,7 +205,7 @@ function ioeItem(grade: GradeLevel, setNumber: number, index: number, count: num
     id, type, prompt, options, correctAnswer: answer, explanation, topic,
     difficulty: difficulty(setNumber, index, count), points: 10,
     contentOrigin: 'system_generated', verificationStatus: 'verified',
-    sourceLabel: APP_SOURCE, sourceHash, audio,
+    sourceLabel: APP_SOURCE, sourceHash, audio, imageUrl, imageAlt,
   };
 }
 
@@ -245,11 +255,12 @@ function trangNguyenItem(grade: GradeLevel, setNumber: number, index: number, co
     topic = 'Ngữ pháp';
   }
 
+  const sourceHash = stableHash(`${id}:${prompt}:${JSON.stringify(answer)}`);
   return {
     id, type, prompt, options, correctAnswer: answer, explanation, topic,
     difficulty: difficulty(setNumber, index, count), points: 10,
     contentOrigin: 'system_generated', verificationStatus: 'verified',
-    sourceLabel: APP_SOURCE, sourceHash: stableHash(`${id}:${prompt}:${JSON.stringify(answer)}`),
+    sourceLabel: APP_SOURCE, sourceHash,
   };
 }
 

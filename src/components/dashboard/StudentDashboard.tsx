@@ -14,6 +14,7 @@ interface StudentDashboardProps {
   onSelectSubject: (subject: SubjectType) => void;
   onOpenAdventure: () => void;
   onOpenPractice: () => void;
+  onOpenLogic?: () => void;
   onOpenShop: () => void;
   onOpenQuests: () => void;
   onMascotChange: (id: MascotId) => void;
@@ -26,6 +27,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   onSelectSubject,
   onOpenAdventure,
   onOpenPractice,
+  onOpenLogic,
   onOpenShop,
   onOpenQuests,
   onMascotChange,
@@ -148,16 +150,20 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               const subj = SUBJECTS_CONFIG[subjKey];
               const { tilt, washiColor } = subjectTiltConfig[subjKey] || { tilt: 1, washiColor: 'rgba(139, 114, 207, 0.45)' };
               const subjectThumbnails: Record<string, string> = {
-                math: '/assets/bobo_math.jpg',
-                vietnamese: '/assets/miumiu_story.jpg',
-                english: '/assets/pipi_english.jpg',
-                logic: '/assets/bipbip_logic.jpg',
+                math: '/assets/bobo_math.webp',
+                vietnamese: '/assets/miumiu_story.webp',
+                english: '/assets/pipi_english.webp',
+                logic: '/assets/bipbip_logic.webp',
               };
 
               const handleClick = () => {
                 soundManager.playPop();
                 if (subjKey === 'logic') {
-                  onOpenPractice();
+                  if (onOpenLogic) {
+                    onOpenLogic();
+                  } else {
+                    onSelectSubject('logic');
+                  }
                 } else {
                   onSelectSubject(subjKey);
                 }
@@ -277,7 +283,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             {/* Left Column: Big Cover Illustration */}
             <div className="relative h-44 sm:h-52 lg:h-full lg:min-h-48 overflow-hidden rounded-[1.2rem] sm:rounded-[1.5rem] bg-[#fffbeb] shadow-xs">
               <img
-                src="/assets/practice_arena_cover.jpg"
+                src="/assets/practice_arena_cover.webp"
                 alt="Kho Luyện Đề & Đấu Trường Trí Tuệ"
                 loading="lazy"
                 decoding="async"
@@ -351,7 +357,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             {/* Left Column: Big Cover Illustration */}
             <div className="relative h-44 sm:h-52 lg:h-full lg:min-h-48 overflow-hidden rounded-[1.2rem] sm:rounded-[1.5rem] bg-[#f0fdfa] shadow-xs">
               <img
-                src="/assets/adventure_map_cover.jpg"
+                src="/assets/adventure_map_cover.webp"
                 alt="Đảo Tri Thức Diệu Kỳ"
                 loading="lazy"
                 decoding="async"

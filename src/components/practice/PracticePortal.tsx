@@ -6,6 +6,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock3,
+  Eye,
+  Lightbulb,
   Play,
   RotateCcw,
   Sparkles,
@@ -17,6 +19,7 @@ import type { GradeLevel } from '../../types';
 import {
   getPracticePack,
   getPracticeSet,
+  getViolympicExamSets,
   getCompetitionPack,
   getCompetitionSet,
   PRACTICE_GRADES,
@@ -61,8 +64,8 @@ import { soundManager } from '../../utils/audio';
 
 export type PracticePortalRoute =
   | { kind: 'practice-hub'; mode?: 'practice' | 'arena' }
-  | { kind: 'practice-list'; subject: PracticeSubject; grade: GradeLevel }
-  | { kind: 'practice-set'; subject: PracticeSubject; grade: GradeLevel; setNumber: number; questionNumber?: number }
+  | { kind: 'practice-list'; subject: PracticeSubject; grade: GradeLevel; tab?: 'violympic' | 'authored' }
+  | { kind: 'practice-set'; subject: PracticeSubject; grade: GradeLevel; setNumber: number; setSource?: 'authored' | 'violympic'; questionNumber?: number }
   | { kind: 'practice-competition-list'; track: CompetitionPracticeTrack; grade: GradeLevel }
   | { kind: 'practice-competition-set'; track: CompetitionPracticeTrack; grade: GradeLevel; setNumber: number; questionNumber?: number }
   | { kind: 'practice-custom-set'; competition: QuestionBankCompetition; grade: GradeLevel; subject: PracticeSubject; topic?: string; difficulty: QuestionBankDifficulty; questionCount: number; questionNumber?: number };
@@ -102,7 +105,7 @@ const SUBJECTS: Array<{
     subtitle: 'Đấu trường Violympic & Ôn luyện SGK',
     icon: '📐',
     description: 'Tính nhanh, hình học, đo lường và giải toán có lời văn chuẩn SGK.',
-    thumbnail: '/assets/competitions/violympic_math.jpg',
+    thumbnail: '/assets/competitions/violympic_math.webp',
     accentColor: '#059669',
     washiColor: 'rgba(244, 63, 94, 0.45)',
     badgeBg: '#d1fae5',
@@ -111,7 +114,7 @@ const SUBJECTS: Array<{
     competition: {
       name: 'Violympic',
       url: 'https://violympic.vn/',
-      logo: '/assets/competitions/logos/violympic_logo.png',
+      logo: '/assets/competitions/logos/violympic_logo.webp',
       borderClass: 'border-2 border-red-500 hover:border-red-600',
     },
   },
@@ -121,7 +124,7 @@ const SUBJECTS: Array<{
     subtitle: 'Đấu trường Violympic Tiếng Việt & SGK',
     icon: '📖',
     description: 'Chính tả, mở rộng vốn từ, câu, ca dao tục ngữ và đọc hiểu.',
-    thumbnail: '/assets/competitions/violympic_vietnamese.jpg',
+    thumbnail: '/assets/competitions/violympic_vietnamese.webp',
     accentColor: '#d97706',
     washiColor: 'rgba(244, 63, 94, 0.45)',
     badgeBg: '#fef3c7',
@@ -130,7 +133,7 @@ const SUBJECTS: Array<{
     competition: {
       name: 'Violympic',
       url: 'https://violympic.vn/',
-      logo: '/assets/competitions/logos/violympic_logo.png',
+      logo: '/assets/competitions/logos/violympic_logo.webp',
       borderClass: 'border-2 border-red-500 hover:border-red-600',
     },
   },
@@ -140,7 +143,7 @@ const SUBJECTS: Array<{
     subtitle: 'Đấu trường Violympic Tiếng Anh & SGK',
     icon: '🌍',
     description: 'Words, phonics, grammar, reading comprehension and listening.',
-    thumbnail: '/assets/competitions/violympic_english.jpg',
+    thumbnail: '/assets/competitions/violympic_english.webp',
     accentColor: '#0284c7',
     washiColor: 'rgba(244, 63, 94, 0.45)',
     badgeBg: '#e0f2fe',
@@ -149,7 +152,7 @@ const SUBJECTS: Array<{
     competition: {
       name: 'Violympic',
       url: 'https://violympic.vn/',
-      logo: '/assets/competitions/logos/violympic_logo.png',
+      logo: '/assets/competitions/logos/violympic_logo.webp',
       borderClass: 'border-2 border-red-500 hover:border-red-600',
     },
   },
@@ -159,7 +162,7 @@ const SUBJECTS: Array<{
     subtitle: 'Violympic Math in English',
     icon: '🔢',
     description: 'Learn mathematics through natural English with numbers and shapes.',
-    thumbnail: '/assets/competitions/math_en_competition.jpg',
+    thumbnail: '/assets/competitions/math_en_competition.webp',
     accentColor: '#7c3aed',
     washiColor: 'rgba(244, 63, 94, 0.45)',
     badgeBg: '#ede9fe',
@@ -168,7 +171,7 @@ const SUBJECTS: Array<{
     competition: {
       name: 'Violympic',
       url: 'https://violympic.vn/',
-      logo: '/assets/competitions/logos/violympic_logo.png',
+      logo: '/assets/competitions/logos/violympic_logo.webp',
       borderClass: 'border-2 border-red-500 hover:border-red-600',
     },
   },
@@ -420,12 +423,19 @@ function PracticeHub({ onNavigate, onBack }: Pick<PracticePortalProps, 'onNaviga
                 <div>
                   {/* Top Badge & Official Competition Logo */}
                   <div className="flex items-center justify-between gap-2">
-                    <span
-                      className="px-3 py-1 rounded-full font-baloo font-extrabold text-xs shadow-2xs"
-                      style={{ backgroundColor: subject.badgeBg, color: subject.accentColor }}
-                    >
-                      LỚP {grade} • 12 ĐỀ
-                    </span>
+                    {(() => {
+                      const violympicSets = getViolympicExamSets(subject.id, grade);
+                      const totalExamCount = violympicSets.length > 0 ? violympicSets.length : 12;
+                      const totalQCount = getQuestionBankItems({ competition: 'violympic', grade, subject: subject.id }).length;
+                      return (
+                        <span
+                          className="px-3 py-1 rounded-full font-baloo font-extrabold text-xs shadow-2xs"
+                          style={{ backgroundColor: subject.badgeBg, color: subject.accentColor }}
+                        >
+                          LỚP {grade} • {totalExamCount} VÒNG THI • {totalQCount.toLocaleString('vi')} CÂU
+                        </span>
+                      );
+                    })()}
 
                     <a
                       href={subject.competition.url}
@@ -487,7 +497,7 @@ function PracticeHub({ onNavigate, onBack }: Pick<PracticePortalProps, 'onNaviga
 
             <div className="relative h-44 sm:h-52 lg:h-full lg:min-h-48 overflow-hidden rounded-[1.2rem] sm:rounded-[1.5rem] bg-[#f0f9ff] shadow-xs">
               <img
-                src="/assets/competitions/ioe_competition.jpg"
+                src="/assets/competitions/ioe_competition.webp"
                 alt="IOE | Tiếng Anh"
                 loading="lazy"
                 decoding="async"
@@ -512,7 +522,7 @@ function PracticeHub({ onNavigate, onBack }: Pick<PracticePortalProps, 'onNaviga
                     className="group/logo flex items-center justify-center px-2.5 py-1 rounded-xl bg-white border-2 border-sky-500 hover:border-sky-600 shadow-xs transition-all hover:scale-105 hover:shadow-md cursor-pointer select-none"
                   >
                     <img
-                      src="/assets/competitions/logos/ioe_logo.png"
+                      src="/assets/competitions/logos/ioe_logo.webp"
                       alt="IOE"
                       className="h-6 sm:h-7 w-auto object-contain max-w-[85px]"
                     />
@@ -556,7 +566,7 @@ function PracticeHub({ onNavigate, onBack }: Pick<PracticePortalProps, 'onNaviga
 
             <div className="relative h-44 sm:h-52 lg:h-full lg:min-h-48 overflow-hidden rounded-[1.2rem] sm:rounded-[1.5rem] bg-[#f0fdf4] shadow-xs">
               <img
-                src="/assets/competitions/trangnguyen_competition.jpg"
+                src="/assets/competitions/trangnguyen_competition.webp"
                 alt="Trạng Nguyên Tiếng Việt"
                 loading="lazy"
                 decoding="async"
@@ -770,7 +780,13 @@ function ArenaHub({
 
 function PracticeList({ route, onNavigate, onBack }: { route: Extract<PracticePortalRoute, { kind: 'practice-list' }>; onNavigate: PracticePortalProps['onNavigate']; onBack: () => void }) {
   const pack = getPracticePack(route.subject, route.grade);
+  const violympicSets = useMemo(() => getViolympicExamSets(route.subject, route.grade), [route.grade, route.subject]);
+  const [activeTab, setActiveTab] = useState<'violympic' | 'authored'>(
+    route.tab || 'authored'
+  );
   const info = subjectInfo(route.subject);
+
+  const displaySets = activeTab === 'violympic' && violympicSets.length > 0 ? violympicSets : pack.sets;
 
   return (
     <div className="pb-28 pt-6 sm:pt-10">
@@ -780,17 +796,57 @@ function PracticeList({ route, onNavigate, onBack }: { route: Extract<PracticePo
             <BackButton onClick={onBack} label="Kho đề" />
             <div>
               <p className="font-baloo text-sm font-black uppercase tracking-wider text-violet-600">{info.icon} {info.label} • Lớp {route.grade}</p>
-              <h1 className="font-baloo text-3xl font-black leading-tight text-brand-dark">12 đề luyện tập</h1>
-              <p className="mt-1 font-vietnam text-sm font-semibold text-slate-600">Mỗi đề có 3 phần, 30 hoạt động và tối đa 300 điểm.</p>
+              <h1 className="font-baloo text-3xl font-black leading-tight text-brand-dark">
+                {activeTab === 'violympic' ? `${violympicSets.length} Vòng thi Violympic chuẩn` : '12 đề luyện tập theo chủ điểm SGK'}
+              </h1>
+              <p className="mt-1 font-vietnam text-sm font-semibold text-slate-600">
+                {activeTab === 'violympic'
+                  ? `Bộ ${violympicSets.length} vòng thi thực tế bóc tách từ 99 tài liệu Violympic scan chính thức. Mỗi đề 30 câu, 300 điểm.`
+                  : 'Mỗi đề có 3 phần, 30 hoạt động và tối đa 300 điểm.'}
+              </p>
             </div>
           </div>
           <span className="inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-emerald-100 px-4 font-baloo font-black text-emerald-800">
-            <BookOpenCheck size={20} aria-hidden="true" /> Nội dung tự biên soạn
+            {activeTab === 'violympic' ? (
+              <><Trophy size={20} aria-hidden="true" /> Đề thi Violympic thực tế</>
+            ) : (
+              <><BookOpenCheck size={20} aria-hidden="true" /> Nội dung tự biên soạn</>
+            )}
           </span>
         </div>
 
+        {/* Tab Switcher */}
+        {violympicSets.length > 0 && (
+          <div className="mt-5 flex flex-wrap gap-2.5">
+            <button
+              type="button"
+              onClick={() => { soundManager.playPop(); setActiveTab('violympic'); }}
+              aria-pressed={activeTab === 'violympic'}
+              className={`flex min-h-12 items-center gap-2 rounded-2xl px-5 font-baloo text-sm font-black transition-all active:translate-y-0.5 ${
+                activeTab === 'violympic'
+                  ? 'bg-violet-600 text-white shadow-[0_4px_0_#4c1d95]'
+                  : 'bg-white/90 text-slate-700 hover:bg-violet-50'
+              }`}
+            >
+              <Trophy size={18} aria-hidden="true" /> Bộ đề Violympic Vòng 1 – {violympicSets.length} ({violympicSets.length} vòng thi)
+            </button>
+            <button
+              type="button"
+              onClick={() => { soundManager.playPop(); setActiveTab('authored'); }}
+              aria-pressed={activeTab === 'authored'}
+              className={`flex min-h-12 items-center gap-2 rounded-2xl px-5 font-baloo text-sm font-black transition-all active:translate-y-0.5 ${
+                activeTab === 'authored'
+                  ? 'bg-violet-600 text-white shadow-[0_4px_0_#4c1d95]'
+                  : 'bg-white/90 text-slate-700 hover:bg-violet-50'
+              }`}
+            >
+              <BookOpenCheck size={18} aria-hidden="true" /> 12 đề ôn luyện SGK
+            </button>
+          </div>
+        )}
+
         <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
-          {pack.sets.map((set) => (
+          {displaySets.map((set) => (
             <article key={set.id} data-practice-set-card={set.id} className="flex min-h-[230px] flex-col rounded-4xl border border-slate-200/80 bg-white p-5 shadow-[0_4px_16px_rgba(0,0,0,0.05)] sm:p-6">
               <div className="flex items-start justify-between gap-3">
                 <span className="rounded-full bg-violet-100 px-3 py-1 font-baloo text-xs font-black text-violet-700">{LEVEL_LABELS[set.level]}</span>
@@ -798,13 +854,24 @@ function PracticeList({ route, onNavigate, onBack }: { route: Extract<PracticePo
               </div>
               <h2 className="mt-3 font-baloo text-xl font-black leading-snug text-brand-dark">{set.title}</h2>
               <p className="mt-2 text-justify font-vietnam text-sm font-semibold leading-relaxed text-slate-600">
-                Ba phần luyện tập cân bằng kiến thức, vận dụng và thử thách. {set.timeLimitSeconds ? 'Mô phỏng thi trong 30 phút.' : 'Không giới hạn thời gian.'}
+                {activeTab === 'violympic'
+                  ? 'Ba phần thi: Khởi động, Vận dụng và Về đích. 30 câu hỏi thực tế bóc tách từ tài liệu scan Violympic.'
+                  : 'Ba phần luyện tập cân bằng kiến thức, vận dụng và thử thách.'} {set.timeLimitSeconds ? 'Mô phỏng thi trong 30 phút.' : 'Không giới hạn thời gian.'}
               </p>
               <div className="mt-auto flex items-end justify-between gap-3 border-t border-slate-100 pt-4">
                 <span className="whitespace-nowrap font-baloo text-sm font-black text-emerald-600">+60 XP • +3 ⭐</span>
                 <button
                   type="button"
-                  onClick={() => { soundManager.playPop(); onNavigate({ kind: 'practice-set', subject: route.subject, grade: route.grade, setNumber: set.setNumber }); }}
+                  onClick={() => {
+                    soundManager.playPop();
+                    onNavigate({
+                      kind: 'practice-set',
+                      subject: route.subject,
+                      grade: route.grade,
+                      setNumber: set.setNumber,
+                      setSource: activeTab,
+                    });
+                  }}
                   className="flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-emerald-500 px-5 font-baloo font-black text-white shadow-[0_4px_0_#047857] transition-transform active:translate-y-1 active:shadow-none"
                 >
                   <Play size={17} fill="currentColor" aria-hidden="true" /> Vào làm đề
@@ -947,15 +1014,28 @@ function PracticeAnswer({ item, answer, onChange }: { item: PracticeItem; answer
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
       {item.options?.map((option) => {
         const selected = answer === option.id;
+        const letter = option.id.replace(/^opt-/i, '').toUpperCase();
+        const cleanText = option.label.replace(/^[A-D][.:)-]\s*/i, '').trim() || option.label;
         return (
           <button
             type="button"
             key={option.id}
             aria-pressed={selected}
             onClick={() => onChange(option.id)}
-            className={`min-h-14 rounded-2xl border-2 px-4 text-left font-baloo text-lg font-black transition-all active:translate-y-1 ${selected ? 'border-violet-600 bg-violet-500 text-white shadow-[0_3px_0_#6d28d9]' : 'border-slate-200 bg-white text-brand-dark hover:border-violet-300'}`}
+            className={`flex min-h-14 items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left font-baloo text-base sm:text-lg font-black transition-all active:translate-y-0.5 ${
+              selected
+                ? 'border-violet-600 bg-violet-500 text-white shadow-[0_3px_0_#6d28d9]'
+                : 'border-slate-200 bg-white text-brand-dark hover:border-violet-300 shadow-sm'
+            }`}
           >
-            <span className="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/5 text-sm">{option.id.toUpperCase()}</span>{option.label}
+            <span
+              className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-black text-sm ${
+                selected ? 'bg-white/25 text-white' : 'bg-violet-100 text-violet-700'
+              }`}
+            >
+              {letter}
+            </span>
+            <span className="min-w-0 flex-1 leading-snug">{cleanText}</span>
           </button>
         );
       })}
@@ -1251,6 +1331,18 @@ export function PracticeExam({
             <span className={`rounded-full px-3 py-1 font-baloo text-xs font-black ${item.difficulty === 'challenge' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}`}>{item.difficulty === 'challenge' ? '✨ Thử thách' : item.topic}</span>
           </div>
           <h2 ref={questionHeadingRef} tabIndex={-1} className="mt-6 font-vietnam text-xl font-extrabold leading-relaxed text-brand-dark outline-none sm:text-2xl">{item.prompt}</h2>
+          {item.imageUrl && (
+            <div className="my-5 flex justify-center">
+              <div className="relative overflow-hidden rounded-3xl border-2 border-amber-200/80 bg-gradient-to-b from-amber-50/60 to-orange-50/40 p-2 shadow-washi">
+                <img
+                  src={item.imageUrl}
+                  alt={item.imageAlt || "Minh họa câu hỏi"}
+                  className="max-h-60 sm:max-h-72 w-auto rounded-2xl object-contain shadow-xs bg-white"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          )}
           <PracticeAudioPlayer key={item.id} item={item} set={set} progress={progress} onProgress={setProgress} />
           <div className="mt-6">
             <PracticeAnswer
@@ -1262,6 +1354,24 @@ export function PracticeExam({
               }}
             />
           </div>
+          {!set.timeLimitSeconds && item.explanation && (
+            <details className="group mt-6 rounded-2xl border border-amber-200/60 bg-gradient-to-br from-amber-50/80 to-orange-50/60 shadow-sm transition-all open:shadow-md">
+              <summary className="flex cursor-pointer select-none items-center gap-2.5 rounded-2xl px-4 py-3 font-baloo font-black text-amber-800 transition-colors hover:bg-amber-100/50 [&::-webkit-details-marker]:hidden [&::marker]:hidden">
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-amber-400/20 text-amber-600 transition-transform group-open:rotate-12">
+                  <Lightbulb size={18} />
+                </span>
+                <span className="text-sm">💡 Gợi ý và hướng dẫn làm bài</span>
+                <Eye size={16} className="ml-auto text-amber-500/70 transition-transform group-open:rotate-180" />
+              </summary>
+              <div className="border-t border-amber-200/40 px-4 pb-4 pt-3">
+                <div className="flex items-start gap-2 rounded-xl bg-emerald-50/80 px-3 py-2.5">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-600" />
+                  <p className="font-vietnam text-sm font-bold text-emerald-800">Đáp án đúng: {correctAnswerLabel(item)}</p>
+                </div>
+                <p className="mt-3 font-vietnam text-sm font-semibold leading-relaxed text-slate-700">{item.explanation}</p>
+              </div>
+            </details>
+          )}
           <p className="mt-7 flex items-center gap-2 border-t border-amber-100 pt-4 font-vietnam text-xs font-semibold text-slate-500">
             <Sparkles size={16} className="shrink-0 text-amber-500" aria-hidden="true" />
             <span>{item.sourceLabel}. Không phải câu hỏi nguyên văn SGK hoặc đề thi chính thức.</span>
@@ -1329,7 +1439,7 @@ export const PracticePortal: React.FC<PracticePortalProps> = ({
   }
   const set = route.kind === 'practice-competition-set'
     ? getCompetitionSet(route.track, route.grade, route.setNumber)
-    : getPracticeSet(route.subject, route.grade, route.setNumber);
+    : getPracticeSet(route.subject, route.grade, route.setNumber, route.setSource);
   if (!set) return <PracticeHub onNavigate={onNavigate} onBack={onBack} />;
   return (
     <PracticeExam

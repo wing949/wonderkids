@@ -1,6 +1,7 @@
 import type { GradeLevel } from '../../types/index.ts';
 import { buildPracticePack } from './generator.ts';
 import { buildCompetitionPack } from './competitionGenerator.ts';
+import { getViolympicExamSet } from './violympicExamSets.ts';
 import type { CompetitionPracticeTrack, PracticeAudio, PracticePackManifest, PracticeSet, PracticeSubject } from './types.ts';
 
 export * from './types.ts';
@@ -9,6 +10,9 @@ export * from './audit.ts';
 export * from './releaseGate.ts';
 export * from './competitionGenerator.ts';
 export * from './competitionReleaseGate.ts';
+export * from './violympicReferenceBank.ts';
+export * from './violympicDigitalReferenceBank.ts';
+export * from './violympicExamSets.ts';
 
 export const PRACTICE_SUBJECTS: PracticeSubject[] = ['math', 'vietnamese', 'english', 'math_en'];
 export const PRACTICE_GRADES: GradeLevel[] = [1, 2, 3, 4, 5];
@@ -31,8 +35,17 @@ export function getPracticePacks(): PracticePackManifest[] {
   );
 }
 
-export function getPracticeSet(subject: PracticeSubject, grade: GradeLevel, setNumber: number): PracticeSet | null {
-  if (!Number.isInteger(setNumber) || setNumber < 1 || setNumber > 12) return null;
+export function getPracticeSet(
+  subject: PracticeSubject,
+  grade: GradeLevel,
+  setNumber: number,
+  setSource?: 'authored' | 'violympic',
+): PracticeSet | null {
+  if (!Number.isInteger(setNumber) || setNumber < 1) return null;
+  if (setSource === 'violympic' || setNumber > 12) {
+    const vSet = getViolympicExamSet(subject, grade, setNumber);
+    if (vSet) return vSet;
+  }
   return getPracticePack(subject, grade).sets[setNumber - 1] || null;
 }
 

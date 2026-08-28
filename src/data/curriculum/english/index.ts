@@ -19,3 +19,8 @@ export const ENGLISH_CURRICULUM_BY_GRADE: Record<GradeLevel, CurriculumTopic[]> 
 };
 
 export * from './officialEnglishCatalog.ts';
+export * from './bookManifests.ts';
+export * from './grade1PhonicsGames.ts';
+export * from './readingPassages.ts';
+export * from './englishQuestionEngine.ts';
+export * from './englishSupplementContent.ts';

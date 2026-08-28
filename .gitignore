@@ -44,6 +44,7 @@ scratch/
 .vercel
 
 # Private SGK source cache (official page images and OCR drafts)
+.cache/
 .cache/sgk/
 .cache/ocr/
 .cache/violympic/
@@ -60,4 +61,3 @@ __pycache__/
 test_bunny_pollinations.jpg
 test_rabbit_3d.png
 implementation_plan_*
-

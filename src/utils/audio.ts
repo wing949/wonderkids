@@ -727,7 +727,8 @@ export const voiceManager = {
   startListening: (
     onInterim: (text: string) => void,
     onFinal: (text: string) => void,
-    onError: (err: any) => void
+    onError: (err: any) => void,
+    lang: 'vi-VN' | 'en-US' = 'vi-VN'
   ) => {
     if (typeof window === 'undefined') return;
 
@@ -746,7 +747,7 @@ export const voiceManager = {
 
       const recognition = new SpeechRecClass();
       activeRecognition = recognition;
-      recognition.lang = 'vi-VN';
+      recognition.lang = lang;
       recognition.continuous = true;
       recognition.interimResults = true;
 

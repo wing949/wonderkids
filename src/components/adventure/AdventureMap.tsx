@@ -140,10 +140,10 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
   // Mascot avatar asset path
   const mascotImg =
     selectedSubject === 'math'
-      ? '/assets/bobo_math.jpg'
+      ? '/assets/bobo_math.webp'
       : selectedSubject === 'vietnamese'
-        ? '/assets/miumiu_story.jpg'
-        : '/assets/pipi_english.jpg';
+        ? '/assets/miumiu_story.webp'
+        : '/assets/pipi_english.webp';
 
   const mascotName =
     selectedSubject === 'math' ? 'Cú BoBo' : selectedSubject === 'vietnamese' ? 'Cáo MiuMiu' : 'Cá Heo PiPi';

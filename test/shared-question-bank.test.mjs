@@ -7,6 +7,8 @@ import {
   getQuestionBankTopics,
 } from '../src/data/practice/questionBank.ts';
 import { getCompetitionPacks, getPracticePacks } from '../src/data/practice/index.ts';
+import { getViolympicDigitalItems } from '../src/data/practice/violympicDigitalReferenceBank.ts';
+import { getViolympicReferenceItems } from '../src/data/practice/violympicReferenceBank.ts';
 import {
   ARENA_LEADERBOARD_STORAGE_KEY,
   readArenaLeaderboard,
@@ -22,7 +24,17 @@ function memoryStorage() {
   };
 }
 
-test('ba cuộc thi lấy câu trực tiếp từ ngân hàng hiện có, không tạo bản sao nội dung', () => {
+function questionSignature(item) {
+  const normalize = (value) => String(value)
+    .normalize('NFKC')
+    .toLocaleLowerCase('vi')
+    .replace(/[?!.:,;]+/gu, '')
+    .replace(/\s+/gu, ' ')
+    .trim();
+  return `${normalize(item.prompt)}|${normalize(Array.isArray(item.correctAnswer) ? item.correctAnswer.join('|') : item.correctAnswer)}`;
+}
+
+test('ba cuộc thi lấy câu trực tiếp từ ngân hàng hiện có và nguồn Violympic đã kiểm duyệt, không tạo bản sao nội dung', () => {
   const generalIds = new Set(getPracticePacks()
     .flatMap((pack) => pack.sets)
     .flatMap((set) => set.sections)
@@ -33,6 +45,8 @@ test('ba cuộc thi lấy câu trực tiếp từ ngân hàng hiện có, không
     .flatMap((set) => set.sections)
     .flatMap((section) => section.items)
     .map((item) => item.id));
+  const violympicDigitalIds = new Set(getViolympicDigitalItems().map((item) => item.id));
+  const violympicOcrIds = new Set(getViolympicReferenceItems().map((item) => item.id));
 
   const violympic = getQuestionBankItems({ competition: 'violympic', grade: 2, subject: 'math' });
   const ioe = getQuestionBankItems({ competition: 'ioe', grade: 2, subject: 'english' });
@@ -41,9 +55,15 @@ test('ba cuộc thi lấy câu trực tiếp từ ngân hàng hiện có, không
   assert.ok(violympic.length >= 30);
   assert.ok(ioe.length >= 30);
   assert.ok(trangNguyen.length >= 30);
-  assert.ok(violympic.every((item) => generalIds.has(item.id)));
+  assert.ok(violympic.every((item) => (
+    generalIds.has(item.id)
+    || violympicDigitalIds.has(item.id)
+    || violympicOcrIds.has(item.id)
+  )));
+  assert.equal(new Set(violympic.map((item) => item.id)).size, violympic.length);
+  assert.equal(new Set(violympic.map(questionSignature)).size, violympic.length);
   assert.ok(ioe.every((item) => competitionIds.has(item.id)));
-  assert.ok(trangNguyen.every((item) => competitionIds.has(item.id)));
+  assert.ok(trangNguyen.every((item) => competitionIds.has(item.id) || violympicOcrIds.has(item.id)));
 });
 
 test('Kho luyện đề lọc được chủ đề, mức độ và số lượng câu nhưng không bật đồng hồ', () => {

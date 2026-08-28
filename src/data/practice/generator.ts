@@ -346,6 +346,8 @@ function mathItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex
     return makeItem(id, {
       type: 'short_answer',
       prompt: english ? enQuestions[sectionIndex] : viQuestions[sectionIndex],
+      imageUrl: '/assets/practice/apples_basket.webp',
+      imageAlt: 'Giỏ trái cây 3D Disney Pixar',
       correctAnswer: String(answer),
       explanation: english ? `Add the two amounts: ${first} + ${added} = ${answer}.` : `Ta tính ${first} + ${added} = ${answer}.`,
       topic: practiceTopic(english ? 'math_en' : 'math', grade, family),
@@ -371,6 +373,8 @@ function mathItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex
             `Hoạt động bắt đầu lúc ${startHour} giờ và kéo dài ${durationHours} giờ. Hãy tìm giờ kết thúc.`,
             `Giờ học bắt đầu lúc ${startHour} giờ và kéo dài ${durationHours} giờ. Giờ học kết thúc khi nào?`,
           ][sectionIndex],
+        imageUrl: '/assets/practice/cute_clock.webp',
+        imageAlt: 'Đồng hồ 3D Disney Pixar',
         correctAnswer: english ? `${endHour}:00` : `${endHour} giờ`,
         explanation: english ? `${startHour}:00 + ${durationHours} hour${durationHours > 1 ? 's' : ''} = ${endHour}:00.` : `${startHour} giờ + ${durationHours} giờ = ${endHour} giờ.`,
         topic: practiceTopic(english ? 'math_en' : 'math', grade, family),
@@ -487,6 +491,8 @@ function mathItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex
       return makeItem(id, {
         type: 'single_choice',
         prompt: english ? `Which fraction is equivalent to ${numerator}/${denominator}?` : `Phân số nào bằng ${numerator}/${denominator}?`,
+        imageUrl: '/assets/practice/pizza_fractions.webp',
+        imageAlt: 'Bánh pizza 3D Disney Pixar chia phần đều',
         options: choice.options,
         correctAnswer: choice.correctAnswer,
         explanation: english ? `Multiply both terms by ${factor}: ${numerator}/${denominator} = ${equivalent}.` : `Nhân cả tử số và mẫu số với ${factor}: ${numerator}/${denominator} = ${equivalent}.`,
@@ -505,6 +511,8 @@ function mathItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex
       return makeItem(id, {
         type: 'single_choice',
         prompt: english ? `Calculate ${firstNumerator}/${denominator} + ${secondNumerator}/${denominator}.` : `Tính ${firstNumerator}/${denominator} + ${secondNumerator}/${denominator}.`,
+        imageUrl: '/assets/practice/pizza_fractions.webp',
+        imageAlt: 'Bánh pizza 3D Disney Pixar chia phần đều',
         options: choice.options,
         correctAnswer: choice.correctAnswer,
         explanation: english ? `Add the numerators: ${firstNumerator} + ${secondNumerator} = ${sumNumerator}, so the sum is ${answer}.` : `Cộng hai tử số: ${firstNumerator} + ${secondNumerator} = ${sumNumerator}, nên tổng là ${answer}.`,
@@ -544,6 +552,8 @@ function mathItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex
             `Đếm số cạnh thẳng của ${shape}.`,
             `Chọn số cạnh thẳng có trong ${shape}.`,
           ][sectionIndex],
+        imageUrl: '/assets/practice/geometry_shapes.webp',
+        imageAlt: 'Khối hình học 3D Disney Pixar',
         options: choice.options,
         correctAnswer: choice.correctAnswer,
         explanation: english ? `A ${shape} has ${sides} straight sides.` : `${shape[0].toLocaleUpperCase('vi')}${shape.slice(1)} có ${sides} cạnh thẳng.`,
@@ -558,6 +568,8 @@ function mathItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex
       return makeItem(id, {
         type: 'short_answer',
         prompt: english ? `One ribbon is ${longLength} cm long and another is ${shortLength} cm long. How many centimetres longer is the first ribbon?` : `Một đoạn dây dài ${longLength} cm, đoạn kia dài ${shortLength} cm. Đoạn thứ nhất dài hơn đoạn thứ hai bao nhiêu xăng-ti-mét?`,
+        imageUrl: '/assets/practice/geometry_shapes.webp',
+        imageAlt: 'Khối hình học 3D Disney Pixar',
         correctAnswer: String(difference),
         explanation: `${longLength} − ${shortLength} = ${difference} cm.`,
         topic: practiceTopic(english ? 'math_en' : 'math', grade, family),
@@ -571,6 +583,8 @@ function mathItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex
       return makeItem(id, {
         type: 'short_answer',
         prompt: english ? `A rectangle is ${rectLength} cm long and ${rectWidth} cm wide. What is its area?` : `Hình chữ nhật dài ${rectLength} cm, rộng ${rectWidth} cm. Diện tích hình đó là bao nhiêu xăng-ti-mét vuông?`,
+        imageUrl: '/assets/practice/geometry_shapes.webp',
+        imageAlt: 'Khối hình học 3D Disney Pixar',
         correctAnswer: String(area),
         explanation: `${rectLength} × ${rectWidth} = ${area} cm².`,
         topic: practiceTopic(english ? 'math_en' : 'math', grade, family),
@@ -749,6 +763,23 @@ function vietnameseItem(id: string, grade: GradeLevel, setNumber: number, sectio
   });
 }
 
+function getNounVisual(noun: string): { imageUrl?: string; imageAlt?: string } {
+  const n = noun.toLowerCase();
+  if (['cat'].includes(n)) return { imageUrl: '/assets/practice/cute_kittens.webp', imageAlt: 'Chú mèo 3D Disney Pixar' };
+  if (['dog'].includes(n)) return { imageUrl: '/assets/practice/puppy_park.webp', imageAlt: 'Chú cún 3D Disney Pixar' };
+  if (['rabbit', 'parrot'].includes(n)) return { imageUrl: '/assets/practice/bunnies_carrots.webp', imageAlt: 'Chú thỏ 3D Disney Pixar' };
+  if (['apple', 'orange', 'banana'].includes(n)) return { imageUrl: '/assets/practice/apples_basket.webp', imageAlt: 'Giỏ hoa quả 3D Disney Pixar' };
+  if (['book', 'pen', 'bag', 'classroom', 'library', 'computer room'].includes(n)) return { imageUrl: '/assets/curriculum/english/school_classroom.webp', imageAlt: 'Trường học và lớp học 3D Disney Pixar' };
+  if (['kitchen', 'garden'].includes(n)) return { imageUrl: '/assets/curriculum/english/family_home.webp', imageAlt: 'Ngôi nhà gia đình 3D Disney Pixar' };
+  if (['teacher', 'doctor', 'farmer'].includes(n)) return { imageUrl: '/assets/curriculum/english/jobs_professions.webp', imageAlt: 'Nghề nghiệp 3D Disney Pixar' };
+  if (['playground', 'stadium'].includes(n)) return { imageUrl: '/assets/curriculum/english/sports_playground.webp', imageAlt: 'Sân chơi thể thao 3D Disney Pixar' };
+  if (['supermarket', 'market', 'festival'].includes(n)) return { imageUrl: '/assets/curriculum/english/food_market.webp', imageAlt: 'Chợ và cửa hàng 3D Disney Pixar' };
+  if (['elephant', 'giraffe', 'crocodile', 'panda'].includes(n)) return { imageUrl: '/assets/curriculum/english/zoo_animals.webp', imageAlt: 'Động vật sở thú 3D Disney Pixar' };
+  if (['city', 'village', 'island', 'museum', 'cinema'].includes(n)) return { imageUrl: '/assets/curriculum/english/transport_city.webp', imageAlt: 'Thành phố và đường phố 3D Disney Pixar' };
+  if (['kite', 'robot', 'doll'].includes(n)) return { imageUrl: '/assets/practice/toy_train.webp', imageAlt: 'Đồ chơi 3D Disney Pixar' };
+  return {};
+}
+
 function englishItem(id: string, grade: GradeLevel, setNumber: number, sectionIndex: number, itemIndex: number): PracticeItem {
   const seed = grade * 10_000 + setNumber * 300 + sectionIndex * 100 + itemIndex * 13;
   const words = EN_WORDS[grade];
@@ -785,6 +816,7 @@ function englishItem(id: string, grade: GradeLevel, setNumber: number, sectionIn
     const article = /^[aeiou]/iu.test(noun) ? 'an' : 'a';
     const choice = choiceOptions(id, [article, article === 'a' ? 'an' : 'a', 'are'], article);
     const name = NAMES[hashedSeed % NAMES.length];
+    const visual = getNounVisual(noun);
     return makeItem(id, {
       type: 'single_choice',
       prompt: [
@@ -792,6 +824,8 @@ function englishItem(id: string, grade: GradeLevel, setNumber: number, sectionIn
         `${name} is naming the picture. Choose the correct word for “___ ${noun}”.`,
         `Help ${name} complete this noun phrase: “___ ${noun}”.`,
       ][sectionIndex],
+      imageUrl: visual.imageUrl,
+      imageAlt: visual.imageAlt,
       options: choice.options,
       correctAnswer: choice.correctAnswer,
       explanation: `We say “${article} ${noun}”.`,
@@ -823,6 +857,7 @@ function englishItem(id: string, grade: GradeLevel, setNumber: number, sectionIn
     const article = /^[aeiou]/iu.test(noun) ? 'an' : 'a';
     const passage = `${name} sees ${article} ${noun} after school. ${name} tells a friend about it.`;
     const choice = choiceOptions(id, [noun, nounDistractorOne, nounDistractorTwo], noun);
+    const visual = getNounVisual(noun);
     return makeItem(id, {
       type: 'single_choice',
       prompt: [
@@ -830,6 +865,8 @@ function englishItem(id: string, grade: GradeLevel, setNumber: number, sectionIn
         `Read the short text “${passage}” Then choose what ${name} sees.`,
         `After reading “${passage}”, answer the question: What does ${name} see?`,
       ][sectionIndex],
+      imageUrl: visual.imageUrl,
+      imageAlt: visual.imageAlt,
       options: choice.options,
       correctAnswer: choice.correctAnswer,
       explanation: `The passage says that ${name} sees ${article} ${noun}.`,

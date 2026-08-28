@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1130" width="800" height="1130">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdfbf7" />
+      <stop offset="100%" stop-color="#f5f0e6" />
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f0f9ff" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="800" height="1130" fill="url(#bgGrad)" />
+  <rect x="25" y="25" width="750" height="1080" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)" />
+
+  <!-- Top Header Banner -->
+  <rect x="25" y="25" width="750" height="85" rx="16" fill="url(#headerGrad)" />
+  <text x="50" y="65" font-family="Arial, sans-serif" font-weight="900" font-size="28" fill="#ffffff" letter-spacing="1">UNIT 5: IN THE CLASSROOM</text>
+  <text x="50" y="92" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#e0f2fe">Tiếng Anh 2 — Global Success (Tập 1) • NXB Giáo Dục Việt Nam</text>
+
+  <!-- Page Indicator Badge -->
+  <rect x="680" y="45" width="70" height="34" rx="17" fill="#ffffff" opacity="0.9" />
+  <text x="715" y="68" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#0369a1" text-anchor="middle">P. 24</text>
+
+  
+  <!-- SECTION 3: LET'S CHANT & SING -->
+  <g transform="translate(50, 135)">
+    <rect width="700" height="52" rx="14" fill="#f3e8ff" stroke="#e9d5ff" stroke-width="1.5" />
+    <circle cx="30" cy="26" r="16" fill="#9333ea" />
+    <text x="30" y="32" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="58" y="33" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#7e22ce">Let's chant and play 🎵</text>
+  </g>
+
+  <!-- Chant Lyrics Card -->
+  <g transform="translate(50, 205)">
+    <rect width="700" height="340" rx="20" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2" filter="url(#shadow)" />
+    <text x="350" y="50" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#6b21a8" text-anchor="middle">🎶 The In the classroom Chant 🎶</text>
+    
+    <text x="350" y="95" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#4c1d95" text-anchor="middle">QUESTION, question, question! Look at the question!</text>
+    
+    <text x="350" y="140" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#4c1d95" text-anchor="middle">QUIZ, quiz, quiz! Look at the quiz!</text>
+    
+    <text x="350" y="185" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#4c1d95" text-anchor="middle">QUIET, quiet, quiet! Look at the quiet!</text>
+    
+    <text x="350" y="275" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#e11d48" text-anchor="middle">Let's learn English every day!</text>
+  </g>
+
+  <!-- SECTION 4: READ AND MATCH / PRACTICE -->
+  <g transform="translate(50, 570)">
+    <rect width="700" height="52" rx="14" fill="#ccfbf1" stroke="#99f6e4" stroke-width="1.5" />
+    <circle cx="30" cy="26" r="16" fill="#0d9488" />
+    <text x="30" y="32" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="58" y="33" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#115e59">Read and match / Self-practice ✍️</text>
+  </g>
+
+  <!-- Matching Exercise Preview -->
+  <g transform="translate(50, 640)">
+    <rect width="700" height="390" rx="20" fill="#f0fdfa" stroke="#5eead4" stroke-width="2" filter="url(#shadow)" />
+    <text x="50" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#134e4a">Match the sentences with the correct picture:</text>
+    
+    <g transform="translate(40, 70)">
+      <rect width="300" height="65" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5" />
+      <text x="20" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#0f766e">1. I can see a question.</text>
+      <circle cx="340" cy="32" r="12" fill="#0d9488" />
+      <text x="340" y="37" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">➔</text>
+      <rect x="370" y="0" width="250" height="65" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5" />
+      <text x="495" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#0f766e" text-anchor="middle">Picture A (question)</text>
+    </g>
+    <g transform="translate(40, 165)">
+      <rect width="300" height="65" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5" />
+      <text x="20" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#0f766e">2. I can see a quiz.</text>
+      <circle cx="340" cy="32" r="12" fill="#0d9488" />
+      <text x="340" y="37" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">➔</text>
+      <rect x="370" y="0" width="250" height="65" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5" />
+      <text x="495" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#0f766e" text-anchor="middle">Picture B (quiz)</text>
+    </g>
+    <g transform="translate(40, 260)">
+      <rect width="300" height="65" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5" />
+      <text x="20" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#0f766e">3. I can see a quiet.</text>
+      <circle cx="340" cy="32" r="12" fill="#0d9488" />
+      <text x="340" y="37" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">➔</text>
+      <rect x="370" y="0" width="250" height="65" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5" />
+      <text x="495" y="38" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#0f766e" text-anchor="middle">Picture C (quiet)</text>
+    </g>
+  </g>
+  
+
+  <!-- Footer Pagination -->
+  <text x="400" y="1090" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Sách Giáo Khoa Tiếng Anh — Bộ Giáo Dục và Đào Tạo • Trang 24</text>
+</svg>

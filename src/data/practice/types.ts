@@ -17,6 +17,7 @@ export type PracticeItemType =
   | 'listening_choice'
   | 'listening_input';
 export type PracticeSetLevel = 'foundation' | 'acceleration' | 'advanced' | 'mock_exam';
+export type PracticeContentOrigin = 'system_generated' | 'reference_extracted';
 
 export interface PracticeOption {
   id: string;
@@ -53,10 +54,18 @@ export interface PracticeItem {
   topic: string;
   difficulty: PracticeDifficulty;
   points: number;
-  contentOrigin: 'system_generated';
+  contentOrigin: PracticeContentOrigin;
   verificationStatus: 'draft' | 'verified';
   sourceLabel: string;
   sourceHash: string;
+  sourceDocumentIds?: string[];
+  sourcePage?: number;
+  sourceQuestion?: string;
+  sourceLocator?: string;
+  sourcePageTextHash?: string;
+  sourceExcerptHash?: string;
+  imageUrl?: string;
+  imageAlt?: string;
   audio?: PracticeAudio;
 }
 

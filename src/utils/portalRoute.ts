@@ -12,8 +12,9 @@ export function getPortalForRoute(route: AppRoute): PortalView {
     case 'practice-set':
     case 'practice-competition-list':
     case 'practice-competition-set':
-    case 'practice-custom-set':
-      return 'practice';
+    case 'logic-hub':
+    case 'logic-game':
+      return 'logic';
     case 'admin': return 'admin-login';
     default: return 'student';
   }

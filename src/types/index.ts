@@ -24,7 +24,7 @@ export type MascotId =
 
 export type ThemeId = 'ocean' | 'space' | 'jungle' | 'candy' | 'sunny';
 
-export type PortalView = 'student' | 'parent' | 'admin' | 'admin-login' | 'adventure' | 'lesson' | 'exercise' | 'arena' | 'practice';
+export type PortalView = 'student' | 'parent' | 'admin' | 'admin-login' | 'adventure' | 'lesson' | 'exercise' | 'arena' | 'practice' | 'logic';
 
 export type QuestionType = 
   | 'bubble_choice' 
@@ -147,13 +147,19 @@ export interface Question {
   };
 }
 
+export interface VocabularyNote {
+  word: string;
+  meaning: string;
+  phonetic?: string;
+}
+
 export interface ReadingPassage {
   title: string;
   author?: string;
   genre?: 'poem' | 'story' | 'prose';
   content: string[]; // Các khổ thơ hoặc đoạn văn
   audioNarration?: string; // Đoạn text chuẩn để phát âm mẫu
-  vocabularyNotes?: { word: string; meaning: string }[];
+  vocabularyNotes?: VocabularyNote[];
   contentOrigin?: ContentOrigin;
   verificationStatus?: SourceVerificationStatus;
   sourcePages?: number[];

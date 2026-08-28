@@ -54,6 +54,11 @@ const PracticePortal = React.lazy(async () => {
   return { default: module.PracticePortal };
 });
 
+const LogicPortal = React.lazy(async () => {
+  const module = await import('./components/logic/LogicPortal');
+  return { default: module.LogicPortal };
+});
+
 const PortalLoading = () => (
   <div className="mx-auto flex min-h-[50vh] max-w-xl items-center justify-center px-6 text-center font-baloo text-lg font-black text-brand-dark">
     <span className="rounded-3xl bg-white/95 px-6 py-5 shadow-washi">Đang mở góc học tập… ✨</span>
@@ -187,6 +192,9 @@ export const App: React.FC = () => {
   const [adminTab, setAdminTab] = useState<AdminTab>(() => (
     initialRoute.kind === 'admin' ? initialRoute.tab : 'curriculum'
   ));
+  const [logicGameId, setLogicGameId] = useState<string | undefined>(() => (
+    initialRoute.kind === 'logic-game' ? initialRoute.gameId : undefined
+  ));
 
   const [activeLesson, setActiveLesson] = useState<LessonNode | null>(null);
   const [isLessonLoading, setIsLessonLoading] = useState(initialRoute.kind === 'exercise');
@@ -306,6 +314,11 @@ export const App: React.FC = () => {
         if (route.kind !== 'practice-hub') setCurrentGrade(route.grade);
         setCurrentPortal('practice');
         return;
+      case 'logic-hub':
+      case 'logic-game':
+        setLogicGameId(route.kind === 'logic-game' ? route.gameId : undefined);
+        setCurrentPortal('logic');
+        return;
       case 'admin':
         setAdminTab(route.tab);
         setCurrentPortal(isAdminAuthenticated ? 'admin' : 'admin-login');
@@ -360,6 +373,8 @@ export const App: React.FC = () => {
       navigateTo({ kind: 'arena' });
     } else if (portal === 'practice') {
       navigateTo({ kind: 'practice-hub' });
+    } else if (portal === 'logic') {
+      navigateTo({ kind: 'logic-hub' });
     }
   };
 
@@ -390,7 +405,11 @@ export const App: React.FC = () => {
 
   // Handler: Select subject from Dashboard
   const handleSelectSubject = (subject: SubjectType) => {
-    navigateTo({ kind: 'adventure', subject, grade: currentGrade });
+    if (subject === 'logic') {
+      navigateTo({ kind: 'logic-hub' });
+    } else {
+      navigateTo({ kind: 'adventure', subject, grade: currentGrade });
+    }
   };
 
   // Handler: Lesson Completed
@@ -474,6 +493,7 @@ export const App: React.FC = () => {
               onSelectSubject={handleSelectSubject}
               onOpenAdventure={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
               onOpenPractice={() => navigateTo({ kind: 'practice-hub' })}
+              onOpenLogic={() => navigateTo({ kind: 'logic-hub' })}
               onOpenShop={() => navigateTo({ kind: 'shop' })}
               onOpenQuests={() => navigateTo({ kind: 'quests' })}
               onMascotChange={handleMascotChange}
@@ -499,6 +519,7 @@ export const App: React.FC = () => {
                 key={`${activeLesson.id}-${lessonSessionKey}`}
                 lesson={activeLesson}
                 onExit={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
+                onSelectLesson={handleStartLesson}
                 onComplete={handleCompleteLesson}
               />
             </Suspense>
@@ -524,6 +545,25 @@ export const App: React.FC = () => {
                 onNavigate={navigateTo}
                 onBack={returnToStudentPortal}
                 onReward={(xp, stars) => {
+                  updateActiveProfile((prev) => ({
+                    ...prev,
+                    xp: prev.xp + xp,
+                    stars: prev.stars + stars,
+                  }));
+                }}
+              />
+            </Suspense>
+          )}
+
+          {currentPortal === 'logic' && (
+            <Suspense fallback={<PortalLoading />}>
+              <LogicPortal
+                profile={profile}
+                currentGrade={currentGrade}
+                onGradeChange={setCurrentGrade}
+                onBackToStudent={returnToStudentPortal}
+                initialGameId={logicGameId}
+                onRewardStars={(stars, xp) => {
                   updateActiveProfile((prev) => ({
                     ...prev,
                     xp: prev.xp + xp,

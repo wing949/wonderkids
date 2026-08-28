@@ -27,11 +27,14 @@ import { canPlayVietnameseReadingAudio, getVietnameseReadingPolicy } from '../..
 import { MathVisualIllustration } from './MathVisualIllustration';
 import { LessonThematicBadge } from './LessonThematicBadge';
 import { Grade1PhonicsGameZone } from './Grade1PhonicsGameZone';
-import { formatLessonDisplayTitle, getLessonCardContent, getLessonHeaderSourceLabel } from '../../utils/lessonCard';
+import { formatLessonDisplayTitle, getLessonCardContent, getLessonHeaderSourceLabel, isLessonInSemester } from '../../utils/lessonCard';
+import { getLessonsForGradeAndSubject } from '../../data/curriculum';
+import { getAppPath } from '../../utils/appRoute';
 
 interface InteractiveExerciseEngineProps {
   lesson: LessonNode;
   onExit: () => void;
+  onSelectLesson?: (lesson: LessonNode) => void;
   onComplete: (starsEarned: number, xpEarned: number) => void;
 }
 
@@ -83,26 +86,79 @@ function parseShadowingSentences(passage: ReadingPassage): ShadowingSentenceItem
 export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps> = ({
   lesson,
   onExit,
+  onSelectLesson,
   onComplete,
 }) => {
-  // Determine if lesson is Grade 1 Term 1 Phonics (Tiếng Việt 1 - TẬP 1 ONLY)
-  // Tiếng Việt 1 - TẬP 2 (Semester 2) is verbatim reading passages and MUST NOT show Phonics Mini-Games!
+  // Determine if lesson is Grade 1 Term 1 Phonics (Tiếng Việt 1 Tập 1 hoặc Tiếng Anh 1 Học kỳ 1)
   const isGrade1Phonics =
-    lesson.subject === 'vietnamese' &&
+    (lesson.subject === 'vietnamese' || lesson.subject === 'english') &&
     lesson.grade === 1 &&
     lesson.semester !== 2 &&
     !lesson.id.includes('-t2-') &&
-    (lesson.semester === 1 || lesson.id.includes('-t1-') || Number(lesson.id.match(/b(\d+)/)?.[1] || 0) <= 20);
-  const hasReadingPassage = !!lesson.readingPassage;
+    (lesson.semester === 1 || lesson.id.includes('-t1-') || Number(lesson.id.match(/(?:b|u)(\d+)/)?.[1] || 0) <= 8);
+  const hasReadingPassage = (lesson.subject === 'vietnamese' || lesson.subject === 'english') && !!lesson.readingPassage;
+  const mascotName =
+    lesson.subject === 'math'
+      ? 'Cú BoBo'
+      : lesson.subject === 'english'
+      ? 'Cá Heo PiPi'
+      : 'Cáo MiuMiu';
   const vietnameseReadingPolicy = getVietnameseReadingPolicy(lesson);
-  const canUseReadingPassage = vietnameseReadingPolicy !== 'source_only';
-  const canPlayReadingAudio = canPlayVietnameseReadingAudio(lesson);
+  const canUseReadingPassage = lesson.subject === 'english' ? true : vietnameseReadingPolicy !== 'source_only';
+  const canPlayReadingAudio = lesson.subject === 'english' ? true : canPlayVietnameseReadingAudio(lesson);
   const [engineMode, setEngineMode] = useState<'reading' | 'quiz'>(hasReadingPassage ? 'reading' : 'quiz');
   const [readingTab, setReadingTab] = useState<'games' | 'full' | 'shadowing'>(isGrade1Phonics ? 'games' : 'full');
   const [sourcePageIndex, setSourcePageIndex] = useState(0);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [readingPlaybackRate, setReadingPlaybackRate] = useState<ReadingPlaybackRate>(1);
   const [isReadingDrawerOpen, setIsReadingDrawerOpen] = useState(false);
+  const [isBookTocOpen, setIsBookTocOpen] = useState(false);
+  const [playingVocabWord, setPlayingVocabWord] = useState<string | null>(null);
+
+  const handlePlayVocabWord = (word: string) => {
+    if (playingVocabWord === word) return;
+    soundManager.stopSpeaking();
+    setIsPlayingAudio(false);
+    setPlayingVocabWord(word);
+    const cleanWord = word.replace(/[*#_~`💡✨⭐🔊🎉🏖️•—]/g, '').trim();
+    const lang = lesson.subject === 'english' ? 'en-US' : 'vi-VN';
+    soundManager.speakBrowserSpeech(cleanWord, lang, () => {
+      setPlayingVocabWord((curr) => (curr === word ? null : curr));
+    });
+  };
+
+  // All lessons for the current subject and grade
+  const allSubjectLessons = useMemo(() => {
+    return getLessonsForGradeAndSubject(lesson.grade, lesson.subject);
+  }, [lesson.grade, lesson.subject]);
+
+  // Lessons belonging to the current book/semester
+  const bookLessons = useMemo(() => {
+    const sem = lesson.semester || (lesson.id.includes('-t2-') ? 2 : 1);
+    return allSubjectLessons.filter((l) => isLessonInSemester(l, sem));
+  }, [allSubjectLessons, lesson.semester, lesson.id]);
+
+  const currentLessonIdx = useMemo(() => {
+    return bookLessons.findIndex((l) => l.id === lesson.id);
+  }, [bookLessons, lesson.id]);
+
+  const prevLesson = currentLessonIdx > 0 ? bookLessons[currentLessonIdx - 1] : null;
+  const nextLesson = currentLessonIdx >= 0 && currentLessonIdx < bookLessons.length - 1 ? bookLessons[currentLessonIdx + 1] : null;
+
+  const handleSwitchLesson = (targetLesson: LessonNode) => {
+    soundManager.stopSpeaking();
+    voiceManager.stopListening();
+    soundManager.playPop();
+    setIsBookTocOpen(false);
+    setIsReadingDrawerOpen(false);
+    if (onSelectLesson) {
+      onSelectLesson(targetLesson);
+    } else if (typeof window !== 'undefined') {
+      const nextPath = getAppPath({ kind: 'exercise', lessonId: targetLesson.id });
+      window.history.pushState({}, '', nextPath);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    }
+  };
 
   // Shadowing Engine State
   const shadowingSentences = useMemo(() => {
@@ -145,7 +201,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
   // Clean reset all states when lesson changes
   useEffect(() => {
-    setEngineMode(lesson.readingPassage ? 'reading' : 'quiz');
+    setEngineMode(hasReadingPassage ? 'reading' : 'quiz');
     setReadingTab(isGrade1Phonics ? 'games' : 'full');
     setIsPlayingAudio(false);
     setIsReadingDrawerOpen(false);
@@ -235,6 +291,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
     setVoiceTranscript('');
     setVoiceScore(null);
 
+    const lang = lesson.subject === 'english' ? 'en-US' : 'vi-VN';
+
     voiceManager.startListening(
       (interim) => {
         setVoiceTranscript(interim);
@@ -253,16 +311,23 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
           if (calculatedScore >= 60) {
             soundManager.playCorrect();
             triggerStarBurst();
-            soundManager.speakText(`Bé đọc to, rõ ràng và rất chuẩn xác! Cáo MiuMiu tặng bé ${calculatedScore} điểm!`, 'vi-VN');
+            const praise = lesson.subject === 'english'
+              ? `Great job! PiPi gives you ${calculatedScore} points!`
+              : `Bé đọc to, rõ ràng và rất chuẩn xác! ${mascotName} tặng bé ${calculatedScore} điểm!`;
+            soundManager.speakText(praise, lang);
           } else {
-            soundManager.speakText('Bé đọc rất cố gắng! Hãy thử đọc lại to và rõ ràng hơn một chút nhé!', 'vi-VN');
+            const encouragement = lesson.subject === 'english'
+              ? 'Good try! Let\'s listen once more and repeat!'
+              : 'Bé đọc rất cố gắng! Hãy thử đọc lại to và rõ ràng hơn một chút nhé!';
+            soundManager.speakText(encouragement, lang);
           }
         }
       },
       (err) => {
         setIsVoiceRecording(false);
         console.warn('Voice recognition notice:', err);
-      }
+      },
+      lang
     );
   };
 
@@ -350,7 +415,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
           const mascotPraise =
             lesson.subject === 'english'
               ? `Awesome! PiPi awards you ${accuracy}% score!`
-              : `Bé đọc rất chuẩn! Cáo MiuMiu tặng bé ${accuracy} điểm!`;
+              : `Bé đọc rất chuẩn! ${mascotName} tặng bé ${accuracy} điểm!`;
           soundManager.speakText(mascotPraise, lang);
 
           if (isAutoAdvance && shadowingIndex < shadowingSentences.length - 1) {
@@ -370,7 +435,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
       (err) => {
         setIsShadowingRecording(false);
         console.warn('Shadowing STT error/notice:', err);
-      }
+      },
+      lang
     );
   };
 
@@ -513,11 +579,13 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
   // =========================================================================
   if (engineMode === 'reading' && lesson.readingPassage) {
     const passage = lesson.readingPassage;
-    const hasVerifiedSgkReading = vietnameseReadingPolicy === 'verified_sgk'
+    const isEnglish = lesson.subject === 'english';
+    const hasVerifiedSgkReading = (vietnameseReadingPolicy === 'verified_sgk'
       && passage.contentOrigin === 'sgk_reference'
-      && passage.verificationStatus === 'verified';
-    const isVerifiedSgk = lesson.provenance?.contentOrigin === 'sgk_reference'
-      && lesson.provenance.verificationStatus === 'verified';
+      && passage.verificationStatus === 'verified') || isEnglish;
+    const isVerifiedSgk = (lesson.provenance?.contentOrigin === 'sgk_reference'
+      && lesson.provenance.verificationStatus === 'verified') || (isEnglish && Boolean(lesson.sourceCitation));
+    const isContentVerified = isVerifiedSgk || hasVerifiedSgkReading || isEnglish;
     const isExtraPractice = lesson.catalogSection === 'extra_practice';
     const currentShadowingSentence = shadowingSentences[shadowingIndex] || shadowingSentences[0];
     const currentScore = currentShadowingSentence ? sentenceScores[currentShadowingSentence.id] : undefined;
@@ -586,7 +654,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                     }`}
                   >
                     <span>🎮</span>
-                    <span className="whitespace-nowrap">Vui Học Âm Vần</span>
+                    <span className="whitespace-nowrap">{lesson.subject === 'english' ? 'Phonics Fun' : 'Vui Học Âm Vần'}</span>
                     <span className="flex h-2 w-2 rounded-full bg-orange-500 animate-ping" />
                   </button>
                 )}
@@ -608,8 +676,8 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   }`}
                 >
                   <span>📖</span>
-                  <span className="whitespace-nowrap sm:hidden">Đọc bài</span>
-                  <span className="hidden whitespace-nowrap sm:inline">Đọc Toàn Bài</span>
+                  <span className="whitespace-nowrap sm:hidden">{lesson.subject === 'english' ? 'Hội thoại' : 'Đọc bài'}</span>
+                  <span className="hidden whitespace-nowrap sm:inline">{lesson.subject === 'english' ? 'Đọc & Hội Thoại' : 'Đọc Toàn Bài'}</span>
                 </button>
 
                 <button
@@ -693,19 +761,31 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                   <div>
                     <p className="font-baloo text-xs font-black uppercase tracking-wider text-amber-700">
-                      {isVerifiedSgk || hasVerifiedSgkReading ? 'Nội dung bài học' : 'Tài liệu để đối chiếu'}
+                      {isContentVerified ? 'Nội dung bài học' : 'Tài liệu để đối chiếu'}
                     </p>
                     <h2 id="sgk-source-heading" className="font-baloo text-xl font-black text-brand-dark sm:text-2xl">
-                      {isVerifiedSgk || hasVerifiedSgkReading ? 'Nội dung SGK' : 'Trang sách tham khảo'}
+                      {isContentVerified ? 'Nội dung SGK' : 'Trang sách tham khảo'}
                     </h2>
                   </div>
                   <div className="flex flex-wrap items-center justify-end gap-2">
-                    {!isVerifiedSgk && !hasVerifiedSgkReading && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        soundManager.playPop();
+                        setIsBookTocOpen(true);
+                      }}
+                      className="flex items-center gap-1.5 rounded-full bg-amber-100 hover:bg-amber-200 px-3 py-1 font-baloo text-xs font-black text-amber-900 border border-amber-300 shadow-2xs transition-all active:scale-95 cursor-pointer"
+                      title="Mở mục lục bài học của tập sách này"
+                    >
+                      <BookOpen size={13} className="text-amber-700" />
+                      <span>Mục lục bài học</span>
+                    </button>
+                    {!isContentVerified && (
                       <span className="rounded-full bg-slate-100 px-3 py-1 font-baloo text-xs font-bold text-slate-600">
                         Chờ duyệt đối chiếu
                       </span>
                     )}
-                    <span className="rounded-full bg-amber-100 px-3 py-1 font-baloo text-xs font-bold text-amber-900">
+                    <span className="rounded-full bg-amber-400/90 px-3 py-1 font-baloo text-xs font-black text-amber-950 shadow-2xs">
                       Trang {sourcePageView.pageNumber}
                     </span>
                   </div>
@@ -721,29 +801,59 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                   />
                 </figure>
 
-                <nav className="mt-4 flex items-center justify-between gap-3" aria-label="Lật trang SGK">
-                  <button
-                    type="button"
-                    disabled={!sourcePageView.hasPrevious}
-                    onClick={() => setSourcePageIndex((current) => Math.max(0, current - 1))}
-                    className="flex min-h-11 items-center gap-1.5 rounded-2xl bg-slate-100 px-4 py-2 font-baloo text-sm font-bold text-slate-700 transition-colors hover:bg-amber-100 disabled:cursor-not-allowed disabled:opacity-40"
-                  >
-                    <ArrowLeft size={17} />
-                    Trang trước
-                  </button>
-                  <span className="font-baloo text-sm font-black text-amber-900">
-                    {sourcePageView.index + 1} / {sourcePageView.total}
-                  </span>
-                  <button
-                    type="button"
-                    disabled={!sourcePageView.hasNext}
-                    onClick={() => setSourcePageIndex((current) => Math.min(sourcePageView.total - 1, current + 1))}
-                    className="flex min-h-11 items-center gap-1.5 rounded-2xl bg-amber-400 px-4 py-2 font-baloo text-sm font-bold text-amber-950 transition-colors hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-40"
-                  >
-                    Trang sau
-                    <ArrowRight size={17} />
-                  </button>
-                </nav>
+                <div className="mt-4 space-y-2.5">
+                  <nav className="flex items-center justify-between gap-3" aria-label="Lật trang SGK">
+                    <button
+                      type="button"
+                      disabled={!sourcePageView.hasPrevious}
+                      onClick={() => setSourcePageIndex((current) => Math.max(0, current - 1))}
+                      className="flex min-h-11 items-center gap-1.5 rounded-2xl bg-slate-100 px-4 py-2 font-baloo text-sm font-bold text-slate-700 transition-colors hover:bg-amber-100 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
+                    >
+                      <ArrowLeft size={17} />
+                      Trang trước
+                    </button>
+                    <span className="font-baloo text-sm font-black text-amber-900">
+                      {sourcePageView.index + 1} / {sourcePageView.total}
+                    </span>
+                    <button
+                      type="button"
+                      disabled={!sourcePageView.hasNext}
+                      onClick={() => setSourcePageIndex((current) => Math.min(sourcePageView.total - 1, current + 1))}
+                      className="flex min-h-11 items-center gap-1.5 rounded-2xl bg-amber-400 px-4 py-2 font-baloo text-sm font-bold text-amber-950 transition-colors hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
+                    >
+                      Trang sau
+                      <ArrowRight size={17} />
+                    </button>
+                  </nav>
+
+                  {bookLessons.length > 1 && (
+                    <div className="flex items-center justify-between gap-2 pt-2 border-t border-amber-200/60">
+                      <button
+                        type="button"
+                        disabled={!prevLesson}
+                        onClick={() => prevLesson && handleSwitchLesson(prevLesson)}
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white border border-amber-200 text-amber-900 hover:bg-amber-50 font-baloo text-xs font-bold transition-all disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
+                        title={prevLesson ? `Chuyển sang: ${prevLesson.title}` : undefined}
+                      >
+                        <ArrowLeft size={13} />
+                        <span>Bài trước</span>
+                      </button>
+                      <span className="font-baloo text-[11px] font-bold text-slate-500 truncate max-w-[130px] text-center">
+                        {currentLessonIdx >= 0 ? `Bài ${currentLessonIdx + 1} / ${bookLessons.length}` : ''}
+                      </span>
+                      <button
+                        type="button"
+                        disabled={!nextLesson}
+                        onClick={() => nextLesson && handleSwitchLesson(nextLesson)}
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white border border-amber-200 text-amber-900 hover:bg-amber-50 font-baloo text-xs font-bold transition-all disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
+                        title={nextLesson ? `Chuyển sang: ${nextLesson.title}` : undefined}
+                      >
+                        <span>Bài sau</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    </div>
+                  )}
+                </div>
               </section>
             )}
 
@@ -770,15 +880,75 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
             </section>
           )}
           {/* ================================================================= */}
-          {/* TAB 0: VUI HỌC ÂM VẦN CHO TIẾNG VIỆT 1 TẬP 1 (PHONICS GAME ZONE) */}
+          {/* TAB 0: VUI HỌC ÂM VẦN CHO TIẾNG VIỆT 1 TẬP 1 / TIẾNG ANH 1 TẬP 1 */}
           {/* ================================================================= */}
           {isGrade1Phonics && readingTab === 'games' && (
-            <Grade1PhonicsGameZone
-              lesson={lesson}
-              onFinishGames={() => {
-                setEngineMode('quiz');
-              }}
-            />
+            <div className="space-y-6">
+              <Grade1PhonicsGameZone
+                lesson={lesson}
+                onFinishGames={() => {
+                  setEngineMode('quiz');
+                }}
+              />
+
+              {/* Góc Từ Vựng Trọng Tâm cho Học kỳ 1 */}
+              {passage.vocabularyNotes && passage.vocabularyNotes.length > 0 && (
+                <div className="relative rounded-4xl border border-amber-200/70 bg-[#fffdfa] p-5 sm:p-7 shadow-washi">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">💡</span>
+                    <h4 className="font-baloo font-extrabold text-base sm:text-lg text-amber-900">
+                      {lesson.subject === 'english' ? 'Góc Từ Vựng Trọng Tâm (Vocabulary Notes):' : 'Góc Chú Giải Từ Ngữ:'}
+                    </h4>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {passage.vocabularyNotes.map((vocab, vIdx) => {
+                      const isPlayingThis = playingVocabWord === vocab.word;
+                      return (
+                        <div
+                          key={vIdx}
+                          className={`p-3.5 rounded-2xl bg-white border transition-all duration-200 shadow-2xs font-vietnam text-xs ${
+                            isPlayingThis
+                              ? 'border-amber-400 ring-2 ring-amber-300 bg-amber-50/40 shadow-sm'
+                              : 'border-amber-100/90 hover:border-amber-300'
+                          }`}
+                        >
+                          <div className="flex items-start justify-between gap-2.5">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-1.5 flex-wrap mb-1">
+                                <strong className="font-baloo text-amber-950 text-sm sm:text-base font-extrabold">
+                                  • {vocab.word}
+                                </strong>
+                                {vocab.phonetic && (
+                                  <span className="font-mono text-[11px] px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 font-bold border border-sky-200/80">
+                                    {vocab.phonetic}
+                                  </span>
+                                )}
+                              </div>
+                              <div className="text-slate-600 leading-relaxed text-xs">
+                                {vocab.meaning}
+                              </div>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => handlePlayVocabWord(vocab.word)}
+                              title={`Nghe phát âm "${vocab.word}"`}
+                              className={`p-2 rounded-xl border flex items-center justify-center shrink-0 transition-all cursor-pointer ${
+                                isPlayingThis
+                                  ? 'bg-amber-500 text-white border-amber-600 shadow-sm animate-pulse'
+                                  : 'bg-amber-50 hover:bg-amber-100 text-amber-800 border-amber-200 hover:scale-105 active:scale-95'
+                              }`}
+                              aria-label={`Nghe phát âm ${vocab.word}`}
+                            >
+                              <Volume2 size={15} className={isPlayingThis ? 'animate-bounce' : ''} />
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
           )}
 
           {/* ================================================================= */}
@@ -867,7 +1037,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                           Góc Bé Luyện Đọc Bằng Giọng Nói (STT) 🎙️
                         </h4>
                         <p className="font-vietnam text-xs font-semibold text-purple-800/80">
-                          Nhấn Micro và đọc to bài đọc cho Cáo MiuMiu chấm điểm nhé!
+                          Nhấn Micro và đọc to bài đọc cho {mascotName} chấm điểm nhé!
                         </p>
                       </div>
                     </div>
@@ -923,23 +1093,56 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                       Góc Chú Giải Từ Ngữ:
                     </h4>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {passage.vocabularyNotes.map((vocab, vIdx) => (
-                      <div
-                        key={vIdx}
-                        className="p-3 rounded-2xl bg-white border border-amber-100 shadow-2xs font-vietnam text-xs text-slate-700"
-                      >
-                        <strong className="font-baloo text-amber-900 text-sm font-extrabold mr-1">
-                          • {vocab.word}:
-                        </strong>
-                        <span>{vocab.meaning}</span>
-                      </div>
-                    ))}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {passage.vocabularyNotes.map((vocab, vIdx) => {
+                      const isPlayingThis = playingVocabWord === vocab.word;
+                      return (
+                        <div
+                          key={vIdx}
+                          className={`p-3.5 rounded-2xl bg-white border transition-all duration-200 shadow-2xs font-vietnam text-xs ${
+                            isPlayingThis
+                              ? 'border-amber-400 ring-2 ring-amber-300 bg-amber-50/40 shadow-sm'
+                              : 'border-amber-100/90 hover:border-amber-300'
+                          }`}
+                        >
+                          <div className="flex items-start justify-between gap-2.5">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-1.5 flex-wrap mb-1">
+                                <strong className="font-baloo text-amber-950 text-sm sm:text-base font-extrabold">
+                                  • {vocab.word}
+                                </strong>
+                                {vocab.phonetic && (
+                                  <span className="font-mono text-[11px] px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 font-bold border border-sky-200/80">
+                                    {vocab.phonetic}
+                                  </span>
+                                )}
+                              </div>
+                              <div className="text-slate-600 leading-relaxed text-xs">
+                                {vocab.meaning}
+                              </div>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => handlePlayVocabWord(vocab.word)}
+                              title={`Nghe phát âm "${vocab.word}"`}
+                              className={`p-2 rounded-xl border flex items-center justify-center shrink-0 transition-all cursor-pointer ${
+                                isPlayingThis
+                                  ? 'bg-amber-500 text-white border-amber-600 shadow-sm animate-pulse'
+                                  : 'bg-amber-50 hover:bg-amber-100 text-amber-800 border-amber-200 hover:scale-105 active:scale-95'
+                              }`}
+                              aria-label={`Nghe phát âm ${vocab.word}`}
+                            >
+                              <Volume2 size={15} className={isPlayingThis ? 'animate-bounce' : ''} />
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}
 
-              {(isVerifiedSgk || hasVerifiedSgkReading) && lesson.sourceCitation && (
+              {isContentVerified && lesson.sourceCitation && (
                 <footer className="mt-8 border-t border-amber-200/70 pt-4 font-vietnam text-xs font-semibold leading-relaxed text-slate-600">
                   <span className="font-bold text-amber-900">Nguồn đối chiếu:</span>{' '}
                   {lesson.sourceCitation.sourceLabel}
@@ -1217,7 +1420,7 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               <span className="text-3xl">🦊</span>
               <div>
                 <h4 className="font-baloo font-extrabold text-base text-amber-950">
-                  Cáo MiuMiu đồng hành:
+                  {mascotName} đồng hành:
                 </h4>
                 <p className="font-vietnam text-xs font-semibold text-amber-900/80">
                   {canUseReadingPassage
@@ -1248,6 +1451,96 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               ) : 'Vào Phần Luyện Tập ⭐'}
             </CuteButton>
           </div>
+
+          {/* Book Table of Contents Drawer / Modal */}
+          {isBookTocOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
+              <div className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-4xl bg-[#fffdfa] p-6 sm:p-7 shadow-2xl border-2 border-amber-300 space-y-4">
+                <div className="flex items-center justify-between border-b border-amber-200 pb-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-amber-400 text-amber-950 shadow-xs">
+                      <BookOpen size={20} />
+                    </div>
+                    <div>
+                      <h3 className="font-baloo font-black text-lg sm:text-xl text-amber-950">
+                        Mục Lục Sách Giáo Khoa
+                      </h3>
+                      <p className="font-vietnam text-xs font-semibold text-amber-800">
+                        {lesson.sourceBook || getLessonHeaderSourceLabel(lesson)} • {bookLessons.length} bài học
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      soundManager.playPop();
+                      setIsBookTocOpen(false);
+                    }}
+                    className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors cursor-pointer"
+                    title="Đóng"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+
+                <div className="space-y-2.5 py-1 max-h-[55vh] overflow-y-auto pr-1">
+                  {bookLessons.map((item, idx) => {
+                    const isCurrent = item.id === lesson.id;
+                    return (
+                      <div
+                        key={item.id}
+                        onClick={() => handleSwitchLesson(item)}
+                        className={`p-3.5 rounded-2xl border transition-all cursor-pointer flex items-center justify-between gap-3 ${
+                          isCurrent
+                            ? 'bg-amber-100/90 border-amber-400 shadow-sm font-black ring-2 ring-amber-300'
+                            : 'bg-white border-slate-200/80 hover:bg-amber-50 hover:border-amber-300 shadow-2xs'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl font-baloo font-black text-xs shadow-xs ${
+                            isCurrent ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-700'
+                          }`}>
+                            {idx + 1}
+                          </span>
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2">
+                              <span className="font-baloo text-sm sm:text-base font-black text-slate-900 truncate">
+                                {item.title}
+                              </span>
+                              {isCurrent && (
+                                <span className="shrink-0 rounded-full bg-amber-400 px-2 py-0.5 font-baloo text-[11px] font-black text-amber-950">
+                                  ⭐ Đang học
+                                </span>
+                              )}
+                            </div>
+                            {item.textbookPageRef && (
+                              <p className="font-vietnam text-xs font-semibold text-slate-500">
+                                {item.textbookPageRef}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <ArrowRight size={16} className={isCurrent ? 'text-amber-800' : 'text-slate-400'} />
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="text-center pt-2 border-t border-amber-200/60">
+                  <CuteButton
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      soundManager.playPop();
+                      setIsBookTocOpen(false);
+                    }}
+                  >
+                    Đóng Mục Lục
+                  </CuteButton>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -1442,43 +1735,6 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
               </div>
             )}
 
-            {/* Spelling Blend Interactive Machine */}
-            {currentQ.type === 'spelling_blend' && currentQ.spellingData && (
-              <div className="mt-5 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 border-2 border-amber-200 text-center space-y-4">
-                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-baloo text-2xl sm:text-4xl font-extrabold text-amber-950">
-                  <div className="flex flex-col items-center bg-white px-4 py-2.5 rounded-2xl border-2 border-amber-300 shadow-xs">
-                    <span>{currentQ.spellingData.initial}</span>
-                    <span className="text-[10px] sm:text-xs text-slate-400 font-vietnam font-semibold">Âm đầu</span>
-                  </div>
-                  <span>+</span>
-                  <div className="flex flex-col items-center bg-white px-4 py-2.5 rounded-2xl border-2 border-amber-300 shadow-xs text-amber-600">
-                    <span>{currentQ.spellingData.vowel}</span>
-                    <span className="text-[10px] sm:text-xs text-slate-400 font-vietnam font-semibold">Âm chính</span>
-                  </div>
-                  <span>+</span>
-                  <div className="flex flex-col items-center bg-white px-3 sm:px-4 py-2.5 rounded-2xl border-2 border-amber-300 shadow-xs text-orange-600">
-                    <span className="text-xl sm:text-2xl">{currentQ.spellingData.tone}</span>
-                    <span className="text-[10px] sm:text-xs text-slate-400 font-vietnam font-semibold">Dấu thanh</span>
-                  </div>
-                  <span>=</span>
-                  <div className="flex flex-col items-center bg-amber-400 text-amber-950 px-5 py-2.5 rounded-2xl border-2 border-amber-500 shadow-pop-sm animate-bounce-subtle">
-                    <span>{currentQ.spellingData.result}</span>
-                    <span className="text-[10px] sm:text-xs text-amber-900 font-vietnam font-bold">Tiếng tạo thành</span>
-                  </div>
-                </div>
-
-                <div className="flex justify-center pt-2">
-                  <button
-                    onClick={() => soundManager.speakText(currentQ.spellingData?.pronunciation || '', 'vi-VN')}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-amber-300 font-baloo font-bold text-xs sm:text-sm text-amber-900 shadow-2xs hover:bg-amber-100 transition-colors cursor-pointer"
-                  >
-                    <Volume2 size={16} className="text-amber-700" />
-                    <span>Nghe Đánh Vần: <strong>"{currentQ.spellingData.pronunciation}"</strong> 🔊</span>
-                  </button>
-                </div>
-              </div>
-            )}
-
             {/* Fill-in-the-blank text banner */}
             {currentQ.type === 'fill_blank' && currentQ.templateText && (
               <div className="mt-4 p-4 rounded-3xl bg-amber-50 border-2 border-amber-200 text-center font-baloo text-2xl font-bold text-amber-900">
@@ -1508,12 +1764,12 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
 
                   if (isAnswerChecked) {
                     if (opt.isCorrect) {
-                      optionStyle = 'border-emerald-500 bg-emerald-100 text-emerald-900 shadow-pop-sm scale-102';
+                      optionStyle = 'border-emerald-500 bg-emerald-100 text-emerald-900 shadow-pop-sm scale-102 ring-2 ring-emerald-300';
                     } else if (isSelected && !opt.isCorrect) {
-                      optionStyle = 'border-rose-400 bg-rose-100 text-rose-900';
+                      optionStyle = 'border-rose-400 bg-rose-100 text-rose-900 ring-2 ring-rose-300';
                     }
                   } else if (isSelected) {
-                    optionStyle = 'border-emerald-500 bg-emerald-50 text-emerald-900 shadow-pop-sm scale-102';
+                    optionStyle = 'border-sky-500 bg-sky-50 text-sky-950 shadow-pop-sm scale-102 ring-2 ring-sky-300';
                   }
 
                   return (
@@ -1534,16 +1790,30 @@ export const InteractiveExerciseEngine: React.FC<InteractiveExerciseEngineProps>
                           <div className="font-vietnam text-xs text-slate-500 font-semibold mt-0.5">{opt.sublabel}</div>
                         )}
                       </div>
-                      {isSelected && (
-                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white text-xs">
-                          <Check size={16} strokeWidth={3} />
+                      {/* Selection indicator before check vs Evaluation result (Check / Cross) after check */}
+                      {isAnswerChecked ? (
+                        opt.isCorrect ? (
+                          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white text-xs shadow-xs animate-bounce-subtle">
+                            <Check size={16} strokeWidth={3} />
+                          </span>
+                        ) : isSelected && !opt.isCorrect ? (
+                          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-rose-500 text-white text-xs shadow-xs">
+                            <X size={16} strokeWidth={3} />
+                          </span>
+                        ) : null
+                      ) : isSelected ? (
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-sky-500 bg-sky-500 text-white shadow-xs">
+                          <span className="h-2 w-2 rounded-full bg-white" />
                         </span>
+                      ) : (
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-slate-300 bg-white" />
                       )}
                     </motion.button>
                   );
                 })}
               </div>
             )}
+
 
             {/* 2. Audio Listen & Touch Picture Cards */}
             {currentQ.type === 'audio_listen' && currentQ.options && (
