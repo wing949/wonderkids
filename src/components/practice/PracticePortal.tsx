@@ -943,7 +943,8 @@ function PracticeAnswer({ item, answer, onChange }: { item: PracticeItem; answer
         <input
           value={typeof answer === 'string' ? answer : ''}
           onChange={(event) => onChange(event.target.value)}
-          className="min-h-14 w-full rounded-2xl border-2 border-violet-200 bg-white px-5 font-vietnam text-xl font-bold text-brand-dark outline-none focus:border-violet-500"
+          placeholder="Nhập câu trả lời của bé..."
+          className="min-h-14 w-full rounded-2xl border-2 border-violet-200 bg-white px-5 font-vietnam text-xl font-bold text-brand-dark outline-none focus:border-violet-500 placeholder:text-slate-300 placeholder:font-normal"
           inputMode={typeof item.correctAnswer === 'string' && /^-?\d+(?:[.,]\d+)?$/u.test(item.correctAnswer) ? 'decimal' : 'text'}
           autoComplete="off"
         />
@@ -1134,8 +1135,10 @@ export function PracticeExam({
   const sectionStarts = useMemo(() => set.sections.map((_, sectionIndex) => set.sections.slice(0, sectionIndex).reduce((sum, section) => sum + section.items.length, 0)), [set]);
   const [progress, setProgress] = useState<PracticeProgress>(() => {
     const progressStorage = storage || (typeof window === 'undefined' ? undefined : window.localStorage);
-    if (!progressStorage) return createPracticeProgress(set.id, 0);
-    return readPracticeProgress(progressStorage, set.id) || createPracticeProgress(set.id);
+    if (!progressStorage) return createPracticeProgress(set.id);
+    const saved = readPracticeProgress(progressStorage, set.id);
+    if (saved && !saved.completedAt) return saved;
+    return createPracticeProgress(set.id);
   });
   const [currentIndex, setCurrentIndex] = useState(() => (
     initialQuestionNumber && initialQuestionNumber >= 1 && initialQuestionNumber <= allItems.length
