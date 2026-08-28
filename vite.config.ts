@@ -202,6 +202,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), ttsDevPlugin(), adminAuthDevPlugin(environment)],
     server: {
       port: 3000,
+      host: true,
       open: false,
     },
   };
