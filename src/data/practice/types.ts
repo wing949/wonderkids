@@ -57,6 +57,7 @@ export interface PracticeItem {
   contentOrigin: PracticeContentOrigin;
   verificationStatus: 'draft' | 'verified';
   sourceLabel: string;
+  sourceCitation?: string;
   sourceHash: string;
   sourceDocumentIds?: string[];
   sourcePage?: number;

@@ -42,7 +42,7 @@ export function getPracticeSet(
   setSource?: 'authored' | 'violympic',
 ): PracticeSet | null {
   if (!Number.isInteger(setNumber) || setNumber < 1) return null;
-  if (setSource === 'violympic' || setNumber > 12) {
+  if (setSource !== 'authored') {
     const vSet = getViolympicExamSet(subject, grade, setNumber);
     if (vSet) return vSet;
   }

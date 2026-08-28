@@ -478,7 +478,7 @@ function PracticeHub({ onNavigate, onBack }: Pick<PracticePortalProps, 'onNaviga
                     className={`flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl px-5 font-baloo font-black text-white transition-transform active:translate-y-1 active:shadow-none ${subject.buttonClass}`}
                   >
                     <Play size={18} fill="currentColor" aria-hidden="true" />
-                    <span>Mở 12 đề lớp {grade}</span>
+                    <span>Mở {getViolympicExamSets(subject.id, grade).length || 12} vòng lớp {grade}</span>
                   </button>
                 </div>
               </div>
@@ -782,7 +782,7 @@ function PracticeList({ route, onNavigate, onBack }: { route: Extract<PracticePo
   const pack = getPracticePack(route.subject, route.grade);
   const violympicSets = useMemo(() => getViolympicExamSets(route.subject, route.grade), [route.grade, route.subject]);
   const [activeTab, setActiveTab] = useState<'violympic' | 'authored'>(
-    route.tab || 'authored'
+    route.tab || (violympicSets.length > 0 ? 'violympic' : 'authored')
   );
   const info = subjectInfo(route.subject);
 
@@ -1374,7 +1374,7 @@ export function PracticeExam({
           )}
           <p className="mt-7 flex items-center gap-2 border-t border-amber-100 pt-4 font-vietnam text-xs font-semibold text-slate-500">
             <Sparkles size={16} className="shrink-0 text-amber-500" aria-hidden="true" />
-            <span>{item.sourceLabel}. Không phải câu hỏi nguyên văn SGK hoặc đề thi chính thức.</span>
+            <span>{item.sourceCitation || `${item.sourceLabel || 'WonderKids'}.`}</span>
           </p>
         </main>
 

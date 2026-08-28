@@ -156,7 +156,7 @@ export function parseAppRoute(pathname: string): AppRoute {
       if (segments.length === 3) return { kind: 'practice-competition-list', track, grade };
       const match = segments[3]?.match(/^de-(\d{2})$/);
       const setNumber = match ? Number(match[1]) : 0;
-      if (setNumber >= 1 && setNumber <= 12) {
+      if (setNumber >= 1 && setNumber <= 50) {
         const questionNumber = Number(query.get('cau'));
         return questionNumber >= 1 && questionNumber <= 200
           ? { kind: 'practice-competition-set', track, grade, setNumber, questionNumber }
@@ -173,7 +173,7 @@ export function parseAppRoute(pathname: string): AppRoute {
     if (segments.length === 3) return { kind: 'practice-list', subject, grade };
     const match = segments[3]?.match(/^de-(\d{2})$/);
     const setNumber = match ? Number(match[1]) : 0;
-    if (setNumber >= 1 && setNumber <= 12) {
+    if (setNumber >= 1 && setNumber <= 50) {
       const questionNumber = Number(query.get('cau'));
       return questionNumber >= 1 && questionNumber <= 30
         ? { kind: 'practice-set', subject, grade, setNumber, questionNumber }
