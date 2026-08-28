@@ -2,6 +2,11 @@ import type { GradeLevel } from '../../types/index.ts';
 import { getCompetitionPack, getPracticePack } from './index.ts';
 import { getViolympicReferenceItems } from './violympicReferenceBank.ts';
 import { getViolympicDigitalItems, type ViolympicDigitalSubject } from './violympicDigitalReferenceBank.ts';
+import violympicMathG1 from './data/violympicMathGrade1.json' with { type: 'json' };
+import violympicMathG2 from './data/violympicMathGrade2.json' with { type: 'json' };
+import violympicMathG3 from './data/violympicMathGrade3.json' with { type: 'json' };
+import violympicMathG4 from './data/violympicMathGrade4.json' with { type: 'json' };
+import violympicMathG5 from './data/violympicMathGrade5.json' with { type: 'json' };
 import type {
   PracticeItem,
   PracticeItemType,
@@ -81,6 +86,20 @@ export function getViolympicExamSets(subject: PracticeSubject, grade: GradeLevel
   const cached = setsCache.get(cacheKey);
   if (cached) return cached;
 
+  // 100% Verified Math Sets directly from TS. Pham Van Cong's official books
+  if (subject === 'math') {
+    const mathSetsByGrade: Record<GradeLevel, PracticeSet[]> = {
+      1: violympicMathG1 as unknown as PracticeSet[],
+      2: violympicMathG2 as unknown as PracticeSet[],
+      3: violympicMathG3 as unknown as PracticeSet[],
+      4: violympicMathG4 as unknown as PracticeSet[],
+      5: violympicMathG5 as unknown as PracticeSet[],
+    };
+    const mathSets = mathSetsByGrade[grade] || [];
+    setsCache.set(cacheKey, mathSets);
+    return mathSets;
+  }
+
   const ocrItems = getViolympicReferenceItems({ subject: subject as any, grade });
   const digItems = subject !== 'english'
     ? getViolympicDigitalItems({ subject: subject as ViolympicDigitalSubject, grade })
@@ -101,9 +120,6 @@ export function getViolympicExamSets(subject: PracticeSubject, grade: GradeLevel
       ...ioePack.sets.flatMap((s) => s.sections).flatMap((s) => s.items),
       ...pracPack.sets.flatMap((s) => s.sections).flatMap((s) => s.items),
     ];
-  } else if (subject === 'math') {
-    const pracPack = getPracticePack('math', grade);
-    authoredItems = pracPack.sets.flatMap((s) => s.sections).flatMap((s) => s.items);
   } else if (subject === 'math_en') {
     const pracPack = getPracticePack('math_en', grade);
     authoredItems = pracPack.sets.flatMap((s) => s.sections).flatMap((s) => s.items);
