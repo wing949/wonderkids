@@ -158,8 +158,8 @@
             "id": "violympic-exam-math-g3-v01-q005",
             "type": "single_choice",
             "prompt": "Điền vào chỗ chấm: Tìm x, biết x + 251 = 694. Vậy x=.",
-            "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 694 - 251 = 443. Đáp số: 443.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "basic",
             "points": 10,
@@ -172,19 +172,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "10"
+                "label": "945"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "956"
               },
               {
                 "id": "c",
-                "label": "9"
+                "label": "443"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "442"
               }
             ]
           },
@@ -667,7 +667,7 @@
           {
             "id": "violympic-exam-math-g3-v01-q020",
             "type": "single_choice",
-            "prompt": "Số lớn nhất trong các số 875; 796; 899; 900 là: A.875 B796 - €899 D. 900.",
+            "prompt": "Số lớn nhất trong các số 875; 796; 899; 900 là: A.875 B796 - €899 D.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -1929,7 +1929,7 @@
           {
             "id": "violympic-exam-math-g3-v01-q057",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chấm: Có tat cả ........ SỐ có 3 chữ số.",
+            "prompt": "Điền vào chỗ chấm: Có tất cả ........ SỐ có 3 chữ số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -2337,7 +2337,7 @@
           {
             "id": "violympic-exam-math-g3-v01-q069",
             "type": "single_choice",
-            "prompt": "Kết quả của phép tính: 62 x 5 là: A.300 BLOT C. 310 D. 210.",
+            "prompt": "Kết quả của phép tính: 62 x 5 là: A.300 BLOT C. 310 D.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -2587,7 +2587,7 @@
           {
             "id": "violympic-exam-math-g3-v01-q076",
             "type": "single_choice",
-            "prompt": "Giá trị của a trong: 9 x4— a=24 la: . : \"A12: B.48 C36. D. 8.",
+            "prompt": "Giá trị của a trong: 9 x4— a=24 la: . : \"A12: B.48 C36. D.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -3418,8 +3418,8 @@
             "id": "violympic-exam-math-g3-v01-q099",
             "type": "single_choice",
             "prompt": "x + 251 = 694. x = 694-251 = 443.",
-            "correctAnswer": "d",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 694 - 251 = 443. Đáp số: 443.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -3432,19 +3432,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "11"
+                "label": "945"
               },
               {
                 "id": "b",
-                "label": "12"
+                "label": "956"
               },
               {
                 "id": "c",
-                "label": "9"
+                "label": "443"
               },
               {
                 "id": "d",
-                "label": "10"
+                "label": "442"
               }
             ]
           },
@@ -4131,7 +4131,7 @@
           {
             "id": "violympic-exam-math-g3-v01-q120",
             "type": "single_choice",
-            "prompt": "Tích của 4 và 2 là: 8.",
+            "prompt": "Tích của 4 và 2 là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -4199,7 +4199,7 @@
           {
             "id": "violympic-exam-math-g3-v01-q122",
             "type": "single_choice",
-            "prompt": "4 x a= 32. a=32:4=8. 12.",
+            "prompt": "4 x a= 32. a=32:4=8.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -5833,7 +5833,7 @@
             "type": "single_choice",
             "prompt": "9x4-x=24. 36-x=24. x=36-24=12. ; Đáp án: A.",
             "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "explanation": "Ta có: x = 4 - 24 = -20. Đáp số: -20.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -5846,26 +5846,26 @@
             "options": [
               {
                 "id": "a",
-                "label": "10"
+                "label": "-20"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "28"
               },
               {
                 "id": "c",
-                "label": "12"
+                "label": "37"
               },
               {
                 "id": "d",
-                "label": "9"
+                "label": "-53"
               }
             ]
           },
           {
             "id": "violympic-exam-math-g3-v01-q171",
             "type": "single_choice",
-            "prompt": "32cm x 5 — 48cm = 160cm — 48cm = 112cm. Đáp án: B. 14.",
+            "prompt": "32cm x 5 — 48cm = 160cm — 48cm = 112cm. Đáp án: B.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -6568,7 +6568,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q020",
             "type": "single_choice",
-            "prompt": "Lan ít hơn mẹ số tuổi là: (35 — 5) : 5—3 =3 (tuổi). - Tuổi Lan hiện nay là: 3 + 5 = 8 (tuổi). Đáp án: D. 15.",
+            "prompt": "Lan ít hơn mẹ số tuổi là: (35 — 5) : 5—3 =3 (tuổi). - Tuổi Lan hiện nay là: 3 + 5 = 8 (tuổi). Đáp án: D.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -7180,7 +7180,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q038",
             "type": "single_choice",
-            "prompt": "Điền dấu thích hợp vào chỗ chdm: 256 — 48 ...... 276 — 58. 17.",
+            "prompt": "Điền dấu thích hợp vào chỗ chdm: 256 — 48 ...... 276 — 58.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -7860,7 +7860,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q058",
             "type": "single_choice",
-            "prompt": "Điền kết quả vào chỗ cham: Tích của số chan nhỏ nhất lớn hơn 16 và 6 là.............. 18.",
+            "prompt": "Điền kết quả vào chỗ cham: Tích của số chan nhỏ nhất lớn hơn 16 và 6 là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -8166,7 +8166,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q067",
             "type": "single_choice",
-            "prompt": "Kết qua của phép tinh 164 — 64: 4 là: A.25 b.26 C.148 D. 152.",
+            "prompt": "Kết qua của phép tinh 164 — 64: 4 là: A.25 b.26 C.148 D.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -8930,7 +8930,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q089",
             "type": "single_choice",
-            "prompt": "Mai có 48 quyền vở. Lan có 8 quyền vở. Số vở Lan bằng mấy phần số vở của Mai? AF B.4 cả D.24.",
+            "prompt": "Mai có 48 quyển vở. Lan có 8 quyển vở. Số vở Lan bằng mấy phần số vở của Mai? AF B.4 cả D.24.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -9814,7 +9814,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q115",
             "type": "single_choice",
-            "prompt": "Điền kết quả vào chỗ chdm: 21x 4-—18=................. 22.",
+            "prompt": "Điền kết quả vào chỗ chdm: 21x 4-—18=.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -9882,7 +9882,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q117",
             "type": "single_choice",
-            "prompt": "Tim x, biết 87 : x =7 (dư 3) . DAP AN BO DE SO 2 :",
+            "prompt": "Tim x, biết 87 : x =7 (dư 3) . DAP AN BO DE SO 2.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -11106,7 +11106,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q153",
             "type": "single_choice",
-            "prompt": "Tích của số chin nhỏ nhất lớn hon 16 và 6 là 108. (18 x 6 = 108).",
+            "prompt": "Tích của số chẵn nhỏ nhất lớn hon 16 và 6 là 108. (18 x 6 = 108).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -11378,7 +11378,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q161",
             "type": "single_choice",
-            "prompt": "234 + 56 : 7= 234 +8=242. Đáp án: D. 25.",
+            "prompt": "234 + 56 : 7= 234 +8=242. Đáp án: D.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -12126,7 +12126,7 @@
           {
             "id": "violympic-exam-math-g3-v02-q183",
             "type": "single_choice",
-            "prompt": "175—130=5xa. 5xa=45. a=45:5=9. Đáp án: B. 26.",
+            "prompt": "175—130=5xa. 5xa=45. a=45:5=9. Đáp án: B.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -13237,7 +13237,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q011",
             "type": "single_choice",
-            "prompt": "87 : x =7 (dư 3). x=(87-3):7=12. 28.",
+            "prompt": "87 : x =7 (dư 3). x=(87-3):7=12.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -13679,7 +13679,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q024",
             "type": "single_choice",
-            "prompt": "Tổng của 2 số bằng 246. Nếu tăng số thứ nhất thêm 58 và tăng số thứ hai thêm 45 thì tổng mới sẽ là bao nhiêu? Đáp số. ........................GGG-eeG----. 30.",
+            "prompt": "Tổng của 2 số bằng 246. Nếu tăng số thứ nhất thêm 58 và tăng số thứ hai thêm 45 thì tổng mới sẽ là bao nhiêu? Đáp số. ........................GGG-eeG----.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -14087,7 +14087,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q036",
             "type": "single_choice",
-            "prompt": "Tính hiệu của số lớn nhất có 3 chữ số khác nhau và số chin bé nhất có 3 chữ số khác nhau. i DGD sô.",
+            "prompt": "Tính hiệu của số lớn nhất có 3 chữ số khác nhau và số chẵn bé nhất có 3 chữ số khác nhau. i DGD sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -14291,7 +14291,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q042",
             "type": "single_choice",
-            "prompt": "Mỗi bạn có 5 quyền vở. Tính số vở của 9 bạn. ; Đáp sô.",
+            "prompt": "Mỗi bạn có 5 quyển vở. Tính số vở của 9 bạn. ; Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -14529,7 +14529,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q049",
             "type": "single_choice",
-            "prompt": "Mỗi bạn được 20 quyền vở. Hỏi 4 bạn được bao nhiêu quyền vở? Đáp số.",
+            "prompt": "Mỗi bạn được 20 quyển vở. Hỏi 4 bạn được bao nhiêu quyển vở? Đáp số.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -14563,7 +14563,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q050",
             "type": "single_choice",
-            "prompt": "Ca khối 3 có 32 học sinh tập bóng đá. Biết rằng trong đó có : số bạn ở lớp 3A1. Hỏi lớp 3A1 có bao nhiêu học sinh tập bóng đá? Đáp S62 ................. 32.",
+            "prompt": "Ca khối 3 có 32 học sinh tập bóng đá. Biết rằng trong đó có : số bạn ở lớp 3A1. Hỏi lớp 3A1 có bao nhiêu học sinh tập bóng đá? Đáp S62.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -14937,7 +14937,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q061",
             "type": "single_choice",
-            "prompt": "Từ 12 đến 34 có tat cả bao nhiêu số chan? ; : Đáp số.",
+            "prompt": "Từ 12 đến 34 có tất cả bao nhiêu số chan? ; : Đáp số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -15753,7 +15753,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q085",
             "type": "single_choice",
-            "prompt": "Cho dãy số: 2, 4, 6, 8, 10, 12, ... Tìm số hạng thứ 20 của dãy. Đáp số. .................. 35.",
+            "prompt": "Cho dãy số: 2, 4, 6, 8, 10, 12, ... Tìm số hạng thứ 20 của dãy. Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -15889,7 +15889,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q089",
             "type": "single_choice",
-            "prompt": "Tính tông của tat cả các sô chăn bé hơn 20. DAD sô.",
+            "prompt": "Tính tông của tất cả các sô chăn bé hơn 20. DAD sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -16195,7 +16195,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q098",
             "type": "single_choice",
-            "prompt": "Trong phép chia có thương bằng 45, nếu tăng số chia gấp 5 lần thì thương của phép chia đó bằng bao nhiêu? : Đáp SO! ................... 36.",
+            "prompt": "Trong phép chia có thương bằng 45, nếu tăng số chia gấp 5 lần thì thương của phép chia đó bằng bao nhiêu? : Đáp SO!.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -16569,7 +16569,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q109",
             "type": "single_choice",
-            "prompt": "Cô giáo thưởng 24 quyền vở cho các bạn học sinh giỏi, mỗi bạn 6 quyền. Hỏi cô đã thưởng cho bao nhiêu bạn học sinh giỏi? ; R : Dap số: khnnEenenssseeensseni - Chu 99: Tìm a, biết: 456 - a : 7 = 89, ; Đáp sô:.................. 37.",
+            "prompt": "Cô giáo thưởng 24 quyển vở cho các bạn học sinh giỏi, mỗi bạn 6 quyền. Hỏi cô đã thưởng cho bao nhiêu bạn học sinh giỏi? ; R : Dap số: khnnEenenssseeensseni - Chu 99: Tìm a, biết: 456 - a : 7 = 89, ; Đáp sô.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -16705,7 +16705,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q113",
             "type": "single_choice",
-            "prompt": "Số bé nhất trong các số đó là: 128.",
+            "prompt": "Số bé nhất trong các số đó là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -16739,7 +16739,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q114",
             "type": "single_choice",
-            "prompt": "Số liền sau của số 419 là: 420.",
+            "prompt": "Số liền sau của số 419 là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -16807,7 +16807,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q116",
             "type": "single_choice",
-            "prompt": "Số lẻ liền sau số 811 là: 813.",
+            "prompt": "Số lẻ liền sau số 811 là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -16841,7 +16841,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q117",
             "type": "single_choice",
-            "prompt": "Số chin liền sau của số 246 là: 248.",
+            "prompt": "Số chin liền sau của số 246 là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -18201,7 +18201,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q157",
             "type": "single_choice",
-            "prompt": "Lớp 3B phải trồng số cây là: 80 — 44 = 36 (cây). Mỗi tổ phải trồng số cây là: 36 : 4 = 9 (cây). 40.",
+            "prompt": "Lớp 3B phải trồng số cây là: 80 — 44 = 36 (cây). Mỗi tổ phải trồng số cây là: 36 : 4 = 9 (cây).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -18303,7 +18303,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q160",
             "type": "single_choice",
-            "prompt": "Từ 12 đến 34 có số số chin là: (34—12):2+1=12 (số).",
+            "prompt": "Từ 12 đến 34 có số số chẵn là: (34—12):2+1=12 (số).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -18405,7 +18405,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q163",
             "type": "single_choice",
-            "prompt": "Nửa quãng đường AB dai là: 102:2=51 (km). Vậy: Cột mốc chính giữa ghi số: 51.",
+            "prompt": "Nửa quãng đường AB dai là: 102:2=51 (km). Vậy: Cột mốc chính giữa ghi số.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -18779,7 +18779,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q174",
             "type": "single_choice",
-            "prompt": "- Khối lớp Năm có là: 185 — 17 = 168 (hoc sinh). C. 168.",
+            "prompt": "- Khối lớp Năm có là: 185 — 17 = 168 (hoc sinh). C.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -19017,7 +19017,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q181",
             "type": "single_choice",
-            "prompt": "2+44+6+8+...+34+36 +38 +40. =(2+40)+(4+38)+.... = 42 x (40:2:2)=420. (Vì day số đã cho toàn các số chin).",
+            "prompt": "2+44+6+8+...+34+36 +38 +40. =(2+40)+(4+38)+.... = 42 x (40:2:2)=420. (Vì day số đã cho toàn các số chẵn).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -19187,7 +19187,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q186",
             "type": "single_choice",
-            "prompt": "Số lớn gấp số bé số lần là: 2 x2 =4. - Vậy thương của 2 số đó là: 4.",
+            "prompt": "Số lớn gấp số bé số lần là: 2 x2 =4. - Vậy thương của 2 số đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -19255,7 +19255,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q188",
             "type": "single_choice",
-            "prompt": "Các số chin bé hơn 20 1a: 0; 2; 4; .... 16; 18. - Tổng các số đó là: (0 + 18) x (18:2 + 1) = 180.",
+            "prompt": "Các số chẵn bé hơn 20 1a: 0; 2; 4; .... 16; 18. - Tổng các số đó là: (0 + 18) x (18:2 + 1) = 180.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -19527,7 +19527,7 @@
           {
             "id": "violympic-exam-math-g3-v03-q196",
             "type": "single_choice",
-            "prompt": "Tuổi bé hiện nay là: 14 x 3 = 42. 42.",
+            "prompt": "Tuổi bé hiện nay là: 14 x 3 = 42.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -20298,7 +20298,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q022",
             "type": "single_choice",
-            "prompt": "Điền kết quả vào chỗ cham. , Me mua 9 vi sữa, mỗi vi có 4 hộp. Người ban hàng khuyến mại thêm 2 hộp. Mẹ có tat cả........... hộp sữa.",
+            "prompt": "Điền kết quả vào chỗ cham. , Me mua 9 vi sữa, mỗi vi có 4 hộp. Người ban hàng khuyến mại thêm 2 hộp. Mẹ có tất cả........... hộp sữa.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -20502,7 +20502,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q028",
             "type": "single_choice",
-            "prompt": "Điền kết quả vào chỗ chấm: Tinh: 205 +412+131=................. 45.",
+            "prompt": "Điền kết quả vào chỗ chấm: Tinh: 205 +412+131=.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -20876,7 +20876,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q039",
             "type": "single_choice",
-            "prompt": "Điền kết quả vào chỗ chdm. Số chin lớn nhất có ba chữ số khác nhau là ............ 46.",
+            "prompt": "Điền kết quả vào chỗ chdm. Số chin lớn nhất có ba chữ số khác nhau là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -21318,7 +21318,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q052",
             "type": "single_choice",
-            "prompt": "Điền kết quả vào chỗ chấm. Cho tích 32 x Y. Nếu tăng Y lên 3 đơn vị thì tích tăng. .................. 47.",
+            "prompt": "Điền kết quả vào chỗ chấm. Cho tích 32 x Y. Nếu tăng Y lên 3 đơn vị thì tích tăng.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -21387,8 +21387,8 @@
             "id": "violympic-exam-math-g3-v04-q054",
             "type": "single_choice",
             "prompt": "Tìm x biết: x + 235 = 674. Giá trị của x là;.",
-            "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 674 - 235 = 439. Đáp số: 439.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "application",
             "points": 10,
@@ -21401,19 +21401,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "449"
+                "label": "909"
               },
               {
                 "id": "b",
-                "label": "439"
+                "label": "920"
               },
               {
                 "id": "c",
-                "label": "441"
+                "label": "439"
               },
               {
                 "id": "d",
-                "label": "451"
+                "label": "438"
               }
             ]
           },
@@ -21828,7 +21828,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q067",
             "type": "single_choice",
-            "prompt": "Điền kết quả vào chỗ chấm. Mẹ mua cho hai anh em Tùng mỗi người 6 quyền vở. Vậy mẹ đã mua cho hai anh em Tùng tất ca ........ quyền vở. ;.",
+            "prompt": "Điền kết quả vào chỗ chấm. Mẹ mua cho hai anh em Tùng mỗi người 6 quyển vở. Vậy mẹ đã mua cho hai anh em Tùng tất ca ........ quyển vở. ;.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -22100,7 +22100,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q075",
             "type": "single_choice",
-            "prompt": "Tính giá trị của: 2004 — 5 —5 —5—...—5. (Có 100 số 5). Đáp 862 ................. 49.",
+            "prompt": "Tính giá trị của: 2004 — 5 —5 —5—...—5. (Có 100 số 5). Đáp 862.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -23328,7 +23328,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q111",
             "type": "single_choice",
-            "prompt": "Tìm số dư trong phép chia có số bị chia là số lớn nhất có 2 chữ số và số chia là số chin lớn nhất có 1 chữ số. ; Đáp sô.",
+            "prompt": "Tìm số dư trong phép chia có số bị chia là số lớn nhất có 2 chữ số và số chia là số chẵn lớn nhất có 1 chữ số. ; Đáp sô.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -24178,7 +24178,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q136",
             "type": "single_choice",
-            "prompt": "Tuổi me Mai năm nay là: 34 + 8 = 42 (tuổi). — Tuổi mẹ Mai năm ngoái là: 34 — 1 =33 (tuổi). 54.",
+            "prompt": "Tuổi me Mai năm nay là: 34 + 8 = 42 (tuổi). — Tuổi mẹ Mai năm ngoái là: 34 — 1 =33 (tuổi).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -24246,7 +24246,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q138",
             "type": "single_choice",
-            "prompt": "Số chẵn lớn nhất có ba chữ số khác nhau là: 986.",
+            "prompt": "Số chẵn lớn nhất có ba chữ số khác nhau là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -24756,9 +24756,9 @@
           {
             "id": "violympic-exam-math-g3-v04-q153",
             "type": "single_choice",
-            "prompt": "x+235=674. x=674-235=439.. B. 439.",
-            "correctAnswer": "b",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "prompt": "x+235=674. x=674-235=439.. B.",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 674 - 235 = 439. Đáp số: 439.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -24771,19 +24771,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "9"
+                "label": "909"
               },
               {
                 "id": "b",
-                "label": "10"
+                "label": "920"
               },
               {
                 "id": "c",
-                "label": "11"
+                "label": "439"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "438"
               }
             ]
           },
@@ -24960,7 +24960,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q159",
             "type": "single_choice",
-            "prompt": "Số lẻ có ba chữ số nhỏ hơn 103 1a: 101. C. 101.",
+            "prompt": "Số lẻ có ba chữ số nhỏ hơn 103 1a: 101. C.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -25062,7 +25062,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q162",
             "type": "single_choice",
-            "prompt": "- Hình vẽ có 6 hình tam giác. © D. 6 hinh. (3 tam giác đơn, 2 tam giác đôi, 1 tam giác ba). 55.",
+            "prompt": "- Hình vẽ có 6 hình tam giác. © D. 6 hinh. (3 tam giác đơn, 2 tam giác đôi, 1 tam giác ba).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -25674,7 +25674,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q180",
             "type": "single_choice",
-            "prompt": "100 + 100 : 4— 50 = 100 +25 —50=125—50=75. 56.",
+            "prompt": "100 + 100 : 4— 50 = 100 +25 —50=125—50=75.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -25708,7 +25708,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q181",
             "type": "single_choice",
-            "prompt": "Số mới kém số phải tìm 7 đơn vị và 9 lần số mới. Số mới là: (331—7):9=36. — Số phải tìm là: 367.",
+            "prompt": "Số mới kém số phải tìm 7 đơn vị và 9 lần số mới. Số mới là: (331—7):9=36. — Số phải tìm là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -26048,7 +26048,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q191",
             "type": "single_choice",
-            "prompt": "Số bị chia trong phép chia đó là: 18x6+3=111. D. 111.",
+            "prompt": "Số bị chia trong phép chia đó là: 18x6+3=111. D.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -26218,7 +26218,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q196",
             "type": "single_choice",
-            "prompt": "26:4=6(dư2); 17:5 =3 (dư 2). A, 26 : 4 và 17: 5.",
+            "prompt": "26:4=6(dư2); 17:5 =3 (dư 2). A, 26 : 4 và 17.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -26252,7 +26252,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q197",
             "type": "single_choice",
-            "prompt": "- Số dư trong phép chia đó là: 5—1=4. - Số bị chia trong phép chia đó là: 25 x 5 +4 = 129. A. 129.",
+            "prompt": "- Số dư trong phép chia đó là: 5—1=4. - Số bị chia trong phép chia đó là: 25 x 5 +4 = 129. A.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -26286,7 +26286,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q198",
             "type": "single_choice",
-            "prompt": "1850 +4— (4+4 +4 +... +4). (Có 50 số 4.) = 1850 + 4 — 50 x 4 = 1854 — 200 = 1654. 57.",
+            "prompt": "1850 +4— (4+4 +4 +... +4). (Có 50 số 4.) = 1850 + 4 — 50 x 4 = 1854 — 200 = 1654.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -26423,8 +26423,8 @@
             "id": "violympic-exam-math-g3-v04-q202",
             "type": "single_choice",
             "prompt": "Sau 1 năm thì tổng số tuổi của 2 bạn tăng thêm 2 tuổi và tuổi của mẹ chỉ tăng thêm 1 tuổi. - Số năm để tuổi me bằng tổng số tuổi 2 ban là: 10 : (2— 1) = 10 (năm).",
-            "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 2 + 1 = 3 (tuổi). Đáp số: 3 tuổi.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -26437,19 +26437,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "9"
+                "label": "3 tuổi"
               },
               {
                 "id": "b",
-                "label": "12"
+                "label": "0 tuổi"
               },
               {
                 "id": "c",
-                "label": "10"
+                "label": "5 tuổi"
               },
               {
                 "id": "d",
-                "label": "11"
+                "label": "-7 tuổi"
               }
             ]
           },
@@ -26558,7 +26558,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q206",
             "type": "single_choice",
-            "prompt": "Ta có: 75 : 9 = 8 (du 3). - Vậy số chia trong phép chia đó là: 8.",
+            "prompt": "Ta có: 75 : 9 = 8 (du 3). - Vậy số chia trong phép chia đó là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -26762,7 +26762,7 @@
           {
             "id": "violympic-exam-math-g3-v04-q212",
             "type": "single_choice",
-            "prompt": "Số sách ở 3 ngăn dưới là: 16 x 3 = 48 (cuốn). - Số sách cả tủ có là: 48 + 12 = 60 (cuốn). 58.",
+            "prompt": "Số sách ở 3 ngăn dưới là: 16 x 3 = 48 (cuốn). - Số sách cả tủ có là: 48 + 12 = 60 (cuốn).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -26887,7 +26887,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q003",
             "type": "single_choice",
-            "prompt": "Tích của số chin lớn nhất có hai chữ số va 6 là:",
+            "prompt": "Tích của số chẵn lớn nhất có hai chữ số va 6 là:",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -27193,7 +27193,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q012",
             "type": "single_choice",
-            "prompt": "Hùng có số bi bằng nửa số bi của Dũng. Nếu Dũng có thêm 24 viên bi nữa thì số bi của Dũng là số nhỏ nhất có 3 chữ số. Tính số bi của Hùng. Đáp số. .................. 60.",
+            "prompt": "Hùng có số bi bằng nửa số bi của Dũng. Nếu Dũng có thêm 24 viên bi nữa thì số bi của Dũng là số nhỏ nhất có 3 chữ số. Tính số bi của Hùng. Đáp số.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -27567,7 +27567,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q023",
             "type": "single_choice",
-            "prompt": "Tích của 2 số bằng 48. Biết thừa số thứ nhất bằng 4. Hỏi nếu tăng thừa số thứ hai 4 đơn vị thì tích bằng bao nhiêu? . Đáp số: .................. 61.",
+            "prompt": "Tích của 2 số bằng 48. Biết thừa số thứ nhất bằng 4. Hỏi nếu tăng thừa số thứ hai 4 đơn vị thì tích bằng bao nhiêu? . Đáp số.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -27942,8 +27942,8 @@
             "id": "violympic-exam-math-g3-v05-q034",
             "type": "single_choice",
             "prompt": "Tim x: x + 175 = 1482 — 1225. ; Đáp sô.",
-            "correctAnswer": "d",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 1482 - 175 = 1307. Đáp số: 1307.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "application",
             "points": 10,
@@ -27956,26 +27956,26 @@
             "options": [
               {
                 "id": "a",
-                "label": "12"
+                "label": "1657"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "1668"
               },
               {
                 "id": "c",
-                "label": "9"
+                "label": "1307"
               },
               {
                 "id": "d",
-                "label": "10"
+                "label": "1306"
               }
             ]
           },
           {
             "id": "violympic-exam-math-g3-v05-q035",
             "type": "single_choice",
-            "prompt": "An chia số bi của minh cho một số em thì mỗi em được 3 viên. Bình chia số bi của mình chia cho số em đó thì mỗi em được 6 viên. Hỏi số bi của Bình gấp mấy lần số bi của An? ; DGD số. ................. 62.",
+            "prompt": "An chia số bi của minh cho một số em thì mỗi em được 3 viên. Bình chia số bi của mình chia cho số em đó thì mỗi em được 6 viên. Hỏi số bi của Bình gấp mấy lần số bi của An? ; DGD số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -28180,8 +28180,8 @@
             "id": "violympic-exam-math-g3-v05-q041",
             "type": "single_choice",
             "prompt": "Trong một trò chơi, học sinh lớp 3A xếp thành một vòng tròn. Các bạn xếp xen kẽ: bắt đầu là 1 bạn nam, 1 bạn nữ rồi lại đến 1 bạn nam, 1 bạn nữ, cuối cùng là 1 bạn nữ. Biết có tất cả có 20 bạn nam. Hỏi lớp 3A có tất cả bao nhiêu bạn? ; Đáp sô.",
-            "correctAnswer": "b",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "a",
+            "explanation": "Lớp có tất cả số học sinh là: 1 + 1 = 2 (học sinh). Đáp số: 2 học sinh.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "application",
             "points": 10,
@@ -28194,19 +28194,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "11"
+                "label": "2 học sinh"
               },
               {
                 "id": "b",
-                "label": "10"
+                "label": "0 học sinh"
               },
               {
                 "id": "c",
-                "label": "9"
+                "label": "3 học sinh"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "-2 học sinh"
               }
             ]
           },
@@ -29165,9 +29165,9 @@
           {
             "id": "violympic-exam-math-g3-v05-q070",
             "type": "single_choice",
-            "prompt": "Tìm thương và số dư trong phép chia có số bị chia là số lớn nhất có 2 chữ số khác nhau, số chia là số chin lớn nhất có 1 chữ s6. Đáp SỐ.",
-            "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "prompt": "Tìm thương và số dư trong phép chia có số bị chia là số lớn nhất có 2 chữ số khác nhau, số chia là số chẵn lớn nhất có 1 chữ s6. Đáp SỐ.",
+            "correctAnswer": "a",
+            "explanation": "Số lớn nhất có 2 chữ số khác nhau là 98. Đáp số: 98.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "application",
             "points": 10,
@@ -29180,19 +29180,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "11"
+                "label": "98"
               },
               {
                 "id": "b",
-                "label": "12"
+                "label": "99"
               },
               {
                 "id": "c",
-                "label": "10"
+                "label": "89"
               },
               {
                 "id": "d",
-                "label": "9"
+                "label": "97"
               }
             ]
           },
@@ -29233,7 +29233,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q072",
             "type": "single_choice",
-            "prompt": "Xếp 900 cái bánh vào các hộp đều nhau, mỗi hộp 5 cái. Sau đó xếp các hộp bánh đó vào các thùng đều nhau, mỗi thùng xếp 20 hộp. Hỏi có tat cả bao nhiêu thùng bánh? i ; Đáp sô.",
+            "prompt": "Xếp 900 cái bánh vào các hộp đều nhau, mỗi hộp 5 cái. Sau đó xếp các hộp bánh đó vào các thùng đều nhau, mỗi thùng xếp 20 hộp. Hỏi có tất cả bao nhiêu thùng bánh? i ; Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -29369,7 +29369,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q076",
             "type": "single_choice",
-            "prompt": "Một đàn gà có 39 con. Biết rằng sau khi bán số gà giảm đi 3 lần. Hỏi đã bán đi bao nhiêu con gà? ; DAD số: .................. 66.",
+            "prompt": "Một đàn gà có 39 con. Biết rằng sau khi bán số gà giảm đi 3 lần. Hỏi đã bán đi bao nhiêu con gà? ; DAD số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -29743,7 +29743,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q087",
             "type": "single_choice",
-            "prompt": "Biết trong thúng có số quýt hơn số cam là 8 quả. Mẹ lấy ra 2 quả quýt và 2 quả cam cho hai anh em nên trong thing còn lại số quýt gấp đôi số cam. : Hỏi lúc đầu trong thúng có bao nhiêu quả cam? ; ¡ Đáp sô. ................. 67.",
+            "prompt": "Biết trong thúng có số quýt hơn số cam là 8 quả. Mẹ lấy ra 2 quả quýt và 2 quả cam cho hai anh em nên trong thing còn lại số quýt gấp đôi số cam. : Hỏi lúc đầu trong thúng có bao nhiêu quả cam? ; ¡ Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -29947,7 +29947,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q093",
             "type": "single_choice",
-            "prompt": "Tìm số chin có 3 chữ số khác nhau có tổng 3 chữ số bằng 23. Khi đổi chỗ chữ số hàng trăm và hàng đơn vị thì số đó tăng thêm. — Đáp sô.",
+            "prompt": "Tìm số chẵn có 3 chữ số khác nhau có tổng 3 chữ số bằng 23. Khi đổi chỗ chữ số hàng trăm và hàng đơn vị thì số đó tăng thêm. — Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -30117,7 +30117,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q098",
             "type": "single_choice",
-            "prompt": "Có 50 người đi xe ô tô. Biết mỗi ô tô chỉ chở được 8 người. Hỏi cần ít nhất bao nhiêu 6 tô dé chở hết số người đó? ; DAD sô. .................. 68.",
+            "prompt": "Có 50 người đi xe ô tô. Biết mỗi ô tô chỉ chở được 8 người. Hỏi cần ít nhất bao nhiêu 6 tô dé chở hết số người đó? ; DAD sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -30185,7 +30185,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q100",
             "type": "single_choice",
-            "prompt": "- Ta có: 67 : 8 = 8 (du 3). B. 3.",
+            "prompt": "- Ta có: 67 : 8 = 8 (du 3). B.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -30321,7 +30321,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q104",
             "type": "single_choice",
-            "prompt": "- Ta có: 26 : 4 = 6 (du 2); 17:5 =3 (dw 2) ;27:5=5 (dư 2). - Va: 23 : 6 =3 (dư 5). C. 23: 6.",
+            "prompt": "- Ta có: 26 : 4 = 6 (du 2); 17:5 =3 (dw 2) ;27:5=5 (dư 2). - Va: 23 : 6 =3 (dư 5). C. 23.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -30423,7 +30423,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q107",
             "type": "single_choice",
-            "prompt": "- Tổng của 2 số đó là: 987 + 102 = 1089. A. 1089.",
+            "prompt": "- Tổng của 2 số đó là: 987 + 102 = 1089. A.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -30695,7 +30695,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q115",
             "type": "single_choice",
-            "prompt": "Ta có: 87 :6= 14 (dư 3). - Số thùng ít nhất cần có là: 14 + 1 = 15 (thùng). 70.",
+            "prompt": "Ta có: 87 :6= 14 (dư 3). - Số thùng ít nhất cần có là: 14 + 1 = 15 (thùng).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -31171,7 +31171,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q129",
             "type": "single_choice",
-            "prompt": "Chiều rộng mảnh dat đó là: 14-3 -2 =9 (m). - Chu vi mảnh dat đó là: (14 + 9) x 2 = 46 (m). : 71.",
+            "prompt": "Chiều rộng mảnh dat đó là: 14-3 -2 =9 (m). - Chu vi mảnh dat đó là: (14 + 9) x 2 = 46 (m).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -31274,8 +31274,8 @@
             "id": "violympic-exam-math-g3-v05-q132",
             "type": "single_choice",
             "prompt": "x + 175 = 1482 — 1225. x + 175 = 257. x = 257-175 = 82.",
-            "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 1482 - 175 = 1307. Đáp số: 1307.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -31288,19 +31288,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "10"
+                "label": "1657"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "1668"
               },
               {
                 "id": "c",
-                "label": "9"
+                "label": "1307"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "1306"
               }
             ]
           },
@@ -31410,8 +31410,8 @@
             "id": "violympic-exam-math-g3-v05-q136",
             "type": "single_choice",
             "prompt": "x + 100 — (4 +4 +4+... +4 +4) = 320 (Có 45 số 4.) x+100-45 x 4 = 320. x + 100 — 180 = 320. x + 100 = 320 + 180 = 500. x = 500 — 100 = 400.",
-            "correctAnswer": "b",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 320 - 100 = 220. Đáp số: 220.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -31424,19 +31424,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "9"
+                "label": "420"
               },
               {
                 "id": "b",
-                "label": "10"
+                "label": "431"
               },
               {
                 "id": "c",
-                "label": "11"
+                "label": "220"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "219"
               }
             ]
           },
@@ -31647,7 +31647,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q143",
             "type": "single_choice",
-            "prompt": "7x6=6+6+6+6+6+6+6. B6+6+6+6+6+6+6. 72.",
+            "prompt": "7x6=6+6+6+6+6+6+6. B6+6+6+6+6+6+6.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -31783,7 +31783,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q147",
             "type": "single_choice",
-            "prompt": "- Số 4560 kém số 4650 là: 4650 — 4560 = 90. - Tích tăng lên là: 90 x 3 =270. B. 270.",
+            "prompt": "- Số 4560 kém số 4650 là: 4650 — 4560 = 90. - Tích tăng lên là: 90 x 3 =270. B.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -32599,7 +32599,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q171",
             "type": "single_choice",
-            "prompt": "Mỗi đoạn dây đó dài là: 75 : 5 = 15 (cm). - Độ dài 2 đoạn dây đó là: 15 x 2 = 30 (cm). 74.",
+            "prompt": "Mỗi đoạn dây đó dài là: 75 : 5 = 15 (cm). - Độ dài 2 đoạn dây đó là: 15 x 2 = 30 (cm).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -32939,7 +32939,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q181",
             "type": "single_choice",
-            "prompt": "Ngày hôm nay chú dệt được là: 126 : 3 = 42 (chiếc). Ị - Cả hai ngày chú dệt được là: 126 + 42 = 168 (chiếc). : - Cfiu 85: Khi bố 36 tuổi thì tuổi An là:47—36 11 (muỗi). - Bố hơn An số tuổi là: 36 — 11 =25 (tuổi). - Hiệu số tuổi 2 bố con gấp tuổi An hiện nay là: 6—1=5 (lan). - Tuổi An hiện nay là: 25 : 5 = 5 (tuổi). 75.",
+            "prompt": "Ngày hôm nay chú dệt được là: 126 : 3 = 42 (chiếc). Ị - Cả hai ngày chú dệt được là: 126 + 42 = 168 (chiếc). : - Cfiu 85: Khi bố 36 tuổi thì tuổi An là:47—36 11 (muỗi). - Bố hơn An số tuổi là: 36 — 11 =25 (tuổi). - Hiệu số tuổi 2 bố con gấp tuổi An hiện nay là: 6—1=5 (lan). - Tuổi An hiện nay là: 25 : 5 = 5 (tuổi).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -33245,7 +33245,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q190",
             "type": "single_choice",
-            "prompt": "Tacó:23=9+8+6. - Chữ số hàng đơn vị lớn hơn chữ số hàng trăm. - Số phải tìm là: 698.",
+            "prompt": "Tacó:23=9+8+6. - Chữ số hàng đơn vị lớn hơn chữ số hàng trăm. - Số phải tìm là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -33449,7 +33449,7 @@
           {
             "id": "violympic-exam-math-g3-v05-q196",
             "type": "single_choice",
-            "prompt": "Mỗi chuyến đó chở được số khách là: 9 — 1 = 8 (người). -Tacó:98:8=12(dư2). = - Số chuyến ít nhất phải chở là: 12 + 1 = 13 (chuyến). 76.",
+            "prompt": "Mỗi chuyến đó chở được số khách là: 9 — 1 = 8 (người). -Tacó:98:8=12(dư2). = - Số chuyến ít nhất phải chở là: 12 + 1 = 13 (chuyến).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -34016,7 +34016,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q016",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chấm: Một hình tam giác có độ dài 3 cạnh đều bằng nhau và bằng 135cm. Chu vi của hình tam giác đó 1a ....... cm. 78.",
+            "prompt": "Điền vào chỗ chấm: Một hình tam giác có độ dài 3 cạnh đều bằng nhau và bằng 135cm. Chu vi của hình tam giác đó 1a ....... cm.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -34492,7 +34492,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q030",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chấm: Minh lấy một số chia cho 6 thì được thương là 36. Vậy nếu lấy số đó chia cho 9 thì được thương là............. 79.",
+            "prompt": "Điền vào chỗ chấm: Minh lấy một số chia cho 6 thì được thương là 36. Vậy nếu lấy số đó chia cho 9 thì được thương là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -34900,7 +34900,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q042",
             "type": "single_choice",
-            "prompt": "Một phép chia có số chia bằng 5, thương bằng 24, số dư là 3. Hỏi nếu tăng sô chia thêm 5 thì sô dư trong phép chia mới đó sẽ là bao nhiêu? Đáp số. ................. 80.",
+            "prompt": "Một phép chia có số chia bằng 5, thương bằng 24, số dư là 3. Hỏi nếu tăng sô chia thêm 5 thì sô dư trong phép chia mới đó sẽ là bao nhiêu? Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -35002,7 +35002,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q045",
             "type": "single_choice",
-            "prompt": "Tìm số chin lớn nhất có 3 chữ số khác nhau có tích các chữ số là 24. Đáp số.",
+            "prompt": "Tìm số chẵn lớn nhất có 3 chữ số khác nhau có tích các chữ số là 24. Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -35664,7 +35664,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q064",
             "type": "single_choice",
-            "prompt": "Biết trong một tháng nào đó có 3 ngày chủ nhật là ngày chan. Hỏi ngày 15 của tháng đó là thứ mây? : i Đáp sô. .................. 82.",
+            "prompt": "Biết trong một tháng nào đó có 3 ngày chủ nhật là ngày chan. Hỏi ngày 15 của tháng đó là thứ mây? : i Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -35733,8 +35733,8 @@
             "id": "violympic-exam-math-g3-v06-q066",
             "type": "single_choice",
             "prompt": "Tim x, biết x+1+x+2+x+3+..+x+9+x+10=65. Đáp sô.",
-            "correctAnswer": "d",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 65 - 10 = 55. Đáp số: 55.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "application",
             "points": 10,
@@ -35747,19 +35747,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "11"
+                "label": "75"
               },
               {
                 "id": "b",
-                "label": "12"
+                "label": "86"
               },
               {
                 "id": "c",
-                "label": "9"
+                "label": "55"
               },
               {
                 "id": "d",
-                "label": "10"
+                "label": "54"
               }
             ]
           },
@@ -35970,7 +35970,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q073",
             "type": "single_choice",
-            "prompt": "Bác Năm nuôi một sé gà, vịt. Biết số gà là 35 con và số vịt gấp 3 lần số gà. Bác Năm nuôi tat cả bao nhiêu con vừa gà vừa vịt?",
+            "prompt": "Bác Năm nuôi một sé gà, vịt. Biết số gà là 35 con và số vịt gấp 3 lần số gà. Bác Năm nuôi tất cả bao nhiêu con vừa gà vừa vịt?",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -36276,7 +36276,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q082",
             "type": "single_choice",
-            "prompt": "Mai có 16 quyền vở. Biết sau khi dùng, số vở của Mai giảm đi 4 lần so , với lúc đầu. Hỏi Mai đã dùng hết bao nhiêu quyền vở? Đáp sô.",
+            "prompt": "Mai có 16 quyển vở. Biết sau khi dùng, số vở của Mai giảm đi 4 lần so , với lúc đầu. Hỏi Mai đã dùng hết bao nhiêu quyển vở? Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -36446,7 +36446,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q087",
             "type": "single_choice",
-            "prompt": "Cô giáo có một số vở. Biết rằng sau khi chia cho 6 bạn học sinh giỏi, mỗi bạn 5 quyền thì cô còn lại 6 quyền. Tính số vở của cô. : Đáp số. ................. 84.",
+            "prompt": "Cô giáo có một số vở. Biết rằng sau khi chia cho 6 bạn học sinh giỏi, mỗi bạn 5 quyền thì cô còn lại 6 quyền. Tính số vở của cô. : Đáp số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -36548,7 +36548,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q090",
             "type": "single_choice",
-            "prompt": "Tìm số chin lớn nhất có các chữ số khác nhau có tổng các chữ số là 9. Đáp số.",
+            "prompt": "Tìm số chẵn lớn nhất có các chữ số khác nhau có tổng các chữ số là 9. Đáp số.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -36956,7 +36956,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q102",
             "type": "single_choice",
-            "prompt": "Hùng có số bi là: 34 x 3 = 102 (viên). : 86.",
+            "prompt": "Hùng có số bi là: 34 x 3 = 102 (viên).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -37500,7 +37500,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q118",
             "type": "single_choice",
-            "prompt": "Tuổi của bồ hiện nay là: 4 x 8 =32 (tuổi). - Tuổi con khi gấp đôi hiện nay là: 4 x 2 = 8 (tuổi). ! - Thời gian từ nay đến khi đó là: 8 - 4 = 4 (tuổi). - Tuổi của bố khi đó là: 32 + 4 = 36 (tuổi). ! -CAu 20: Ngăn thứ nhất có số quyền sách là: 134 x 4 = 536 (quyền). - Ngăn thứ hai có số quyền sách là: 134 x 3 = 402 (quyền). Cu 21: 58 + 642 x 9 = 58 + 5778 = 5836. 87.",
+            "prompt": "Tuổi của bồ hiện nay là: 4 x 8 =32 (tuổi). - Tuổi con khi gấp đôi hiện nay là: 4 x 2 = 8 (tuổi). ! - Thời gian từ nay đến khi đó là: 8 - 4 = 4 (tuổi). - Tuổi của bố khi đó là: 32 + 4 = 36 (tuổi). ! -CAu 20: Ngăn thứ nhất có số quyền sách là: 134 x 4 = 536 (quyền). - Ngăn thứ hai có số quyền sách là: 134 x 3 = 402 (quyền). Cu 21: 58 + 642 x 9 = 58 + 5778 = 5836.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -37738,7 +37738,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q125",
             "type": "single_choice",
-            "prompt": "Số đó có chữ số hàng chục bằng hàng đơn vị. - Nếu hàng đơn vị là 6 thì hàng trăm là: 25 — 6 x 2 = 13 (loại). - Vay hàng đơn vị là 8 và hàng trăm là:25—8x2=9. - Số đó là: 988.",
+            "prompt": "Số đó có chữ số hàng chục bằng hàng đơn vị. - Nếu hàng đơn vị là 6 thì hàng trăm là: 25 — 6 x 2 = 13 (loại). - Vay hàng đơn vị là 8 và hàng trăm là:25—8x2=9. - Số đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -38112,7 +38112,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q136",
             "type": "single_choice",
-            "prompt": "45cm x 2 + 21dm = 90cm + 21dm = 9dm + 21dm = 30dm. 88.",
+            "prompt": "45cm x 2 + 21dm = 90cm + 21dm = 9dm + 21dm = 30dm.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -38316,7 +38316,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q142",
             "type": "single_choice",
-            "prompt": "Ta có:24=2x3x4=1x3x8=1x4x6. - Số chẵn lớn nhất phải tìm là: 674.",
+            "prompt": "Ta có:24=2x3x4=1x3x8=1x4x6. - Số chẵn lớn nhất phải tìm là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -38690,7 +38690,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q153",
             "type": "single_choice",
-            "prompt": "Tuổi mẹ năm nay là: 7 x 5 =35 (tuổi). : - Tuổi mẹ 3năm sau là: 35 + 3 = 38 (tuổi). 89.",
+            "prompt": "Tuổi mẹ năm nay là: 7 x 5 =35 (tuổi). : - Tuổi mẹ 3năm sau là: 35 + 3 = 38 (tuổi).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -39065,8 +39065,8 @@
             "id": "violympic-exam-math-g3-v06-q164",
             "type": "single_choice",
             "prompt": "x+1+x+2+x+3+..+†x+9+x+10=65. (1+2+3+..+9+10)+10xx=65. 55+10xx=65. x=(65-55):10=1.",
-            "correctAnswer": "d",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 65 - 10 = 55. Đáp số: 55.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -39079,19 +39079,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "9"
+                "label": "75"
               },
               {
                 "id": "b",
-                "label": "12"
+                "label": "86"
               },
               {
                 "id": "c",
-                "label": "11"
+                "label": "55"
               },
               {
                 "id": "d",
-                "label": "10"
+                "label": "54"
               }
             ]
           },
@@ -39166,7 +39166,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q167",
             "type": "single_choice",
-            "prompt": "2 ngày có số giờ là: 2 x 24 = 48 (giờ). - 2 ngày và 3 giờ có tất cả số giờ là: 48 + 3 = 57 (giờ). 90.",
+            "prompt": "2 ngày có số giờ là: 2 x 24 = 48 (giờ). - 2 ngày và 3 giờ có tất cả số giờ là: 48 + 3 = 57 (giờ).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -39676,7 +39676,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q182",
             "type": "single_choice",
-            "prompt": "Tuổi bố năm ngoái là: 37 — 1 = 36 (tuổi). ! - Tuổi con sang năm là: 36 :4=9 (tuổi). - Tuổi con hiện nay là: 9 — 1 =8 (tuổi). R - Tông sô tuôi của 2 bô con hiện nay là: 8 +37 =45 (tuôi). - Từ nay đến khi đó là: (51—45) : 2 = 3 (năm). 91.",
+            "prompt": "Tuổi bố năm ngoái là: 37 — 1 = 36 (tuổi). ! - Tuổi con sang năm là: 36 :4=9 (tuổi). - Tuổi con hiện nay là: 9 — 1 =8 (tuổi). R - Tông sô tuôi của 2 bố con hiện nay là: 8 +37 =45 (tuôi). - Từ nay đến khi đó là: (51—45) : 2 = 3 (năm).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -39846,7 +39846,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q187",
             "type": "single_choice",
-            "prompt": "Số cần tìm đó là: 5370.",
+            "prompt": "Số cần tìm đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -40560,7 +40560,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q208",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ cham: : . Một quyền truyện có 184 trang. Dung đã đọc được 4 số trang của quyền truyện đó. Số trang chưa đọc là ...... trang. 94.",
+            "prompt": "Điền vào chỗ cham: : . Một quyền truyện có 184 trang. Dung đã đọc được 4 số trang của quyền truyện đó. Số trang chưa đọc là ...... trang.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -40798,7 +40798,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q215",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chdm: Một phép chia có số chia là số chin lớn nhất có 1 chữ số, thương là số bé nhât có 3 chữ sô khác nhau. Số bị chia trong phép chia đó là................- Bl.",
+            "prompt": "Điền vào chỗ chdm: Một phép chia có số chia là số chẵn lớn nhất có 1 chữ số, thương là số bé nhât có 3 chữ sô khác nhau. Số bị chia trong phép chia đó là................- Bl.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -41242,7 +41242,7 @@
             "type": "single_choice",
             "prompt": "Biết tổng của hai số bằng số lớn nhất có 2 chữ số khác nhau. Hỏi nếu viết thêm chữ số 2 vào bên trái số có 2 chữ số của tổng đó thì tổng của hai số đó sẽ bằng bao nhiêu? , Đáp số.",
             "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "explanation": "Số lớn nhất có 2 chữ số khác nhau là 98. Đáp số: 98.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -41255,19 +41255,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "10"
+                "label": "98"
               },
               {
                 "id": "b",
-                "label": "9"
+                "label": "99"
               },
               {
                 "id": "c",
-                "label": "11"
+                "label": "89"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "97"
               }
             ]
           },
@@ -41308,7 +41308,7 @@
           {
             "id": "violympic-exam-math-g3-v06-q230",
             "type": "single_choice",
-            "prompt": "Dùng sợi day đồng để uốn một hình tứ giác có số đo các cạnh là: 1dm 2cm; 2dm 3cm; 3dm 4cm và 4dm 5cm. Hỏi sợi dây đồng đó dài ít nhất bao nhiêu xăng-ti-mét dé uốn được tứ giác đó? Đáp số. ................... 96.",
+            "prompt": "Dùng sợi day đồng để uốn một hình tứ giác có số đo các cạnh là: 1dm 2cm; 2dm 3cm; 3dm 4cm và 4dm 5cm. Hỏi sợi dây đồng đó dài ít nhất bao nhiêu xăng-ti-mét dé uốn được tứ giác đó? Đáp số.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -41603,7 +41603,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q008",
             "type": "single_choice",
-            "prompt": "Biết đoạn AB = 12cm. Trên AB lấy M là trung điểm của AB và N làtrung điểm của MB. Tính độ dài đoạn MN. : , Đáp sô: kHeetrrnrnnnseee :",
+            "prompt": "Biết đoạn AB = 12cm. Trên AB lấy M là trung điểm của AB và N làtrung điểm của MB. Tính độ dài đoạn MN. : , Đáp sô: kHeetrrnrnnnseee.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -41705,7 +41705,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q011",
             "type": "single_choice",
-            "prompt": "Biết ngày 2 tháng 3 của một năm là ngày thứ ba. Hỏi ngày 4 tháng 5 năm ! của năm đó là ngày thứ mấy? (tháng 3 có 31 ngày) Đáp số. .................. 97.",
+            "prompt": "Biết ngày 2 tháng 3 của một năm là ngày thứ ba. Hỏi ngày 4 tháng 5 năm ! của năm đó là ngày thứ mấy? (tháng 3 có 31 ngày) Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -42045,7 +42045,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q021",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ cham: Một đơn vị bộ đội 1 tuần ăn hết 625kg gạo. Tuần sau có một số người đến thêm nên đơn vị ăn hết số gạo gấp đôi trong tuần đầu. Cả 2 tuần đơn vị đó ăn hêết............kg gạo. 98.",
+            "prompt": "Điền vào chỗ cham: Một đơn vị bộ đội 1 tuần ăn hết 625kg gạo. Tuần sau có một số người đến thêm nên đơn vị ăn hết số gạo gấp đôi trong tuần đầu. Cả 2 tuần đơn vị đó ăn hêết............kg gạo.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -42113,7 +42113,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q023",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chắm: : Phép chia có số bị chia là số chin lớn nhất có 3 chữ số, thương là số lớn nhất có 1chữ số thì có số chia là ........ và số dư là.",
+            "prompt": "Điền vào chỗ chắm: : Phép chia có số bị chia là số chẵn lớn nhất có 3 chữ số, thương là số lớn nhất có 1chữ số thì có số chia là ........ và số dư là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -42351,7 +42351,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q030",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chấm: Hoa mua 7 quyền vở hết 21 nghìn đồng. Hỏi nếu Hoa mua thêm 5 quyền vở như thê thì phải trả thêm.......... nghìn dong.",
+            "prompt": "Điền vào chỗ chấm: Hoa mua 7 quyển vở hết 21 nghìn đồng. Hỏi nếu Hoa mua thêm 5 quyển vở như thê thì phải trả thêm.......... nghìn dong.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -42453,7 +42453,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q033",
             "type": "single_choice",
-            "prompt": "Hiệu hai số bằng 76. Nếu thêm vào số bị trừ 12 va giữ nguyên số trừ thì hiệu hai số đó sẽ bằng bao nhiêu? Đáp sô: .................. 99.",
+            "prompt": "Hiệu hai số bằng 76. Nếu thêm vào số bị trừ 12 va giữ nguyên số trừ thì hiệu hai số đó sẽ bằng bao nhiêu? Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -42793,7 +42793,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q043",
             "type": "single_choice",
-            "prompt": "Biết một ngày chủ nhật trong tháng 3 là ngày 13. Hỏi ngày chủ nhật đầu tiên trong tháng tư năm đó sẽ là ngày bao nhiêu? Đáp số. ................. 100.",
+            "prompt": "Biết một ngày chủ nhật trong tháng 3 là ngày 13. Hỏi ngày chủ nhật đầu tiên trong tháng tư năm đó sẽ là ngày bao nhiêu? Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -43099,7 +43099,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q052",
             "type": "single_choice",
-            "prompt": "Năm nay em 8 tuổi và bằng nửa tuổi anh năm ngoái. Anh hơn em số tuổi là: ' ; :",
+            "prompt": "Năm nay em 8 tuổi và bằng nửa tuổi anh năm ngoái. Anh hơn em số tuổi là: ' ;.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -43201,7 +43201,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q055",
             "type": "single_choice",
-            "prompt": "Một trường có số tổng số học sinh là 456 em. Biết số học sinh nam nhiều hơn một nửa sô học sinh toàn trường là 7 em. Tính số học sinh nữ của trường đó. “ — mm im cự Đáp số: .................. 101.",
+            "prompt": "Một trường có số tổng số học sinh là 456 em. Biết số học sinh nam nhiều hơn một nửa sô học sinh toàn trường là 7 em. Tính số học sinh nữ của trường đó. “ — mm im cự Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -44153,7 +44153,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q083",
             "type": "single_choice",
-            "prompt": "Số chia trong phép chia đó là: 8. : - Thuong của phép chia đó là: 102. - Số bị chia trong phép chia đó là: 102 x 8 = 816. 104.",
+            "prompt": "Số chia trong phép chia đó là: 8. : - Thuong của phép chia đó là: 102. - Số bị chia trong phép chia đó là: 102 x 8 = 816.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -44595,7 +44595,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q096",
             "type": "single_choice",
-            "prompt": "Tổng của 2 số đó là: 98. - Khi viết thêm chữ số 2 vào bên trái thì tổng là: 298.",
+            "prompt": "Tổng của 2 số đó là: 98. - Khi viết thêm chữ số 2 vào bên trái thì tổng là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -44629,7 +44629,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q097",
             "type": "single_choice",
-            "prompt": "Lượng nước trong 3 bình to là: 3 x 10 = 30 (). : - Lượng nước trong 5 bình nhỏ là: 5 x 5=25 (J). - Lượng nước mang theo tất cả 1a:30+25=55(). 105.",
+            "prompt": "Lượng nước trong 3 bình to là: 3 x 10 = 30 (). : - Lượng nước trong 5 bình nhỏ là: 5 x 5=25 (J). - Lượng nước mang theo tất cả 1a:30+25=55().",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -45445,7 +45445,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q121",
             "type": "single_choice",
-            "prompt": "Tháng đó có 5 chủ nhật và ngày chủ nhật đầu tiên là ngày chin. ; - Ngày chủ nhật đầu tiên của thang đó là ngày 2 (vi4 +4 x 7=32). .. - Ngày chủ nhật cudi cùng của thang đó là: 2 + 4 x 7=30.. ; - Ngày thứ bảy cudi cùng của thang đó là: 30 - 1 = 29. 107.",
+            "prompt": "Tháng đó có 5 chủ nhật và ngày chủ nhật đầu tiên là ngày chin. ; - Ngày chủ nhật đầu tiên của thang đó là ngày 2 (vi4 +4 x 7=32). .. - Ngày chủ nhật cudi cùng của thang đó là: 2 + 4 x 7=30.. ; - Ngày thứ bảy cudi cùng của thang đó là: 30 - 1 = 29.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -45649,7 +45649,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q127",
             "type": "single_choice",
-            "prompt": "Giá tiền mỗi quyền vở là: 21: 7 =3 (nghìn đồng). - Mua 5 quyền vở đó phải trả số tiền là: 3 x 5 = 15 (nghìn đồng).",
+            "prompt": "Giá tiền mỗi quyển vở là: 21: 7 =3 (nghìn đồng). - Mua 5 quyển vở đó phải trả số tiền là: 3 x 5 = 15 (nghìn đồng).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -45989,7 +45989,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q137",
             "type": "single_choice",
-            "prompt": "Quãng đường Hòa đã đi được là: 1235 + 530 = 1765 (m). Quãng đường hai bạn đã đi dài là: 1235 + 1765 = 3000 (m). :108.",
+            "prompt": "Quãng đường Hòa đã đi được là: 1235 + 530 = 1765 (m). Quãng đường hai bạn đã đi dài là: 1235 + 1765 = 3000 (m).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -46227,7 +46227,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q144",
             "type": "single_choice",
-            "prompt": "Số bé nhất cộng với 68 được số chia hết cho 5 là: 70 — 68 =2. C. 2.",
+            "prompt": "Số bé nhất cộng với 68 được số chia hết cho 5 là: 70 — 68 =2. C.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -46261,7 +46261,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q145",
             "type": "single_choice",
-            "prompt": "Số lớn là: 246 + 124 = 370. B. 370.",
+            "prompt": "Số lớn là: 246 + 124 = 370. B.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -46329,7 +46329,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q147",
             "type": "single_choice",
-            "prompt": "Ta có: 96 : 5 = 19 (du 1) ; 27:4 =6 (du3); 58:8=7 (du 2); 76:9 =8 (dư 4). D. 76: 9.",
+            "prompt": "Ta có: 96 : 5 = 19 (du 1) ; 27:4 =6 (du3); 58:8=7 (du 2); 76:9 =8 (dư 4). D. 76.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -46499,7 +46499,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q152",
             "type": "single_choice",
-            "prompt": "Từ 12 đến 34 có số các số là: 34 — 12 + 1 =23 (số). - Từ 12 đến 34 có số các số chia hết cho 5 là: 15; 20; 25; 30. - Từ 12 đến 34 có số số không chia hết cho 5 là: 23 — 4 = 19 (số). C. 19.",
+            "prompt": "Từ 12 đến 34 có số các số là: 34 — 12 + 1 =23 (số). - Từ 12 đến 34 có số các số chia hết cho 5 là: 15; 20; 25; 30. - Từ 12 đến 34 có số số không chia hết cho 5 là: 23 — 4 = 19 (số). C.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -46533,7 +46533,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q153",
             "type": "single_choice",
-            "prompt": "5 con chó có số chân là: 5 x 4 = 20 (chân). - 6 con gà có số chân là: 6 x 2=12 (chân). - 5 con chó hon 6 con gà số chân là: 20-12 =8 (chân). C. 8 chân. 109.",
+            "prompt": "5 con chó có số chân là: 5 x 4 = 20 (chân). - 6 con gà có số chân là: 6 x 2=12 (chân). - 5 con chó hon 6 con gà số chân là: 20-12 =8 (chân). C. 8 chân.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -46873,7 +46873,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q163",
             "type": "single_choice",
-            "prompt": "Số túi dùng đựng táo là: 56 : 8 = 7 (túi). - Số túi dùng đựng cam là: 98 : 7 = 14 (túi). - Số túi cần dùng tất cả là: 14 + 7 = 27 (túi). 110.",
+            "prompt": "Số túi dùng đựng táo là: 56 : 8 = 7 (túi). - Số túi dùng đựng cam là: 98 : 7 = 14 (túi). - Số túi cần dùng tất cả là: 14 + 7 = 27 (túi).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -46907,7 +46907,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q164",
             "type": "single_choice",
-            "prompt": "Mua 4 chiếc bút và 5 quyền vở hết 37 nghìn đồng. Mua 2 chiếc bút và 5 quyền vở hết 31 nghìn đồng. Tính giá tiền 1 chiếc bút. ; Đáp sô.",
+            "prompt": "Mua 4 chiếc bút và 5 quyển vở hết 37 nghìn đồng. Mua 2 chiếc bút và 5 quyển vở hết 31 nghìn đồng. Tính giá tiền 1 chiếc bút. ; Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -47281,7 +47281,7 @@
           {
             "id": "violympic-exam-math-g3-v07-q175",
             "type": "single_choice",
-            "prompt": "Một hình chữ nhật có chu vi 125cm. Nếu tăng chiều rộng 5cm và giảm chiều dài 10cm thì chu vi của hình đó bang bao nhiêu? Đáp số. .................. 112.",
+            "prompt": "Một hình chữ nhật có chu vi 125cm. Nếu tăng chiều rộng 5cm và giảm chiều dài 10cm thì chu vi của hình đó bang bao nhiêu? Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -47542,7 +47542,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q007",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chấm: : Trường DK quyên góp được 2346 quyền vở va bằng : số vở của hai trường LDP và NT. Cả 3 trường đã quyên góp được ......... quyền vở.",
+            "prompt": "Điền vào chỗ chấm: : Trường DK quyên góp được 2346 quyển vở va bằng : số vở của hai trường LDP và NT. Cả 3 trường đã quyên góp được ......... quyển vở.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -48426,7 +48426,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q033",
             "type": "single_choice",
-            "prompt": "Một kho chứa 2488kg thóc nếp và thóc tẻ. Biết số thóc nếp bằng : số thóc trong kho. Tính số thóc tẻ có trong kho. : Đáp sô. ................. 115.",
+            "prompt": "Một kho chứa 2488kg thóc nếp và thóc tẻ. Biết số thóc nếp bằng : số thóc trong kho. Tính số thóc tẻ có trong kho. : Đáp sô.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -48766,7 +48766,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q043",
             "type": "single_choice",
-            "prompt": "Lan đầu chuyển 4970kg théc vào kho. Lần thứ hại chuyển số thóc gấp đôi lần đầu. Tính số thóc chuyển vào kho cả 2 lần. Đáp số. .................. 116.",
+            "prompt": "Lan đầu chuyển 4970kg théc vào kho. Lần thứ hại chuyển số thóc gấp đôi lần đầu. Tính số thóc chuyển vào kho cả 2 lần. Đáp số.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -48902,7 +48902,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q047",
             "type": "single_choice",
-            "prompt": "Mai có 50 nghìn đồng. Mai mua 4 bút chì và 3 quyền vo. Biết giá một chiếc bút chì là 2 nghìn đồng, một quyền vở là 4 nghìn đồng. Hỏi .Mai còn lại bao nhiêu tiền? mm Đáp sô.",
+            "prompt": "Mai có 50 nghìn đồng. Mai mua 4 bút chì và 3 quyền vo. Biết giá một chiếc bút chì là 2 nghìn đồng, một quyển vở là 4 nghìn đồng. Hỏi .Mai còn lại bao nhiêu tiền? mm Đáp sô.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -49106,7 +49106,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q053",
             "type": "single_choice",
-            "prompt": "Một cửa hàng bán 998m vải, trong đó có 142m vải đen. Biết số vải hoa ! gấp 3 lần số vải đen, còn lại là vải trắng. Tính số mét vải trắng. ! Đáp số. .................. 117.",
+            "prompt": "Một cửa hàng bán 998m vải, trong đó có 142m vải đen. Biết số vải hoa ! gấp 3 lần số vải đen, còn lại là vải trắng. Tính số mét vải trắng. ! Đáp số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -49174,7 +49174,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q055",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chấm: Một cửa hàng nhập về 145kg lạc. Biết số lạc nhập về bằng } số gạo và bang một nửa sô ngô. Cửa hang đó đã nhập về tat cả ......... kg.",
+            "prompt": "Điền vào chỗ chấm: Một cửa hàng nhập về 145kg lạc. Biết số lạc nhập về bằng } số gạo và bang một nửa sô ngô. Cửa hang đó đã nhập về tất cả ......... kg.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -50160,7 +50160,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q084",
             "type": "single_choice",
-            "prompt": "Hiện nay bố 32 tuổi và gấp 4 lần tuổi con. Hỏi mấy năm nữa thì tổng số tuôi của 2 bô con là 50 tuôi? i Đáp sô.",
+            "prompt": "Hiện nay bố 32 tuổi và gấp 4 lần tuổi con. Hỏi mấy năm nữa thì tổng số tuôi của 2 bố con là 50 tuôi? i Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -50194,7 +50194,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q085",
             "type": "single_choice",
-            "prompt": "Tìm số bị chia của một phép chia có số chia là số chin lớn nhất có 1 chữ số; thương là số lẻ nhỏ nhất có 4 chữ số khác nhau và số dư bằng 6. Đáp số.",
+            "prompt": "Tìm số bị chia của một phép chia có số chia là số chẵn lớn nhất có 1 chữ số; thương là số lẻ nhỏ nhất có 4 chữ số khác nhau và số dư bằng 6. Đáp số.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -50228,7 +50228,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q086",
             "type": "single_choice",
-            "prompt": "Một băng giấy hình chữ nhật có chiều rộng 6cm. Nếu tăng chiều rộng ° thêm 4cm thì diện tích băng giấy tăng thêm 60cm”. Tính điện tích thực của băng giây. ; Đáp sô: ................... 120.",
+            "prompt": "Một băng giấy hình chữ nhật có chiều rộng 6cm. Nếu tăng chiều rộng ° thêm 4cm thì diện tích băng giấy tăng thêm 60cm”. Tính điện tích thực của băng giây. ; Đáp sô.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -50772,7 +50772,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q102",
             "type": "single_choice",
-            "prompt": "1206 x 3 + 1794 x 3 = (1206 + 1794) x 3 = 3000 x 3 = 9000. 122.",
+            "prompt": "1206 x 3 + 1794 x 3 = (1206 + 1794) x 3 = 3000 x 3 = 9000.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -51180,7 +51180,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q114",
             "type": "single_choice",
-            "prompt": "Thừa số thứ hai là: 24: 4=6. ! — Thừa số thứ hai tăng thêm 5 thì tích là: (6+ 5) x 4 = 44. 123.",
+            "prompt": "Thừa số thứ hai là: 24: 4=6. ! — Thừa số thứ hai tăng thêm 5 thì tích là: (6+ 5) x 4 = 44.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -51622,7 +51622,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q127",
             "type": "single_choice",
-            "prompt": "Ta có: (15+7):8=2 (dư 6). B. 6.",
+            "prompt": "Ta có: (15+7):8=2 (dư 6). B.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -51690,7 +51690,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q129",
             "type": "single_choice",
-            "prompt": "3 lớp 3A, 3B và 3C có số học sinh là: 32 x 3 = 96 (học sinh). - 2 lớp 3D và 3E có số học sinh là: 35 x 2 = 70 (học sinh). - Số học sinh cả khối 3 1a: 96 + 70 = 166 (hoc sinh). 4. 166 học sinh. 124.",
+            "prompt": "3 lớp 3A, 3B và 3C có số học sinh là: 32 x 3 = 96 (học sinh). - 2 lớp 3D và 3E có số học sinh là: 35 x 2 = 70 (học sinh). - Số học sinh cả khối 3 1a: 96 + 70 = 166 (hoc sinh). 4. 166 học sinh.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -51996,7 +51996,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q138",
             "type": "single_choice",
-            "prompt": "Số cam đã ban là: 60 + 45 + 75 = 180 (qua). - Sô cam còn lại là: 180 + 30 = 210 (quả). - Số cam ở mỗi ré là: (210 + 180):3=730(qudá). -. 125.",
+            "prompt": "Số cam đã ban là: 60 + 45 + 75 = 180 (qua). - Sô cam còn lại là: 180 + 30 = 210 (quả). - Số cam ở mỗi ré là: (210 + 180):3=730(qudá). -.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -52268,7 +52268,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q146",
             "type": "single_choice",
-            "prompt": "Số tiền mua 4 bút chi là: 2 x 4 = 8 (nghìn đồng). - Số tiền mua 3 quyền vở là: 3 x 4= 12 (nghìn đồng). - Mai mua hết số tiền là: 8 + 12 = 20 (nghìn đồng). - Mai còn lại số tiền là: 50 — 20 = 30 (nghìn đồng).",
+            "prompt": "Số tiền mua 4 bút chi là: 2 x 4 = 8 (nghìn đồng). - Số tiền mua 3 quyển vở là: 3 x 4= 12 (nghìn đồng). - Mai mua hết số tiền là: 8 + 12 = 20 (nghìn đồng). - Mai còn lại số tiền là: 50 — 20 = 30 (nghìn đồng).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -52370,7 +52370,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q149",
             "type": "single_choice",
-            "prompt": "Số bị trừ = 10 lần số trừ + 6. - 9 lan số trừ + 6 = 690. - Số trừ là: (690 — 6) : 9= 76. sy - Số bị trừ là: 766.",
+            "prompt": "Số bị trừ = 10 lần số trừ + 6. - 9 lan số trừ + 6 = 690. - Số trừ là: (690 — 6) : 9= 76. sy - Số bị trừ là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -52404,7 +52404,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q150",
             "type": "single_choice",
-            "prompt": "Số cây tía tô là: 15 x 6 = 90 (cây). - Số cây kinh giới là: 12 x 4 = 48 (cây). - Số cây bạc hà là: 8 x 7 = 56 (cây). - Số cây cả 3 loại là: 90 + 48 + 56 = 194 (cây). 126 ! :",
+            "prompt": "Số cây tía tô là: 15 x 6 = 90 (cây). - Số cây kinh giới là: 12 x 4 = 48 (cây). - Số cây bạc hà là: 8 x 7 = 56 (cây). - Số cây cả 3 loại là: 90 + 48 + 56 = 194 (cây). 126 !.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -52846,7 +52846,7 @@
           {
             "id": "violympic-exam-math-g3-v08-q163",
             "type": "single_choice",
-            "prompt": "x x 4= 476, x=476:4=119. ; Đáp án: B. . 127.",
+            "prompt": "x x 4= 476, x=476:4=119. ; Đáp án: B.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -53923,7 +53923,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q019",
             "type": "single_choice",
-            "prompt": "Khi thực hiện phép nhân 4560 với 6, do sơ ý, Nam đã viết nhằm thừa số 6 thành 9. Vậy tích của phép nhân đó tăng thêm là: - :",
+            "prompt": "Khi thực hiện phép nhân 4560 với 6, do sơ ý, Nam đã viết nhằm thừa số 6 thành 9. Vậy tích của phép nhân đó tăng thêm là: -.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -54263,7 +54263,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q029",
             "type": "single_choice",
-            "prompt": "Tính tổng của tat cả các số chin bé hon 20. ; : - Đáp sô.",
+            "prompt": "Tính tổng của tất cả các số chẵn bé hon 20. ; : - Đáp sô.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -54399,7 +54399,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q033",
             "type": "single_choice",
-            "prompt": "Điền số thích hợp vào chỗ chấm: 1 tuần 2 ngày =......... giờ. Đáp số. .................. 132.",
+            "prompt": "Điền số thích hợp vào chỗ chấm: 1 tuần 2 ngày =......... giờ. Đáp số.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -54467,7 +54467,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q035",
             "type": "single_choice",
-            "prompt": "Tìm số bị chia của một phép chia có dư biết số chia là số lớn nhất có 1 chữ số; thương là số chin nhỏ nhất có 4 chữ số khác nhau và số dự là số dư lớn nhất có thể có trong phép chia đó. i Đáp số.",
+            "prompt": "Tìm số bị chia của một phép chia có dư biết số chia là số lớn nhất có 1 chữ số; thương là số chẵn nhỏ nhất có 4 chữ số khác nhau và số dự là số dư lớn nhất có thể có trong phép chia đó. i Đáp số.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -54773,7 +54773,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q044",
             "type": "single_choice",
-            "prompt": "Tích của 2 số là 645. Tìm thừa số thứ nhất, biết rằng thêm 5 đơn vị vào thừa số thứ hai thì tích mới sẽ là 860. ; Đáp sô: ................... 133.",
+            "prompt": "Tích của 2 số là 645. Tìm thừa số thứ nhất, biết rằng thêm 5 đơn vị vào thừa số thứ hai thì tích mới sẽ là 860. ; Đáp sô.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -55113,7 +55113,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q054",
             "type": "single_choice",
-            "prompt": "Mua 2 cái bút và 3 quyền vở hết 14000 đồng. Mua 3 cái bút và 2 quyền vở cùng loại đó thì hết 13500 đồng. Tính giá tiền mỗi loại. Đáp SOL ....eeee..vee. 134.",
+            "prompt": "Mua 2 cái bút và 3 quyển vở hết 14000 đồng. Mua 3 cái bút và 2 quyển vở cùng loại đó thì hết 13500 đồng. Tính giá tiền mỗi loại. Đáp SOL ....eeee..vee.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -55555,7 +55555,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q067",
             "type": "single_choice",
-            "prompt": "Bạn An chia một số cho 12 thì được thương là 5. Hỏi nếu chia số đó cho 2 thì được thương là bao nhiêu? ; Đáp sô. ................. 135.",
+            "prompt": "Bạn An chia một số cho 12 thì được thương là 5. Hỏi nếu chia số đó cho 2 thì được thương là bao nhiêu? ; Đáp sô.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -56237,7 +56237,7 @@
             "type": "single_choice",
             "prompt": "Điền vào chỗ chấm: Biết năm nay Tuyết 8 tuổi, Tuyết kém Lan 1 tuổi nhưng hơn Mai 1 tuổi. Vậy sau 2 năm nữa thì tổng số tuổi của cả ba bạn là.............. tuổi.",
             "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "explanation": "Tổng số tuổi là: 8 + 1 = 9 (tuổi). Đáp số: 9 tuổi.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -56250,19 +56250,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "10"
+                "label": "9 tuổi"
               },
               {
                 "id": "b",
-                "label": "9"
+                "label": "6 tuổi"
               },
               {
                 "id": "c",
-                "label": "12"
+                "label": "11 tuổi"
               },
               {
                 "id": "d",
-                "label": "11"
+                "label": "-1 tuổi"
               }
             ]
           },
@@ -56371,7 +56371,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q091",
             "type": "single_choice",
-            "prompt": "Tinh: 11+137+72+63+128 +89, : ; ; DED số: .................. 137.",
+            "prompt": "Tinh: 11+137+72+63+128 +89, : ; ; DED số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -56542,8 +56542,8 @@
             "id": "violympic-exam-math-g3-v09-q096",
             "type": "single_choice",
             "prompt": "Năm ngoái tổng số tuổi của hai anh em là 30 tuổi. Biết khi anh bằng tuổi em hiện nay thì tổng số tuổi của hai anh em là 20 tuổi. Tính tổng số tuổi của hai anh em khi em băng tuôi anh hiện nay. Đáp số.",
-            "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 30 + 20 = 50 (tuổi). Đáp số: 50 tuổi.",
             "topic": "Toán Violympic Lớp 3",
             "difficulty": "challenge",
             "points": 10,
@@ -56556,19 +56556,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "11"
+                "label": "50 tuổi"
               },
               {
                 "id": "b",
-                "label": "9"
+                "label": "47 tuổi"
               },
               {
                 "id": "c",
-                "label": "10"
+                "label": "52 tuổi"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "40 tuổi"
               }
             ]
           },
@@ -56881,7 +56881,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q106",
             "type": "single_choice",
-            "prompt": "Tim x biết: x: 7= 36: 6:",
+            "prompt": "Tim x biết: x: 7= 36.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -57119,7 +57119,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q113",
             "type": "single_choice",
-            "prompt": "Ta có phép chia: 29 : 2 = 14 (du 1). Số bàn cần ít nhất là: 14 + 1 = 15 (bàn). Đáp án: B. 140.",
+            "prompt": "Ta có phép chia: 29 : 2 = 14 (du 1). Số bàn cần ít nhất là: 14 + 1 = 15 (bàn). Đáp án: B.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -57561,7 +57561,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q126",
             "type": "single_choice",
-            "prompt": "Số vịt bán đi là: 140 : 7=20 (con). - Số vịt còn lại là: 140 — 20 = 120 (con). 141.",
+            "prompt": "Số vịt bán đi là: 140 : 7=20 (con). - Số vịt còn lại là: 140 — 20 = 120 (con).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -58003,7 +58003,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q139",
             "type": "single_choice",
-            "prompt": "Các số đó là: 10;11; 12; 20; 21; 22. - Tổng các số đó là: 10+ 11 +12+20 +21 +22 = 96. 142.",
+            "prompt": "Các số đó là: 10;11; 12; 20; 21; 22. - Tổng các số đó là: 10+ 11 +12+20 +21 +22 = 96.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -58309,7 +58309,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q148",
             "type": "single_choice",
-            "prompt": "Chữ số hàng trăm của số đó là: 1 (vì 52 + 48 = 100). - Tổng 2chữ số còn lại là: 19—1=18. - Vì 9 + 9 = 19 nên 2chữ số còn lại đều bằng 9. - Số phải tìm đó là: 199.",
+            "prompt": "Chữ số hàng trăm của số đó là: 1 (vì 52 + 48 = 100). - Tổng 2chữ số còn lại là: 19—1=18. - Vì 9 + 9 = 19 nên 2chữ số còn lại đều bằng 9. - Số phải tìm đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -58377,7 +58377,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q150",
             "type": "single_choice",
-            "prompt": "Hiệu số gà và thé gấp số thỏ là: 4 - 1 =3 (lần). - Số thỏ là: 15 :3=5 (con). -Sé gala: 15+5=20(con). - Tổng số chân là: 5 x 4 +20 x 2=60. 143.",
+            "prompt": "Hiệu số gà và thé gấp số thỏ là: 4 - 1 =3 (lần). - Số thỏ là: 15 :3=5 (con). -Sé gala: 15+5=20(con). - Tổng số chân là: 5 x 4 +20 x 2=60.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -58445,7 +58445,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q152",
             "type": "single_choice",
-            "prompt": "Số lớn nhất đó là: 795.",
+            "prompt": "Số lớn nhất đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -58513,7 +58513,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q154",
             "type": "single_choice",
-            "prompt": "Mua 5 cái bút và 5 quyền vở thì hết số tiền là: 14000 + 13500 = 27500 (đồng). - Mua 1 cái bút và 1 quyền vở thì hết số tiền là: 27500 : 5 = 5500 (đồng). - Mua 2 cái bút và 2 quyền vở thì hết số tiền là: 5500 x 2 = 11000 (đồng). - Giá tiền 1 quyền vở là: 14000 — 11000 = 3000 (đồng). Giá tiền 1 cái bút là: 5500 — 3000 = 2500 (đồng).",
+            "prompt": "Mua 5 cái bút và 5 quyển vở thì hết số tiền là: 14000 + 13500 = 27500 (đồng). - Mua 1 cái bút và 1 quyển vở thì hết số tiền là: 27500 : 5 = 5500 (đồng). - Mua 2 cái bút và 2 quyển vở thì hết số tiền là: 5500 x 2 = 11000 (đồng). - Giá tiền 1 quyển vở là: 14000 — 11000 = 3000 (đồng). Giá tiền 1 cái bút là: 5500 — 3000 = 2500 (đồng).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -58785,7 +58785,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q162",
             "type": "single_choice",
-            "prompt": "Giá tiền 1 quyền vở đó là: 14000 — 12000 = 2000 (đồng). Giá tiền 1 quyền sách đó là: (12000 - 2000) : 2 = 5000 (đồng).",
+            "prompt": "Giá tiền 1 quyển vở đó là: 14000 — 12000 = 2000 (đồng). Giá tiền 1 quyền sách đó là: (12000 - 2000) : 2 = 5000 (đồng).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -58853,7 +58853,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q164",
             "type": "single_choice",
-            "prompt": "Chiều rộng của hình chữ nhật đó là: 46 :2—15 =8 (cm). Diện tích của hình chữ nhật đó là: 15 x 8= 720 (em). 144.",
+            "prompt": "Chiều rộng của hình chữ nhật đó là: 46 :2—15 =8 (cm). Diện tích của hình chữ nhật đó là: 15 x 8= 720 (em).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -59057,7 +59057,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q170",
             "type": "single_choice",
-            "prompt": "Chữ số hàng trăm là: 4. - Ta có: 423 — 43 = 380. - Chữ số bị xoá đi đó là: 2.",
+            "prompt": "Chữ số hàng trăm là: 4. - Ta có: 423 — 43 = 380. - Chữ số bị xoá đi đó là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -59227,7 +59227,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q175",
             "type": "single_choice",
-            "prompt": "Xay 10kg thóc được số gạo là: 70: 10= 7 (kg). (vì 100 : 10 = 10) : - 21 thì gấp 7 số lần là: 21 : 7 =3 (lần). - Cần số thóc là: 10 x 3 = 30 (kg). : 145.",
+            "prompt": "Xay 10kg thóc được số gạo là: 70: 10= 7 (kg). (vì 100 : 10 = 10) : - 21 thì gấp 7 số lần là: 21 : 7 =3 (lần). - Cần số thóc là: 10 x 3 = 30 (kg).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -59839,7 +59839,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q193",
             "type": "single_choice",
-            "prompt": "Số bé nhất đó là: 110. ! :",
+            "prompt": "Số bé nhất đó là: 110. !.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -59907,7 +59907,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q195",
             "type": "single_choice",
-            "prompt": "Ta có: 52 + 48 = 100. - Tổng các chữ số của số đó là: 19—1= 18, mm: os - Số đó là: 99.",
+            "prompt": "Ta có: 52 + 48 = 100. - Tổng các chữ số của số đó là: 19—1= 18, mm: os - Số đó là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -60077,7 +60077,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q200",
             "type": "single_choice",
-            "prompt": "Tích tăng thêm là: (4650 — 4560) x 3 = 270. B. 270.",
+            "prompt": "Tích tăng thêm là: (4650 — 4560) x 3 = 270. B.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -60145,7 +60145,7 @@
           {
             "id": "violympic-exam-math-g3-v09-q202",
             "type": "single_choice",
-            "prompt": "Hiệu của 2 số lẻ, nếu giữa chúng có 9 số lẻ khác là:9x2=18. A. J#. 147.",
+            "prompt": "Hiệu của 2 số lẻ, nếu giữa chúng có 9 số lẻ khác là:9x2=18. A. J#.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -60236,7 +60236,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q002",
             "type": "single_choice",
-            "prompt": "Số A đó là: 831. - Tổng các chữ số của A là: 8+3+1=12. p.12 Câu 94; Số đó gấp lên ba lần được là: 8 + 16 = 24. - Số đó là: 24:3=8. B. 8.",
+            "prompt": "Số A đó là: 831. - Tổng các chữ số của A là: 8+3+1=12. p.12 Câu 94; Số đó gấp lên ba lần được là: 8 + 16 = 24. - Số đó là: 24:3=8. B.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -60304,7 +60304,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q004",
             "type": "single_choice",
-            "prompt": "Tích tang thêm là: (6 — 3) x 456 = 1368. C. 1368.",
+            "prompt": "Tích tang thêm là: (6 — 3) x 456 = 1368. C.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -60780,7 +60780,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q018",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ chấm: Một khu-đất hình chữ nhật có chiều dài 56m, chiều rộng 34m. Người ta mở rộng khu đất bằng cách kéo dài chiều dài 12m và chiều rộng 14m. Chu vi của khu dat sau khi mở rộng là...........m. 150.",
+            "prompt": "Điền vào chỗ chấm: Một khu-đất hình chữ nhật có chiều dài 56m, chiều rộng 34m. Người ta mở rộng khu đất bằng cách kéo dài chiều dài 12m và chiều rộng 14m. Chu vi của khu dat sau khi mở rộng là...........m.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -60984,7 +60984,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q024",
             "type": "single_choice",
-            "prompt": "Tìm một số chin có ba chữ só, biết rằng chữ số hàng trăm gấp 2 lần chữ số hàng đơn vị và bằng nửa chữ số hàng chục. Đáp số.",
+            "prompt": "Tìm một số chẵn có ba chữ só, biết rằng chữ số hàng trăm gấp 2 lần chữ số hàng đơn vị và bằng nửa chữ số hàng chục. Đáp số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -61154,7 +61154,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q029",
             "type": "single_choice",
-            "prompt": "Biết hiệu của hai số bằng số lớn nhất có hai chữ số. Nếu bớt số bị trừ đi 20 và giữ nguyên số trừ thì hiệu của hai số là bao nhiêu? ˆ : Đáp số. .................. 151.",
+            "prompt": "Biết hiệu của hai số bằng số lớn nhất có hai chữ số. Nếu bớt số bị trừ đi 20 và giữ nguyên số trừ thì hiệu của hai số là bao nhiêu? ˆ : Đáp số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -61562,7 +61562,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q041",
             "type": "single_choice",
-            "prompt": "Hình tam giác ABC có 3 cạnh bằng nhau. Hình tứ giác MNPQ có 4 cạnh băng nhau. Biết cạnh hình tam giác dài hơn cạnh hình tứ giác 10 cm và chu vi hai hình đó bằng nhau. Tìm độ dài cạnh của hình tam giác ABC và hình tứ giác MNPQ. Đáp sô. .................. 152.",
+            "prompt": "Hình tam giác ABC có 3 cạnh bằng nhau. Hình tứ giác MNPQ có 4 cạnh băng nhau. Biết cạnh hình tam giác dài hơn cạnh hình tứ giác 10 cm và chu vi hai hình đó bằng nhau. Tìm độ dài cạnh của hình tam giác ABC và hình tứ giác MNPQ. Đáp sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -61868,7 +61868,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q050",
             "type": "single_choice",
-            "prompt": "Một thùng đựng 30 quả trứng thì cân nặng 8kg. Cũng thùng đó nếu đựng 40 quả trứng thì cân nặng 10kg. Hỏi thùng đó khi không có quả trứng nào thì nặng mấy ki-l6-gam? i Đáp sô: .................. 153.",
+            "prompt": "Một thùng đựng 30 quả trứng thì cân nặng 8kg. Cũng thùng đó nếu đựng 40 quả trứng thì cân nặng 10kg. Hỏi thùng đó khi không có quả trứng nào thì nặng mấy ki-l6-gam? i Đáp sô.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -62276,7 +62276,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q062",
             "type": "single_choice",
-            "prompt": "Điền vào chỗ cham: ; ưm A = 123 + 456 + 78 + 90.B=498 + 76 + 153 +20. Vậy: A ...... B. 154.",
+            "prompt": "Điền vào chỗ cham: ; ưm A = 123 + 456 + 78 + 90.B=498 + 76 + 153 +20. Vậy: A ...... B.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -62684,7 +62684,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q074",
             "type": "single_choice",
-            "prompt": "Huy nghĩ một sô mà khi gap sô đó lên 2 lân rôi cộng với 56 thì được kêt quả băng 78. Hỏi Huy đã nghĩ ra sô nào? Đáp SỐ. ................. 155.",
+            "prompt": "Huy nghĩ một sô mà khi gap sô đó lên 2 lân rôi cộng với 56 thì được kêt quả băng 78. Hỏi Huy đã nghĩ ra sô nào? Đáp SỐ.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -63058,7 +63058,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q085",
             "type": "single_choice",
-            "prompt": "Khi thực hiện một phép tính, lẽ ra phải nhân số A với 9 thì bạn An lại nhằm lấy số A chia cho 9 và thu được kết quả bằng 95. Tìm kết quả đúng của phép tính mà An phải thực hiện. Đáp sô: ................... 156.",
+            "prompt": "Khi thực hiện một phép tính, lẽ ra phải nhân số A với 9 thì bạn An lại nhằm lấy số A chia cho 9 và thu được kết quả bằng 95. Tìm kết quả đúng của phép tính mà An phải thực hiện. Đáp sô.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -63432,7 +63432,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q096",
             "type": "single_choice",
-            "prompt": "My có 24 quyền vở, Hà có gấp 3 lằn My. Hỏi Hà phải cho My bao nhiêu quyền dé số vở của Hà gấp đôi số sách của My? Đáp số. .................. 157.",
+            "prompt": "My có 24 quyển vở, Hà có gấp 3 lằn My. Hỏi Hà phải cho My bao nhiêu quyền dé số vở của Hà gấp đôi số sách của My? Đáp số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -63874,7 +63874,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q109",
             "type": "single_choice",
-            "prompt": "Số tiền mua mỗi thùng sữa đó là: 900 : 4 = 225 (nghìn đồng). — Số tiền mua 3 thùng sữa đó là: 225 x 3 = 675 (nghìn đồng). 159.",
+            "prompt": "Số tiền mua mỗi thùng sữa đó là: 900 : 4 = 225 (nghìn đồng). — Số tiền mua 3 thùng sữa đó là: 225 x 3 = 675 (nghìn đồng).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -64350,7 +64350,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q123",
             "type": "single_choice",
-            "prompt": "Chữ số hàng chục gấp chữ số hàng đơn vị là: 2 x 2=4 (lần). - Vậy: hàng đơn vị là 2, hàng trăm là 4 và hàng chục là 8. - Số phải tìm là: 482.",
+            "prompt": "Chữ số hàng chục gấp chữ số hàng đơn vị là: 2 x 2=4 (lần). - Vậy: hàng đơn vị là 2, hàng trăm là 4 và hàng chục là 8. - Số phải tìm là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -64826,7 +64826,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q137",
             "type": "single_choice",
-            "prompt": "Số đó có chữ số hang trăm bằng chữ số hàng chục. Chữ số hàng trăm và hàng chục phải là 9. (Nếu bằng 8 thì chữ số hàng đơn vị là: 26 - 8 x 2 = 10.) Số đó là: 998.",
+            "prompt": "Số đó có chữ số hang trăm bằng chữ số hàng chục. Chữ số hàng trăm và hàng chục phải là 9. (Nếu bằng 8 thì chữ số hàng đơn vị là: 26 - 8 x 2 = 10.) Số đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -65132,7 +65132,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q146",
             "type": "single_choice",
-            "prompt": "Hai số đó có chung hàng đơn vị là: 2. - Số A là: 832. (vì hiệu là 750). - Số B là: 82.",
+            "prompt": "Hai số đó có chung hàng đơn vị là: 2. - Số A là: 832. (vì hiệu là 750). - Số B là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -65234,7 +65234,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q149",
             "type": "single_choice",
-            "prompt": "40 quả trứng nặng hơn 30 quả trứng là: 10 — 8 = 2 (kg). - 30 quả trứng ít hơn 40 quả trứng số trứng là: 40 — 30 = 10 (quả). - 30 quả trứng thì nặng là: (30 : 10) x 2 = 6 (kg). Ñ - Thùng đó cân nặng là: 8—6=2 (kg). 162.",
+            "prompt": "40 quả trứng nặng hơn 30 quả trứng là: 10 — 8 = 2 (kg). - 30 quả trứng ít hơn 40 quả trứng số trứng là: 40 — 30 = 10 (quả). - 30 quả trứng thì nặng là: (30 : 10) x 2 = 6 (kg). Ñ - Thùng đó cân nặng là: 8—6=2 (kg).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -65506,7 +65506,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q157",
             "type": "single_choice",
-            "prompt": "Mỗi hộp có số bánh là: 24 : 6 =4 (cái). - Cô giáo mua số bánh là: 4 x 5 = 20 (cái). - Mỗi cháu được nửa cái. Hay 2 cháu được loái. - Lớp đó có số cháu là: 20 x 2 = 40 (cháu). . 163.",
+            "prompt": "Mỗi hộp có số bánh là: 24 : 6 =4 (cái). - Cô giáo mua số bánh là: 4 x 5 = 20 (cái). - Mỗi cháu được nửa cái. Hay 2 cháu được loái. - Lớp đó có số cháu là: 20 x 2 = 40 (cháu).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -65608,7 +65608,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q160",
             "type": "single_choice",
-            "prompt": "bbb + c = caaa. . bbb + c=c x 1000 + aaa. 1l1xb=cx999+1]11xa. 1l1xb=cx9x111+1ll1xa. b=cx9+a. -Vậy:c=1;b=9vàa=0. - Số cba là: 190.",
+            "prompt": "bbb + c = caaa. . bbb + c=c x 1000 + aaa. 1l1xb=cx999+1]11xa. 1l1xb=cx9x111+1ll1xa. b=cx9+a. -Vậy:c=1;b=9vàa=0. - Số cba là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -65778,7 +65778,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q165",
             "type": "single_choice",
-            "prompt": "Lượng dau trong can nặng 1a: 15— 1 = 14 (kg). - Một nửa số dầu trong can nặng là: 14:2 =7 (kg). ì - Khi lấy ra một nửa số dầu thì can còn lại nặng là: 15 — 7 = 8 (kg). 164.",
+            "prompt": "Lượng dau trong can nặng 1a: 15— 1 = 14 (kg). - Một nửa số dầu trong can nặng là: 14:2 =7 (kg). ì - Khi lấy ra một nửa số dầu thì can còn lại nặng là: 15 — 7 = 8 (kg).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -66186,7 +66186,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q177",
             "type": "single_choice",
-            "prompt": "Số khi bị xoá di 1 chữ số không thé có hàng chục là 4 hoặc 6. - Vậy số sau khi xoá đi 1 chữ số có thể là: 24 hoặc 26. - Ta có: 624 : 26 = 24. - Vậy số phải tìm đó là: 624. 165.",
+            "prompt": "Số khi bị xoá di 1 chữ số không thé có hàng chục là 4 hoặc 6. - Vậy số sau khi xoá đi 1 chữ số có thể là: 24 hoặc 26. - Ta có: 624 : 26 = 24. - Vậy số phải tìm đó là: 624.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -66288,7 +66288,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q180",
             "type": "single_choice",
-            "prompt": "Tacó:12=2x6=3x4. - Vì: 62-26 =36. - Vậy: Số phải tìm là: 26.",
+            "prompt": "Tacó:12=2x6=3x4. - Vì: 62-26 =36. - Vậy: Số phải tìm là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -66560,7 +66560,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q188",
             "type": "single_choice",
-            "prompt": "Từ ngày 8 đến 26 tháng 3 có số ngày là: 26 — 8 = 18 (ngày). - Ta có: 18:7=2(dư4). - Vậy ngày 26 tháng 3 đó là: Thứ tư. 166.",
+            "prompt": "Từ ngày 8 đến 26 tháng 3 có số ngày là: 26 — 8 = 18 (ngày). - Ta có: 18:7=2(dư4). - Vậy ngày 26 tháng 3 đó là: Thứ tư.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -66730,7 +66730,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q193",
             "type": "single_choice",
-            "prompt": "Tacó:8x8+8=72. - Vậy: Số phải tìm là: 8.",
+            "prompt": "Tacó:8x8+8=72. - Vậy: Số phải tìm là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -66832,7 +66832,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q196",
             "type": "single_choice",
-            "prompt": "Nếu bớt của tổ 2 đi 16 kiện hàng thì tổ 1 và tổ 2 chuyển được là; 106 — 16 = 90 (kiện hàng). - Tổ 1 chuyển được là: 90 : 2 = 45 (kiện hàng). - Tổ 2 chuyển được là: 45 + 16 =61 (kiện hàng). - Tổ 3 chuyển được là: 61 + 10 = 71 (kiện hang). . - Cả 3 tổ chuyển được là: 106 + 71 =177 (kiện hàng). 167.",
+            "prompt": "Nếu bớt của tổ 2 đi 16 kiện hàng thì tổ 1 và tổ 2 chuyển được là; 106 — 16 = 90 (kiện hàng). - Tổ 1 chuyển được là: 90 : 2 = 45 (kiện hàng). - Tổ 2 chuyển được là: 45 + 16 =61 (kiện hàng). - Tổ 3 chuyển được là: 61 + 10 = 71 (kiện hang). . - Cả 3 tổ chuyển được là: 106 + 71 =177 (kiện hàng).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",
@@ -67172,7 +67172,7 @@
           {
             "id": "violympic-exam-math-g3-v10-q206",
             "type": "single_choice",
-            "prompt": "Tuổi của Chi là: 27 : (4— 1)= 9 (tuổi). - Tuổi của bé là: 9 x 4 = 36 (tuổi). - Tuổi em Chi là: 9 :3 =3 (tuổi). 168.",
+            "prompt": "Tuổi của Chi là: 27 : (4— 1)= 9 (tuổi). - Tuổi của bé là: 9 x 4 = 36 (tuổi). - Tuổi em Chi là: 9 :3 =3 (tuổi).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 3 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 3",

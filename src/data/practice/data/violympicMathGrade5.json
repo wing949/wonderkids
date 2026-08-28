@@ -38782,7 +38782,7 @@
           {
             "id": "violympic-exam-math-g5-v38-q006",
             "type": "single_choice",
-            "prompt": "Số chin bé nhất có 4 chữ số va chia hết cho 9 là : 1008. - Số chẵn lớn nhất có 4 chữ số và chia hết cho 9 là : 9990. - Số các số chin có 4 chữ số và chia hết cho 9 là : : (9990 - 1008) : 18 + 1 = 500 (số).",
+            "prompt": "Số chin bé nhất có 4 chữ số va chia hết cho 9 là : 1008. - Số chẵn lớn nhất có 4 chữ số và chia hết cho 9 là : 9990. - Số các số chẵn có 4 chữ số và chia hết cho 9 là : : (9990 - 1008) : 18 + 1 = 500 (số).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 5 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 5",
@@ -38884,7 +38884,7 @@
           {
             "id": "violympic-exam-math-g5-v38-q009",
             "type": "single_choice",
-            "prompt": "Ta có : 2010 = 0 +2010 = 1 +2009 =....=2009 + 1. : - Vậy : Có 2010 phân số có tổng của tử số và mẫu số bằng 2010. 193.",
+            "prompt": "Ta có : 2010 = 0 +2010 = 1 +2009 =....=2009 + 1. : - Vậy : Có 2010 phân số có tổng của tử số và mẫu số bằng 2010.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 5 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 5",
@@ -39156,7 +39156,7 @@
           {
             "id": "violympic-exam-math-g5-v38-q017",
             "type": "single_choice",
-            "prompt": "Tuổi của bố mai là số chin chia cho 5 dư 4 nên phải có chữ số hàng đơn vị bang 4.. - Vì số đó chia hết cho 9 nên hàng chục là 5. Vậy bố Mai 54 tuổi. 194.",
+            "prompt": "Tuổi của bố mai là số chẵn chia cho 5 dư 4 nên phải có chữ số hàng đơn vị bang 4.. - Vì số đó chia hết cho 9 nên hàng chục là 5. Vậy bố Mai 54 tuổi.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 5 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 5",
@@ -39825,7 +39825,7 @@
           {
             "id": "violympic-exam-math-g5-v39-q011",
             "type": "single_choice",
-            "prompt": "ì ; - ũ rà vào chỗ các em ấnchuột lf th Ba số oó tổng bằng 188,75. Biết số. thứ Vào vị trí .. rồi dùng các số il . là nhất bé hơn tổng của hai số kia là 17,35 #. trên bản phím đề ghỉ số lỊ và số thứ thứ hai lớn hơn tổng của hai số jf thích hợp. Í ( kia la 2,46. Số thứ ba là........... fy Be gid dâu see eM :",
+            "prompt": "ì ; - ũ rà vào chỗ các em ấnchuột lf th Ba số oó tổng bằng 188,75. Biết số. thứ Vào vị trí .. rồi dùng các số il . là nhất bé hơn tổng của hai số kia là 17,35 #. trên bản phím đề ghỉ số lỊ và số thứ thứ hai lớn hơn tổng của hai số jf thích hợp. Í ( kia la 2,46. Số thứ ba là........... fy Be gid dâu see eM.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 5 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 5",
@@ -39995,7 +39995,7 @@
           {
             "id": "violympic-exam-math-g5-v39-q016",
             "type": "single_choice",
-            "prompt": "Số cần tìm là : 1230.",
+            "prompt": "Số cần tìm là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 5 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 5",
@@ -40199,7 +40199,7 @@
           {
             "id": "violympic-exam-math-g5-v39-q022",
             "type": "single_choice",
-            "prompt": "Khi tăng chiều dài thêm 10% và giảm chiều rộng đi 10% thì diện tích hình đó bằng số phần trăm lúc đầu là : 110% x 90% = 90%, - Diện tích của hình đó sau khi tăng chiều dài và giảm chiều rộng là : 24,5 x 99% = 24,255 (cm’). 200.",
+            "prompt": "Khi tăng chiều dài thêm 10% và giảm chiều rộng đi 10% thì diện tích hình đó bằng số phần trăm lúc đầu là : 110% x 90% = 90%, - Diện tích của hình đó sau khi tăng chiều dài và giảm chiều rộng là : 24,5 x 99% = 24,255 (cm’).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 5 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 5",

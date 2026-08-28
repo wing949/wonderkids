@@ -6,7 +6,7 @@
     "setNumber": 1,
     "title": "Bộ đề số 1 — Toán Lớp 4",
     "level": "foundation",
-    "totalPoints": 1290,
+    "totalPoints": 1280,
     "timeLimitSeconds": null,
     "sections": [
       {
@@ -16,7 +16,7 @@
         "activityTypes": [
           "single_choice"
         ],
-        "maxPoints": 1290,
+        "maxPoints": 1280,
         "items": [
           {
             "id": "violympic-exam-math-g4-v01-q001",
@@ -399,7 +399,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q012",
             "type": "single_choice",
-            "prompt": "Giá trị của biểu thức 16 x (1 + 10) là: sain :",
+            "prompt": "Giá trị của biểu thức 16 x (1 + 10) là: sain.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -1011,7 +1011,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q030",
             "type": "single_choice",
-            "prompt": "Bác Lan có 5 quả cam, mỗi quả nặng 200g và 4 quả dứa, mỗi quả nặng 550g. Tính khôi lượng hoa quả của bác Lan.",
+            "prompt": "Bác Lan có 5 quả cam, mỗi quả nặng 200g và 4 quả dứa, mỗi quả nặng 550g. Tính khối lượng hoa quả của bác Lan.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -1215,7 +1215,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q036",
             "type": "single_choice",
-            "prompt": "Quan sát hình vẽ sau: Từ hình vẽ, tính giá trị của a và blàa =..............;b=................ 8.",
+            "prompt": "Quan sát hình vẽ sau: Từ hình vẽ, tính giá trị của a và blàa =..............;b=.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -1657,7 +1657,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q049",
             "type": "single_choice",
-            "prompt": "Kết quả của phép tính 5 x (100 +20) là................... 7.",
+            "prompt": "Kết quả của phép tính 5 x (100 +20) là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -2263,7 +2263,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q066",
             "type": "single_choice",
-            "prompt": "Tính:(27+18):3=............... 10.",
+            "prompt": "Tính:(27+18):3=.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -3465,7 +3465,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q101",
             "type": "single_choice",
-            "prompt": "C. 4 nghìn, 5 trăm, 7 chục, 0 đơn vị. 7.",
+            "prompt": "C. 4 nghìn, 5 trăm, 7 chục, 0 đơn vị.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -3629,40 +3629,6 @@
               {
                 "id": "d",
                 "label": "10"
-              }
-            ]
-          },
-          {
-            "id": "violympic-exam-math-g4-v01-q106",
-            "type": "single_choice",
-            "prompt": "A. 2398.",
-            "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
-            "topic": "Toán Violympic Lớp 4",
-            "difficulty": "challenge",
-            "points": 10,
-            "contentOrigin": "reference_extracted",
-            "verificationStatus": "verified",
-            "sourceLabel": "TS. Phạm Văn Công",
-            "sourceCitation": "Hướng dẫn giải Violympic Toán 4 — TS.Phạm Văn Công, NXB ĐHQGHN",
-            "sourcePage": 6,
-            "sourceLocator": "Bộ đề số 1 - Câu 106",
-            "options": [
-              {
-                "id": "a",
-                "label": "11"
-              },
-              {
-                "id": "b",
-                "label": "12"
-              },
-              {
-                "id": "c",
-                "label": "10"
-              },
-              {
-                "id": "d",
-                "label": "9"
               }
             ]
           },
@@ -3839,7 +3805,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q112",
             "type": "single_choice",
-            "prompt": "Hình vẽ có 1 góc nhọn, 1 góc vuông va 4 góc tù. 14.",
+            "prompt": "Hình vẽ có 1 góc nhọn, 1 góc vuông va 4 góc tù.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -4179,7 +4145,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q122",
             "type": "single_choice",
-            "prompt": "A có 6 chữ số 0. -TacóA=2x4x8x15x25x125=(15x2)-x-(25 x 4) x (125 x 8) = 30 x 100 x 1000 = 3000000. Cau 30. C. 3200g. - =5 quả cam có cân nặng là: 200 x 5 = 1000 (g). -4 quả dứa có cân nặng là: 550 x 4 = 2200 (g). - Số quả của bác Lan có cân nặng là: 1000 + 2200 = 3200 (g). 15.",
+            "prompt": "A có 6 chữ số 0. -TacóA=2x4x8x15x25x125=(15x2)-x-(25 x 4) x (125 x 8) = 30 x 100 x 1000 = 3000000. Cau 30. C. 3200g. - =5 quả cam có cân nặng là: 200 x 5 = 1000 (g). -4 quả dứa có cân nặng là: 550 x 4 = 2200 (g). - Số quả của bác Lan có cân nặng là: 1000 + 2200 = 3200 (g).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -4417,7 +4383,7 @@
           {
             "id": "violympic-exam-math-g4-v01-q129",
             "type": "single_choice",
-            "prompt": "D. 160cm?. - Chiều dài hình chữ nhật tô màu là: 28 : 2—4= 10 (cm). - Vậy cạnh của hình vuông chính là 10cm. - .. - Chiều rộng của hình chữ nhật to là 10cm. - Chiều dài của hình chữ nhật to là: 10 x 2—4= 16 (cm). - Diện tích hình chữ nhật là: 16 x 10 = 160 (cm2). : 16.",
+            "prompt": "D. 160cm?. - Chiều dài hình chữ nhật tô màu là: 28 : 2—4= 10 (cm). - Vậy cạnh của hình vuông chính là 10cm. - .. - Chiều rộng của hình chữ nhật to là 10cm. - Chiều dài của hình chữ nhật to là: 10 x 2—4= 16 (cm). - Diện tích hình chữ nhật là: 16 x 10 = 160 (cm2).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -4459,7 +4425,7 @@
     "setNumber": 2,
     "title": "Bộ đề số 2 — Toán Lớp 4",
     "level": "foundation",
-    "totalPoints": 2410,
+    "totalPoints": 2390,
     "timeLimitSeconds": null,
     "sections": [
       {
@@ -4469,7 +4435,7 @@
         "activityTypes": [
           "single_choice"
         ],
-        "maxPoints": 2410,
+        "maxPoints": 2390,
         "items": [
           {
             "id": "violympic-exam-math-g4-v02-q001",
@@ -4984,7 +4950,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q016",
             "type": "single_choice",
-            "prompt": "20 tuổi. - Gọi số tuổi của anh Dương là ab (a >0, a, b là chữ số) - Vì30 x 6 = 180 nên ab không quá 30 nhân với 6 sẽ được số có ba chữ số không quá 180. Vậy ab x 6 có chữ số hàng trăm là 1. - Ta có phép tính: ab x 6 = 120. - Vậy số tuổi của anh Dương là: 20.",
+            "prompt": "20 tuổi. - Gọi số tuổi của anh Dương là ab (a >0, a, b là chữ số) - Vì30 x 6 = 180 nên ab không quá 30 nhân với 6 sẽ được số có ba chữ số không quá 180. Vậy ab x 6 có chữ số hàng trăm là 1. - Ta có phép tính: ab x 6 = 120. - Vậy số tuổi của anh Dương là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -5562,7 +5528,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q033",
             "type": "single_choice",
-            "prompt": "81. -Tacó:3=1x3;9=3x3;27=9x3;.. - Quy luật của dãy số trên là dãy số tăng dần, mỗi số hạng bằng số hạng liên trước nhân với 3. Do đó: - Số hạng tiếp theo 14:27 x3=81. . 19.",
+            "prompt": "81. -Tacó:3=1x3;9=3x3;27=9x3;.. - Quy luật của dãy số trên là dãy số tăng dần, mỗi số hạng bằng số hạng liên trước nhân với 3. Do đó: - Số hạng tiếp theo 14:27 x3=81.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -5692,40 +5658,6 @@
               {
                 "id": "d",
                 "label": "9"
-              }
-            ]
-          },
-          {
-            "id": "violympic-exam-math-g4-v02-q037",
-            "type": "single_choice",
-            "prompt": "100.",
-            "correctAnswer": "d",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
-            "topic": "Toán Violympic Lớp 4",
-            "difficulty": "application",
-            "points": 10,
-            "contentOrigin": "reference_extracted",
-            "verificationStatus": "verified",
-            "sourceLabel": "TS. Phạm Văn Công",
-            "sourceCitation": "Hướng dẫn giải Violympic Toán 4 — TS.Phạm Văn Công, NXB ĐHQGHN",
-            "sourcePage": 18,
-            "sourceLocator": "Bộ đề số 2 - Câu 37",
-            "options": [
-              {
-                "id": "a",
-                "label": "9"
-              },
-              {
-                "id": "b",
-                "label": "12"
-              },
-              {
-                "id": "c",
-                "label": "11"
-              },
-              {
-                "id": "d",
-                "label": "10"
               }
             ]
           },
@@ -5936,7 +5868,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q044",
             "type": "single_choice",
-            "prompt": "12. -Tacó:1488:124=12. 20.",
+            "prompt": "12. -Tacó:1488:124=12.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -6276,7 +6208,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q054",
             "type": "single_choice",
-            "prompt": "C.1200m2. - Nửa chu vi thửa ruộng hình chữ nhật là: 140 : 2 = 70 (m). - Nếu tăng chiều rộng 5m và giảm chiều dài 5m thì thửa ruộng đó trở thành hình vuông. Do đó chiều dài hơn chiêu rộng là: 5 + 5 = 10 (m). - Chiều dài thửa ruộng là: (70 +10):2=40 (m). - Chiều rộng thửa ruộng là: 70 — 40 = 30 (m). - Diện tích thửa ruộng là: 40 x 30 = 1200 (m2). 21.",
+            "prompt": "C.1200m2. - Nửa chu vi thửa ruộng hình chữ nhật là: 140 : 2 = 70 (m). - Nếu tăng chiều rộng 5m và giảm chiều dài 5m thì thửa ruộng đó trở thành hình vuông. Do đó chiều dài hơn chiêu rộng là: 5 + 5 = 10 (m). - Chiều dài thửa ruộng là: (70 +10):2=40 (m). - Chiều rộng thửa ruộng là: 70 — 40 = 30 (m). - Diện tích thửa ruộng là: 40 x 30 = 1200 (m2).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -6380,7 +6312,7 @@
             "type": "single_choice",
             "prompt": "x=4. -(x+2)+(x+4)+ (x +6) +... + (x + 50) = 750. -(x+50+x+2)x25:2=(2xx+52)x 25 :2=750. - (2 x x +52) x 25 = 750 x 2= 1500. -2xx+52=1500 : 25 =60. -2xx=60-52=8. -x=8:2=4.",
             "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
+            "explanation": "Ta có: x = 1500 - 52 = 1448. Đáp số: 1448.",
             "topic": "Toán Violympic Lớp 4",
             "difficulty": "application",
             "points": 10,
@@ -6393,19 +6325,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "12"
+                "label": "1552"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "1563"
               },
               {
                 "id": "c",
-                "label": "10"
+                "label": "1448"
               },
               {
                 "id": "d",
-                "label": "9"
+                "label": "1447"
               }
             ]
           },
@@ -7228,7 +7160,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q082",
             "type": "single_choice",
-            "prompt": "Day số liên tiếp từ 1234 đến 5678 có tất cả bao nhiêu số lẻ? ĐÁPÁN:[ ] :",
+            "prompt": "Day số liên tiếp từ 1234 đến 5678 có tất cả bao nhiêu số lẻ? ĐÁPÁN:[ ].",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -7534,7 +7466,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q091",
             "type": "single_choice",
-            "prompt": "Tổng hai số là 678, nếu xoá chữ số 5 ở hàng trăm của số lớn ta được sô bé. Tìm sô lớn. ĐÁPÁN:[ ] :",
+            "prompt": "Tổng hai số là 678, nếu xoá chữ số 5 ở hàng trăm của số lớn ta được sô bé. Tìm sô lớn. ĐÁPÁN:[ ].",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -7976,7 +7908,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q104",
             "type": "single_choice",
-            "prompt": "Một mảnh bìa hình chữ nhật có chiều dài 235cm, chiều rong có số đề-xi-mét là số tròn chục bé nhat có hai chữ sô. Hỏi chu vi mảnh bìa hình chữ nhật đó băng bao nhiêu đê-xi-mét? Đáp SO: .................. 26.",
+            "prompt": "Một mảnh bìa hình chữ nhật có chiều dài 235cm, chiều rong có số đề-xi-mét là số tròn chục bé nhat có hai chữ sô. Hỏi chu vi mảnh bìa hình chữ nhật đó băng bao nhiêu đê-xi-mét? Đáp SO.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -8282,7 +8214,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q113",
             "type": "single_choice",
-            "prompt": "Nếu a = 6 thi giá trị của biểu thức 7543 x a là:",
+            "prompt": "Nếu a = 6 thì giá trị của biểu thức 7543 x a là:",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -8490,7 +8422,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q119",
             "type": "single_choice",
-            "prompt": "Cho 5 số có trung bình cộng là 162. Biết số thứ năm gấp đôi số thứ tư, số thứ tư bằng trung bình cộng của 3 sô đâu. Vậy sô thứ năm là......... 27.",
+            "prompt": "Cho 5 số có trung bình cộng là 162. Biết số thứ năm gấp đôi số thứ tư, số thứ tư bằng trung bình cộng của 3 sô đâu. Vậy sô thứ năm là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -8694,7 +8626,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q125",
             "type": "single_choice",
-            "prompt": "Để đánh số trang của một cuốn sách người ta cần dùng các chữ số từ 0 đến 9. Vậy muôn đánh sO trang sách của cuôn sách day 124 trang phải dùng tat cả............. chữ sô.",
+            "prompt": "Để đánh số trang của một cuốn sách người ta cần dùng các chữ số từ 0 đến 9. Vậy muôn đánh sO trang sách của cuôn sách day 124 trang phải dùng tất cả............. chữ sô.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -8728,7 +8660,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q126",
             "type": "single_choice",
-            "prompt": "Người ta đánh số nhà trong một dãy phố theo quy luật các nhà bên phải . được đánh băng các sô chăn, các nhà bên trái được đánh sô lẻ. Bên trái của dãy phô đó có tat cả 56 nhà. Số nhà cuối cùng bên trái của dãy phố đó là.",
+            "prompt": "Người ta đánh số nhà trong một dãy phố theo quy luật các nhà bên phải . được đánh băng các sô chăn, các nhà bên trái được đánh sô lẻ. Bên trái của dãy phô đó có tất cả 56 nhà. Số nhà cuối cùng bên trái của dãy phố đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -10394,7 +10326,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q175",
             "type": "single_choice",
-            "prompt": "Số thóc nếp thu được là: 556 x 4= 2224 (kg). - Số thóc thu được tat cả là: 556 +2224 = 2780 (kg). Câu 18 : Đồi: nửa giờ = 30 phút. - Nửa giờ gấp 6 phút số lần là: 30 : 6 = 5 (lần). - Vòi đó chảy trong nửa giờ thì được là: 36 x 5 = 180 (J). ! 31.",
+            "prompt": "Số thóc nếp thu được là: 556 x 4= 2224 (kg). - Số thóc thu được tất cả là: 556 +2224 = 2780 (kg). Câu 18 : Đồi: nửa giờ = 30 phút. - Nửa giờ gấp 6 phút số lần là: 30 : 6 = 5 (lần). - Vòi đó chảy trong nửa giờ thì được là: 36 x 5 = 180 (J). ! 31.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -10802,7 +10734,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q187",
             "type": "single_choice",
-            "prompt": "Số 34562 là số liền trước của số 34563. 32.",
+            "prompt": "Số 34562 là số liền trước của số 34563.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -10836,7 +10768,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q188",
             "type": "single_choice",
-            "prompt": "Nếu hàng trăm là 6 thì hàng đơn vị và hàng chục là: 9. : - Vậy hàng trăm phải là 7, hàng chục là 8 và hàng đơn vị là 9. : -Tacó:7+8+9=24.. a : - Số đó là: 789.",
+            "prompt": "Nếu hàng trăm là 6 thì hàng đơn vị và hàng chục là: 9. : - Vậy hàng trăm phải là 7, hàng chục là 8 và hàng đơn vị là 9. : -Tacó:7+8+9=24.. a : - Số đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -10904,7 +10836,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q190",
             "type": "single_choice",
-            "prompt": "Số các số ở lớp nghìn là: 3 x 3 x3 =27 (số). : - Số các số đó là: 27 (số). hư :",
+            "prompt": "Số các số ở lớp nghìn là: 3 x 3 x3 =27 (số). : - Số các số đó là: 27 (số). hư.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -10938,7 +10870,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q191",
             "type": "single_choice",
-            "prompt": "Số gồm 6 trăm nghìn, 7 đơn vị, 8 trăm và 9 chục viết là: 600897.",
+            "prompt": "Số gồm 6 trăm nghìn, 7 đơn vị, 8 trăm và 9 chục viết là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -11006,7 +10938,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q193",
             "type": "single_choice",
-            "prompt": "Số đó có thể là: 93; 62 hoặc 31. Ta có: 31 —13= 18. - Số đó là: 31.",
+            "prompt": "Số đó có thể là: 93; 62 hoặc 31. Ta có: 31 —13= 18. - Số đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -11340,40 +11272,6 @@
               {
                 "id": "d",
                 "label": "12"
-              }
-            ]
-          },
-          {
-            "id": "violympic-exam-math-g4-v02-q203",
-            "type": "single_choice",
-            "prompt": "B. 5040321.",
-            "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
-            "topic": "Toán Violympic Lớp 4",
-            "difficulty": "challenge",
-            "points": 10,
-            "contentOrigin": "reference_extracted",
-            "verificationStatus": "verified",
-            "sourceLabel": "TS. Phạm Văn Công",
-            "sourceCitation": "Hướng dẫn giải Violympic Toán 4 — TS.Phạm Văn Công, NXB ĐHQGHN",
-            "sourcePage": 18,
-            "sourceLocator": "Bộ đề số 2 - Câu 203",
-            "options": [
-              {
-                "id": "a",
-                "label": "10"
-              },
-              {
-                "id": "b",
-                "label": "11"
-              },
-              {
-                "id": "c",
-                "label": "12"
-              },
-              {
-                "id": "d",
-                "label": "9"
               }
             ]
           },
@@ -11924,7 +11822,7 @@
           {
             "id": "violympic-exam-math-g4-v02-q220",
             "type": "single_choice",
-            "prompt": "Số đó là: 123.",
+            "prompt": "Số đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -13511,7 +13409,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q025",
             "type": "single_choice",
-            "prompt": "Các số 683; 836; 863; 638 viết theo thứ tự từ lớn đến bé là: A, 863; 836; 683; 638. B. 836; 863; 683; 638. , C. 863; 836; 638; 683. D. 863; 683; 836; 638. 38.",
+            "prompt": "Các số 683; 836; 863; 638 viết theo thứ tự từ lớn đến bé là: A, 863; 836; 683; 638. B. 836; 863; 683; 638. , C. 863; 836; 638; 683. D. 863; 683; 836; 638.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -13715,7 +13613,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q031",
             "type": "single_choice",
-            "prompt": "Hình vuông có diện tích 16 em’ thì có chu vì là................-G - :",
+            "prompt": "Hình vuông có diện tích 16 em’ thì có chu vì là................-G -.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -14089,7 +13987,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q042",
             "type": "single_choice",
-            "prompt": "Tính nhanh: 234 x 24 +75 x 234 +234. : Đáp SỐ: .................. 39.",
+            "prompt": "Tính nhanh: 234 x 24 +75 x 234 +234. : Đáp SỐ.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -14667,7 +14565,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q059",
             "type": "single_choice",
-            "prompt": "Có ba bao gạo. Bao thứ nhất nặng 45kg. Bao thứ hai nặng gấp đôi bao thứ nhât. Bao thứ ba nặng hơn bao thứ nhât 35kg. Tông khôi lượng cả ba bao là bao nhiêu? `.",
+            "prompt": "Có ba bao gạo. Bao thứ nhất nặng 45kg. Bao thứ hai nặng gấp đôi bao thứ nhât. Bao thứ ba nặng hơn bao thứ nhât 35kg. Tông khối lượng cả ba bao là bao nhiêu? `.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -14803,7 +14701,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q063",
             "type": "single_choice",
-            "prompt": "Một mảnh bìa hình chữ nhật có chiều rộng 5dm, chiều dài gấp 6 lần chiêu rộng. Tính diện tích mảnh bìa đó. ĐÁP ÁN :",
+            "prompt": "Một mảnh bìa hình chữ nhật có chiều rộng 5dm, chiều dài gấp 6 lần chiêu rộng. Tính diện tích mảnh bìa đó. ĐÁP ÁN.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -15245,7 +15143,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q076",
             "type": "single_choice",
-            "prompt": "Tìm số chin bé nhất có các chữ số khác nhau biết rằng số đó lớn hơn 10 000 và bé hơn 100 000.",
+            "prompt": "Tìm số chẵn bé nhất có các chữ số khác nhau biết rằng số đó lớn hơn 10 000 và bé hơn 100 000.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -16451,7 +16349,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q111",
             "type": "single_choice",
-            "prompt": "Một phân xưởng quý I sản xuất được 23451 đôi giày, quý II phân xưởng sản xuất gap ba quý I. Tinh xem quý II phân xưởng sản xuất được nhiều hơn quý I bao nhiêu đôi giày? .ĐÁPÁN:[ ] :",
+            "prompt": "Một phân xưởng quý I sản xuất được 23451 đôi giày, quý II phân xưởng sản xuất gap ba quý I. Tinh xem quý II phân xưởng sản xuất được nhiều hơn quý I bao nhiêu đôi giày? .ĐÁPÁN:[ ].",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -16553,7 +16451,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q114",
             "type": "single_choice",
-            "prompt": "B. 30007 - Số gồm 3 vạn, 7 đơn vị được viết là: 30007.",
+            "prompt": "B. 30007 - Số gồm 3 vạn, 7 đơn vị được viết là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -16689,7 +16587,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q118",
             "type": "single_choice",
-            "prompt": "B. x = 61103 X — 4872 = 56231. X = 56231 + 4872 = 61103. Cau 7: C. 8cm - Đồi: 3dm 2cm = 32cm. - Doan AM dai la: 32 : 2 = 16 (cm). - Doan MN dai là: 16 : 2 = 8 (cm). 7.",
+            "prompt": "B. x = 61103 X — 4872 = 56231. X = 56231 + 4872 = 61103. Cau 7: C. 8cm - Đồi: 3dm 2cm = 32cm. - Doan AM dai la: 32 : 2 = 16 (cm). - Doan MN dai là: 16 : 2 = 8 (cm).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -16859,7 +16757,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q123",
             "type": "single_choice",
-            "prompt": "Số gồm 36 nghìn, 2 trăm và 6 đơn vị viết là: 36206.",
+            "prompt": "Số gồm 36 nghìn, 2 trăm và 6 đơn vị viết là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -16961,7 +16859,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q126",
             "type": "single_choice",
-            "prompt": "65 x y x 5 = 650. yx5=650:65=10. y=10:5=2. 46.",
+            "prompt": "65 x y x 5 = 650. yx5=650:65=10. y=10:5=2.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -17199,7 +17097,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q133",
             "type": "single_choice",
-            "prompt": "Số các số chin của dãy đó là: (578 — 136) :2+1=222 (số).",
+            "prompt": "Số các số chẵn của dãy đó là: (578 — 136) :2+1=222 (số).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -17233,7 +17131,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q134",
             "type": "single_choice",
-            "prompt": "Số gồm: 5 trăm nghìn, 7 chục và 6 đơn vị viết là: 500076.",
+            "prompt": "Số gồm: 5 trăm nghìn, 7 chục và 6 đơn vị viết là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -17267,7 +17165,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q135",
             "type": "single_choice",
-            "prompt": "Số gồm 6 chục nghìn, 3 đơn vị và 5 trăm viết là: 60503.",
+            "prompt": "Số gồm 6 chục nghìn, 3 đơn vị và 5 trăm viết là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -17437,7 +17335,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q140",
             "type": "single_choice",
-            "prompt": "Ta có: 1x2x3x4x5x6x7cótậncùnglà0;64:8=8. . - Vậy: 1x2x3x4x.5 x6 x 7 +64 : 8 có tận cùng là: 8.",
+            "prompt": "Ta có: 1x2x3x4x5x6x7cótậncùnglà0;64:8=8. . - Vậy: 1x2x3x4x.5 x6 x 7 +64 : 8 có tận cùng là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -17471,7 +17369,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q141",
             "type": "single_choice",
-            "prompt": "Số gồm 52 van, 6 trăm, 6 chục là số: 5200660.",
+            "prompt": "Số gồm 52 van, 6 trăm, 6 chục là số.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -17539,7 +17437,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q143",
             "type": "single_choice",
-            "prompt": "Số đó có hành trăm bằng hàng don vị. - Vì 26 — 8 x 2= 10 nên hàng trăm bằng hàng đơn vị và bằng 9.. - Chữ số hàng chục là: 26—9 x2=8. ! - Số đó là: 989.",
+            "prompt": "Số đó có hành trăm bằng hàng don vị. - Vì 26 — 8 x 2= 10 nên hàng trăm bằng hàng đơn vị và bằng 9.. - Chữ số hàng chục là: 26—9 x2=8. ! - Số đó là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -17573,7 +17471,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q144",
             "type": "single_choice",
-            "prompt": "Số bé nhất có 6 chữ số khác nhau đó là: 204589... 47.",
+            "prompt": "Số bé nhất có 6 chữ số khác nhau đó là: 204589.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -18083,7 +17981,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q159",
             "type": "single_choice",
-            "prompt": "x:5—6666 = 1111. x:5=6666 +1111=7777. x =7777x5=38885. 48.",
+            "prompt": "x:5—6666 = 1111. x:5=6666 +1111=7777. x =7777x5=38885.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -18525,7 +18423,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q172",
             "type": "single_choice",
-            "prompt": "Số phải tìm đó là: 10234.",
+            "prompt": "Số phải tìm đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -18593,7 +18491,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q174",
             "type": "single_choice",
-            "prompt": "Chữ số hàng đơn vị phải là 8. - Chữ số hàng chục là: 8:4=2. - Số phải tìm là: 28. 49.",
+            "prompt": "Chữ số hàng đơn vị phải là 8. - Chữ số hàng chục là: 8:4=2. - Số phải tìm là: 28.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -18627,7 +18525,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q175",
             "type": "single_choice",
-            "prompt": "Số gồm 6 trăm nghìn, 7 đơn vị, 8 trăm và 9 chục là: 600897.",
+            "prompt": "Số gồm 6 trăm nghìn, 7 đơn vị, 8 trăm và 9 chục là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -18729,7 +18627,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q178",
             "type": "single_choice",
-            "prompt": "Mỗi chữ số lẻ viết được 5 số chin có 2 chữ số. - Số chữ số lẻ cần dùng là: 5 x 5 = 25 (chữ số).",
+            "prompt": "Mỗi chữ số lẻ viết được 5 số chẵn có 2 chữ số. - Số chữ số lẻ cần dùng là: 5 x 5 = 25 (chữ số).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -18797,7 +18695,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q180",
             "type": "single_choice",
-            "prompt": "A. 1234567 - Chữ số 5 thuộc lớp đơn vị của số: 1234567.",
+            "prompt": "A. 1234567 - Chữ số 5 thuộc lớp đơn vị của số.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -18831,7 +18729,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q181",
             "type": "single_choice",
-            "prompt": "A. 102345 - Số có giá trị lớn nhất là: 102345.",
+            "prompt": "A. 102345 - Số có giá trị lớn nhất là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -19103,7 +19001,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q189",
             "type": "single_choice",
-            "prompt": "B. 50050 - Số gồm 50 nghìn và 50 đơn vị là: 50050.",
+            "prompt": "B. 50050 - Số gồm 50 nghìn và 50 đơn vị là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -19171,7 +19069,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q191",
             "type": "single_choice",
-            "prompt": "357xnx6=357xnx2x3=714xnx3. 50.",
+            "prompt": "357xnx6=357xnx2x3=714xnx3.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -19375,7 +19273,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q197",
             "type": "single_choice",
-            "prompt": "Số gồm 1 nghìn, 23 trăm và 45 chục được viết là: 3750.",
+            "prompt": "Số gồm 1 nghìn, 23 trăm và 45 chục được viết là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -19511,7 +19409,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q201",
             "type": "single_choice",
-            "prompt": "Số lớn nhất có 5 chữ số khác nhau là: 98765. - Số liền sau của số lớn nhất có 5 chữ số khác nhau là: 98766.",
+            "prompt": "Số lớn nhất có 5 chữ số khác nhau là: 98765. - Số liền sau của số lớn nhất có 5 chữ số khác nhau là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -19885,7 +19783,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q212",
             "type": "single_choice",
-            "prompt": "Điền dấu (> , <, =) thích hợp vào chỗ chấm: 142495 ...... 142459.",
+            "prompt": "Điền dấu (> , <, =) thích hợp vào chỗ chấm: 142495.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -20667,7 +20565,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q235",
             "type": "single_choice",
-            "prompt": "ChoA=131+132+133+...+179+180. - So sánh A ........ 7777.",
+            "prompt": "ChoA=131+132+133+...+179+180. - So sánh A.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -20803,7 +20701,7 @@
           {
             "id": "violympic-exam-math-g4-v03-q239",
             "type": "single_choice",
-            "prompt": "Một mảnh vườn hình chữ nhật có chu vi 94m. Biết chiều rộng ngắn hơn chiều dài 17m. Tính chiều rộng của mảnh vườn đó. - Trả lời: Chiều rộng của mảnh vườn là...........m. 54.",
+            "prompt": "Một mảnh vườn hình chữ nhật có chu vi 94m. Biết chiều rộng ngắn hơn chiều dài 17m. Tính chiều rộng của mảnh vườn đó. - Trả lời: Chiều rộng của mảnh vườn là...........m.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -21253,7 +21151,7 @@
     "setNumber": 4,
     "title": "Bộ đề số 4 — Toán Lớp 4",
     "level": "foundation",
-    "totalPoints": 1460,
+    "totalPoints": 1430,
     "timeLimitSeconds": null,
     "sections": [
       {
@@ -21263,7 +21161,7 @@
         "activityTypes": [
           "single_choice"
         ],
-        "maxPoints": 1460,
+        "maxPoints": 1430,
         "items": [
           {
             "id": "violympic-exam-math-g4-v04-q001",
@@ -22254,7 +22152,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q030",
             "type": "single_choice",
-            "prompt": "Bạn Liên mua được 23 chiếc kẹo, bạn Linh mua được 21 chiếc kẹo và bạn Lan mua được số kẹo băng trung bình cộng của hai bạn Liên và Linh. Hỏi trung bình môi bạn mua được bao nhiêu chiếc kẹo? - Trả lời: Trung bình mỗi bạn mua được .........chiếc kẹo. 57.",
+            "prompt": "Bạn Liên mua được 23 chiếc kẹo, bạn Linh mua được 21 chiếc kẹo và bạn Lan mua được số kẹo băng trung bình cộng của hai bạn Liên và Linh. Hỏi trung bình môi bạn mua được bao nhiêu chiếc kẹo? - Trả lời: Trung bình mỗi bạn mua được .........chiếc kẹo.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -22443,15 +22341,15 @@
               },
               {
                 "id": "b",
-                "label": "10 quyền vở"
+                "label": "10 quyển vở"
               },
               {
                 "id": "c",
-                "label": "20 quyền vở"
+                "label": "20 quyển vở"
               },
               {
                 "id": "d",
-                "label": "18 quyền vở"
+                "label": "18 quyển vở"
               }
             ]
           },
@@ -22594,7 +22492,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q040",
             "type": "single_choice",
-            "prompt": "Một lớp học có số học sinh nữ gấp đôi số học sinh nam. Nếu chuyển đi 5 học sinh nữ thì sô học sinh nữ hơn sô học sinh nam là 9 em. Hỏi lớp học đó có bao nhiêu học sinh? - Trả lời: Lớp học đó có .........học sinh. 58 :",
+            "prompt": "Một lớp học có số học sinh nữ gấp đôi số học sinh nam. Nếu chuyển đi 5 học sinh nữ thì sô học sinh nữ hơn sô học sinh nam là 9 em. Hỏi lớp học đó có bao nhiêu học sinh? - Trả lời: Lớp học đó có .........học sinh.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -22764,7 +22662,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q045",
             "type": "single_choice",
-            "prompt": "Một cửa hàng bán ngô và sắn, biết khối lượng ngô bán được nhiều hơn khôi lượng săn là 85kg và tỉ sô khôi lượng săn và ngô bán được là 3 : 8. Vậy khối lượng sắn và khôi lượng ngô bán được lân lượt là:",
+            "prompt": "Một cửa hàng bán ngô và sắn, biết khối lượng ngô bán được nhiều hơn khối lượng săn là 85kg và tỉ sô khối lượng săn và ngô bán được là 3 : 8. Vậy khối lượng sắn và khối lượng ngô bán được lân lượt là:",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -23404,108 +23302,6 @@
               {
                 "id": "d",
                 "label": "11"
-              }
-            ]
-          },
-          {
-            "id": "violympic-exam-math-g4-v04-q064",
-            "type": "single_choice",
-            "prompt": "D. 46.",
-            "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
-            "topic": "Toán Violympic Lớp 4",
-            "difficulty": "application",
-            "points": 10,
-            "contentOrigin": "reference_extracted",
-            "verificationStatus": "verified",
-            "sourceLabel": "TS. Phạm Văn Công",
-            "sourceCitation": "Hướng dẫn giải Violympic Toán 4 — TS.Phạm Văn Công, NXB ĐHQGHN",
-            "sourcePage": 57,
-            "sourceLocator": "Bộ đề số 4 - Câu 64",
-            "options": [
-              {
-                "id": "a",
-                "label": "10"
-              },
-              {
-                "id": "b",
-                "label": "12"
-              },
-              {
-                "id": "c",
-                "label": "9"
-              },
-              {
-                "id": "d",
-                "label": "11"
-              }
-            ]
-          },
-          {
-            "id": "violympic-exam-math-g4-v04-q065",
-            "type": "single_choice",
-            "prompt": "B. 6509728.",
-            "correctAnswer": "a",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
-            "topic": "Toán Violympic Lớp 4",
-            "difficulty": "application",
-            "points": 10,
-            "contentOrigin": "reference_extracted",
-            "verificationStatus": "verified",
-            "sourceLabel": "TS. Phạm Văn Công",
-            "sourceCitation": "Hướng dẫn giải Violympic Toán 4 — TS.Phạm Văn Công, NXB ĐHQGHN",
-            "sourcePage": 57,
-            "sourceLocator": "Bộ đề số 4 - Câu 65",
-            "options": [
-              {
-                "id": "a",
-                "label": "10"
-              },
-              {
-                "id": "b",
-                "label": "11"
-              },
-              {
-                "id": "c",
-                "label": "12"
-              },
-              {
-                "id": "d",
-                "label": "9"
-              }
-            ]
-          },
-          {
-            "id": "violympic-exam-math-g4-v04-q066",
-            "type": "single_choice",
-            "prompt": "450.",
-            "correctAnswer": "d",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
-            "topic": "Toán Violympic Lớp 4",
-            "difficulty": "application",
-            "points": 10,
-            "contentOrigin": "reference_extracted",
-            "verificationStatus": "verified",
-            "sourceLabel": "TS. Phạm Văn Công",
-            "sourceCitation": "Hướng dẫn giải Violympic Toán 4 — TS.Phạm Văn Công, NXB ĐHQGHN",
-            "sourcePage": 57,
-            "sourceLocator": "Bộ đề số 4 - Câu 66",
-            "options": [
-              {
-                "id": "a",
-                "label": "9"
-              },
-              {
-                "id": "b",
-                "label": "12"
-              },
-              {
-                "id": "c",
-                "label": "11"
-              },
-              {
-                "id": "d",
-                "label": "10"
               }
             ]
           },
@@ -24158,7 +23954,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q086",
             "type": "single_choice",
-            "prompt": "48 . - Chiều rộng của tắm bia đó là: 12 : 3 = 4 (dm). - Diện tích của tắm bia đó là: 12 x 4 = 48 (dm’). 63.",
+            "prompt": "48 . - Chiều rộng của tắm bia đó là: 12 : 3 = 4 (dm). - Diện tích của tắm bia đó là: 12 x 4 = 48 (dm’).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -24498,7 +24294,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q096",
             "type": "single_choice",
-            "prompt": "16cm. oe Chiều dài hình chữ nhật là: (40:2+4):2=12(cm). : - Chiều rộng hình chữ nhật là: 12-4 =8 (cm). - Diện tích hình chữ nhật là: 12 x 8 = 96 (cm”). - Độ dài đường chéo dài của hình thoi là: 96 x 2 :8=24 (cm). 64.",
+            "prompt": "16cm. oe Chiều dài hình chữ nhật là: (40:2+4):2=12(cm). : - Chiều rộng hình chữ nhật là: 12-4 =8 (cm). - Diện tích hình chữ nhật là: 12 x 8 = 96 (cm”). - Độ dài đường chéo dài của hình thoi là: 96 x 2 :8=24 (cm).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -25042,7 +24838,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q112",
             "type": "single_choice",
-            "prompt": "333879 ; - Số cần tìm là: (100235 + 11058) x 3 = 333879. 66.",
+            "prompt": "333879 ; - Số cần tìm là: (100235 + 11058) x 3 = 333879.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -25552,7 +25348,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q127",
             "type": "single_choice",
-            "prompt": "2670. : - Trung bình mỗi ngày kho muối cho xuất số muối là: im (261 + 178 + 362) : 3 =267 (tắn) = 2670 ta. 67.",
+            "prompt": "2670. : - Trung bình mỗi ngày kho muối cho xuất số muối là: im (261 + 178 + 362) : 3 =267 (tắn) = 2670 ta.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -25892,7 +25688,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q137",
             "type": "single_choice",
-            "prompt": "A. 120 cai. . - Sau khi Minh mua, số bút bi nhiều hơn số bút chì là: 100 — 4 = 96 (cái). - Số bút chì lúc đầu cửa hàng có là: 96 : (9-5) x 5 = 120 (cái). 68.",
+            "prompt": "A. 120 cai. . - Sau khi Minh mua, số bút bi nhiều hơn số bút chì là: 100 — 4 = 96 (cái). - Số bút chì lúc đầu cửa hàng có là: 96 : (9-5) x 5 = 120 (cái).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -26198,7 +25994,7 @@
           {
             "id": "violympic-exam-math-g4-v04-q146",
             "type": "single_choice",
-            "prompt": "108m2. - Chiều dài mảnh vườn là: 12:(3-1)x3=18(m). - Chiều rộng mảnh vườn là: 18—12 = 6 (m). - Diện tích mảnh vườn là: 18 x 6 = 108 (m2). 69.",
+            "prompt": "108m2. - Chiều dài mảnh vườn là: 12:(3-1)x3=18(m). - Chiều rộng mảnh vườn là: 18—12 = 6 (m). - Diện tích mảnh vườn là: 18 x 6 = 108 (m2).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -26765,7 +26561,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q016",
             "type": "single_choice",
-            "prompt": "Từ 1 đến 2000 có tất cả bao nhiêu số chin? ĐÁPÁN:[ - ].",
+            "prompt": "Từ 1 đến 2000 có tất cả bao nhiêu số chẵn? ĐÁPÁN:[ - ].",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -26799,7 +26595,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q017",
             "type": "single_choice",
-            "prompt": "Cho một phép chia hết có thương bằng 25. Tìm số bị chia biết rằng nêu tăng thương của phép chia đó thêm 6 đơn vị thì sô bị chia sẽ tăng thêm 966 đơn vị. . ĐÁPÁN:[ ] :",
+            "prompt": "Cho một phép chia hết có thương bằng 25. Tìm số bị chia biết rằng nêu tăng thương của phép chia đó thêm 6 đơn vị thì sô bị chia sẽ tăng thêm 966 đơn vị. . ĐÁPÁN:[ ].",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -27404,7 +27200,7 @@
               },
               {
                 "id": "d",
-                "label": "các số chin"
+                "label": "các số chẵn"
               }
             ]
           },
@@ -27929,7 +27725,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q050",
             "type": "single_choice",
-            "prompt": "Tính : 11 x 1989 — 1989. Trả lời: Kết quả của biểu thức trên là........... : Cau 41: Trong mét.ki thi hoc sinh gidi cấp trường, có 37 thí sinh dự thi. Hỏi người ta phải dùng tat cả bao nhiêu chữ sé dé đánh sô báo danh của các thí sinh? : Trả lời: Cần phải dùng tat cả ............ chữ số.",
+            "prompt": "Tính : 11 x 1989 — 1989. Trả lời: Kết quả của biểu thức trên là........... : Cau 41: Trong mét.ki thi hoc sinh gidi cấp trường, có 37 thí sinh dự thi. Hỏi người ta phải dùng tất cả bao nhiêu chữ sé dé đánh sô báo danh của các thí sinh? : Trả lời: Cần phải dùng tất cả ............ chữ số.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -28031,7 +27827,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q053",
             "type": "single_choice",
-            "prompt": "Bé thứ nhất chứa 1600/ nước, bé thứ hai chứa 1300/ nước. Người ta tháo ra cùng một lúc ở bể thứ nhất, mỗi phút 307 và bể thứ hai mỗi phút 10/. Hỏi sau bao lâu thì lượng nước ở hai bê băng nhau? Trả lời: Sau......... phút thì lượng nước còn lại ở hai bể bằng nhau. 75.",
+            "prompt": "Bé thứ nhất chứa 1600/ nước, bé thứ hai chứa 1300/ nước. Người ta tháo ra cùng một lúc ở bể thứ nhất, mỗi phút 307 và bể thứ hai mỗi phút 10/. Hỏi sau bao lâu thì lượng nước ở hai bê băng nhau? Trả lời: Sau......... phút thì lượng nước còn lại ở hai bể bằng nhau.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -29085,7 +28881,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q084",
             "type": "single_choice",
-            "prompt": "An có 18 viên bi, Bình có 16 viên bi, Hùng có số bi bằng trung bình cộng sô bi của An và Bình cộng thêm 6 viên nữa. Dũng có số bi bang trung bình cộng sô bi của cả bôn bạn. Hỏi Dũng có bao nhiêu viên bi? Trả lời: Dũng có............viênbi.. - :",
+            "prompt": "An có 18 viên bi, Bình có 16 viên bi, Hùng có số bi bằng trung bình cộng sô bi của An và Bình cộng thêm 6 viên nữa. Dũng có số bi bang trung bình cộng sô bi của cả bôn bạn. Hỏi Dũng có bao nhiêu viên bi? Trả lời: Dũng có............viênbi.. -.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -29153,7 +28949,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q086",
             "type": "single_choice",
-            "prompt": "Một hình chữ nhật có chu vi 150cm. Biết chiều dài hơn chiều rộng 25cm. Tính diện tích của hình đó. Trả lời: Diện tích của hình đó là............cm”. 78.",
+            "prompt": "Một hình chữ nhật có chu vi 150cm. Biết chiều dài hơn chiều rộng 25cm. Tính diện tích của hình đó. Trả lời: Diện tích của hình đó là............cm”.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -29765,7 +29561,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q104",
             "type": "single_choice",
-            "prompt": "Day số 1; 2; 3; 4; 5; ...; 2014; 2015 có bao nhiêu số chin? ĐÁPÁN:[ ].",
+            "prompt": "Day số 1; 2; 3; 4; 5; ...; 2014; 2015 có bao nhiêu số chẵn? ĐÁPÁN:[ ].",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -29867,7 +29663,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q107",
             "type": "single_choice",
-            "prompt": "Số tròn chục liền trước số 400 là số: 390.",
+            "prompt": "Số tròn chục liền trước số 400 là số.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -30003,7 +29799,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q111",
             "type": "single_choice",
-            "prompt": "Từ 1 đến 2000 có số số chin là: (2000 — 2) : 2 + 1 = 1000 (số).",
+            "prompt": "Từ 1 đến 2000 có số số chẵn là: (2000 — 2) : 2 + 1 = 1000 (số).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -30445,7 +30241,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q124",
             "type": "single_choice",
-            "prompt": "Trong 5 giờ người đó đi được là: 3 x 45 + 2 x 55 =245 (km). - Trung bình mỗi giờ đi được là: 245 : 5 = 49 (km). 82.",
+            "prompt": "Trong 5 giờ người đó đi được là: 3 x 45 + 2 x 55 =245 (km). - Trung bình mỗi giờ đi được là: 245 : 5 = 49 (km).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -30683,7 +30479,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q131",
             "type": "single_choice",
-            "prompt": "A. 2 góc vuông và 4 góc không vuông. - Các góc vuông là: (1) + (2) và (2) + (3) - Các góc không vuông là: (1), (2), (3)-va (1) + (2) + (3). - Hình vẽ có: 2 góc vuông và 4 góc không vuông. : 83.",
+            "prompt": "A. 2 góc vuông và 4 góc không vuông. - Các góc vuông là: (1) + (2) và (2) + (3) - Các góc không vuông là: (1), (2), (3)-va (1) + (2) + (3). - Hình vẽ có: 2 góc vuông và 4 góc không vuông.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -30921,7 +30717,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q138",
             "type": "single_choice",
-            "prompt": "Đồi: 34tấn 6ta = 34600kg. - Ta có: 34600 : 860 = 40 (dư 200). - Cần ít nhất số xe là: 40 + 1 =41 (xe). 84.",
+            "prompt": "Đồi: 34tấn 6ta = 34600kg. - Ta có: 34600 : 860 = 40 (dư 200). - Cần ít nhất số xe là: 40 + 1 =41 (xe).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -31397,7 +31193,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q152",
             "type": "single_choice",
-            "prompt": "C. 6 cặp - Các cặp cạnh song song với nhau là: AB và MN, AB và PQ, ` AB và DC, MN va PQ, MN và DC, PQ và DC. 85.",
+            "prompt": "C. 6 cặp - Các cặp cạnh song song với nhau là: AB và MN, AB và PQ, ` AB và DC, MN va PQ, MN và DC, PQ và DC.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -31839,7 +31635,7 @@
           {
             "id": "violympic-exam-math-g4-v05-q165",
             "type": "single_choice",
-            "prompt": "Nửa số dầu trong thùng nặng là: 22 — 12 = 10 (kg). - Số dầu trong thùng nặng là: 10 x 2 =20 (kg). - Thùng không nặng là: 22—20=2 (kg). 86.",
+            "prompt": "Nửa số dầu trong thùng nặng là: 22 — 12 = 10 (kg). - Số dầu trong thùng nặng là: 10 x 2 =20 (kg). - Thùng không nặng là: 22—20=2 (kg).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -32202,7 +31998,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q010",
             "type": "single_choice",
-            "prompt": "Tổng của 2 số là: 746 x 2 = 1492. - Số lớn bằng 10 lần số bé và 7 đơn vị. - Số bé là: (1492 — 7) : (10 + 1) = 135. - Số lớn là: 1357.",
+            "prompt": "Tổng của 2 số là: 746 x 2 = 1492. - Số lớn bằng 10 lần số bé và 7 đơn vị. - Số bé là: (1492 — 7) : (10 + 1) = 135. - Số lớn là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -32338,7 +32134,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q014",
             "type": "single_choice",
-            "prompt": "Hùng có số bi là: (18 + 16) : 2 = 17 (viên). - Dũng có số bi bằng trung bình cộng của Hùng, An và Bình. - Dũng có số bi là: (16 + 18+17):3=17 (viên). 87.",
+            "prompt": "Hùng có số bi là: (18 + 16) : 2 = 17 (viên). - Dũng có số bi bằng trung bình cộng của Hùng, An và Bình. - Dũng có số bi là: (16 + 18+17):3=17 (viên).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -32576,7 +32372,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q021",
             "type": "single_choice",
-            "prompt": "Số lớn hơn số bé 200đơn vị. - Số bé là: (328 — 200) : 2 = 64. - Số lớn là: 264.",
+            "prompt": "Số lớn hơn số bé 200đơn vị. - Số bé là: (328 — 200) : 2 = 64. - Số lớn là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -32746,7 +32542,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q026",
             "type": "single_choice",
-            "prompt": "Số đó nhỏ nhất khi a nhỏ nhất. - Giá trị nhỏ nhất của a là: 6.",
+            "prompt": "Số đó nhỏ nhất khi a nhỏ nhất. - Giá trị nhỏ nhất của a là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -32814,7 +32610,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q028",
             "type": "single_choice",
-            "prompt": "Trung bình cộng của các số đó là: (138 + 172 + 155):3=155. 88.",
+            "prompt": "Trung bình cộng của các số đó là: (138 + 172 + 155):3=155.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -32984,7 +32780,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q033",
             "type": "single_choice",
-            "prompt": "Số đó có tận cùng bằng 5. Số phải tìm đó là: 25.",
+            "prompt": "Số đó có tận cùng bằng 5. Số phải tìm đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -33698,7 +33494,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q054",
             "type": "single_choice",
-            "prompt": "Một phép chia có thương là 125, số du là 208 và là số dư lớn nhất có thé có trong phép chia đó. Tìm phép chia đó. - Trả lời: Phép chia đó là...................... 91.",
+            "prompt": "Một phép chia có thương là 125, số du là 208 và là số dư lớn nhất có thé có trong phép chia đó. Tìm phép chia đó. - Trả lời: Phép chia đó là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -34310,7 +34106,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q072",
             "type": "single_choice",
-            "prompt": "Mua 2 quyển sách và 1 quyền vở hết 12000 đồng. Mua 2 quyền sách và 2 quyên vở loại đó hết 14000 đông. Tính giá tiên 1 quyên sách. Trả lời: Giá tiền một quyền sách là.",
+            "prompt": "Mua 2 quyển sách và 1 quyển vở hết 12000 đồng. Mua 2 quyền sách và 2 quyên vở loại đó hết 14000 đông. Tính giá tiên 1 quyên sách. Trả lời: Giá tiền một quyền sách là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -34718,7 +34514,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q084",
             "type": "single_choice",
-            "prompt": "Có ....... số chin có 4 chữ số chia hết cho 5.",
+            "prompt": "Có ....... số chẵn có 4 chữ số chia hết cho 5.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -35092,7 +34888,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q095",
             "type": "single_choice",
-            "prompt": "Tổng của hai số bằng 2009. Tim hai số đó biết giữa chúng có tắt cả 50 số tự nhiên khác. Trả lời: Số lớn là..............; Số bé là................. 94.",
+            "prompt": "Tổng của hai số bằng 2009. Tim hai số đó biết giữa chúng có tắt cả 50 số tự nhiên khác. Trả lời: Số lớn là..............; Số bé là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -35160,9 +34956,9 @@
           {
             "id": "violympic-exam-math-g4-v06-q097",
             "type": "single_choice",
-            "prompt": "Khi An 10 tuổi thì bố 40 tuổi. Tính tuổi của bố và tuổi của An hiện nay biết tổng số tuổi hiện nay của hai bô con là 60 tuổi. Trả lời: Tuổi bố là......... tuổi; Tuổi con là ........... tuổi.",
-            "correctAnswer": "d",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
+            "prompt": "Khi An 10 tuổi thì bố 40 tuổi. Tính tuổi của bố và tuổi của An hiện nay biết tổng số tuổi hiện nay của hai bố con là 60 tuổi. Trả lời: Tuổi bố là......... tuổi; Tuổi con là ........... tuổi.",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 10 + 40 = 50 (tuổi). Đáp số: 50 tuổi.",
             "topic": "Toán Violympic Lớp 4",
             "difficulty": "challenge",
             "points": 10,
@@ -35175,19 +34971,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "9"
+                "label": "50 tuổi"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "47 tuổi"
               },
               {
                 "id": "c",
-                "label": "12"
+                "label": "52 tuổi"
               },
               {
                 "id": "d",
-                "label": "10"
+                "label": "40 tuổi"
               }
             ]
           },
@@ -35364,7 +35160,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q103",
             "type": "single_choice",
-            "prompt": "Hai vòi nước chảy vào bể. Biết nếu vòi 1 chảy trong 5 giờ thì đầy bể, vòi thứ hai chảy trong 6 giờ thì đây bê. Hỏi trong 2 giờ cả hai vòi chảy được bao nhiêu lít nước biét răng bê đó chứa được tat cả 360 lít nước? . Đáp SO! sssessssessessescssnessssssscasseeesees.",
+            "prompt": "Hai vòi nước chảy vào bể. Biết nếu vòi 1 chảy trong 5 giờ thì đầy bể, vòi thứ hai chảy trong 6 giờ thì đây bê. Hỏi trong 2 giờ cả hai vòi chảy được bao nhiêu lít nước biét răng bê đó chứa được tất cả 360 lít nước? . Đáp SO! sssessssessessescssnessssssscasseeesees.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -36656,7 +36452,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q141",
             "type": "single_choice",
-            "prompt": "Số a đó là: 459.",
+            "prompt": "Số a đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -36996,7 +36792,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q151",
             "type": "single_choice",
-            "prompt": "Số dư trong phép chia đó là: 15—1=14. - Thương của phép chia đó là: 99. - Số bị chia trong phép chia đó là: 99 x 15 + 14 = 1499. 100.",
+            "prompt": "Số dư trong phép chia đó là: 15—1=14. - Thương của phép chia đó là: 99. - Số bị chia trong phép chia đó là: 99 x 15 + 14 = 1499.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -37676,7 +37472,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q171",
             "type": "single_choice",
-            "prompt": "Giá tiền 1 quyền vở đó là: 14000 — 12000 = 2000 (đồng). - Giá tiền 1 quyền sách đó là: (12000 — 2000) : 2 = 5000 (đồng).",
+            "prompt": "Giá tiền 1 quyển vở đó là: 14000 — 12000 = 2000 (đồng). - Giá tiền 1 quyền sách đó là: (12000 — 2000) : 2 = 5000 (đồng).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -37778,7 +37574,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q174",
             "type": "single_choice",
-            "prompt": "Số lớn hơn số bé 4000đơn vị. - Tổng của 2số đó là: 2321 x 2 = 4642. - Số lớn là: (4642 + 4000) : 2=4321. : - Số bé là: 321.",
+            "prompt": "Số lớn hơn số bé 4000đơn vị. - Tổng của 2số đó là: 2321 x 2 = 4642. - Số lớn là: (4642 + 4000) : 2=4321. : - Số bé là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -37812,7 +37608,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q175",
             "type": "single_choice",
-            "prompt": "Tổng chiều dài và chiều rộng là: 46 x 2 = 92 (m). - Chiều rộng hình đó là: (92 - 8) = 42 (m). : - Chiều dài hình đó là: 42 + 8 = 50 (m). - Diện tích hình đó là: 50 x 42 = 2100 (m2). - Số rau thu được là: (2100 : 2) x 3 =3150 (kg). 102.",
+            "prompt": "Tổng chiều dài và chiều rộng là: 46 x 2 = 92 (m). - Chiều rộng hình đó là: (92 - 8) = 42 (m). : - Chiều dài hình đó là: 42 + 8 = 50 (m). - Diện tích hình đó là: 50 x 42 = 2100 (m2). - Số rau thu được là: (2100 : 2) x 3 =3150 (kg).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38016,7 +37812,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q181",
             "type": "single_choice",
-            "prompt": "Số đó lớn nhất khi b lớn nhất. - Giá trị lớn nhất của b là: 7.",
+            "prompt": "Số đó lớn nhất khi b lớn nhất. - Giá trị lớn nhất của b là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38186,7 +37982,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q186",
             "type": "single_choice",
-            "prompt": "2 <a< LẺ. Vậy: a =4. ; :",
+            "prompt": "2 <a< LẺ. Vậy: a =4. ;.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38288,7 +38084,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q189",
             "type": "single_choice",
-            "prompt": "Số gạo còn lại là: 48 + 30 = 78 (kg). - Số gạo tẻ bán đi là: (240 — 78) : 2= 81 (kg). - Số gạo tẻ lúc đầu là: 81 + 48 = 129 (kg). 103.",
+            "prompt": "Số gạo còn lại là: 48 + 30 = 78 (kg). - Số gạo tẻ bán đi là: (240 — 78) : 2= 81 (kg). - Số gạo tẻ lúc đầu là: 81 + 48 = 129 (kg).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38356,7 +38152,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q191",
             "type": "single_choice",
-            "prompt": "Số đó chia hết cho 2 và chia cho 5 du lnênb =6... - Số đó chia hết cho 9 nên (1 + a + 5 + 6) chia hết cho 9. - Từ đó ta có: a= 6. - Số đó là: 1656.",
+            "prompt": "Số đó chia hết cho 2 và chia cho 5 du lnênb =6... - Số đó chia hết cho 9 nên (1 + a + 5 + 6) chia hết cho 9. - Từ đó ta có: a= 6. - Số đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38390,7 +38186,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q192",
             "type": "single_choice",
-            "prompt": "Số đó chia hết cho cả 2 và 5 nên b =0. - Số đó chia hết cho 9 nên (1 + a + 4 + 0) chia hết cho 9. - Từ đó ta có: a=4. - Số đó là: 1440.",
+            "prompt": "Số đó chia hết cho cả 2 và 5 nên b =0. - Số đó chia hết cho 9 nên (1 + a + 4 + 0) chia hết cho 9. - Từ đó ta có: a=4. - Số đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38424,7 +38220,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q193",
             "type": "single_choice",
-            "prompt": "Số đó chia hết cho 2 và chia cho 5 dư 2 nên b =2. - Số đó chia hết cho 9 nên (2 + a + 7 + 2) chia hết cho 9. - Từ đó ta có:a=7. - Số đó là: 2772.",
+            "prompt": "Số đó chia hết cho 2 và chia cho 5 dư 2 nên b =2. - Số đó chia hết cho 9 nên (2 + a + 7 + 2) chia hết cho 9. - Từ đó ta có:a=7. - Số đó là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38594,7 +38390,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q198",
             "type": "single_choice",
-            "prompt": "Số lớn hon số bé là: 6000. - Số lớn là: (6798 + 6000) : 2 = 6399. - Số bé là: 399.",
+            "prompt": "Số lớn hon số bé là: 6000. - Số lớn là: (6798 + 6000) : 2 = 6399. - Số bé là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38628,7 +38424,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q199",
             "type": "single_choice",
-            "prompt": "Nửa chu vi gấp 3 lần chiều rộng. Hay chiều dài gấp đôi chiều rộng. - Chiều dài hình đó là: 16:(2—1)x2=32 (cm). - Chiều rộng hình đó là: 32 — 16 = 16 (cm). - Diện tích hình đó là: 32 x 16 = 512 (cm2). 104.",
+            "prompt": "Nửa chu vi gấp 3 lần chiều rộng. Hay chiều dài gấp đôi chiều rộng. - Chiều dài hình đó là: 16:(2—1)x2=32 (cm). - Chiều rộng hình đó là: 32 — 16 = 16 (cm). - Diện tích hình đó là: 32 x 16 = 512 (cm2).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -38696,7 +38492,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q201",
             "type": "single_choice",
-            "prompt": "Gọi số đó là ab2. Ta có: ab =2 x b2. ax10+b=2x(bx10+2) ax10+b=2xbx10+4 ax10+b=20xb+4 ax10=19xb+4 ; - Via x 10 có tận cùng bằng 0 nên 19 x b phải có tận cùng bằng 6. - Từ đó: b =4. Thay vào ta được a x 10 = 19 x 4+ 4= 80. Haya=8. - Số đó là: 842.",
+            "prompt": "Gọi số đó là ab2. Ta có: ab =2 x b2. ax10+b=2x(bx10+2) ax10+b=2xbx10+4 ax10+b=20xb+4 ax10=19xb+4 ; - Via x 10 có tận cùng bằng 0 nên 19 x b phải có tận cùng bằng 6. - Từ đó: b =4. Thay vào ta được a x 10 = 19 x 4+ 4= 80. Haya=8. - Số đó là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -39376,7 +39172,7 @@
           {
             "id": "violympic-exam-math-g4-v06-q221",
             "type": "single_choice",
-            "prompt": "A. 3 xe : - Mỗi xe chở được số bao xi măng là: (625 — 15) : 5 = 122 (bao). - Nếu có 366 bao thì cần số xe chở là: 366 : 122 =3 (xe). 106.",
+            "prompt": "A. 3 xe : - Mỗi xe chở được số bao xi măng là: (625 — 15) : 5 = 122 (bao). - Nếu có 366 bao thì cần số xe chở là: 366 : 122 =3 (xe).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -39943,7 +39739,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q016",
             "type": "single_choice",
-            "prompt": "Nhà trường chuẩn bị 1250 quyển vở thưởng cho học sinh giỏi. Biết các bạn giải nhất được có vở, các bạn giải nhì được 286 vở còn lại. Hỏi các bạn đạt giải ba được bao nhiêu quyền vở? (không có giải khuyến khích) Tra lời: Các bạn đạt giải ba được ............... quyền vở.",
+            "prompt": "Nhà trường chuẩn bị 1250 quyển vở thưởng cho học sinh giỏi. Biết các bạn giải nhất được có vở, các bạn giải nhì được 286 vở còn lại. Hỏi các bạn đạt giải ba được bao nhiêu quyển vở? (không có giải khuyến khích) Tra lời: Các bạn đạt giải ba được ............... quyển vở.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -40147,7 +39943,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q022",
             "type": "single_choice",
-            "prompt": "Tìm 2 số chẵn có tổng bằng 120 biết rằng giữa chúng có đúng 10 số lẻ. Đáp SỐ: ...................GGGnnnnennnenee :",
+            "prompt": "Tìm 2 số chẵn có tổng bằng 120 biết rằng giữa chúng có đúng 10 số lẻ. Đáp SỐ: ...................GGGnnnnennnenee.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -40521,7 +40317,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q033",
             "type": "single_choice",
-            "prompt": "Một khu vườn được chia thành 3 phần. Biết diện tích trồng hoa hồng chiếm Tà diện tích trồng hoa cúc chiếm 5 Hỏi diện tích đất còn lại chiếm mấy phần? Trả lời: Phân số chỉ diện tích đắt còn lại là ................... 110 :",
+            "prompt": "Một khu vườn được chia thành 3 phần. Biết diện tích trồng hoa hồng chiếm Tà diện tích trồng hoa cúc chiếm 5 Hỏi diện tích đất còn lại chiếm mấy phần? Trả lời: Phân số chỉ diện tích đắt còn lại là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -41643,7 +41439,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q066",
             "type": "single_choice",
-            "prompt": "Dé 201a chia hết cho cả 3 và 5 thi giá trị của a là:",
+            "prompt": "Dé 201a chia hết cho cả 3 và 5 thì giá trị của a là:",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -41779,7 +41575,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q070",
             "type": "single_choice",
-            "prompt": "Shm?+ 6m^+ 7d? =................. dM? :",
+            "prompt": "Shm?+ 6m^+ 7d? =................. dM?",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -42051,7 +41847,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q078",
             "type": "single_choice",
-            "prompt": "Có 2140 quyền vở chia đều vào 7 thùng thì thừa 5 quyền. Hỏi 5 thùng đó có bao nhiêu quyên? Dap lo].",
+            "prompt": "Có 2140 quyển vở chia đều vào 7 thùng thì thừa 5 quyền. Hỏi 5 thùng đó có bao nhiêu quyên? Dap lo].",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -42255,7 +42051,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q084",
             "type": "single_choice",
-            "prompt": "Một hình thoi có diện tích 2m? và một đường chéo dài 5m. Tính độ dài đường chéo còn lại. Đáp SỐ: ...............Gnn.Ge---nee-nnnen tt 114 :",
+            "prompt": "Một hình thoi có diện tích 2m? và một đường chéo dài 5m. Tính độ dài đường chéo còn lại. Đáp SỐ: ...............Gnn.Ge---nee-nnnen tt 114.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -42595,7 +42391,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q094",
             "type": "single_choice",
-            "prompt": "Có bao nhiêu phân số bé hơn 1, có mẫu số là 4 và tử số khác 0? ĐÁPÁN:[ ] . 115 :",
+            "prompt": "Có bao nhiêu phân số bé hơn 1, có mẫu số là 4 và tử số khác 0? ĐÁPÁN:[ ].",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -43445,7 +43241,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q119",
             "type": "single_choice",
-            "prompt": "Vì sé đó chia hết cho 2 và 5 nénb =0. - Số đó chia hết cho 9 néna=9-1-2-0=6. - Số đó là: 1260.",
+            "prompt": "Vì sé đó chia hết cho 2 và 5 nénb =0. - Số đó chia hết cho 9 néna=9-1-2-0=6. - Số đó là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -43887,7 +43683,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q132",
             "type": "single_choice",
-            "prompt": "Diện tích trông hoa hông va hoa cúc là: 3 + 7 “71 (vườn). — l6 5 Ñ - Diện tích dat còn lại là: 1-—=—(vườn). . 21.21 A ty a yee pe .2.1.11.:",
+            "prompt": "Diện tích trông hoa hông va hoa cúc là: 3 + 7 “71 (vườn). — l6 5 Ñ - Diện tích dat còn lại là: 1-—=—(vườn). . 21.21 A ty a yee pe .2.1.11.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -44465,7 +44261,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q149",
             "type": "single_choice",
-            "prompt": "Tổng của 2 số đó là: 329 x 2 = 658. ; : - Số lớn hơn số bé 500. - Số bé là: (658 — 500) : 2 = 79. - Số lớn là: 579.",
+            "prompt": "Tổng của 2 số đó là: 329 x 2 = 658. ; : - Số lớn hơn số bé 500. - Số bé là: (658 — 500) : 2 = 79. - Số lớn là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -44601,7 +44397,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q153",
             "type": "single_choice",
-            "prompt": "Số lớn gấp 10 lần số bé. - Số bé là: 858 :(10+1)=78. - Số lớn là: 780.",
+            "prompt": "Số lớn gấp 10 lần số bé. - Số bé là: 858 :(10+1)=78. - Số lớn là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -44669,7 +44465,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q155",
             "type": "single_choice",
-            "prompt": "Số đó là: 1035.",
+            "prompt": "Số đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -44805,7 +44601,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q159",
             "type": "single_choice",
-            "prompt": "B. 1.23 2466 ! - Ta cóc L= =3, 2.4 6 122 Cau ã0:. c1 \\ ; “83 2 ‘ -Ta có: <<, 8 3 2 : 1.",
+            "prompt": "B. 1.23 2466 ! - Ta cóc L= =3, 2.4 6 122 Cau ã0:. c1 \\ ; “83 2 ‘ -Ta có: <<, 8 3 2.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -45111,7 +44907,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q168",
             "type": "single_choice",
-            "prompt": ": của 45kg là: 45 : 3 x 2 = 30 (kg). 123.",
+            "prompt": ": của 45kg là: 45 : 3 x 2 = 30 (kg).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -45587,7 +45383,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q182",
             "type": "single_choice",
-            "prompt": "Tổng của 2 số đó là: 70 x 2 = 140. : ; - Số lớn là: 140 : (2+5) x 5 = 100. : - Số bé là: 140 — 100 = 40. - Hiệu của 2 số đó là: 100 — 40 = 60. 124.",
+            "prompt": "Tổng của 2 số đó là: 70 x 2 = 140. : ; - Số lớn là: 140 : (2+5) x 5 = 100. : - Số bé là: 140 — 100 = 40. - Hiệu của 2 số đó là: 100 — 40 = 60.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -45621,7 +45417,7 @@
           {
             "id": "violympic-exam-math-g4-v07-q183",
             "type": "single_choice",
-            "prompt": "Số lớn bằng 100 lần số bé và 25 đơn vị... ; - Số bé là: (5883 —25) : (100 + 1)=58. - Số lớn là: 5825.",
+            "prompt": "Số lớn bằng 100 lần số bé và 25 đơn vị... ; - Số bé là: (5883 —25) : (100 + 1)=58. - Số lớn là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -46732,7 +46528,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q021",
             "type": "single_choice",
-            "prompt": "Tuổi cháu có bao nhiêu tháng thì tuổi ông có bấy nhiêu năm. Ông hơn cháu 66 tuôi. Tính tuôi của ông và tuôi của cháu. Trả lời: Tuổi ông là ....... tuổi; tuổi cháu là: ........ tuổi. 128.",
+            "prompt": "Tuổi cháu có bao nhiêu tháng thì tuổi ông có bấy nhiêu năm. Ông hơn cháu 66 tuôi. Tính tuôi của ông và tuôi của cháu. Trả lời: Tuổi ông là ....... tuổi; tuổi cháu là: ........ tuổi.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -46936,7 +46732,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q027",
             "type": "single_choice",
-            "prompt": "Trước đây 3 năm tuổi con bằng nu bé. Biết bố hơn con 24 tuổi. Tính tổng số tuổi của hai bố con hiện nay. ĐÁPÁN:[” - ] :",
+            "prompt": "Trước đây 3 năm tuổi con bằng nu bé. Biết bố hơn con 24 tuổi. Tính tổng số tuổi của hai bố con hiện nay. ĐÁPÁN:[” - ].",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -47072,7 +46868,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q031",
             "type": "single_choice",
-            "prompt": "Có một bao gạo. Biết rằng sau khi bán đi 386 gạo trong bao thì còn lại 52kg. Tính số gạo trong bao lúc đầu. ĐÁPÁN:[ ] . 129.",
+            "prompt": "Có một bao gạo. Biết rằng sau khi bán đi 386 gạo trong bao thì còn lại 52kg. Tính số gạo trong bao lúc đầu. ĐÁPÁN:[ ].",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -47378,7 +47174,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q040",
             "type": "single_choice",
-            "prompt": "Tìm hai số chin có tỉ số là âu giữa chúng có 4 số lẻ. Đáp SỐ: ................-nnnnnnnnng nen.",
+            "prompt": "Tìm hai số chẵn có tỉ số là âu giữa chúng có 4 số lẻ. Đáp SỐ: ................-nnnnnnnnng nen.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -47412,7 +47208,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q041",
             "type": "single_choice",
-            "prompt": "Huy có 24 viên bi. Hoàng có số bi bằng TẾ bi của Huy. Hỏi hai bạn có tất cả bao nhiêu viên bi? Đáp SỐ. ................G.nnGGn--nen--nnnnnnr. 130.",
+            "prompt": "Huy có 24 viên bi. Hoàng có số bi bằng TẾ bi của Huy. Hỏi hai bạn có tất cả bao nhiêu viên bi? Đáp SỐ. ................G.nnGGn--nen--nnnnnnr.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -47650,7 +47446,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q048",
             "type": "single_choice",
-            "prompt": "Cho phân 6S. Tìm một số tự nhiền sao cho đem mẫn số của phân số - ‘da cho trừ đi số đó và giữ nguyên tử số thì được phân số mới có giá trị > 5 -băng —. Š7 Trả lời: Số tự nhiên đó là: ................. 131.",
+            "prompt": "Cho phân 6S. Tìm một số tự nhiền sao cho đem mẫn số của phân số - ‘da cho trừ đi số đó và giữ nguyên tử số thì được phân số mới có giá trị > 5 -băng —. Š7 Trả lời: Số tự nhiên đó là.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -47956,7 +47752,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q057",
             "type": "single_choice",
-            "prompt": "Người ta trồng cây hai bên đường của một đoạn đường dài 2km, mỗi cây cách nhau 5m. Biết cả hai dau đường đều trông cây. Tính sô cây trông tat cả hai bên đường. ĐÁPÁN:[ ] ;.",
+            "prompt": "Người ta trồng cây hai bên đường của một đoạn đường dài 2km, mỗi cây cách nhau 5m. Biết cả hai dau đường đều trông cây. Tính sô cây trông tất cả hai bên đường. ĐÁPÁN:[ ] ;.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -47990,7 +47786,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q058",
             "type": "single_choice",
-            "prompt": "Anh và Bình có một số bi. Biết trung bình cộng số bi của hai bạn là 56 và nêu An cho Bình 14 viên bi thì sô bi của hai bạn băng nhau. Tính sô bi của môi bạn. ĐÁPÁN:[ ] : 132.",
+            "prompt": "Anh và Bình có một số bi. Biết trung bình cộng số bi của hai bạn là 56 và nêu An cho Bình 14 viên bi thì sô bi của hai bạn băng nhau. Tính sô bi của môi bạn. ĐÁPÁN:[ ].",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -48398,7 +48194,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q070",
             "type": "single_choice",
-            "prompt": "Dãy số: 1;2; 3; 4; 5;.....; 2014; 2015 có .......... số ching .......... số lẻ.",
+            "prompt": "Dãy số: 1;2; 3; 4; 5;.....; 2014; 2015 có .......... số chẵng .......... số lẻ.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -48500,7 +48296,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q073",
             "type": "single_choice",
-            "prompt": "Một tổ làm đường phải làm xong 171m đường. Ngày thứ nhất làm được ; 5 quãng đường va gấp 3 lan ngay thir hai. Tổ đó còn phải làm..............m đường. 133.",
+            "prompt": "Một tổ làm đường phải làm xong 171m đường. Ngày thứ nhất làm được ; 5 quãng đường va gấp 3 lan ngay thir hai. Tổ đó còn phải làm..............m đường.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -48636,7 +48432,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q077",
             "type": "single_choice",
-            "prompt": "Day phân số nào dưới đây viét theo thứ tự tang dan: 3323 .1 1323 .3.",
+            "prompt": "Day phân số nào dưới đây viét theo thứ tự tăng dần: 3323 .1 1323.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -49010,7 +48806,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q088",
             "type": "single_choice",
-            "prompt": "Hai số có tổng bằng 360. Biết 5 số thứ nhất bằng < số thứ hai. Tìm hiệu của hai số đó. ĐÁPÁN:[ ] :",
+            "prompt": "Hai số có tổng bằng 360. Biết 5 số thứ nhất bằng < số thứ hai. Tìm hiệu của hai số đó. ĐÁPÁN:[ ].",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -50404,7 +50200,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q129",
             "type": "single_choice",
-            "prompt": "Phân số chỉ 52kg gạo là: 1-3 = (bao). - Số gạo trong bao lúc đầu là: 52 : 2 x 5 = 130 (kg). 140.",
+            "prompt": "Phân số chỉ 52kg gạo là: 1-3 = (bao). - Số gạo trong bao lúc đầu là: 52 : 2 x 5 = 130 (kg).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -50438,7 +50234,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q130",
             "type": "single_choice",
-            "prompt": "Tổng của 2 chữ số là: 5 x 2=10. ; - Chữ số hàng đơn vị la: 10: (1+ 4) =2. - Chữ số hàng chục là: 10-2=8. - Số phải tìm là: 82.",
+            "prompt": "Tổng của 2 chữ số là: 5 x 2=10. ; - Chữ số hàng đơn vị la: 10: (1+ 4) =2. - Chữ số hàng chục là: 10-2=8. - Số phải tìm là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -50506,7 +50302,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q132",
             "type": "single_choice",
-            "prompt": "Số lớn gấp 10 lần số bé. - Số bé là: 441 :(10—1)=49. - Số lớn là: 490.",
+            "prompt": "Số lớn gấp 10 lần số bé. - Số bé là: 441 :(10—1)=49. - Số lớn là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -50778,7 +50574,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q140",
             "type": "single_choice",
-            "prompt": "Hoàng có số bi là: 24 : 4 x 3 = 18 (viên). - Tổng số bi của cả 2 bạn là: 24 + 18=42 (viên). 141.",
+            "prompt": "Hoàng có số bi là: 24 : 4 x 3 = 18 (viên). - Tổng số bi của cả 2 bạn là: 24 + 18=42 (viên).",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -51152,7 +50948,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q151",
             "type": "single_choice",
-            "prompt": "Số thóc có trong kho thứ nhất còn lại là: 45 — 5 = 40 (tắn). - Phân số chỉ 40 tấn thóc đó là: 1-4 -+ (số théc cả 2 kho). - Tổng số thóc cả 2 kho là: 40 x 4 = 160 (tấn). - Số thóc ở kho thứ hai là: 160 — 45 = 115 (tan). 142.",
+            "prompt": "Số thóc có trong kho thứ nhất còn lại là: 45 — 5 = 40 (tắn). - Phân số chỉ 40 tấn thóc đó là: 1-4 -+ (số théc cả 2 kho). - Tổng số thóc cả 2 kho là: 40 x 4 = 160 (tấn). - Số thóc ở kho thứ hai là: 160 — 45 = 115 (tan).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -51288,7 +51084,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q155",
             "type": "single_choice",
-            "prompt": "Chữ số hàng chục là 6, hàng đơn vị là 1, hàng trăm là 3 và hàng ïighìn là 2. - Số cần tìm là: 2361.",
+            "prompt": "Chữ số hàng chục là 6, hàng đơn vị là 1, hàng trăm là 3 và hàng ïighìn là 2. - Số cần tìm là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -51390,7 +51186,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q158",
             "type": "single_choice",
-            "prompt": "Tổng số bi của 2 bạn là: 56 x 2 = 112 (viên). - An hơn Bình số bi là: 14 x 2=28 (viên). - An có số bi là: (112 + 28) : 2=70 (viên). - Bình có số bi là: 112 — 70 = 52 (viên). 143.",
+            "prompt": "Tổng số bi của 2 bạn là: 56 x 2 = 112 (viên). - An hơn Bình số bi là: 14 x 2=28 (viên). - An có số bi là: (112 + 28) : 2=70 (viên). - Bình có số bi là: 112 — 70 = 52 (viên).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -51798,7 +51594,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q170",
             "type": "single_choice",
-            "prompt": "Day số đã cho có số các số chẵn là: (2014 —2) : 2 + 1 = 1007 (số). - Day số đã cho có số các số lẻ là: (2015 — 1): 2 + 1 = 1008 (số). 144.",
+            "prompt": "Day số đã cho có số các số chẵn là: (2014 —2) : 2 + 1 = 1007 (số). - Day số đã cho có số các số lẻ là: (2015 — 1): 2 + 1 = 1008 (số).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -52206,7 +52002,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q182",
             "type": "single_choice",
-            "prompt": "Số lớn gdp 10 lần số bé. - Số bé là: 407 :(10+1)=37. - Số lớn là: 370.",
+            "prompt": "Số lớn gdp 10 lần số bé. - Số bé là: 407 :(10+1)=37. - Số lớn là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -52342,7 +52138,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q186",
             "type": "single_choice",
-            "prompt": "Số thứ nhất bằng “ số thứ hai. - Số thứ nhất là: 360 : (4 + 6) x 4 = 144. - Số thứ hai là: 360 — 144 =216. - Hiệu 2số đó là: 216 — 144 = 72. 146.",
+            "prompt": "Số thứ nhất bằng “ số thứ hai. - Số thứ nhất là: 360 : (4 + 6) x 4 = 144. - Số thứ hai là: 360 — 144 =216. - Hiệu 2số đó là: 216 — 144 = 72.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -52682,7 +52478,7 @@
           {
             "id": "violympic-exam-math-g4-v08-q196",
             "type": "single_choice",
-            "prompt": "Chiều dài gấp đôi chiều rộng. - Chiều dài hình đó là: 15 : (2— 1) x 2=30 (m). - Chiều rộng hình đó là: 30 : 2 = 15 (m). - Diện tích hình đó là;,15 x 30 = 450 (m2). 147.",
+            "prompt": "Chiều dài gấp đôi chiều rộng. - Chiều dài hình đó là: 15 : (2— 1) x 2=30 (m). - Chiều rộng hình đó là: 30 : 2 = 15 (m). - Diện tích hình đó là;,15 x 30 = 450 (m2).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -53045,7 +52841,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q010",
             "type": "single_choice",
-            "prompt": "Ngày thứ hai sản xuất được là: 234 + 45 = 279 (sản phẩm). - Ngày thứ ba sản xuất được là: 279 : 3 x 2= 186 (sản phẩm). - Trung bình mỗi ngày sản xuất được là: (279 + 234 + 186) : 3 =233 (sản phẩm). 148.",
+            "prompt": "Ngày thứ hai sản xuất được là: 234 + 45 = 279 (sản phẩm). - Ngày thứ ba sản xuất được là: 279 : 3 x 2= 186 (sản phẩm). - Trung bình mỗi ngày sản xuất được là: (279 + 234 + 186) : 3 =233 (sản phẩm).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -53589,7 +53385,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q026",
             "type": "single_choice",
-            "prompt": "Biết trung bình cộng của hai số bằng 1000. Nếu số thứ hai giảm đi 149 đơn vị thì băng nửa sô thứ nhat. Tìm hai sô đó. ĐÁPÁN:[ - ] :",
+            "prompt": "Biết trung bình cộng của hai số bằng 1000. Nếu số thứ hai giảm đi 149 đơn vị thì băng nửa sô thứ nhat. Tìm hai sô đó. ĐÁPÁN:[ - ].",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -54167,7 +53963,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q043",
             "type": "single_choice",
-            "prompt": "Tính độ dài một cuộn dây, biết nếu lấy 7 cuộn day bot di = cuộn dây rồi gấp lên 3 lần thì được 18m. Trả lời: Độ dài cuộn dây đó Ia: ...... m. : 152.",
+            "prompt": "Tính độ dài một cuộn dây, biết nếu lấy 7 cuộn day bot di = cuộn dây rồi gấp lên 3 lần thì được 18m. Trả lời: Độ dài cuộn dây đó Ia: ...... m.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -55255,7 +55051,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q075",
             "type": "single_choice",
-            "prompt": "Me mua 5 gói bánh và 5 gói kẹo. Biết mỗi gói bánh giá 210004; mỗi gói kẹo giá 14000đ. Me mua hét tat cả sô tiên là:",
+            "prompt": "Me mua 5 gói bánh và 5 gói kẹo. Biết mỗi gói bánh giá 210004; mỗi gói kẹo giá 14000đ. Me mua hét tất cả sô tiên là:",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -55697,7 +55493,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q088",
             "type": "single_choice",
-            "prompt": "Tìm tích của hai số chin có tỉ số là Thiết giữa chúng có 3 số lẻ. DAPAN:[ ].",
+            "prompt": "Tìm tích của hai số chẵn có tỉ số là Thiết giữa chúng có 3 số lẻ. DAPAN:[ ].",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -55731,7 +55527,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q089",
             "type": "single_choice",
-            "prompt": "Tìm một sô có 2 chữ sô, biết trung bình cộng 2 chữ sô của sô đó băng 4 và chữ số hàng đơn vị bằng cht số hàng chục.” ĐÁPÁN:[ ] :",
+            "prompt": "Tìm một sô có 2 chữ sô, biết trung bình cộng 2 chữ sô của sô đó băng 4 và chữ số hàng đơn vị bằng cht số hàng chục.” ĐÁPÁN:[ ].",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -55969,7 +55765,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q096",
             "type": "single_choice",
-            "prompt": "Tính tổng hai số lẻ có tỉ số là : biết giữa chúng có 3 số chin. ĐÁPÁN:[ 1].",
+            "prompt": "Tính tổng hai số lẻ có tỉ số là : biết giữa chúng có 3 số chẵn. ĐÁPÁN:[ 1].",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -56309,7 +56105,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q106",
             "type": "single_choice",
-            "prompt": "Tìm tích của hai số chin có tí số là : Biết giữa chúng có 3 số lẻ. Đáp Ồ.......................GGGGGnGuGG(nGGGGGG *.",
+            "prompt": "Tìm tích của hai số chẵn có tí số là : Biết giữa chúng có 3 số lẻ. Đáp Ồ.......................GGGGGnGuGG(nGGGGGG *.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -56513,7 +56309,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q112",
             "type": "single_choice",
-            "prompt": "Ta có: 14.2 4 , 2.83 6 - Phân số phải tìm đó là: 5.",
+            "prompt": "Ta có: 14.2 4 , 2.83 6 - Phân số phải tìm đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -56785,7 +56581,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q120",
             "type": "single_choice",
-            "prompt": "A. 236 - Chữ số hang đơn vị là số chia hết cho cả 2 và 3 nên phải là: 6. - Chữ số hang trăm là: 6 : 3 =2. - Chữ số hàng chục là: 6:2=3. - Số phải tìm đó là: 236.",
+            "prompt": "A. 236 - Chữ số hang đơn vị là số chia hết cho cả 2 và 3 nên phải là: 6. - Chữ số hang trăm là: 6 : 3 =2. - Chữ số hàng chục là: 6:2=3. - Số phải tìm đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -57159,7 +56955,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q131",
             "type": "single_choice",
-            "prompt": "S=(1+3+5+....+99+101):51. - Từ 1 đến 101 có số các số lẻ là: (101—1):2+1=51 (số). -S=(1+101)x51:2:51=102:2=51. 160.",
+            "prompt": "S=(1+3+5+....+99+101):51. - Từ 1 đến 101 có số các số lẻ là: (101—1):2+1=51 (số). -S=(1+101)x51:2:51=102:2=51.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -57533,7 +57329,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q142",
             "type": "single_choice",
-            "prompt": "Phân số chỉ 18m dây đó là: Q23 = x (cuộn dây). - Cuộn dây đó dài là: 18 : 9 x 28 = 56 (m). 161.",
+            "prompt": "Phân số chỉ 18m dây đó là: Q23 = x (cuộn dây). - Cuộn dây đó dài là: 18 : 9 x 28 = 56 (m).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -58315,7 +58111,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q165",
             "type": "single_choice",
-            "prompt": "Nếu gấp mỗi số lên 6 lần thì tổng là: 64 x 6 = 384. - Số thứ hai là: (384 — 356) : (6—4)= 14. - Số thứ nhất là: 64 - 14 = 50. - Hiệu 2 số đó là: 50 — 14=36. 8168.",
+            "prompt": "Nếu gấp mỗi số lên 6 lần thì tổng là: 64 x 6 = 384. - Số thứ hai là: (384 — 356) : (6—4)= 14. - Số thứ nhất là: 64 - 14 = 50. - Hiệu 2 số đó là: 50 — 14=36.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -58655,7 +58451,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q175",
             "type": "single_choice",
-            "prompt": "C. chữ số 6 4x3x2x5x6+42:7=720+6=726. 164.",
+            "prompt": "C. chữ số 6 4x3x2x5x6+42:7=720+6=726.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -59029,7 +58825,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q186",
             "type": "single_choice",
-            "prompt": "Số đó là: 1260.",
+            "prompt": "Số đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -59097,7 +58893,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q188",
             "type": "single_choice",
-            "prompt": "Tổng của 2 chữ số đó là: 4 x 2=8. - Chữ số hang đơn vị la: 8:(1+3)=2. - Chữ số hàng chục là: 2 x 3 =6. - Số đó là: 62.",
+            "prompt": "Tổng của 2 chữ số đó là: 4 x 2=8. - Chữ số hang đơn vị la: 8:(1+3)=2. - Chữ số hàng chục là: 2 x 3 =6. - Số đó là.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -59131,7 +58927,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q189",
             "type": "single_choice",
-            "prompt": "Chữ số hàng chục bằng trung bình cộng 3 chữ số và bằng 3. - Chữ số hàng trăm 1a: 3 - 1 =2. ; - Chữ số hang đơn vị là: 3 +1=4. - Số đó là: 234.",
+            "prompt": "Chữ số hàng chục bằng trung bình cộng 3 chữ số và bằng 3. - Chữ số hàng trăm 1a: 3 - 1 =2. ; - Chữ số hang đơn vị là: 3 +1=4. - Số đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -59165,7 +58961,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q190",
             "type": "single_choice",
-            "prompt": "Số đó là: 9810. 165.",
+            "prompt": "Số đó là: 9810.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -59505,7 +59301,7 @@
           {
             "id": "violympic-exam-math-g4-v09-q200",
             "type": "single_choice",
-            "prompt": "Tuổi em trước đây 4 năm 1a: 8 : (3— 1) = 4 (tuổi). - Tuổi em hiện nay là: 4 + 4 = 8 (tuổi). - Tuổi em khi tuổi anh gấp rưỡi tuổi em là: 8:(3-2)x2=16 (tuổi). - Từ nay đến khi tuổi anh gấp rưỡi tuổi em là: 16 — 8 = 8 (năm). 166.",
+            "prompt": "Tuổi em trước đây 4 năm 1a: 8 : (3— 1) = 4 (tuổi). - Tuổi em hiện nay là: 4 + 4 = 8 (tuổi). - Tuổi em khi tuổi anh gấp rưỡi tuổi em là: 8:(3-2)x2=16 (tuổi). - Từ nay đến khi tuổi anh gấp rưỡi tuổi em là: 16 — 8 = 8 (năm).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -60410,7 +60206,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q025",
             "type": "single_choice",
-            "prompt": "Cho phân số a Hãy tìm một số tự nhiên sao cho đem tử số cộng với số đó và mẫu số của phân số đã cho trừ đi số đó ta được phân số mới bằng phân số 2 7 Trả lời: Số tự nhiên đó là: .............. 170.",
+            "prompt": "Cho phân số a Hãy tìm một số tự nhiên sao cho đem tử số cộng với số đó và mẫu số của phân số đã cho trừ đi số đó ta được phân số mới bằng phân số 2 7 Trả lời: Số tự nhiên đó là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -60852,7 +60648,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q038",
             "type": "single_choice",
-            "prompt": "Khi Mai 8 tuổi thì mẹ Mai 36 tuổi. Tính tuổi của Mai và tuổi của mẹ Mai hiện nay, biết tong sô tuổi của hai mẹ con năm ngoái là 48 tuổi. Trả lời: Hiện nay, Mai ........... tuổi và mẹ Mai ......... tuổi. 171.",
+            "prompt": "Khi Mai 8 tuổi thì mẹ Mai 36 tuổi. Tính tuổi của Mai và tuổi của mẹ Mai hiện nay, biết tong sô tuổi của hai mẹ con năm ngoái là 48 tuổi. Trả lời: Hiện nay, Mai ........... tuổi và mẹ Mai ......... tuổi.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -61328,7 +61124,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q052",
             "type": "single_choice",
-            "prompt": "Một người bán 1 tam vải, lần thứ nhất bán - tắm vải, lần thứ hai bán : tấm vải còn lại và còn lại 245m. Tam vải đó dài ....... m. 172.",
+            "prompt": "Một người bán 1 tam vải, lần thứ nhất bán - tắm vải, lần thứ hai bán : tấm vải còn lại và còn lại 245m. Tam vải đó dài ....... m.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -61396,7 +61192,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q054",
             "type": "single_choice",
-            "prompt": "1 của 1 tấn .......... 1 của 1 tấn. 4 5 5 4 :",
+            "prompt": "1 của 1 tấn .......... 1 của 1 tấn. 4 5 5 4.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -62348,7 +62144,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q082",
             "type": "single_choice",
-            "prompt": "Nếu day và chiều cao của một hình bình hành cùng tăng lên 3 lần thì diện tích hình bình hành đó tăng lên mấy lằn? Trả lời: Diện tích hình bình hành đó tăng lên ............ lần. 174.",
+            "prompt": "Nếu day và chiều cao của một hình bình hành cùng tăng lên 3 lần thì diện tích hình bình hành đó tăng lên mấy lằn? Trả lời: Diện tích hình bình hành đó tăng lên ............ lần.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -62450,7 +62246,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q085",
             "type": "single_choice",
-            "prompt": "Tìm 2 số chin có tổng bằng 900 biết giữa chúng có 49 số chin khác hai số đó. : Trả lời: Số lớn à............; Số bé là.",
+            "prompt": "Tìm 2 số chẵn có tổng bằng 900 biết giữa chúng có 49 số chẵn khác hai số đó. : Trả lời: Số lớn à............; Số bé là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -63350,7 +63146,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q111",
             "type": "single_choice",
-            "prompt": "D. 1750m2 - Chiều rộng khu vườn là: 48 : 8 x 5=30 (m). - Nếu tăng chiều dài 2m thì chiều dài là: 48 + 2 = 50 (m). - Nếu tăng chiều rộng 5m thì chiều rộng là: 30 + 5 =35 (m). - Khi đó diện tích khu vườn là: 35 x 50 = 1750 (m2). 178.",
+            "prompt": "D. 1750m2 - Chiều rộng khu vườn là: 48 : 8 x 5=30 (m). - Nếu tăng chiều dài 2m thì chiều dài là: 48 + 2 = 50 (m). - Nếu tăng chiều rộng 5m thì chiều rộng là: 30 + 5 =35 (m). - Khi đó diện tích khu vườn là: 35 x 50 = 1750 (m2).",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -63690,7 +63486,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q121",
             "type": "single_choice",
-            "prompt": "Tổng của mẫu số và tử số không đổi là: 19 + 89 = 108. - Tử số của phân số mới là: 108 :(2+7)x2=24. - Số tự nhiên cần tìm là: 24— 19 =5. : 179.",
+            "prompt": "Tổng của mẫu số và tử số không đổi là: 19 + 89 = 108. - Tử số của phân số mới là: 108 :(2+7)x2=24. - Số tự nhiên cần tìm là: 24— 19 =5.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -64336,7 +64132,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q140",
             "type": "single_choice",
-            "prompt": "Số chia hết cho 90 thì chia hết cho 10 nên y = 0. - Số chia hết cho 90 thi chia hết cho 9 nên x = 4, - Số đó là: 4140. 181.",
+            "prompt": "Số chia hết cho 90 thì chia hết cho 10 nên y = 0. - Số chia hết cho 90 thi chia hết cho 9 nên x = 4, - Số đó là: 4140.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -64778,7 +64574,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q153",
             "type": "single_choice",
-            "prompt": "Hiệu hai số đó 1a: 9x2+1=19. - Số lớn là: (2013 + 19):2=1016. - Số bé là: 2013 — 1016 = 997. . 182.",
+            "prompt": "Hiệu hai số đó 1a: 9x2+1=19. - Số lớn là: (2013 + 19):2=1016. - Số bé là: 2013 — 1016 = 997.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -65050,7 +64846,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q161",
             "type": "single_choice",
-            "prompt": "Mẫu số hơn tử số là: 8 x 2= 16. - Tử số của phân số đó là: (186 — 16) :2=85. - Mẫu số của phân số đó là: 85 + 16=101. - Phân số đó là: 8. 101.",
+            "prompt": "Mẫu số hơn tử số là: 8 x 2= 16. - Tử số của phân số đó là: (186 — 16) :2=85. - Mẫu số của phân số đó là: 85 + 16=101. - Phân số đó là: 8.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -65084,7 +64880,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q162",
             "type": "single_choice",
-            "prompt": "Ta có: 120=1x2x3x4x5=8x3x5. - Số phải tìm là: 358. 183 :",
+            "prompt": "Ta có: 120=1x2x3x4x5=8x3x5. - Số phải tìm là: 358.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -65220,7 +65016,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q166",
             "type": "single_choice",
-            "prompt": "Số bé nhất cần tìm là: 1260.",
+            "prompt": "Số bé nhất cần tìm là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -65390,7 +65186,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q171",
             "type": "single_choice",
-            "prompt": "Ta có: cba—abc =c x 100+bx10+a—(ax100+b x 10+c) =cx100+bx10+a-ax100-bx10-c =cx99-ax99=(c-a)x 99 =4x 99 =396. 184.",
+            "prompt": "Ta có: cba—abc =c x 100+bx10+a—(ax100+b x 10+c) =cx100+bx10+a-ax100-bx10-c =cx99-ax99=(c-a)x 99 =4x 99 =396.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -65493,8 +65289,8 @@
             "id": "violympic-exam-math-g4-v10-q174",
             "type": "single_choice",
             "prompt": "Tổng số tuổi của 2 con hiện nay là: 12 + 7 = 19 (tuổi). - Hiện nay mẹ hơn 2 con số tuổi là: 40 — 19 = 21 (tuổi). - Sau 1 nam, thi mẹ tăng thêm 1tuổi và 2 con tăng thêm 2 tuổi. Do đó hiệu sô giữa tuôi mẹ và tông số tuổi của 2 con giảm đi số tuổi là: 2-1=1 (tuổi). - Số năm nữa để tổng số tuổi của 2 con bằng tuổi mẹ là: - Vậy sau 21 năm nữa thì tuổi mẹ bằng tổng số tuổi của hai con.",
-            "correctAnswer": "b",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 1 + 2 = 3 (tuổi). Đáp số: 3 tuổi.",
             "topic": "Toán Violympic Lớp 4",
             "difficulty": "challenge",
             "points": 10,
@@ -65507,19 +65303,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "11"
+                "label": "3 tuổi"
               },
               {
                 "id": "b",
-                "label": "10"
+                "label": "0 tuổi"
               },
               {
                 "id": "c",
-                "label": "9"
+                "label": "5 tuổi"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "-7 tuổi"
               }
             ]
           },
@@ -65560,7 +65356,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q176",
             "type": "single_choice",
-            "prompt": "Số lớn hơn số bé 2000 đơn vị. - Số bé là: (2386 — 2000) : 2 = 193. - Số lớn là: 2193.",
+            "prompt": "Số lớn hơn số bé 2000 đơn vị. - Số bé là: (2386 — 2000) : 2 = 193. - Số lớn là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -65594,7 +65390,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q177",
             "type": "single_choice",
-            "prompt": "Ta có: CỐ x3 81. 105 5 135 : - Vậy:2=81. 185.",
+            "prompt": "Ta có: CỐ x3 81. 105 5 135 : - Vậy:2=81.",
             "correctAnswer": "d",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -65934,7 +65730,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q187",
             "type": "single_choice",
-            "prompt": "Số lớn gấp số bé là: 5 — 1 =4 (lần). - Số lớn là: 1983 : (4-1) x 4=2644. 186.",
+            "prompt": "Số lớn gấp số bé là: 5 — 1 =4 (lần). - Số lớn là: 1983 : (4-1) x 4=2644.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -66002,7 +65798,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q189",
             "type": "single_choice",
-            "prompt": "Ta có: 180=1x2x3x5x6. - Số lớn nhất đó là: 65321.",
+            "prompt": "Ta có: 180=1x2x3x5x6. - Số lớn nhất đó là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -66206,7 +66002,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q195",
             "type": "single_choice",
-            "prompt": "Ta có sơ đồ: -Tuổiemhiệnnay: Ä—ƯƯờợvợơvng } 30tudi - Tuôi anh hiện nay: R----- + - Tuổi em trước đây: H+ - Tuổi anh trước đây: Ä—— 1¬ - Từ sơ dé ta có: Tuổi em hiện nay = 2lần tuổi em trước đây (khi anh gấp đôi em). Tuổi anh hiện nay = 3lần tuổi em trước đây. - Tuổi em trước đây là: 30 : (2 + 3) = 6 (tuổi). - Tuổi em hiện nay là: 6 x 2 = 12 (tuổi). 187.",
+            "prompt": "Ta có sơ đồ: -Tuổiemhiệnnay: Ä—ƯƯờợvợơvng } 30tudi - Tuôi anh hiện nay: R----- + - Tuổi em trước đây: H+ - Tuổi anh trước đây: Ä—— 1¬ - Từ sơ dé ta có: Tuổi em hiện nay = 2lần tuổi em trước đây (khi anh gấp đôi em). Tuổi anh hiện nay = 3lần tuổi em trước đây. - Tuổi em trước đây là: 30 : (2 + 3) = 6 (tuổi). - Tuổi em hiện nay là: 6 x 2 = 12 (tuổi).",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",
@@ -66410,7 +66206,7 @@
           {
             "id": "violympic-exam-math-g4-v10-q201",
             "type": "single_choice",
-            "prompt": "32 tuổi. - Tuổi bố hiện nay là: 20 : (8 — 3) x 8=32 (tuổi). : 188.",
+            "prompt": "32 tuổi. - Tuổi bố hiện nay là: 20 : (8 — 3) x 8=32 (tuổi).",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 4 - TS.Phạm Văn Công",
             "topic": "Toán Violympic Lớp 4",

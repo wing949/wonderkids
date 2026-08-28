@@ -23,7 +23,7 @@
             "type": "single_choice",
             "prompt": "Số lớn nhất có 2 chữ số khác nhau là.",
             "correctAnswer": "a",
-            "explanation": "Số lớn nhất có 2 chữ số khác nhau là 98.",
+            "explanation": "Số lớn nhất có 2 chữ số khác nhau là 98. Đáp số: 98.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -40,24 +40,24 @@
               },
               {
                 "id": "b",
-                "label": "98"
+                "label": "99"
               },
               {
                 "id": "c",
-                "label": "98"
+                "label": "89"
               },
               {
                 "id": "d",
-                "label": "98"
+                "label": "97"
               }
             ]
           },
           {
             "id": "violympic-exam-math-g2-v01-q002",
             "type": "single_choice",
-            "prompt": "Số lớn nhất có 2 chữ số mà tổng các chữ số bằng 101à.",
-            "correctAnswer": "c",
-            "explanation": "Số đó phải có hàng chục bằng 9. Chữ số hàng don vị la: 10-9 = 1. - Số đó là: 91.",
+            "prompt": "Số lớn nhất có 2 chữ số mà tổng các chữ số bằng 10 là.",
+            "correctAnswer": "a",
+            "explanation": "Để số lớn nhất thì chữ số hàng chục lớn nhất là 9. Chữ số hàng đơn vị là: 10 - 9 = 1. Số đó là 91.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -70,19 +70,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Số đó phải có hàng chục bằng 11"
+                "label": "91"
               },
               {
                 "id": "b",
-                "label": "Số đó phải có hàng chục bằng 10"
+                "label": "82"
               },
               {
                 "id": "c",
-                "label": "Số đó phải có hàng chục bằng 9"
+                "label": "73"
               },
               {
                 "id": "d",
-                "label": "Số đó phải có hàng chục bằng 8"
+                "label": "19"
               }
             ]
           },
@@ -91,7 +91,7 @@
             "type": "single_choice",
             "prompt": "Số bé nhất có 2 chữ số có hiệu các chữ số bằng 2 là.",
             "correctAnswer": "a",
-            "explanation": "Số đó phải có hàng chục bằng 1. Chữ số hàng don vị là: 1 +2 =3. - Số đó là: 13.",
+            "explanation": "Để số bé nhất thì chữ số hàng chục là 1. Chữ số hàng đơn vị là: 1 + 2 = 3. Số đó là 13.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -104,19 +104,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Số đó phải có hàng chục bằng 1"
+                "label": "13"
               },
               {
                 "id": "b",
-                "label": "Số đó phải có hàng chục bằng 3"
+                "label": "20"
               },
               {
                 "id": "c",
-                "label": "Số đó phải có hàng chục bằng 6"
+                "label": "31"
               },
               {
                 "id": "d",
-                "label": "Số đó phải có hàng chục bằng 2"
+                "label": "11"
               }
             ]
           },
@@ -157,7 +157,7 @@
           {
             "id": "violympic-exam-math-g2-v01-q005",
             "type": "single_choice",
-            "prompt": "Nhà bác An nuôi 32 con gà và 45 con vịt. - Tổng số cả gà và vịt nhà bác An đã nuôi tat cả 1a ............ con. . 5.",
+            "prompt": "Nhà bác An nuôi 32 con gà và 45 con vịt. - Tổng số cả gà và vịt nhà bác An đã nuôi tất cả 1a ............ con.",
             "correctAnswer": "a",
             "explanation": "Tổng số cả gà và vịt nhà bác An nuôi là: 32 + 45 = 77 (con).",
             "topic": "Toán Violympic Lớp 2",
@@ -429,7 +429,7 @@
           {
             "id": "violympic-exam-math-g2-v01-q013",
             "type": "single_choice",
-            "prompt": "Trong sân có 29 con gà mái và 16 con gà trống. - Trong sân có tat cả số con gà là............ con.",
+            "prompt": "Trong sân có 29 con gà mái và 16 con gà trống. - Trong sân có tất cả số con gà là............ con.",
             "correctAnswer": "d",
             "explanation": "Trong sân có tất cả số con gà là: 29 + 16 = 45 (con).",
             "topic": "Toán Violympic Lớp 2",
@@ -497,7 +497,7 @@
           {
             "id": "violympic-exam-math-g2-v01-q015",
             "type": "single_choice",
-            "prompt": "Trong hình vẽ sau có tất cả ........... đoạn thẳng. ^^”. 7.",
+            "prompt": "Trong hình vẽ sau có tất cả ........... đoạn thẳng. ^^”.",
             "correctAnswer": "c",
             "explanation": "Trong hình vẽ có 3 đoạn thang: AB, BC va AC. Cau 16. Ca hai bạn cân nặng là: 26 + 24 = 50kg.",
             "topic": "Toán Violympic Lớp 2",
@@ -803,7 +803,7 @@
           {
             "id": "violympic-exam-math-g2-v01-q024",
             "type": "single_choice",
-            "prompt": "Mai có 28 con tem. Biết Lan có nhiều hơn Mai 14 con tem. Hỏi Lan có bao nhiêu con tem? Trả lời.................... 6.",
+            "prompt": "Mai có 28 con tem. Biết Lan có nhiều hơn Mai 14 con tem. Hỏi Lan có bao nhiêu con tem?",
             "correctAnswer": "b",
             "explanation": "Số con tem của Lan có là: 28 + 14 = 42 (con tem). Tra lời: 42 con tem. ¡",
             "topic": "Toán Violympic Lớp 2",
@@ -974,8 +974,8 @@
             "id": "violympic-exam-math-g2-v01-q029",
             "type": "single_choice",
             "prompt": "Khối 2 của Trường Tiểu học Kim Đồng có 49 học sinh nam va.47 học sinh nữ. Hỏi khối 2 của Trường Tiểu học Kim Đồng có tất cả bao nhiêu học sinh?",
-            "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
+            "correctAnswer": "a",
+            "explanation": "Lớp có tất cả số học sinh là: 49 + 47 = 96 (học sinh). Đáp số: 96 học sinh.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -988,19 +988,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "2"
+                "label": "96 học sinh"
               },
               {
                 "id": "b",
-                "label": "3"
+                "label": "94 học sinh"
               },
               {
                 "id": "c",
-                "label": "1"
+                "label": "97 học sinh"
               },
               {
                 "id": "d",
-                "label": "6"
+                "label": "92 học sinh"
               }
             ]
           },
@@ -2061,7 +2061,7 @@
           {
             "id": "violympic-exam-math-g2-v01-q061",
             "type": "single_choice",
-            "prompt": "Số các số chin có 2 chữ số là :",
+            "prompt": "Số các số chẵn có 2 chữ số là.",
             "correctAnswer": "b",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: b",
             "topic": "Toán Violympic Lớp 2",
@@ -2095,7 +2095,7 @@
           {
             "id": "violympic-exam-math-g2-v01-q062",
             "type": "single_choice",
-            "prompt": "Số các số lẻ có 2 chữ số là :",
+            "prompt": "Số các số lẻ có 2 chữ số là.",
             "correctAnswer": "d",
             "explanation": "D. 45. (Có 90 số có 2 chữ số, gồm 45 số chẵn và 45 số lẻ)",
             "topic": "Toán Violympic Lớp 2",
@@ -2606,8 +2606,8 @@
             "id": "violympic-exam-math-g2-v01-q077",
             "type": "single_choice",
             "prompt": "Biết năm nay anh 7 tuổi và em 2 tuổi. Vậy sau 2 năm nữa thi tổng số tuổi của hai anh em là:",
-            "correctAnswer": "b",
-            "explanation": "B. 13 tuổi (7+ 2=9;9+24+2=13)",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 7 + 2 = 9 (tuổi). Đáp số: 9 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -2620,19 +2620,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "lltuố"
+                "label": "9 tuổi"
               },
               {
                 "id": "b",
-                "label": "l3tuổi"
+                "label": "6 tuổi"
               },
               {
                 "id": "c",
-                "label": "14 tuổi"
+                "label": "11 tuổi"
               },
               {
                 "id": "d",
-                "label": "15 tuổi"
+                "label": "-1 tuổi"
               }
             ]
           },
@@ -3412,7 +3412,7 @@
             "type": "single_choice",
             "prompt": "Lớp 2A có 18 học sinh nam và 16 học sinh nữ. Lớp 2A có tất cả bao nhiêu học sinh?",
             "correctAnswer": "a",
-            "explanation": "B. 93 (67 + 26 = 93)",
+            "explanation": "Lớp có tất cả số học sinh là: 18 + 16 = 34 (học sinh). Đáp số: 34 học sinh.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -3425,28 +3425,28 @@
             "options": [
               {
                 "id": "a",
-                "label": "93"
+                "label": "34 học sinh"
               },
               {
                 "id": "b",
-                "label": "88"
+                "label": "32 học sinh"
               },
               {
                 "id": "c",
-                "label": "91"
+                "label": "35 học sinh"
               },
               {
                 "id": "d",
-                "label": "101"
+                "label": "30 học sinh"
               }
             ]
           },
           {
             "id": "violympic-exam-math-g2-v02-q002",
             "type": "single_choice",
-            "prompt": "Một đàn gà có 56 con gà mái và 29 con gà trống. Hỏi dan gà đó có tất cả bao nhiêu con?",
+            "prompt": "Một đàn gà có 56 con gà mái và 29 con gà trống. Hỏi đàn gà đó có tất cả bao nhiêu con?",
             "correctAnswer": "a",
-            "explanation": "C. 43 (100 — 57 =43)",
+            "explanation": "Đàn gà có tất cả số con là: 56 + 29 = 85 (con). Đáp số: 85 con.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -3459,19 +3459,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "43"
+                "label": "85 con"
               },
               {
                 "id": "b",
-                "label": "44"
+                "label": "75 con"
               },
               {
                 "id": "c",
-                "label": "41"
+                "label": "86 con"
               },
               {
                 "id": "d",
-                "label": "45"
+                "label": "95 con"
               }
             ]
           },
@@ -3480,7 +3480,7 @@
             "type": "single_choice",
             "prompt": "Lớp 2A có 18 bạn là học sinh giỏi, lớp 2B có 15 bạn là học sinh giỏi. Hỏi cả hai lớp có tất cả bao nhiêu bạn là học sinh giỏi?",
             "correctAnswer": "a",
-            "explanation": "D. 48 + 6 (48 + 6 = 54; 54 < 56)",
+            "explanation": "Cả hai lớp có số bạn học sinh giỏi là: 18 + 15 = 33 (bạn). Đáp số: 33 bạn.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -3493,28 +3493,28 @@
             "options": [
               {
                 "id": "a",
-                "label": "48"
+                "label": "33 bạn"
               },
               {
                 "id": "b",
-                "label": "49"
+                "label": "31 bạn"
               },
               {
                 "id": "c",
-                "label": "46"
+                "label": "35 bạn"
               },
               {
                 "id": "d",
-                "label": "50"
+                "label": "30 bạn"
               }
             ]
           },
           {
             "id": "violympic-exam-math-g2-v02-q004",
             "type": "single_choice",
-            "prompt": "Hiện nay bố An 45 tuổi và mẹ An 38 tuổi. Tính tổng số tuổi của bồ An và mẹ An hiện nay. : TH LOG?",
+            "prompt": "Hiện nay bố An 45 tuổi và mẹ An 38 tuổi. Tính tổng số tuổi của bố An và mẹ An hiện nay.",
             "correctAnswer": "a",
-            "explanation": "C. 4 hình (3 hình đơn, 1 hình đôi)",
+            "explanation": "Tổng số tuổi là: 45 + 38 = 83 (tuổi). Đáp số: 83 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -3527,19 +3527,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "4"
+                "label": "83 tuổi"
               },
               {
                 "id": "b",
-                "label": "5"
+                "label": "80 tuổi"
               },
               {
                 "id": "c",
-                "label": "2"
+                "label": "85 tuổi"
               },
               {
                 "id": "d",
-                "label": "6"
+                "label": "73 tuổi"
               }
             ]
           },
@@ -3548,7 +3548,7 @@
             "type": "single_choice",
             "prompt": "Hiện nay bố Huy 43 tuổi và Huy 9 tuổi. Tinh tổng số tuổi của cả hai bố con Huy hiện nay.",
             "correctAnswer": "a",
-            "explanation": "A.71 (86 — 6-9 = 80-9 =71)",
+            "explanation": "Tổng số tuổi là: 43 + 9 = 52 (tuổi). Đáp số: 52 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -3561,28 +3561,28 @@
             "options": [
               {
                 "id": "a",
-                "label": "71"
+                "label": "52 tuổi"
               },
               {
                 "id": "b",
-                "label": "66"
+                "label": "49 tuổi"
               },
               {
                 "id": "c",
-                "label": "69"
+                "label": "54 tuổi"
               },
               {
                 "id": "d",
-                "label": "79"
+                "label": "42 tuổi"
               }
             ]
           },
           {
             "id": "violympic-exam-math-g2-v02-q006",
             "type": "single_choice",
-            "prompt": "Biết bạn Việt cân nặng 28kg và bạn Nam cân nặng 34kg. Tính tổng khối lượng của cả hai bạn. Trả lời. ...................... 12.",
+            "prompt": "Biết bạn Việt cân nặng 28kg và bạn Nam cân nặng 34kg. Tính tổng khối lượng của cả hai bạn.",
             "correctAnswer": "a",
-            "explanation": "B. 29kg (56 — 27 = 29)",
+            "explanation": "Tổng khối lượng của cả hai bạn là: 28 + 34 = 62 (kg). Đáp số: 62 kg.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -3595,26 +3595,26 @@
             "options": [
               {
                 "id": "a",
-                "label": "29"
+                "label": "62 kg"
               },
               {
                 "id": "b",
-                "label": "30"
+                "label": "60 kg"
               },
               {
                 "id": "c",
-                "label": "27"
+                "label": "64 kg"
               },
               {
                 "id": "d",
-                "label": "31"
+                "label": "58 kg"
               }
             ]
           },
           {
             "id": "violympic-exam-math-g2-v02-q007",
             "type": "single_choice",
-            "prompt": "Hiện nay Mai 8 tuổi. Biết tuổi của Mai it hon tuổi của me là28 tudi, Tính số tuổi của mẹ Mai hiện nay.",
+            "prompt": "Hiện nay Mai 8 tuổi. Biết tuổi của Mai ít hơn tuổi của me là28 tudi, Tính số tuổi của mẹ Mai hiện nay.",
             "correctAnswer": "c",
             "explanation": "13 + 29 =28 + 14(13 +29 = 42; 28 + 14=42).",
             "topic": "Toán Violympic Lớp 2",
@@ -4193,8 +4193,8 @@
             "id": "violympic-exam-math-g2-v02-q024",
             "type": "single_choice",
             "prompt": "Số lớn nhất có 2 chữ số khác nhau là:",
-            "correctAnswer": "c",
-            "explanation": "C. 98.",
+            "correctAnswer": "a",
+            "explanation": "Số lớn nhất có 2 chữ số khác nhau là 98. Đáp số: 98.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -4207,19 +4207,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "99"
-              },
-              {
-                "id": "b",
-                "label": "89"
-              },
-              {
-                "id": "c",
                 "label": "98"
               },
               {
+                "id": "b",
+                "label": "99"
+              },
+              {
+                "id": "c",
+                "label": "89"
+              },
+              {
                 "id": "d",
-                "label": "100"
+                "label": "97"
               }
             ]
           },
@@ -4260,7 +4260,7 @@
           {
             "id": "violympic-exam-math-g2-v02-q026",
             "type": "single_choice",
-            "prompt": "Hiệu của số tròn chục lớn nhất có 2 chữ số với số chin bé nhất có 2 chữ số giống nhau là.",
+            "prompt": "Hiệu của số tròn chục lớn nhất có 2 chữ số với số chẵn bé nhất có 2 chữ số giống nhau là.",
             "correctAnswer": "d",
             "explanation": "Hiệu của số tròn chục lớn nhất có 2 chữ số với số chẵn bé nhất có 2 chữ số giống nhau là 68 (90 — 22).",
             "topic": "Toán Violympic Lớp 2",
@@ -4363,8 +4363,8 @@
             "id": "violympic-exam-math-g2-v02-q029",
             "type": "single_choice",
             "prompt": "Năm nay anh Huy 7 tuổi và em Hoàng 3 tuổi. - Năm ngoái, tổng số tuổi của 2 anh em là................ Câu 18, Năm nay anh Huy 7 tuổi và em Hoàng 3 tuổi. : - Sang năm, tổng số tuổi của 2 anh em là.",
-            "correctAnswer": "d",
-            "explanation": "Năm ngoái, tổng số tuổi của 2 anh em là 8 tuổi (7+3-1-1=3).",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 7 + 3 = 10 (tuổi). Đáp số: 10 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -4377,19 +4377,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "3"
+                "label": "10 tuổi"
               },
               {
                 "id": "b",
-                "label": "3"
+                "label": "7 tuổi"
               },
               {
                 "id": "c",
-                "label": "3"
+                "label": "12 tuổi"
               },
               {
                 "id": "d",
-                "label": "3"
+                "label": "0 tuổi"
               }
             ]
           },
@@ -4397,8 +4397,8 @@
             "id": "violympic-exam-math-g2-v02-q030",
             "type": "single_choice",
             "prompt": "Năm nay anh Huy 7 tuổi và em Hoàng 3 tuổi. - Khi anh Huy .......... tuổi thì tổng số tuổi của 2 anh em là 16 tuổi.",
-            "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 7 + 3 = 10 (tuổi). Đáp số: 10 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -4411,19 +4411,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "2"
+                "label": "10 tuổi"
               },
               {
                 "id": "b",
-                "label": "6"
+                "label": "7 tuổi"
               },
               {
                 "id": "c",
-                "label": "1"
+                "label": "12 tuổi"
               },
               {
                 "id": "d",
-                "label": "3"
+                "label": "0 tuổi"
               }
             ]
           },
@@ -4770,7 +4770,7 @@
           {
             "id": "violympic-exam-math-g2-v02-q041",
             "type": "single_choice",
-            "prompt": "Trong hình vẽ có bao nhiêu hình tứ giác: 5.",
+            "prompt": "Trong hình vẽ có bao nhiêu hình tứ giác.",
             "correctAnswer": "b",
             "explanation": "B. 3 hình (2 hình ghép bởi 2 tam giác, 1 hình ghép bởi 3 tam giác)",
             "topic": "Toán Violympic Lớp 2",
@@ -5008,7 +5008,7 @@
           {
             "id": "violympic-exam-math-g2-v02-q048",
             "type": "single_choice",
-            "prompt": "Lớp 3C có 6 bạn học sinh giỏi và lớp 3D có 7 bạn học sinh giỏi. - Nếu mỗi lớp có thêm 2 bạn học giỏi thi ca hai lớp có ....... học sinh giỏi. 15.",
+            "prompt": "Lớp 3C có 6 bạn học sinh giỏi và lớp 3D có 7 bạn học sinh giỏi. - Nếu mỗi lớp có thêm 2 bạn học giỏi thi ca hai lớp có ....... học sinh giỏi.",
             "correctAnswer": "d",
             "explanation": "Cả hai lớp có 17 hoc sinh giỏi. (6+ 7+2+2=17)",
             "topic": "Toán Violympic Lớp 2",
@@ -5144,7 +5144,7 @@
           {
             "id": "violympic-exam-math-g2-v02-q052",
             "type": "single_choice",
-            "prompt": "Phép tính nào có kết quả lớn hơn kết quả của phép tính 28 : 4:",
+            "prompt": "Phép tính nào có kết quả lớn hơn kết quả của phép tính 28.",
             "correctAnswer": "d",
             "explanation": "D. 59 —31—21 (28 :4=7; 59—30—20 = 9)",
             "topic": "Toán Violympic Lớp 2",
@@ -5484,7 +5484,7 @@
           {
             "id": "violympic-exam-math-g2-v02-q062",
             "type": "single_choice",
-            "prompt": "Hưng có 12 viên bi, Hà có 18 viên bi, Thái có 14 viên bi. - Tổng số bi của cả ba bạn là...................... 16.",
+            "prompt": "Hưng có 12 viên bi, Hà có 18 viên bi, Thái có 14 viên bi. - Tổng số bi của cả ba bạn là.",
             "correctAnswer": "c",
             "explanation": "Tổng số bi của cả ba bạn là 44 viên. (12 + 18 + 14=44)",
             "topic": "Toán Violympic Lớp 2",
@@ -5519,8 +5519,8 @@
             "id": "violympic-exam-math-g2-v02-q063",
             "type": "single_choice",
             "prompt": "Năm nay Huy 8 tuổi và anh Giang 12 tuổi. - Tổng số tuổi hiện nay của hai anh em là.",
-            "correctAnswer": "b",
-            "explanation": "Tổng số tuổi hiện nay của hai anh em là 20 tuổi. (8 + 12 = 20)",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 8 + 12 = 20 (tuổi). Đáp số: 20 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -5533,19 +5533,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "19"
+                "label": "20 tuổi"
               },
               {
                 "id": "b",
-                "label": "20"
+                "label": "17 tuổi"
               },
               {
                 "id": "c",
-                "label": "21"
+                "label": "22 tuổi"
               },
               {
                 "id": "d",
-                "label": "22"
+                "label": "10 tuổi"
               }
             ]
           },
@@ -5553,8 +5553,8 @@
             "id": "violympic-exam-math-g2-v02-q064",
             "type": "single_choice",
             "prompt": "Năm nay Huy 8 tuổi và anh Giang 12 tuổi. - Trước đây 5 năm thì tổng số tuổi của hai anh em là.",
-            "correctAnswer": "d",
-            "explanation": "Tổng số tuổi của hai anh em là 10 tuổi. (8+12—5—-5=10).",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 8 + 12 = 20 (tuổi). Đáp số: 20 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -5567,19 +5567,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "9"
+                "label": "20 tuổi"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "17 tuổi"
               },
               {
                 "id": "c",
-                "label": "12"
+                "label": "22 tuổi"
               },
               {
                 "id": "d",
-                "label": "10"
+                "label": "10 tuổi"
               }
             ]
           },
@@ -5588,7 +5588,7 @@
             "type": "single_choice",
             "prompt": "Năm nay Huy 8 tuổi và anh Giang 12 tuổi. - Sau đây 5 năm thì tổng số tuổi của hai anh em là.",
             "correctAnswer": "a",
-            "explanation": "Tổng số tuổi của hai anh em là 30 tuổi. (8 + 12+ 5 +5 =30).",
+            "explanation": "Tổng số tuổi là: 8 + 12 = 20 (tuổi). Đáp số: 20 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -5601,19 +5601,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "30"
+                "label": "20 tuổi"
               },
               {
                 "id": "b",
-                "label": "31"
+                "label": "17 tuổi"
               },
               {
                 "id": "c",
-                "label": "29"
+                "label": "22 tuổi"
               },
               {
                 "id": "d",
-                "label": "32"
+                "label": "10 tuổi"
               }
             ]
           },
@@ -5621,8 +5621,8 @@
             "id": "violympic-exam-math-g2-v02-q066",
             "type": "single_choice",
             "prompt": "Năm nay Huy 8 tuổi và anh Giang 12 tuổi. - Sau đây ........... năm thì tổng số tuổi của hai anh em là 40 tuổi.",
-            "correctAnswer": "c",
-            "explanation": "Sau đây 10 năm (8 + 12 + 10 + 10 = 40)",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 8 + 12 = 20 (tuổi). Đáp số: 20 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -5635,19 +5635,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "40"
+                "label": "20 tuổi"
               },
               {
                 "id": "b",
-                "label": "40"
+                "label": "17 tuổi"
               },
               {
                 "id": "c",
-                "label": "40"
+                "label": "22 tuổi"
               },
               {
                 "id": "d",
-                "label": "40"
+                "label": "10 tuổi"
               }
             ]
           },
@@ -5792,7 +5792,7 @@
             "type": "single_choice",
             "prompt": "Nếu x + 16 =30 thì giá trị của x là:",
             "correctAnswer": "c",
-            "explanation": "C. 14 (14 + 16 = 30)",
+            "explanation": "Ta có: x = 30 - 16 = 14. Đáp số: 14.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -5805,11 +5805,11 @@
             "options": [
               {
                 "id": "a",
-                "label": "15"
+                "label": "46"
               },
               {
                 "id": "b",
-                "label": "16"
+                "label": "57"
               },
               {
                 "id": "c",
@@ -5817,7 +5817,7 @@
               },
               {
                 "id": "d",
-                "label": "18"
+                "label": "13"
               }
             ]
           },
@@ -5942,7 +5942,7 @@
           {
             "id": "violympic-exam-math-g2-v02-q075",
             "type": "single_choice",
-            "prompt": "Có 52 kg gạo tẻ và 18 kg gạo nếp. Có tat cả bao nhiêu ki-lô-gam gạo:",
+            "prompt": "Có 52 kg gạo tẻ và 18 kg gạo nếp. Có tất cả bao nhiêu ki-lô-gam gạo:",
             "correctAnswer": "d",
             "explanation": "D. 70kg (52 + 18 = 70)",
             "topic": "Toán Violympic Lớp 2",
@@ -6827,8 +6827,8 @@
             "id": "violympic-exam-math-g2-v02-q101",
             "type": "single_choice",
             "prompt": "Nếu x + 23 = 45 thì giá trị của x là:",
-            "correctAnswer": "b",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: b",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 45 - 23 = 22. Đáp số: 22.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -6841,11 +6841,11 @@
             "options": [
               {
                 "id": "a",
-                "label": "23"
+                "label": "68"
               },
               {
                 "id": "b",
-                "label": "24"
+                "label": "79"
               },
               {
                 "id": "c",
@@ -7067,7 +7067,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q001",
             "type": "single_choice",
-            "prompt": "Trong một phép cộng có 2 số hạng. Biết số hạng thứ nhất là 8. ' - Nếu số hạng thứ hai là số chin lớn nhất có 1 chữ số thì tổng là.",
+            "prompt": "Trong một phép cộng có 2 số hạng. Biết số hạng thứ nhất là 8. ' - Nếu số hạng thứ hai là số chẵn lớn nhất có 1 chữ số thì tổng là.",
             "correctAnswer": "d",
             "explanation": "Tinh: 32—18=14.",
             "topic": "Toán Violympic Lớp 2",
@@ -7237,7 +7237,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q006",
             "type": "single_choice",
-            "prompt": "Hoàng có hon Huy 12 quyền vở. Biết Huy có 18 quyền vở. - Vậy Hoàng có ......... quyền vở. ,.",
+            "prompt": "Hoàng có hon Huy 12 quyển vở. Biết Huy có 18 quyển vở. - Vậy Hoàng có ......... quyển vở. ,.",
             "correctAnswer": "d",
             "explanation": "Điền số thích hợp vào chỗ chấm: Ta có: 72 — 18 =54.",
             "topic": "Toán Violympic Lớp 2",
@@ -7271,7 +7271,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q007",
             "type": "single_choice",
-            "prompt": "Hoang hơn Huy 12 quyền vở. Biết Hoàng có 30 quyền vở. - Vậy Huy có ......... quyền vở.",
+            "prompt": "Hoang hơn Huy 12 quyển vở. Biết Hoàng có 30 quyển vở. - Vậy Huy có ......... quyển vở.",
             "correctAnswer": "c",
             "explanation": "Điền số thích hợp vào chỗ chấm: Ta có: 39 + 53 = 92.",
             "topic": "Toán Violympic Lớp 2",
@@ -8054,8 +8054,8 @@
             "id": "violympic-exam-math-g2-v03-q030",
             "type": "single_choice",
             "prompt": "Biết tổng của hai số bằng số lớn nhất có 2 chữ số khác nhau và số bé bằng 29. Tìm số lớn.",
-            "correctAnswer": "b",
-            "explanation": "Số lớn nhất có hai chữ số khác nhau là: 98. Số lớn là: 98 — 29 = 59. Trả lời: 59.",
+            "correctAnswer": "a",
+            "explanation": "Số lớn nhất có 2 chữ số khác nhau là 98. Đáp số: 98.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -8068,19 +8068,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Số lớn nhất có hai chữ số khác nhau là: 100"
+                "label": "98"
               },
               {
                 "id": "b",
-                "label": "Số lớn nhất có hai chữ số khác nhau là: 98"
+                "label": "99"
               },
               {
                 "id": "c",
-                "label": "Số lớn nhất có hai chữ số khác nhau là: 97"
+                "label": "89"
               },
               {
                 "id": "d",
-                "label": "Số lớn nhất có hai chữ số khác nhau là: 99"
+                "label": "97"
               }
             ]
           },
@@ -8223,7 +8223,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q035",
             "type": "single_choice",
-            "prompt": "Mai có 15 quyền vở. Mai viết hết 6 quyền. — Mai còn lại ......... quyền.",
+            "prompt": "Mai có 15 quyển vở. Mai viết hết 6 quyền. — Mai còn lại ......... quyền.",
             "correctAnswer": "b",
             "explanation": "Mai còn lại số quyền vở là: 15 — 6 = 9 (quyền).",
             "topic": "Toán Violympic Lớp 2",
@@ -8394,8 +8394,8 @@
             "id": "violympic-exam-math-g2-v03-q040",
             "type": "single_choice",
             "prompt": "Biết hiện nay Mai 7 tuổi và bố 40 tuổi. Tổng số tuổi của cả hai bố con Mai trước đây 2 năm là ......... tuổi.",
-            "correctAnswer": "c",
-            "explanation": "Tổng số tuổi của hai bố con trước đây là: (7 + 40)—2 x 2= 43 (tuổi).",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 7 + 40 = 47 (tuổi). Đáp số: 47 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -8408,19 +8408,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "43 tuổi"
+                "label": "47 tuổi"
               },
               {
                 "id": "b",
-                "label": "43 tuổi"
+                "label": "44 tuổi"
               },
               {
                 "id": "c",
-                "label": "43 tuổi"
+                "label": "49 tuổi"
               },
               {
                 "id": "d",
-                "label": "43 tuổi"
+                "label": "37 tuổi"
               }
             ]
           },
@@ -8665,7 +8665,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q048",
             "type": "single_choice",
-            "prompt": "Bình có 42 quyền vở. Minh có ít hơn Bình 15 quyền vở. Hỏi Minh có bao nhiêu quyền vở?",
+            "prompt": "Bình có 42 quyển vở. Minh có ít hơn Bình 15 quyển vở. Hỏi Minh có bao nhiêu quyển vở?",
             "correctAnswer": "b",
             "explanation": "Minh có số quyền vở là: 42 — 15 = 27 (quyền vở). Trả lời: 27 quyền vở.",
             "topic": "Toán Violympic Lớp 2",
@@ -8680,19 +8680,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "27 quyền vở"
+                "label": "27 quyển vở"
               },
               {
                 "id": "b",
-                "label": "27 quyền vở"
+                "label": "27 quyển vở"
               },
               {
                 "id": "c",
-                "label": "27 quyền vở"
+                "label": "27 quyển vở"
               },
               {
                 "id": "d",
-                "label": "27 quyền vở"
+                "label": "27 quyển vở"
               }
             ]
           },
@@ -9141,7 +9141,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q062",
             "type": "single_choice",
-            "prompt": "Nếu 75 — x =27 + 18 thi giá trị của x là:",
+            "prompt": "Nếu 75 — x =27 + 18 thì giá trị của x là:",
             "correctAnswer": "b",
             "explanation": "B. 30 (27 + 18 = 45; 75 — 45 = 30).",
             "topic": "Toán Violympic Lớp 2",
@@ -9701,7 +9701,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q078",
             "type": "single_choice",
-            "prompt": "Tổng của 45 và số chin lớn nhất bé hơn 56 là.",
+            "prompt": "Tổng của 45 và số chẵn lớn nhất bé hơn 56 là.",
             "correctAnswer": "b",
             "explanation": "Tổng của 45 và số chẵn lớn nhất bé hơn 56 là 99. (45 + 54).",
             "topic": "Toán Violympic Lớp 2",
@@ -10179,7 +10179,7 @@
             "type": "single_choice",
             "prompt": "Nếu x + 24 = 68 thì x =.",
             "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
+            "explanation": "Ta có: x = 68 - 24 = 44. Đáp số: 44.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -10192,19 +10192,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "2"
+                "label": "92"
               },
               {
                 "id": "b",
-                "label": "3"
+                "label": "103"
               },
               {
                 "id": "c",
-                "label": "1"
+                "label": "44"
               },
               {
                 "id": "d",
-                "label": "6"
+                "label": "43"
               }
             ]
           },
@@ -10383,7 +10383,7 @@
             "type": "single_choice",
             "prompt": "Nếu x +27 = 70 thì x=.",
             "correctAnswer": "c",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
+            "explanation": "Ta có: x = 70 - 27 = 43. Đáp số: 43.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -10396,19 +10396,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "2"
+                "label": "97"
               },
               {
                 "id": "b",
-                "label": "6"
+                "label": "108"
               },
               {
                 "id": "c",
-                "label": "1"
+                "label": "43"
               },
               {
                 "id": "d",
-                "label": "3"
+                "label": "42"
               }
             ]
           },
@@ -10416,8 +10416,8 @@
             "id": "violympic-exam-math-g2-v03-q099",
             "type": "single_choice",
             "prompt": "Nếu x + 36 = 80 thì x=.",
-            "correctAnswer": "b",
-            "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 80 - 36 = 44. Đáp số: 44.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -10430,19 +10430,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "2"
+                "label": "116"
               },
               {
                 "id": "b",
-                "label": "1"
+                "label": "127"
               },
               {
                 "id": "c",
-                "label": "3"
+                "label": "44"
               },
               {
                 "id": "d",
-                "label": "6"
+                "label": "43"
               }
             ]
           },
@@ -10721,7 +10721,7 @@
           {
             "id": "violympic-exam-math-g2-v03-q108",
             "type": "single_choice",
-            "prompt": "Số cộng với 18 được kết quả bằng 62 là................ 26.",
+            "prompt": "Số cộng với 18 được kết quả bằng 62 là.",
             "correctAnswer": "a",
             "explanation": "D. 70 (46 + 12 + 12=70)",
             "topic": "Toán Violympic Lớp 2",
@@ -10779,8 +10779,8 @@
             "id": "violympic-exam-math-g2-v04-q001",
             "type": "single_choice",
             "prompt": "Số trừ đi 45 được kết quả bằng 67 là:",
-            "correctAnswer": "a",
-            "explanation": "Số cộng với 45 được kết qua bằng 92 là 47. (47 + 45 = 92).",
+            "correctAnswer": "d",
+            "explanation": "Số cần tìm là: 67 + 45 = 112. Đáp số: 112.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -10793,7 +10793,7 @@
             "options": [
               {
                 "id": "a",
-                "label": "32"
+                "label": "35"
               },
               {
                 "id": "b",
@@ -10846,9 +10846,9 @@
           {
             "id": "violympic-exam-math-g2-v04-q003",
             "type": "single_choice",
-            "prompt": "Nếu x + 34 = 567 thi giá trị của x là:",
-            "correctAnswer": "a",
-            "explanation": "Số bi của Hưng và Hà hơn số bi của Thái và Bình là 11 viên. . . (22+32=54;14+29=43;54-43=11).`",
+            "prompt": "Nếu x + 34 = 567 thì giá trị của x là:",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 567 - 34 = 533. Đáp số: 533.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -10861,11 +10861,11 @@
             "options": [
               {
                 "id": "a",
-                "label": "591"
+                "label": "601"
               },
               {
                 "id": "b",
-                "label": "602"
+                "label": "612"
               },
               {
                 "id": "c",
@@ -11698,7 +11698,7 @@
             "type": "single_choice",
             "prompt": "Năm nay anh 19 tuổi và em 15 tuổi. Tổng số tuổi của hai anh em khi em bằng thudi anh hiện nay là:",
             "correctAnswer": "a",
-            "explanation": "C, 42 tuổi. (19 +15=34; 19-15=4;34+4+4=42). : 99",
+            "explanation": "Tổng số tuổi là: 19 + 15 = 34 (tuổi). Đáp số: 34 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -11711,19 +11711,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "34tuổi"
+                "label": "34 tuổi"
               },
               {
                 "id": "b",
-                "label": "38 tuổi"
+                "label": "31 tuổi"
               },
               {
                 "id": "c",
-                "label": "42 tuổi"
+                "label": "36 tuổi"
               },
               {
                 "id": "d",
-                "label": "48 tối"
+                "label": "24 tuổi"
               }
             ]
           },
@@ -11731,8 +11731,8 @@
             "id": "violympic-exam-math-g2-v04-q029",
             "type": "single_choice",
             "prompt": "Năm nay anh 12 tuổi và em 7 tuổi. Tổng số tuổi của hai anh em khi anh bằng tuổi em hiện nay là:",
-            "correctAnswer": "d",
-            "explanation": "D. 9 tuổi. (12+7=19:12—-7=5;19-5-5=9).",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 12 + 7 = 19 (tuổi). Đáp số: 19 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -11745,19 +11745,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "l9tuổi"
+                "label": "19 tuổi"
               },
               {
                 "id": "b",
-                "label": "12tuổi"
+                "label": "16 tuổi"
               },
               {
                 "id": "c",
-                "label": "5 tuổi"
+                "label": "21 tuổi"
               },
               {
                 "id": "d",
-                "label": "9 tudi"
+                "label": "9 tuổi"
               }
             ]
           },
@@ -11968,7 +11968,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q036",
             "type": "single_choice",
-            "prompt": "Bốn bao gạo nặng tat cả 100kg. Biết bao thứ nhất nặng 23kg. - Vậy 3 bao còn lại nặng là.",
+            "prompt": "Bốn bao gạo nặng tất cả 100kg. Biết bao thứ nhất nặng 23kg. - Vậy 3 bao còn lại nặng là.",
             "correctAnswer": "d",
             "explanation": "Vậy 3 bao còn lại nặng là 77kg. (100 — 23 = 77).",
             "topic": "Toán Violympic Lớp 2",
@@ -12105,8 +12105,8 @@
             "id": "violympic-exam-math-g2-v04-q040",
             "type": "single_choice",
             "prompt": "Năm nay anh 15 tuổi và em 10 tuổi. Vậy trước đây mấy năm thì tổng số tuổi của hai anh em bằng tuổi anh hiện nay:",
-            "correctAnswer": "b",
-            "explanation": "B. 5 năm. (15+10=25;25-5-5=15).",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 15 + 10 = 25 (tuổi). Đáp số: 25 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -12119,19 +12119,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "3 năm"
+                "label": "25 tuổi"
               },
               {
                 "id": "b",
-                "label": "5năm"
+                "label": "22 tuổi"
               },
               {
                 "id": "c",
-                "label": "4năm"
+                "label": "27 tuổi"
               },
               {
                 "id": "d",
-                "label": "10 nam"
+                "label": "15 tuổi"
               }
             ]
           },
@@ -12174,7 +12174,7 @@
             "type": "single_choice",
             "prompt": "Năm nay bố 49 tuổi, mẹ 39 tuổi và Huy 9 tuổi. Tổng số tuổi của bồ và Huy hơn tổng số tuổi của mẹ và Huy là:",
             "correctAnswer": "a",
-            "explanation": "A. 10 tuổi. (49 + 9 = 58; 39 + 9 = 48; 58 — 48 = 10).",
+            "explanation": "Tổng số tuổi là: 49 + 39 = 88 (tuổi). Đáp số: 88 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -12187,19 +12187,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "10"
+                "label": "88 tuổi"
               },
               {
                 "id": "b",
-                "label": "11"
+                "label": "85 tuổi"
               },
               {
                 "id": "c",
-                "label": "8"
+                "label": "90 tuổi"
               },
               {
                 "id": "d",
-                "label": "12"
+                "label": "78 tuổi"
               }
             ]
           },
@@ -12377,8 +12377,8 @@
             "id": "violympic-exam-math-g2-v04-q048",
             "type": "single_choice",
             "prompt": "Năm nay bố 36 tuổi, anh 12 tuổi và em 8 tuổi. Vậy sau bao nhiêu năm nữa thì tuổi bố bằng tổng số tuổi của hai anh em?",
-            "correctAnswer": "d",
-            "explanation": "D. 16 năm. (12 + 8 = 20; 20 + 16 + 16 =36 + 16 = 52).",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 36 + 12 = 48 (tuổi). Đáp số: 48 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -12391,19 +12391,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "4năm"
+                "label": "48 tuổi"
               },
               {
                 "id": "b",
-                "label": "8năm"
+                "label": "45 tuổi"
               },
               {
                 "id": "c",
-                "label": "12 nam"
+                "label": "50 tuổi"
               },
               {
                 "id": "d",
-                "label": "16 nam"
+                "label": "38 tuổi"
               }
             ]
           },
@@ -12445,8 +12445,8 @@
             "id": "violympic-exam-math-g2-v04-q050",
             "type": "single_choice",
             "prompt": "Biết 23 + x + 34 = 98. Vậy: x=.",
-            "correctAnswer": "a",
-            "explanation": "Biết 23 + x + 34 = 98, Vay: x = 41. (23 + 41 +34 = 98).",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 98 - 34 = 64. Đáp số: 64.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "application",
             "points": 10,
@@ -12459,19 +12459,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "98"
+                "label": "132"
               },
               {
                 "id": "b",
-                "label": "98"
+                "label": "143"
               },
               {
                 "id": "c",
-                "label": "98"
+                "label": "64"
               },
               {
                 "id": "d",
-                "label": "98"
+                "label": "63"
               }
             ]
           },
@@ -12716,7 +12716,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q058",
             "type": "single_choice",
-            "prompt": "Bây giờ là 11 giờ trưa. Sau 5 giờ nữa sẽ là.......... giờ chiều. 30.",
+            "prompt": "Bây giờ là 11 giờ trưa. Sau 5 giờ nữa sẽ là.......... giờ chiều.",
             "correctAnswer": "a",
             "explanation": "Bây giờ là 11 giờ trưa. Sau 5 giờ nữa sẽ là 4 giờ chiều. (16 giờ). \"",
             "topic": "Toán Violympic Lớp 2",
@@ -13090,7 +13090,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q069",
             "type": "single_choice",
-            "prompt": "Khối lượng của 1 con bê con khoảng :",
+            "prompt": "Khối lượng của 1 con bê con khoảng.",
             "correctAnswer": "a",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: b",
             "topic": "Toán Violympic Lớp 2",
@@ -13294,7 +13294,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q075",
             "type": "single_choice",
-            "prompt": "Một cửa hàng, ngày đầu bán được 45kg gạo. Ngày thứ hai bán được it hon 16kg. Vay: A. Ngày thứ hai ban được 29kg... B. Ca hai ngày bán được 74kg. C. Cả A và B đều đúng. D. Cả A và B đều sai. : 81.",
+            "prompt": "Một cửa hàng, ngày đầu bán được 45kg gạo. Ngày thứ hai bán được ít hơn 16kg. Vay: A. Ngày thứ hai ban được 29kg... B. Ca hai ngày bán được 74kg. C. Cả A và B đều đúng. D. Cả A và B đều sai.",
             "correctAnswer": "a",
             "explanation": "C. Ca A và B đều đúng. (45 — 16 = 29; 29 +45 = 74).",
             "topic": "Toán Violympic Lớp 2",
@@ -13430,7 +13430,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q079",
             "type": "single_choice",
-            "prompt": "Từ 4 điểm có thé vẽ được ........ đoạn thắng.",
+            "prompt": "Từ 4 điểm có thể vẽ được ........ đoạn thắng.",
             "correctAnswer": "d",
             "explanation": "Từ 4 điểm có thể vẽ được 6 đoạn thang.",
             "topic": "Toán Violympic Lớp 2",
@@ -13566,7 +13566,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q083",
             "type": "single_choice",
-            "prompt": "Ba số nào dưới đây có tổng là một số chin:",
+            "prompt": "Ba số nào dưới đây có tổng là một số chẵn:",
             "correctAnswer": "a",
             "explanation": "D. Ca A và B đều đúng.",
             "topic": "Toán Violympic Lớp 2",
@@ -13770,7 +13770,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q089",
             "type": "single_choice",
-            "prompt": "Những can nào dưới đây nếu chứa day có tổng số lít là 100/: A. Ba can 107 và hai can 207 B. Hai can 25/ và một can 507 C. Cả A và B đều sai. D. Cả A và B đều đúng. . 82.",
+            "prompt": "Những can nào dưới đây nếu chứa day có tổng số lít là 100/: A. Ba can 107 và hai can 207 B. Hai can 25/ và một can 507 C. Cả A và B đều sai. D. Cả A và B đều đúng.",
             "correctAnswer": "a",
             "explanation": "B. Hai can 25/ và một can 507. (25 + 25 + 50 = 100)",
             "topic": "Toán Violympic Lớp 2",
@@ -13906,7 +13906,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q093",
             "type": "single_choice",
-            "prompt": "Can thứ nhất chứa it hon can thứ hai 5/ nước mắm. Nếu dé từ can thứ hai sang can thứ nhất 5/ thi can thứ nhất nhiều hơn can thứ hai là:",
+            "prompt": "Can thứ nhất chứa ít hơn can thứ hai 5/ nước mắm. Nếu dé từ can thứ hai sang can thứ nhất 5/ thi can thứ nhất nhiều hơn can thứ hai là:",
             "correctAnswer": "a",
             "explanation": "A.5/J.(5+5—-5=3). ¡ Cau 86. C.20/. (10+5+5=20).",
             "topic": "Toán Violympic Lớp 2",
@@ -13940,7 +13940,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q094",
             "type": "single_choice",
-            "prompt": "Can thứ nhất chứa it hon can thứ hai 10/ nước mắm. Nếu dé từ can thứ nhất sang can thứ hai 5/ thì can thứ nhất ít hon can thứ hai 1a:",
+            "prompt": "Can thứ nhất chứa ít hơn can thứ hai 10/ nước mắm. Nếu dé từ can thứ nhất sang can thứ hai 5/ thì can thứ nhất ít hon can thứ hai 1a:",
             "correctAnswer": "a",
             "explanation": "Can thứ ba va can thứ tư đựng số mắm là: 56 — 34 = 22 (J. Trả lời: 221.",
             "topic": "Toán Violympic Lớp 2",
@@ -14111,8 +14111,8 @@
             "id": "violympic-exam-math-g2-v04-q099",
             "type": "single_choice",
             "prompt": "Biết 34 + x + 17=90. Vậy: x=.",
-            "correctAnswer": "b",
-            "explanation": "Nếu 42 + x = 60 thi x = 18. (42 + 18 = 60).",
+            "correctAnswer": "c",
+            "explanation": "Ta có: x = 90 - 17 = 73. Đáp số: 73.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -14125,19 +14125,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "60"
+                "label": "107"
               },
               {
                 "id": "b",
-                "label": "60"
+                "label": "118"
               },
               {
                 "id": "c",
-                "label": "60"
+                "label": "73"
               },
               {
                 "id": "d",
-                "label": "60"
+                "label": "72"
               }
             ]
           },
@@ -14314,7 +14314,7 @@
           {
             "id": "violympic-exam-math-g2-v04-q105",
             "type": "single_choice",
-            "prompt": "Một rổ đựng cam và chanh. Biết rằng nếu có thêm 12 quả cam thì số cam sẽ nhiều hơn số chanh là 7 quả. Hỏi nếu có thêm 12 quả chanh thì .. 86 chanh sẽ nhiéu hon sô cam là bao nhiêu qua? - Trả lời: ...................... 33 . VONGS.",
+            "prompt": "Một rổ đựng cam và chanh. Biết rằng nếu có thêm 12 quả cam thì số cam sẽ nhiều hơn số chanh là 7 quả. Hỏi nếu có thêm 12 quả chanh thì .. 86 chanh sẽ nhiều hơn sô cam là bao nhiêu qua? - Trả lời: ...................... 33 . VONGS.",
             "correctAnswer": "a",
             "explanation": "Số cộng với 18 được kết quả bằng 62 là 44. (44 + 18 = 62).",
             "topic": "Toán Violympic Lớp 2",
@@ -15537,7 +15537,7 @@
             "type": "single_choice",
             "prompt": "Nếu x+35=79thìx=.",
             "correctAnswer": "c",
-            "explanation": "Nếu x + 35 = 79 thì x = 44. (44 + 35 = 79).",
+            "explanation": "Ta có: x = 79 - 35 = 44. Đáp số: 44.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -15550,19 +15550,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "79"
+                "label": "114"
               },
               {
                 "id": "b",
-                "label": "79"
+                "label": "125"
               },
               {
                 "id": "c",
-                "label": "79"
+                "label": "44"
               },
               {
                 "id": "d",
-                "label": "79"
+                "label": "43"
               }
             ]
           },
@@ -15671,7 +15671,7 @@
           {
             "id": "violympic-exam-math-g2-v05-q015",
             "type": "single_choice",
-            "prompt": "Khối 2 có 82 học sinh trong đó có 47 bạn nam. Sau đó có thêm 2 bạn nữ đến thêm. Vậy: 36.",
+            "prompt": "Khối 2 có 82 học sinh trong đó có 47 bạn nam. Sau đó có thêm 2 bạn nữ đến thêm. Vậy.",
             "correctAnswer": "a",
             "explanation": "C. Ca A và B đều đúng. - Khối 2 có số bạn nữ là: 82 — 47 = 35 (bạn). - Sau khi có thêm 2 bạn nữ thì khối 2 có số ban nữ là: 35 + 2 = 37 (bạn). - Khi có thêm 2 bạn nữ thì khối 2 có số bạn nam nhiều hơn số bạn nữ là: 47 — 37 = 10 (bạn). ;",
             "topic": "Toán Violympic Lớp 2",
@@ -16079,7 +16079,7 @@
           {
             "id": "violympic-exam-math-g2-v05-q027",
             "type": "single_choice",
-            "prompt": "Trong vườn có trồng 3 hàng cây hoa hồng, mỗi hàng 6 cây và 4 hàng cây hoa cúc, mỗi hàng 8 cây. - Trong vườn có tat cả .........cây hai loại.",
+            "prompt": "Trong vườn có trồng 3 hàng cây hoa hồng, mỗi hàng 6 cây và 4 hàng cây hoa cúc, mỗi hàng 8 cây. - Trong vườn có tất cả .........cây hai loại.",
             "correctAnswer": "d",
             "explanation": "Trong vườn có tất cả 50 cây hai loại. (3x6+4x8=50).",
             "topic": "Toán Violympic Lớp 2",
@@ -16128,19 +16128,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Lớp 1 A có tat cả 44 học sinh"
+                "label": "Lớp 1 A có tất cả 44 học sinh"
               },
               {
                 "id": "b",
-                "label": "Lớp 2 A có tat cả 44 học sinh"
+                "label": "Lớp 2 A có tất cả 44 học sinh"
               },
               {
                 "id": "c",
-                "label": "Lớp 3 A có tat cả 44 học sinh"
+                "label": "Lớp 3 A có tất cả 44 học sinh"
               },
               {
                 "id": "d",
-                "label": "Lớp 4 A có tat cả 44 học sinh"
+                "label": "Lớp 4 A có tất cả 44 học sinh"
               }
             ]
           },
@@ -16604,19 +16604,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Lớp 3 A có tat cả 34 học sinh"
+                "label": "Lớp 3 A có tất cả 34 học sinh"
               },
               {
                 "id": "b",
-                "label": "Lớp 1 A có tat cả 34 học sinh"
+                "label": "Lớp 1 A có tất cả 34 học sinh"
               },
               {
                 "id": "c",
-                "label": "Lớp 2 A có tat cả 34 học sinh"
+                "label": "Lớp 2 A có tất cả 34 học sinh"
               },
               {
                 "id": "d",
-                "label": "Lớp 4 A có tat cả 34 học sinh"
+                "label": "Lớp 4 A có tất cả 34 học sinh"
               }
             ]
           },
@@ -16638,19 +16638,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Lớp 3 A có tat cả 38 học sinh"
+                "label": "Lớp 3 A có tất cả 38 học sinh"
               },
               {
                 "id": "b",
-                "label": "Lớp 1 A có tat cả 38 học sinh"
+                "label": "Lớp 1 A có tất cả 38 học sinh"
               },
               {
                 "id": "c",
-                "label": "Lớp 4 A có tat cả 38 học sinh"
+                "label": "Lớp 4 A có tất cả 38 học sinh"
               },
               {
                 "id": "d",
-                "label": "Lớp 2 A có tat cả 38 học sinh"
+                "label": "Lớp 2 A có tất cả 38 học sinh"
               }
             ]
           },
@@ -16774,19 +16774,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Có tat cả 27 bánh xe"
+                "label": "Có tất cả 27 bánh xe"
               },
               {
                 "id": "b",
-                "label": "Có tat cả 29 bánh xe"
+                "label": "Có tất cả 29 bánh xe"
               },
               {
                 "id": "c",
-                "label": "Có tat cả 28 bánh xe"
+                "label": "Có tất cả 28 bánh xe"
               },
               {
                 "id": "d",
-                "label": "Có tat cả 30 bánh xe"
+                "label": "Có tất cả 30 bánh xe"
               }
             ]
           },
@@ -17337,7 +17337,7 @@
           {
             "id": "violympic-exam-math-g2-v05-q064",
             "type": "single_choice",
-            "prompt": "Lớp Hoàng có 5 bạn đạt giải Trạng nguyên, mỗi bạn được thưởng 8 quyền vở và 4 bạn đạt giải Thám hoa, mỗi bạn được thưởng 6 quyền vở. - Cô giáo phải mua tat cả số vở thưởng đủ cho các bạn là „......quyền.",
+            "prompt": "Lớp Hoàng có 5 bạn đạt giải Trạng nguyên, mỗi bạn được thưởng 8 quyển vở và 4 bạn đạt giải Thám hoa, mỗi bạn được thưởng 6 quyển vở. - Cô giáo phải mua tất cả số vở thưởng đủ cho các bạn là „......quyền.",
             "correctAnswer": "c",
             "explanation": "Cô giáo phải mua tat cả sô vở là 64 quyên. (5 x 8 + 4 x 6 = 64).",
             "topic": "Toán Violympic Lớp 2",
@@ -17405,7 +17405,7 @@
           {
             "id": "violympic-exam-math-g2-v05-q066",
             "type": "single_choice",
-            "prompt": "Đường gấp khúc ABCD có AB = 2cm, BC = 3cm, CD = 4cm. - Độ dài đường gấp khúc ABCD đó là .................. : 41.",
+            "prompt": "Đường gấp khúc ABCD có AB = 2cm, BC = 3cm, CD = 4cm. - Độ dài đường gấp khúc ABCD đó là.",
             "correctAnswer": "d",
             "explanation": "Độ dài đường gấp khúc ABCD đó là 9em. (2+3 +4=9).",
             "topic": "Toán Violympic Lớp 2",
@@ -18377,19 +18377,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Huy có tat cả 56 viên bi"
+                "label": "Huy có tất cả 56 viên bi"
               },
               {
                 "id": "b",
-                "label": "Huy có tat cả 57 viên bi"
+                "label": "Huy có tất cả 57 viên bi"
               },
               {
                 "id": "c",
-                "label": "Huy có tat cả 55 viên bi"
+                "label": "Huy có tất cả 55 viên bi"
               },
               {
                 "id": "d",
-                "label": "Huy có tat cả 58 viên bi"
+                "label": "Huy có tất cả 58 viên bi"
               }
             ]
           },
@@ -18513,19 +18513,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Huy còn lại tat cả 17 viên bi"
+                "label": "Huy còn lại tất cả 17 viên bi"
               },
               {
                 "id": "b",
-                "label": "Huy còn lại tat cả 18 viên bi"
+                "label": "Huy còn lại tất cả 18 viên bi"
               },
               {
                 "id": "c",
-                "label": "Huy còn lại tat cả 19 viên bi"
+                "label": "Huy còn lại tất cả 19 viên bi"
               },
               {
                 "id": "d",
-                "label": "Huy còn lại tat cả 20 viên bi"
+                "label": "Huy còn lại tất cả 20 viên bi"
               }
             ]
           },
@@ -19212,7 +19212,7 @@
           {
             "id": "violympic-exam-math-g2-v06-q029",
             "type": "single_choice",
-            "prompt": "Đã tô mau ..........hinh vẽ. 45.",
+            "prompt": "Đã tô mau ..........hinh vẽ.",
             "correctAnswer": "a",
             "explanation": "Đã tô màu i hinh vé.",
             "topic": "Toán Violympic Lớp 2",
@@ -21252,7 +21252,7 @@
           {
             "id": "violympic-exam-math-g2-v06-q089",
             "type": "single_choice",
-            "prompt": "Tứ giác ABCD có: AB = BC = CD = 2cm va chu vi là 9cm. - Cạnh AD đài là............. 49.",
+            "prompt": "Tứ giác ABCD có: AB = BC = CD = 2cm va chu vi là 9cm. - Cạnh AD đài là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
             "topic": "Toán Violympic Lớp 2",
@@ -22401,7 +22401,7 @@
           {
             "id": "violympic-exam-math-g2-v07-q023",
             "type": "single_choice",
-            "prompt": "Biết cái thước dài 3dm, cái chì dài 15cm. - Cái thước dài hơn cái chi ..........cm. 52.",
+            "prompt": "Biết cái thước dài 3dm, cái chì dài 15cm. - Cái thước dài hơn cái chi ..........cm.",
             "correctAnswer": "b",
             "explanation": "Cái thước dài hơn cái chi là: 3dm — 15cm = 15cm. (3dm = 30cm). Cu 14. Số bé là: 43 —34 = 9. “",
             "topic": "Toán Violympic Lớp 2",
@@ -23251,7 +23251,7 @@
           {
             "id": "violympic-exam-math-g2-v07-q048",
             "type": "single_choice",
-            "prompt": "Nga có nhiều hơn Hạnh 15 quyển vở. Sau đó Nga cho Hạnh 10 quyền vở. Hỏi Nga còn ít hơn Hạnh mấy quyền vo?",
+            "prompt": "Nga có nhiều hơn Hạnh 15 quyển vở. Sau đó Nga cho Hạnh 10 quyển vở. Hỏi Nga còn ít hơn Hạnh mấy quyền vo?",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
             "topic": "Toán Violympic Lớp 2",
@@ -23353,7 +23353,7 @@
           {
             "id": "violympic-exam-math-g2-v07-q051",
             "type": "single_choice",
-            "prompt": "Tính: 24cm =........dm.........cm. 54.",
+            "prompt": "Tính: 24cm =........dm.........cm.",
             "correctAnswer": "c",
             "explanation": "Tính: 24cm = 2dm 4cm.",
             "topic": "Toán Violympic Lớp 2",
@@ -23591,7 +23591,7 @@
           {
             "id": "violympic-exam-math-g2-v07-q058",
             "type": "single_choice",
-            "prompt": "Đức, Hai và Huy có tat cả 5 chục viên bi. Biết số bi của Đức và Hải là 3 chục viên, số bi của Hải và Huy là 35 viên. Số bi của Đức và Huy là..... viên.",
+            "prompt": "Đức, Hai và Huy có tất cả 5 chục viên bi. Biết số bi của Đức và Hải là 3 chục viên, số bi của Hải và Huy là 35 viên. Số bi của Đức và Huy là..... viên.",
             "correctAnswer": "b",
             "explanation": "Đôi: 5 chục viên = 50 viên; 3 chục viên = 30 viên. - Số bi của Huy là: 50 — 30 =20 (viên). - Số bi của Đức là: 50 — 35 = 15 (viên). ! - Số bi của Huy và Đức là: 20 + 15 = 35 (viên). „",
             "topic": "Toán Violympic Lớp 2",
@@ -24849,7 +24849,7 @@
           {
             "id": "violympic-exam-math-g2-v07-q095",
             "type": "single_choice",
-            "prompt": "Chia một bao gạo vào các túi nhỏ, mỗi túi 5kg thì cần 7 túi và còn thừa 2kg. Tính số gạo có trong bao đó. Trả ời......................... 57.",
+            "prompt": "Chia một bao gạo vào các túi nhỏ, mỗi túi 5kg thì cần 7 túi và còn thừa 2kg. Tính số gạo có trong bao đó. Trả ời.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
             "topic": "Toán Violympic Lớp 2",
@@ -25223,7 +25223,7 @@
           {
             "id": "violympic-exam-math-g2-v07-q106",
             "type": "single_choice",
-            "prompt": "Lớp 2A có 10 bàn. Biết rằng nếu xếp mỗi bàn 3 học sinh thì có 1 bản chỉ có 2 bạn ngồi. Hỏi lớp 2A có bao nhiêu học sinh? Trả lời: ...................... 58.",
+            "prompt": "Lớp 2A có 10 bàn. Biết rằng nếu xếp mỗi bàn 3 học sinh thì có 1 bản chỉ có 2 bạn ngồi. Hỏi lớp 2A có bao nhiêu học sinh?",
             "correctAnswer": "a",
             "explanation": "C. 6kg. (3x8=24;24:4=6).",
             "topic": "Toán Violympic Lớp 2",
@@ -26538,7 +26538,7 @@
           {
             "id": "violympic-exam-math-g2-v08-q038",
             "type": "single_choice",
-            "prompt": "Hình bên có bao nhiêu tứ giác? INI Trả lời: ....................... Câu 29, Hình bên có bao nhiêu tứ giác? ⁄- Trảlờïi............................ 61.",
+            "prompt": "Hình bên có bao nhiêu tứ giác? INI Trả lời: ....................... Câu 29, Hình bên có bao nhiêu tứ giác? ⁄- Trảlờïi.",
             "correctAnswer": "d",
             "explanation": "Hình bên có tắt cả 13 tứ giác: (1+2),(1+2+3),(1+2+3+4), VARA (1+2+34+4+5),(1+2+3+4+5+6), (2+3+4),(2+3+4+5), (2+3+4+5+6),(3+4),(3+4+5), (3+44+5+6), (4+5+6),(5+6). Trả lời: 13 hình.",
             "topic": "Toán Violympic Lớp 2",
@@ -26878,7 +26878,7 @@
           {
             "id": "violympic-exam-math-g2-v08-q048",
             "type": "single_choice",
-            "prompt": "Hà và Bình có một số viên bi. Biết nếu Hà cho Bình 9 viên bi thì Hà vẫn còn nhiều hơn Bình 8 viên. Hỏi Hà có nhiều hơn Bình bao nhiêu viên bi? Trả lời..................... 62.",
+            "prompt": "Hà và Bình có một số viên bi. Biết nếu Hà cho Bình 9 viên bi thì Hà vẫn còn nhiều hơn Bình 8 viên. Hỏi Hà có nhiều hơn Bình bao nhiêu viên bi?",
             "correctAnswer": "c",
             "explanation": "Hà có nhiều hơn Binh số bi là: 9 + 8 + 9 = 26 (viên).",
             "topic": "Toán Violympic Lớp 2",
@@ -26980,7 +26980,7 @@
           {
             "id": "violympic-exam-math-g2-v08-q051",
             "type": "single_choice",
-            "prompt": "Tính tổng của tat cả các số chin có 2 chữ số khác nhau và có tổng 2 chữ số bằng 5.",
+            "prompt": "Tính tổng của tất cả các số chẵn có 2 chữ số khác nhau và có tổng 2 chữ số bằng 5.",
             "correctAnswer": "a",
             "explanation": "Các số chin có 2 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50. - Tổng của các số chin đó là: 14 + 32 + 50 = 96. Trả lời: 96.",
             "topic": "Toán Violympic Lớp 2",
@@ -26995,19 +26995,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Các số chin có 2 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
+                "label": "Các số chẵn có 2 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
               },
               {
                 "id": "b",
-                "label": "Các số chin có 1 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
+                "label": "Các số chẵn có 1 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
               },
               {
                 "id": "c",
-                "label": "Các số chin có 3 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
+                "label": "Các số chẵn có 3 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
               },
               {
                 "id": "d",
-                "label": "Các số chin có 4 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
+                "label": "Các số chẵn có 4 chữ số có tổng các chữ số bằng 5 là: 14, 32 và 50"
               }
             ]
           },
@@ -27320,7 +27320,7 @@
           {
             "id": "violympic-exam-math-g2-v08-q061",
             "type": "single_choice",
-            "prompt": "Một hình tam giác có chu vi 18dm. Tăng đều mỗi cạnh của tam giác đó thêm 3dm thì được một tam giác mới có chu vi là bao nhiêu? Trảlời........................ : 63.",
+            "prompt": "Một hình tam giác có chu vi 18dm. Tăng đều mỗi cạnh của tam giác đó thêm 3dm thì được một tam giác mới có chu vi là bao nhiêu? Trảlời.",
             "correctAnswer": "a",
             "explanation": "Chu vi của tam giác đó tăng thêm là: 3 x 3 = 9 (dm). - Chu vi của hình tam giác mới là: 18 + 9 = 27 (dm). Trả lời: 27dm.",
             "topic": "Toán Violympic Lớp 2",
@@ -27558,7 +27558,7 @@
           {
             "id": "violympic-exam-math-g2-v08-q068",
             "type": "single_choice",
-            "prompt": "Cho hình vẽ bên. Biết AB = CD = 4cm; AD = BC =3om và AC = 5cm. Pe Tinh tổng chu vi tat cả các tam giác có trong hình vẽ. Trả lời..............MM-GGGG-G-G-G-LL. D C.",
+            "prompt": "Cho hình vẽ bên. Biết AB = CD = 4cm; AD = BC =3om và AC = 5cm. Pe Tinh tổng chu vi tất cả các tam giác có trong hình vẽ. Trả lời..............MM-GGGG-G-G-G-LL. D C.",
             "correctAnswer": "d",
             "explanation": "Chu vi tam giác ABC la: 4+ 3 +5 = 12 (cm). - Chu vi tam giác ADC là: 4+ 3 + 5 = 12 (cm). , - Tổng chu vi của 2 tam giác ABC và ADC là: 12+12=24 (cm). Trả lời: 24cm. .",
             "topic": "Toán Violympic Lớp 2",
@@ -27695,8 +27695,8 @@
             "id": "violympic-exam-math-g2-v08-q072",
             "type": "single_choice",
             "prompt": "Biết khi Mai 8 tuổi thì mẹ Mai 35 tuổi. Tính tổng số tuổi của hai mẹ con Mai khi Mai 20 tuổi.",
-            "correctAnswer": "d",
-            "explanation": "Mẹ Mai hơn Mai số tuổi là: 35 — 8 = 27 (tuổi). - Tuổi của mẹ Mai khi Mai 20 tuổi là: 20 + 27 = 47 (tuổi). - Tổng số tuổi của hai mẹ con khi đó là: 20 + 47 = 67 (tuổi). Trả lời: 67 tuổi.",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 8 + 35 = 43 (tuổi). Đáp số: 43 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -27709,19 +27709,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "27 tuổi"
+                "label": "43 tuổi"
               },
               {
                 "id": "b",
-                "label": "27 tuổi"
+                "label": "40 tuổi"
               },
               {
                 "id": "c",
-                "label": "27 tuổi"
+                "label": "45 tuổi"
               },
               {
                 "id": "d",
-                "label": "27 tuổi"
+                "label": "33 tuổi"
               }
             ]
           },
@@ -28136,9 +28136,9 @@
           {
             "id": "violympic-exam-math-g2-v08-q085",
             "type": "single_choice",
-            "prompt": "Hiện nay bố Lan 42 tuổi còn ông nội 71 tuổi. Tính tổng số tuổi của bố Lan và ông nội Lan khi tuổi của ông nội Lan bằng tuổi của bố Lan hién nay. Trả lời............................ : 65.",
-            "correctAnswer": "b",
-            "explanation": "Ông nội hơn bố Lan số tuổi là: 71 — 42 = 29 (tuổi). - Khi ông bằng tuổi bố Lan hiện nay thì tuổi của bố Lan là: 42 — 29 = 13 (tuổi). - Tổng số tuổi của bố Lan và ông nội khi đó là: 13 + 42 = 55 (tuổi). 124",
+            "prompt": "Hiện nay bố Lan 42 tuổi còn ông nội 71 tuổi. Tính tổng số tuổi của bố Lan và ông nội Lan khi tuổi của ông nội Lan bằng tuổi của bố Lan hién nay.",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 42 + 71 = 113 (tuổi). Đáp số: 113 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -28151,19 +28151,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "29 tuổi"
+                "label": "113 tuổi"
               },
               {
                 "id": "b",
-                "label": "29 tuổi"
+                "label": "110 tuổi"
               },
               {
                 "id": "c",
-                "label": "29 tuổi"
+                "label": "115 tuổi"
               },
               {
                 "id": "d",
-                "label": "29 tuổi"
+                "label": "103 tuổi"
               }
             ]
           },
@@ -28749,8 +28749,8 @@
             "id": "violympic-exam-math-g2-v08-q103",
             "type": "single_choice",
             "prompt": "Biết khi An 20 tuổi thi mẹ của An 49 tuổi. Tính tổng số tuổi của hai mẹ con An khi An lên 9 tuổi.",
-            "correctAnswer": "c",
-            "explanation": "Mẹ An nhiều hơn An số tuổi là: 49 — 20 = 29 (tuổi). - Khi An lên 9 tuổi thì tuổi của mẹ An là: 9 + 29 = 38 (tuổi). - Tổng số tuổi của hai mẹ con An khi An lên 9 tuổi là: 38 + 9 = 47 (tuổi). Trả lời: 47 tuổi.",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 20 + 49 = 69 (tuổi). Đáp số: 69 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -28763,19 +28763,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "29 tuổi"
+                "label": "69 tuổi"
               },
               {
                 "id": "b",
-                "label": "29 tuổi"
+                "label": "66 tuổi"
               },
               {
                 "id": "c",
-                "label": "29 tuổi"
+                "label": "71 tuổi"
               },
               {
                 "id": "d",
-                "label": "29 tuổi"
+                "label": "59 tuổi"
               }
             ]
           },
@@ -28783,8 +28783,8 @@
             "id": "violympic-exam-math-g2-v08-q104",
             "type": "single_choice",
             "prompt": "Biết khi Mai 10 tuổi thì mẹ của Mai 38 tuổi. Tính tổng số tuổi của hai mẹ con Mai khi mẹ của Mai 42 tuổi.",
-            "correctAnswer": "c",
-            "explanation": "Mẹ Mai nhiều hơn Mai số tuổi là: 38 — 10 = 28 (tuổi). - Khi mẹ Mai 42 tuổi thì tuổi của Mai là: 42 — 28 = 14 (tuổi). - Tổng số tuổi hai mẹ con khi mẹ Mai 42 tuổi là: 42 + 14 = 56 (tuổi). Trả lời: 56 tuổi.",
+            "correctAnswer": "a",
+            "explanation": "Tổng số tuổi là: 10 + 38 = 48 (tuổi). Đáp số: 48 tuổi.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -28797,19 +28797,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "28 tuổi"
+                "label": "48 tuổi"
               },
               {
                 "id": "b",
-                "label": "28 tuổi"
+                "label": "45 tuổi"
               },
               {
                 "id": "c",
-                "label": "28 tuổi"
+                "label": "50 tuổi"
               },
               {
                 "id": "d",
-                "label": "28 tuổi"
+                "label": "38 tuổi"
               }
             ]
           }
@@ -29451,7 +29451,7 @@
           {
             "id": "violympic-exam-math-g2-v09-q019",
             "type": "single_choice",
-            "prompt": "Điền số thích hợp vào chỗ chấm:......m = 50 dm. 68.",
+            "prompt": "Điền số thích hợp vào chỗ chấm:......m = 50 dm.",
             "correctAnswer": "d",
             "explanation": "Điền số thích hợp vào chỗ chấm: 5 m = 50 dm.",
             "topic": "Toán Violympic Lớp 2",
@@ -29825,7 +29825,7 @@
           {
             "id": "violympic-exam-math-g2-v09-q030",
             "type": "single_choice",
-            "prompt": "Mẹ mua về một số bông hoa. Sau đó mẹ đem cắm số hoa đó vào các lọ. Biết rằng mẹ cắm được vào 8 lọ, mỗi lọ 5 bông và còn thừa 3 bông. Hỏi mẹ đã mua về tat cả bao nhiêu bông hoa? Trả lời............................. : Cau 15. Cô giáo nhận về một số sách. Biết rằng nếu cô nhận thêm 1 quyền thì đủ phat cho 4 t6, mỗi tổ 5 quyền. Hỏi cô đã nhận về bao nhiêu quyền sách?",
+            "prompt": "Mẹ mua về một số bông hoa. Sau đó mẹ đem cắm số hoa đó vào các lọ. Biết rằng mẹ cắm được vào 8 lọ, mỗi lọ 5 bông và còn thừa 3 bông. Hỏi mẹ đã mua về tất cả bao nhiêu bông hoa? Trả lời............................. : Cau 15. Cô giáo nhận về một số sách. Biết rằng nếu cô nhận thêm 1 quyền thì đủ phat cho 4 t6, mỗi tổ 5 quyền. Hỏi cô đã nhận về bao nhiêu quyền sách?",
             "correctAnswer": "d",
             "explanation": "Số bông hoa cắm đủ 8 lọ hoa đó là: 8 x 5 = 40 (bông). - Mẹ mua về tất cả số bông hoa là: 40 + 3 = 43 (bông). Trả lời: 43 bông. :",
             "topic": "Toán Violympic Lớp 2",
@@ -30641,7 +30641,7 @@
           {
             "id": "violympic-exam-math-g2-v09-q054",
             "type": "single_choice",
-            "prompt": "Trường Hoà Bình có 931 học sinh, trường Kim Đồng có nhiều hơn trường Hoà Bình 64 học sinh. Tính số học sinh của trường Kim Đồng. 7.",
+            "prompt": "Trường Hoà Bình có 931 học sinh, trường Kim Đồng có nhiều hơn trường Hoà Bình 64 học sinh. Tính số học sinh của trường Kim Đồng.",
             "correctAnswer": "d",
             "explanation": "Số học sinh của trường Kim Đồng là: 931 + 64 = 995 (học sinh). Trả lời: 995 học sinh.",
             "topic": "Toán Violympic Lớp 2",
@@ -31083,7 +31083,7 @@
           {
             "id": "violympic-exam-math-g2-v09-q067",
             "type": "single_choice",
-            "prompt": "Tìm một số biết rằng nếu lấy số đó đem chia cho 5 rồi trừ đi 5 thì sẽ được kết quả bằng 5. Trả lòi............................ 72.",
+            "prompt": "Tìm một số biết rằng nếu lấy số đó đem chia cho 5 rồi trừ đi 5 thì sẽ được kết quả bằng 5. Trả lòi.",
             "correctAnswer": "a",
             "explanation": "Số đó đem chia cho 5 thì được kết quả là: 5 + 5 = 10. - Số đó là: 5 x 10=50. Trả lời: 50.",
             "topic": "Toán Violympic Lớp 2",
@@ -31254,8 +31254,8 @@
             "id": "violympic-exam-math-g2-v09-q072",
             "type": "single_choice",
             "prompt": "Số lớn nhất có 3 chữ số mà tổng các chữ số bằng 10 là.",
-            "correctAnswer": "d",
-            "explanation": "Số lớn nhất có 3 chữ số mà tổng các chữ số bằng 10 là: 910. Trả lời: 910.",
+            "correctAnswer": "a",
+            "explanation": "Để số lớn nhất thì chữ số hàng chục lớn nhất là 9. Chữ số hàng đơn vị là: 10 - 9 = 1. Số đó là 91.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "challenge",
             "points": 10,
@@ -31268,19 +31268,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "Số lớn nhất có 4 chữ số mà tổng các chữ số bằng 10 là: 910"
+                "label": "91"
               },
               {
                 "id": "b",
-                "label": "Số lớn nhất có 5 chữ số mà tổng các chữ số bằng 10 là: 910"
+                "label": "82"
               },
               {
                 "id": "c",
-                "label": "Số lớn nhất có 2 chữ số mà tổng các chữ số bằng 10 là: 910"
+                "label": "73"
               },
               {
                 "id": "d",
-                "label": "Số lớn nhất có 3 chữ số mà tổng các chữ số bằng 10 là: 910"
+                "label": "19"
               }
             ]
           },
@@ -32568,7 +32568,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q006",
             "type": "single_choice",
-            "prompt": "Biết tuổi của anh hiện nay là một số lớn nhất có 1 chữ số, tuổi em 8 năm nữa sẽ là số lẻ bé nhất có 2 chữ số khác nhau. Hỏi trước đây bao nhiêu năm thì tổng số tuổi của hai anh em là một số bé nhất có 2 chữ số khác nhau? :",
+            "prompt": "Biết tuổi của anh hiện nay là một số lớn nhất có 1 chữ số, tuổi em 8 năm nữa sẽ là số lẻ bé nhất có 2 chữ số khác nhau. Hỏi trước đây bao nhiêu năm thì tổng số tuổi của hai anh em là một số bé nhất có 2 chữ số khác nhau?",
             "correctAnswer": "a",
             "explanation": "D. 25em. (1dm = 10cm; 10:2=5;10+10+5=25).",
             "topic": "Toán Violympic Lớp 2",
@@ -33351,8 +33351,8 @@
             "id": "violympic-exam-math-g2-v10-q029",
             "type": "single_choice",
             "prompt": "Một trường có 234 học sinh nam. Biết rằng nếu có thêm 23 học sinh nữ thì số học sinh nữ nhiều hơn số học sinh nam là 45 học sinh. Hỏi trường đó có tất cả bao nhiêu học sinh? THE OR.",
-            "correctAnswer": "c",
-            "explanation": "Số học sinh nữ khi có thêm 23bạn là: 234 + 45 = 279 (học sinh). - Số học sinh nữ là: 279 — 23 = 256 (học sinh). - Trường đó có tất cả số học sinh là: 256 + 234 = 490 (học sinh). Tra lời: 490 học sinh. Cau 12.4 x 3=18-6=12. Tra loi: a= 4. ;",
+            "correctAnswer": "a",
+            "explanation": "Lớp có tất cả số học sinh là: 234 + 23 = 257 (học sinh). Đáp số: 257 học sinh.",
             "topic": "Toán Violympic Lớp 2",
             "difficulty": "basic",
             "points": 10,
@@ -33365,19 +33365,19 @@
             "options": [
               {
                 "id": "a",
-                "label": "279 học sinh"
+                "label": "257 học sinh"
               },
               {
                 "id": "b",
-                "label": "279 học sinh"
+                "label": "255 học sinh"
               },
               {
                 "id": "c",
-                "label": "279 học sinh"
+                "label": "258 học sinh"
               },
               {
                 "id": "d",
-                "label": "279 học sinh"
+                "label": "253 học sinh"
               }
             ]
           },
@@ -33452,7 +33452,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q032",
             "type": "single_choice",
-            "prompt": "Tính tổng của các số chin bé hơn 20.",
+            "prompt": "Tính tổng của các số chẵn bé hơn 20.",
             "correctAnswer": "a",
             "explanation": "Tổng của các số đó là: 0+2+4+..+16+18=18x 10= 780. Câu 15, Số cần tìm là: 99 + 246 — 135 = 270.",
             "topic": "Toán Violympic Lớp 2",
@@ -33554,7 +33554,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q035",
             "type": "single_choice",
-            "prompt": "Tổng của 2 số gấp 3 lần số bé. Tìm số bé, biết số lớn bằng 18. Câu 18, Hai anh em có một số viên bi. Biết rằng nếu anh cho em 5 viên thì anh có số bi bằng em và bằng 10 viên. Tính số bi của em. TH LOG: ................. Câu 19, Có một số gạo, nếu chia đều vào 4 túi thì mỗi thi chứa 7kg va còn thừa 2kg. Hỏi nếu chia đều vào 5 túi thì mỗi túi chứa bao nhiêu ki-lô-gam? Trdlời.................. ị.",
+            "prompt": "Tổng của 2 số gấp 3 lần số bé. Tìm số bé, biết số lớn bằng 18. Câu 18, Hai anh em có một số viên bi. Biết rằng nếu anh cho em 5 viên thì anh có số bi bằng em và bằng 10 viên. Tính số bi của em.: ................. Câu 19, Có một số gạo, nếu chia đều vào 4 túi thì mỗi thi chứa 7kg va còn thừa 2kg. Hỏi nếu chia đều vào 5 túi thì mỗi túi chứa bao nhiêu ki-lô-gam? Trdlời.................. ị.",
             "correctAnswer": "b",
             "explanation": "Vì tổng của 2 số gấp 3 lần số bé nên số lớn gấp đôi số bé. - Số bé là: 18:2=9.",
             "topic": "Toán Violympic Lớp 2",
@@ -33962,7 +33962,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q047",
             "type": "single_choice",
-            "prompt": "Tìm tổng bé nhất của 2 số lẻ khác nhau có 3 chữ số. Trdlòïi.................. 80.",
+            "prompt": "Tìm tổng bé nhất của 2 số lẻ khác nhau có 3 chữ số. Trdlòïi.",
             "correctAnswer": "c",
             "explanation": "Số lẻ bé nhất có 3 chữ số là: 101. - Số lẻ bé nhất có 3 chữ số khác 101 1a: 103. - Tổng bé nhất của 2 số lẻ khác nhau có 3 chữ số là: 101 + 103 = 204.",
             "topic": "Toán Violympic Lớp 2",
@@ -34200,7 +34200,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q054",
             "type": "single_choice",
-            "prompt": "Các số: 241, 124, 214, 421, 142, 412. A. Viết theo thứ tự tăng dần là: 124, 142, 214, 241, 412, 421. B. Có số các số chẵn bằng số các số lẻ. C. Có số các số chin ít hơn số các số lẻ. D. Ca A, B và C đều sai. 81.",
+            "prompt": "Các số: 241, 124, 214, 421, 142, 412. A. Viết theo thứ tự tăng dần là: 124, 142, 214, 241, 412, 421. B. Có số các số chẵn bằng số các số lẻ. C. Có số các số chẵn ít hơn số các số lẻ. D. Ca A, B và C đều sai.",
             "correctAnswer": "a",
             "explanation": "A. Tăng dần: 124, 142, 214, 241, 412, 421. (Có 4 số chin và 2 số lẻ).",
             "topic": "Toán Violympic Lớp 2",
@@ -34846,7 +34846,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q073",
             "type": "single_choice",
-            "prompt": "Quãng đường AD gồm 3 đoạn. (hình vẽ) A B C D 212km 365km 324km - Vay doan AC ngắn hơn đoạn BD là..................... 82.",
+            "prompt": "Quãng đường AD gồm 3 đoạn. (hình vẽ) A B C D 212km 365km 324km - Vay doan AC ngắn hơn đoạn BD là.",
             "correctAnswer": "b",
             "explanation": "Vậy đoạn AC ngắn hơn đoạn BD là 112km. (324 — 212 = 112).",
             "topic": "Toán Violympic Lớp 2",
@@ -35268,7 +35268,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q084",
             "type": "single_choice",
-            "prompt": "Số 659 là tong của 2 số nào dưới đây :",
+            "prompt": "Số 659 là tong của 2 số nào dưới đây.",
             "correctAnswer": "a",
             "explanation": "A. 234 + 425,",
             "topic": "Toán Violympic Lớp 2",
@@ -35472,7 +35472,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q090",
             "type": "single_choice",
-            "prompt": "Số 456 là hiệu của 2 số nào dưới đây :",
+            "prompt": "Số 456 là hiệu của 2 số nào dưới đây.",
             "correctAnswer": "a",
             "explanation": "B. 678 — 222.",
             "topic": "Toán Violympic Lớp 2",
@@ -35574,7 +35574,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q093",
             "type": "single_choice",
-            "prompt": "Tổng các số chin có 2 chữ số và tổng các chữ số bằng 5 là.",
+            "prompt": "Tổng các số chẵn có 2 chữ số và tổng các chữ số bằng 5 là.",
             "correctAnswer": "d",
             "explanation": "46 (14 + 32 = 46).",
             "topic": "Toán Violympic Lớp 2",
@@ -35812,7 +35812,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q100",
             "type": "single_choice",
-            "prompt": "Tổng của số lẻ lớn nhất và số chẵn bé nhất có 3 chữ số mà mỗi số đều có tổng các chữ số bằng 7 là............... 84.",
+            "prompt": "Tổng của số lẻ lớn nhất và số chẵn bé nhất có 3 chữ số mà mỗi số đều có tổng các chữ số bằng 7 là.",
             "correctAnswer": "c",
             "explanation": "Đáp án theo sách Hướng dẫn giải Violympic Toán 2 - TS.Phạm Văn Công: 1",
             "topic": "Toán Violympic Lớp 2",
@@ -35914,7 +35914,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q103",
             "type": "single_choice",
-            "prompt": "Hiệu 645 — 232 bằng hiệu nào dưới đây :",
+            "prompt": "Hiệu 645 — 232 bằng hiệu nào dưới đây.",
             "correctAnswer": "a",
             "explanation": "A. 547 — 134. (645 — 232 = 547 — 134 = 413).",
             "topic": "Toán Violympic Lớp 2",
@@ -36134,7 +36134,7 @@
           {
             "id": "violympic-exam-math-g2-v10-q109",
             "type": "single_choice",
-            "prompt": "Lớp 2A có 5 bạn học sinh giỏi, lớp 2B có 6 bạn học sinh giỏi, lớp 2C có 7 ban học sinh giỏi, lớp 2D có 8 bạn học sinh giỏi. Biét mỗi bạn học giỏi được thưởng 4 quyền vở. Vậy: A. Các bạn của 2 lớp 2A và 2B được thưởng tất cả 24 quyền. B. Các bạn lớp 2C được thưởng ít hơn lớp 2D là 12 quyền. C. Tổng số vở các bạn của cả 4 lớp được thưởng là 104 quyền. ] D. Cả A, B và C đều đúng. 85.",
+            "prompt": "Lớp 2A có 5 bạn học sinh giỏi, lớp 2B có 6 bạn học sinh giỏi, lớp 2C có 7 ban học sinh giỏi, lớp 2D có 8 bạn học sinh giỏi. Biét mỗi bạn học giỏi được thưởng 4 quyển vở. Vậy: A. Các bạn của 2 lớp 2A và 2B được thưởng tất cả 24 quyền. B. Các bạn lớp 2C được thưởng ít hơn lớp 2D là 12 quyền. C. Tổng số vở các bạn của cả 4 lớp được thưởng là 104 quyền. ] D. Cả A, B và C đều đúng.",
             "correctAnswer": "a",
             "explanation": "C. Tổng số vớ các bạn của cả 4 lớp được thưởng là 104 quyền. - Các bạn 2 lớp 2A và 2B được thưởng số vở là: 5x4+6x4=44 (quyền). - Các bạn lớp 2C được thưởng ít hơn lớp 2D là: 8x4-7x4=4 (quyền). - Tổng số vở 4 lớp được thưởng là: ` 5x4+6x4+7x4+8x4= 104 (quyền). ị 141 Trang ĐỀ . 0c VONG NI 3 ——\\I 20c xù VONG 4 i ccccsccssssssesssssssessscssscssecsscssecsscessecescesnsssecesessseesreesesssesssersseeseeeseesseess DT xxx vn ÐWẫmmm VONG HH 0c. II DD 0O cu",
             "topic": "Toán Violympic Lớp 2",
