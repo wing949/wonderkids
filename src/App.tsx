@@ -29,32 +29,52 @@ import {
   type ParentAccount,
 } from './utils/parentAccount';
 
-const AdminCMS = React.lazy(async () => {
+function lazyWithRetry<T extends React.ComponentType<any>>(
+  componentImport: () => Promise<{ default: T }>
+) {
+  return React.lazy(async () => {
+    const hasRetried = typeof window !== 'undefined' && window.sessionStorage.getItem('chunk_retry') === 'true';
+    try {
+      const component = await componentImport();
+      if (typeof window !== 'undefined') window.sessionStorage.removeItem('chunk_retry');
+      return component;
+    } catch (error) {
+      console.warn('Chunk loading failed, attempting auto-refresh for new version...', error);
+      if (typeof window !== 'undefined' && !hasRetried) {
+        window.sessionStorage.setItem('chunk_retry', 'true');
+        window.location.reload();
+      }
+      throw error;
+    }
+  });
+}
+
+const AdminCMS = lazyWithRetry(async () => {
   const module = await import('./components/admin/AdminCMS');
   return { default: module.AdminCMS };
 });
 
-const AdventureMap = React.lazy(async () => {
+const AdventureMap = lazyWithRetry(async () => {
   const module = await import('./components/adventure/AdventureMap');
   return { default: module.AdventureMap };
 });
 
-const InteractiveExerciseEngine = React.lazy(async () => {
+const InteractiveExerciseEngine = lazyWithRetry(async () => {
   const module = await import('./components/exercise/InteractiveExerciseEngine');
   return { default: module.InteractiveExerciseEngine };
 });
 
-const ParentPortal = React.lazy(async () => {
+const ParentPortal = lazyWithRetry(async () => {
   const module = await import('./components/parent/ParentPortal');
   return { default: module.ParentPortal };
 });
 
-const PracticePortal = React.lazy(async () => {
+const PracticePortal = lazyWithRetry(async () => {
   const module = await import('./components/practice/PracticePortal');
   return { default: module.PracticePortal };
 });
 
-const LogicPortal = React.lazy(async () => {
+const LogicPortal = lazyWithRetry(async () => {
   const module = await import('./components/logic/LogicPortal');
   return { default: module.LogicPortal };
 });
