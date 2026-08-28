@@ -6,12 +6,14 @@ export function getPortalForRoute(route: AppRoute): PortalView {
     case 'adventure': return 'adventure';
     case 'exercise': return 'exercise';
     case 'parent': return 'parent';
-    case 'arena': return 'practice';
+    case 'arena':
     case 'practice-hub':
     case 'practice-list':
     case 'practice-set':
     case 'practice-competition-list':
     case 'practice-competition-set':
+    case 'practice-custom-set':
+      return 'practice';
     case 'logic-hub':
     case 'logic-game':
       return 'logic';
