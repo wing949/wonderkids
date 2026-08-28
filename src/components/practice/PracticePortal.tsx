@@ -1133,13 +1133,7 @@ export function PracticeExam({
 }) {
   const allItems = useMemo(() => set.sections.flatMap((section) => section.items), [set]);
   const sectionStarts = useMemo(() => set.sections.map((_, sectionIndex) => set.sections.slice(0, sectionIndex).reduce((sum, section) => sum + section.items.length, 0)), [set]);
-  const [progress, setProgress] = useState<PracticeProgress>(() => {
-    const progressStorage = storage || (typeof window === 'undefined' ? undefined : window.localStorage);
-    if (!progressStorage) return createPracticeProgress(set.id);
-    const saved = readPracticeProgress(progressStorage, set.id);
-    if (saved && !saved.completedAt) return saved;
-    return createPracticeProgress(set.id);
-  });
+  const [progress, setProgress] = useState<PracticeProgress>(() => createPracticeProgress(set.id));
   const [currentIndex, setCurrentIndex] = useState(() => (
     initialQuestionNumber && initialQuestionNumber >= 1 && initialQuestionNumber <= allItems.length
       ? initialQuestionNumber - 1
@@ -1332,17 +1326,19 @@ export function PracticeExam({
           </div>
         </header>
 
-        <nav className="mt-4 grid grid-cols-3 gap-2 rounded-3xl bg-white/85 p-2 shadow-sm" aria-label="Ba phần của đề">
-          {set.sections.map((section, index) => (
-            <button
-              type="button"
-              key={section.id}
-              onClick={() => goTo(sectionStarts[index])}
-              aria-current={currentSection === index ? 'step' : undefined}
-              className={`min-h-12 rounded-2xl px-2 font-baloo text-sm font-black leading-snug ${currentSection === index ? 'bg-violet-500 text-white shadow-[0_3px_0_#6d28d9]' : 'text-slate-600 hover:bg-violet-50'}`}
-            >Phần {index + 1}</button>
-          ))}
-        </nav>
+        {set.sections.length > 1 && (
+          <nav className="mt-4 grid grid-cols-3 gap-2 rounded-3xl bg-white/85 p-2 shadow-sm" aria-label="Ba phần của đề">
+            {set.sections.map((section, index) => (
+              <button
+                type="button"
+                key={section.id}
+                onClick={() => goTo(sectionStarts[index])}
+                aria-current={currentSection === index ? 'step' : undefined}
+                className={`min-h-12 rounded-2xl px-2 font-baloo text-sm font-black leading-snug ${currentSection === index ? 'bg-violet-500 text-white shadow-[0_3px_0_#6d28d9]' : 'text-slate-600 hover:bg-violet-50'}`}
+              >Phần {index + 1}</button>
+            ))}
+          </nav>
+        )}
 
         <main data-practice-item-id={item.id} className="mt-4 rounded-4xl bg-[#fffdf9]/95 p-5 shadow-washi sm:p-8">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-amber-100 pb-4">
