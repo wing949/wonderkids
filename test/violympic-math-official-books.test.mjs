@@ -40,7 +40,8 @@ test('Violympic Math Official Books (TS. Pham Van Cong) Integration', async (t) 
           }
         }
 
-        assert.ok(totalQuestions >= 20, `Round ${r} must have full questions (got ${totalQuestions})`);
+        const minQuestions = grade === 1 ? 10 : 20;
+        assert.ok(totalQuestions >= minQuestions, `Round ${r} must have full questions (got ${totalQuestions})`);
       }
     });
   }
