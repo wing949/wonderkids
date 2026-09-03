@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#7950F2" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#F3F0FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Flashcard Outer Container -->
+  <rect x="15" y="15" width="370" height="290" rx="28" fill="url(#card-bg)" stroke="#7950F2" stroke-width="3.5" filter="url(#card-shadow)"/>
+
+  <!-- Top Washi Tape Decoration -->
+  <rect x="140" y="8" width="120" height="20" rx="4" fill="#7950F2" opacity="0.35" transform="rotate(-1 200 18)"/>
+
+  <!-- Central Emoji Circle Frame -->
+  <circle cx="200" cy="120" r="62" fill="#ffffff" stroke="#7950F2" stroke-width="2.5" stroke-dasharray="4 4"/>
+  <text x="200" y="145" font-size="64" text-anchor="middle" font-family="'Segoe UI Emoji', 'Apple Color Emoji', sans-serif">🎉</text>
+
+  <!-- Word Badge -->
+  <rect x="50" y="198" width="300" height="46" rx="16" fill="#7950F2"/>
+  <text x="200" y="230" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Baloo 2', 'Arial Rounded MT Bold', sans-serif" letter-spacing="1">PARTY</text>
+
+  <!-- Vietnamese Meaning Banner -->
+  <text x="200" y="274" font-size="15" font-weight="700" fill="#7950F2" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif">Bữa tiệc sinh nhật</text>
+</svg>

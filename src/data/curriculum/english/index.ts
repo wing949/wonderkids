@@ -24,3 +24,4 @@ export * from './grade1PhonicsGames.ts';
 export * from './readingPassages.ts';
 export * from './englishQuestionEngine.ts';
 export * from './englishSupplementContent.ts';
+export * from './vocabularyData.ts';

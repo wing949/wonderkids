@@ -18,6 +18,7 @@ interface StudentDashboardProps {
   onOpenShop: () => void;
   onOpenQuests: () => void;
   onMascotChange: (id: MascotId) => void;
+  onSelectEnglishVocab?: () => void;
   dailyQuests: DailyQuest[];
 }
 
@@ -31,6 +32,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   onOpenShop,
   onOpenQuests,
   onMascotChange,
+  onSelectEnglishVocab,
   dailyQuests,
 }) => {
   const completedQuestsCount = dailyQuests.filter((q) => q.isCompleted).length;
@@ -211,6 +213,20 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                         >
                           {subj.completedLessons}/{subj.totalLessons} bài đã học
                         </span>
+                        {subjKey === 'english' && onSelectEnglishVocab && (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              soundManager.playPop();
+                              onSelectEnglishVocab();
+                            }}
+                            className="px-2.5 py-0.5 rounded-full bg-sky-100 hover:bg-sky-200 text-sky-800 font-baloo font-bold text-[11px] border border-sky-300 shadow-2xs transition-all cursor-pointer flex items-center gap-1 hover:scale-105 active:scale-95"
+                          >
+                            <span>🔤 Sổ Từ Vựng SGK</span>
+                            <span className="text-amber-500 font-black">✨</span>
+                          </button>
+                        )}
                       </div>
 
                       {/* Subject Name & Subtitle */}

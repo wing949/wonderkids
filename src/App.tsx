@@ -209,6 +209,10 @@ export const App: React.FC = () => {
     if (initialRoute.kind === 'adventure') return initialRoute.subject;
     return 'math';
   });
+  const [adventureInitialViewMode, setAdventureInitialViewMode] = useState<'grid' | 'map' | 'vocab'>(() => {
+    if (initialRoute.kind === 'adventure' && initialRoute.viewMode) return initialRoute.viewMode;
+    return 'grid';
+  });
   const [adminTab, setAdminTab] = useState<AdminTab>(() => (
     initialRoute.kind === 'admin' ? initialRoute.tab : 'curriculum'
   ));
@@ -290,6 +294,7 @@ export const App: React.FC = () => {
       case 'adventure':
         setCurrentGrade(route.grade);
         setSelectedSubject(route.subject);
+        setAdventureInitialViewMode(route.viewMode || 'grid');
         setCurrentPortal('adventure');
         return;
       case 'exercise': {
@@ -511,6 +516,7 @@ export const App: React.FC = () => {
               profile={profile}
               currentGrade={currentGrade}
               onSelectSubject={handleSelectSubject}
+              onSelectEnglishVocab={() => navigateTo({ kind: 'adventure', subject: 'english', grade: currentGrade, viewMode: 'vocab' })}
               onOpenAdventure={() => navigateTo({ kind: 'adventure', subject: selectedSubject, grade: currentGrade })}
               onOpenPractice={() => navigateTo({ kind: 'practice-hub' })}
               onOpenLogic={() => navigateTo({ kind: 'logic-hub' })}
@@ -526,6 +532,7 @@ export const App: React.FC = () => {
               <AdventureMap
                 currentGrade={currentGrade}
                 selectedSubject={selectedSubject}
+                initialViewMode={adventureInitialViewMode}
                 onSelectSubject={handleSelectSubject}
                 onStartLesson={handleStartLesson}
                 onBackToDashboard={returnToStudentPortal}

@@ -155,3 +155,369 @@
     animation: none !important;
   }
 }
+
+/* =========================================================================
+   COMPACT HIGH-DENSITY VOCABULARY DASHBOARD (CHỐNG CHIẾM DIỆN TÍCH)
+   ========================================================================= */
+.vocab-dashboard {
+  --blue: #168bea;
+  --blue-dark: #123b60;
+  --line: #dceaf5;
+  --bg: #f8fbfe;
+  --muted: #64748b;
+  --green: #12a66a;
+  max-width: 1480px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #dbeaf5;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(28, 88, 130, 0.06);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* HÀNG 1: HEADER TINH GỌN (CHỈ CAO ~38px) */
+.vocab-header-compact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf4fa;
+  flex-wrap: wrap;
+}
+.vocab-brand-compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.vocab-cover-compact {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #08a9ed, #087bd0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(22, 139, 234, 0.2);
+}
+.vocab-title-compact {
+  font-size: 17px;
+  font-weight: 800;
+  color: #123b60;
+  margin: 0;
+  line-height: 1.2;
+  font-family: var(--font-baloo);
+  white-space: nowrap;
+}
+.vocab-badge-compact {
+  padding: 2px 8px;
+  border: 1px solid #b9e0fa;
+  border-radius: 999px;
+  background: #eff9ff;
+  color: #0875bd;
+  font-weight: 700;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.vocab-badge-compact.gold {
+  background: #fff8df;
+  border-color: #f4d87b;
+  color: #a45d00;
+}
+
+.vocab-actions-compact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.vocab-pill-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 1px solid #dceaf5;
+  background: #f8fbfe;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334b64;
+  white-space: nowrap;
+}
+.vocab-bar-mini {
+  width: 50px;
+  height: 5px;
+  background: #e2eaf0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.vocab-bar-mini i {
+  display: block;
+  height: 100%;
+  background: #13b77a;
+  border-radius: 99px;
+}
+.vocab-audio-compact {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  border: 1px solid #dceaf5;
+  background: #f8fbfe;
+  font-size: 11px;
+  font-weight: 700;
+  color: #52657a;
+  white-space: nowrap;
+}
+.vocab-speed-btn {
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 11px;
+  cursor: pointer;
+}
+.vocab-speed-btn.active {
+  background: var(--blue);
+  color: #fff;
+}
+.vocab-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 10px;
+  border: 1px solid #dceaf5;
+  background: #fff;
+  color: #334b64;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.vocab-back-btn:hover {
+  background: #f0f7fd;
+  color: var(--blue);
+}
+
+/* HÀNG 2: TABS & KHỐI LỚP */
+.vocab-midbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.vocab-nav-compact {
+  display: flex;
+  border: 1px solid #dceaf5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fbfe;
+}
+.vocab-nav-compact button {
+  border: 0;
+  background: transparent;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 750;
+  color: #334b64;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.vocab-nav-compact button.active {
+  background: var(--blue);
+  color: #fff;
+}
+.vocab-badge-mini {
+  font-size: 10px;
+  background: #eaf8ef;
+  color: #15945e;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+.vocab-badge-mini.orange {
+  background: #fff3df;
+  color: #d77b00;
+}
+
+.vocab-selectors-compact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.vocab-segment-compact {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dceaf5;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8fbfe;
+}
+.vocab-segment-lbl {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+  padding: 0 6px 0 8px;
+  text-transform: uppercase;
+}
+.vocab-segment-compact button {
+  border: 0;
+  background: transparent;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334b64;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.vocab-segment-compact button.active {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* HÀNG 3: BỘ LỌC TÌM KIẾM, UNIT, NGUỒN THẺ & STATUS */
+.vocab-bottombar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 2px;
+  flex-wrap: wrap;
+}
+.vocab-search-compact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  border: 1px solid #dceaf5;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0 10px;
+  flex: 1;
+  min-width: 180px;
+  max-width: 260px;
+}
+.vocab-search-compact input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 12px;
+  color: #334b64;
+  background: transparent;
+}
+.vocab-search-compact .clear-btn {
+  border: 0;
+  background: transparent;
+  color: #94a3b8;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.vocab-select-compact {
+  height: 36px;
+  border: 1px solid #dceaf5;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334b64;
+  cursor: pointer;
+  max-width: 190px;
+  outline: 0;
+}
+.vocab-source-pills {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff8ef;
+  border: 1px solid #f9dfb8;
+  padding: 2px;
+  border-radius: 10px;
+}
+.vocab-source-pills .source-pill {
+  border: 0;
+  background: transparent;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 750;
+  color: #8c5310;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.vocab-source-pills .source-pill.active {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.vocab-chips-compact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+.vocab-chip {
+  height: 34px;
+  border: 1px solid #dceaf5;
+  border-radius: 9px;
+  background: #fff;
+  padding: 0 9px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+}
+.vocab-chip.active.gold {
+  background: #fff8df;
+  border-color: #f4d87b;
+  color: #a45d00;
+  font-weight: 800;
+}
+.vocab-chip.active.rose {
+  background: #fff0f3;
+  border-color: #fbcfe8;
+  color: #be185d;
+  font-weight: 800;
+}
+.vocab-total-pill {
+  height: 34px;
+  border: 1px solid #bfe1f8;
+  border-radius: 9px;
+  background: #edf7ff;
+  color: #0369a1;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .vocab-search-compact { max-width: 100%; min-width: 100%; }
+  .vocab-chips-compact { margin-left: 0; width: 100%; justify-content: flex-end; }
+}

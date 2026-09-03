@@ -15,17 +15,17 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "ball",
         "phonetic": "/bɔːl/",
-        "meaning": "quả bóng (dùng để chơi đá bóng, ném bóng)"
+        "meaning": "quả bóng"
       },
       {
         "word": "bike",
         "phonetic": "/baɪk/",
-        "meaning": "xe đạp (phương tiện hai bánh bé đi dạo)"
+        "meaning": "xe đạp"
       },
       {
         "word": "book",
         "phonetic": "/bʊk/",
-        "meaning": "cuốn sách (chứa các câu chuyện và bài học bổ ích)"
+        "meaning": "cuốn sách"
       },
       {
         "word": "boy",
@@ -48,7 +48,7 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "cake",
         "phonetic": "/keɪk/",
-        "meaning": "bánh ngọt, bánh kem sinh nhật"
+        "meaning": "bánh ngọt"
       },
       {
         "word": "car",
@@ -58,12 +58,12 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "cat",
         "phonetic": "/kæt/",
-        "meaning": "con mèo (bạn mèo nhỏ đáng yêu)"
+        "meaning": "con mèo"
       },
       {
         "word": "cup",
         "phonetic": "/kʌp/",
-        "meaning": "cái tách, cái cốc uống nước"
+        "meaning": "cái tách, cốc"
       }
     ]
   },
@@ -81,7 +81,7 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "apple",
         "phonetic": "/ˈæpl/",
-        "meaning": "quả táo (trái cây màu đỏ ngọt giòn)"
+        "meaning": "quả táo"
       },
       {
         "word": "bag",
@@ -459,7 +459,7 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "top",
         "phonetic": "/tɒp/",
-        "meaning": "con quay đồ chơi, đỉnh trên cùng"
+        "meaning": "con quay"
       }
     ]
   },
@@ -482,7 +482,7 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "fan",
         "phonetic": "/fæn/",
-        "meaning": "người hâm mộ, cổ động viên"
+        "meaning": "cổ động viên"
       },
       {
         "word": "foot",
@@ -680,7 +680,7 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "quiz",
         "phonetic": "/kwɪz/",
-        "meaning": "câu đố, bài kiểm tra nhanh"
+        "meaning": "câu đố"
       },
       {
         "word": "quiet",
@@ -944,12 +944,12 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "plus",
         "phonetic": "/plʌs/",
-        "meaning": "cộng (+)"
+        "meaning": "cộng"
       },
       {
         "word": "minus",
         "phonetic": "/ˈmaɪnəs/",
-        "meaning": "trừ (-)"
+        "meaning": "trừ"
       },
       {
         "word": "count",
@@ -1076,12 +1076,12 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "hello",
         "phonetic": "/həˈləʊ/",
-        "meaning": "xin chào (lịch sự)"
+        "meaning": "xin chào"
       },
       {
         "word": "hi",
         "phonetic": "/haɪ/",
-        "meaning": "chào bạn (thân mật)"
+        "meaning": "chào bạn"
       },
       {
         "word": "fine",
@@ -1189,17 +1189,17 @@ export const ENGLISH_READING_PASSAGES: Record<string, ReadingPassage> = {
       {
         "word": "eye",
         "phonetic": "/aɪ/",
-        "meaning": "mắt (dùng để nhìn)"
+        "meaning": "mắt"
       },
       {
         "word": "ear",
         "phonetic": "/ɪə/",
-        "meaning": "tai (dùng để nghe)"
+        "meaning": "tai"
       },
       {
         "word": "nose",
         "phonetic": "/nəʊz/",
-        "meaning": "mũi (dùng để ngửi)"
+        "meaning": "mũi"
       },
       {
         "word": "mouth",

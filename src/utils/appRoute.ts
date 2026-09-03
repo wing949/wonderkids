@@ -19,7 +19,7 @@ export type AppRoute =
   | { kind: 'practice-competition-list'; track: CompetitionPracticeTrack; grade: GradeLevel }
   | { kind: 'practice-competition-set'; track: CompetitionPracticeTrack; grade: GradeLevel; setNumber: number; questionNumber?: number }
   | { kind: 'practice-custom-set'; competition: QuestionBankCompetition; grade: GradeLevel; subject: PracticeSubject; topic?: string; difficulty: QuestionBankDifficulty; questionCount: number; questionNumber?: number }
-  | { kind: 'adventure'; subject: SubjectType; grade: GradeLevel; viewMode?: 'grid' | 'map' }
+  | { kind: 'adventure'; subject: SubjectType; grade: GradeLevel; viewMode?: 'grid' | 'map' | 'vocab' }
   | { kind: 'exercise'; lessonId: string }
   | { kind: 'logic-hub' }
   | { kind: 'logic-game'; gameId: LogicGameId; level?: number }
@@ -182,11 +182,18 @@ export function parseAppRoute(pathname: string): AppRoute {
     return { kind: 'student' };
   }
 
-  if (segments[0] === 'hoc' && segments.length === 3) {
+  if (segments[0] === 'hoc' && (segments.length === 3 || segments.length === 4)) {
     const subject = SUBJECT_SLUGS[segments[1]];
     const grade = toGrade(segments[2].replace(/^lop-/, ''));
+    const isVocabSubpath = segments[3] === 'tu-vung' || segments[3] === 'vocab';
     const view = query.get('che-do') || query.get('view');
-    const viewMode = view === 'map' || view === 'ban-do' ? 'map' : view === 'grid' || view === 'luoi' ? 'grid' : undefined;
+    const viewMode = isVocabSubpath || view === 'vocab' || view === 'tu-vung'
+      ? 'vocab'
+      : view === 'map' || view === 'ban-do'
+      ? 'map'
+      : view === 'grid' || view === 'luoi'
+      ? 'grid'
+      : undefined;
     if (subject && grade) return { kind: 'adventure', subject, grade, ...(viewMode ? { viewMode } : {}) };
   }
 
@@ -213,7 +220,11 @@ export function getAppPath(route: AppRoute): string {
     case 'practice-hub': return route.mode === 'arena' ? '/luyen-de?che-do=thi-thu' : '/luyen-de';
     case 'adventure': {
       const base = `/hoc/${SUBJECT_PATHS[route.subject]}/lop-${route.grade}`;
-      return route.viewMode === 'map' ? `${base}?view=map` : base;
+      return route.viewMode === 'map'
+        ? `${base}?view=map`
+        : route.viewMode === 'vocab'
+        ? `${base}?view=vocab`
+        : base;
     }
     case 'practice-list': return `/luyen-de/${PRACTICE_SUBJECT_PATHS[route.subject]}/lop-${route.grade}`;
     case 'practice-set': {

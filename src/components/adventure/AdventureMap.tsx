@@ -9,7 +9,8 @@ import {
   BookOpen,
   CheckCircle2,
   Gift,
-  Award
+  Award,
+  ArrowRight
 } from 'lucide-react';
 import { SubjectType, GradeLevel, LessonNode } from '../../types';
 import { SUBJECTS_CONFIG } from '../../data/curriculumData';
@@ -23,11 +24,12 @@ import {
   LESSON_BATCH_SIZE,
   takeLessonGroupsBatch,
 } from '../../utils/lessonListPerformance';
+import { EnglishVocabularyExplorer } from './EnglishVocabularyExplorer';
 
 interface AdventureMapProps {
   currentGrade: GradeLevel;
   selectedSubject: SubjectType;
-  initialViewMode?: 'grid' | 'map';
+  initialViewMode?: 'grid' | 'map' | 'vocab';
   onSelectSubject: (subject: SubjectType) => void;
   onStartLesson: (lesson: LessonNode) => void;
   onBackToDashboard: () => void;
@@ -43,7 +45,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
 }) => {
   const [selectedLessonPreview, setSelectedLessonPreview] = useState<LessonNode | null>(null);
   const [selectedSemester, setSelectedSemester] = useState<0 | 1 | 2>(0); // 0: Cả năm, 1: Tập 1, 2: Tập 2
-  const [viewMode, setViewMode] = useState<'grid' | 'map'>(initialViewMode);
+  const [viewMode, setViewMode] = useState<'grid' | 'map' | 'vocab'>(initialViewMode);
   const [activeUnitFilter, setActiveUnitFilter] = useState<string>('all');
   const [visibleLessonLimit, setVisibleLessonLimit] = useState(LESSON_BATCH_SIZE);
 
@@ -52,6 +54,12 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
       setViewMode(initialViewMode);
     }
   }, [initialViewMode, selectedSubject, currentGrade]);
+
+  useEffect(() => {
+    if (selectedSubject !== 'english' && viewMode === 'vocab') {
+      setViewMode('grid');
+    }
+  }, [selectedSubject, viewMode]);
 
   const subject = SUBJECTS_CONFIG[selectedSubject] || SUBJECTS_CONFIG.math;
 
@@ -213,6 +221,23 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
               >
                 <span>🗺️ Đảo Phiêu Lưu</span>
               </button>
+              {selectedSubject === 'english' && (
+                <button
+                  onClick={() => {
+                    soundManager.playPop();
+                    setViewMode('vocab');
+                  }}
+                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-baloo font-bold text-xs sm:text-sm transition-all cursor-pointer ${viewMode === 'vocab'
+                    ? 'bg-sky-500 text-white shadow-pop-sm scale-102 font-black'
+                    : 'text-sky-700 hover:text-sky-950 hover:bg-sky-50'
+                    }`}
+                >
+                  <span>🔤 Sổ Từ Vựng SGK</span>
+                  <span className="hidden sm:inline-block px-1.5 py-0.2 bg-amber-400 text-amber-950 text-[10px] rounded-full font-black animate-pulse">
+                    Mới ✨
+                  </span>
+                </button>
+              )}
             </div>
 
             {/* Subject Switcher Tabs */}
@@ -242,8 +267,17 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
           </div>
         </div>
 
-        {/* ================= 2-COLUMN MAIN WORKSPACE (EXPANDED CENTER) ================= */}
-        <div className="mt-6 flex items-start gap-6">
+        {/* ================= CHẾ ĐỘ SỔ TỪ VỰNG TIẾNG ANH GLOBAL SUCCESS ================= */}
+        {selectedSubject === 'english' && viewMode === 'vocab' ? (
+          <div className="mt-3">
+            <EnglishVocabularyExplorer
+              initialGrade={currentGrade}
+              onBackToMap={() => setViewMode('grid')}
+            />
+          </div>
+        ) : (
+          /* ================= 2-COLUMN MAIN WORKSPACE (EXPANDED CENTER) ================= */
+          <div className="mt-6 flex items-start gap-6">
           {/* ================= LEFT COLUMN: MASCOT, MỤC LỤC, BỘ LỌC & THI ĐUA ================= */}
           <aside className="hidden lg:block w-80 xl:w-[340px] shrink-0 sticky top-20 max-h-[calc(100vh-5.5rem)] overflow-y-auto pr-1 pb-10 space-y-4 custom-scrollbar">
             {/* Mascot Buddy Interaction Box */}
@@ -382,6 +416,35 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
 
           {/* ================= CENTER MAIN CONTENT (EXPANDED FULL-BREATH WORKSPACE) ================= */}
           <main className="flex-1 min-w-0">
+            {/* English Vocabulary Hero Banner */}
+            {selectedSubject === 'english' && (
+              <div className="relative overflow-hidden rounded-3xl border-2 border-sky-200 bg-gradient-to-r from-sky-50 via-white to-amber-50 p-4 sm:p-5 shadow-washi mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-3.5">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-500 text-2xl shadow-pop-sm text-white">
+                    📖
+                  </span>
+                  <div>
+                    <h3 className="font-baloo text-base sm:text-lg font-black text-sky-950">
+                      Sổ Tay Từ Vựng Tiếng Anh Global Success (Lớp {currentGrade})
+                    </h3>
+                    <p className="font-vietnam text-xs sm:text-sm font-semibold text-slate-600">
+                      Tổng hợp toàn bộ từ vựng chuẩn SGK, phát âm giọng bản xứ Mỹ, thẻ Flashcard và mini game đố vui!
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    soundManager.playPop();
+                    setViewMode('vocab');
+                  }}
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-sky-500 hover:bg-sky-600 text-white font-baloo font-bold text-xs sm:text-sm shadow-pop-md transition-all cursor-pointer whitespace-nowrap active:translate-y-1 shrink-0"
+                >
+                  <span>Mở Sổ Từ Vựng</span>
+                  <ArrowRight size={16} />
+                </button>
+              </div>
+            )}
             {/* Mobile Semester Quick Filter Bar */}
             <div className="lg:hidden flex flex-wrap items-center gap-2 pb-4 mb-2 overflow-x-auto">
               {[
@@ -707,6 +770,7 @@ export const AdventureMap: React.FC<AdventureMapProps> = ({
             )}
           </main>
         </div>
+        )}
       </div>
 
       {/* ================= POPUP XEM TRƯỚC BÀI HỌC ================= */}
